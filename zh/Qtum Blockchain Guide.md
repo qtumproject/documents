@@ -1,29 +1,5 @@
 
 
-* [Qtum区块链指南](#Qtum区块链指南)
-  * [Qtum区块链简介](#Qtum区块链简介)
-    * [区块链基本概念](#区块链基本概念)
-    * [Qtum区块头](#Qtum区块头)
-    * [MPoS共识算法](#MPoS共识算法)
-    * [AAL和智能合约](#AAL和智能合约)
-    * [分布式自治协议](#分布式自治协议)
-  * [交易](#交易)
-    * [UTXO账户模型](#UTXO账户模型)
-    * [合约账户模型](#合约账户模型)
-    * [交易类型](#交易类型)
-      * [普通交易](#普通交易)
-      * [合约交易](#合约交易)
-  * [Qtum全节点和钱包](#Qtum全节点和钱包)
-    * [Ubuntu16.04上安装Qtum](#Ubuntu16.04上安装Qtum)
-    * [Mac OS上安装Qtum](#Mac OS上安装Qtum)
-    * [Qtum钱包](#Qtum钱包)
-      * [qtumd自带钱包](#qtumd自带钱包)
-      * [PC钱包](#PC钱包)
-  * [智能合约](#智能合约)
-    * [智能合约编写和编译](#智能合约编写和编译)
-    * [部署智能合约](#部署智能合约)
-    * [和智能合约交互](#和智能合约交互)
-    * [在PC钱包上使用智能合约](#在PC钱包上使用智能合约)
 
 
 # Qtum区块链指南
@@ -58,6 +34,7 @@
   Qtum量子链的区块头描述了区块的状态记录，用于管理记录区块交易结果相关的信息和共识算法所需的数据。以下是Qtum区块头数据结构的定义：
 
 ![](https://s.qtum.site/uploads/45cc8c5e04457a769b0f95bb3709fbfe.png)
+
 Qtum区块头
 
    其中nVersion版本信息描述了当前Qtum区块链软件的版本，hashPrevBlock记录前一区块头哈希值，hashMerkleRoot记录本区块交易ID生成的Merkle树根节点哈希值，nTime记录区块产生的时间，nBit记录当前计算区块头哈希值的难度，nNonce与比特币兼容，但PoS阶段未使用，hashStateRoot记录本区块EVM执行完成后的根状态哈希值，hashUTXORoot记录本区块EVM执行完后产生的UTXO根状态哈希值，prevoutStake为前一区块用于PoS过程的交易输出点，vchBlockSig是PoS时使用的区块签名。
@@ -68,6 +45,7 @@ Qtum交易的基本单位是未花费的一个交易输出，简称UTXO。UTXO�
 Merkle树是一种哈希二叉树，用于快速归纳和校验大规模数据完整性。这种二叉树的节点包含哈希值。在Qtum区块链中，Merkle树用来组织每个区块中的交易标识(txid)。txid是对交易进行两次哈希算法生成。Merkle树是自底向上构建的，通过对相邻叶子节点的 txid 配对然后做哈希运算，生成为父节点，对所有叶子节点重复这个过程，并对生成的父节点进行类似的操作，只到剩下顶部的一个节点，最终构建了 merkle 树。如下图所示:
 
  ![](https://s.qtum.site/uploads/3bc00d5ebff4038185427b9b834373ae.png)
+ 
  Merkle树
  
  在简化支付验证（SPV）提案中指出，Merkle 树允许客户端通过一个完整节点从一个区块头中获取其 Merkle 根节点和中间哈希值列表来验证一个交易被包含在这个区块中。这个完整节点并不需要是可信的，因为伪造区块头十分困难而中间哈希值是不可能被伪造的，否则验证就会失败。
@@ -149,6 +127,7 @@ Qtum区块链支持比特币类型交易，即UTXO类型的交易，目前支持
 在未花费交易输出（UTXO）模型中，交易使用未花费的比特币作为输入，此时输入的UTXO就会作废，而输出是另一个UTXO, Qtum数量上变化的结果会在新的UTXO记录。一定数量的Qtum在不同私钥持有人之间进行转移，新的未花费交易输出在交易中花费，并记录在区块上。在交易中，UTXO可用交易接收方公钥地址生成的秘钥进行解锁。Qtum处理交易时利用脚本语言只能进行有限的操作，并以堆栈的形式进行数据处理 ，并遵循“后进先出”（FIFO）原则。
 
 ![](https://s.qtum.site/uploads/b2c06edf03cb5d0cc6e02a93effef586.png)
+
 基于UTXO模型的交易
 
 UTXO模型有诸多优势： 任何人可以通过比特币公共账本对每一笔交易历史进行查询，UTXO有良好的可拓展性，能够同时处理多个地址发起的交易请求。此外，UTXO模型也提供了隐私保护，用户可以使用变更地址作为UTXO输出。
@@ -161,6 +140,7 @@ UTXO模型有诸多优势： 任何人可以通过比特币公共账本对每一
    比特币脚本语言并不是图灵完备的，无法实现循环功能。这极大地制约了交易执行量和交易复杂度。因此Qtum量子链在UTXO模型的基础上加入抽象账户层设计，在基于UTXO模型的交易上实现智能合约平台。
 
 ![](https://s.qtum.site/uploads/8c77b2d1ddcc601e709256fe14e3be8e.png)
+
 Qtum合约账户
 
   Qtum量子链智能合约功能使用了以太坊虚拟机(EVM)，EVM使用了与UTXO不同的账户模型，EVM使用基于账户（Account）的模型。 具体来说，以太坊通过账户状态的改变进行价值和信息的交换与传输，并通过长度为20字节的随机数作为指针以确保交易处理的唯一性。用于供内部使用的费用是以Qtum计价，通过合约交易中的参数GasPrice和GasLimit来指定。对于以太坊EVM合约代码是可选的，但对Qtum的合约账号来说是强制的，即账号的生成必定伴随有合约代码，生成账号时存储默认为空。
@@ -324,6 +304,7 @@ OP_DUP OP_HASH160 52f60b28f652ff43e07ddae02e6bb037f6937ef8 OP_EQUALVERIFY OP_CHE
   Qtum在设计上以比特币UTXO为基础账户模型实现了支持EVM规范的智能合约，这是通过新增UTXO操作码和账户抽象层(AAL)来完成的。AAL对UTXO账户和EVM合约账户之间进行了适配，这样通过AAL可以使用UTXO交易输出实现在链上创建智能合约，发送交易到合约账户用于触发合约的执行，完成执行后AAL最终对执行结果进行处理并适配至UTXO。由于采用了AAL，合约开发者不需关心对合约操作相关的UTXO转换细节，即可使用EVM的特性进行开发而且兼容现有以太坊的智能合约。
   
 ![](https://s.qtum.site/uploads/c06d37cfdb176eaeb3d667bcad72b36d.png)
+
 Qtum合约交易处理
 
  Qtum 针对UTXO交易脚本新增了三个操作码OP_CREATE，OP_CALL和OP_SPEND，目的是用于为UTXO和EVM账户模型之间的转换提供操作支持。这个三个操作码分别有以下作用：OP_CREATE用于智能合约的创建；OP_CALL用于合约的执行；OP_SPEND用于合约余额的花费。
@@ -492,9 +473,11 @@ qtum-qt钱包支持完整功能的全节点，支持钱包应用。PC钱包数�
 4.  点击底下的Send按钮完成交易
 
 ![](https://s.qtum.site/uploads/1f6d2d14027c4230768d547714d22652.png)
+
 发送QTUM
 
 ![](https://s.qtum.site/uploads/20e64c21010f29e32b0d59a26711d9d5.png)
+
 选择手续费
 
 #### 接收Qtum
@@ -673,6 +656,7 @@ callcontract 2d4b6564a012ae1383854ac48574c2248660d897 70a08231000000000000000000
 部署合约都是要和Qtum链上进行交互的，因此连接到一个全节点，由于PC钱包本身是一个全节点，因此不需要另外运行qtumd之类的节点。在PC钱包左边点击Smart Contract按钮出现智能合约功能界面，点击Create后，把4.1节编译的字节码拷贝在Bytecode输入框，同时把ABI也放入对应的输入框。对应qtum-cli createcontract命令参数，界面下面的GasLimit、GasPrice、和Sender Address可以设置。最后点击Create Contract按钮，就会生成一个合约交易，把合约部署到Qtum链上，弹出的对话框显示了发送者、合约地址等相关信息。
 
 ![](https://s.qtum.site/uploads/29f02f8251200bf9373da023657ac361.png)
+
 PC钱包部署智能合约
 
 
@@ -681,6 +665,7 @@ PC钱包部署智能合约
 和智能合约的交互，同样要连接Qtum节点，通过PC钱包就可以了。生成需要交互的函数或公共变量的ABI数据可以参考4.3.1节。点击Sendto切换到合约交易生成界面，把Contract Address、ABI填好，从Functtion选择要调用的函数，有函数参数的话，在address dest面填写参数，GasLimit、GasPrice、和Sender Address可以根据需要设置。点击Send To Contract按钮即生成了合约交易，  完成和Qtum链上智能合约交互。
 
 ![](https://s.qtum.site/uploads/8ded1c23b4a455886004dfe3e6486d6f.png)
+
 和智能合约交互
 
 ####查看智能合约执行结果
@@ -688,6 +673,7 @@ PC钱包部署智能合约
 和callcontract一样可以通过qt钱包在本地调用智能合约相关函数或公共变量，其执行不会影响到链上的智能合约状态，一般用来查看智能合约在Qtum链上执行某个函数之后的结果。点击Call按钮切换到本地执行合约界面，把Contract Address、、ABI填好，有函数参数的话，在address dest面填写参数，从Functtion选择要调用的函数，Sender Address可选设置，最后点击Call Contract完成智能合约相关功能调用，合约执行的结果会在弹出的对话框中显示出来。
 
 ![](https://s.qtum.site/uploads/b85a24c248b95280a1da711054cb9a5e.png)
+
 本地调用智能合约
 
 
