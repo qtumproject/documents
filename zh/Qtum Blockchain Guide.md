@@ -1,6 +1,4 @@
-
-
-
+[TOC]
 
 # Qtum区块链指南
 
@@ -487,6 +485,7 @@ qtum-qt钱包支持完整功能的全节点，支持钱包应用。PC钱包数�
 3.  点击Remove可以去除生成的地址信息
 
 ![](https://s.qtum.site/uploads/6f8f4ce79450f40755ca139d789d848a.png)
+
 管理接收地址
 
 ## 智能合约
