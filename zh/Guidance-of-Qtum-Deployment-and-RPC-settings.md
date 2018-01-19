@@ -147,7 +147,7 @@ Examples:
 rpcuser=test  #rpc用户名
 rpcpassword=test1234  #rpc密码
 #以上两项必须设置。默认情况下，只允许本地的RPC连接，
-#要实习远程调用，可通过设置rpcallowip声明所有允许访问的ip
+#要实现远程调用，可通过设置rpcallowip声明所有允许访问的ip
 #ipv4和ipv6都可设置，且可是设置多个ip。例如：
 #rpcallowip=192.168.77.51/255.255.255.0
 #rpcallowip=1.2.3.4/24
@@ -222,7 +222,7 @@ zhongwenbins-MacBook-Pro:~ zhongwenbin$ curl  --data-binary '{"jsonrpc": "1.0", 
 
 以上设置实例仅供参考，读者可根据自身需求作更多设置，或是选择其它工具代替。
 
-##实用命令和文档
+## 实用命令和文档
 
 读者在部署节点或RPC调用时遇到问题，可优先参考以下实用命令或文档：
 
