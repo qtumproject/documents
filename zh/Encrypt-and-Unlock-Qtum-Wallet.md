@@ -47,7 +47,7 @@
 ./qtum-cli walletpassphrase "yourpassword" 99999
 ```
 
-其中第一个参数`yourpassword`为之前设定的密码；第二个参数为需要解锁的时间，单位是秒；
+其中第一个参数`yourpassword`为之前设定的密码；第二个参数为需要解锁的时间，单位是秒。
 
 解锁后即可正常发送QTUM或进行其他资金安全相关操作。
 
@@ -57,7 +57,7 @@
 ./qtum-cli walletpassphrase "yourpassword" 99999 true
 ```
 
-其中前两个参数含义不变，最后一个参数`true`表示只解锁Staking功能，用该命令解锁后，钱包可以正常Staking，但其他资金安全相关操作仍被禁止，只有完全解锁后才能使用。
+其中前两个参数含义不变，最后一个参数`true`表示只解锁挖矿功能，用该命令解锁后，钱包可以正常挖矿，但其他资金安全相关操作仍被禁止，只有完全解锁后才能使用。
 
 ### 带用户界面钱包
 
@@ -85,7 +85,7 @@
 
 ### 带用户界面钱包
 
-选择"Setting-Change Passphrase"修改密码：
+选择“Setting-Change Passphrase”修改密码：
 
 ![选择修改密码](https://s.qtum.site/uploads/300233415c04908e1013ddcf85230c77.jpeg)
 
