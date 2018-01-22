@@ -111,7 +111,7 @@ Staking（挖矿）功能在钱包未加密时将默认开启，无需其他设�
 
 ## 方式二：用有用户界面的Qtum-qt钱包Staking（挖矿）
 
-Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](https://github.com/qtumproject/qtum/wiki/Qtum-Wallet-Tutorial)。目前支持的Mac/Linux/Windows，用户可以自行下载安装。
+Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](https://github.com/qtumproject/documents/blob/master/zh/Qtum-Wallet-Tutorial.md)。目前支持的Mac/Linux/Windows，用户可以自行下载安装。
 
 ### 1. 打开Qtum qt钱包
 
@@ -121,7 +121,7 @@ Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](https:
 
 如果钱包中已有QTUM可跳过此步骤。
 
-若钱包中无QTUM，则向钱包地址中转入一定数量的QTUM，方法请参考[qt钱包教程(点击打开)](https://github.com/qtumproject/qtum/wiki/Qtum-Wallet-Tutorial)。
+若钱包中无QTUM，则向钱包地址中转入一定数量的QTUM，方法请参考[qt钱包教程(点击打开)](https://github.com/qtumproject/documents/blob/master/zh/Qtum-Wallet-Tutorial.md)。
 
 注意，新转入的QTUM需要等待500个区块（约17小时）的成熟时间，才可进行Staking（挖矿）。因此，建议用户等待500个区块后再进行以下步骤。
 
