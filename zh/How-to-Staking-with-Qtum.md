@@ -4,8 +4,8 @@ Qtum采用PoS共识机制，与比特币等采用的PoW机制有所不同。与�
 
 开始Staking（挖矿）需满足两个基本条件：
 
-1. 运行Qtum全节点，并保持在线（不需要矿机。任何PC/Mac，甚至树莓派都可以运行Qtum全节点）；
-2. 拥有QTUM量子币（无论数量多少都可以Staking（挖矿），但拥有Qtum数量越多，挖到矿的可能性越高）；
+1. 运行Qtum全节点，并保持在线（不需要矿机，任何PC/Mac，甚至树莓派都可以运行Qtum全节点）；
+2. 拥有QTUM量子币（无论数量多少都可以Staking（挖矿），但拥有Qtum数量越多，挖到矿的可能性越高）。
 
 如果你还没有QTUM量子币，请先通过各种平台获取一定数量QTUM备用。
 
@@ -14,9 +14,9 @@ Qtum官方核心钱包可以运行Qtum全节点，是目前唯一支持Staking�
 有两种方式进行Staking（挖矿）：
 
 * 方式一：用命令行运行`qtumd`进行Staking（挖矿）；
-* 方式二：用带有图形界面的`qtum-qt`钱包进行Staking（挖矿）；
+* 方式二：用带有图形界面的`qtum-qt`钱包进行Staking（挖矿）。
 
-方式一适用于熟悉Linux/OSX/Windows命令行操作的用户，包括树莓派用户。方式二适用于适用有图形界面钱包的用户。读者可以根据自身需求选择其中一种方式进行Staking（挖矿）。两种方式完全等效，Staking（挖矿）效果没有任何区别。
+方式一适用于熟悉Linux/OSX/Windows命令行操作的用户，包括树莓派用户；方式二适用于适用有图形界面钱包的用户。读者可以根据自身需求选择其中一种方式进行Staking（挖矿）。两种方式完全等效，Staking（挖矿）效果没有任何区别。
 
 ## 方式一：用命令行运行`qtumd`进行Staking(挖矿)
 
@@ -31,6 +31,7 @@ Qtum官方核心钱包可以运行Qtum全节点，是目前唯一支持Staking�
 ```
 
 Staking（挖矿）功能在钱包未加密时将默认开启，无需其他设置。 
+
 ### 2. 转入QTUM量子币
 
 首先获取钱包地址，命令为：
@@ -169,7 +170,7 @@ Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](https:
 
 Qtum钱包会默认开启Staking（挖矿），但有些情况用户或交易所想要关闭该功能。有以下几种方式可以停止Staking（挖矿）：
 
-1 - 命令行用户可以在运行时加上`-staking=false`选项，如：
+1 命令行用户可以在运行时加上`-staking=false`选项，如：
 
 ```
 ./qtumd -staking=false -daemon
@@ -181,6 +182,6 @@ Qtum钱包会默认开启Staking（挖矿），但有些情况用户或交易所
 ./qtum-qt -staking=false
 ```
 
-2 - 在配置文件`qtum.conf`中添加`staking=false`，[如何使用配置文件？]()
+2 在配置文件`qtum.conf`中添加`staking=false`，[如何使用配置文件？]()
 
-3 - 锁定钱包，钱包在锁定状态下会自动停止Staking。[如何锁定钱包？](https://github.com/qtumproject/documents/blob/master/zh/Encrypt-and-Unlock-Qtum-Wallet.md)
+3 锁定钱包，钱包在锁定状态下会自动停止Staking。[如何锁定钱包？](https://github.com/qtumproject/documents/blob/master/zh/Encrypt-and-Unlock-Qtum-Wallet.md)

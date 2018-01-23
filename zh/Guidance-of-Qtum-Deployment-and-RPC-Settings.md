@@ -206,11 +206,10 @@ rpcallowip=192.168.77.51/255.255.255.0
         server_name  localhost;
 
         location / {
-            root html;
-            index index.html index.htm;
             proxy_pass http://192.168.77.188:3889;  #反代到端口3889
             proxy_set_header Authorization "Basic dGVzdDp0ZXN0MTIzNA==";  #本例中为test:test1234的base64编码
         }
+    }
 ```
 
 3.设置完成后，直接访问代理端即可进行RPC调用(无需输入用户名密码和端口号)，如：
