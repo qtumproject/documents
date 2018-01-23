@@ -22,7 +22,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ## 代码书写
 
-我们为大家提供了一份示例代码：[QRC20Token](https://github.com/icodeface/QRC20Token)，你可以使用这份合约代码来发布你的代币。
+我们为大家提供了一份示例代码：[QRC20Token](https://github.com/qtumproject/QRC20Token)，你可以使用这份合约代码来发布你的代币。
 
 在文件`QRC20Token.sol`中，修改name、symbol、totalSupply这三个变量值，他们分别代表代币名称、代币符号、代币发行总量。
 
