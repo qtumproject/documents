@@ -77,6 +77,8 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ![](https://s.qtum.site/uploads/0b1aa0c2354522ec07cb41913f0b48d4.png)
 
+如果在Token Address的下拉列表中没有找到之前的SenderAddress，向SenderAddress里发送一些Qtum后再试一次。
+
 ### 接发代币
 
 在 “QRC Token” 页面，点击选择需要操作的代币，然后点击下面的“Send” 和“Receive”进行发送和接收。
