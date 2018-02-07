@@ -26,6 +26,8 @@
 
 具体教程可参见[https://github.com/qtumproject/qtum/wiki/Setting-up-QTUM-Ubuntu,-Debian-and-Mint-repository](https://github.com/qtumproject/qtum/wiki/Setting-up-QTUM-Ubuntu,-Debian-and-Mint-repository)，目前支持的平台为Ubuntu，Debian和Mint。
 
+树莓派用户也可以通过apt安装，具体教程参见[https://github.com/qtumproject/qtum/wiki/Installing-Qtum-on-Raspberry-Pi](https://github.com/qtumproject/qtum/wiki/Installing-Qtum-on-Raspberry-Pi)。
+
 按照教程安装完毕后，可以通过直接从命令行调用`qtumd`和`qtum-cli`等。
 
 **3. 通过源代码编译**
@@ -53,7 +55,7 @@ docker pull qtum/qtum:latest
 
 ## 部署Qtum节点
 
-Docker容器的使用方法略有不同，但原理一致。读者可参考另一教程《[如何用docker运行qtum节点](https://github.com/qtumproject/documents/blob/master/zh/Launch-Qtum-With-Docker.md)》。
+Docker容器的使用方法略有不同，但原理一致。读者可参考另一教程《[如何用docker运行qtum节点](https://github.com/qtumproject/documents/blob/master/zh/Launch-Qtum-with-Docker.md)》。
 
 下面以Ubuntu为例，部署Qtum节点。Mac和Window命令行与Linux保持一致，不再赘述。
 

@@ -13,7 +13,7 @@
 ### 1. 从Docker hub直接拉取镜像
 
 ```
-$ docker pull qtum/qtum:latest
+$ docker pull qtum/qtum
 ```
 或者，
 
@@ -26,7 +26,7 @@ Dockerfile地址为：[https://github.com/pandazwb/qtum-docker/blob/master/relea
 构建镜像的命令为：
 
 ```
-$docker build --rm -t qtum/qtum:latest .
+$docker build --rm -t qtum/qtum.
 ```
 
 ## 创建本地数据路径和配置文件
@@ -55,7 +55,10 @@ rpcpassword=qtumtest
 完成上述准备工作后，即可运行Qtum节点，命令如下:
 
 ```
-$ docker run -d --rm --name qtum_node -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf -v /data/qtum-data/:/root/.qtum/ qtum/qtum:latest qtumd
+$ docker run -d --rm --name qtum_node \
+             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
+             -v /data/qtum-data/:/root/.qtum/ \
+             qtum/qtum qtumd
 ```
 
 通过docker命令可以查看容器的运行状态：
@@ -67,7 +70,10 @@ $ docker ps
 关闭容器中qtum节点，可用如下命令：
 
 ```
-$ docker run -i --network container:qtum_node -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf -v /data/qtum-data/:/root/.qtum/ qtum/qtum:latest qtum-cli stop
+$ docker run -i --network container:qtum_node \
+             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
+             -v /data/qtum-data/:/root/.qtum/ \
+             qtum/qtum qtum-cli stop
 ```
 
 上述命令采用`${PWD}/qtum.conf`文件中的配置，并且所有区块数据会保存到本地`/data/qtum-data`路径中。
@@ -77,11 +83,17 @@ $ docker run -i --network container:qtum_node -v ${PWD}/qtum.conf:/root/.qtum/qt
 通过如下Docker命令，可通过`qtum-cli`与容器中运行的qtum节点进行交互，如:
 
 ```
-$ docker run -i --network container:qtum_node -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf -v /data/qtum-data/:/root/.qtum/ qtum/qtum:latest qtum-cli getinfo
+$ docker run -i --network container:qtum_node \
+             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
+             -v /data/qtum-data/:/root/.qtum/ \
+             qtum/qtum qtum-cli getinfo
 ```
 
 如需获取完整的qtum-cli命令列表，请使用:
 
 ```
-$ docker run -i --network container:qtum_node -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf -v /data/qtum-data/:/root/.qtum/ qtum/qtum:latest qtum-cli help
+$ docker run -i --network container:qtum_node \
+             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
+             -v /data/qtum-data/:/root/.qtum/ \
+             qtum/qtum qtum-cli help
 ```
