@@ -17,7 +17,7 @@ We need `boost >= 1.58.0` for qtum but CentOS 7 only provides `boost <= 1.53.0`,
 First we install some dependencies:
 
 ```bash
-$ sudo yum install python-devel bzip2-devel
+sudo yum install python-devel bzip2-devel
 ```
 
 Then we clone the boost library from github:
@@ -76,11 +76,3 @@ If you have installed boost to any location other than `/`, `/usr`, `/usr/local`
 make -j4
 ```
 
-<!--
-> problems:
-> 
->  - requires boost >= 1.58.0
->  - boost_thread can't find boost_system when configuring with boost not in sys dir
-> 
-> set `LD_LIBRARY_PATH` env if boost is not in standard dirs
--->
