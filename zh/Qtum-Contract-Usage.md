@@ -215,22 +215,3 @@ Qtum支持所有比特币的RPC命令，并且还新加了如下的命令：
 Qtum支持所有的比特币命令行参数，另外Qtum新增如下的参数：
 
 * `-record-log-opcodes` - 在Qtum的数据目录(一般是在~/.qtum)下新建一个log文件，名字是`vmExecLogs.json`，所有的EVM LOG操作都会被记录。
-
-
-# EVM智能合约改动和限制
-
-因为底层技术的差异，Qtum中执行的结果可能与以太坊略有差异。这些差异包括以下所列，未来随着开发进展还有可能有新加的变动：
-
-* gas的设置与以太坊略有不同，某些操作的价格更贵或者更便宜。因此，基于以太坊的gas评估在qtum上并不适用。我们会开发自己的gas预估工具，并且以后也会详细列出其中的差别。
-
-* `block.coinbase`或者`COINBASE`当前不支持了，仅仅会返回0
-
-* `block.number` 会返回前一个区块的高度
-* `block.difficulty` 前一个区块的难度
-* `block.timestamp` 前一个区块的时间戳
-* `block.blockhash(n)` 与以太坊类似，如果n是当前区块的高度(`block.number+1`)，返回0
-* `sender` 当花费的代币(`vin[0].prevout`)是一个非标准交易时，返回0，如果是`pubkey`或者`pubkeyhash`返回160bit的`pubkeyhash`地址。
-* 代币可以被发送至合约或者`pubkeyhash`地址，如果发送的时候合约地址不存在，代币将会被自动的转发至一个`pubkeyhash`地址。
-* 在`coinbase`或者`coinstake`中不会执行合约操作
-
-更多的设计和操作方法可以看[ITD](https://github.com/qtumproject/qtum-itds)文档。
