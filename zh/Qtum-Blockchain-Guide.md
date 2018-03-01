@@ -652,6 +652,7 @@ callcontract 2d4b6564a012ae1383854ac48574c2248660d897 70a08231000000000000000000
 在PC钱包(qtum-qt软件)上可以通过GUI实现和qtum-cli同样的智能合约的部署、交互等功能。
 
 #### 部署智能合约
+
 部署合约都是要和Qtum链上进行交互的，因此连接到一个全节点，由于PC钱包本身是一个全节点，因此不需要另外运行qtumd之类的节点。在PC钱包左边点击Smart Contract按钮出现智能合约功能界面，点击Create后，把4.1节编译的字节码拷贝在Bytecode输入框，同时把ABI也放入对应的输入框。对应qtum-cli createcontract命令参数，界面下面的GasLimit、GasPrice、和Sender Address可以设置。最后点击Create Contract按钮，就会生成一个合约交易，把合约部署到Qtum链上，弹出的对话框显示了发送者、合约地址等相关信息。
 
 ![](https://s.qtum.site/uploads/29f02f8251200bf9373da023657ac361.png)
@@ -667,7 +668,7 @@ PC钱包部署智能合约
 
 和智能合约交互
 
-####查看智能合约执行结果
+#### 查看智能合约执行结果
 
 和callcontract一样可以通过qt钱包在本地调用智能合约相关函数或公共变量，其执行不会影响到链上的智能合约状态，一般用来查看智能合约在Qtum链上执行某个函数之后的结果。点击Call按钮切换到本地执行合约界面，把Contract Address、、ABI填好，有函数参数的话，在address dest面填写参数，从Functtion选择要调用的函数，Sender Address可选设置，最后点击Call Contract完成智能合约相关功能调用，合约执行的结果会在弹出的对话框中显示出来。
 
@@ -681,8 +682,10 @@ PC钱包部署智能合约
 
 
 
-###与以太坊智能合约的不同
-####msg.value
+### 与以太坊智能合约的不同
+
+#### msg.value
+
 在 qtum 智能合约中，msg.value 使用的单位是 Satoshi, 即聪, 1 qtum = 10^8 聪； 而在以太坊中，msg.value 使用的单位是 wei， 1 ether = 10^18 wei 。
 
 如果你在 Qtum 智能合约中使用了 ether 关键字，那么它实际相当于10^10 qtum。
@@ -691,9 +694,11 @@ PC钱包部署智能合约
 
 在 Qtum 上发行合约代币时， 推荐将 decimals 设置为 8 。
 
-####address 类型参数
+#### address 类型参数
+
 调用智能合约，传递address类型参数的时候，需要使用hash160地址，而不是Q开头的qtum地址。可以使用qtum-cli gethexaddress命令将qtum地址转换为hash160地址。
 
-####获取 event log
+#### 获取 event log
+
 启动 qtumd 或者 qtum-qt 的时候使用 -logevents 参数，然后使用 qtum-cli searchlogs 或者 qtum-cli gettransactionreceipt 获取 event log 。
 
