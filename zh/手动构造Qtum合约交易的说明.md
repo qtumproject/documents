@@ -38,6 +38,15 @@ OP_CALL = 0xc2，用于调用合约时使用，即sendtocontract的时候。
 
 c2 // OP_CALL
 
+
+## 谁是合约的调用者
+一笔合约交易vin里的首个UTXO对应的拥有者会被视为合约的调用者。
+
+## GAS找零
+gas_price * gas_limit 就是用户调用合约支付的GAS总数，当交易得到确认之后，矿工会在coinstake交易里面加上一笔output用于返还多支付的GAS，返还的对象是合约的调用者。
+
+**对于交易所来说，需要对GAS找零和正常的用户充值加以区分**
+
 ## 参考实现代码
 * https://github.com/qtumproject/qtumjs-lib/blob/master/src/utils.js#L132
 * https://github.com/qtumproject/qtum-electrum/blob/master/gui/qt/main_window.py#L3212
