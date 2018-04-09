@@ -10,7 +10,8 @@
 访问 [测试网络水龙头](https://testnet-faucet.qtum.info/)，输入钱包地址领取测试币。
 
 ## 4. 测试网络浏览器
-[https://testnet.qtum.org/](https://testnet.qtum.org/)
+[https://testnet.qtum.org/](https://testnet.qtum.org/)  
+[https://bte.qtum.org](https://bte.qtum.org)
 
 ## 5. 回归测试模式
 使用命令 `./qtumd --regtest ` 或者 `./qtum-qt --regtest` 启动程序即可进入回归测试模式。
