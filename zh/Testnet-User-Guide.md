@@ -9,10 +9,15 @@
 ## 3. 获取测试币
 访问 [测试网络水龙头](https://testnet-faucet.qtum.info/)，输入钱包地址领取测试币。
 
-## 4. 回归测试模式
+## 4. 测试网络浏览器
+[https://testnet.qtum.org/](https://testnet.qtum.org/)
+
+## 5. 回归测试模式
 使用命令 `./qtumd --regtest ` 或者 `./qtum-qt --regtest` 启动程序即可进入回归测试模式。
 
 通过运行 `./qtum-cli --regtest generate [num]` 可以生成新的区块。
+
+
 
 
 
