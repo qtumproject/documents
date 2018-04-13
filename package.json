@@ -1,5 +1,10 @@
 {
   "name": "documents",
+  "scripts": {
+    "build": "gitbook build",
+    "publish": "sh publish.sh",
+    "deploy": "npm run build && npm run publish"
+  },
   "version": "1.0.0",
   "description": "qtum documentation project",
   "main": "index.js",
