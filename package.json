@@ -2,7 +2,7 @@
   "name": "documents",
   "scripts": {
     "build": "gitbook build",
-    "publish": "sh publish.sh",
+    "publish": "GIT_DEPLOY_DIR=_book ./deploy.sh",
     "deploy": "npm run build && npm run publish"
   },
   "version": "1.0.0",
