@@ -1,0 +1,7 @@
+{
+  "title": "Qtum Documentation",
+  "plugins": [
+    "language-picker",
+    "anchors"
+  ]
+}

@@ -2,7 +2,7 @@
 
 如果您未运行Qtum节点，请先参考如下教程安装Qtum钱包：
 
-* 命令行用户参考：《[如何部署Qtum量子链节点](https://github.com/qtumproject/documents/blob/master/zh/Guidance-of-Qtum-Deployment-and-RPC-Settings.md)》
+* 命令行用户参考：《[如何部署Qtum量子链节点](Guidance-of-Qtum-Deployment-and-RPC-Settings.md)》
 * 图形界面钱包请从这里下载：[https://eco.qtum.org/wallet](https://eco.qtum.org/wallet)
 
 **加密钱包或更改密码后，请务必重新备份您的钱包！**
@@ -27,15 +27,15 @@
 
 菜单栏中选择`Setting-Encrypt Wallet`
 
-![选择加密钱包](https://s.qtum.site/uploads/160c0aea78610c4d09908c76db56e25b.jpeg)
+![选择加密钱包](choose-encrypt.jpeg)
 
 输入密码并确认。设置成功后钱包会重新启动。
 
-![输入钱包密码](https://s.qtum.site/uploads/25c70ea82ef849c8ec20df65b6652678.jpeg)
+![输入钱包密码](enter-password.jpeg)
 
 钱包重启后，会在右下角显示锁定标志，表示钱包已加锁：
 
-![锁定状态](https://s.qtum.site/uploads/3d5761c7f5a728fbc12cd6d2ee64aa27.jpeg)
+![锁定状态](wallet-locked.jpeg)
 
 ## 解锁钱包
 
@@ -87,8 +87,8 @@
 
 选择“Setting-Change Passphrase”修改密码：
 
-![选择修改密码](https://s.qtum.site/uploads/300233415c04908e1013ddcf85230c77.jpeg)
+![选择修改密码](click-changepass.jpeg)
 
 输入老密码和新密码，完成修改：
 
-![修改密码](https://s.qtum.site/uploads/dca6fe1525de2cf62f78aec83631bac2.jpeg)
+![修改密码](enter-new-password.jpeg)

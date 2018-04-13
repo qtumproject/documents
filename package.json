@@ -1,0 +1,9 @@
+{
+  "name": "documents",
+  "version": "1.0.0",
+  "description": "qtum documentation project",
+  "main": "index.js",
+  "repository": "git@github.com:qtumproject/documents.git",
+  "author": "Howard Yeh <howard@metacircus.com>",
+  "license": "MIT"
+}
