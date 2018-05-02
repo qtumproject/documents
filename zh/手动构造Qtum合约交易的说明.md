@@ -14,14 +14,14 @@ OP_CALL = 0xc2，用于调用合约时使用，即sendtocontract的时候。
     
 其中datahex为编码后的合约函数+参数，我们可以同过 [ethabi](https://github.com/paritytech/ethabi) 来生成
   
-比如 调用function foo(uint) 就可以通过 `ethabi encode function test.json foo -p 100 -l` 得到datahex。
+比如 调用function foo(uint) 就可以通过 `ethabi encode function test.json foo -p 100 -l` 得到datahex。
 
 * https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI
 * [eth-abi python](https://github.com/ethereum/eth-abi)
 * [ethabi-js](https://github.com/jacogr/ethabi-js)
 
 ## 实例解析
-以测试网络上一笔token转账交易为例，txid：f7eac4a0e40599d7c094353eb139aa2076be02535d66e221799d67d01054c27a  
+以测试网络上一笔token转账交易为例，txid：[f7eac4a0e40599d7c094353eb139aa2076be02535d66e221799d67d01054c27a](https://testnet.qtum.org/tx/f7eac4a0e40599d7c094353eb139aa2076be02535d66e221799d67d01054c27a)  
 
 他的scriptPubKey内容为：01040390d003012844a9059cbb00000000000000000000000081f9fc3ee3667397b58f3a53c60e7556e98cf595000000000000000000000000000000000000000000000000000009184e72a00014e21bc819674c8f7cc7d76b618914ecff082107b3c2
   
