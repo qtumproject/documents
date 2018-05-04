@@ -2,9 +2,14 @@
 
 * [Introduction](README.md)
 
-# Running Qtum
+### Using Wallet
 
-+ [QTUM QT Wallet](Qtum-Wallet-Tutorial/README.md)
-+ [QTUM Web Wallet](QTUM-WebWallet-usage/README.md)
-+ [Staking with a VPS](How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md)
++ [QT Wallet](Qtum-Wallet-Tutorial/README.md)
++ [Web Wallet](QTUM-WebWallet-usage/README.md)
++ [Mobile Wallet](Qtum-Mobile-wallet-tutorial/README.md)
+
+### Staking
+
++ [Stake With VPS](How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md)
++ [Stake With Raspberry Pi](Qtum-on-Raspberry-Pi/README.md)
 
