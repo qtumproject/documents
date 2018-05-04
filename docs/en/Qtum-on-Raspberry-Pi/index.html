@@ -1,0 +1,337 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <title>Stake With Raspberry Pi · Qtum Documentation</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using Wallet</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Qtum-Wallet-Tutorial/">
+            
+                <a href="../Qtum-Wallet-Tutorial/">
+            
+                    
+                    QT Wallet
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../QTUM-wallet-usage-best-practices/">
+            
+                <a href="../QTUM-wallet-usage-best-practices/">
+            
+                    
+                    Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../QTUM-WebWallet-usage/">
+            
+                <a href="../QTUM-WebWallet-usage/">
+            
+                    
+                    Web Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Qtum-Mobile-wallet-tutorial/">
+            
+                <a href="../Qtum-Mobile-wallet-tutorial/">
+            
+                    
+                    Mobile Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/">
+            
+                <a href="../How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/">
+            
+                    
+                    Stake With VPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Stake With Raspberry Pi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Stake With Raspberry Pi</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="qtum-on-raspberry-pi"><a name="qtum-on-raspberry-pi" class="plugin-anchor" href="#qtum-on-raspberry-pi"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum on Raspberry Pi</h1><p>Just like we did on Debian, we need to download and install Qtum&apos;s public key</p><p><code>wget -qO - http://repo.qtum.info/apt/public.key | sudo apt-key add -</code></p><p>This downloads and installs the Qtum public key</p><h3 id="adding-repository-to-your-apt-sources"><a name="adding-repository-to-your-apt-sources" class="plugin-anchor" href="#adding-repository-to-your-apt-sources"><i class="fa fa-link" aria-hidden="true"></i></a>Adding repository to your APT sources.</h3><p><code>sudo su</code> - Sudo to root first</p><p><code>echo &quot;deb http://repo.qtum.info/apt/raspbian/ jessie main&quot; &gt;&gt; /etc/apt/sources.list</code>
+or
+<code>echo &quot;deb http://repo.qtum.info/apt/raspbian/ stretch main&quot; &gt;&gt; /etc/apt/sources.list</code></p><p>This will add the repository to your APT sources file.</p><h3 id="refreshing-apt-sources-and-installing-qtum"><a name="refreshing-apt-sources-and-installing-qtum" class="plugin-anchor" href="#refreshing-apt-sources-and-installing-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Refreshing APT sources and installing Qtum</h3><p><code>sudo apt update &amp;&amp; sudo apt install qtum</code></p><p>By doing this, we&apos;ll update our sources and install Qtum on our raspberry Box, which can act now as a staking server/node.</p><h2 id="launching-qtum-daemon"><a name="launching-qtum-daemon" class="plugin-anchor" href="#launching-qtum-daemon"><i class="fa fa-link" aria-hidden="true"></i></a>Launching Qtum daemon</h2><p>All we need to do to launch the Qtum daemon is type:
+<code>qtumd -daemon</code></p><p>As soon as you type this, the wallet will create the wallet.dat file among other files (if they&#x2019;re not already there). The wallet will run and begin syncing instantly from the other Blockchain nodes, this can take a few hours to complete so you can go ahead and have some coffee and let it synchronize.</p><h2 id="encrypting-wallet"><a name="encrypting-wallet" class="plugin-anchor" href="#encrypting-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Encrypting wallet</h2><p>We can encrypt the wallet at any time, it&apos;s better to do it before we go any further.</p><p>To do this, type the following on the command line:</p><p><code>qtum-cli encryptwallet yourpassword</code></p><p>This will encrypt the wallet which in turn closes the daemon, you&apos;ll see the following message:</p><p><code>wallet encrypted; Qtum server stopping, restart to run with encrypted wallet.</code> If you alreadby backed up before encrypting, you <strong> need to make a new backup. </strong></p><p><code>qtum-cli getaccountaddress</code> &quot;&quot; -&gt; Right after launching the daemon, you can obtain your wallet address by typing this.</p><p>You can send Qtum coins to the address we just obtained from the daemon, please remember that those transactions require at least 500+ confirmations before they become mature enough for staking.</p><h2 id="staking"><a name="staking" class="plugin-anchor" href="#staking"><i class="fa fa-link" aria-hidden="true"></i></a>Staking</h2><p>Now that we&apos;ve waited until we have at least 501 confirmations on our received transaction, we are elligible for staking, however, if our wallet is encrypted (which we did for security reasons) we won&apos;t be able to stake, let&apos;s open our wallet for staking using the command line!.</p><p><code>qtum-cli walletpassphrase password 999999999 true</code></p><p>The above command will unlock the walet for 31.6 Years! that should be enough for now. Please note, this will not unlock your backup, only the wallet that&apos;s running right now.</p><p>Now that we&apos;ve unlocked our wallet, we need to wait until we have more than 501 confirmations to be elligible for staking, if we already do, it&apos;s a matter of time which will vary depending on the network weight vs your wallet&apos;s weight.</p><h2 id="checking-balance"><a name="checking-balance" class="plugin-anchor" href="#checking-balance"><i class="fa fa-link" aria-hidden="true"></i></a>Checking Balance</h2><p>To check your balance, type qtum-cli getinfo this will show general information, including your available balance and balance in staking</p><h2 id="check-transactions"><a name="check-transactions" class="plugin-anchor" href="#check-transactions"><i class="fa fa-link" aria-hidden="true"></i></a>Check transactions</h2><p>To check your transactions (incoming and outgoing) type qtum-cli listtransactions</p><h2 id="check-staking-info"><a name="check-staking-info" class="plugin-anchor" href="#check-staking-info"><i class="fa fa-link" aria-hidden="true"></i></a>Check staking info</h2><p>To check Qtum&apos;s staking information, type qtum-cli getstakinginfo</p><h2 id="staking-tips"><a name="staking-tips" class="plugin-anchor" href="#staking-tips"><i class="fa fa-link" aria-hidden="true"></i></a>Staking tips</h2><p>Staking really depends on network weight vs your wallet&#x2019;s weight which is based on the amount of coins you have, higher weight increases your chances of staking a block.</p><p>If you have a large amount of coins, it&#x2019;s a good idea to split those up in separate transactions, for instance, if you have 10.000 QTUM, it&#x2019;s better to send 10 transactions of 1000 QTUM each to your wallet, each one generates a UTXO input which will take part in staking. This optimizes the staking process and works much better than just one large 10.000 QTUM input.</p><p>If you want to split your coins into different addresses inside your VPS wallet, type the following to obtain new addresses inside your wallet: qtum-cli getnewaddress Each time you type this, you&#x2019;ll get a new address, QTUM can generate any amount of addresses you want, but please keep in mind, if you do go over 100 new address, you might want to make a new backup of your wallet.</p><h2 id="updating-wallet"><a name="updating-wallet" class="plugin-anchor" href="#updating-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Updating wallet</h2><p>We&#x2019;re always launching new updates, sometimes it&#x2019;s to add new features or fix bugs. In any case, updating is a breeze, all you have to do is type
+<code>sudo apt update &amp;&amp; sudo apt install &#x2014;only-upgrade qtum</code></p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Stake With VPS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Stake With Raspberry Pi","level":"3.2","depth":1,"previous":{"title":"Stake With VPS","level":"3.1","depth":1,"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","ref":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-on-Raspberry-Pi/README.md","mtime":"2018-05-04T08:53:45.685Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-04T09:19:06.588Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head>
-        <title>Web Wallet · Qtum Documentation</title>
+        <title>Best Practices · Qtum Documentation</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../Qtum-Mobile-wallet-tutorial/" />
+    <link rel="next" href="../QTUM-WebWallet-usage/" />
     
     
-    <link rel="prev" href="../QTUM-wallet-usage-best-practices/" />
+    <link rel="prev" href="../Qtum-Wallet-Tutorial/" />
     
 
     </head>
@@ -131,9 +131,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1.1" data-path="../QTUM-wallet-usage-best-practices/">
+        <li class="chapter active" data-level="2.1.1" data-path="./">
             
-                <a href="../QTUM-wallet-usage-best-practices/">
+                <a href="./">
             
                     
                     Best Practices
@@ -149,9 +149,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2" data-path="./">
+        <li class="chapter " data-level="2.2" data-path="../QTUM-WebWallet-usage/">
             
-                <a href="./">
+                <a href="../QTUM-WebWallet-usage/">
             
                     
                     Web Wallet
@@ -238,7 +238,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Web Wallet</a>
+        <a href=".." >Best Practices</a>
     </h1>
 </div>
 
@@ -253,13 +253,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="qtum-web-wallet"><a name="qtum-web-wallet" class="plugin-anchor" href="#qtum-web-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>QTUM Web Wallet</h1><h4 id="important"><a name="important" class="plugin-anchor" href="#important"><i class="fa fa-link" aria-hidden="true"></i></a>IMPORTANT!</h4><p>When using a web wallet like this one, please make 100% sure that you&apos;re entering the right URL which is</p><p><a href="https://qtumwallet.org" target="_blank">https://qtumwallet.org</a></p><p>There is no other URL being used for the web wallet, please be safe.</p><p>Upong loading the web wallet, we get this very important warning, please take a few seconds and read it.</p><p><img alt="Receive" src="1.jpg"></p><p>Now, let&apos;s click on <strong>&quot;generate new wallet&quot;</strong></p><p><img alt="Receive" src="2.jpg"></p><p>This is pretty straightforward, we will enter a password which will be used to create a series of of private keys based on the seed words which will be provided by the web wallet.</p><p><img alt="Receive" src="3.jpg"></p><p>Please remember to back up these seed words, you and only you as a user have access to these seed words <strong>(Private keys aren&apos;t stored on the server, if you lose these seed words you&apos;ll lose access to your funds!)</strong>.</p><p><img alt="Receive" src="4.jpg"></p><p>Here we&apos;re forced to enter the seed words manually to make sure we backed them up</p><p><img alt="Receive" src="5.jpg"></p><p>This is our wallet, here we can see:</p><ul><li>Public key
+                                <h1 id="qtum-wallet-best-practices"><a name="qtum-wallet-best-practices" class="plugin-anchor" href="#qtum-wallet-best-practices"><i class="fa fa-link" aria-hidden="true"></i></a>QTUM Wallet Best Practices</h1><p>In this document we&apos;ll take a look at how to safely use our QTUM wallet. Please keep in mind these VERY IMPORTANT topics:</p><ol><li>Encrypt your wallet BEFORE backing up
 </li>
-<li>Balance
+<li>Make several backups of your password, preferably, make paper backups of your password.
 </li>
-<li>Private key
+<li>Double check, no, Triple check your password to make sure you wrote it down correctly. Without your password, no one will be able to access your wallet.
+</li>
+<li>Once you&apos;ve backed up and tested your password, make a backup of your wallet.
+</li>
+<li>Try to keep several copies of your backup in safe locations only, do not use public online services for this, do not trust 3rd party services with your holdings.
+</li></ol>
+<h3 id="lets-review-how-to"><a name="lets-review-how-to" class="plugin-anchor" href="#lets-review-how-to"><i class="fa fa-link" aria-hidden="true"></i></a>Let&apos;s review how to:</h3><ul><li>Encrypt
+</li>
+<li>Backup wallet
+</li>
+<li>Restore
 </li></ul>
-<p><img alt="Receive" src="6.jpg"></p><p>You can always back up your private key itself, that&apos;s where your funds will go and it&apos;s very important. Please make sure to use paper backups</p><p><img alt="Receive" src="7.jpg"></p><h2 id="restore-from-backup"><a name="restore-from-backup" class="plugin-anchor" href="#restore-from-backup"><i class="fa fa-link" aria-hidden="true"></i></a>Restore from backup</h2><p>Restoring from backup is quite simple, however, please make sure to enter your password correctly <strong>(the same one your entered when creating the wallet)</strong> if you enter another password, the wallet will create a new address, so please make sure to enter the correct password.</p><p><img alt="Receive" src="10.jpg"></p><p>Here we entered our seed words, and when we click on confirm we&apos;re prompted to enter the password, <strong>AGAIN</strong> please make sure to enter the correct password, otherwise the restore won&apos;t work.</p><p><img alt="Receive" src="11.jpg"></p><p>We&apos;ve successfully recovered the wallet, we can see here the address we had originally.</p><p><img alt="Receive" src="12.jpg"></p>
+<h3 id="wallet-encryption"><a name="wallet-encryption" class="plugin-anchor" href="#wallet-encryption"><i class="fa fa-link" aria-hidden="true"></i></a>Wallet Encryption</h3><p>First, let&#x2019;s encrypt this wallet before making the backup, this will allow the backup to be encrypted as well. Go to settings -&gt; Encrypt wallet.</p><p><img alt="Receive" src="687474703a2f2f39322e3232322e36392e38362f696d616765732f77616c6c65742f31312e706e67"></p><p>Next, let&#x2019;s enter the password for this wallet, <strong>please remember this password because without it you&#x2019;ll lose access to your Qtum</strong>.</p><p><img alt="Receive" src="687474703a2f2f39322e3232322e36392e38362f696d616765732f77616c6c65742f31322e706e67"></p><p>After the password is entered and accepted, the wallet will restart and it&apos;ll be encrypted. <strong>AGAIN, do not forget or lose your password, without it, you will never be able to gain access to your QTUM.</strong></p><h3 id="wallet-backup"><a name="wallet-backup" class="plugin-anchor" href="#wallet-backup"><i class="fa fa-link" aria-hidden="true"></i></a>Wallet Backup</h3><p>It&apos;s recommended to make the backup <strong>after</strong> encrypting the wallet.</p><p><img alt="Receive" src="687474703a2f2f39322e3232322e36392e38362f696d616765732f77616c6c65742f6261636b75702e706e67"></p><p>To access the backup option, we go into File/Backup Wallet and then we enter route and name.</p><p>After the backup&#x2019;s name is entered and we&#x2019;ve verified the route where the wallet is being saved to, we can click on save. Now we&#x2019;ve successfully backed up our wallet.</p><h3 id="restore-wallet-backup"><a name="restore-wallet-backup" class="plugin-anchor" href="#restore-wallet-backup"><i class="fa fa-link" aria-hidden="true"></i></a>Restore wallet backup</h3><p>Recent versions of the QTUM wallet have implemented backup management from the UI. It&apos;s a breeze to backup and restore your QTUM wallet!</p><p>Go to File -&gt; Restore wallet, this will open a dialog which will allow us to restore directly from the Qtum-core QT wallet!</p><p><img alt="Receive" src="687474703a2f2f39322e3232322e36392e38362f696d616765732f77616c6c65742f726573746f72652e706e67"></p><p><img alt="Receive" src="687474703a2f2f39322e3232322e36392e38362f696d616765732f77616c6c65742f726573746f7265322e706e67"></p><p><img alt="Receive" src="687474703a2f2f39322e3232322e36392e38362f696d616765732f77616c6c65742f726573746f7265332e706e67"></p><p>Here we selected the wallet backup with the reindex option selected (salvagewallet can also be used if necessary).</p>
                                 
                                 </section>
                             
@@ -286,12 +296,12 @@
 
             
                 
-                <a href="../QTUM-wallet-usage-best-practices/" class="navigation navigation-prev " aria-label="Previous page: Best Practices">
+                <a href="../Qtum-Wallet-Tutorial/" class="navigation navigation-prev " aria-label="Previous page: QT Wallet">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../Qtum-Mobile-wallet-tutorial/" class="navigation navigation-next " aria-label="Next page: Mobile Wallet">
+                <a href="../QTUM-WebWallet-usage/" class="navigation navigation-next " aria-label="Next page: Web Wallet">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -302,7 +312,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Web Wallet","level":"2.2","depth":1,"next":{"title":"Mobile Wallet","level":"2.3","depth":1,"path":"Qtum-Mobile-wallet-tutorial/README.md","ref":"Qtum-Mobile-wallet-tutorial/README.md","articles":[]},"previous":{"title":"Best Practices","level":"2.1.1","depth":2,"path":"QTUM-wallet-usage-best-practices/README.md","ref":"QTUM-wallet-usage-best-practices/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"QTUM-WebWallet-usage/README.md","mtime":"2018-05-04T08:18:07.639Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-04T09:19:06.588Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Best Practices","level":"2.1.1","depth":2,"next":{"title":"Web Wallet","level":"2.2","depth":1,"path":"QTUM-WebWallet-usage/README.md","ref":"QTUM-WebWallet-usage/README.md","articles":[]},"previous":{"title":"QT Wallet","level":"2.1","depth":1,"path":"Qtum-Wallet-Tutorial/README.md","ref":"Qtum-Wallet-Tutorial/README.md","articles":[{"title":"Best Practices","level":"2.1.1","depth":2,"path":"QTUM-wallet-usage-best-practices/README.md","ref":"QTUM-wallet-usage-best-practices/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"QTUM-wallet-usage-best-practices/README.md","mtime":"2018-05-04T09:18:05.296Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-04T09:19:06.588Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
