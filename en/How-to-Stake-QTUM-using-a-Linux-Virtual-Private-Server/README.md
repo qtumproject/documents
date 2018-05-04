@@ -12,13 +12,13 @@ In this tutorial we'll show how to do this using **Vultr**  https://vultr.com wh
 
 Let's begin, we log into our cloud provider dashboard where we get several options.
 
-<img src="http://92.222.69.86/images/vultr1.png" width="800">
+<img src="vultr1.png" width="800">
 
 Choose a location for the VPS, for this test we've chosen Miami.
 
 
 
-<img src="http://92.222.69.86/images/vultr2.png" width="800">
+<img src="vultr2.png" width="800">
 
 Choose a server type, our linux wallet runs on any linux distribution, however, it is recommended to use Ubuntu 16.04 if you want to compile the wallet yourself, (we'll do this on this tutorial). You can select any desired option, we went with a basic 1CPU/512MB ram VPS.
 
@@ -40,13 +40,13 @@ https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-
 
 After we've created our SSH key, we click on "add new"
 
-<img src="http://92.222.69.86/images/vultr5.png" width="800">
+<img src="vultr5.png" width="800">
 
 
 
 Here we can paste our SSH-key, enter a name for it and click on add ssh key.
 
-<img src="http://92.222.69.86/images/vultr6.png" width="800">
+<img src="vultr6.png" width="800">
 
 
 
@@ -56,7 +56,7 @@ Here we can paste our SSH-key, enter a name for it and click on add ssh key.
 
 Once we have our credentials ready, we log in and see the following screen:
 
-<img src="http://92.222.69.86/images/vultr3.png" width="800">
+<img src="vultr3.png" width="800">
 
 
 
@@ -97,7 +97,7 @@ To execute the daemon:
 
 It's always good to refresh installed libraries, for that we do apt update && apt upgrade and just press enter when prompted. This will update all installed packages while also installing any available security updates.
 
-<img src="http://92.222.69.86/images/vultr4.png" width="800">
+<img src="vultr4.png" width="800">
 
 Once we finish the update, let's proceed to installing dependencies and cloning the qtum sources from Github.
 
@@ -163,7 +163,7 @@ This will encrypt the wallet which in turn closes the daemon, you'll see the fol
 
 `wallet encrypted; Qtum server stopping, restart to run with encrypted wallet. The keypool has been flushed and a new HD seed was generated (if you are using HD). You need to make a new backup.`
 
-<img src="http://92.222.69.86/images/encrypt.jpg" width="800">
+<img src="encrypt.jpg" width="800">
 
 `qtum-cli getaccountaddress ""` -> Right after launching the daemon, you can obtain your wallet address by typing this.
 
@@ -215,40 +215,40 @@ First, we'll download Filezilla, which is an easy to use and secure FTP/SFTP ser
 
 https://filezilla-project.org
 
-<img src="http://92.222.69.86/images/filezilla1.png" width="800">
+<img src="filezilla1.png" width="800">
 
 Installing is just like any other windows app.
 
 
 
-<img src="http://92.222.69.86/images/filezilla2.png" width="800">
+<img src="filezilla2.png" width="800">
 
 When the installer finishes, we launch Filezilla and are greeted with this screen, let's proceed and add our previously created ssh-key
 
 We go into Edit -> Settings -> SFTP. This will give us the following screen in which we will be able to import our SSH key.
 
-<img src="http://92.222.69.86/images/filezilla3.png" width="800">
+<img src="filezilla3.png" width="800">
 
 
 
 Please note that Filezilla only accepts the private key which is created when the ssh-key was generated.
 
-<img src="http://92.222.69.86/images/filezilla4.png" width="800"> Here we've already added the ssh key, now we can log into our server
+<img src="filezilla4.png" width="800"> Here we've already added the ssh key, now we can log into our server
 
 
-<img src="http://92.222.69.86/images/filezilla5.png" width="800">
+<img src="filezilla5.png" width="800">
 
 
-we enter our VPS ip address + username (root in this case),  leave a blank password because we're using ssh-key to login <img src="http://92.222.69.86/images/filezilla6.png" width="800">
+we enter our VPS ip address + username (root in this case),  leave a blank password because we're using ssh-key to login <img src="filezilla6.png" width="800">
 
 
-Just press ok when prompted, and you'll be able to log in. <img src="http://92.222.69.86/images/filezilla8.png" width="800">
+Just press ok when prompted, and you'll be able to log in. <img src="filezilla8.png" width="800">
 
 
-<img src="http://92.222.69.86/images/filezilla9.png" width="800">
+<img src="filezilla9.png" width="800">
 
 
-Here we can see the /root/ folder of our VPS, this is where our wallet runs and has the wallet stored in /root/.qtum we can go ahead and double click the folder which will show us the following: <img src="http://92.222.69.86/images/filezilla10.png" width="800">
+Here we can see the /root/ folder of our VPS, this is where our wallet runs and has the wallet stored in /root/.qtum we can go ahead and double click the folder which will show us the following: <img src="filezilla10.png" width="800">
 
 Now all we need to do is scroll down to wallet.dat, right click and select download from the list. This will download the wallet.dat file to our computer, we've successfully backed up our Qtum wallet!.
 
