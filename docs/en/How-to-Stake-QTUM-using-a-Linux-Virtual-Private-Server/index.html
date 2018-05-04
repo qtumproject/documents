@@ -1,0 +1,326 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <title>Staking with a VPS · Qtum Documentation</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../QTUM-WebWallet-usage/" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Staking with a VPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../QTUM-WebWallet-usage/">
+            
+                <a href="../QTUM-WebWallet-usage/">
+            
+                    
+                    QTUM WebWallet usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Staking with a VPS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="staking-with-a-vps"><a name="staking-with-a-vps" class="plugin-anchor" href="#staking-with-a-vps"><i class="fa fa-link" aria-hidden="true"></i></a>Staking with a VPS</h1><p>Many users prefer using a VPS for staking purposes, it is safer than using your local machine and it is more convenient for most people as you don&apos;t need to leave your computer turned on 24/7, there are also some very cheap and stable solutions you can use.</p><p>In this tutorial we&apos;ll show how to do this using <strong>Vultr</strong>  <a href="https://vultr.com" target="_blank">https://vultr.com</a> which is a very stable, cost effective and fast provider with instances all over the world, the same principles apply to any other cloud provider you may prefer.</p><h2 id="launching-instance"><a name="launching-instance" class="plugin-anchor" href="#launching-instance"><i class="fa fa-link" aria-hidden="true"></i></a>Launching instance</h2><p>Let&apos;s begin, we log into our cloud provider dashboard where we get several options.</p><p><img src="vultr1.png" width="800"></p><p>Choose a location for the VPS, for this test we&apos;ve chosen Miami.</p><p><img src="vultr2.png" width="800"></p><p>Choose a server type, our linux wallet runs on any linux distribution, however, it is recommended to use Ubuntu 16.04 if you want to compile the wallet yourself, (we&apos;ll do this on this tutorial). You can select any desired option, we went with a basic 1CPU/512MB ram VPS.</p><h4 id="ssh-keys"><a name="ssh-keys" class="plugin-anchor" href="#ssh-keys"><i class="fa fa-link" aria-hidden="true"></i></a>SSH Keys</h4><p>It is recommended to use ssh-key to login instead of passwords, its far more secure and convenient.</p><p>Creating ssh-keys is out of the scope of this tutorial, but here are some good references on how to do this:</p><p><a href="https://www.vultr.com/docs/how-do-i-generate-ssh-keys" target="_blank">https://www.vultr.com/docs/how-do-i-generate-ssh-keys</a></p><p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2" target="_blank">https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2</a></p><p><a href="https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-windows" target="_blank">https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-windows</a> &lt; <em>this one is for Windows users.</em></p><p>After we&apos;ve created our SSH key, we click on &quot;add new&quot;</p><p><img src="vultr5.png" width="800"></p><p>Here we can paste our SSH-key, enter a name for it and click on add ssh key.</p><p><img src="vultr6.png" width="800"></p><h2 id="logging-in-to-your-vps"><a name="logging-in-to-your-vps" class="plugin-anchor" href="#logging-in-to-your-vps"><i class="fa fa-link" aria-hidden="true"></i></a>Logging in to your VPS</h2><p>Once we have our credentials ready, we log in and see the following screen:</p><p><img src="vultr3.png" width="800"></p><h3 id="install-through-repository-ubuntu-1604---1710-and-linux-mint"><a name="install-through-repository-ubuntu-1604---1710-and-linux-mint" class="plugin-anchor" href="#install-through-repository-ubuntu-1604---1710-and-linux-mint"><i class="fa fa-link" aria-hidden="true"></i></a>Install through repository (Ubuntu 16.04 -&gt; 17.10 and Linux Mint)</h3><p>This is the recommended method for most users as it&#x2019;s easier, faster and more convenient.
+&#x200B;</p><h4 id="obtaining-signing-key"><a name="obtaining-signing-key" class="plugin-anchor" href="#obtaining-signing-key"><i class="fa fa-link" aria-hidden="true"></i></a>Obtaining signing key</h4><p>First, we need to obtain the Qtum signing key from the ubuntu keyserver, here&apos;s how:</p><p><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BF5B197D</code></p><p>This will download and add the Qtum signing key to your linux install.</p><p>Adding repository to your APT sources.</p><p>``` sudo su - Sudo to root first</p><p>echo &quot;deb <a href="http://repo.qtum.info/apt/ubuntu/" target="_blank">http://repo.qtum.info/apt/ubuntu/</a> xenial main&quot; &gt;&gt; /etc/apt/sources.list</p><pre><code>This will add the repository to your APT sources file. NOTE: Please remember to change &quot;xenial&quot; for your Ubuntu version codename
+
+Refreshing APT sources and installing Qtum
+</code></pre>
+<p>sudo apt update &amp;&amp; sudo apt install qtum</p><pre><code>By doing this, we&apos;ll update our sources and install Qtum on our ubuntu Box
+
+To execute the daemon:
+
+``` qtumd -daemon```
+
+### Build on Ubuntu 16.04
+
+
+It&apos;s always good to refresh installed libraries, for that we do apt update &amp;&amp; apt upgrade and just press enter when prompted. This will update all installed packages while also installing any available security updates.
+
+&lt;img src=&quot;vultr4.png&quot; width=&quot;800&quot;&gt;
+
+Once we finish the update, let&apos;s proceed to installing dependencies and cloning the qtum sources from Github.</code></pre>
+<h3 id="enabling-swap"><a name="enabling-swap" class="plugin-anchor" href="#enabling-swap"><i class="fa fa-link" aria-hidden="true"></i></a>Enabling SWAP</h3><h5 id="this-step-is-necessary-as-most-vps-dont-come-with-swap-enabled-and-itll-cause-low-ram-compilation-errors-heres-how-to-create-swap"><a name="this-step-is-necessary-as-most-vps-dont-come-with-swap-enabled-and-itll-cause-low-ram-compilation-errors-heres-how-to-create-swap" class="plugin-anchor" href="#this-step-is-necessary-as-most-vps-dont-come-with-swap-enabled-and-itll-cause-low-ram-compilation-errors-heres-how-to-create-swap"><i class="fa fa-link" aria-hidden="true"></i></a>This step is necessary as most VPS don&apos;t come with SWAP enabled and it&apos;ll cause low-ram compilation errors, here&apos;s how to create SWAP.</h5><p>dd if=/dev/zero of=/swapfile bs=1M count=2048
+ chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+echo &quot;/swapfile none swap defaults 0 0&quot; &gt;&gt; /etc/fstab
+This creates a 2GB swap file which will allow you to build and run Qtum without issues.</p><h3 id="compiling-qtum"><a name="compiling-qtum" class="plugin-anchor" href="#compiling-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Compiling Qtum</h3><p>This is a quick start script for compiling Qtum on  Ubuntu</p><p>sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils git cmake libboost-all-dev
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo apt-get update
+sudo apt-get install libdb4.8-dev libdb4.8++-dev</p><h1 id="if-you-want-to-build-the-qt-gui"><a name="if-you-want-to-build-the-qt-gui" class="plugin-anchor" href="#if-you-want-to-build-the-qt-gui"><i class="fa fa-link" aria-hidden="true"></i></a>If you want to build the Qt GUI:</h1><p>sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler</p><p>git clone <a href="https://github.com/qtumproject/qtum" target="_blank">https://github.com/qtumproject/qtum</a> --recursive
+cd qtum</p><h1 id="note-autogen-will-prompt-to-install-some-more-dependencies-if-needed"><a name="note-autogen-will-prompt-to-install-some-more-dependencies-if-needed" class="plugin-anchor" href="#note-autogen-will-prompt-to-install-some-more-dependencies-if-needed"><i class="fa fa-link" aria-hidden="true"></i></a>Note autogen will prompt to install some more dependencies if needed</h1><p>./autogen.sh
+./configure
+make -j2
+make install
+```</p><p>Compiling Qtum takes a while, it depends a lot on your VPS resources, it can take anywhere from 3 minutes to 20+ minutes.</p><p>Once the process is finished, you&apos;ll have all qtum executables in /usr/local/bin/ you can check by typing</p><p><code>ls /usr/local/bin/</code></p><h3 id="launching-qtum-daemon"><a name="launching-qtum-daemon" class="plugin-anchor" href="#launching-qtum-daemon"><i class="fa fa-link" aria-hidden="true"></i></a>Launching Qtum daemon</h3><p><code>qtumd -daemon</code>  -&gt; This launches the qtum daemon and the blockchain begins to synchronize right after launching. It can take some minutes before it&apos;s fully synced.</p><h3 id="encrypting-wallet"><a name="encrypting-wallet" class="plugin-anchor" href="#encrypting-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Encrypting wallet</h3><p>We can encrypt the wallet at any time, it&apos;s better to do it before we go any further.</p><p>To do this, type the following on the command line:</p><p><code>qtum-cli encryptwallet yourpassword</code></p><p>This will encrypt the wallet which in turn closes the daemon, you&apos;ll see the following message:</p><p><code>wallet encrypted; Qtum server stopping, restart to run with encrypted wallet. The keypool has been flushed and a new HD seed was generated (if you are using HD). You need to make a new backup.</code></p><p><img src="encrypt.jpg" width="800"></p><p><code>qtum-cli getaccountaddress &quot;&quot;</code> -&gt; Right after launching the daemon, you can obtain your wallet address by typing this.</p><p>You can send Qtum coins to the address we just obtained from the daemon, please remember that those transactions require at least 500+ confirmations before they become mature enough for staking.</p><h3 id="staking"><a name="staking" class="plugin-anchor" href="#staking"><i class="fa fa-link" aria-hidden="true"></i></a>Staking</h3><p>Now that we&apos;ve waited until we have at least 501 confirmations on our received transaction, we are elligible for staking, however, if our wallet is encrypted (which we did for security reasons) we won&apos;t be able to stake, let&apos;s open our wallet for staking using the command line!.</p><p><code>qtum-cli walletpassphrase password 999999999 true</code></p><p>The above command will unlock the walet <strong>for staking only</strong> for 31.6 Years! that should be enough for now. Please note, this will not unlock your backup, only the wallet that&apos;s running right now.</p><p>Now that we&apos;ve unlocked our wallet, we need to wait until we have more than 501 confirmations to be elligible for staking, if we already do, it&apos;s a matter of time which will vary depending on the network weight vs your wallet&apos;s weight.</p><h4 id="checking-balance"><a name="checking-balance" class="plugin-anchor" href="#checking-balance"><i class="fa fa-link" aria-hidden="true"></i></a>Checking Balance</h4><p>To check your balance, type <code>qtum-cli getinfo</code> this will show general information, including your available balance and balance in staking</p><h4 id="check-transactions"><a name="check-transactions" class="plugin-anchor" href="#check-transactions"><i class="fa fa-link" aria-hidden="true"></i></a>Check transactions</h4><p>To check your transactions (incoming and outgoing) type <code>qtum-cli listtransactions</code></p><h4 id="check-staking-info"><a name="check-staking-info" class="plugin-anchor" href="#check-staking-info"><i class="fa fa-link" aria-hidden="true"></i></a>Check staking info</h4><p>To check Qtum&apos;s staking information, type <code>qtum-cli getstakinginfo</code></p><h3 id="staking-tips"><a name="staking-tips" class="plugin-anchor" href="#staking-tips"><i class="fa fa-link" aria-hidden="true"></i></a>Staking tips</h3><p>Staking really depends on network weight vs your wallet&#x2019;s weight which is based on the amount of coins you have, higher weight increases your chances of staking a block.</p><p>If you have a large amount of coins, it&#x2019;s a good idea to split those up in separate transactions, for instance, if you have 10.000 QTUM, it&#x2019;s better to send 10 transactions of 1000 QTUM each to your wallet, each one generates a UTXO input which will take part in staking. This optimizes the staking process and works much better than just one large 10.000 QTUM input.</p><p>If you want to split your coins into different addresses inside your VPS wallet, type the following to obtain new addresses inside your wallet: <code>qtum-cli getnewaddress</code>
+Each time you type this, you&#x2019;ll get a new address, QTUM can generate any amount of addresses you want, but please keep in mind, if you do go over 100 new address, you might want to make a new backup of your wallet.</p><h3 id="wallet-backup"><a name="wallet-backup" class="plugin-anchor" href="#wallet-backup"><i class="fa fa-link" aria-hidden="true"></i></a>Wallet Backup</h3><p>Backing up your wallet from a Linux VPS is different from a desktop but not too complicated, there&apos;s several ways to do this, and here are some steps which should work on all major desktop OS.</p><p>First, we&apos;ll download Filezilla, which is an easy to use and secure FTP/SFTP server</p><p><a href="https://filezilla-project.org" target="_blank">https://filezilla-project.org</a></p><p><img src="filezilla1.png" width="800"></p><p>Installing is just like any other windows app.</p><p><img src="filezilla2.png" width="800"></p><p>When the installer finishes, we launch Filezilla and are greeted with this screen, let&apos;s proceed and add our previously created ssh-key</p><p>We go into Edit -&gt; Settings -&gt; SFTP. This will give us the following screen in which we will be able to import our SSH key.</p><p><img src="filezilla3.png" width="800"></p><p>Please note that Filezilla only accepts the private key which is created when the ssh-key was generated.</p><p><img src="filezilla4.png" width="800"> Here we&apos;ve already added the ssh key, now we can log into our server</p><p><img src="filezilla5.png" width="800"></p><p>we enter our VPS ip address + username (root in this case),  leave a blank password because we&apos;re using ssh-key to login <img src="filezilla6.png" width="800"></p><p>Just press ok when prompted, and you&apos;ll be able to log in. <img src="filezilla8.png" width="800"></p><p><img src="filezilla9.png" width="800"></p><p>Here we can see the /root/ folder of our VPS, this is where our wallet runs and has the wallet stored in /root/.qtum we can go ahead and double click the folder which will show us the following: <img src="filezilla10.png" width="800"></p><p>Now all we need to do is scroll down to wallet.dat, right click and select download from the list. This will download the wallet.dat file to our computer, we&apos;ve successfully backed up our Qtum wallet!.</p><h1 id="updating-wallet"><a name="updating-wallet" class="plugin-anchor" href="#updating-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Updating wallet</h1><h3 id="if-you-installed-qtum-the-old-way-without-using-the-repository"><a name="if-you-installed-qtum-the-old-way-without-using-the-repository" class="plugin-anchor" href="#if-you-installed-qtum-the-old-way-without-using-the-repository"><i class="fa fa-link" aria-hidden="true"></i></a>If you installed Qtum the old way (without using the repository)</h3><p>We highly recommend using the repository from now on, however, if you still want to compile the wallet yourself, here&#x2019;s how to upgrade:
+<strong>(Backup your wallet.dat first)</strong>
+<code>cd ~/qtum/
+git pull
+./configure
+make
+qtum-cli stop
+make install
+qtumd -daemon</code></p><h4 id="what-happened-there"><a name="what-happened-there" class="plugin-anchor" href="#what-happened-there"><i class="fa fa-link" aria-hidden="true"></i></a>What happened there?</h4><ul><li>We updated the sources from the original build folder (if you don&#x2019;t have it anymore, you need to pull the entire repo as was shown in the beginning of this tutorial).
+</li>
+<li>We configured and built the new Qtum daemon
+</li>
+<li>We stopped the old daemon
+</li>
+<li>We installed the new daemon
+</li>
+<li>We executed the new daemon
+</li></ul>
+<h3 id="if-you-installed-qtum-using-the-repo"><a name="if-you-installed-qtum-using-the-repo" class="plugin-anchor" href="#if-you-installed-qtum-using-the-repo"><i class="fa fa-link" aria-hidden="true"></i></a>If you installed Qtum using the repo</h3><p>If you used the repository to install your Qtum wallet, it&#x2019;s very easy to upgrade to a new version, all you have to do is the following:</p><p><code>apt update &amp;&amp; apt upgrade</code></p><p>This will update the apt sources on your Linux box and install the latest packages, Qtum included. If you only want to upgrade Qtum:</p><p><code>apt update &amp;&amp; apt install &#x2014;only-upgrade qtum</code></p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../QTUM-WebWallet-usage/" class="navigation navigation-next " aria-label="Next page: QTUM WebWallet usage">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Staking with a VPS","level":"2.1","depth":1,"next":{"title":"QTUM WebWallet usage","level":"2.2","depth":1,"path":"QTUM-WebWallet-usage/README.md","ref":"QTUM-WebWallet-usage/README.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","mtime":"2018-05-04T07:37:18.765Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-04T07:47:20.433Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
