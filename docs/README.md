@@ -16,3 +16,9 @@ To serve locally:
 ```
 gitbook serve
 ```
+
+# To Publish
+
+```
+yarn run deploy
+```

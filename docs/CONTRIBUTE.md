@@ -1,7 +1,3 @@
-# To Publish
-
-npm run build
-
 # Conventions
 
 * Put images/assets locally in repo

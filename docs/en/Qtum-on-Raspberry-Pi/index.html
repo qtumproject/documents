@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head>
-        <title>Stake With Raspberry Pi · Qtum Documentation</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Stake With Raspberry Pi · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -251,11 +251,71 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="qtum-on-raspberry-pi"><a name="qtum-on-raspberry-pi" class="plugin-anchor" href="#qtum-on-raspberry-pi"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum on Raspberry Pi</h1><p>Just like we did on Debian, we need to download and install Qtum&apos;s public key</p><p><code>wget -qO - http://repo.qtum.info/apt/public.key | sudo apt-key add -</code></p><p>This downloads and installs the Qtum public key</p><h3 id="adding-repository-to-your-apt-sources"><a name="adding-repository-to-your-apt-sources" class="plugin-anchor" href="#adding-repository-to-your-apt-sources"><i class="fa fa-link" aria-hidden="true"></i></a>Adding repository to your APT sources.</h3><p><code>sudo su</code> - Sudo to root first</p><p><code>echo &quot;deb http://repo.qtum.info/apt/raspbian/ jessie main&quot; &gt;&gt; /etc/apt/sources.list</code>
+                                <h1 id="qtum-on-raspberry-pi"><a name="qtum-on-raspberry-pi" class="plugin-anchor" href="#qtum-on-raspberry-pi"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum on Raspberry Pi</h1>
+<p>Just like we did on Debian, we need to download and install Qtum&apos;s public key</p>
+<p><code>wget -qO - http://repo.qtum.info/apt/public.key | sudo apt-key add -</code></p>
+<p>This downloads and installs the Qtum public key</p>
+<h3 id="adding-repository-to-your-apt-sources"><a name="adding-repository-to-your-apt-sources" class="plugin-anchor" href="#adding-repository-to-your-apt-sources"><i class="fa fa-link" aria-hidden="true"></i></a>Adding repository to your APT sources.</h3>
+<p><code>sudo su</code> - Sudo to root first</p>
+<p><code>echo &quot;deb http://repo.qtum.info/apt/raspbian/ jessie main&quot; &gt;&gt; /etc/apt/sources.list</code>
 or
-<code>echo &quot;deb http://repo.qtum.info/apt/raspbian/ stretch main&quot; &gt;&gt; /etc/apt/sources.list</code></p><p>This will add the repository to your APT sources file.</p><h3 id="refreshing-apt-sources-and-installing-qtum"><a name="refreshing-apt-sources-and-installing-qtum" class="plugin-anchor" href="#refreshing-apt-sources-and-installing-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Refreshing APT sources and installing Qtum</h3><p><code>sudo apt update &amp;&amp; sudo apt install qtum</code></p><p>By doing this, we&apos;ll update our sources and install Qtum on our raspberry Box, which can act now as a staking server/node.</p><h2 id="launching-qtum-daemon"><a name="launching-qtum-daemon" class="plugin-anchor" href="#launching-qtum-daemon"><i class="fa fa-link" aria-hidden="true"></i></a>Launching Qtum daemon</h2><p>All we need to do to launch the Qtum daemon is type:
-<code>qtumd -daemon</code></p><p>As soon as you type this, the wallet will create the wallet.dat file among other files (if they&#x2019;re not already there). The wallet will run and begin syncing instantly from the other Blockchain nodes, this can take a few hours to complete so you can go ahead and have some coffee and let it synchronize.</p><h2 id="encrypting-wallet"><a name="encrypting-wallet" class="plugin-anchor" href="#encrypting-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Encrypting wallet</h2><p>We can encrypt the wallet at any time, it&apos;s better to do it before we go any further.</p><p>To do this, type the following on the command line:</p><p><code>qtum-cli encryptwallet yourpassword</code></p><p>This will encrypt the wallet which in turn closes the daemon, you&apos;ll see the following message:</p><p><code>wallet encrypted; Qtum server stopping, restart to run with encrypted wallet.</code> If you alreadby backed up before encrypting, you <strong> need to make a new backup. </strong></p><p><code>qtum-cli getaccountaddress</code> &quot;&quot; -&gt; Right after launching the daemon, you can obtain your wallet address by typing this.</p><p>You can send Qtum coins to the address we just obtained from the daemon, please remember that those transactions require at least 500+ confirmations before they become mature enough for staking.</p><h2 id="staking"><a name="staking" class="plugin-anchor" href="#staking"><i class="fa fa-link" aria-hidden="true"></i></a>Staking</h2><p>Now that we&apos;ve waited until we have at least 501 confirmations on our received transaction, we are elligible for staking, however, if our wallet is encrypted (which we did for security reasons) we won&apos;t be able to stake, let&apos;s open our wallet for staking using the command line!.</p><p><code>qtum-cli walletpassphrase password 999999999 true</code></p><p>The above command will unlock the walet for 31.6 Years! that should be enough for now. Please note, this will not unlock your backup, only the wallet that&apos;s running right now.</p><p>Now that we&apos;ve unlocked our wallet, we need to wait until we have more than 501 confirmations to be elligible for staking, if we already do, it&apos;s a matter of time which will vary depending on the network weight vs your wallet&apos;s weight.</p><h2 id="checking-balance"><a name="checking-balance" class="plugin-anchor" href="#checking-balance"><i class="fa fa-link" aria-hidden="true"></i></a>Checking Balance</h2><p>To check your balance, type qtum-cli getinfo this will show general information, including your available balance and balance in staking</p><h2 id="check-transactions"><a name="check-transactions" class="plugin-anchor" href="#check-transactions"><i class="fa fa-link" aria-hidden="true"></i></a>Check transactions</h2><p>To check your transactions (incoming and outgoing) type qtum-cli listtransactions</p><h2 id="check-staking-info"><a name="check-staking-info" class="plugin-anchor" href="#check-staking-info"><i class="fa fa-link" aria-hidden="true"></i></a>Check staking info</h2><p>To check Qtum&apos;s staking information, type qtum-cli getstakinginfo</p><h2 id="staking-tips"><a name="staking-tips" class="plugin-anchor" href="#staking-tips"><i class="fa fa-link" aria-hidden="true"></i></a>Staking tips</h2><p>Staking really depends on network weight vs your wallet&#x2019;s weight which is based on the amount of coins you have, higher weight increases your chances of staking a block.</p><p>If you have a large amount of coins, it&#x2019;s a good idea to split those up in separate transactions, for instance, if you have 10.000 QTUM, it&#x2019;s better to send 10 transactions of 1000 QTUM each to your wallet, each one generates a UTXO input which will take part in staking. This optimizes the staking process and works much better than just one large 10.000 QTUM input.</p><p>If you want to split your coins into different addresses inside your VPS wallet, type the following to obtain new addresses inside your wallet: qtum-cli getnewaddress Each time you type this, you&#x2019;ll get a new address, QTUM can generate any amount of addresses you want, but please keep in mind, if you do go over 100 new address, you might want to make a new backup of your wallet.</p><h2 id="updating-wallet"><a name="updating-wallet" class="plugin-anchor" href="#updating-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Updating wallet</h2><p>We&#x2019;re always launching new updates, sometimes it&#x2019;s to add new features or fix bugs. In any case, updating is a breeze, all you have to do is type
+<code>echo &quot;deb http://repo.qtum.info/apt/raspbian/ stretch main&quot; &gt;&gt; /etc/apt/sources.list</code></p>
+<p>This will add the repository to your APT sources file.</p>
+<h3 id="refreshing-apt-sources-and-installing-qtum"><a name="refreshing-apt-sources-and-installing-qtum" class="plugin-anchor" href="#refreshing-apt-sources-and-installing-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Refreshing APT sources and installing Qtum</h3>
+<p><code>sudo apt update &amp;&amp; sudo apt install qtum</code></p>
+<p>By doing this, we&apos;ll update our sources and install Qtum on our raspberry Box, which can act now as a staking server/node.</p>
+<h2 id="changing-default-password"><a name="changing-default-password" class="plugin-anchor" href="#changing-default-password"><i class="fa fa-link" aria-hidden="true"></i></a>Changing default password</h2>
+<p>This option is recommended for security reasons, the default password on the pi is well known, it&apos;s highly recommended to change it upon first login.</p>
+<p>To change just type: <code>passwd</code></p>
+<p>The prompt will ask you to write and repeat the new password to confirm.</p>
+<h2 id="protecting-access-with-a-basic-firewall"><a name="protecting-access-with-a-basic-firewall" class="plugin-anchor" href="#protecting-access-with-a-basic-firewall"><i class="fa fa-link" aria-hidden="true"></i></a>Protecting access with a basic firewall</h2>
+<p>Well, our raspberry is only for staking, there&apos;s no need to have all those ports open, let&apos;s close everything we don&apos;t need and only allow access to necesary services.</p>
+<p>First, let&apos;s install UFW (uncomplicated firewall) which is an easy-to-use interface for iptables</p>
+<p><code>sudo apt install ufw</code></p>
+<p>Once this is installed, we proceed with access permissions, we will define which ports will be accessible. Let&apos;s check first what&apos;s open:</p>
+<p><code>sudo ufw status</code> This should show something like this: </p>
+<p><code>Status: active</code></p>
+<p><code>To               Action      From</code></p>
+<p><code>--               ------      ----</code></p>
+<p><code>22               ALLOW       Anywhere</code></p>
+<h4 id="ok-so-its-time-to-start-closing-down-access-type-the-following"><a name="ok-so-its-time-to-start-closing-down-access-type-the-following" class="plugin-anchor" href="#ok-so-its-time-to-start-closing-down-access-type-the-following"><i class="fa fa-link" aria-hidden="true"></i></a>Ok so it&apos;s time to start closing down access, type the following:</h4>
+<p><code>sudo ufw default deny incoming</code></p>
+<p><code>sudo ufw allow 3888/tcp</code></p>
+<p><code>sudo ufw allow 3889/tcp</code></p>
+<p>Here we&apos;ve defined the basics, closing down everything except port 3888 and 3889 which are used by Qtum to function.</p>
+<p>If you&apos;re using SSH, it&apos;s recommended to only allow access from local network.</p>
+<p><code>sudo ufw allow from 196.168.0.0/24 to any port 22</code></p>
+<h2 id="launching-qtum-daemon"><a name="launching-qtum-daemon" class="plugin-anchor" href="#launching-qtum-daemon"><i class="fa fa-link" aria-hidden="true"></i></a>Launching Qtum daemon</h2>
+<p>All we need to do to launch the Qtum daemon is type:
+<code>qtumd -daemon</code></p>
+<p>As soon as you type this, the wallet will create the wallet.dat file among other files (if they&#x2019;re not already there). The wallet will run and begin syncing instantly from the other Blockchain nodes, this can take a few hours to complete so you can go ahead and have some coffee and let it synchronize.</p>
+<h2 id="encrypting-wallet"><a name="encrypting-wallet" class="plugin-anchor" href="#encrypting-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Encrypting wallet</h2>
+<p>We can encrypt the wallet at any time, it&apos;s better to do it before we go any further.</p>
+<p>To do this, type the following on the command line:</p>
+<p><code>qtum-cli encryptwallet yourpassword</code></p>
+<p>This will encrypt the wallet which in turn closes the daemon, you&apos;ll see the following message:</p>
+<p><code>wallet encrypted; Qtum server stopping, restart to run with encrypted wallet.</code> If you alreadby backed up before encrypting, you <strong> need to make a new backup. </strong></p>
+<p><code>qtum-cli getaccountaddress</code> &quot;&quot; -&gt; Right after launching the daemon, you can obtain your wallet address by typing this.</p>
+<p>You can send Qtum coins to the address we just obtained from the daemon, please remember that those transactions require at least 500+ confirmations before they become mature enough for staking.</p>
+<h2 id="staking"><a name="staking" class="plugin-anchor" href="#staking"><i class="fa fa-link" aria-hidden="true"></i></a>Staking</h2>
+<p>Now that we&apos;ve waited until we have at least 501 confirmations on our received transaction, we are elligible for staking, however, if our wallet is encrypted (which we did for security reasons) we won&apos;t be able to stake, let&apos;s open our wallet for staking using the command line!.</p>
+<p><code>qtum-cli walletpassphrase password 999999999 true</code></p>
+<p>The above command will unlock the walet for 31.6 Years! that should be enough for now. Please note, this will not unlock your backup, only the wallet that&apos;s running right now.</p>
+<p>Now that we&apos;ve unlocked our wallet, we need to wait until we have more than 501 confirmations to be elligible for staking, if we already do, it&apos;s a matter of time which will vary depending on the network weight vs your wallet&apos;s weight.</p>
+<h2 id="checking-balance"><a name="checking-balance" class="plugin-anchor" href="#checking-balance"><i class="fa fa-link" aria-hidden="true"></i></a>Checking Balance</h2>
+<p>To check your balance, type qtum-cli getinfo this will show general information, including your available balance and balance in staking</p>
+<h2 id="check-transactions"><a name="check-transactions" class="plugin-anchor" href="#check-transactions"><i class="fa fa-link" aria-hidden="true"></i></a>Check transactions</h2>
+<p>To check your transactions (incoming and outgoing) type qtum-cli listtransactions</p>
+<h2 id="check-staking-info"><a name="check-staking-info" class="plugin-anchor" href="#check-staking-info"><i class="fa fa-link" aria-hidden="true"></i></a>Check staking info</h2>
+<p>To check Qtum&apos;s staking information, type qtum-cli getstakinginfo</p>
+<h2 id="staking-tips"><a name="staking-tips" class="plugin-anchor" href="#staking-tips"><i class="fa fa-link" aria-hidden="true"></i></a>Staking tips</h2>
+<p>Staking really depends on network weight vs your wallet&#x2019;s weight which is based on the amount of coins you have, higher weight increases your chances of staking a block.</p>
+<p>If you have a large amount of coins, it&#x2019;s a good idea to split those up in separate transactions, for instance, if you have 10.000 QTUM, it&#x2019;s better to send 10 transactions of 1000 QTUM each to your wallet, each one generates a UTXO input which will take part in staking. This optimizes the staking process and works much better than just one large 10.000 QTUM input.</p>
+<p>If you want to split your coins into different addresses inside your VPS wallet, type the following to obtain new addresses inside your wallet: qtum-cli getnewaddress Each time you type this, you&#x2019;ll get a new address, QTUM can generate any amount of addresses you want, but please keep in mind, if you do go over 100 new address, you might want to make a new backup of your wallet.</p>
+<h2 id="updating-wallet"><a name="updating-wallet" class="plugin-anchor" href="#updating-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Updating wallet</h2>
+<p>We&#x2019;re always launching new updates, sometimes it&#x2019;s to add new features or fix bugs. In any case, updating is a breeze, all you have to do is type
 <code>sudo apt update &amp;&amp; sudo apt install &#x2014;only-upgrade qtum</code></p>
+
                                 
                                 </section>
                             
@@ -294,7 +354,7 @@ or
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Stake With Raspberry Pi","level":"3.2","depth":1,"previous":{"title":"Stake With VPS","level":"3.1","depth":1,"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","ref":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-on-Raspberry-Pi/README.md","mtime":"2018-05-04T08:53:45.685Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-04T09:19:06.588Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Stake With Raspberry Pi","level":"3.2","depth":1,"previous":{"title":"Stake With VPS","level":"3.1","depth":1,"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","ref":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-on-Raspberry-Pi/README.md","mtime":"2018-05-05T03:48:08.866Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-05T04:03:25.682Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
