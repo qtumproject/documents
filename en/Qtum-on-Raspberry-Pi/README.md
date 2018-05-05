@@ -22,6 +22,56 @@ This will add the repository to your APT sources file.
 
 By doing this, we'll update our sources and install Qtum on our raspberry Box, which can act now as a staking server/node.
 
+
+
+## Changing default password
+
+This option is recommended for security reasons, the default password on the pi is well known, it's highly recommended to change it upon first login.
+
+To change just type: `passwd`
+
+The prompt will ask you to write and repeat the new password to confirm.
+
+
+
+## Protecting access with a basic firewall
+
+Well, our raspberry is only for staking, there's no need to have all those ports open, let's close everything we don't need and only allow access to necesary services.
+
+First, let's install UFW (uncomplicated firewall) which is an easy-to-use interface for iptables
+
+`sudo apt install ufw`
+
+Once this is installed, we proceed with access permissions, we will define which ports will be accessible. Let's check first what's open:
+
+`sudo ufw status` This should show something like this: 
+
+`Status: active`
+
+`To               Action      From`
+
+`--               ------      ----`
+
+`22               ALLOW       Anywhere`
+
+
+
+#### Ok so it's time to start closing down access, type the following:
+
+`sudo ufw default deny incoming`
+
+`sudo ufw allow 3888/tcp`
+
+`sudo ufw allow 3889/tcp`
+
+Here we've defined the basics, closing down everything except port 3888 and 3889 which are used by Qtum to function.
+
+If you're using SSH, it's recommended to only allow access from local network.
+
+`sudo ufw allow from 196.168.0.0/24 to any port 22`
+
+
+
 ## Launching Qtum daemon
 
 All we need to do to launch the Qtum daemon is type:
