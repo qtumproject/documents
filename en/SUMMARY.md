@@ -16,6 +16,9 @@
 + [Stake With VPS](How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md)
 + [Stake With Raspberry Pi](Qtum-on-Raspberry-Pi/README.md)
 
+### QtumX
+
++ [Technical White Paper](Technical-White-Paper-for-QtumX/README.md)
 
 
 

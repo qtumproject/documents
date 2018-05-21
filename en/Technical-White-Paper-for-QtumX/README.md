@@ -1,6 +1,8 @@
+# Technical White Paper for QtumX
+
 # Background
 
-The Qtum Enterprise version aims to develop a consortium blockchain, in which the consensus process is executed by a small group of authorized nodes, whereas the right to read and create transactions is still public.
+The Qtum Enterprise version, named QtumX, aims to develop a consortium blockchain, in which the consensus process is executed by a small group of authorized nodes, whereas the right to read and create transactions is still public.
 
 This version will be built on the basis of the Qtum framework, which has proved to be a successful public blockchain. New modules are introduced to meet the following enterprise requirements:
 
