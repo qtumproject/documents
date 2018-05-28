@@ -49,7 +49,7 @@ When the priority order is determined, the *block_time* for each miner is calcul
 
 ![image](3.png)
 
-In this way, if one node fails to mine a block, the next miner will take place after *timeout* later. Here is an example. Node B is down when producing the block at height *h2+1*. Then node C, which is next to B in *next_block_miner_list*, will broadcast its block *period+timeout* after *parent_block_time*.
+In this way, if one node fails to mine a block, the next miner will take place after *timeout* later. Here is an example. Node B is down when producing the block at height *h2+1*. Then node C, which is next to B in *next_block_miner_list*, will broadcast its block *interval+timeout* after *parent_block_time*.
 
 ![image](4.png)
 
@@ -72,17 +72,8 @@ We will try to make most parameters configurable in the Enterprise version. So t
 
 1.  The genesis block: *block_time*, coinbase.
 2.  Network parameters: *pchMessageStart*, *seeds*.
-3.  Parameters for the PoA consensus algorithm: *period*, *timeout*.
+3.  Parameters for the PoA consensus algorithm: *interval*, *timeout*.
 4.  Block reward parameters: initial value, *nSubsidyHalvingInterval*
-
-# Code Changes
-The Enterprise version may change the following source code files.
-
-1.  chainparams.cpp. Add a new CChainParams object here. 
-2.  qtumMainNetwork.cpp. Add a new file like qtumMainNetwork.cpp to initialize the DGP for PoA.
-3.  qtumDGP.cpp. Add a function to get the block miners from DGP.
-4.  miner.cpp. Add a function like ThreadStakeMiner to mine new blocks in the way of PoA.
-5.  validation.cpp. Add processes for checking PoA block in the CheckBlock function.
 
 # References
 

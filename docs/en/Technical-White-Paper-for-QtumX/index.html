@@ -331,7 +331,7 @@
 <p>Although B, C, D all can mine the next block, a priority order should be specified for them, so as to avoid their competition for the next block and ensure the blockchain would be verified by as many miners as possible. Therefore, we define the <em>next_block_miner_list</em> as an ordered list, where the miner next to the current block miner in <em>current_authorized_miner_list</em> is supposed to be at the first place, and so on. In our example, the order of B, C, E is shown in the illustration above.</p>
 <p>When the priority order is determined, the <em>block_time</em> for each miner is calculated afterwards. The miner with a higher order in the <em>next_block_miner_list</em> is assigned an earlier <em>block_time</em>. Each miner uses the assigned <em>block_time</em> to create a new block and keeps waiting until the <em>block_time</em>. If no block is received during the waiting, the miner will then broadcast its block. The calculation of <em>block_time</em> is illustrated as:</p>
 <p><img src="3.png" alt="image"></p>
-<p>In this way, if one node fails to mine a block, the next miner will take place after <em>timeout</em> later. Here is an example. Node B is down when producing the block at height <em>h2+1</em>. Then node C, which is next to B in <em>next_block_miner_list</em>, will broadcast its block <em>period+timeout</em> after <em>parent_block_time</em>.</p>
+<p>In this way, if one node fails to mine a block, the next miner will take place after <em>timeout</em> later. Here is an example. Node B is down when producing the block at height <em>h2+1</em>. Then node C, which is next to B in <em>next_block_miner_list</em>, will broadcast its block <em>interval+timeout</em> after <em>parent_block_time</em>.</p>
 <p><img src="4.png" alt="image"></p>
 <h2 id="dgp-for-authorities-storage-and-update"><a name="dgp-for-authorities-storage-and-update" class="plugin-anchor" href="#dgp-for-authorities-storage-and-update"><i class="fa fa-link" aria-hidden="true"></i></a>DGP for Authorities Storage and Update</h2>
 <p>DGP (Decentralized Governance Protocol) [2] is a technology used in Qtum, which allows blockchain parameters to be modified through a specially designed smart contract on the blockchain, without any disruption to the ecosystem like soft or hard forks.</p>
@@ -348,17 +348,8 @@
 <ol>
 <li>The genesis block: <em>block_time</em>, coinbase.</li>
 <li>Network parameters: <em>pchMessageStart</em>, <em>seeds</em>.</li>
-<li>Parameters for the PoA consensus algorithm: <em>period</em>, <em>timeout</em>.</li>
+<li>Parameters for the PoA consensus algorithm: <em>interval</em>, <em>timeout</em>.</li>
 <li>Block reward parameters: initial value, <em>nSubsidyHalvingInterval</em></li>
-</ol>
-<h1 id="code-changes"><a name="code-changes" class="plugin-anchor" href="#code-changes"><i class="fa fa-link" aria-hidden="true"></i></a>Code Changes</h1>
-<p>The Enterprise version may change the following source code files.</p>
-<ol>
-<li>chainparams.cpp. Add a new CChainParams object here. </li>
-<li>qtumMainNetwork.cpp. Add a new file like qtumMainNetwork.cpp to initialize the DGP for PoA.</li>
-<li>qtumDGP.cpp. Add a function to get the block miners from DGP.</li>
-<li>miner.cpp. Add a function like ThreadStakeMiner to mine new blocks in the way of PoA.</li>
-<li>validation.cpp. Add processes for checking PoA block in the CheckBlock function.</li>
 </ol>
 <h1 id="references"><a name="references" class="plugin-anchor" href="#references"><i class="fa fa-link" aria-hidden="true"></i></a>References</h1>
 <p>[1] Driscoll, Kevin; Hall, Brendan; Sivencrona, H&#xE5;kan; Zumsteg, Phil. &quot;Byzantine Fault Tolerance, from Theory to Reality&quot;. </p>
@@ -402,7 +393,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Technical White Paper","level":"4.1","depth":1,"previous":{"title":"Stake With Raspberry Pi","level":"3.3","depth":1,"path":"Qtum-on-Raspberry-Pi/README.md","ref":"Qtum-on-Raspberry-Pi/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Technical-White-Paper-for-QtumX/README.md","mtime":"2018-05-21T13:22:41.790Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-21T13:23:15.477Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Technical White Paper","level":"4.1","depth":1,"previous":{"title":"Stake With Raspberry Pi","level":"3.3","depth":1,"path":"Qtum-on-Raspberry-Pi/README.md","ref":"Qtum-on-Raspberry-Pi/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Technical-White-Paper-for-QtumX/README.md","mtime":"2018-05-28T09:32:27.932Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-28T09:35:18.577Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
