@@ -17,6 +17,8 @@ Blockchains like Bitcoin, Ethereum and Qtum are called public blockchains. They 
 
 A consortium blockchain is often said to be partially decentralized, where the consensus process is executed by a small group of authorized nodes. For example, a consortium of three game companies plan to launch a blockchain with cryptocurrencies which can be spent in their games. Each of them runs a node to verify transactions and mine blocks. Game players, however, only have access to reading blocks and sending transactions. In this situation, just the three authorized nodes need to reach a consensus on block producing.
 
+![image](5.png)
+
 For consortium blockchains, the consensus algorithm is usually called PoA (Proof of Authority). Instead of solving a difficult mathematical problem in PoW or holding a large amount of cryptocurrencies in PoS, in PoA, a list of authorized block miners is used to determine which nodes are allowed to create new blocks. The chain has to be signed by the majority of miners, then it becomes a permanent record. It is more efficient and secure since the miners are fewer and more reliable.
 
 ## A BFT type Consensus Algorithm
@@ -74,6 +76,37 @@ We will try to make most parameters configurable in the Enterprise version. So t
 2.  Network parameters: *pchMessageStart*, *seeds*.
 3.  Parameters for the PoA consensus algorithm: *interval*, *timeout*.
 4.  Block reward parameters: initial value, *nSubsidyHalvingInterval*
+
+# Applications
+![image](6.png)
+
+The best way to describe the value of QtumX is to take a look at its applications. Here we will show 3 usage scenarios of QtumX. More applications need to be discovered in the future when we actually use it.
+
+## Token-based Applications
+As a blockchain system, one basic application is the token. With QtumX, you can easily build a system for the storage and exchange of tokens. Here the term "token" can be:
+
+1.  Gold coins in internet games
+2.  Gift card distributed by supermarkets
+3.  Air miles got from airlines
+
+These usage scenarios demand several features, like high TPS, fast confirmation and thin client. All these features are supported in QtumX.
+
+## Smart-contract-based Applications
+Smart contract based applications are also worth expecting. You can transform written contracts or rules into smart contracts of QtumX. By this way, the contract will be transparent, unmodifiable and easy to verify. Using a consortium blockchain to deploy smart contracts has several advantages. The most important one is that the developer only need to run some miner nodes for the blockchain, rather than consume public blockchain tokens which are really expensive.
+
+Here are some smart contract based applications:
+1.  Prediction markets
+2.  Insurance, like car insurance and property insurance
+3.  Sales and lease of real estate
+4.  Games
+
+## Digital Identity
+Digital identity means recording some important information in blockchain so that it can be verified and tracked by the public. Using a consortium blockchain to do this can also save money when compared to a public blockchain. Usage scenarios can be:
+
+1.  Supply chain management: track products from the producer to the retailer
+2.  Education records: record education experience or online courses experience
+3. Luxury: record information of luxury for public verification
+
 
 # References
 
