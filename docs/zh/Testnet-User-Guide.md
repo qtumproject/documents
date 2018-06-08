@@ -11,7 +11,7 @@
 
 ## 4. 测试网络浏览器
 [https://testnet.qtum.org/](https://testnet.qtum.org/)  
-[https://bte.qtum.org](https://bte.qtum.org)
+[https://testnet.qtum.info/](https://testnet.qtum.info/)
 
 ## 5. 回归测试模式
 使用命令 `./qtumd --regtest ` 或者 `./qtum-qt --regtest` 启动程序即可进入回归测试模式。

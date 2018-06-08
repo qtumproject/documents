@@ -12,7 +12,7 @@ sudo yum install epel-release gcc-c++ git
 
 ## Building Boost
 
-We need `boost >= 1.58.0` for qtum but CentOS 7 only provides `boost <= 1.53.0`, one way is to build it manually.
+We need `boost >= 1.58.0` for Qtum but CentOS 7 only provides `boost <= 1.53.0`, one way is to build it manually.
 
 First we install some dependencies:
 
@@ -20,7 +20,7 @@ First we install some dependencies:
 sudo yum install python-devel bzip2-devel
 ```
 
-Then we clone the boost library from github:
+Then we clone the boost library from GitHub:
 
 ```bash
 git clone https://github.com/boostorg/boost.git
@@ -35,7 +35,7 @@ git submodule update --init --recursive
 ```
 
 Building boost:  
-You may set the `--prefix` and `--libdir` to anywhere you like or even leave it by default, but then you have to add the *libdir* into `LD_LIBRARY_PATH` env when building and running Qtum, which is annoying somehow.
+You may set the `--prefix` and `--libdir` to anywhere you like or leave it by default, but then you have to add the *libdir* into `LD_LIBRARY_PATH` env when building and running Qtum, which is annoying somehow.
 
 ```bash
 # omit the --libdir option for 32-bit systems

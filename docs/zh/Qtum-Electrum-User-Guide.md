@@ -1,3 +1,5 @@
+# Qtum Electrum User Guide
+
 Qtum Electrum 是基于知名比特币钱包Electrum修改而来的一款Qtum桌面端轻钱包。
 相比较于目前的Qtum Core全节点钱包，Qtum Electrum 占用的磁盘空间更小、同步区块所需时间更短，它支持多重签名和硬件钱包、支持冷钱包模式、支持导入手机钱包的助记词，同时采用了SPV验证保证了安全性。
 

@@ -309,6 +309,7 @@
 <h2 id="consortium-blockchain-and-proof-of-authority"><a name="consortium-blockchain-and-proof-of-authority" class="plugin-anchor" href="#consortium-blockchain-and-proof-of-authority"><i class="fa fa-link" aria-hidden="true"></i></a>Consortium Blockchain and Proof of Authority</h2>
 <p>Blockchains like Bitcoin, Ethereum and Qtum are called public blockchains. They have no access restriction. Anyone can send transactions to them as well as participate in the block creation process. In these cases, many consensus algorithms are developed, such as PoW (Proof of Work) and PoS (Proof of Stake), allowing a large number of users to reach a consensus about who can mine new blocks. These blockchains are generally considered to be fully decentralized.</p>
 <p>A consortium blockchain is often said to be partially decentralized, where the consensus process is executed by a small group of authorized nodes. For example, a consortium of three game companies plan to launch a blockchain with cryptocurrencies which can be spent in their games. Each of them runs a node to verify transactions and mine blocks. Game players, however, only have access to reading blocks and sending transactions. In this situation, just the three authorized nodes need to reach a consensus on block producing.</p>
+<p><img src="5.png" alt="image"></p>
 <p>For consortium blockchains, the consensus algorithm is usually called PoA (Proof of Authority). Instead of solving a difficult mathematical problem in PoW or holding a large amount of cryptocurrencies in PoS, in PoA, a list of authorized block miners is used to determine which nodes are allowed to create new blocks. The chain has to be signed by the majority of miners, then it becomes a permanent record. It is more efficient and secure since the miners are fewer and more reliable.</p>
 <h2 id="a-bft-type-consensus-algorithm"><a name="a-bft-type-consensus-algorithm" class="plugin-anchor" href="#a-bft-type-consensus-algorithm"><i class="fa fa-link" aria-hidden="true"></i></a>A BFT type Consensus Algorithm</h2>
 <p>Here we introduce a PoA consensus algorithm which will be available in the Qtum Enterprise version. It is a BFT (Byzantine Fault Tolerance) type algorithm and is always addressed as the signed-message solution to the Byzantine Generals&apos; Problem [1]. Each block has to be signed by its miner and the system stops producing new blocks only when half or more than half of the authorized nodes are down. We illustrate the entire algorithm here first and describe it in detail in the following paragraphs.</p>
@@ -350,6 +351,33 @@
 <li>Network parameters: <em>pchMessageStart</em>, <em>seeds</em>.</li>
 <li>Parameters for the PoA consensus algorithm: <em>interval</em>, <em>timeout</em>.</li>
 <li>Block reward parameters: initial value, <em>nSubsidyHalvingInterval</em></li>
+</ol>
+<h1 id="applications"><a name="applications" class="plugin-anchor" href="#applications"><i class="fa fa-link" aria-hidden="true"></i></a>Applications</h1>
+<p><img src="6.png" alt="image"></p>
+<p>The best way to describe the value of QtumX is to take a look at its applications. Here we will show 3 usage scenarios of QtumX. More applications need to be discovered in the future when we actually use it.</p>
+<h2 id="token-based-applications"><a name="token-based-applications" class="plugin-anchor" href="#token-based-applications"><i class="fa fa-link" aria-hidden="true"></i></a>Token-based Applications</h2>
+<p>As a blockchain system, one basic application is the token. With QtumX, you can easily build a system for the storage and exchange of tokens. Here the term &quot;token&quot; can be:</p>
+<ol>
+<li>Gold coins in internet games</li>
+<li>Gift card distributed by supermarkets</li>
+<li>Air miles got from airlines</li>
+</ol>
+<p>These usage scenarios demand several features, like high TPS, fast confirmation and thin client. All these features are supported in QtumX.</p>
+<h2 id="smart-contract-based-applications"><a name="smart-contract-based-applications" class="plugin-anchor" href="#smart-contract-based-applications"><i class="fa fa-link" aria-hidden="true"></i></a>Smart-contract-based Applications</h2>
+<p>Smart contract based applications are also worth expecting. You can transform written contracts or rules into smart contracts of QtumX. By this way, the contract will be transparent, unmodifiable and easy to verify. Using a consortium blockchain to deploy smart contracts has several advantages. The most important one is that the developer only need to run some miner nodes for the blockchain, rather than consume public blockchain tokens which are really expensive.</p>
+<p>Here are some smart contract based applications:</p>
+<ol>
+<li>Prediction markets</li>
+<li>Insurance, like car insurance and property insurance</li>
+<li>Sales and lease of real estate</li>
+<li>Games</li>
+</ol>
+<h2 id="digital-identity"><a name="digital-identity" class="plugin-anchor" href="#digital-identity"><i class="fa fa-link" aria-hidden="true"></i></a>Digital Identity</h2>
+<p>Digital identity means recording some important information in blockchain so that it can be verified and tracked by the public. Using a consortium blockchain to do this can also save money when compared to a public blockchain. Usage scenarios can be:</p>
+<ol>
+<li>Supply chain management: track products from the producer to the retailer</li>
+<li>Education records: record education experience or online courses experience</li>
+<li>Luxury: record information of luxury for public verification</li>
 </ol>
 <h1 id="references"><a name="references" class="plugin-anchor" href="#references"><i class="fa fa-link" aria-hidden="true"></i></a>References</h1>
 <p>[1] Driscoll, Kevin; Hall, Brendan; Sivencrona, H&#xE5;kan; Zumsteg, Phil. &quot;Byzantine Fault Tolerance, from Theory to Reality&quot;. </p>
@@ -393,7 +421,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Technical White Paper","level":"4.1","depth":1,"previous":{"title":"Stake With Raspberry Pi","level":"3.3","depth":1,"path":"Qtum-on-Raspberry-Pi/README.md","ref":"Qtum-on-Raspberry-Pi/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Technical-White-Paper-for-QtumX/README.md","mtime":"2018-05-28T09:32:27.932Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-07T06:05:29.716Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Technical White Paper","level":"4.1","depth":1,"previous":{"title":"Stake With Raspberry Pi","level":"3.3","depth":1,"path":"Qtum-on-Raspberry-Pi/README.md","ref":"Qtum-on-Raspberry-Pi/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Technical-White-Paper-for-QtumX/README.md","mtime":"2018-06-08T12:34:37.873Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-08T12:37:56.390Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
