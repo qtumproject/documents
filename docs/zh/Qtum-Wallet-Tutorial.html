@@ -1,0 +1,598 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Qtum PC 端钱包使用教程 · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Qtum-Electrum-User-Guide.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">钱包使用</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="Qtum-Wallet-Tutorial.html">
+            
+                <a href="Qtum-Wallet-Tutorial.html">
+            
+                    
+                    Qtum PC 端钱包使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Qtum-Electrum-User-Guide.html">
+            
+                <a href="Qtum-Electrum-User-Guide.html">
+            
+                    
+                    Qtum Electrum 轻钱包使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Qtum-Mobile-Wallet-Tutorial.html">
+            
+                <a href="Qtum-Mobile-Wallet-Tutorial.html">
+            
+                    
+                    Qtum 手机钱包教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="Adding-Nodes.html">
+            
+                <a href="Adding-Nodes.html">
+            
+                    
+                    如何添加节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                <a href="Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                    
+                    锁定、解锁 Qtum 钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="Wallet-Recovery-with-Salvagewallet.html">
+            
+                <a href="Wallet-Recovery-with-Salvagewallet.html">
+            
+                    
+                    使用salvagewallet修复钱包数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">节点部署</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                <a href="Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                    
+                    如何部署 Qtum 量子链节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Launch-Qtum-with-Docker.html">
+            
+                <a href="Launch-Qtum-with-Docker.html">
+            
+                    
+                    如何用 Docker 运行 Qtum 节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking 教程（PoS 挖矿）</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="How-to-Staking-with-Qtum.html">
+            
+                <a href="How-to-Staking-with-Qtum.html">
+            
+                    
+                    Qtum 量子链 Staking(PoS 挖矿) 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">智能合约和QRC20</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="Qtum-Contract-Usage.html">
+            
+                <a href="Qtum-Contract-Usage.html">
+            
+                    
+                    Qtum 智能合约使用方法及说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="QRC20-Token-Introduce.html">
+            
+                <a href="QRC20-Token-Introduce.html">
+            
+                    
+                    QRC20 Token 指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="QRC20集成文档.html">
+            
+                <a href="QRC20集成文档.html">
+            
+                    
+                    QRC20 集成文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="手动构造Qtum合约交易的说明.html">
+            
+                <a href="手动构造Qtum合约交易的说明.html">
+            
+                    
+                    手动构造Qtum合约交易的说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="Qtum-Blockchain-Guide.html">
+            
+                <a href="Qtum-Blockchain-Guide.html">
+            
+                    
+                    Qtum 区块链指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="Build-Qtum-on-CentOS.html">
+            
+                <a href="Build-Qtum-on-CentOS.html">
+            
+                    
+                    在 CentOS 7 上编译 Qtum
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">QtumX</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Technical-White-Paper-for-QtumX/">
+            
+                <a href="Technical-White-Paper-for-QtumX/">
+            
+                    
+                    技术白皮书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Qtum PC 端钱包使用教程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x6982;&#x89C8;-overview"><a name="&#x6982;&#x89C8;-overview" class="plugin-anchor" href="#&#x6982;&#x89C8;-overview"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6982;&#x89C8; (Overview)</h3>
+<p>&#x8FD9;&#x662F;Qtum&#x91CF;&#x5B50;&#x94FE;&#x94B1;&#x5305;&#x7684;&#x201C;<strong>&#x6982;&#x89C8;</strong>&#x201D;&#x754C;&#x9762;&#xFF0C;&#x4E5F;&#x662F;&#x542F;&#x52A8;&#x4E4B;&#x540E;&#x7684;&#x9ED8;&#x8BA4;&#x754C;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E0B;&#x9762;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#xFF1A;</p>
+<ol>
+<li><p>&#x4F59;&#x989D;</p>
+</li>
+<li><p>&#x53EF;&#x4F7F;&#x7528;&#x7684;&#x4F59;&#x989D;</p>
+</li>
+<li>&#x7B49;&#x5F85;&#x4E2D;&#x7684;&#x4F59;&#x989D;</li>
+<li>&#x603B;&#x989D;</li>
+<li><p>&#x5176;&#x4ED6;&#x4EE3;&#x5E01;</p>
+</li>
+<li><p>&#x6700;&#x8FD1;&#x4EA4;&#x6613;&#x8BB0;&#x5F55;</p>
+</li>
+</ol>
+<p><img src="https://s.qtum.site/uploads/a8474d1ed50c7a3fe102e667e39fc08a.jpg" alt="overview"></p>
+<h3 id="&#x53D1;&#x9001;-send"><a name="&#x53D1;&#x9001;-send" class="plugin-anchor" href="#&#x53D1;&#x9001;-send"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x9001; (Send)</h3>
+<p>&#x5728;&#x53D1;&#x9001;&#x754C;&#x9762;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x5411;Qtum&#x5730;&#x5740;&#x53D1;&#x9001;Qtum&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/95ff75d66db79da8f74d6eec4fb9cc21.png" alt="send"></p>
+<p><strong>&#x4ED8;&#x7ED9;&#xFF1A;</strong> &#x5728;&#x6B64;&#x5904;&#x8F93;&#x5165;&#x60F3;&#x8981;&#x53D1;&#x9001;&#x7684;Qtum&#x63A5;&#x6536;&#x5730;&#x5740;&#xFF0C;<strong>&#x8BF7;&#x6CE8;&#x610F;&#x53EA;&#x6709;Qtum&#x5730;&#x5740;&#x6709;&#x6548;</strong>&#x3002;
+<strong>&#x6807;&#x7B7E;&#xFF1A;</strong> &#x53EF;&#x9009;&#x9879;&#xFF0C;&#x7ED9;&#x4E0A;&#x9762;&#x8F93;&#x5165;&#x7684;&#x5730;&#x5740;&#x6253;&#x6807;&#x7B7E;&#x3002;
+<strong>&#x91D1;&#x989D;&#xFF1A;</strong> &#x5728;&#x6B64;&#x5904;&#x8F93;&#x5165;&#x8981;&#x53D1;&#x9001;&#x7684;Qtum&#x6570;&#x989D;&#x3002;</p>
+<p>&#x586B;&#x5199;&#x5B8C;&#x5404;&#x9879;&#x540E;&#xFF0C;&#x70B9;&#x51FB;&#x53D1;&#x9001;&#xFF0C;&#x7B49;&#x5F85;3&#x79D2;&#x540E;&#x518D;&#x6B21;&#x786E;&#x8BA4;&#xFF0C;&#x5373;&#x53EF;&#x5C06;Qtum&#x53D1;&#x9001;&#x81F3;&#x76EE;&#x6807;&#x5730;&#x5740;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x4E0B;&#x65B9;&#x7684;&#x6DFB;&#x52A0;&#x6536;&#x6B3E;&#x4EBA;&#x540C;&#x65F6;&#x53D1;&#x9001;&#x5230;&#x591A;&#x4E2A;&#x5730;&#x5740;&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/5ea4e80e7ad7f80cd5fc2da227bdea67.png" alt="send"></p>
+<h4 id="&#x627E;&#x96F6;&#x5730;&#x5740;"><a name="&#x627E;&#x96F6;&#x5730;&#x5740;" class="plugin-anchor" href="#&#x627E;&#x96F6;&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x627E;&#x96F6;&#x5730;&#x5740;</h4>
+<p>&#x9ED8;&#x8BA4;&#x7684;&#x627E;&#x96F6;&#x5730;&#x5740;&#x662F;&#x968F;&#x673A;&#x751F;&#x6210;&#x7684;&#x65B0;&#x5730;&#x5740;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x504F;&#x597D;&#x8BBE;&#x7F6E;&#x6765;&#x7BA1;&#x7406;&#x627E;&#x96F6;&#x5730;&#x5740;&#x3002;&#x5728;&#x504F;&#x597D;&#x8BBE;&#x7F6E;-&gt;&#x94B1;&#x5305;&#x754C;&#x9762;&#xFF0C;&#x52FE;&#x9009;&quot;Don&apos;t use change address&quot;&#x5C06;&#x4F7F;&#x7528;&#x53D1;&#x9001;&#x5730;&#x5740;&#x4F5C;&#x4E3A;&#x627E;&#x96F6;&#x5730;&#x5740;&#xFF0C;&#x52FE;&#x9009;&#x201C;&#x542F;&#x7528;&#x8D27;&#x5E01;&#x63A7;&#x5236;&#x529F;&#x80FD;&#x201C;&#x53EF;&#x4EE5;&#x5728;&#x53D1;&#x9001;&#x65F6;&#x6307;&#x5B9A;&#x627E;&#x96F6;&#x5730;&#x5740;&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/1ce40c095dff4fd23d7975293ae48077.png" alt="change address"></p>
+<h3 id="&#x63A5;&#x6536;-receive"><a name="&#x63A5;&#x6536;-receive" class="plugin-anchor" href="#&#x63A5;&#x6536;-receive"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x6536; (Receive)</h3>
+<p>&#x5728;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x751F;&#x6210;Qtum&#x63A5;&#x6536;&#x5730;&#x5740;&#xFF0C;&#x5E76;&#x770B;&#x5230;&#x8FC7;&#x5F80;&#x7684;&#x63A5;&#x6536;&#x5730;&#x5740;&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/7107208942f0a7ac084f6e08713ebff2.png" alt="Receive"></p>
+<p>&#x70B9;&#x51FB;&#x201C;&#x8BF7;&#x6C42;&#x4ED8;&#x6B3E;&#x201D;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;Qtum&#x5730;&#x5740;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x91D1;&#x989D;&#x548C;&#x5907;&#x6CE8;&#x3002;&#x4E0B;&#x56FE;&#x793A;&#x4F8B;&#x4E2D;&#x586B;&#x5199;&#x4E86;10&#x4E2A;Qtum&#x4F5C;&#x4E3A;&#x4ED8;&#x6B3E;&#x91D1;&#x989D;&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/922636d8a94e03136de58ebdf7f4d4d5.png" alt="Receive"></p>
+<h3 id="&#x667A;&#x80FD;&#x5408;&#x7EA6;-smart-contract"><a name="&#x667A;&#x80FD;&#x5408;&#x7EA6;-smart-contract" class="plugin-anchor" href="#&#x667A;&#x80FD;&#x5408;&#x7EA6;-smart-contract"><i class="fa fa-link" aria-hidden="true"></i></a>&#x667A;&#x80FD;&#x5408;&#x7EA6; (Smart Contract)</h3>
+<p>@todo</p>
+<h3 id="&#x4EA4;&#x6613;&#x8BB0;&#x5F55;-transactions"><a name="&#x4EA4;&#x6613;&#x8BB0;&#x5F55;-transactions" class="plugin-anchor" href="#&#x4EA4;&#x6613;&#x8BB0;&#x5F55;-transactions"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EA4;&#x6613;&#x8BB0;&#x5F55; (Transactions)</h3>
+<p>&#x8BE5;&#x9875;&#x663E;&#x793A;&#x94B1;&#x5305;&#x6240;&#x6709;&#x5730;&#x5740;&#x7684;&#x4EA4;&#x6613;&#x8BB0;&#x5F55;&#xFF0C;&#x5305;&#x62EC;&#x6536;&#x5165;&#x3001;&#x652F;&#x51FA;&#x3001;&#x53D1;&#x9001;&#x4EE3;&#x5E01;&#x3001;&#x6316;&#x77FF;&#x7B49;&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/a8474d1ed50c7a3fe102e667e39fc08a.jpg" alt="transactions"></p>
+<h3 id="qrc-&#x4EE3;&#x5E01;-qrc-token"><a name="qrc-&#x4EE3;&#x5E01;-qrc-token" class="plugin-anchor" href="#qrc-&#x4EE3;&#x5E01;-qrc-token"><i class="fa fa-link" aria-hidden="true"></i></a>QRC &#x4EE3;&#x5E01; (QRC Token)</h3>
+<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x3001;&#x63A5;&#x6536;&#x3001;&#x6DFB;&#x52A0;QRC&#x4EE3;&#x5E01;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5F00;&#x542F;&quot;log events&quot;&#x67E5;&#x770B;QRC&#x4EE3;&#x5E01;&#x7684;&#x4EA4;&#x6613;&#x8BB0;&#x5F55;&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/caf5288989c2c7d191c315eb5480a0bb.jpg" alt="qrc token"></p>
+<h4 id="&#x6DFB;&#x52A0;&#x4EE3;&#x5E01;"><a name="&#x6DFB;&#x52A0;&#x4EE3;&#x5E01;" class="plugin-anchor" href="#&#x6DFB;&#x52A0;&#x4EE3;&#x5E01;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6DFB;&#x52A0;&#x4EE3;&#x5E01;</h4>
+<p>&#x70B9;&#x51FB;&quot;Add Token&quot;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7684;QRC&#x4EE3;&#x5E01;&#x3002;
+<strong>Contract Address</strong>: &#x4EE3;&#x5E01;&#x5408;&#x7EA6;&#x5730;&#x5740;&#x3002;
+<strong>Token Name</strong>: &#x4EE3;&#x5E01;&#x540D;&#x79F0;&#xFF0C;&#x586B;&#x5199;&#x5B8C;&#x5408;&#x7EA6;&#x5730;&#x5740;&#x540E;&#x56DE;&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x51FA;&#x6765;&#x3002;
+<strong>Token Symbol</strong>:  &#x4EE3;&#x5E01;&#x7B26;&#x53F7;&#xFF0C;&#x586B;&#x5199;&#x5B8C;&#x5408;&#x7EA6;&#x5730;&#x5740;&#x540E;&#x56DE;&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x51FA;&#x6765;&#x3002;
+<strong>Decimals</strong>: &#x5C0F;&#x6570;&#x4F4D;&#xFF0C;&#x586B;&#x5199;&#x5B8C;&#x5408;&#x7EA6;&#x5730;&#x5740;&#x540E;&#x56DE;&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x51FA;&#x6765;&#x3002;
+<strong>Token Address</strong>: &#x7528;&#x4E8E;&#x63A5;&#x6536;&#x4EE3;&#x5E01;&#x7684;Qtum&#x5730;&#x5740;&#xFF0C;&#x901A;&#x8FC7;&#x4E0B;&#x62C9;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x3002;
+&#x586B;&#x5199;&#x5B8C;&#x4EE5;&#x4E0A;&#x4FE1;&#x606F;&#x4E4B;&#x540E;&#xFF0C;&#x70B9;&#x51FB;&quot;Confirm&quot;&#x5373;&#x53EF;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;QRC&#x4EE3;&#x5E01;&#x5230;&#x4F60;&#x7684;&#x94B1;&#x5305;&#x3002;&#x540C;&#x4E00;&#x4E2A;&#x4EE3;&#x5E01;&#x7ED1;&#x5B9A;&#x540C;&#x4E00;&#x4E2A;Qtum&#x5730;&#x5740;&#x53EA;&#x80FD;&#x6DFB;&#x52A0;&#x4E00;&#x6B21;&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/58d4fa9db9baadfa3bb562ac9159d119.png" alt="add token"></p>
+<h4 id="&#x53D1;&#x9001;&#x4EE3;&#x5E01;"><a name="&#x53D1;&#x9001;&#x4EE3;&#x5E01;" class="plugin-anchor" href="#&#x53D1;&#x9001;&#x4EE3;&#x5E01;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x9001;&#x4EE3;&#x5E01;</h4>
+<p>&#x5728;&#x5DE6;&#x4FA7;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x4EE3;&#x5E01;&#xFF0C;&#x70B9;&#x51FB;&quot;Send&quot;&#x8FDB;&#x5165;&#x53D1;&#x9001;&#x754C;&#x9762;&#xFF0C;&#x4E0E;&#x53D1;&#x9001;Qtum&#x6709;&#x4E9B;&#x76F8;&#x4F3C;&#x3002;
+<strong>PayTo</strong>: &#x4EE3;&#x5E01;&#x63A5;&#x6536;&#x5730;&#x5740;&#x3002;
+<strong>Amount</strong>: &#x4EE3;&#x5E01;&#x6570;&#x91CF;&#xFF0C;&#x6700;&#x5927;&#x503C;&#x4E3A;&#x5F53;&#x524D;&#x4F59;&#x989D;&#xFF0C;&#x6CE8;&#x610F;&#x5C11;&#x6570;&#x4EE3;&#x5E01;&#x6700;&#x5927;&#x53D1;&#x9001;&#x6570;&#x989D;&#x5FC5;&#x987B;&#x5C0F;&#x4E8E;&#x5F53;&#x524D;&#x4F59;&#x989D;&#xFF0C;&#x5982;INK&#x3002;
+<strong>Description</strong>:  &#x672C;&#x6B21;&#x4EA4;&#x6613;&#x5907;&#x6CE8;&#xFF0C;&#x53EF;&#x9009;&#x9879;&#x3002;
+<strong>GasLimit</strong>: &#x9ED8;&#x8BA4;&#x5373;&#x53EF;&#x3002;
+<strong>GasPrice</strong>: &#x9ED8;&#x8BA4;&#x5373;&#x53EF;&#x3002;
+&#x586B;&#x5199;&#x5B8C;&#x4EE5;&#x4E0A;&#x4FE1;&#x606F;&#x4E4B;&#x540E;&#xFF0C;&#x70B9;&#x51FB;&#x201C;Confirm&quot;&#x5373;&#x53EF;&#x53D1;&#x9001;QRC&#x4EE3;&#x5E01;&#x5230;&#x6307;&#x5B9A;&#x5730;&#x5740;&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/3ffbaeec9a0fb6ca27419869edd3cd22.png" alt="send token"></p>
+<h4 id="&#x63A5;&#x6536;&#x4EE3;&#x5E01;"><a name="&#x63A5;&#x6536;&#x4EE3;&#x5E01;" class="plugin-anchor" href="#&#x63A5;&#x6536;&#x4EE3;&#x5E01;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x6536;&#x4EE3;&#x5E01;</h4>
+<p>&#x63A5;&#x6536;&#x4EE3;&#x5E01;&#x5341;&#x5206;&#x7B80;&#x5355;&#xFF0C;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x4EE3;&#x5E01;&#xFF0C;&#x70B9;&#x51FB;&quot;Receive&quot;&#x53F3;&#x4FA7;&#x5373;&#x51FA;&#x73B0;&#x63A5;&#x6536;&#x5730;&#x5740;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x53F3;&#x952E;&#x70B9;&#x51FB;&#xFF0C;&#x9009;&#x62E9;&#x201C;Copy receive address&quot;&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/909bfef7ddc127936d5af35067e87bc6.png" alt="receive token"></p>
+<h4 id="&#x5F00;&#x542F;log-events"><a name="&#x5F00;&#x542F;log-events" class="plugin-anchor" href="#&#x5F00;&#x542F;log-events"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F00;&#x542F;&quot;log events&quot;</h4>
+<p>&#x5728;&#x504F;&#x597D;&#x8BBE;&#x7F6E;-&gt;&#x4E3B;&#x8981;&#x754C;&#x9762;&#xFF0C;&#x52FE;&#x9009;&quot;Enable log events&quot;&#xFF0C;&#x70B9;&#x51FB;&#x786E;&#x8BA4;&#x540E;&#x94B1;&#x5305;&#x4F1A;&#x91CD;&#x542F;&#x5E76;&#x5F00;&#x542F;&quot;log events&quot;&#xFF0C;&#x6B64;&#x65F6;&#x5373;&#x53EF;&#x67E5;&#x770B;QRC&#x4EE3;&#x5E01;&#x4EA4;&#x6613;&#x8BB0;&#x5F55;&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/323a99782406fb6525ed0be9fab3246e.png" alt="enable log events"></p>
+<h3 id="&#x52A0;&#x5BC6;&#x94B1;&#x5305;"><a name="&#x52A0;&#x5BC6;&#x94B1;&#x5305;" class="plugin-anchor" href="#&#x52A0;&#x5BC6;&#x94B1;&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x52A0;&#x5BC6;&#x94B1;&#x5305;</h3>
+<p>&#x9996;&#x5148;&#xFF0C;&#x5728;&#x5907;&#x4EFD;&#x94B1;&#x5305;&#x4E4B;&#x524D;&#x52A0;&#x5BC6;&#x4F60;&#x7684;&#x94B1;&#x5305;&#x5C06;&#x4F7F;&#x5F97;&#x4F60;&#x7684;&#x5907;&#x4EFD;&#x4E5F;&#x500D;&#x52A0;&#x5BC6;&#x3002;&#x70B9;&#x51FB;&quot;Settings -&gt; Encrypt Wallet&quot;&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/21cf1e8e477ba04e1a7f5924f733662b.jpg" alt="encrypt wallet"></p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x7136;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#xFF0C;<strong>&#x8BF7;&#x52A1;&#x5FC5;&#x4FDD;&#x7BA1;&#x597D;&#x8FD9;&#x4E2A;&#x5BC6;&#x7801;&#xFF0C;&#x5426;&#x5219;&#x4F60;&#x4F1A;&#x4E22;&#x6389;&#x4F60;&#x7684;Qtum</strong>&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/35bfd89a3f4dd199a84d6dbce237fce9.png" alt="encrypt wallet"></p>
+<p>&#x8F93;&#x5165;&#x5B8C;&#x4E24;&#x4E2A;&#x5BC6;&#x7801;&#x5E76;&#x786E;&#x8BA4;&#x4E4B;&#x540E;&#xFF0C;&#x94B1;&#x5305;&#x4F1A;&#x81EA;&#x52A8;&#x91CD;&#x542F;&#xFF0C;&#x5E76;&#x53D8;&#x6210;&#x52A0;&#x5BC6;&#x6A21;&#x5F0F;&#x3002;</p>
+<h3 id="&#x5907;&#x4EFD;&#x94B1;&#x5305;"><a name="&#x5907;&#x4EFD;&#x94B1;&#x5305;" class="plugin-anchor" href="#&#x5907;&#x4EFD;&#x94B1;&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5907;&#x4EFD;&#x94B1;&#x5305;</h3>
+<p>&#x5F3A;&#x70C8;&#x63A8;&#x8350;<strong>&#x52A0;&#x5BC6;&#x94B1;&#x5305;&#x4E4B;&#x540E;</strong>&#x518D;&#x5907;&#x4EFD;&#x94B1;&#x5305;&#xFF01;</p>
+<p>&#x70B9;&#x51FB;&quot;File -&gt; Backup Wallet&quot;&#x4EE5;&#x5907;&#x4EFD;&#x94B1;&#x5305;&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/27b682aea3931eec88f9ef9e73682b29.png" alt="backup wallet"></p>
+<p>&#x8F93;&#x5165;&#x5907;&#x4EFD;&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x9009;&#x62E9;&#x597D;&#x4FDD;&#x5B58;&#x4F4D;&#x7F6E;&#x540E;&#x70B9;&#x51FB;&#x4FDD;&#x5B58;&#xFF0C;&#x5373;&#x53EF;&#x5907;&#x4EFD;&#x94B1;&#x5305;&#x3002;</p>
+<p><img src="https://s.qtum.site/uploads/88cd46b92d811f46e538d3646a5bee24.png" alt="backup wallet"></p>
+<h3 id="&#x4ECE;&#x5907;&#x4EFD;&#x4E2D;&#x6062;&#x590D;&#x94B1;&#x5305;"><a name="&#x4ECE;&#x5907;&#x4EFD;&#x4E2D;&#x6062;&#x590D;&#x94B1;&#x5305;" class="plugin-anchor" href="#&#x4ECE;&#x5907;&#x4EFD;&#x4E2D;&#x6062;&#x590D;&#x94B1;&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4ECE;&#x5907;&#x4EFD;&#x4E2D;&#x6062;&#x590D;&#x94B1;&#x5305;</h3>
+<p>&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;Qtum&#x94B1;&#x5305;&#x5DF2;&#x7ECF;&#x5728;&#x754C;&#x9762;&#x4E0A;&#x5B9E;&#x73B0;&#x4E86;&#x5907;&#x4EFD;&#x7BA1;&#x7406;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x7684;&#x5907;&#x4EFD;&#x3001;&#x6062;&#x590D;&#x4F60;&#x7684;&#x94B1;&#x5305;&#x3002;
+&#x200B;</p>
+<h4 id="mac&#x7CFB;&#x7EDF;"><a name="mac&#x7CFB;&#x7EDF;" class="plugin-anchor" href="#mac&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>Mac&#x7CFB;&#x7EDF;</h4>
+<p>&#x70B9;&#x51FB;&quot;File -&gt;  Restore Wallet&quot;&#xFF0C;&#x5728;&#x5F39;&#x51FA;&#x7684;&#x5BF9;&#x8BDD;&#x6846;&#x91CC;&#x9009;&#x62E9;&#x8981;&#x6062;&#x590D;&#x7684;&#x94B1;&#x5305;&#x5907;&#x4EFD;&#x6587;&#x4EF6;&#x3002;</p>
+<p><img src="http://92.222.69.86/images/restore.png" alt="Receive"></p>
+<p><img src="http://92.222.69.86/images/restore2.png" alt="Receive"></p>
+<p><img src="http://92.222.69.86/images/restore3.png" alt="Receive"></p>
+<p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x9009;&#x62E9;<code>reindex</code>&#x9009;&#x9879;&#x5373;&#x53EF;&#xFF0C;&#x9664;&#x975E;&#x4F60;&#x9047;&#x5230;&#x7279;&#x6B8A;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<h4 id="windows&#x7CFB;&#x7EDF;"><a name="windows&#x7CFB;&#x7EDF;" class="plugin-anchor" href="#windows&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>Windows&#x7CFB;&#x7EDF;</h4>
+<p>&#x548C;Mac&#x57FA;&#x672C;&#x4E00;&#x6837;&#x3002;</p>
+<p><img src="http://92.222.69.86/images/win/1.jpg" alt="Receive"></p>
+<p><img src="http://92.222.69.86/images/win/3.jpg" alt="Receive"></p>
+<p><img src="http://92.222.69.86/images/win/4.jpg" alt="Receive"></p>
+<p><img src="http://92.222.69.86/images/win/2.jpg" alt="Receive"></p>
+<h4 id="linux&#x7CFB;&#x7EDF;"><a name="linux&#x7CFB;&#x7EDF;" class="plugin-anchor" href="#linux&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>Linux&#x7CFB;&#x7EDF;</h4>
+<p>&#x548C;Mac&#x7684;&#x4E5F;&#x6CA1;&#x5DEE;&#x591A;&#x5C11;&#x3002;</p>
+<p><img src="http://92.222.69.86/images/linux/4.jpg" alt="Receive"></p>
+<p><img src="http://92.222.69.86/images/linux/1.jpg" alt="Receive"></p>
+<p><img src="http://92.222.69.86/images/linux/8.jpg" alt="Receive"></p>
+<p><img src="http://92.222.69.86/images/linux/5.jpg" alt="Receive"></p>
+<p><img src="http://92.222.69.86/images/linux/10.jpg" alt="Receive"></p>
+<p><img src="http://92.222.69.86/images/linux/9.jpg" alt="Receive"></p>
+<p><img src="http://92.222.69.86/images/linux/2.jpg" alt="Receive"></p>
+<h3 id="&#x6316;&#x77FF;"><a name="&#x6316;&#x77FF;" class="plugin-anchor" href="#&#x6316;&#x77FF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6316;&#x77FF;</h3>
+<p>&#x5F53;&#x4F60;&#x6EE1;&#x8DB3;&#x5982;&#x4E0B;&#x6761;&#x4EF6;&#x65F6;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6316;&#x77FF;&#xFF1A;</p>
+<ol>
+<li>&#x94B1;&#x5305;&#x4E2D;&#x6709;&#x8D85;&#x8FC7;500&#x4E2A;&#x786E;&#x8BA4;&#x7684;Qtum&#xFF1B;</li>
+<li>&#x89E3;&#x9501;&#x94B1;&#x5305;&#xFF1B;</li>
+<li>&#x4FDD;&#x6301;&#x94B1;&#x5305;&#x5728;&#x7EBF;&#x72B6;&#x6001;&#x3002;</li>
+</ol>
+<p>&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A;<a href="https://github.com/qtumproject/documents/blob/master/zh/How-to-Staking-with-Qtum.md" target="_blank">https://github.com/qtumproject/documents/blob/master/zh/How-to-Staking-with-Qtum.md</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 引言">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Qtum-Electrum-User-Guide.html" class="navigation navigation-next " aria-label="Next page: Qtum Electrum 轻钱包使用说明">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Qtum PC 端钱包使用教程","level":"2.1","depth":1,"next":{"title":"Qtum Electrum 轻钱包使用说明","level":"2.2","depth":1,"path":"Qtum-Electrum-User-Guide.md","ref":"Qtum-Electrum-User-Guide.md","articles":[]},"previous":{"title":"引言","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"zh","gitbook":"*"},"file":{"path":"Qtum-Wallet-Tutorial.md","mtime":"2018-06-07T03:55:10.611Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-12T10:10:46.745Z"},"basePath":".","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
