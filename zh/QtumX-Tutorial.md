@@ -1,4 +1,4 @@
-# QtumX内测版教程
+# QtumX使用教程（内测）
 
 ## 安装
 根据自己的环境选择对应的安装包，下载至任意目录。目前提供的安装包列表如下：
@@ -11,18 +11,16 @@ qtum-0.15.1-arm-linux-gnueabihf.tar.gz
 qtum-0.15.1-win32-setup-unsigned.exe	
 qtum-0.15.1-x86_64-linux-gnu.tar.gz
 qtum-0.15.1-i686-pc-linux-gnu.tar.gz	
-qtum-0.15.1-win32.zip			
-qtum-0.15.1.tar.gz
+qtum-0.15.1-win32.zip
 qtum-0.15.1-osx-unsigned.dmg		
 qtum-0.15.1-win64-setup-unsigned.exe
 ```
 
-其中exe结尾文件为windows下的安装文件，直接运行安装。dmg结尾的文件为mac osx下的安装文件，运行后拖拽图标至文件夹内即成功安装。其余包的安装方式都是解压后直接运行相应程序。
+其中exe结尾文件为windows下的安装文件，直接运行安装。dmg结尾的文件为mac osx下的安装文件，运行后拖拽图标至文件夹内即成功安装。其余包的安装方式都是解压后直接运行相应程序。内测期间源码暂不公开
 
 由于QtumX是基于Qtum 0.15.1版本开发，所以安装包的命名和其保持一致，若使用exe或dmg方式安装，则会覆盖系统中原本的Qtum程序。如果系统中原本已经安装了Qtum，建议使用解压的方式进行安装QtumX。
 
 QtumX在不同环境下的默认数据存储目录如下。可以看到QtumX的数据位于Qtum默认目录的poa文件夹下，因此不会与Qtum的数据产生冲突。不过你也可以通过启动时通过命令行参数的方式手动指定目录。
-
 
 ```
 // Windows < Vista: C:\Documents and Settings\Username\Application Data\Qtum\poa

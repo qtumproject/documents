@@ -36,6 +36,6 @@
 
 ## QtumX
 
-+ [技术白皮书](Technical-White-Paper-for-QtumX/README.md)
-+ [操作教程](QtumX-Tutorial.md)
++ [QtumX技术白皮书](Technical-White-Paper-for-QtumX/README.md)
++ [QtumX使用教程（内测）](QtumX-Tutorial.md)
 + 
