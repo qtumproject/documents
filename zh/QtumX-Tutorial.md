@@ -16,7 +16,7 @@ qtum-0.15.1-osx-unsigned.dmg
 qtum-0.15.1-win64-setup-unsigned.exe
 ```
 
-其中exe结尾文件为windows下的安装文件，直接运行安装。dmg结尾的文件为mac osx下的安装文件，运行后拖拽图标至文件夹内即成功安装。其余包的安装方式都是解压后直接运行相应程序。内测期间源码暂不公开
+其中exe结尾文件为windows下的安装文件，直接运行安装。dmg结尾的文件为mac osx下的安装文件，运行后拖拽图标至文件夹内即成功安装。其余包的安装方式都是解压后直接运行相应程序。内测期间源码暂不公开，后续会进行公开。
 
 由于QtumX是基于Qtum 0.15.1版本开发，所以安装包的命名和其保持一致，若使用exe或dmg方式安装，则会覆盖系统中原本的Qtum程序。如果系统中原本已经安装了Qtum，建议使用解压的方式进行安装QtumX。
 
@@ -195,3 +195,4 @@ function getMinerList() constant returns(address[] vals){
 7.  然后回到Call Contract标签页，Contract Address填写569b6c121d25a59bfb90fdec1464827aa8d57d14，ABI填写minerList-dgp.sol编译得到的ABI，Function选择getMinerList。
 8.  CALL CONTRACT。得到vals为[47210a1bacc15175bb24c3384e5d3650991a7bc4, fe6e43ffb52ef746a0db8cc51cb95921c34ca0a3, 6cadd7aefdb363ae680fc234dcfe4c40919781d3]，即为高度10000上通过的矿工列表。
   
+后续如果有需求，可以把矿工更新、查看相关的功能封装成接口。

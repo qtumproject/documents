@@ -107,6 +107,8 @@ Digital identity means recording some important information in blockchain so tha
 2.  Education records: record education experience or online courses experience
 3. Luxury: record information of luxury for public verification
 
+# Future Work
+The QtumX project aims to build a business solution, helping enterprises, organizations and schools to apply the blockchain technology to their areas. So it will be more than a consortium blockchain proposed in this paper. More information about QtumX will be published after we applied the patents related.
 
 # References
 
