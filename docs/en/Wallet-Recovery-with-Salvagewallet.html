@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · Qtum Documentation</title>
+        <title>Wallet Recovery With Salvagewallet · Qtum Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,8 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Qtum-Wallet-Tutorial/" />
+    <link rel="next" href="Qtum-Exchange-Usage-Guide-and-Info.html" />
     
+    
+    <link rel="prev" href="Encrypt-and-Unlock-Qtum-Wallet/" />
     
 
     </head>
@@ -95,7 +97,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -212,7 +214,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.7" data-path="Wallet-Recovery-with-Salvagewallet.html">
+        <li class="chapter active" data-level="2.7" data-path="Wallet-Recovery-with-Salvagewallet.html">
             
                 <a href="Wallet-Recovery-with-Salvagewallet.html">
             
@@ -426,7 +428,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >Wallet Recovery With Salvagewallet</a>
     </h1>
 </div>
 
@@ -441,7 +443,28 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="qtum-documentation"><a name="qtum-documentation" class="plugin-anchor" href="#qtum-documentation"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum Documentation</h1>
+                                <h1 id="recovery-wallet-data-with-salvagewallet"><a name="recovery-wallet-data-with-salvagewallet" class="plugin-anchor" href="#recovery-wallet-data-with-salvagewallet"><i class="fa fa-link" aria-hidden="true"></i></a>Recovery wallet data with salvagewallet</h1>
+<p>This is a very helpful method to recovery your wallet data. It can fix following issues.</p>
+<ul>
+<li>Incorrect balance</li>
+<li>Broken wallet</li>
+<li>Wallet launching issue</li>
+</ul>
+<p><strong>PLEASE make sure backup your wallet before below operations. These operations may break your wallet.</strong></p>
+<h2 id="windows-wallet-turtorial"><a name="windows-wallet-turtorial" class="plugin-anchor" href="#windows-wallet-turtorial"><i class="fa fa-link" aria-hidden="true"></i></a>Windows wallet turtorial</h2>
+<p>Let&apos;s take Windows 10 as example. Other windows are similar.</p>
+<p>Firstly please find the shortcut of <em>Qtum-Qt</em>. It&apos;s on the desktop or the start menu. Copy it to the desktop.</p>
+<p><img src="https://s.qtum.site/uploads/8c063738e99659bdd7107e4d18d11340.png" alt="">
+<img src="https://s.qtum.site/uploads/5722815f8ea76738222daa9bc295cce1.png" alt=""></p>
+<p>Right click on the short cut, click on <strong>Properties</strong> and click on <strong>Shortcut</strong>. Then add <code>--salvagewallet</code> to the end of <strong>Target</strong>.</p>
+<p><img src="https://s.qtum.site/uploads/04561479b811f843a7c4d277966c291e.png" alt=""></p>
+<p>Click on <strong>OK</strong>. The dialogue will be closed.</p>
+<p>Now double click on the shortcut. The wallet will launch and reindex blocks.</p>
+<p><img src="https://s.qtum.site/uploads/1206d81a66ec6284065773b47b7292bc.png" alt=""></p>
+<p>We can have a look at the data menu of Qtum. Open menu <code>%APPDATA%\Qtum</code>. <strong>Please be careful and don&apos;t remove or change any content under this menu except you are aware of them.</strong></p>
+<p><img src="https://s.qtum.site/uploads/c5f68c974ac0076a09da14a5896776be.png" alt=""></p>
+<p>Now the old wallet has been backed up to <code>wallet.1516172743.bak</code>. The wallet is using the new <code>wallet.dat</code> file. It contains all private keys with brand new data.</p>
+<p>After the above steps, it&apos;s better to remove the shortcut on the desktop in order not to reindex your wallet next time.</p>
 
                                 
                                 </section>
@@ -469,8 +492,12 @@
 
             
                 
+                <a href="Encrypt-and-Unlock-Qtum-Wallet/" class="navigation navigation-prev " aria-label="Previous page: Encrypt and Unlock Qtum Wallet">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="Qtum-Wallet-Tutorial/" class="navigation navigation-next navigation-unique" aria-label="Next page: Desktop wallet basic usage">
+                
+                <a href="Qtum-Exchange-Usage-Guide-and-Info.html" class="navigation navigation-next " aria-label="Next page: Qtum Exchange Usage Guide">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -481,7 +508,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Desktop wallet basic usage","level":"2.1","depth":1,"path":"Qtum-Wallet-Tutorial/README.md","ref":"Qtum-Wallet-Tutorial/README.md","articles":[{"title":"Best Practices","level":"2.1.1","depth":2,"path":"QTUM-wallet-usage-best-practices/README.md","ref":"QTUM-wallet-usage-best-practices/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"README.md","mtime":"2018-06-07T03:55:10.564Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T07:01:48.038Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Wallet Recovery With Salvagewallet","level":"2.7","depth":1,"next":{"title":"Qtum Exchange Usage Guide","level":"2.8","depth":1,"path":"Qtum-Exchange-Usage-Guide-and-Info.md","ref":"Qtum-Exchange-Usage-Guide-and-Info.md","articles":[]},"previous":{"title":"Encrypt and Unlock Qtum Wallet","level":"2.6","depth":1,"path":"Encrypt-and-Unlock-Qtum-Wallet/README.md","ref":"Encrypt-and-Unlock-Qtum-Wallet/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Wallet-Recovery-with-Salvagewallet.md","mtime":"2018-06-08T13:27:09.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T07:01:48.038Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>

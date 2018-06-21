@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · Qtum Documentation</title>
+        <title>Launch Qtum With Docker · Qtum Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,8 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Qtum-Wallet-Tutorial/" />
+    <link rel="next" href="Build-Qtum-on-CentOS.html" />
     
+    
+    <link rel="prev" href="Guidance-of-Qtum-Deployment-and-RPC-Settings.html" />
     
 
     </head>
@@ -95,7 +97,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -258,7 +260,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="Launch-Qtum-with-Docker.html">
+        <li class="chapter active" data-level="3.2" data-path="Launch-Qtum-with-Docker.html">
             
                 <a href="Launch-Qtum-with-Docker.html">
             
@@ -426,7 +428,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >Launch Qtum With Docker</a>
     </h1>
 </div>
 
@@ -441,8 +443,57 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="qtum-documentation"><a name="qtum-documentation" class="plugin-anchor" href="#qtum-documentation"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum Documentation</h1>
+                                <h1 id="how-to-run-qtum-node-with-docker"><a name="how-to-run-qtum-node-with-docker" class="plugin-anchor" href="#how-to-run-qtum-node-with-docker"><i class="fa fa-link" aria-hidden="true"></i></a>How to run Qtum node with docker</h1>
+<h2 id="quick-start"><a name="quick-start" class="plugin-anchor" href="#quick-start"><i class="fa fa-link" aria-hidden="true"></i></a>Quick start</h2>
+<p>This tutorial use Linux Ubuntu as example, OSX and windows platform are almost the same.</p>
+<p>Suppose the reader has basic command line knowledge, and also have docker correctly installed and configured. If not, please learn about command line and Docker first.</p>
+<p>For more details, please refer to <a href="https://github.com/qtumproject/qtum-docker.git" target="_blank">github</a></p>
+<h2 id="get-docker-image"><a name="get-docker-image" class="plugin-anchor" href="#get-docker-image"><i class="fa fa-link" aria-hidden="true"></i></a>Get docker image</h2>
+<p>You might take either way:</p>
+<h3 id="pull-a-image-from-public-docker-hub"><a name="pull-a-image-from-public-docker-hub" class="plugin-anchor" href="#pull-a-image-from-public-docker-hub"><i class="fa fa-link" aria-hidden="true"></i></a>Pull a image from Public Docker hub</h3>
+<pre><code>$ docker pull qtum/qtum
+</code></pre><h3 id="or-build-qtum-image-with-provided-dockerfile"><a name="or-build-qtum-image-with-provided-dockerfile" class="plugin-anchor" href="#or-build-qtum-image-with-provided-dockerfile"><i class="fa fa-link" aria-hidden="true"></i></a>Or, build qtum image with provided Dockerfile</h3>
+<p>The Dockerfile can be downloaded on github: <a href="https://github.com/qtumproject/qtum-docker/blob/master/release/Dockerfile" target="_blank">Dockerfile</a></p>
+<pre><code>$docker build --rm -t qtum/qtum .
+</code></pre><p>For historical versions, please visit <a href="https://hub.docker.com/r/qtum/qtum/" target="_blank">docker hub</a></p>
+<h2 id="prepare-data-path-and-qtumconf"><a name="prepare-data-path-and-qtumconf" class="plugin-anchor" href="#prepare-data-path-and-qtumconf"><i class="fa fa-link" aria-hidden="true"></i></a>Prepare data path and qtum.conf</h2>
+<p>In order to use user-defined config file, as well as save block chain data, -v option for docker is recommended.</p>
+<p>First chose a path to save qtum block chain data:</p>
+<pre><code>sudo rm -rf /data/qtum-data
+sudo mkdir -p /data/qtum-data
+sudo chmod a+w /data/qtum-data
+</code></pre><p>Create your config file, refer to the example [qtum.conf]!(<a href="https://github.com/qtumproject/qtum/blob/1a926b980f03e97322c7dd787835bec1730f35d2/contrib/debian/examples/qtum.conf" target="_blank">https://github.com/qtumproject/qtum/blob/1a926b980f03e97322c7dd787835bec1730f35d2/contrib/debian/examples/qtum.conf</a>). Note rpcuser and rpcpassword to required for later <code>qtum-cli</code> usage for docker, so it is better to set those two options. Then please create the file ${PWD}/qtum.conf with content:</p>
+<pre><code>rpcuser=qtum
+rpcpassword=qtumtest
+</code></pre><h2 id="launch-qtumd"><a name="launch-qtumd" class="plugin-anchor" href="#launch-qtumd"><i class="fa fa-link" aria-hidden="true"></i></a>Launch qtumd</h2>
+<p>To launch qtum node:</p>
+<pre><code>## to launch qtumd
+$ docker run -d --rm --name qtum_node \
+             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
+             -v /data/qtum-data/:/root/.qtum/ \
+             qtum/qtum qtumd
 
+## check docker processed
+$ docker ps
+
+## to stop qtumd
+$ docker run -i --network container:qtum_node \
+             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
+             -v /data/qtum-data/:/root/.qtum/ \
+             qtum/qtum qtum-cli stop
+</code></pre><p><code>${PWD}/qtum.conf</code> will be used, and blockchain data saved under /data/qtum-data/</p>
+<h2 id="interact-with-qtumd-using-qtum-cli"><a name="interact-with-qtumd-using-qtum-cli" class="plugin-anchor" href="#interact-with-qtumd-using-qtum-cli"><i class="fa fa-link" aria-hidden="true"></i></a>Interact with <code>qtumd</code> using <code>qtum-cli</code></h2>
+<p>Use following docker command to interact with your qtum node with <code>qtum-cli</code>:</p>
+<pre><code>$ docker run -i --network container:qtum_node \
+             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
+             -v /data/qtum-data/:/root/.qtum/ \
+             qtum/qtum qtum-cli getinfo
+</code></pre><p>For more qtum-cli commands, use:</p>
+<pre><code>$ docker run -i --network container:qtum_node \
+             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
+             -v /data/qtum-data/:/root/.qtum/ \
+             qtum/qtum qtum-cli help
+</code></pre>
                                 
                                 </section>
                             
@@ -469,8 +520,12 @@
 
             
                 
+                <a href="Guidance-of-Qtum-Deployment-and-RPC-Settings.html" class="navigation navigation-prev " aria-label="Previous page: Guidance of Qtum Deployment and RPC Settings">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="Qtum-Wallet-Tutorial/" class="navigation navigation-next navigation-unique" aria-label="Next page: Desktop wallet basic usage">
+                
+                <a href="Build-Qtum-on-CentOS.html" class="navigation navigation-next " aria-label="Next page: How to Build Qtum on CentOS">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -481,7 +536,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Desktop wallet basic usage","level":"2.1","depth":1,"path":"Qtum-Wallet-Tutorial/README.md","ref":"Qtum-Wallet-Tutorial/README.md","articles":[{"title":"Best Practices","level":"2.1.1","depth":2,"path":"QTUM-wallet-usage-best-practices/README.md","ref":"QTUM-wallet-usage-best-practices/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"README.md","mtime":"2018-06-07T03:55:10.564Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T07:01:48.038Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Launch Qtum With Docker","level":"3.2","depth":1,"next":{"title":"How to Build Qtum on CentOS","level":"3.3","depth":1,"path":"Build-Qtum-on-CentOS.md","ref":"Build-Qtum-on-CentOS.md","articles":[]},"previous":{"title":"Guidance of Qtum Deployment and RPC Settings","level":"3.1","depth":1,"path":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","ref":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Launch-Qtum-with-Docker.md","mtime":"2018-06-08T06:49:51.314Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T07:01:48.038Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>
