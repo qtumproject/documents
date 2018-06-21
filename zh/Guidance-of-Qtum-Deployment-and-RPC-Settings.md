@@ -55,7 +55,7 @@ docker pull qtum/qtum:latest
 
 ## 部署Qtum节点
 
-Docker容器的使用方法略有不同，但原理一致。读者可参考另一教程《[如何用docker运行qtum节点](https://github.com/qtumproject/documents/blob/master/zh/Launch-Qtum-with-Docker.md)》。
+Docker容器的使用方法略有不同，但原理一致。读者可参考另一教程《[如何用docker运行qtum节点](Launch-Qtum-with-Docker.md)》。
 
 下面以Ubuntu为例，部署Qtum节点。Mac和Window命令行与Linux保持一致，不再赘述。
 

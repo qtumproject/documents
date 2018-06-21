@@ -22,7 +22,7 @@ Qtum官方核心钱包可以运行Qtum全节点，是目前唯一支持Staking�
 
 ### 1. 运行`qtumd`
 
-`qtumd`运行和交互的方法请参考教程《[如何部署Qtum量子链节点](https://github.com/qtumproject/documents/blob/master/zh/Guidance-of-Qtum-Deployment-and-RPC-Settings.md)》中“获取Qtum节点”和“部署Qtum节点”部分。
+`qtumd`运行和交互的方法请参考教程《[如何部署Qtum量子链节点](Guidance-of-Qtum-Deployment-and-RPC-Settings.md)》中“获取Qtum节点”和“部署Qtum节点”部分。
 
 按照以上教程运行`qtumd`:
 
@@ -42,9 +42,9 @@ Staking（挖矿）功能在钱包未加密时将默认开启，无需其他设�
 
 命令将返回一个新生成的地址，地址以Q开头。可以向该地址转入一笔或多笔QTUM用于Staking（挖矿）。读者可以用同样方法生成任意多地址，并向地址中转入任意多笔Qtum进行Staking（挖矿）。
 
-注意：**刚转入的QTUM需要等待500个区块确认才可用于Staking（挖矿），即大概需要等待17小时**。这与Qtum采用的MPoS共识机制有关，对其运行原理感兴趣的读者可以参考《[Qtum区块链指南](https://github.com/qtumproject/documents/blob/master/zh/Qtum-Blockchain-Guide.md#mpos共识算法)》进一步了解。
+注意：**刚转入的QTUM需要等待500个区块确认才可用于Staking（挖矿），即大概需要等待17小时**。这与Qtum采用的MPoS共识机制有关，对其运行原理感兴趣的读者可以参考《[Qtum区块链指南](Qtum-Blockchain-Guide.md#mpos共识算法)》进一步了解。
 
-在区块同步完成后，可以通过`./qtum-cli getbalance`查看钱包余额，或`./qtum-cli listunspent`查看所有UTXO。（[什么是UTXO?](https://github.com/qtumproject/documents/blob/master/zh/Qtum-Blockchain-Guide.md#utxo账户模型)）。
+在区块同步完成后，可以通过`./qtum-cli getbalance`查看钱包余额，或`./qtum-cli listunspent`查看所有UTXO。（[什么是UTXO?](Qtum-Blockchain-Guide.md#utxo账户模型)）。
 
 建议在QTUM转入500个区块后再进行以下步骤，因为确认数小于500个的UTXO无法进行Staking（挖矿）。
 
@@ -112,7 +112,7 @@ Staking（挖矿）功能在钱包未加密时将默认开启，无需其他设�
 
 ## 方式二：用有用户界面的Qtum-qt钱包Staking（挖矿）
 
-Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](https://github.com/qtumproject/documents/blob/master/zh/Qtum-Wallet-Tutorial.md)。目前支持的Mac/Linux/Windows，用户可以自行下载安装。
+Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](Qtum-Wallet-Tutorial.md)。目前支持的Mac/Linux/Windows，用户可以自行下载安装。
 
 ### 1. 打开Qtum qt钱包
 
@@ -122,7 +122,7 @@ Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](https:
 
 如果钱包中已有QTUM可跳过此步骤。
 
-若钱包中无QTUM，则向钱包地址中转入一定数量的QTUM，方法请参考[qt钱包教程(点击打开)](https://github.com/qtumproject/documents/blob/master/zh/Qtum-Wallet-Tutorial.md)。
+若钱包中无QTUM，则向钱包地址中转入一定数量的QTUM，方法请参考[qt钱包教程(点击打开)](Qtum-Wallet-Tutorial.md)。
 
 注意，新转入的QTUM需要等待500个区块（约17小时）的成熟时间，才可进行Staking（挖矿）。因此，建议用户等待500个区块后再进行以下步骤。
 
@@ -145,13 +145,13 @@ Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](https:
 
 ![没有成熟的QTUM导致无法Staking](https://s.qtum.site/uploads/ff56f4442175cfadfffe5cda9561510f.png)
 
-* 钱包处于锁定状态 -- 解决方法：解锁钱包。[如何解锁钱包?](https://github.com/qtumproject/documents/blob/master/zh/Encrypt-and-Unlock-Qtum-Wallet.md)
+* 钱包处于锁定状态 -- 解决方法：解锁钱包。[如何解锁钱包?](Encrypt-and-Unlock-Qtum-Wallet/README.md)
 
 ![钱包未解锁导致无法Staking](https://s.qtum.site/uploads/55e240b15626dcc9f9c6d3b31e5094f8.jpeg)
 
 **若无闪电标志，说明禁用了Staking功能**
 
-* 钱包未开启staking功能 -- 解决方法：修改运行参数或配置文件，开启Staking。[如何添加配置文件？]()
+* 钱包未开启staking功能 -- 解决方法：修改运行参数或配置文件，开启Staking。[如何添加配置文件？](Guidance-of-Qtum-Deployment-and-RPC-Settings.md#rpc调用设置)
 
 ![钱包未开启Staking](https://s.qtum.site/uploads/2626afb29dbab216326e8a6f2b9aec10.jpeg)
 
@@ -164,7 +164,7 @@ Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](https:
 * **剩余3.6QTUM的奖励会在500个区块（约17个小时）之后，在连续九个区块中奖励给你，每个区块你将获得0.4QTUM**，与上条中0.4QTUM合计共4QTUM；
 * Staking（挖矿）成功的那个币（UTXO）将被锁定500个区块，直到500区块之后才可以进行交易或继续进行Staking（挖矿）。为了不让资金锁定太久，用户可以选择将一个大的UTXO分成若干个较小的UTXO，这样只有挖到矿的那个UTXO会被锁定；
 
-这一奖励机制和Qtum采用的MPoS机制有关，有兴趣了解原理的读者可以参考《[Qtum区块链指南](https://github.com/qtumproject/documents/blob/master/zh/Qtum-Blockchain-Guide.md#mpos共识算法)》。
+这一奖励机制和Qtum采用的MPoS机制有关，有兴趣了解原理的读者可以参考《[Qtum区块链指南](Qtum-Blockchain-Guide.md#mpos共识算法)》。
 
 ## 如何关闭Staking（挖矿）功能
 
@@ -182,6 +182,6 @@ Qtum钱包会默认开启Staking（挖矿），但有些情况用户或交易所
 ./qtum-qt -staking=false
 ```
 
-2 在配置文件`qtum.conf`中添加`staking=false`，[如何使用配置文件？]()
+2 在配置文件`qtum.conf`中添加`staking=false`，[如何使用配置文件？](Guidance-of-Qtum-Deployment-and-RPC-Settings.md#rpc调用设置)
 
-3 锁定钱包，钱包在锁定状态下会自动停止Staking。[如何锁定钱包？](https://github.com/qtumproject/documents/blob/master/zh/Encrypt-and-Unlock-Qtum-Wallet.md)
+3 锁定钱包，钱包在锁定状态下会自动停止Staking。[如何锁定钱包？](Encrypt-and-Unlock-Qtum-Wallet/README.md)
