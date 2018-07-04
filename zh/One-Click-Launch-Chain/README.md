@@ -35,5 +35,5 @@
 2. 执行importprivkey命令，导入账户的私钥。
 3. 执行setpoaminer命令，开始使用账户挖矿。
 4. 可以从QT钱包或是执行getblockchaininfo命令，看到block数在不断增加。
-![image](1.jpg)
-5. 新链启动成功，试着发交易或是智能合约吧。
+![image](2.jpg)
+5. 新链启动成功，试着发交易或是智能合约吧！
