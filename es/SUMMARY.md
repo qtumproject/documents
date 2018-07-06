@@ -5,7 +5,7 @@
 ### Usando Qtum
 
 + [Tutorial de uso de billetera Qtum](Tutorial de uso de billetera QTUM/README.md)
-  + [Mejores Practicas](QTUM-wallet-usage-best-practices/README.md)
+  + [Mejores Practicas](Qtum Mejores Practicas/README.md)
 
 
 ### Staking
