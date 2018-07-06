@@ -1,5 +1,20 @@
 # QtumX一键发链教程
 
+- [下载](#下载)
+- [注册登录](#注册登录)
+- [搭建私链](#搭建私链)
+    - [生成配置](#生成配置)
+    - [启动私链](#启动私链)
+    - [连接私链](#连接私链)
+- [种子节点](#种子节点)
+- [搭建联盟链](#搭建联盟链)
+    - [配置](#配置)
+    - [启动](#启动)
+- [线上治理](#线上治理)
+    - [关于DGP](#关于dgp)
+    - [修改矿工列表](#修改矿工列表)
+    - [修改系统参数](#修改系统参数)
+
 # 下载
 从[Github](https://github.com/qtumproject/qtum-enterprise/releases)下载最新的安装包，安装至任意目录。
 
@@ -36,11 +51,13 @@
 我们生成了一个名为x的链（[链接](https://qtumx.net/#/chain/view?chainId=x)），按以下步骤启动该链。
 1. 使用 qtumd -chain=x 或是 在qtum-qt中如下图配置重启后，启动名为x的链。
 ![image](1.jpg)
-1. 执行importprivkey命令，导入账户的私钥。
-2. 执行setpoaminer命令，开始使用账户挖矿。每次节点重启后需要运行该命令开启挖矿。
-3. 可以从QT钱包或是执行getblockchaininfo命令，看到block数在不断增加。
+1. 执行getpoaminerlist，查看矿工列表。
+2. 执行importprivkey命令，导入矿工的私钥。
+3. 执行setpoaminer命令，开始使用矿工账户挖矿。每次节点重启后需要运行该命令开启挖矿。
+![image](7.jpg)
+5. 可以从QT钱包或是执行getblockchaininfo命令，看到block数在不断增加。
 ![image](2.jpg)
-5. 新链启动成功，试着发交易或是智能合约吧！
+6. 新链启动成功，试着发交易或是智能合约吧！
 
 ## 连接私链
 假设我们已经在机器A上启动了私链x并进行挖矿，这时我们需要在机器B上启动节点并接入该私链。
@@ -48,6 +65,7 @@
 2. 运行 addnode "ip_A" add 命令，连接机器A上的节点。
 3. 连接之后，可以通过getpeerinfo命令查看节点情况。
 4. 试着在两个节点之间互发交易吧！
+![image](8.jpg)
 
 # 种子节点
 区块链新节点在启动的时候可以通过连接种子节点（seed）快速地找到网络，省去了上文中addnode的步骤。种子节点可以是一个ip或是一个域名，对应的服务器上保持有节点运行。以下讲解配置种子节点的流程。
@@ -63,3 +81,21 @@ root@116.62.70.220:./qtumd -chain=xx -daemon
 3. 配置完成，这时候使用任何机器启动xx链，都会连接到种子节点获取数据。可以通过getpeerinfo看到连接上的节点。
 ![image](6.jpg)
 
+# 搭建联盟链
+联盟链与私链的不同之处在于，联盟链是由多位矿工共同维护的。EOS就是一个典型的联盟链：先通过竞选得到多个超级节点，然后由这些超级节点负责生产区块，并获得区块奖励。
+
+## 配置
+新建一个名为qtumx的联盟链（[链接](https://qtumx.net/#/chain/view?chainId=qtumx)）。相比私链，其主要的改动是miner list字段设置了3个矿工地址，地址之间以逗号分隔。
+```
+Miner list
+QT65fYRCwq5tctNsVNVPNnHkwajArLFjo1,QjoHqQw5DsTniaqefuzbpuBDWW3C3qimy2,QWWdLoiHnFSNCjibCyGwbQjwtSzK5Unef3
+```
+
+## 启动
+在种子服务器上依次启动3个节点，并且通过importprivkey和setpoaminer开启3个节点的挖矿。用getblockchaininfo可以看到区块链高度开始不断增长，系统正常运行。用getblock命令可以查看每个block的矿工。
+![image](9.jpg)
+
+# 线上治理
+## 关于DGP
+## 修改矿工列表
+## 修改系统参数
