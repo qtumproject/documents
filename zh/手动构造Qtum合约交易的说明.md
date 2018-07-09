@@ -12,7 +12,7 @@ OP_CALL = 0xc2，用于调用合约时使用，即sendtocontract的时候。
 ## OP_CALL的使用
 一笔调用合约的交易，他的scriptPubKey内容为：　vm_version + gas_limit + gas_price + datahex + contract_address + OP_CALL
     
-其中datahex为编码后的合约函数+参数，我们可以同过 [ethabi](https://github.com/paritytech/ethabi) 来生成
+其中datahex为编码后的合约函数+参数，我们可以通过 [ethabi](https://github.com/paritytech/ethabi) 来生成
   
 比如 调用function foo(uint) 就可以通过 `ethabi encode function test.json foo -p 100 -l` 得到datahex。
 
