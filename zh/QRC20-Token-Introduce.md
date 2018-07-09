@@ -47,7 +47,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 点击左上角的 “+” 按钮，新建文件 SafeMath.sol 和 QRC20Token.sol，将之前写好的合约代码复制粘贴进去。
 ![](https://s.qtum.site/uploads/095deff475a970dc2a25b9e6960436db.png)
  
-在页面右侧，点击 “detail” 按钮，在弹出的页面中拷贝 BYTECODE 保存下来。
+在页面右侧，点击 “detail” 按钮，在弹出的页面中拷贝 BYTECODE 的 object 项内容，并保存下来。
 ![](https://s.qtum.site/uploads/47380517f0f34253511cb2c6bfc77bb7.png)
 ![](https://s.qtum.site/uploads/fd6f45a90362e4b27a345a4557c4c5e4.png)
 
@@ -73,7 +73,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ### 添加代币
 
-在 Qtum Core钱包中，进入 “QRC Token” 页面，点击 “Add Token”，填写发布合约时所得的SenderAddress，并选择SenderAddress作为Token Address, 点击“Confirm”按钮代币就添加成功了。
+在 Qtum Core钱包中，进入 “QRC Token” 页面，点击 “Add Token”，填写发布合约时所得的ContractAddress，并选择SenderAddress作为Token Address, 点击“Confirm”按钮代币就添加成功了。
 
 ![](https://s.qtum.site/uploads/0b1aa0c2354522ec07cb41913f0b48d4.png)
 
