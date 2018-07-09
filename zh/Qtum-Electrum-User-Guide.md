@@ -76,7 +76,7 @@ Qtum Electrum 的界面非常简洁，点击顶部的按钮可进行tab间的切
 <br>
    
 ![](https://s.qtum.site/uploads/4eaa85f66778d2e051b7f1ddcb5107b9.png)
-在以添加的Token处右键，即可选择需要进行的操作。  
+在已添加的Token处右键，即可选择需要进行的操作。  
 <br>
    
 ![](https://s.qtum.site/uploads/53eac2382ad17d543c060261497299b5.png)
