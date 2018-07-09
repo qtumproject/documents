@@ -39,3 +39,4 @@
 + [QtumX技术白皮书](Technical-White-Paper-for-QtumX/README.md)
 + [QtumX使用教程（内测）](QtumX-Tutorial.md)
 + [QtumX一键发链教程（公测）](One-Click-Launch-Chain/README.md)
++ [基于QtumX搭建自己的Dapp](QtumX-Smart-Contract/README.md)

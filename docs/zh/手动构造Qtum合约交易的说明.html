@@ -386,6 +386,19 @@
             
         </li>
     
+        <li class="chapter " data-level="7.4" data-path="QtumX-Smart-Contract/">
+            
+                <a href="QtumX-Smart-Contract/">
+            
+                    
+                    基于QtumX搭建自己的Dapp
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -439,7 +452,7 @@
 <p>OP_CALL = 0xc2&#xFF0C;&#x7528;&#x4E8E;&#x8C03;&#x7528;&#x5408;&#x7EA6;&#x65F6;&#x4F7F;&#x7528;&#xFF0C;&#x5373;sendtocontract&#x7684;&#x65F6;&#x5019;&#x3002;</p>
 <h2 id="opcall&#x7684;&#x4F7F;&#x7528;"><a name="opcall&#x7684;&#x4F7F;&#x7528;" class="plugin-anchor" href="#opcall&#x7684;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>OP_CALL&#x7684;&#x4F7F;&#x7528;</h2>
 <p>&#x4E00;&#x7B14;&#x8C03;&#x7528;&#x5408;&#x7EA6;&#x7684;&#x4EA4;&#x6613;&#xFF0C;&#x4ED6;&#x7684;scriptPubKey&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;&#x3000;vm_version + gas_limit + gas_price + datahex + contract_address + OP_CALL</p>
-<p>&#x5176;&#x4E2D;datahex&#x4E3A;&#x7F16;&#x7801;&#x540E;&#x7684;&#x5408;&#x7EA6;&#x51FD;&#x6570;+&#x53C2;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x540C;&#x8FC7; <a href="https://github.com/paritytech/ethabi" target="_blank">ethabi</a> &#x6765;&#x751F;&#x6210;</p>
+<p>&#x5176;&#x4E2D;datahex&#x4E3A;&#x7F16;&#x7801;&#x540E;&#x7684;&#x5408;&#x7EA6;&#x51FD;&#x6570;+&#x53C2;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <a href="https://github.com/paritytech/ethabi" target="_blank">ethabi</a> &#x6765;&#x751F;&#x6210;</p>
 <p>&#x6BD4;&#x5982; &#x8C03;&#x7528;function foo(uint) &#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>ethabi encode function test.json foo -p 100 -l</code> &#x5F97;&#x5230;datahex&#x3002;</p>
 <ul>
 <li><a href="https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI" target="_blank">https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI</a></li>
@@ -510,7 +523,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"手动构造Qtum合约交易的说明","level":"5.4","depth":1,"next":{"title":"Qtum 区块链指南","level":"6.1","depth":1,"path":"Qtum-Blockchain-Guide.md","ref":"Qtum-Blockchain-Guide.md","articles":[]},"previous":{"title":"QRC20 集成文档","level":"5.3","depth":1,"path":"QRC20集成文档.md","ref":"QRC20集成文档.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"zh","gitbook":"*"},"file":{"path":"手动构造Qtum合约交易的说明.md","mtime":"2018-07-06T03:28:18.707Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-06T10:26:48.855Z"},"basePath":".","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"手动构造Qtum合约交易的说明","level":"5.4","depth":1,"next":{"title":"Qtum 区块链指南","level":"6.1","depth":1,"path":"Qtum-Blockchain-Guide.md","ref":"Qtum-Blockchain-Guide.md","articles":[]},"previous":{"title":"QRC20 集成文档","level":"5.3","depth":1,"path":"QRC20集成文档.md","ref":"QRC20集成文档.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"zh","gitbook":"*"},"file":{"path":"手动构造Qtum合约交易的说明.md","mtime":"2018-07-09T08:44:57.022Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-09T09:11:03.390Z"},"basePath":".","book":{"language":"zh"}});
         });
     </script>
 </div>
