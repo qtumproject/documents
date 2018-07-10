@@ -80,7 +80,7 @@ $ docker run -i --network container:qtum_node \
 
 ## 通过`qtum-cli`与`qtumd`进行交互
 
-通过如下Docker命令，可通过`qtum-cli`与容器中运行的qtum节点进行交互，如:
+通过如下Docker命令，可使用`qtum-cli`与容器中运行的qtum节点进行交互，如:
 
 ```
 $ docker run -i --network container:qtum_node \
