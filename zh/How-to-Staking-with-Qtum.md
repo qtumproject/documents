@@ -1,24 +1,24 @@
 # Qtum量子链Staking（PoS挖矿）教程
 
-Qtum采用PoS共识机制，与比特币等采用的PoW机制有所不同。与比特币中挖矿类似，Qtum PoS机制中称为Staking。**为方便读者理解，本教程统一将该过程表述为“Staking（挖矿）”**。每次Staking（挖矿）成功可累计获得至少**4 QTUM**作为奖励。实际获得奖励一般超过4QTUM，因为交易手续费和合约调用费用也将作为Staking（挖矿）奖励。
+Qtum采用PoS共识机制，与比特币等采用的PoW机制有所不同。与比特币中挖矿类似，Qtum PoS机制中称为Staking。每次Staking成功可累计获得至少**4 QTUM**作为奖励。实际获得奖励一般超过4QTUM，因为交易手续费和合约调用费用也将作为Staking奖励。
 
-开始Staking（挖矿）需满足两个基本条件：
+开始Staking需满足两个基本条件：
 
 1. 运行Qtum全节点，并保持在线（不需要矿机，任何PC/Mac，甚至树莓派都可以运行Qtum全节点）；
-2. 拥有QTUM量子币（无论数量多少都可以Staking（挖矿），但拥有Qtum数量越多，挖到矿的可能性越高）。
+2. 拥有QTUM量子币（无论数量多少都可以Staking，但拥有Qtum数量越多，挖到矿的可能性越高）。
 
 如果你还没有QTUM量子币，请先通过各种平台获取一定数量QTUM备用。
 
-Qtum官方核心钱包可以运行Qtum全节点，是目前唯一支持Staking（挖矿）的钱包。请注意，**手机钱包不支持Staking（挖矿）**。
+Qtum官方核心钱包可以运行Qtum全节点，是目前唯一支持Staking的钱包。请注意，**手机钱包暂不支持Staking**。
 
-有两种方式进行Staking（挖矿）：
+有两种方式进行Staking：
 
-* 方式一：用命令行运行`qtumd`进行Staking（挖矿）；
-* 方式二：用带有图形界面的`qtum-qt`钱包进行Staking（挖矿）。
+* 方式一：用命令行运行`qtumd`进行Staking；
+* 方式二：用PC版`qtum-qt`钱包进行Staking。
 
-方式一适用于熟悉Linux/OSX/Windows命令行操作的用户，包括树莓派用户；方式二适用于适用有图形界面钱包的用户。读者可以根据自身需求选择其中一种方式进行Staking（挖矿）。两种方式完全等效，Staking（挖矿）效果没有任何区别。
+方式一适用于熟悉Linux/OSX/Windows命令行操作的用户，包括树莓派用户；方式二适用于适用有图形界面钱包的用户。读者可以根据自身需求选择其中一种方式进行Staking。两种方式完全等效，Staking（挖矿）效果没有任何区别。
 
-## 方式一：用命令行运行`qtumd`进行Staking(挖矿)
+## 方式一：用命令行运行`qtumd`进行Staking
 
 ### 1. 运行`qtumd`
 
@@ -30,7 +30,7 @@ Qtum官方核心钱包可以运行Qtum全节点，是目前唯一支持Staking�
 ./qtumd -daemon
 ```
 
-Staking（挖矿）功能在钱包未加密时将默认开启，无需其他设置。 
+Staking功能在钱包未加密时将默认开启，无需其他设置。 
 
 ### 2. 转入QTUM量子币
 
@@ -40,13 +40,13 @@ Staking（挖矿）功能在钱包未加密时将默认开启，无需其他设�
 ./qtum-cli getnewaddress
 ```
 
-命令将返回一个新生成的地址，地址以Q开头。可以向该地址转入一笔或多笔QTUM用于Staking（挖矿）。读者可以用同样方法生成任意多地址，并向地址中转入任意多笔Qtum进行Staking（挖矿）。
+命令将返回一个新生成的地址，地址以Q开头。可以向该地址转入一笔或多笔QTUM用于Staking。读者可以用同样方法生成任意多地址，并向地址中转入任意多笔Qtum进行Staking。
 
-注意：**刚转入的QTUM需要等待500个区块确认才可用于Staking（挖矿），即大概需要等待17小时**。这与Qtum采用的MPoS共识机制有关，对其运行原理感兴趣的读者可以参考《[Qtum区块链指南](Qtum-Blockchain-Guide.md#mpos共识算法)》进一步了解。
+注意：**刚转入的QTUM需要等待500个区块确认才可用于Staking，即大概需要等待17小时**。这与Qtum采用的MPoS共识机制有关，对其运行原理感兴趣的读者可以参考《[Qtum区块链指南](Qtum-Blockchain-Guide.md#mpos共识算法)》进一步了解。
 
 在区块同步完成后，可以通过`./qtum-cli getbalance`查看钱包余额，或`./qtum-cli listunspent`查看所有UTXO。（[什么是UTXO?](Qtum-Blockchain-Guide.md#utxo账户模型)）。
 
-建议在QTUM转入500个区块后再进行以下步骤，因为确认数小于500个的UTXO无法进行Staking（挖矿）。
+建议在QTUM转入500个区块后再进行以下步骤，因为确认数小于500个的UTXO无法进行Staking。
 
 ### 3. 查看Staking状态
 
@@ -74,9 +74,9 @@ Staking（挖矿）功能在钱包未加密时将默认开启，无需其他设�
 }
 ```
 
-其中`enabled`代表是否开启Staking（挖矿）功能，该功能是默认开启的;`staking`代表目前是否有QTUM正在Staking（挖矿），`true`即代表正在Staking;`weight`代表目前正在staking（挖矿）的Qtum数量，单位是10^-8QTUM，本例子中约0.532QTUM;`expectedtime`代表目前你挖到矿的期望时间，单位是秒。
+其中`enabled`代表是否开启Staking功能，该功能是默认开启的;`staking`代表目前是否有QTUM正在Staking，`true`即代表正在Staking;`weight`代表目前正在staking的Qtum数量，单位是10^-8QTUM，本例子中约0.532QTUM;`expectedtime`代表目前你挖到矿的期望时间，单位是秒。
 
-### 4. 加密的钱包如何Staking（挖矿）？
+### 4. 加密的钱包如何Staking？
 
 如果读者不需要对钱包加密，请跳过此步骤。但是钱包未加密状态下，通过钱包收发QTUM将
 
@@ -98,7 +98,7 @@ Staking（挖矿）功能在钱包未加密时将默认开启，无需其他设�
 }
 ```
 
-注意`staking`状态变为`false`，说明没有在Staking（挖矿）。
+注意`staking`状态变为`false`，说明没有在Staking。
 
 通过如下`walletpassphrase`命令可以对钱包进行解锁：
 
@@ -106,11 +106,11 @@ Staking（挖矿）功能在钱包未加密时将默认开启，无需其他设�
 ./qtum-cli walletpassphrase "<你设置的密码>" 99999999 true
 ```
 
-其中第一个参数为用户加密时设置的密码，第二个参数`99999999`为需要解锁的时间，单位是秒，可以根据用户需要进行设置；第三个参数表示是否只解锁staking功能，设置为true则表示只解锁用于Staking（挖矿），而发送QTUM仍需要输入密码。若第三个参数缺省，则表示完全解锁钱包，不仅可以Staking，也可以正常发送QTUM。
+其中第一个参数为用户加密时设置的密码，第二个参数`99999999`为需要解锁的时间，单位是秒，可以根据用户需要进行设置；第三个参数表示是否只解锁staking功能，设置为true则表示只解锁用于Staking，而发送QTUM仍需要输入密码。若第三个参数缺省，则表示完全解锁钱包，不仅可以Staking，也可以正常发送QTUM。
 
-解锁后用`getstakinginfo`可查看状态，一切正常的话即可以在钱包加密状态下Staking(挖矿)了。
+解锁后用`getstakinginfo`可查看状态，一切正常的话即可以在钱包加密状态下Staking了。
 
-## 方式二：用有用户界面的Qtum-qt钱包Staking（挖矿）
+## 方式二：用PC版Qtum-qt钱包Staking
 
 Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](Qtum-Wallet-Tutorial.md)。目前支持的Mac/Linux/Windows，用户可以自行下载安装。
 
@@ -124,22 +124,22 @@ Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](Qtum-W
 
 若钱包中无QTUM，则向钱包地址中转入一定数量的QTUM，方法请参考[qt钱包教程(点击打开)](Qtum-Wallet-Tutorial.md)。
 
-注意，新转入的QTUM需要等待500个区块（约17小时）的成熟时间，才可进行Staking（挖矿）。因此，建议用户等待500个区块后再进行以下步骤。
+注意，新转入的QTUM需要等待500个区块（约17小时）的成熟时间，才可进行Staking。因此，建议用户等待500个区块后再进行以下步骤。
 
-### 3. 查看Staking（挖矿）状态
+### 3. 查看Staking状态
 
-通过钱包右下角的闪电标志可以查看Staking（挖矿）的状态。
+通过钱包右下角的闪电标志可以查看Staking的状态。
 
-**若闪电为实心，表示正在Staking（挖矿）**。将鼠标放到闪电标志上，可以看到Staking（挖矿）相关信息，如下图所示：
+**若闪电为实心，表示正在Staking**。将鼠标放到闪电标志上，可以看到Staking相关信息，如下图所示：
 
-![正在Staking（挖矿）](https://s.qtum.site/uploads/898c1564fa8ea81b4383047c1f047f98.png)
+![正在Staking](https://s.qtum.site/uploads/898c1564fa8ea81b4383047c1f047f98.png)
 
 * `Staking`表示正在挖矿；
-* `Your weight is`表示当前你正在参与Staking（挖矿）的QTUM数量，单位是1QTUM；
-* `Network weight is`表示网络中正在参与Staking（挖矿）的QTUM数量，单位是1QTUM；
+* `Your weight is`表示当前你正在参与Staking的QTUM数量，单位是1QTUM；
+* `Network weight is`表示网络中正在参与Staking的QTUM数量，单位是1QTUM；
 * `Expected time`表示挖到矿的期望时间，单位是天。
 
-**若闪电为空心，表示不在Staking（挖矿）**。可能的原因有：
+**若闪电为空心，表示不在Staking**。可能的原因有：
 
 * 钱包里没有超过500个区块确认的QTUM -- 解决方法：这时请向钱包转入QTUM，并等待500个区块（约17小时）；
 
@@ -155,20 +155,20 @@ Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](Qtum-W
 
 ![钱包未开启Staking](https://s.qtum.site/uploads/2626afb29dbab216326e8a6f2b9aec10.jpeg)
 
-## 关于Staking（挖矿）奖励
+## 关于Staking奖励
 
 如果用户顺利挖到一个区块，可以累积获得超过4QTUM的奖励。关于挖矿奖励有以下几点需要注意：
 
 * 奖励会以一笔新交易的形式发送给你，命令行用户可通过`getbalance`命令查看余额变化，qt钱包用户可以直接看到收入的交易；
-* Staking（挖矿）成功，你会立刻收到一笔0.4QTUM的奖励；
+* Staking成功，你会立刻收到一笔0.4QTUM的奖励；
 * **剩余3.6QTUM的奖励会在500个区块（约17个小时）之后，在连续九个区块中奖励给你，每个区块你将获得0.4QTUM**，与上条中0.4QTUM合计共4QTUM；
-* Staking（挖矿）成功的那个币（UTXO）将被锁定500个区块，直到500区块之后才可以进行交易或继续进行Staking（挖矿）。为了不让资金锁定太久，用户可以选择将一个大的UTXO分成若干个较小的UTXO，这样只有挖到矿的那个UTXO会被锁定；
+* Staking成功的那个币（UTXO）将被锁定500个区块，直到500区块之后才可以进行交易或继续进行Staking。为了不让资金锁定太久，用户可以选择将一个大的UTXO分成若干个较小的UTXO，这样只有挖到矿的那个UTXO会被锁定；
 
 这一奖励机制和Qtum采用的MPoS机制有关，有兴趣了解原理的读者可以参考《[Qtum区块链指南](Qtum-Blockchain-Guide.md#mpos共识算法)》。
 
-## 如何关闭Staking（挖矿）功能
+## 如何关闭Staking功能
 
-Qtum钱包会默认开启Staking（挖矿），但有些情况用户或交易所想要关闭该功能。有以下几种方式可以停止Staking（挖矿）：
+Qtum钱包会默认开启Staking，但有些情况用户或交易所想要关闭该功能。有以下几种方式可以停止Staking：
 
 1 命令行用户可以在运行时加上`-staking=false`选项，如：
 

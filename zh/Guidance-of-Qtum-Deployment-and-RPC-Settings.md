@@ -10,7 +10,7 @@
 
 **1. 直接下载二进制文件**
 
-如果你并不关心Qtum的源码，部署Qtum节点最方便的方法是在[Qtum release page（点击打开）](https://github.com/qtumproject/qtum/releases)下载最新的二进制文件，目前支持的平台包括Linux，Window，OSX。建议选择最新版进行下载，本教程以撰写时的最新版v0.14.13为例。
+如果你并不关心Qtum的源码，部署Qtum节点最方便的方法是在[Qtum release page（点击打开）](https://github.com/qtumproject/qtum/releases)下载最新的二进制文件，目前支持的平台包括Linux，Windows，OSX。建议选择最新版进行下载，本教程以撰写时的最新版v0.14.13为例。
 
 （注意，你所看到最新版的版本号可能不同，如这里是0.14.13，其他字符串保持不变）
 
@@ -57,7 +57,7 @@ docker pull qtum/qtum:latest
 
 Docker容器的使用方法略有不同，但原理一致。读者可参考另一教程《[如何用docker运行qtum节点](Launch-Qtum-with-Docker.md)》。
 
-下面以Ubuntu为例，部署Qtum节点。Mac和Window命令行与Linux保持一致，不再赘述。
+下面以Ubuntu为例，部署Qtum节点。Mac和Windows命令行与Linux保持一致，不再赘述。
 
 通过`./qtumd`, 即可运行Qtum全节点：
 
@@ -65,7 +65,7 @@ Docker容器的使用方法略有不同，但原理一致。读者可参考另�
 ./qtumd -daemon
 ```
 
-其中`-daemon`表示进程后台驻留。如果用户想通过节点查看合约相关events（如查看收发QRC20代币的记录等），可以在运行`qtumd`是添加`-logevents`选项。
+其中`-daemon`表示进程后台驻留。如果用户想通过节点查看合约相关events（如查看收发QRC20代币的记录等），可以在运行`qtumd`时添加`-logevents`选项。
 
  更多选项，可通过以下命令查看：
 
@@ -85,7 +85,7 @@ Docker容器的使用方法略有不同，但原理一致。读者可参考另�
 * Mac OSX：`~/Library/Application Support/Qtum`
 * Windows:`%APPDATA%\Qtum`
 
-首次运行如果默认路径不为空，请清空之后再运行节点（清空前注意备份！）。读者也可以通过`-datadir`选项指定数据路径。
+首次运行如果默认路径不为空，请清空之后再运行节点（清空即删除路径下所有文件，清空前注意备份！）。读者也可以通过`-datadir`选项指定数据路径。
 
 首次运行需要同步所有区块，节点运行日志路径为`~/.qtum/debug.log`。
 
