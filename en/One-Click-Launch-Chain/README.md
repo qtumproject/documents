@@ -1,7 +1,7 @@
 # QtumX一键发链教程
 
 - [Download](#Download)
-- [Sign up Sign in](#Sign up Sign in)
+- [Sign up Sign in](#SignupSignin)
 - [Build private chain](#build private chain)
     - [generate configuration](#generate configuration)
     - [start private chain](#start private chain)
@@ -15,7 +15,7 @@
     - [Modify miners list](#Modify miners list)
     - [modify system parameters](#modify system parameters)
 
-# download
+# Download
 Download the latest installation package from [Github](https://github.com/qtumproject/qtum-enterprise/releases) and install it to any directory.
 
 # Sign up Sign in
