@@ -1,6 +1,6 @@
 # QtumX一键发链教程
 
-- [Download-](#Download-)
+- [download](#download)
 - [下载](#下载)
 - [somewhata](#somewhata) 
 - [Sign-up-Sign-in](#Sign-up-Sign-in)
@@ -18,7 +18,7 @@
     - [modify system parameters](#modify system parameters)
 # 下载
 # somewhata
-# Download-
+# Download
 Download the latest installation package from [Github](https://github.com/qtumproject/qtum-enterprise/releases) and install it to any directory.
 
 # Sign-up-Sign-in
