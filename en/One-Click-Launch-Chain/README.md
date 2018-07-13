@@ -3,7 +3,7 @@
 - [download](#download)
 - [下载](#下载)
 - [somewhata](#somewhata) 
-- [sign up sign in](#sign up sign in)
+- [sign-up-sign-in](#sign-up-sign-in)
 - [Build private chain](#build private chain)
     - [generate configuration](#generate configuration)
     - [start private chain](#start private chain)
@@ -21,7 +21,7 @@
 # Download
 Download the latest installation package from [Github](https://github.com/qtumproject/qtum-enterprise/releases) and install it to any directory.
 
-# Sign up Sign in
+# Sign-up-Sign-in
 1. Run qtumd or qtum-qt to start the main chain of Qtum.
 2. Open the Help - Debug window - Console of QT wallet or execute the RPC command by qtum-cli.
 3. Execute the getnewaddress command, generate a new address as an account and record it.
