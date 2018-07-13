@@ -98,5 +98,5 @@ Start 3 nodes on the seed server,and open mining by importprivkey and setpoamine
 
 # Online-governance
 ## About-DGP
-## Modify-the-list-of-miners
-## Modify-the-system-parameters
+## Modify-miners-list
+## Modify-system-parameters
