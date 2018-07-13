@@ -1,4 +1,4 @@
-# QtumX一键发链教程
+# QtumX One-Click-Launch-Chain
 
 - [download](#download)
 - [sign-up-sign-in](#sign-up-sign-in)
