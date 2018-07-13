@@ -1,10 +1,8 @@
 # QtumX一键发链教程
 
 - [download](#download)
-- [下载](#下载)
-- [somewhata](#somewhata) 
 - [sign-up-sign-in](#sign-up-sign-in)
-- [Build private chain](#build private chain)
+- [build-private-chain](#build-private-chain)
     - [generate configuration](#generate configuration)
     - [start private chain](#start private chain)
     - [connect private chain](#connect private chain)
@@ -16,8 +14,7 @@
     - [about DGP](#about dgp)
     - [Modify miners list](#Modify miners list)
     - [modify system parameters](#modify system parameters)
-# 下载
-# somewhata
+
 # Download
 Download the latest installation package from [Github](https://github.com/qtumproject/qtum-enterprise/releases) and install it to any directory.
 
@@ -32,7 +29,7 @@ Download the latest installation package from [Github](https://github.com/qtumpr
 ![image](3.jpg)
 ![image](4.jpg)
 
-# Build private chain
+# Build-private-chain
 In order to make it easier to understand, we will first introduce how to build own private chain.
 
 ## generate configuration
