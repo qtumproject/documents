@@ -10,6 +10,7 @@
 * [如何添加节点](Adding-Nodes.md)
 * [锁定、解锁 Qtum 钱包](Encrypt-and-Unlock-Qtum-Wallet/README.md)
 * [使用salvagewallet修复钱包数据](Wallet-Recovery-with-Salvagewallet.md)
+* [QTUM web钱包使用说明](Qtum-Web-Wallet-Tutorial/README.md)
 
 ## 节点部署
 
