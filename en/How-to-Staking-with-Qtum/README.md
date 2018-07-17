@@ -22,7 +22,7 @@ Either way works in the same way for staking, so you can choose either method yo
 
 ### 1. Run `qtumd`
 
-To run `qtumd`, please refer to"[How to deploy Qtum node](Guidance-of-Qtum-Deployment-and-RPC-Settings.md)".
+To run `qtumd`, please refer to"[How to deploy Qtum node](../Guidance-of-Qtum-Deployment-and-RPC-Settings.md)".
 
 Follow the guidance to run `qtumd`:
 
@@ -30,7 +30,7 @@ Follow the guidance to run `qtumd`:
 ./qtumd -daemon
 ```
 
-Staking is default on for qtumd, so no need for other options if you only want to stake. 
+Staking is default on for qtumd, so no need for other options if you only want to stake.
 
 ### 2. Send some QTUM to your wallet
 
@@ -78,7 +78,7 @@ You might get the result like this：
 
 ### 4. How to stake if the wallet is encrypted？
 
-If your wallet is not encrypted, you can skip this section. However, for security, we recommand you encrypt your wallet. ([How to encrypt?](Encrypt-and-Unlock-Qtum-Wallet/README.md))
+If your wallet is not encrypted, you can skip this section. However, for security, we recommand you encrypt your wallet. ([How to encrypt?](../Encrypt-and-Unlock-Qtum-Wallet/README.md))
 
 Qtum wallet can be encrypted with `encryptwallet`. However, staking will be stopped when it is encrypted. For example, `./qtum-cli getstakinginfo` for a encrypted wallet：
 
@@ -106,13 +106,13 @@ You can use `walletpassphrase` to unlock wallet for staking：
 ./qtum-cli walletpassphrase "<your passphrase>" 99999999 true
 ```
 
-The meaning of the arguments can be found in the documents "[How to encrypt?](Encrypt-and-Unlock-Qtum-Wallet/README.md)".
+The meaning of the arguments can be found in the documents "[How to encrypt?](../Encrypt-and-Unlock-Qtum-Wallet/README.md)".
 
 After unlocking, you can double check `getstakinginfo`, it should look the same with previous unlocked result, `staking` become true.
 
 ## Method 2: Staking with qtum-qt wallet (official PC wallet)
 
-How to use Qtum-qt tutorial? please refer to [Qtum qt wallet tutorial](Qtum-Wallet-Tutorial/README.md). Current supported platform: Mac/Linux/Windows.
+How to use Qtum-qt tutorial? please refer to [Qtum qt wallet tutorial](../Qtum-Wallet-Tutorial/README.md). Current supported platform: Mac/Linux/Windows.
 
 ### 1. Open Qtum qt wallet
 
@@ -122,7 +122,7 @@ Launch the wallet.
 
 If you already have some QTUM in your wallet, you might skip this step.
 
-If not, please send some QTUM to your wallet first. ([How to receive?](Qtum-Wallet-Tutorial/README.md)).
+If not, please send some QTUM to your wallet first. ([How to receive?](../Qtum-Wallet-Tutorial/README.md)).
 
 Note：**The coin should wait for 500 blocks before being able to stake, i.e. about 17 hours to MATURE.**. 
 
@@ -132,7 +132,7 @@ The flash sign at the bottom of wallet shows staking info :
 
 **Solid black flash means it is staking now**. For more information, you can put your mouse on the flash, e.g.:
 
-![staking info](https://s.qtum.site/uploads/898c1564fa8ea81b4383047c1f047f98.png)
+![staking info](staking.png)
 
 * `Staking`: if it is staking；
 * `Your weight is`: How many QTUM are able to used for staking, unit is QTUM;
@@ -145,17 +145,17 @@ Possible reasons for not staking：
 
 * 1.There is no coins of no mature coins (more than 500 confirmations(blocks)) -- Solution: send some QTUM to the wallet and wait for 500 blocks (about 17 hours);
 
-![No mature coins](https://s.qtum.site/uploads/ff56f4442175cfadfffe5cda9561510f.png)
+![No mature coins](not-mature.png)
 
-* 2.Wallet is locked/encrypted -- Solution: unlock the wallet for staking. ([How to unlock?](Encrypt-and-Unlock-Qtum-Wallet/README.md))
+* 2.Wallet is locked/encrypted -- Solution: unlock the wallet for staking. ([How to unlock?](../Encrypt-and-Unlock-Qtum-Wallet/README.md))
 
-![Not staking due to encryption](https://s.qtum.site/uploads/55e240b15626dcc9f9c6d3b31e5094f8.jpeg)
+![Not staking due to encryption](locked.jpg)
 
 **No flash sign means staking is disabled**
 
-* 3.Staking is disabled -- Solution: enable staking in the qtum.conf (-staking=true)([How to set qtum.conf？](Guidance-of-Qtum-Deployment-and-RPC-Settings.md))
+* 3.Staking is disabled -- Solution: enable staking in the qtum.conf (-staking=true)([How to set qtum.conf？](../Guidance-of-Qtum-Deployment-and-RPC-Settings.md))
 
-![Staking disabled](https://s.qtum.site/uploads/2626afb29dbab216326e8a6f2b9aec10.jpeg)
+![Staking disabled](staking-disabled.jpg)
 
 ## About block reward
 
@@ -182,6 +182,6 @@ For qt wallet, it is like：
 ./qtum-qt -staking=false
 ```
 
-2 Add config `staking=false` in qtum.conf;([How to set qtum.conf？](Guidance-of-Qtum-Deployment-and-RPC-Settings.md))
+2 Add config `staking=false` in qtum.conf;([How to set qtum.conf？](../Guidance-of-Qtum-Deployment-and-RPC-Settings.md))
 
-3 Encrypt wallet, since encrypted wallet will automatically stop staking.([How to unlock?](Encrypt-and-Unlock-Qtum-Wallet/README.md))
+3 Encrypt wallet, since encrypted wallet will automatically stop staking.([How to unlock?](../Encrypt-and-Unlock-Qtum-Wallet/README.md))
