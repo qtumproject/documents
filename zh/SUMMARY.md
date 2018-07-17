@@ -22,7 +22,7 @@
 
 ## Staking 教程（PoS 挖矿）
 
-+ [Qtum 量子链 Staking(PoS 挖矿) 教程](How-to-Staking-with-Qtum.md)
++ [Qtum 量子链 Staking(PoS 挖矿) 教程](How-to-Staking-with-Qtum/README.md)
 
 ## 智能合约和QRC20
 

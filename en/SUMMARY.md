@@ -32,7 +32,7 @@
 + [Repositories](qtumrepo/README.md)
 + [Stake With VPS](How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md)
 + [Stake With Raspberry Pi](Qtum-on-Raspberry-Pi/README.md)
-+ [How to Stake With Qtum](How-to-Staking-with-Qtum.md)
++ [How to Stake With Qtum](How-to-Staking-with-Qtum/README.md)
 
 ### QtumX
 
