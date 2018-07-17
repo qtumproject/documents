@@ -22,9 +22,16 @@
 
 其中`yourpassword`为用户自定义的密码。请用户务必牢记密码！
 
+比如，用户想设置的密码为`test1234`，则对应的命令为：
+
+```
+./qtum-cli encryptwallet "test1234"
+```
+
+
 锁定后所有资金安全相关操作（如发送QTUM，dump私钥等）都需要先解锁钱包才能执行。
 
-### 带用户界面钱包
+### PC版钱包
 
 菜单栏中选择`Setting-Encrypt Wallet`
 
@@ -48,7 +55,14 @@
 ./qtum-cli walletpassphrase "yourpassword" 99999
 ```
 
-其中第一个参数`yourpassword`为之前设定的密码；第二个参数为需要解锁的时间，单位是秒。
+其中第一个参数`yourpassword`为之前设定的密码；第二个可变参数为需要解锁的时间，单位是秒。
+
+例如，用户之前设定的密码为`test1234`，现在想解锁1000秒（1000秒后自动再次锁定），则对应的命令为：
+
+```
+./qtum-cli walletpassphrase "test1234" 1000
+```
+
 
 解锁后即可正常发送QTUM或进行其他资金安全相关操作。
 
@@ -60,7 +74,7 @@
 
 其中前两个参数含义不变，最后一个参数`true`表示只解锁挖矿功能，用该命令解锁后，钱包可以正常挖矿，但其他资金安全相关操作仍被禁止，只有完全解锁后才能使用。
 
-### 带用户界面钱包
+### PC版钱包
 
 选择“Settings-unlock wallet”解锁钱包：
 
@@ -84,7 +98,13 @@
 
 第一个参数`oldpassphrase`表示原来的密码，第二个参数`newpassphrase`为新密码。
 
-### 带用户界面钱包
+例如，用户原来设定的密码为`test1234`，现想重新设置为`12345678`，则对应的命令为：
+
+```
+./qtum-cli walletpassphrasechange "test1234" "12345678"
+```
+
+### PC版钱包
 
 选择“Setting-Change Passphrase”修改密码：
 
