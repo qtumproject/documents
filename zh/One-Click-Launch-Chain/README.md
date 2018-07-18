@@ -98,12 +98,16 @@ QT65fYRCwq5tctNsVNVPNnHkwajArLFjo1,QjoHqQw5DsTniaqefuzbpuBDWW3C3qimy2,QWWdLoiHnF
 # 线上治理
 ## 关于DGP
 DGP(Decentralized Governance Protocol)是Qtum中应用的一项技术。它允许使用区块链上的智能合约去在线修改区块链的参数，这样就不会造成软分叉或是硬分叉。
+
 DGP工作的方式非常直接了当。首先，由DGP的一名管理员发起提议去改变某一个系统参数。随后，所有的DGP管理员可以对这个提议进行投票。如果提议收到了足够多的赞同票，则该提议中的参数修改生效。然后，提议的内容会被存储在区块链上，方便区块链的软件去获取。
+
 很明显，DGP非常适合用来存储和更新PoA中的授权矿工列表。授权的矿工可以看做是一个公钥的列表，这个列表可以通过配置文件初始化，然后再通过DGP进行更新。但这里我们需要对DGP做一些修改从而让矿工的更新过程更加安全。
+
 由DGP更新的矿工列表需要至少延迟n/2+1个块之后真正生效。
+
 这里，n是更新前列表的长度，n/2是整数除法。这一机制保证了矿工列表的更新操作会在其成为区块链上的永久记录之后才真正生效。否则，如果更新操作可以被另一个分叉否定掉，则列表更新前的矿工很有可能在这个分叉下继续挖矿甚至产生硬分叉。
 ## 修改矿工列表
-矿工列表的DGP部署在了地址"0000000000000000000000000000000000000085"上，其源码在Github上可以找到：dgp-template.sol.js。矿工列表的存储合约 minerList-dgp.sol 如下：
+矿工列表的DGP部署在了地址"0000000000000000000000000000000000000085"上，其源码在Github上可以找到:[gp-template.sol.js](https://github.com/qtumproject/qtum-dgp/blob/master/dgp-template.sol.js)。矿工列表的存储合约 minerList-dgp.sol 如下：
 ```
 pragma solidity ^0.4.8;
 contract minerList{
@@ -133,9 +137,13 @@ function getMinerList() constant returns(address[] vals){
 
 ## 修改系统参数
 我们会尽可能地让企业版中的大多数参数都是可配置的。因此系统可以轻松应用于各种各样的环境中。部分可配置的参数如下:
+
 创世区块：block_time, coinbase;
+
 网络参数：pchMessageStart, seeds;
+
 PoA共识算法的参数：interval, timeout;
+
 区块奖励参数：initial value, nSubsidyHalvingInterval
 
 
