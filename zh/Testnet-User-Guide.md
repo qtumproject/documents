@@ -1,7 +1,7 @@
 # QTUM 区块链测试网络使用指南
 
 ## 1. 下载安装主网钱包
-请参考 [Guidance-of-Qtum-Deployment-and-RPC-settings](https://github.com/qtumproject/documents/blob/master/zh/Guidance-of-Qtum-Deployment-and-RPC-settings.md) 中“获取Qtum节点”的部分。
+请参考 [Guidance-of-Qtum-Deployment-and-RPC-settings](https://github.com/qtumproject/documents/blob/master/zh/Guidance-of-Qtum-Deployment-and-RPC-Settings.md) 中“获取Qtum节点”的部分。
 
 ## 2. 启动测试网络
 使用命令 `./qtumd --testnet` 或者 `./qtum-qt --testnet` 启动程序即可进入测试网络模式。
