@@ -12,6 +12,7 @@
 + [使用salvagewallet修复钱包数据](Wallet-Recovery-with-Salvagewallet.md)
 + [如何添加 Qtum 运行选项](How-To-Add-Options/README.md)
 + [QTUM web钱包使用说明](Qtum-Web-Wallet-Tutorial/README.md)
++ [测试网络使用教程](Testnet-User-Guide.md)
 
 
 ## 节点部署
