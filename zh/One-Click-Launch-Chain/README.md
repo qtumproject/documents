@@ -97,5 +97,49 @@ QT65fYRCwq5tctNsVNVPNnHkwajArLFjo1,QjoHqQw5DsTniaqefuzbpuBDWW3C3qimy2,QWWdLoiHnF
 
 # 线上治理
 ## 关于DGP
+DGP(Decentralized Governance Protocol)是Qtum中应用的一项技术。它允许使用区块链上的智能合约去在线修改区块链的参数，这样就不会造成软分叉或是硬分叉。
+
+DGP工作的方式非常直接了当。首先，由DGP的一名管理员发起提议去改变某一个系统参数。随后，所有的DGP管理员可以对这个提议进行投票。如果提议收到了足够多的赞同票，则该提议中的参数修改生效。然后，提议的内容会被存储在区块链上，方便区块链的软件去获取。
+
+很明显，DGP非常适合用来存储和更新PoA中的授权矿工列表。授权的矿工可以看做是一个公钥的列表，这个列表可以通过配置文件初始化，然后再通过DGP进行更新。但这里我们需要对DGP做一些修改从而让矿工的更新过程更加安全。
+
+由DGP更新的矿工列表需要至少延迟n/2+1个块之后真正生效。
+
+这里，n是更新前列表的长度，n/2是整数除法。这一机制保证了矿工列表的更新操作会在其成为区块链上的永久记录之后才真正生效。否则，如果更新操作可以被另一个分叉否定掉，则列表更新前的矿工很有可能在这个分叉下继续挖矿甚至产生硬分叉。
 ## 修改矿工列表
+矿工列表的DGP部署在了地址"0000000000000000000000000000000000000085"上，其源码在Github上可以找到:[gp-template.sol.js](https://github.com/qtumproject/qtum-dgp/blob/master/dgp-template.sol.js)。矿工列表的存储合约 minerList-dgp.sol 如下：
+```
+pragma solidity ^0.4.8;
+contract minerList{
+address[] _minerList=[ 
+	0x47210a1bacc15175bb24c3384e5d3650991a7bc4, 
+	0xfe6e43ffb52ef746a0db8cc51cb95921c34ca0a3, 
+	0x6cadd7aefdb363ae680fc234dcfe4c40919781d3 
+]; 
+function getMinerList() constant returns(address[] vals){
+	return _minerList; 
+}
+}
+```
+更新矿工的过程可以简述如下：
+1. 确定每位矿工的address，然后用gethexaddress命令得到对应的hexaddress。
+![image](10.png)
+2. 将所有矿工的hexaddress填入minerList-dgp.sol中的minerList参数中，得到新的矿工列表。
+![image](11.jpeg)
+3. 编译生成minerList-dgp.sol的二进制代码，复制二进制代码，将二进制代码填入Qtum钱包中的下图位置。
+![image](12.jpeg)
+![image](13.jpeg)
+4. 得到部署后的合约地址minerListAddress，然后调用dgp-template.sol中的setInitialAdmin()和addAddressProposal(minerListAddress, 2)函数，对新的minerListAddress进行投票。
+![image](14.jpeg)
+![image](15.jpeg)
+5. 收到足够多的投票后，新的minerListAddress通过，记入进paramsHistory参数中，延迟若干个block（当前为500）后生效,执行getpoaminerlist显示如下。
+![image](16.jpeg)
+
 ## 修改系统参数
+首先通过listcontracts命令查看目前链上有哪些合约。
+![image](17.jpeg)
+其中，80-85为DGP合约，分别用于 gas_schedule、block_size、gas_price、预留、block_gas_limit、miner_list 参数的在线管理。具体方法可以参照上节更新矿工的方法。
+
+注意：在修改参数前，务必先调用DGP合约中的setInitialAdmin()函数
+
+可以使用createcontract命令创建新的合约，callcontract去调用合约中的函数查看返回结果，sendtocontract去向合约发送token和数据。更多合约操作请查看：[Qtum智能合约使用方法及说明](http://docs.qtum.site/zh/Qtum-Contract-Usage.html)。
