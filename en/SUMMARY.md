@@ -13,6 +13,7 @@
 + [Encrypt and Unlock Qtum Wallet](Encrypt-and-Unlock-Qtum-Wallet/README.md)
 + [Wallet Recovery With Salvagewallet](Wallet-Recovery-with-Salvagewallet.md)
 + [Qtum Exchange Usage Guide](Qtum-Exchange-Usage-Guide-and-Info.md)
++ [Testnet User Guide](Testnet-User-Guide.md)
 
 
 ### Deploy Qtum
