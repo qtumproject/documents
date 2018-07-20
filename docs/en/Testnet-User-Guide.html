@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>How to Build Qtum on CentOS · Qtum Documentation</title>
+        <title>Testnet User Guide · Qtum Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="QRC20-Token-Introduce.html" />
+    <link rel="next" href="Guidance-of-Qtum-Deployment-and-RPC-Settings.html" />
     
     
-    <link rel="prev" href="Launch-Qtum-with-Docker.html" />
+    <link rel="prev" href="Qtum-Exchange-Usage-Guide-and-Info.html" />
     
 
     </head>
@@ -240,7 +240,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.9" data-path="Testnet-User-Guide.html">
+        <li class="chapter active" data-level="2.9" data-path="Testnet-User-Guide.html">
             
                 <a href="Testnet-User-Guide.html">
             
@@ -286,7 +286,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3" data-path="Build-Qtum-on-CentOS.html">
+        <li class="chapter " data-level="3.3" data-path="Build-Qtum-on-CentOS.html">
             
                 <a href="Build-Qtum-on-CentOS.html">
             
@@ -454,7 +454,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >How to Build Qtum on CentOS</a>
+        <a href="." >Testnet User Guide</a>
     </h1>
 </div>
 
@@ -469,49 +469,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="build-qtum-on-centos-7"><a name="build-qtum-on-centos-7" class="plugin-anchor" href="#build-qtum-on-centos-7"><i class="fa fa-link" aria-hidden="true"></i></a>Build Qtum on CentOS 7</h1>
-<p>It is quite a pain to build Qtum on CentOS because CentOS provides quite old versions of the <code>boost</code> library. Actually We need to build the <code>boost</code> library manually.</p>
-<h2 id="general-prerequisites"><a name="general-prerequisites" class="plugin-anchor" href="#general-prerequisites"><i class="fa fa-link" aria-hidden="true"></i></a>General Prerequisites</h2>
-<p>Add <code>epel-release</code> repo and install some utils:</p>
-<pre><code class="lang-bash">sudo yum install epel-release gcc-c++ git
-</code></pre>
-<h2 id="building-boost"><a name="building-boost" class="plugin-anchor" href="#building-boost"><i class="fa fa-link" aria-hidden="true"></i></a>Building Boost</h2>
-<p>We need <code>boost &gt;= 1.58.0</code> for Qtum but CentOS 7 only provides <code>boost &lt;= 1.53.0</code>, one way is to build it manually.</p>
-<p>First we install some dependencies:</p>
-<pre><code class="lang-bash">sudo yum install python-devel bzip2-devel
-</code></pre>
-<p>Then we clone the boost library from GitHub:</p>
-<pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> https://github.com/boostorg/boost.git
-<span class="hljs-built_in">cd</span> boost
-</code></pre>
-<p>Checking out a release version and init submodules:</p>
-<pre><code class="lang-bash">git checkout boost-1.58.0
-git submodule update --init --recursive
-</code></pre>
-<p>Building boost:<br>You may set the <code>--prefix</code> and <code>--libdir</code> to anywhere you like or leave it by default, but then you have to add the <em>libdir</em> into <code>LD_LIBRARY_PATH</code> env when building and running Qtum, which is annoying somehow.</p>
-<pre><code class="lang-bash"><span class="hljs-comment"># omit the --libdir option for 32-bit systems</span>
-./bootstrap.sh --prefix=/usr --libdir=/usr/lib64
-./b2 headers
-<span class="hljs-comment"># you may set -j&lt;N&gt; where N is the core number or thread number of your CPU.</span>
-sudo ./b2 -j4 install
-</code></pre>
-<h2 id="building-qtum"><a name="building-qtum" class="plugin-anchor" href="#building-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Building Qtum</h2>
-<p>Install dependencies:</p>
-<pre><code class="lang-bash">sudo yum install libtool libdb4-cxx-devel openssl-devel libevent-devel
-</code></pre>
-<p>If you need to build the <code>qtum-qt</code> GUI, install these:</p>
-<pre><code class="lang-bash">sudo yum install qt5-qttools-devel protobuf-devel qrencode-devel
-</code></pre>
-<p>Cloning the project and init submodules:</p>
-<pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> https://github.com/qtumproject/qtum.git
-<span class="hljs-built_in">cd</span> qtum
-git submodule update --init --recursive
-</code></pre>
-<p>Configuring and building:<br>If you have installed boost to any location other than <code>/</code>, <code>/usr</code>, <code>/usr/local</code>, you need to indicate the location with <code>--with-boost=/path/to/your/boost</code>, and add <code>/path/to/your/boost/lib</code> into <code>LD_LIBRARY_PATH</code> env</p>
-<pre><code class="lang-bash">./autogen.sh
-./configure
-make -j4
-</code></pre>
+                                <h1 id="qtum-testnet-user-guide"><a name="qtum-testnet-user-guide" class="plugin-anchor" href="#qtum-testnet-user-guide"><i class="fa fa-link" aria-hidden="true"></i></a>QTUM Testnet User Guide</h1>
+<h2 id="1-download-and-install-the-wallet"><a name="1-download-and-install-the-wallet" class="plugin-anchor" href="#1-download-and-install-the-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>1. Download and install the wallet</h2>
+<p>please refer to <a href="Guidance-of-Qtum-Deployment-and-RPC-Settings.html"> Qtum Deployment and RPC settings</a>.</p>
+<h2 id="2-launch-the-testnet"><a name="2-launch-the-testnet" class="plugin-anchor" href="#2-launch-the-testnet"><i class="fa fa-link" aria-hidden="true"></i></a>2. launch the testnet</h2>
+<p>use command <code>./qtumd --testnet</code> or <code>./qtum-qt --testnet</code>.</p>
+<h2 id="3-obtain-testnet-coin"><a name="3-obtain-testnet-coin" class="plugin-anchor" href="#3-obtain-testnet-coin"><i class="fa fa-link" aria-hidden="true"></i></a>3. obtain testnet coin</h2>
+<p>go to <a href="http://testnet-faucet.qtum.info/#!/" target="_blank">testnet-faucet</a> and input your receive address.</p>
+<h2 id="4-testnet-block-explorer"><a name="4-testnet-block-explorer" class="plugin-anchor" href="#4-testnet-block-explorer"><i class="fa fa-link" aria-hidden="true"></i></a>4. testnet block explorer</h2>
+<p><a href="https://testnet.qtum.org/" target="_blank">https://testnet.qtum.org/</a><br><a href="https://testnet.qtum.info/" target="_blank">https://testnet.qtum.info/</a></p>
+<h2 id="5-regtest"><a name="5-regtest" class="plugin-anchor" href="#5-regtest"><i class="fa fa-link" aria-hidden="true"></i></a>5. regtest</h2>
+<p>use command <code>./qtumd --regtest</code> or <code>./qtum-qt --regtest</code> to enter regtest mode.</p>
+<p>use command <code>./qtum-cli --regtest generate [num]</code> to generate new blcoks.</p>
 
                                 
                                 </section>
@@ -539,12 +508,12 @@ make -j4
 
             
                 
-                <a href="Launch-Qtum-with-Docker.html" class="navigation navigation-prev " aria-label="Previous page: Launch Qtum With Docker">
+                <a href="Qtum-Exchange-Usage-Guide-and-Info.html" class="navigation navigation-prev " aria-label="Previous page: Qtum Exchange Usage Guide">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="QRC20-Token-Introduce.html" class="navigation navigation-next " aria-label="Next page: QRC20 Token Introduction">
+                <a href="Guidance-of-Qtum-Deployment-and-RPC-Settings.html" class="navigation navigation-next " aria-label="Next page: Guidance of Qtum Deployment and RPC Settings">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -555,7 +524,7 @@ make -j4
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to Build Qtum on CentOS","level":"3.3","depth":1,"next":{"title":"QRC20 Token Introduction","level":"4.1","depth":1,"path":"QRC20-Token-Introduce.md","ref":"QRC20-Token-Introduce.md","articles":[]},"previous":{"title":"Launch Qtum With Docker","level":"3.2","depth":1,"path":"Launch-Qtum-with-Docker.md","ref":"Launch-Qtum-with-Docker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Build-Qtum-on-CentOS.md","mtime":"2018-07-17T04:53:01.719Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-20T03:01:03.229Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Testnet User Guide","level":"2.9","depth":1,"next":{"title":"Guidance of Qtum Deployment and RPC Settings","level":"3.1","depth":1,"path":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","ref":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","articles":[]},"previous":{"title":"Qtum Exchange Usage Guide","level":"2.8","depth":1,"path":"Qtum-Exchange-Usage-Guide-and-Info.md","ref":"Qtum-Exchange-Usage-Guide-and-Info.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Testnet-User-Guide.md","mtime":"2018-07-20T02:58:38.898Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-20T03:01:03.229Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>
