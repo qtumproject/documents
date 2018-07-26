@@ -32,17 +32,17 @@
 
 默认的找零地址是随机生成的新地址，可以通过偏好设置来管理找零地址。在偏好设置->钱包界面，勾选 "Don't use change address" 将使用发送地址作为找零地址，勾选“启用货币控制功能“可以在发送时指定找零地址。
 
-![change address](change address.png)
+![change address](change-address.png)
 
 ### 接收 (Receive)
 
 在这里可以生成 Qtum 接收地址，并看到过往的接收地址。
 
-![Receive](receive 1.png)
+![Receive](receive-1.png)
 
 点击“请求付款”可以生成一个新的 Qtum 地址，同时也可以指定金额和备注。下图示例中填写了10个 Qtum 作为付款金额。
 
-![Receive](receive 2.png)
+![Receive](receive-2.png)
 
 
 ### 智能合约 (Smart Contract)
@@ -72,7 +72,7 @@
 **Token Address**: 用于接收代币的 Qtum 地址，通过下拉选择一个地址。
 填写完以上信息之后，点击 "Confirm" 即可添加一个QRC代币到你的钱包。同一个代币绑定同一个 Qtum 地址只能添加一次。
 
-![add token](add token.png)
+![add token](add-token.png)
 
 #### 发送代币
 在左侧选择一个代币，点击 "Send" 进 入发送界面，与发送Qtum有些相似。
@@ -83,28 +83,28 @@
 **GasPrice**: 默认即可。
 填写完以上信息之后，点击 “Confirm" 即可发送QRC代币到指定地址。
 
-![send token](send token.png)
+![send token](send-token.png)
 
 #### 接收代币
 接收代币十分简单，选择一个代币，点击 "Receive" 右侧即出现接收地址，也可以右键点击，选择 "Copy receive address" 。
 
-![receive token](receive token.png)
+![receive token](receive-token.png)
 
 #### 开启 "log events"
 在偏好设置->主要界面，勾选 "Enable log events" ，点击确认后钱包会重启并开启 "log events" ，此时即可查看 QRC 代币交易记录。
 
-![enable log events](enable log events.png)
+![enable log events](enable-log-events.png)
 
 
 ### 加密钱包
 
 首先，在备份钱包之前加密你的钱包将使得你的备份也被加密。点击 "Settings -> Encrypt Wallet" 。
 
-![encrypt wallet](encrypt 1.png)
+![encrypt wallet](encrypt-1.png)
 
 然后，然输入密码，**请务必保管好这个密码，否则你会丢掉你的Qtum**。
 
-![encrypt wallet](encrypt 2.png)
+![encrypt wallet](encrypt-2.png)
 
 输入完两个密码并确认之后，钱包会自动重启，并变成加密模式。
 
@@ -115,11 +115,11 @@
 
 点击 "File -> Backup Wallet" 以备份钱包。
 
-![backup wallet](backup 1.png)
+![backup wallet](backup-1.png)
 
 输入备份的文件名，选择好保存位置后点击保存，即可备份钱包。
 
-![backup wallet](backup 2.png)
+![backup wallet](backup-2.png)
 
 
 ### 从备份中恢复钱包
@@ -131,9 +131,9 @@
 
 点击 "File ->  Restore Wallet" ，在弹出的对话框里选择要恢复的钱包备份文件。
 
-![restore](restore 1.png)
+![restore](restore-1.png)
 
-![restore](restore 2.png)
+![restore](restore-2.png)
 
 通常情况下选择```reindex```选项即可，除非你遇到特殊的情况。
 
