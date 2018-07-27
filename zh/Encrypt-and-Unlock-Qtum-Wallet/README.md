@@ -3,7 +3,7 @@
 如果您未运行Qtum节点，请先参考如下教程安装Qtum钱包：
 
 * 命令行用户参考：《[如何部署 Qtum 量子链节点](../Guidance-of-Qtum-Deployment-and-RPC-Settings.md)》
-* 图形界面钱包请从这里下载：[https://eco.qtum.org/wallet](https://eco.qtum.org/wallet)，其使用方法请参考《[Qtum PC 端钱包使用教程](../Qtum-Wallet-Tutorial.md)
+* 图形界面钱包请从这里下载：[https://eco.qtum.org/wallet](https://eco.qtum.org/wallet)，其使用方法请参考《[Qtum PC 端钱包使用教程](../Qtum-Wallet-Tutorial/README.md)
 》
 
 **加密钱包或更改密码后，请务必重新备份您的钱包！**

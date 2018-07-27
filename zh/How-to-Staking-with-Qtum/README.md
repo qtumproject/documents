@@ -114,7 +114,7 @@ Staking功能在钱包未加密时将默认开启，无需其他设置。
 
 ## 方式二：用PC版Qtum-qt钱包Staking
 
-Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](../Qtum-Wallet-Tutorial.md)。目前支持的Mac/Linux/Windows，用户可以自行下载安装。
+Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](../Qtum-Wallet-Tutorial/README.md)。目前支持的Mac/Linux/Windows，用户可以自行下载安装。
 
 ### 1. 打开Qtum qt钱包
 
@@ -124,7 +124,7 @@ Qtum-qt钱包的基本使用方法请参考[qt钱包教程(点击打开)](../Qtu
 
 如果钱包中已有QTUM可跳过此步骤。
 
-若钱包中无QTUM，则向钱包地址中转入一定数量的QTUM，方法请参考[qt钱包教程(点击打开)](../Qtum-Wallet-Tutorial.md)。
+若钱包中无QTUM，则向钱包地址中转入一定数量的QTUM，方法请参考[qt钱包教程(点击打开)](../Qtum-Wallet-Tutorial/README.md)。
 
 注意，新转入的QTUM需要等待500个区块（约17小时）的成熟时间，才可进行Staking。因此，建议用户等待500个区块后再进行以下步骤。
 

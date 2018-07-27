@@ -363,33 +363,49 @@ ABI
 ![qrc token](qrc.png)
 
 #### 添加代币
+
 点击 "Add Token" 可以添加一个新的 QRC 代币。
+
 **Contract Address**: 代币合约地址。
+
 **Token Name**: 代币名称，填写完合约地址后回自动识别出来。
+
 **Token Symbol**:  代币符号，填写完合约地址后回自动识别出来。
+
 **Decimals**: 小数位，填写完合约地址后回自动识别出来。
+
 **Token Address**: 用于接收代币的 Qtum 地址，通过下拉选择一个地址。
+
 填写完以上信息之后，点击 "Confirm" 即可添加一个QRC代币到你的钱包。同一个代币绑定同一个 Qtum 地址只能添加一次。
 
 ![add token](add-token.png)
 
 #### 发送代币
+
 在左侧选择一个代币，点击 "Send" 进 入发送界面，与发送Qtum有些相似。
+
 **PayTo**: 代币接收地址。
+
 **Amount**: 代币数量，最大值为当前余额，注意少数代币最大发送数额必须小于当前余额，如INK。
+
 **Description**:  本次交易备注，可选项。
+
 **GasLimit**: 默认即可。
+
 **GasPrice**: 默认即可。
+
 填写完以上信息之后，点击 “Confirm" 即可发送QRC代币到指定地址。
 
 ![send token](send-token.png)
 
 #### 接收代币
+
 接收代币十分简单，选择一个代币，点击 "Receive" 右侧即出现接收地址，也可以右键点击，选择 "Copy receive address" 。
 
 ![receive token](receive-token.png)
 
 #### 开启 "log events"
+
 在偏好设置->主要界面，勾选 "Enable log events" ，点击确认后钱包会重启并开启 "log events" ，此时即可查看 QRC 代币交易记录。
 
 ![enable log events](enable-log-events.png)
