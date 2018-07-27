@@ -4,7 +4,7 @@
 
 ## 钱包使用
 
-+ [Qtum PC 端钱包使用教程](Qtum-Wallet-Tutorial.md)
++ [Qtum PC 端钱包使用教程](Qtum-Wallet-Tutorial/README.md)
 + [Qtum Electrum 轻钱包使用说明](Qtum-Electrum-User-Guide.md)
 + [Qtum 手机钱包教程](Qtum-Mobile-Wallet-Tutorial.md)
 + [如何添加节点](Adding-Nodes.md)
