@@ -1,6 +1,7 @@
 {
   "title": "Qtum Documentation",
   "plugins": [
+    "-lunr",
     "language-picker",
     "anchors"
   ]
