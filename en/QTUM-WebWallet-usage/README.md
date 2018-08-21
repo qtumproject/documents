@@ -5,16 +5,22 @@ https://qtumwallet.org
 
 There is no other URL being used for the web wallet, please be safe and verify the green padlock with "Secure" in the URL field which validates the site:
 
-![0. Secure Site](https://github.com/JB395/QtumMon/blob/master/Images/0.%20Secure%20EN.jpg)
+
+
+![0. Secure EN](Web Wallet Photos/0. Secure EN.jpg)
+
+
+
+
 
 Welcome to the Qtum web wallet user documentation which will show 
 
-* [Introduction to the Web Wallet](https://github.com/JB395/QtumMon/wiki#introduction-to-the-web-wallet)
-* [How to generate a new wallet or restore addresses from other wallets](https://github.com/JB395/QtumMon/wiki#generate-new-wallet---restore-wallet)
-* [How to receive and send QTUM coins](https://github.com/JB395/QtumMon/wiki#receive-and-send-qtum-coins)
-* [How to receive and send QRC20 tokens](https://github.com/JB395/QtumMon/wiki#send-and-receive-qrc20-tokens)
-* [How to add a new QRC20 token to the wallet](https://github.com/JB395/QtumMon/wiki#adding-a-qrc20-token)
-* [How to publish smart contracts](https://github.com/JB395/QtumMon/wiki#how-to-publish-smart-contracts) (future)
+* [Introduction to the Web Wallet](#introduction-to-the-web-wallet)
+* [How to generate a new wallet or restore addresses from other wallets](#generate-new-wallet---restore-wallet)
+* [How to receive and send QTUM coins](#receive-and-send-qtum-coins)
+* [How to receive and send QRC20 tokens](#send-and-receive-qrc20-tokens)
+* [How to add a new QRC20 token to the wallet](#adding-a-qrc20-token)
+* [How to publish smart contracts](#how-to-publish-smart-contracts) (future)
 
 ***
 
@@ -44,13 +50,13 @@ The menu option **` Settings `** will allow selection of language and setting th
 
 There are 7 ways to generate or restore a wallet.
 
-1. [Generate new Wallet](https://github.com/JB395/QtumMon/wiki#1-generate-new-wallet) – creates a new address and downloads a Key File
-2. [Create from Mnemonic](https://github.com/JB395/QtumMon/wiki#2-create-from-mnemonic) – creates 12 seed words and a new address
-3. [Restore from Mnemonic](https://github.com/JB395/QtumMon/wiki#3-restore-from-mnemonic) – restores an address using 12 seed words from a desktop wallet
-4. [Restore from WIF](https://github.com/JB395/QtumMon/wiki#4-restore-from-wif) – restores an address from a private key
-5. [Restore from Mobile Wallet](https://github.com/JB395/QtumMon/wiki#5-restore-from-mobile-wallet) – restores an address from 12 seed words from a compatible mobile wallet
-6. [Restore from Key File](https://github.com/JB395/QtumMon/wiki#6-restore-from-key-file) – restores an address from a Key File created by the web wallet
-7. [Restore from Ledger](https://github.com/JB395/QtumMon/wiki#7-restore-from-ledger) – uses a Ledger hardware wallet to sign and verify transactions
+1. [Generate new Wallet](#1-generate-new-wallet) – creates a new address and downloads a Key File
+2. [Create from Mnemonic](#2-create-from-mnemonic) – creates 12 seed words and a new address
+3. [Restore from Mnemonic](#3-restore-from-mnemonic) – restores an address using 12 seed words from a desktop wallet
+4. [Restore from WIF](#4-restore-from-wif) – restores an address from a private key
+5. [Restore from Mobile Wallet](#5-restore-from-mobile-wallet) – restores an address from 12 seed words from a compatible mobile wallet
+6. [Restore from Key File](#6-restore-from-key-file) – restores an address from a Key File created by the web wallet
+7. [Restore from Ledger](#7-restore-from-ledger) – uses a Ledger hardware wallet to sign and verify transactions
 
 ![2. Generate New Wallet](https://i.imgur.com/5LdWl0r.jpg)
 
@@ -214,7 +220,7 @@ The web wallet will has built-in capability for popular QRC20 tokens, and you ca
 ![26. Copy Address Hash EN](https://i.imgur.com/fW00puB.jpg)
 
 On the web wallet select the menu option **` Send `**, click the drop down next to "QTUM", scroll to the bottom of the Coin/Token list and click the **` More... `** button:
- 
+
 ![27. Add QRC20 Token EN](https://i.imgur.com/PSCBSjP.jpg)
 
 Paste the Address Hash copied from the Explorer into the _Token Contract Address_ field and click the blue **` SEARCH `** button:
