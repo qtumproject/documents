@@ -76,7 +76,7 @@ Notice that we've added some settings for firewall, these will enable IPFW and b
 
 **(Change zroot for whatever name you chose for your zfs pool)**  
 
-`zfs create -o mountpoint=/jail/nextcloud  zroot/jail/qtum`
+`zfs create -o mountpoint=/jail/qtum  zroot/jail/qtum`
 
 ![createqtumjail.png](createqtumjail.png)
 

@@ -50,13 +50,13 @@ The menu option **` Settings `** will allow selection of language and setting th
 
 There are 7 ways to generate or restore a wallet.
 
-1. [Generate new Wallet](#1-generate-new-wallet) – creates a new address and downloads a Key File
-2. [Create from Mnemonic](#2-create-from-mnemonic) – creates 12 seed words and a new address
-3. [Restore from Mnemonic](#3-restore-from-mnemonic) – restores an address using 12 seed words from a desktop wallet
-4. [Restore from WIF](#4-restore-from-wif) – restores an address from a private key
-5. [Restore from Mobile Wallet](#5-restore-from-mobile-wallet) – restores an address from 12 seed words from a compatible mobile wallet
-6. [Restore from Key File](#6-restore-from-key-file) – restores an address from a Key File created by the web wallet
-7. [Restore from Ledger](#7-restore-from-ledger) – uses a Ledger hardware wallet to sign and verify transactions
+1. [Generate new Wallet](#1-generate-new-wallet)  creates a new address and downloads a Key File
+2. [Create from Mnemonic](#2-create-from-mnemonic)  creates 12 seed words and a new address
+3. [Restore from Mnemonic](#3-restore-from-mnemonic)  restores an address using 12 seed words from a desktop wallet
+4. [Restore from WIF](#4-restore-from-wif)  restores an address from a private key
+5. [Restore from Mobile Wallet](#5-restore-from-mobile-wallet) restores an address from 12 seed words from a compatible mobile wallet
+6. [Restore from Key File](#6-restore-from-key-file) restores an address from a Key File created by the web wallet
+7. [Restore from Ledger](#7-restore-from-ledger) uses a Ledger hardware wallet to sign and verify transactions
 
 ![2. Generate New Wallet](https://i.imgur.com/5LdWl0r.jpg)
 
