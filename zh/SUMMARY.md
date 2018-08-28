@@ -44,3 +44,4 @@
 + [QtumX使用教程（内测）](QtumX-Tutorial.md)
 + [QtumX一键发链教程（公测）](One-Click-Launch-Chain/README.md)
 + [基于QtumX搭建自己的Dapp](QtumX-Smart-Contract/README.md)
++ [SCAR：一种可伸缩共识算法](SCAR-Consensus/README.md)
