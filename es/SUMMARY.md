@@ -16,6 +16,6 @@
 
 + [Staking con Raspberry Pi](Qtum en Raspberry Pi/README.md)
 
-  
++ [Staking con FreeBSD](freebsd/README.md)  
 
 
