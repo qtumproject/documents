@@ -490,6 +490,7 @@
 <h3 id="freebsd-version-used-for-this-tutorial-is-112-download-it-from-the-official-freebsd-mirrors"><a name="freebsd-version-used-for-this-tutorial-is-112-download-it-from-the-official-freebsd-mirrors" class="plugin-anchor" href="#freebsd-version-used-for-this-tutorial-is-112-download-it-from-the-official-freebsd-mirrors"><i class="fa fa-link" aria-hidden="true"></i></a>FreeBSD version used for this tutorial is 11.2, download it from the official FreeBSD mirrors:</h3>
 <p><a href="https://www.freebsd.org/doc/handbook/eresources-web.html" target="_blank">https://www.freebsd.org/doc/handbook/eresources-web.html</a></p>
 <h3 id="installing-freebsd"><a name="installing-freebsd" class="plugin-anchor" href="#installing-freebsd"><i class="fa fa-link" aria-hidden="true"></i></a>Installing FreeBSD</h3>
+<p><strong>Important</strong>: Make sure to install and enable NTP, it&apos;s necesary to stay synchronized to network clocks.</p>
 <p>Install FreeBSD as normal, however, the following hardening settings are recommended during install:</p>
 <p><img src="hardening.png" alt="hardening.png"></p>
 <h3 id="create-user"><a name="create-user" class="plugin-anchor" href="#create-user"><i class="fa fa-link" aria-hidden="true"></i></a>Create user</h3>
@@ -529,24 +530,24 @@
 <p>Typing ls /jail/qtum/ should show the filesystem of our Qtum FreeBSD Jail</p>
 <p>Now, let&apos;s create the jail configuration file:</p>
 <h3 id="etcjailconf"><a name="etcjailconf" class="plugin-anchor" href="#etcjailconf"><i class="fa fa-link" aria-hidden="true"></i></a>/etc/jail.conf</h3>
-<p><code>qtum {</code>
-<code>host.hostname = qtum.local;</code>
-<code>ip4.addr = 192.168.0.99;</code>
-<code>interface = em0;</code>
-<code>path = /jail/qtum;</code>
-<code>exec.start = &quot;/bin/sh /etc/rc&quot;;</code>
-<code>exec.stop = &quot;/bin/sh /etc/rc.shutdown&quot;;</code>
-<code>exec.clean;</code>
-<code>mount.devfs;</code>
-<code>allow.raw_sockets;</code>
-<code>allow.sysvipc;</code>
-<code>}</code></p>
+<p><code>qtum {</code></p>
+<p><code>host.hostname = qtum.local;</code></p>
+<p><code>ip4.addr = 192.168.0.99;</code></p>
+<p><code>interface = em0;</code></p>
+<p><code>path = /jail/qtum;</code></p>
+<p><code>exec.start = &quot;/bin/sh /etc/rc&quot;;</code></p>
+<p><code>exec.stop = &quot;/bin/sh /etc/rc.shutdown&quot;;</code></p>
+<p><code>exec.clean;</code></p>
+<p><code>mount.devfs;</code></p>
+<p><code>allow.raw_sockets;</code></p>
+<p><code>allow.sysvipc;</code></p>
+<p><code>}</code></p>
 <p><img src="jailconfig.png" alt="jailconfig.png"></p>
 <p>Ok now it&apos;s time to launch our jail!</p>
 <p><code>service jail start qtum</code></p>
 <h4 id="weve-just-started-our-qtum-jail-we-can-now-get-into-our-qtum-jail-to-finish-configuration-install-qtum-and-launch-the-wallet"><a name="weve-just-started-our-qtum-jail-we-can-now-get-into-our-qtum-jail-to-finish-configuration-install-qtum-and-launch-the-wallet" class="plugin-anchor" href="#weve-just-started-our-qtum-jail-we-can-now-get-into-our-qtum-jail-to-finish-configuration-install-qtum-and-launch-the-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>We&apos;ve just started our Qtum jail, We can now get into our Qtum jail to finish configuration, install Qtum and launch the wallet.</h4>
 <p><code>jexec qtum /bin/csh</code></p>
-<p><code>cp /usr/share/zoneinfo/America/YOURTIMEZONE/ /etc/localtime</code>
+<p><code>cp /usr/share/zoneinfo/YOURTIMEZONE/ /etc/localtime</code>
 This is very important, if the time info is incorrect, we&apos;ll produce orphan blocks or will be unable to sync</p>
 <p>Create our basic /etc/rc.conf for our Qtum Jail</p>
 <h2 id="qtum-jail"><a name="qtum-jail" class="plugin-anchor" href="#qtum-jail"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum Jail:</h2>
@@ -640,7 +641,7 @@ If you want to use default settings just type <code>cd /usr/ports/net-p2p/qtum &
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to Stake on FreeBSD","level":"5.5","depth":1,"next":{"title":"QtumX Technical White Paper","level":"6.1","depth":1,"path":"Technical-White-Paper-for-QtumX/README.md","ref":"Technical-White-Paper-for-QtumX/README.md","articles":[]},"previous":{"title":"How to Stake With Qtum","level":"5.4","depth":1,"path":"How-to-Staking-with-Qtum/README.md","ref":"How-to-Staking-with-Qtum/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"freebsd/README.md","mtime":"2018-08-29T05:08:18.689Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-29T05:10:16.906Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"How to Stake on FreeBSD","level":"5.5","depth":1,"next":{"title":"QtumX Technical White Paper","level":"6.1","depth":1,"path":"Technical-White-Paper-for-QtumX/README.md","ref":"Technical-White-Paper-for-QtumX/README.md","articles":[]},"previous":{"title":"How to Stake With Qtum","level":"5.4","depth":1,"path":"How-to-Staking-with-Qtum/README.md","ref":"How-to-Staking-with-Qtum/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"freebsd/README.md","mtime":"2018-08-31T02:05:34.291Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-31T02:09:23.351Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

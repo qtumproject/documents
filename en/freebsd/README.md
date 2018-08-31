@@ -16,6 +16,8 @@ https://www.freebsd.org/doc/handbook/eresources-web.html
 
 ### Installing FreeBSD
 
+**Important**: Make sure to install and enable NTP, it's necesary to stay synchronized to network clocks.
+
 Install FreeBSD as normal, however, the following hardening settings are recommended during install:
 
 ![hardening.png](hardening.png)
@@ -54,7 +56,7 @@ Please remember to do all these commands as root
 
 `firewall_logdeny="YES"`
 
-` jail_enable="YES"`
+`jail_enable="YES"`
 
 ![rcconf.png](rcconf.png)
 
@@ -95,16 +97,27 @@ Now, let's create the jail configuration file:
 ### /etc/jail.conf
 
 `qtum {`
+
 `  host.hostname = qtum.local;`
+
 `  ip4.addr = 192.168.0.99;`
+
 `  interface = em0;`
+
 `  path = /jail/qtum;`
+
 `  exec.start = "/bin/sh /etc/rc";`
+
 `  exec.stop = "/bin/sh /etc/rc.shutdown";`
+
 `  exec.clean;`
+
 `  mount.devfs;`
+
 `  allow.raw_sockets;`
+
 `  allow.sysvipc;`
+
 `}`
 
 ![jailconfig.png](jailconfig.png)
@@ -117,7 +130,7 @@ Ok now it's time to launch our jail!
 
 ` jexec qtum /bin/csh`
 
-` cp /usr/share/zoneinfo/America/YOURTIMEZONE/ /etc/localtime  `
+` cp /usr/share/zoneinfo/YOURTIMEZONE/ /etc/localtime  `
 This is very important, if the time info is incorrect, we'll produce orphan blocks or will be unable to sync
 
 Create our basic /etc/rc.conf for our Qtum Jail
