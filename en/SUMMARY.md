@@ -40,6 +40,6 @@
 
 + [QtumX Technical White Paper](Technical-White-Paper-for-QtumX/README.md)
 + [QtumX One-Click-Launch-Chain](One-Click-Launch-Chain/README.md)
-
++ [QtumX SCAR](SCAR-Consensus/README.md)
 
 
