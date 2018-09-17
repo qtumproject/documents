@@ -1,7 +1,5 @@
 # SCAR：Scalable Consensus Algorithm
 
-[点击获取pdf版](https://cloud2.qtum.org/s/8rwT2NQWF3j3MQE)
-
 # Background
 
 In order to reduce the fork attack and ensure the reliability of the blockchain network, the block intervals of some well-kown blockchain consensus algorithms, like PoS and PoW, are more than 10 seconds. For example: the  block time interval of Ethereum is 15 seconds, the Qtum is 144 seconds and the Bitcoin is 10 minutes. Howerver, the longer the block interval is, the longer the user will be waiting for the transaction confirmation. It is not good for real-time payment and some other applications.
