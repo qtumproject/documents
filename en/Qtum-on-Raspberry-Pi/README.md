@@ -89,7 +89,7 @@ To do this, type the following on the command line:
 
 This will encrypt the wallet which in turn closes the daemon, you'll see the following message:
 
-`wallet encrypted; Qtum server stopping, restart to run with encrypted wallet.` If you alreadby backed up before encrypting, you ** need to make a new backup. **
+`wallet encrypted; Qtum server stopping, restart to run with encrypted wallet.` If you alreadby backed up before encrypting, you **need to make a new backup.**
 
 `qtum-cli getaccountaddress` "" -> Right after launching the daemon, you can obtain your wallet address by typing this.
 
@@ -123,10 +123,50 @@ Staking really depends on network weight vs your wallet’s weight which is base
 
 If you have a large amount of coins, it’s a good idea to split those up in separate transactions, for instance, if you have 10.000 QTUM, it’s better to send 10 transactions of 1000 QTUM each to your wallet, each one generates a UTXO input which will take part in staking. This optimizes the staking process and works much better than just one large 10.000 QTUM input.
 
-If you want to split your coins into different addresses inside your VPS wallet, type the following to obtain new addresses inside your wallet: qtum-cli getnewaddress Each time you type this, you’ll get a new address, QTUM can generate any amount of addresses you want, but please keep in mind, if you do go over 100 new address, you might want to make a new backup of your wallet.
+If you want to split your coins into different addresses inside your Rasbperry Pi wallet, type the following to obtain new addresses inside your wallet: qtum-cli getnewaddress Each time you type this, you’ll get a new address, QTUM can generate any amount of addresses you want, but please keep in mind, if you do go over 100 new address, you might want to make a new backup of your wallet.
 
 
 ## Updating wallet
 
 We’re always launching new updates, sometimes it’s to add new features or fix bugs. In any case, updating is a breeze, all you have to do is type
 ` sudo apt update && sudo apt install —only-upgrade qtum `
+
+
+
+## How to backup to a separate device
+
+Making a backup in Raspberry is simple, you only need to copy the wallet.dat file, but how do you export this to another device? 
+
+First, we'll download Filezilla, which is an easy to use and secure FTP/SFTP server
+
+[https://filezilla-project.org](https://filezilla-project.org/)
+
+![img](https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla1.png)
+
+Installing is just like any other windows app.
+
+![img](https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla2.png)
+
+When the installer finishes, we launch Filezilla and are greeted with this screen, let's proceed and add our previously created ssh-key
+
+We go into Edit -> Settings -> SFTP. This will give us the following screen in which we will be able to import our SSH key.
+
+![img](https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla3.png)
+
+Please note that Filezilla only accepts the private key which is created when the ssh-key was generated.
+
+![img](https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla4.png)Here we've already added the ssh key, now we can log into our server
+
+![img](https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla5.png)
+
+we enter our Raspberry Pi ip address + username (root in this case), leave a blank password because we're using ssh-key to login ![img](https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla6.png)
+
+Just press ok when prompted, and you'll be able to log in. ![img](https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla8.png)
+
+![img](https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla9.png)
+
+Here we can see the /root/ folder of our Raspberry Pi, this is where our wallet runs and has the wallet stored in /root/.qtum we can go ahead and double click the folder which will show us the following: ![img](https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla10.png)
+
+Now all we need to do is scroll down to wallet.dat, right click and select download from the list. This will download the wallet.dat file to our computer, we've successfully backed up our Qtum wallet!.
+
+ 
