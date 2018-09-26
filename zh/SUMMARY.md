@@ -46,3 +46,4 @@
 + [基于QtumX搭建自己的Dapp](QtumX-Smart-Contract/README.md)
 + [SCAR：一种可伸缩共识算法](SCAR-Consensus/README.md)
 + [Canal: 一种跨链交易解决方案](Canal-Cross-Chain/README.md)
++ [DDAO：去中心化数据访问对象](DDAO-Data-Management/README.md)
