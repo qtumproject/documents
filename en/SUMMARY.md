@@ -14,7 +14,7 @@
 + [Wallet Recovery With Salvagewallet](Wallet-Recovery-with-Salvagewallet.md)
 + [Qtum Exchange Usage Guide](Qtum-Exchange-Usage-Guide-and-Info.md)
 + [Testnet User Guide](Testnet-User-Guide.md)
-+ [bech32 support](README.md)
++ [bech32 support](bech32/README.md)
 
 ### Deploy Qtum
 
