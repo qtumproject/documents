@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Encrypt and Unlock Qtum Wallet · Qtum Documentation</title>
+        <title>bech32 support · Qtum Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../Wallet-Recovery-with-Salvagewallet.html" />
+    <link rel="next" href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html" />
     
     
-    <link rel="prev" href="../Adding-Nodes/" />
+    <link rel="prev" href="../Testnet-User-Guide.html" />
     
 
     </head>
@@ -201,9 +201,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.6" data-path="./">
+        <li class="chapter " data-level="2.6" data-path="../Encrypt-and-Unlock-Qtum-Wallet/">
             
-                <a href="./">
+                <a href="../Encrypt-and-Unlock-Qtum-Wallet/">
             
                     
                     Encrypt and Unlock Qtum Wallet
@@ -253,9 +253,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.10" data-path="../bech32/">
+        <li class="chapter active" data-level="2.10" data-path="./">
             
-                <a href="../bech32/">
+                <a href="./">
             
                     
                     bech32 support
@@ -493,7 +493,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Encrypt and Unlock Qtum Wallet</a>
+        <a href=".." >bech32 support</a>
     </h1>
 </div>
 
@@ -508,52 +508,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="encrypt--unlock-qtum-wallet"><a name="encrypt--unlock-qtum-wallet" class="plugin-anchor" href="#encrypt--unlock-qtum-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Encrypt &amp; Unlock Qtum Wallet</h1>
-<p>If you have don&apos;t know how to deploy a Qtum node, or you don&apos;t know how to launch a Qtum Wallet, please refer to following instructions to install wallet first:</p>
-<ul>
-<li>For command line users&#xFF1A;&#x300A;<a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">Guidance of Qtum Deployment</a>&#x300B;</li>
-<li>For GUI wallet users(common users)&#xFF1A;<a href="https://eco.qtum.org/wallet" target="_blank">https://eco.qtum.org/wallet</a></li>
-</ul>
-<p><strong>Important: After you encrypt wallet or change your pin code, please remember to backup your wallet again!!!</strong></p>
-<p>Please do all following things after you successfully installed and run a Qtum wallet: </p>
-<h2 id="encrypt-wallet"><a name="encrypt-wallet" class="plugin-anchor" href="#encrypt-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Encrypt Wallet</h2>
-<h3 id="for-command-line-users"><a name="for-command-line-users" class="plugin-anchor" href="#for-command-line-users"><i class="fa fa-link" aria-hidden="true"></i></a>For command line users</h3>
-<p>qtum-cli command to encrypt wallet&#xFF1A;</p>
-<pre><code>./qtum-cli encryptwallet &quot;yourpassword&quot;
-</code></pre><p>note that <code>yourpassword</code>is the user defined password, please remember it or you might lost your QTUM.</p>
-<p>After encryption, all fund security related actions (like send QTUM, staking, or dump private keys) will all requiring a password. </p>
-<h3 id="for-gui-wallet-users"><a name="for-gui-wallet-users" class="plugin-anchor" href="#for-gui-wallet-users"><i class="fa fa-link" aria-hidden="true"></i></a>For GUI wallet users</h3>
-<p>Choose<code>Setting-Encrypt Wallet</code> in the menu, as following:</p>
-<p><img src="choose-encrypt.jpeg" alt="choose encrypt"></p>
-<p>create a new passphrase and repeat it. The wallet will restart after encryption.</p>
-<p><img src="enter-password.jpeg" alt="enter password"></p>
-<p>After restart, there will be a lock flag shown on the bottom of the wallet, which means it is already encrypted (locked) &#xFF1A;</p>
-<p><img src="wallet-locked.jpeg" alt="wallet locked"></p>
-<h2 id="unlock-wallet"><a name="unlock-wallet" class="plugin-anchor" href="#unlock-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Unlock wallet</h2>
-<h3 id="for-command-line-users"><a name="for-command-line-users" class="plugin-anchor" href="#for-command-line-users"><i class="fa fa-link" aria-hidden="true"></i></a>For command line users</h3>
-<p>qtum-cli command to unlock wallet&#xFF1A;</p>
-<pre><code>./qtum-cli walletpassphrase &quot;yourpassword&quot; 99999
-</code></pre><p>the first argument <code>yourpassword</code> is the passphrase you set when encryption, while the second is required unlock time, the unit is second (like 99999 seconds here).</p>
-<p>After unlocking, you can send QTUM or do other fund security related actions.</p>
-<p>If you only want to unlock the wallet for staking, please use &#xFF1A;</p>
-<pre><code>./qtum-cli walletpassphrase &quot;yourpassword&quot; 99999 true
-</code></pre><p>The first two arguments are the same, and the 3rd argument <code>true</code> means you only want to unlock for staking. After doing this, you can start staking, but other fund security related actions like sending QTUM or dumping private key still need your passphrase to fully unlock your wallet first. </p>
-<h3 id="for-gui-wallet-users"><a name="for-gui-wallet-users" class="plugin-anchor" href="#for-gui-wallet-users"><i class="fa fa-link" aria-hidden="true"></i></a>For GUI wallet users</h3>
-<p>Go to &#x201C;Settings-unlock wallet&#x201D; to unlock your wallet&#xFF1A;</p>
-<p><img src="https://s.qtum.site/uploads/c0fbf6583794c8ecb91532dbeec4f9c7.jpeg" alt="unlock wallet"></p>
-<p>enter passphrase to unlock wallet. If you choose <code>For staking only</code>, it means you only unlock the wallet for staking&#xFF0C;but other fund security related actions like sending QTUM or dumping private key are still forbidened. So please unselect <code>For staking only</code> if you want to fully unlock your wallet.</p>
-<p><img src="https://s.qtum.site/uploads/65996de583f1e099360cbbbbdbba48d8.jpeg" alt="enter passphrase"></p>
-<p>After unlocking, the lock flag on the bottom will switch to unlocked.</p>
-<h2 id="change-passphrase"><a name="change-passphrase" class="plugin-anchor" href="#change-passphrase"><i class="fa fa-link" aria-hidden="true"></i></a>Change passphrase</h2>
-<h3 id="for-command-line-users"><a name="for-command-line-users" class="plugin-anchor" href="#for-command-line-users"><i class="fa fa-link" aria-hidden="true"></i></a>For command line users</h3>
-<p>command for change passphrase:</p>
-<pre><code>./qtum-cli walletpassphrasechange &quot;oldpassphrase&quot; &quot;newpassphrase&quot;
-</code></pre><p><code>oldpassphrase</code> is the old passphrase you set last time&#xFF0C;and <code>newpassphrase</code> is the new passphrase you want set&#x3002;</p>
-<h3 id="for-gui-wallet-users"><a name="for-gui-wallet-users" class="plugin-anchor" href="#for-gui-wallet-users"><i class="fa fa-link" aria-hidden="true"></i></a>For GUI wallet users</h3>
-<p>Go to &#x201C;Setting-Change Passphrase&#x201D; to change passphrase&#xFF1A;</p>
-<p><img src="click-changepass.jpeg" alt="click change passphrase"></p>
-<p>enter old passphrase and new one to complete modification&#xFF1A;</p>
-<p><img src="enter-new-password.jpeg" alt="change passphrase"></p>
+                                <h1 id="bech32-addresses-on-qtum-0161"><a name="bech32-addresses-on-qtum-0161" class="plugin-anchor" href="#bech32-addresses-on-qtum-0161"><i class="fa fa-link" aria-hidden="true"></i></a>bech32 addresses on Qtum 0.16.1</h1>
+<p>Qtum 0.16 brought several important updates, one of the most important is in fact the support for bech32 addresses. <strong>These can be enabled on new wallets</strong> by adding <code>addresstype=bech32</code> to the qtum.conf file</p>
+<p><strong>PLEASE NOTE</strong> bech32 is very new and most online services don&apos;t support it yet, this means you cannot withdraw from most exchanges/online wallets to a bech32 address for now, as time passes and there&apos;s more support for bech32, it&apos;ll be easy to use from/to any service.</p>
+<p>There&apos;s many advantages to this new format, it&apos;s the future in many ways as even lightning network will benefit from this, bech32 addresses on Qtum start with <code>qc1</code>. To learn more about bech32: </p>
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki" target="_blank">https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki</a></p>
+<p><a href="https://www.coindesk.com/pieter-wuilles-latest-project-making-bitcoin-harder-lose/" target="_blank">https://www.coindesk.com/pieter-wuilles-latest-project-making-bitcoin-harder-lose/</a></p>
+<h3 id="lets-see-how-to-enable-these-addresses-on-qtum-0161"><a name="lets-see-how-to-enable-these-addresses-on-qtum-0161" class="plugin-anchor" href="#lets-see-how-to-enable-these-addresses-on-qtum-0161"><i class="fa fa-link" aria-hidden="true"></i></a>Let&apos;s see how to enable these addresses on Qtum 0.16.1:</h3>
+<p>Following our sample, in Mac OS, we need to go to the folder /Users/yourusername/Library/Application Support/Qtum <strong>(If it doesn&apos;t exist, you need to create it)</strong></p>
+<p>There&apos;s two options for navigating ourselves towards that folder, the first one is by opening Finder and going to the menu: go -&gt; go to folder.. &gt; ~/Library/Application Support/Qtum</p>
+<p><img src="0.png" alt="0"></p>
+<p><img src="1.png" alt="1"></p>
+<p>Optionally, we can use the Mac OS terminal if you&apos;re more comfortable with it</p>
+<p><img src="2.png" alt="2"></p>
+<p>Once inside that folder, we need to create the qtum.conf file (from a text editor or command line) and add</p>
+<p><code>addresstype=bech32</code> to it, save and close the file.</p>
+<p><img src="3.png" alt="3"></p>
+<p>Next, we launch the Qtum wallet, we&apos;ll be able to create and use bech32 addresses now. Just go to the &quot;receive&quot; menu and create a new payment request<img src="4.png" alt="4"></p>
+<p>Sending and receiving is pretty much the same as before, just copy and paste the address on the send field to send some Qtum to a bech32 address, or do the same for receiving.</p>
+<h1 id="other-operating-systems"><a name="other-operating-systems" class="plugin-anchor" href="#other-operating-systems"><i class="fa fa-link" aria-hidden="true"></i></a>Other Operating systems:</h1>
+<h4 id="windows"><a name="windows" class="plugin-anchor" href="#windows"><i class="fa fa-link" aria-hidden="true"></i></a>Windows:</h4>
+<p>Navigate to %Appdata%/ and you&apos;ll find the Qtum folder</p>
+<h4 id="linuxfreebsd"><a name="linuxfreebsd" class="plugin-anchor" href="#linuxfreebsd"><i class="fa fa-link" aria-hidden="true"></i></a>Linux/FreeBSD:</h4>
+<p>Your home folder contains the Qtum folder, by default it&apos;s in this location ~/.qtum/ </p>
 
                                 
                                 </section>
@@ -581,12 +558,12 @@
 
             
                 
-                <a href="../Adding-Nodes/" class="navigation navigation-prev " aria-label="Previous page: Adding Nodes">
+                <a href="../Testnet-User-Guide.html" class="navigation navigation-prev " aria-label="Previous page: Testnet User Guide">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../Wallet-Recovery-with-Salvagewallet.html" class="navigation navigation-next " aria-label="Next page: Wallet Recovery With Salvagewallet">
+                <a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html" class="navigation navigation-next " aria-label="Next page: Guidance of Qtum Deployment and RPC Settings">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -597,7 +574,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Encrypt and Unlock Qtum Wallet","level":"2.6","depth":1,"next":{"title":"Wallet Recovery With Salvagewallet","level":"2.7","depth":1,"path":"Wallet-Recovery-with-Salvagewallet.md","ref":"Wallet-Recovery-with-Salvagewallet.md","articles":[]},"previous":{"title":"Adding Nodes","level":"2.5","depth":1,"path":"Adding-Nodes/README.md","ref":"Adding-Nodes/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Encrypt-and-Unlock-Qtum-Wallet/README.md","mtime":"2018-10-08T18:50:29.834Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-08T22:32:05.369Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"bech32 support","level":"2.10","depth":1,"next":{"title":"Guidance of Qtum Deployment and RPC Settings","level":"3.1","depth":1,"path":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","ref":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","articles":[]},"previous":{"title":"Testnet User Guide","level":"2.9","depth":1,"path":"Testnet-User-Guide.md","ref":"Testnet-User-Guide.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"bech32/README.md","mtime":"2018-10-08T20:47:51.964Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-08T22:32:05.369Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
