@@ -1,0 +1,637 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>DDAO: Decentralized Data Access Object · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../SCAR-Consensus/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using Wallet</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Qtum-Wallet-Tutorial/">
+            
+                <a href="../Qtum-Wallet-Tutorial/">
+            
+                    
+                    Desktop wallet basic usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../QTUM-wallet-usage-best-practices/">
+            
+                <a href="../QTUM-wallet-usage-best-practices/">
+            
+                    
+                    Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Qtum-Electrum-User-Guide.html">
+            
+                <a href="../Qtum-Electrum-User-Guide.html">
+            
+                    
+                    Qtum Electrum Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../QTUM-WebWallet-usage/">
+            
+                <a href="../QTUM-WebWallet-usage/">
+            
+                    
+                    Web Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../Qtum-Mobile-wallet-tutorial/">
+            
+                <a href="../Qtum-Mobile-wallet-tutorial/">
+            
+                    
+                    Mobile Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../Adding-Nodes/">
+            
+                <a href="../Adding-Nodes/">
+            
+                    
+                    Adding Nodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                <a href="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                    
+                    Encrypt and Unlock Qtum Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                <a href="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                    
+                    Wallet Recovery With Salvagewallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../Qtum-Exchange-Usage-Guide-and-Info.html">
+            
+                <a href="../Qtum-Exchange-Usage-Guide-and-Info.html">
+            
+                    
+                    Qtum Exchange Usage Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../Testnet-User-Guide.html">
+            
+                <a href="../Testnet-User-Guide.html">
+            
+                    
+                    Testnet User Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../bech32/">
+            
+                <a href="../bech32/">
+            
+                    
+                    bech32 support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deploy Qtum</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                <a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                    
+                    Guidance of Qtum Deployment and RPC Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Launch-Qtum-with-Docker.html">
+            
+                <a href="../Launch-Qtum-with-Docker.html">
+            
+                    
+                    Launch Qtum With Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../Build-Qtum-on-CentOS.html">
+            
+                <a href="../Build-Qtum-on-CentOS.html">
+            
+                    
+                    How to Build Qtum on CentOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Smart Contract and QRC20</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../QRC20-Token-Introduce.html">
+            
+                <a href="../QRC20-Token-Introduce.html">
+            
+                    
+                    QRC20 Token Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../QRC20-integration.html">
+            
+                <a href="../QRC20-integration.html">
+            
+                    
+                    QRC20 Integration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../qtumrepo/">
+            
+                <a href="../qtumrepo/">
+            
+                    
+                    Repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/">
+            
+                <a href="../How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/">
+            
+                    
+                    Stake With VPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../Qtum-on-Raspberry-Pi/">
+            
+                <a href="../Qtum-on-Raspberry-Pi/">
+            
+                    
+                    Stake With Raspberry Pi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../How-to-Staking-with-Qtum/">
+            
+                <a href="../How-to-Staking-with-Qtum/">
+            
+                    
+                    How to Stake With Qtum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../freebsd/">
+            
+                <a href="../freebsd/">
+            
+                    
+                    How to Stake on FreeBSD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">QtumX</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../Technical-White-Paper-for-QtumX/">
+            
+                <a href="../Technical-White-Paper-for-QtumX/">
+            
+                    
+                    QtumX Technical White Paper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../One-Click-Launch-Chain/">
+            
+                <a href="../One-Click-Launch-Chain/">
+            
+                    
+                    QtumX One-Click-Launch-Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../SCAR-Consensus/">
+            
+                <a href="../SCAR-Consensus/">
+            
+                    
+                    SCAR: Scalable Consensus Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    DDAO: Decentralized Data Access Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >DDAO: Decentralized Data Access Object</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ddao-decentralized-data-access-object"><a name="ddao-decentralized-data-access-object" class="plugin-anchor" href="#ddao-decentralized-data-access-object"><i class="fa fa-link" aria-hidden="true"></i></a>DDAO: Decentralized Data Access Object</h1>
+<h1 id="introduction"><a name="introduction" class="plugin-anchor" href="#introduction"><i class="fa fa-link" aria-hidden="true"></i></a>Introduction</h1>
+<p>Data Management refers to the process of collecting, organizing, storing, processing, transmitting and retrieving different types of data. It is an important application field of the computer science. One of its goals is to efficiently store and manage complex, large amounts of data using computers, so that people can easily access the data. Another goal is to extract and derive valuable information from data, and then use the information as a basis for action and decision making.</p>
+<p>At present, enterprises mainly use centralized database and file system for data management. Large Internet companies develop their own systems, such as GFS (Google File System), SQL Server, etc., and deploy local services. Small and medium-sized companies access cloud services such as AWS, Aliyun, and delegate data management tasks to these third parties. Both local and cloud data services have certain application scenarios and maintain the basic data of many companies.</p>
+<p>Centralized storage is currently main solution for data management, but there are serious storage problems in centralized databases and file systems around the world. Enterprises often store all their information and files through a centralized database and file system. But centralized storage solutions often attract attacks from hackers or may be ruined by disaster. Enterprises will face the loss of all their data resources and never get back. The dependence of companies on data and documents has led to huge risks that have never been seen before, which is very worrying. Although some large enterprises also provide related cloud backup services, they can only provide a few backup points, and they have not solved the fundamental problem.</p>
+<p>Decentralization technologies, such as blockchain and IPFS, provide a new type of solutions for data management. By using encryption and node consensus, privacy and security of data are guaranteed. Since data are stored in a lot of network nodes, there is no need to worry about data loss caused by failure of single node, which improves security and reliability. Encryption and segmentation technology guarantees the privacy of data and controls the read access. At the same time, in order to ensure scalability, cluster technology is used. A cluster is a large group of nodes that store and manage data together, and can join new nodes or expand more clusters.</p>
+<p>However, at present, with the increasing number of decentralized systems, developers have to face high costs in selection, learning, development, deployment, and maintenance of these systems. Therefore we proposed DDAO (Decentralized Data Access Object). Our goal is to develop a common library to access various decentralized systems, so as to perform CRUD (Create, Read, Update, Delete) operations. Through this library, developers can quickly read and write data in various decentralized systems and build their own applications without having to care about the underlying technology.</p>
+<h1 id="related-work"><a name="related-work" class="plugin-anchor" href="#related-work"><i class="fa fa-link" aria-hidden="true"></i></a>Related Work</h1>
+<p>With the development of blockchain technology and digital currency market, decentralized data storage and management technologies are increasingly valued by research and investment markets.</p>
+<h2 id="decentralized-file-system"><a name="decentralized-file-system" class="plugin-anchor" href="#decentralized-file-system"><i class="fa fa-link" aria-hidden="true"></i></a>Decentralized File System</h2>
+<p>As a decentralized system, blockchain backs up data at every node, so it is not suitable for storing files with large amounts of data, such as pictures, videos and audios. In current blockchain applications, such kind of files are still stored in servers held by developers. This method causes the centralization of these applications, which violates the essential meaning of blockchain.</p>
+<p>Projects of decentralized file system mainly include IPFS (InterPlanetary File System) [1], Swarm [2], Storj [3], and so on. Their basic method is to split the uploaded file into small pieces and then store them on the node. When downloading the file, you can use the hash value of the file as an address to make a request, and then you will get all the data pieces from the node and combine them into a complete file. In this way, one file can be separately stored in many nodes on the network, which achieves decentralization.</p>
+<p>One problem with these technologies is how to keep more nodes online to provide download services. Hence, some projects propose to add node incentive mechanisms to the decentralized file system so that online nodes can obtain revenues. In this way, the decentralized file system becomes a cloud storage like service, in which users need to purchase the service during uploading and downloading processes so as to reward the nodes that provide storage service. Several typical projects include Filecoin [4], Wolk [5], Fluence [6], and Sia [7].</p>
+<h1 id="decentralized-database"><a name="decentralized-database" class="plugin-anchor" href="#decentralized-database"><i class="fa fa-link" aria-hidden="true"></i></a>Decentralized Database</h1>
+<p>The decentralized file system enables decentralized storage of data, but when a user uploads some data, these data cannot be further modified or retrieved, which limits its application in data management. Traditional centralized data management services usually use database systems such as MySQL and Redis to execute CRUD operations of data. Therefore, similar database services are required in the decentralized area.</p>
+<p>There are several projects having research on decentralized databases, including BigchainDB [8], Bluzelle [9], Ties.DB [10] and so on. Their basic idea is to upload write requests of database to the blockchain through transactions, and then use database engines such as MongoDB to perform data indexing and process read requests. Using blockchain to build a decentralized database, effectively utilizes the mature decentralized architecture of blockchain systems, and has great advantages in terms of stability and security.</p>
+<p>These projects are currently in initial stage, and before their implementation matures, using smart contracts as a database service is also a viable alternative. Some projects are based on Ethereum + IPFS to their applications, using smart contracts written by Solidity for data management. Solidity supports data structures such as List, Map, Struct, etc., which are sufficient for common data management scenarios. These items are fully enumerated in [11].</p>
+<h1 id="system-description"><a name="system-description" class="plugin-anchor" href="#system-description"><i class="fa fa-link" aria-hidden="true"></i></a>System Description</h1>
+<p>Decentralized systems have a variety of implementations, leading to high learning costs for developers. This article will design a common library for connection between lower-layer decentralized systems and upper-layer DApp applications, enabling CRUD operations for multiple decentralized systems. Developers can quickly build their own data management applications through this library without having knowledge about the underlying technology. At the same time, based on this library, a cloud service can be built to provide online CRUD interfaces of multiple decentralized systems, eliminating the cost of deploying and maintaining decentralized systems for developers.</p>
+<p><img src="img1.png" alt="image"></p>
+<p>The system can be separated into three layers, namely DDMI (Decentralized Data Management Infrastructure), DDAO and DApp (Decentralized Application), which will be introduced as follows.</p>
+<h2 id="ddmi"><a name="ddmi" class="plugin-anchor" href="#ddmi"><i class="fa fa-link" aria-hidden="true"></i></a>DDMI</h2>
+<p>The DDMI layer will be compatible with a variety of decentralized systems, including blockchains, decentralized databases, decentralized file systems, and more. These decentralized systems can be launched locally by the developer or deployed on a remote server, and then connected through a descriptor with uniform format. For example, the format of <em>name://user:password@ip:port</em>, that is, connecting to a local Qtum node with port 13889 by <em>qtum://admin:123456@127.0.0.1:13889</em>, or connecting to a  IPFS node in LAN with 8080 port by <em>ipfs://myname:mypasswd@192.168.1.2:8080</em>.</p>
+<h2 id="ddao"><a name="ddao" class="plugin-anchor" href="#ddao"><i class="fa fa-link" aria-hidden="true"></i></a>DDAO</h2>
+<p>The DDAO layer is the core module proposed in this paper. Its main functions include (1) establishing connections to various decentralized systems, (2) abstracting to get compatible CRUD interfaces. For different types of decentralized systems, abstract interfaces are different:</p>
+<ol>
+<li>For blockchain systems, interfaces contain sending transactions, querying transactions, creating contracts, reading and writing contracts.</li>
+<li>For decentralized database systems, database interfaces such as create, find, insert, and update are included.</li>
+<li>For decentralized file systems, main interfaces such as file upload, download, and encryption are included.</li>
+</ol>
+<p>The design here needs to take into account the compatibility of different systems, so only some common functions are abstracted. At the same time, the interface used to send original commands is reserved, so that developers can request some unique interfaces of each system.</p>
+<h2 id="dapp"><a name="dapp" class="plugin-anchor" href="#dapp"><i class="fa fa-link" aria-hidden="true"></i></a>DApp</h2>
+<p>The DApp can be JavaScript scripts running on browser or programs running on server. They may also be stored in the decentralized file system and later obtained through a specific address as an entry. The DApp initiates the DDAO instance, connects local or cloud decentralized systems, and performs CRUD operations on those systems, so as to realize data management applications.</p>
+<p>Multiple DDAO instances can be initiated within one DApp, in order to connect to multiple different decentralized systems. This allows data interaction with multiple decentralized systems in one application, enabling more features compared with traditional smart contract-based DApps. For example, cross-chain data transmission among multiple blockchains, or data visualization based on blockchain and file system.</p>
+<h1 id="use-cases"><a name="use-cases" class="plugin-anchor" href="#use-cases"><i class="fa fa-link" aria-hidden="true"></i></a>Use Cases</h1>
+<p>A large number of use cases is the best way to describe the importance of DDAO. Based on DDAO, many decentralized applications will become easy to develop and implement.</p>
+<h2 id="decentralized-content-sharing"><a name="decentralized-content-sharing" class="plugin-anchor" href="#decentralized-content-sharing"><i class="fa fa-link" aria-hidden="true"></i></a>Decentralized Content Sharing</h2>
+<p>DDAO can be used to build a blog, photo, music, video sharing platform. By using DDAO&apos;s write interface, users can publish text, images, videos and other content in a decentralized file system such as IPFS, and then store their meta data (such as content address, release time, user ID, etc.) into a smart contract or a database. Then use the DDAO read interface to filter, sort, and display the content. The advantage of such a system is that the content published by the user is decentralized and cannot be tampered with.</p>
+<h2 id="decentralized-trading-platform"><a name="decentralized-trading-platform" class="plugin-anchor" href="#decentralized-trading-platform"><i class="fa fa-link" aria-hidden="true"></i></a>Decentralized Trading Platform</h2>
+<p>Based on DDAO, you can build trading platforms like Taobao and Amazon. When a merchant uses DDAO write interfaces to upload its product information, the text and image are stored in a decentralized file system, and the meta data (such as price, quantity, classification, keywords, etc.) are stored in a smart contract or a database. When a customer browses the platform, DDAO read interfaces are used for product search and filter. Finally, the customer uses DDAO to connect to the blockchain, create orders, pay orders, and complete orders. The advantage of this platform is that the product information and transaction process are more transparent and the payment method is more convenient.</p>
+<h2 id="decentralized-cloud-storage-service"><a name="decentralized-cloud-storage-service" class="plugin-anchor" href="#decentralized-cloud-storage-service"><i class="fa fa-link" aria-hidden="true"></i></a>Decentralized Cloud Storage Service</h2>
+<p>Storage service providers register their information into a blockchain or a database via DDAO. When a user uploads a file, he needs to use blockchain tokens to purchase the storage service, and then uploads the file to a decentralized file system through DDAO, with the file information and address stored in a blockchain or a database. When downloading, users browse the file information and address through DDAO, and then download the file from the file system. The tokens consumed by the user are used to reward storage service providers, forming a complete economic ecology.</p>
+<h1 id="summary"><a name="summary" class="plugin-anchor" href="#summary"><i class="fa fa-link" aria-hidden="true"></i></a>Summary</h1>
+<p>Decentralized data management has broad application prospects. At present, immature infrastructure limits its application. Decentralized databases and file systems are still under development. It is conceivable that these systems will be implemented one after another in the near future. DDAO will also be widely used for development just like the DAO in centralized systems.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../SCAR-Consensus/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: SCAR: Scalable Consensus Algorithm">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"DDAO: Decentralized Data Access Object","level":"6.4","depth":1,"previous":{"title":"SCAR: Scalable Consensus Algorithm","level":"6.3","depth":1,"path":"SCAR-Consensus/README.md","ref":"SCAR-Consensus/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"DDAO-Data-Management/README.md","mtime":"2018-10-23T16:50:17.355Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-23T16:51:02.556Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
