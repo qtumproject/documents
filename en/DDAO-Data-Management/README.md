@@ -66,3 +66,26 @@ Storage service providers register their information into a blockchain or a data
 
 # Summary
 Decentralized data management has broad application prospects. Although, at present, decentralized databases and file systems are still under development, and immature infrastructure limits its application, it is conceivable that these systems will be implemented one after another in the near future. DDAO will also be widely used just like the DAO in current centralized systems.
+
+# References
+[1] IPFS. https://ipfs.io/.
+
+[2] Swarm. https://swarm-guide.readthedocs.io/en/latest/.
+
+[3] Storj. https://storj.io/.
+
+[4] Filecoin. https://filecoin.io/.
+
+[5] Wolk. https://wolk.com/.
+
+[6] Fluence. https://fluence.one/.
+
+[7] Sia. https://sia.tech/.
+
+[8] BigchainDB. https://www.bigchaindb.com/.
+
+[9] Bluzelle. https://bluzelle.com/.
+
+[10] Ties.DB. https://tiesdb.com/.
+
+[11] Awesome IPFS. https://awesome.ipfs.io/.
