@@ -1,0 +1,384 @@
+
+<!DOCTYPE HTML>
+<html lang="es" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Qtum en AWS · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Qtum en Raspberry Pi/" />
+    
+    
+    <link rel="prev" href="../Qtum Billetera Movil/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escribe para buscar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduccion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Usando Qtum</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Tutorial de uso de billetera QTUM/">
+            
+                <a href="../Tutorial de uso de billetera QTUM/">
+            
+                    
+                    Tutorial de uso de billetera Qtum
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Qtum Mejores Practicas/">
+            
+                <a href="../Qtum Mejores Practicas/">
+            
+                    
+                    Mejores Practicas
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Como usar la billetera movil</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Qtum Billetera Movil/">
+            
+                <a href="../Qtum Billetera Movil/">
+            
+                    
+                    Como usar la billetera movil
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Qtum en AWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../Qtum en Raspberry Pi/">
+            
+                <a href="../Qtum en Raspberry Pi/">
+            
+                    
+                    Staking con Raspberry Pi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../freebsd/">
+            
+                <a href="../freebsd/">
+            
+                    
+                    Staking con FreeBSD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publicado con GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Qtum en AWS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="qtum-en-aws-ec2"><a name="qtum-en-aws-ec2" class="plugin-anchor" href="#qtum-en-aws-ec2"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum en AWS ec2</h1>
+<p>Qtum ha estado disponible en el Mercado de AWS desde principios de julio de 2018, este tutorial le mostrar&#xE1; c&#xF3;mo comenzar con Qtum en AWS.</p>
+<p>Ejecutar Qtum en AWS es incre&#xED;blemente f&#xE1;cil, podemos implementar una nueva instancia de EC2 directamente desde el mercado. Comencemos por ir al panel de control de EC2 y hacer clic en <strong>&quot;Iniciar instancia&quot;</strong></p>
+<p><img src="https://docs.qtum.site/en/Qtum-AWS/aws.jpg" alt="awsmarketplace"></p>
+<p>Al hacer clic en &quot;Iniciar instancia&quot;, ir&#xE1; a la siguiente pantalla, donde podr&#xE1; elegir una imagen de m&#xE1;quina de Amazon (AMI).</p>
+<p>En la parte superior, tenemos un cuadro de b&#xFA;squeda, escribamos <strong>&quot;Qtum&quot;</strong> y presione enter.</p>
+<p><img src="https://docs.qtum.site/en/Qtum-AWS/aws2.jpg" alt="awsmarketplace"></p>
+<p>Esto muestra el 1er Qtum AMI, ahora todo lo que tenemos que hacer es hacer clic en <strong>&quot;Select&quot;</strong></p>
+<p><img src="https://docs.qtum.site/en/Qtum-AWS/aws3.jpg" alt="awsmarketplace"></p>
+<p>Aqu&#xED; nos encontramos con una lista de tipos de instancia, cada instancia tiene diferentes especificaciones y costos, que var&#xED;an de una regi&#xF3;n a otra. Para obtener una lista completa de especificaciones + costos, consulte la documentaci&#xF3;n de AWS sobre este tema.  <a href="https://aws.amazon.com/ec2/pricing/on-demand/" target="_blank">https://aws.amazon.com/ec2/pricing/on-demand/</a></p>
+<p><img src="https://docs.qtum.site/en/Qtum-AWS/aws4.jpg" alt="awsmarketplace"></p>
+<p>A continuaci&#xF3;n, revisaremos los detalles de nuestra instancia (tama&#xF1;o del disco, configuraci&#xF3;n de seguridad, etc.)</p>
+<p><img src="https://docs.qtum.site/en/Qtum-AWS/aws5.jpg" alt="awsmarketplace"></p>
+<p>Aqu&#xED; se nos solicita crear un par de claves para acceder a esta instancia, es un archivo de clave privada que se usa para acceder a trav&#xE9;s de ssh, esto es m&#xE1;s seguro, pero debe tener MUCHO cuidado con este archivo, cualquier persona con este archivo tendr&#xE1; acceso completo a tu servidor !.</p>
+<p><img src="https://docs.qtum.site/en/Qtum-AWS/aws6.jpg" alt="awsmarketplace"></p>
+<p>Tenga en cuenta que el nombre del par de claves es &quot;<strong>qtumaws</strong>&quot;, esto generar&#xE1; un archivo llamado<strong>&quot;qtumaws.pem.txt&quot;</strong>, necesitamos cambiarle el nombre a <strong>qtumaws.pem</strong> y cambia los permisos a 0400 escribiendo <code>mv qtumaws.pem.txt qtumaws.pem &amp;&amp; chmod 400 qtumaws.pem</code>.</p>
+<p><img src="https://docs.qtum.site/en/Qtum-AWS/aws7.jpg" alt="awsmarketplace"></p>
+<p>ok, ahora nuestra instancia ha sido lanzada, toma unos segundos para arrancar. Una vez hecho esto, podemos acceder a trav&#xE9;s de <strong>ssh</strong> con la clave .pem que creamos / descargamos durante la configuraci&#xF3;n.</p>
+<p><img src="https://docs.qtum.site/en/Qtum-AWS/aws8.jpg" alt="awsmarketplace"></p>
+<p>Para acceder a nuestra instancia, escribamos ssh -i qtumaws.pem ubuntu @<strong>yourinstanceipaddress</strong></p>
+<p>Escriba &quot;s&#xED;&quot; para agregar la huella digital de la clave ECDSA de la instancia ec2 a su archivo conocido_hosts.</p>
+<p>Al iniciar sesi&#xF3;n, ver&#xE1; la siguiente pantalla, escriba ls para ver los archivos / carpetas que ya est&#xE1;n configurados para usted.</p>
+<p><img src="https://docs.qtum.site/en/Qtum-AWS/term1.jpg" alt="awsmarketplace"></p>
+<p><code>qmix</code> es la carpeta de instalaci&#xF3;n y lanzamiento del IDE web de Qmix, es un gran IDE web de c&#xF3;digo abierto para Qtum.</p>
+<p><a href="https://qmix.blockchainspaceman.com/" target="_blank">https://qmix.blockchainspaceman.com</a> es la interfaz oficial del desarrollador Qmix</p>
+<p>Puedes encontrar el c&#xF3;digo fuente aqu&#xED; <a href="https://github.com/spacemanholdings/qmix" target="_blank">https://github.com/spacemanholdings/qmix</a></p>
+<h2 id="accediendo-a-qmix-incorporado"><a name="accediendo-a-qmix-incorporado" class="plugin-anchor" href="#accediendo-a-qmix-incorporado"><i class="fa fa-link" aria-hidden="true"></i></a>Accediendo a Qmix incorporado</h2>
+<p>Qmix se inicia al iniciarse en la AMI Qtum AMI. Para usarlo, solo apunta tu navegador hacia <a href="http://yourec2ipaddress:5555/" target="_blank">http://yourec2ipaddress:5555</a></p>
+<p><img src="https://docs.qtum.site/en/Qtum-AWS/qmix.jpg" alt="awsmarketplace"></p>
+<p><img src="https://docs.qtum.site/en/Qtum-AWS/term2.jpg" alt="awsmarketplace"></p>
+<p>Tambi&#xE9;n hay una p&#xE1;gina de manual disponible, simplemente escriba man README.man y obtendr&#xE1; una documentaci&#xF3;n b&#xE1;sica sobre c&#xF3;mo usar esta AMI.</p>
+<p>Se recomienda realizar una actualizaci&#xF3;n completa del sistema antes de usar Qtum, esto actualizar&#xE1; todas las aplicaciones y bibliotecas a su &#xFA;ltima versi&#xF3;n, incluyendo parches de seguridad importantes y correcciones de errores, esto incluye Qtum, que en el momento de la escritura tiene la versi&#xF3;n 0.16.1 disponible en los repositorios .</p>
+<p><img src="https://docs.qtum.site/en/Qtum-AWS/term5.jpg" alt="awsmarketplace"></p>
+<p>Para actualizar todo, solo necesitamos escribir: <code>sudo apt update &amp;&amp; sudo apt upgrade</code></p>
+<p>Esto sincronizar&#xE1; cada repositorio e instalar&#xE1; las actualizaciones disponibles.</p>
+<p><img src="https://docs.qtum.site/en/Qtum-AWS/term4.jpg" alt="awsmarketplace"></p>
+<p>Una vez que terminemos de actualizar, podemos iniciar el daemon qtum escribiendo qtumd -daemon</p>
+<p>qtum-cli -getinfo muestra qu&#xE9; versi&#xF3;n estamos ejecutando y cu&#xE1;l es el estado de nuestra sincronizaci&#xF3;n de blockchain.</p>
+<p><img src="https://docs.qtum.site/en/Qtum-AWS/term3.jpg" alt="awsmarketplace"></p>
+<h2 id="consejos-de-seguridad"><a name="consejos-de-seguridad" class="plugin-anchor" href="#consejos-de-seguridad"><i class="fa fa-link" aria-hidden="true"></i></a>Consejos de seguridad:</h2>
+<p>Las instancias de AWS ec2 son muy seguras por defecto, sin embargo, siempre hay ajustes adicionales que podemos hacer para estar m&#xE1;s seguros.</p>
+<ol>
+<li>Cambie el nombre de usuario predeterminado: de forma predeterminada, las instancias de AWS tienen: &quot;ubuntu&quot; como nombre de usuario y no una contrase&#xF1;a. Se recomienda cambiar esto y crear su propio usuario y contrase&#xF1;a. Una vez que haya creado el nuevo usuario, elimine el usuario predeterminado.</li>
+<li>Solo abra los puertos que realmente necesita para permitir el acceso. Por defecto, esta instancia de EC2 permitir&#xE1; el acceso desde 22, 3888 y 5555.</li>
+<li>A&#xF1;ade tu propia clave ssh al archivo <code>~./.ssh/authorized_keys</code> Aseg&#xFA;rese de seguir los procedimientos seguros para acceder a estos casos.</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Qtum Billetera Movil/" class="navigation navigation-prev " aria-label="Previous page: Como usar la billetera movil">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Qtum en Raspberry Pi/" class="navigation navigation-next " aria-label="Next page: Staking con Raspberry Pi">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Qtum en AWS","level":"4.1","depth":1,"next":{"title":"Staking con Raspberry Pi","level":"4.2","depth":1,"path":"Qtum en Raspberry Pi/README.md","ref":"Qtum en Raspberry Pi/README.md","articles":[]},"previous":{"title":"Como usar la billetera movil","level":"3.1","depth":1,"path":"Qtum Billetera Movil/README.md","ref":"Qtum Billetera Movil/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"es","gitbook":"*"},"file":{"path":"Qtum-AWS/README.md","mtime":"2018-10-26T20:07:22.092Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-26T20:13:57.346Z"},"basePath":"..","book":{"language":"es"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

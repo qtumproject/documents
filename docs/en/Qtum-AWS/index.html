@@ -545,9 +545,9 @@
 <p><img src="aws3.jpg" alt="awsmarketplace"></p>
 <p>Here we&apos;re greeted with a list of instance types, each instance has different specs and costs, these vary from region to region. To get a full list of specs+costs, please take a look at the AWS documentation on this matter.  <a href="https://aws.amazon.com/ec2/pricing/on-demand/" target="_blank">https://aws.amazon.com/ec2/pricing/on-demand/</a></p>
 <p><img src="aws4.jpg" alt="awsmarketplace"></p>
-<p>Next we&apos;ll review details about our instance (disk size, security settings, etc)</p>
+<p>Next, we&apos;ll review details about our instance (disk size, security settings, etc.)</p>
 <p><img src="aws5.jpg" alt="awsmarketplace"></p>
-<p>Here we&apos;re asked to create a key pair to access this instance, it&apos;s a private key file used to access via ssh, this is more secure but you need to be VERY careful with this file, anyone with this file will have complete access to your server!.</p>
+<p>Here we&apos;re asked to create a key pair to access this instance, it&apos;s a private key file used to access via ssh, this is more secure but you need to be VERY careful with this file, anyone with this file will have complete access to your server!</p>
 <p><img src="aws6.jpg" alt="awsmarketplace"></p>
 <p>Please note, the key pair name is &quot;<strong>qtumaws</strong>&quot;, this will generate a file called <strong>&quot;qtumaws.pem.txt&quot;</strong>, we need to rename it to <strong>qtumaws.pem</strong> and change the permissions to 0400 by typing <code>mv qtumaws.pem.txt qtumaws.pem &amp;&amp; chmod 400 qtumaws.pem</code>.</p>
 <p><img src="aws7.jpg" alt="awsmarketplace"></p>
@@ -568,13 +568,13 @@
 <p>It&apos;s highly recommended to do a full system update before using Qtum, this will update every application and libraries to their latest version including important security patches and bug fixes, this includes Qtum which at the time of writing has version 0.16.1 available on the repositories. </p>
 <p><img src="term5.jpg" alt="awsmarketplace"></p>
 <p>To update everything, we only need to type: <code>sudo apt update &amp;&amp; sudo apt upgrade</code></p>
-<p>This will syncronize every repository and install any updates available.</p>
+<p>This will synchronize every repository and install any updates available.</p>
 <p><img src="term4.jpg" alt="awsmarketplace"></p>
 <p>Once we finish updating, we can launch the qtum daemon by typing qtumd -daemon </p>
 <p>qtum-cli -getinfo shows which version we&apos;re running and what&apos;s the status of our blockchain sync.</p>
 <p><img src="term3.jpg" alt="awsmarketplace"></p>
 <h2 id="security-tips"><a name="security-tips" class="plugin-anchor" href="#security-tips"><i class="fa fa-link" aria-hidden="true"></i></a>Security Tips:</h2>
-<p>AWS ec2 instances are very secure by default, however, there&apos;s always additional tweaks we can do to be safer.</p>
+<p>AWS ec2 instances are very secure by default, however, there are always additional tweaks we can do to be safer.</p>
 <ol>
 <li>Change the default username: By default, AWS instances have :&quot;ubuntu&quot; as username, and no password. It&apos;s recommended to change this and create your own user and password. Once you&apos;ve created the new user, delete the default user.</li>
 <li>Only open the ports you really need to allow access to. By default, this ec2 instance will allow access from <strong>22, 3888 and 5555</strong>.</li>
@@ -623,7 +623,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QTUM On AWS","level":"5.2","depth":1,"next":{"title":"Stake With VPS","level":"5.3","depth":1,"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","ref":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","articles":[]},"previous":{"title":"Repositories","level":"5.1","depth":1,"path":"qtumrepo/README.md","ref":"qtumrepo/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-AWS/README.md","mtime":"2018-10-26T00:35:41.029Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-26T00:37:00.338Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"QTUM On AWS","level":"5.2","depth":1,"next":{"title":"Stake With VPS","level":"5.3","depth":1,"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","ref":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","articles":[]},"previous":{"title":"Repositories","level":"5.1","depth":1,"path":"qtumrepo/README.md","ref":"qtumrepo/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-AWS/README.md","mtime":"2018-10-26T20:07:03.285Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-26T20:13:57.346Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
