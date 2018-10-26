@@ -14,6 +14,8 @@
 
 ### Staking
 
++ [Qtum en AWS](Qtum-AWS/README.md)
+
 + [Staking con Raspberry Pi](Qtum en Raspberry Pi/README.md)
 
 + [Staking con FreeBSD](freebsd/README.md)  

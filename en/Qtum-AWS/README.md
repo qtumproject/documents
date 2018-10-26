@@ -32,11 +32,11 @@ Here we're greeted with a list of instance types, each instance has different sp
 
 
 
-Next we'll review details about our instance (disk size, security settings, etc)
+Next, we'll review details about our instance (disk size, security settings, etc.)
 
 ![awsmarketplace](aws5.jpg)
 
-Here we're asked to create a key pair to access this instance, it's a private key file used to access via ssh, this is more secure but you need to be VERY careful with this file, anyone with this file will have complete access to your server!.
+Here we're asked to create a key pair to access this instance, it's a private key file used to access via ssh, this is more secure but you need to be VERY careful with this file, anyone with this file will have complete access to your server!
 
 ![awsmarketplace](aws6.jpg)
 
@@ -82,7 +82,7 @@ It's highly recommended to do a full system update before using Qtum, this will 
 
 To update everything, we only need to type: `sudo apt update && sudo apt upgrade`
 
-This will syncronize every repository and install any updates available.
+This will synchronize every repository and install any updates available.
 
 ![awsmarketplace](term4.jpg)
 
@@ -98,7 +98,7 @@ qtum-cli -getinfo shows which version we're running and what's the status of our
 
 ## Security Tips:
 
-AWS ec2 instances are very secure by default, however, there's always additional tweaks we can do to be safer.
+AWS ec2 instances are very secure by default, however, there are always additional tweaks we can do to be safer.
 
 1. Change the default username: By default, AWS instances have :"ubuntu" as username, and no password. It's recommended to change this and create your own user and password. Once you've created the new user, delete the default user.
 2. Only open the ports you really need to allow access to. By default, this ec2 instance will allow access from **22, 3888 and 5555**.
