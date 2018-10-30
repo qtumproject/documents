@@ -1,6 +1,6 @@
 # Encrypt & Unlock Qtum Wallet
 
-If you have don't know how to deploy a Qtum node, or you don't know how to launch a Qtum Wallet, please refer to following instructions to install wallet first:
+If you don't know how to deploy a Qtum node or don't know how to launch a Qtum wallet ,please refer to the following instructions:
 
 * For command line users：《[Guidance of Qtum Deployment](../Guidance-of-Qtum-Deployment-and-RPC-Settings.md)》
 * For GUI wallet users(common users)：[https://eco.qtum.org/wallet](https://eco.qtum.org/wallet)
