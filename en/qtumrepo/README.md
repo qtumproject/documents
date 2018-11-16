@@ -1,4 +1,4 @@
-# Using QTUM official Repository on Ubuntu 16.04-17.10, Debian and Archlinux
+# Using QTUM official Repository on Ubuntu 16.04-18.10, Debian and Archlinux
 
 
 
@@ -15,7 +15,7 @@ We've published our official Qtum repository on http://repo.qtum.info or http://
 
 ### Ubuntu 
 
-16.04 - 17.10
+16.04 - 18.10
 
 ### Mint 
 
