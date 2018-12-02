@@ -4,7 +4,7 @@
 
 
 
-We've published our official Qtum repository on http://repo.qtum.info or http://repo.qtum.org, this repository supports the following distributions:
+We've published our official Qtum repository on https://repo.qtum.info or https://repo.qtum.org, this repository supports the following distributions:
 
 ### Debian
 
@@ -51,7 +51,7 @@ This will download and add the Qtum signing key to your linux install.
 
 `sudo su` - Sudo to root first
 
-` echo "deb http://repo.qtum.info/apt/ubuntu/ xenial main" >> /etc/apt/sources.list`
+` echo "deb https://repo.qtum.info/apt/ubuntu/ xenial main" >> /etc/apt/sources.list`
 
 This will add the repository to your APT sources file. **NOTE:** Please remember to change "xenial" for your Ubuntu version codename <!--(for instance, Ubuntu 17.10 codename is artful, in this case you need to replace xenial for artful)-->
 
@@ -65,7 +65,7 @@ By doing this, we'll update our sources and install Qtum on our ubuntu Box
 
 Obtaining the Signing key in Debian is a bit different, but not complicated
 
-```wget -qO - http://repo.qtum.co/apt/public.key | sudo apt-key add - ```
+```wget -qO - https://repo.qtum.co/apt/public.key | sudo apt-key add - ```
 
 This downloads and installs the Qtum public key
 
@@ -74,7 +74,7 @@ This downloads and installs the Qtum public key
 
 `sudo su` - Sudo to root first
 
-` echo "deb http://repo.qtum.info/apt/debian/ stretch main" >> /etc/apt/sources.list`
+` echo "deb https://repo.qtum.info/apt/debian/ stretch main" >> /etc/apt/sources.list`
 
 This will add the repository to your APT sources file. **NOTE:** Please remember to change "stretch" for your Debian version codename <!--(for instance, Ubuntu 8.x codename is jessie, in this case you need to replace stretch for jessie)-->
 

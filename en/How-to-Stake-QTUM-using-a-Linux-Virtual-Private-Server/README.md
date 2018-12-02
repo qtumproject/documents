@@ -76,7 +76,7 @@ Adding repository to your APT sources.
 
 ``` sudo su - Sudo to root first
 
-echo "deb http://repo.qtum.info/apt/ubuntu/ xenial main" >> /etc/apt/sources.list
+echo "deb https://repo.qtum.info/apt/ubuntu/ xenial main" >> /etc/apt/sources.list
 ```
 This will add the repository to your APT sources file. NOTE: Please remember to change "xenial" for your Ubuntu version codename
 

@@ -535,7 +535,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="using-qtum-official-repository-on-ubuntu-1604-1810-debian-and-archlinux"><a name="using-qtum-official-repository-on-ubuntu-1604-1810-debian-and-archlinux" class="plugin-anchor" href="#using-qtum-official-repository-on-ubuntu-1604-1810-debian-and-archlinux"><i class="fa fa-link" aria-hidden="true"></i></a>Using QTUM official Repository on Ubuntu 16.04-18.10, Debian and Archlinux</h1>
-<p>We&apos;ve published our official Qtum repository on <a href="http://repo.qtum.info" target="_blank">http://repo.qtum.info</a> or <a href="http://repo.qtum.org" target="_blank">http://repo.qtum.org</a>, this repository supports the following distributions:</p>
+<p>We&apos;ve published our official Qtum repository on <a href="https://repo.qtum.info" target="_blank">https://repo.qtum.info</a> or <a href="https://repo.qtum.org" target="_blank">https://repo.qtum.org</a>, this repository supports the following distributions:</p>
 <h3 id="debian"><a name="debian" class="plugin-anchor" href="#debian"><i class="fa fa-link" aria-hidden="true"></i></a>Debian</h3>
 <ul>
 <li>8.x (Jessie)</li>
@@ -559,18 +559,18 @@
 <p>This will download and add the Qtum signing key to your linux install.</p>
 <h3 id="adding-repository-to-your-apt-sources"><a name="adding-repository-to-your-apt-sources" class="plugin-anchor" href="#adding-repository-to-your-apt-sources"><i class="fa fa-link" aria-hidden="true"></i></a>Adding repository to your APT sources.</h3>
 <p><code>sudo su</code> - Sudo to root first</p>
-<p><code>echo &quot;deb http://repo.qtum.info/apt/ubuntu/ xenial main&quot; &gt;&gt; /etc/apt/sources.list</code></p>
+<p><code>echo &quot;deb https://repo.qtum.info/apt/ubuntu/ xenial main&quot; &gt;&gt; /etc/apt/sources.list</code></p>
 <p>This will add the repository to your APT sources file. <strong>NOTE:</strong> Please remember to change &quot;xenial&quot; for your Ubuntu version codename <!--(for instance, Ubuntu 17.10 codename is artful, in this case you need to replace xenial for artful)--></p>
 <h3 id="refreshing-apt-sources-and-installing-qtum"><a name="refreshing-apt-sources-and-installing-qtum" class="plugin-anchor" href="#refreshing-apt-sources-and-installing-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Refreshing APT sources and installing Qtum</h3>
 <p><code>sudo apt update &amp;&amp; sudo apt install qtum</code></p>
 <p>By doing this, we&apos;ll update our sources and install Qtum on our ubuntu Box</p>
 <h2 id="installing-on-debian"><a name="installing-on-debian" class="plugin-anchor" href="#installing-on-debian"><i class="fa fa-link" aria-hidden="true"></i></a>Installing on Debian</h2>
 <p>Obtaining the Signing key in Debian is a bit different, but not complicated</p>
-<p><code>wget -qO - http://repo.qtum.co/apt/public.key | sudo apt-key add -</code></p>
+<p><code>wget -qO - https://repo.qtum.co/apt/public.key | sudo apt-key add -</code></p>
 <p>This downloads and installs the Qtum public key</p>
 <h3 id="adding-repository-to-your-apt-sources"><a name="adding-repository-to-your-apt-sources" class="plugin-anchor" href="#adding-repository-to-your-apt-sources"><i class="fa fa-link" aria-hidden="true"></i></a>Adding repository to your APT sources.</h3>
 <p><code>sudo su</code> - Sudo to root first</p>
-<p><code>echo &quot;deb http://repo.qtum.info/apt/debian/ stretch main&quot; &gt;&gt; /etc/apt/sources.list</code></p>
+<p><code>echo &quot;deb https://repo.qtum.info/apt/debian/ stretch main&quot; &gt;&gt; /etc/apt/sources.list</code></p>
 <p>This will add the repository to your APT sources file. <strong>NOTE:</strong> Please remember to change &quot;stretch&quot; for your Debian version codename <!--(for instance, Ubuntu 8.x codename is jessie, in this case you need to replace stretch for jessie)--></p>
 <h3 id="refreshing-apt-sources-and-installing-qtum"><a name="refreshing-apt-sources-and-installing-qtum" class="plugin-anchor" href="#refreshing-apt-sources-and-installing-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Refreshing APT sources and installing Qtum</h3>
 <p><code>sudo apt update &amp;&amp; sudo apt install qtum</code></p>
@@ -623,7 +623,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Repositories","level":"5.1","depth":1,"next":{"title":"QTUM On AWS","level":"5.2","depth":1,"path":"Qtum-AWS/README.md","ref":"Qtum-AWS/README.md","articles":[]},"previous":{"title":"QRC20 Integration","level":"4.2","depth":1,"path":"QRC20-integration.md","ref":"QRC20-integration.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"qtumrepo/README.md","mtime":"2018-11-16T07:25:08.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T07:25:46.338Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Repositories","level":"5.1","depth":1,"next":{"title":"QTUM On AWS","level":"5.2","depth":1,"path":"Qtum-AWS/README.md","ref":"Qtum-AWS/README.md","articles":[]},"previous":{"title":"QRC20 Integration","level":"4.2","depth":1,"path":"QRC20-integration.md","ref":"QRC20-integration.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"qtumrepo/README.md","mtime":"2018-12-02T19:12:31.246Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-02T19:17:18.539Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

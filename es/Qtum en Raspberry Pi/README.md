@@ -2,7 +2,7 @@
 
 Al igual que hicimos con Debian, tenemos que descargar e instalar la llave pública de Qtum.
 
-`wget -qO - http://repo.qtum.info/apt/public.key | sudo apt-key add -`
+`wget -qO - https://repo.qtum.info/apt/public.key | sudo apt-key add -`
 
 Esto descarga e instala la llave pública Qtum
 
@@ -10,7 +10,7 @@ Esto descarga e instala la llave pública Qtum
 
 `sudo su` - primero, hagan "sudo a root"
 
-`echo "deb http://repo.qtum.info/apt/raspbian/ jessie main" >> /etc/apt/sources.list` or`echo "deb http://repo.qtum.info/apt/raspbian/ stretch main" >> /etc/apt/sources.list`
+`echo "deb https://repo.qtum.info/apt/raspbian/ jessie main" >> /etc/apt/sources.list` or`echo "deb https://repo.qtum.info/apt/raspbian/ stretch main" >> /etc/apt/sources.list`
 
 Esto agregará el repositorio a su archivo de fuentes APT.
 
