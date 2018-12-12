@@ -65,7 +65,7 @@ By doing this, we'll update our sources and install Qtum on our ubuntu Box
 
 Obtaining the Signing key in Debian is a bit different, but not complicated
 
-```wget -qO - https://repo.qtum.co/apt/public.key | sudo apt-key add - ```
+```wget -qO - https://repo.qtum.info/apt/public.key | sudo apt-key add - ```
 
 This downloads and installs the Qtum public key
 
