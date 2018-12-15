@@ -7,7 +7,7 @@ There is no other URL being used for the web wallet, please be safe and verify t
 
 
 
-![0. Secure EN](Web Wallet Photos/0. Secure EN.jpg)
+![0. Secure site EN](https://i.imgur.com/yaCSQSu.jpg)
 
 
 
@@ -17,7 +17,7 @@ Welcome to the Qtum web wallet user documentation which will show
 
 * [Introduction to the Web Wallet](#introduction-to-the-web-wallet)
 * [How to generate a new wallet or restore addresses from other wallets](#generate-new-wallet---restore-wallet)
-* [How to receive and send QTUM coins](#receive-and-send-qtum-coins)
+* [How to receive and send QTUM coins, sending with Ledger](#receive-and-send-qtum-coins)
 * [How to receive and send QRC20 tokens](#send-and-receive-qrc20-tokens)
 * [How to add a new QRC20 token to the wallet](#adding-a-qrc20-token)
 * [How to publish smart contracts](#how-to-publish-smart-contracts) (future)
@@ -43,6 +43,8 @@ Upon loading the web wallet, we get this very important warning, please take a f
 Welcome to the Qtum web wallet! As shown below the left panel gives a menu with various options to create or restore a wallet, and other actions. The top of the menu gives seven choices for creating or restoring a wallet. The bottom of the menu gives various operations and configuration choices. The center part of the wallet page presents forms for data entry, viewing and management of the wallet assets.
 
 The menu option **` Settings `** will allow selection of language and setting the wallet to work on Mainnet or Testnet. Select the desired network **before** restoring a wallet or entering a password.
+
+The Qtum web wallet works with Qtum standard addresses which begin with a "Q" (legacy), and is not compatible with SegWit (Segregated Witness) addresses that begin with an "M" (p2sh-segwit) or "qc1" (bech32).
 
 ***
 
@@ -148,7 +150,7 @@ On the next _Restore from Ledger_ page, click on the green padlock icon to selec
 
 ![15. Choose Path Default EN](https://i.imgur.com/3IErrFG.jpg)
 
-On the _Default path m/44’/88’/0’/0_ page choose the address you want to use by clicking on the green padlock icon on that row. This will probably be the top row unless you made other address choices in the Ledger Live wallet.
+On the _Default path m/44'/88'/0'/0_ page choose the address you want to use by clicking on the green padlock icon on that row. This will probably be the top row unless you made other address choices in the Ledger Live wallet.
 
 ![16. Choose Address EN](https://i.imgur.com/2M4XSCb.jpg)
 
@@ -156,7 +158,7 @@ The _View Wallet Info_ page will be displayed. Notice that using the Ledger ther
 
 ![17. View Wallet Info EN](https://i.imgur.com/LiJRR7C.jpg)
 
-You can send QRC20 tokens to an address managed by the Ledger wallet, such as Ledger Live, but the Ledger wallet does not currently (August 2018) allow display or management of QRC20 tokens. You can use **` Restore from Ledger `** with the web wallet to display and manage QRC20 tokens held in your Ledger address, in which case the _View Wallet Info_ page will show these tokens:
+You can send QRC20 tokens to an address managed by the Ledger wallet, such as Ledger Live, but the Ledger wallet does not currently (November 2018) allow display or management of QRC20 tokens. You can use **` Restore from Ledger `** with the web wallet to display and manage QRC20 tokens held in your Ledger address, in which case the _View Wallet Info_ page will show these tokens:
 
 ![18. View Wallet Info QRC20 EN](https://i.imgur.com/PFktEEy.jpg)
 
@@ -182,7 +184,7 @@ The _Please enter address again (Double check)_ page will be displayed. Copy and
 
 ![21. Please enter address again... EN](https://i.imgur.com/db4zBHD.jpg)
 
-The _You are going to send…_ page will be displayed, after verifying the information click the blue **` CONFIRM `** button:
+The _You are going to send_ page will be displayed, after verifying the information click the blue **` CONFIRM `** button:
 
 ![22. You are going to send... EN](https://i.imgur.com/v3zoaka.jpg)
 
@@ -192,6 +194,40 @@ At the bottom of the screen you will see the green confirmation bar with a link 
 
 The _View Wallet Info_ page will display an _Unconfirmed balance_ for the amount being sent (+ fee). 
 After the transaction is published in the next block you can reload the wallet to see the updated balance and also see the transaction using the menu option **` View Wallet Txs `**.
+
+### Sending with Ledger
+
+Sending when the wallet has been restored from Ledger has a few more steps.
+
+From your receiving wallet or account, copy the receiving address. On the web wallet menu, click **` Send `** and paste the receiving address into the _Address*_ field, then enter the amount to send in the _Amount*_ field. You can leave the _Fee*_ field set at the default of 0.01 (or set a lower fee if you understand how to do this) and click the green **` CONFIRM `** button:
+
+![L1 Send Tokens](https://i.imgur.com/T7mIXiL.jpg)
+
+The _Please enter address again (Double check)_ page will be displayed. Copy and paste the receiving address into the _Address_ field and click the blue **` CONFIRM `** button: 
+
+![L2 Address again](https://i.imgur.com/qCeSZHH.jpg)
+
+You will see the _You are going to sendâ€¦ Please confirm tx on your ledgerâ€¦_ page:
+
+![L3 You are going to send](https://i.imgur.com/CbqxuWc.jpg)
+
+Provided you have connected the Ledger hardware wallet, entered the PIN code an selected the Qtum App, on the Ledger display you will see scrolling details of the transaction so you can confirm the address and amount:
+
+![L4 Address and amount](https://i.imgur.com/K8aYMas.jpg)
+
+On the Ledger, press the right button above the check mark on the display to confirm output #1, which is the main transaction, in this case sending 2.0 QTUM. You will also need to press this button again to confirm output #2, which is sending the change back to your wallet, and press the button a third time to confirm the overall transaction:
+
+![L5 Confirm output 1](https://i.imgur.com/3KDySJ0.jpg)
+
+Now on the web wallet, you will see the raw transaction on the _You are going to send_ page. After verifying the information click the blue **` CONFIRM `** button:
+
+![L6 You are going to send raw transaction](https://i.imgur.com/ugFkTS4.jpg)
+
+At the bottom of the screen you will see the green confirmation bar with a link to show the transaction in the Explorer:
+
+![L7 Successful send](https://i.imgur.com/fMas7Ld.jpg)
+
+The _View Wallet Info page_ will display an _Unconfirmed balance_ for the amount being sent (+ fee). After the transaction is published in the next block you can reload the wallet to see the updated balance and also see the transaction using the menu option **` View Wallet Txs `**.
 
 ***
 
@@ -215,7 +251,7 @@ To send QRC20 tokens you must have sufficient QTUM coins in the address tied to 
 
 # Adding a QRC20 Token
 
-The web wallet will has built-in capability for popular QRC20 tokens, and you can add additional tokens by entering the token’s smart contract information. For example, if you want to add the XYZ token, find that token on the explorer qtum.info, copy the contract _Address Hash_ field: 
+The web wallet will has built-in capability for popular QRC20 tokens, and you can add additional tokens by entering the token's smart contract information. For example, if you want to add the XYZ token, find that token on the explorer qtum.info, copy the contract _Address Hash_ field: 
 
 ![26. Copy Address Hash EN](https://i.imgur.com/fW00puB.jpg)
 
