@@ -564,13 +564,13 @@ Figure 2. System command line prompt</p>
 <p><img src="https://i.imgur.com/w8yGO2G.jpg" alt="2019-3 Help Command Mac">
 Figure 3. The help command</p>
 <h2 id="console-commands-hammerandwrench"><a name="console-commands-hammerandwrench" class="plugin-anchor" href="#console-commands-hammerandwrench"><i class="fa fa-link" aria-hidden="true"></i></a>Console Commands :hammer_and_wrench:</h2>
-<p>Console commands are given to a running Qtum Core wallet and provide additional information and control. Console commands and are required to operate the qtumd server wallet, which is a &#xEC;headless&#xEE; wallet with no graphical user interface.</p>
-<p>There are 136 console commands with some good references for the 112 inherited from bitcoin. There are 13 &#xEC;hidden&#xEE; commands that are used by developers and won&#xED;t show up in the &#xEC;help&#xEE; list.</p>
-<p>Commands can have required or optional parameters and more numerous parameters are entered in JSON (JavaScript Object Notation) format with escaped double quotes ( \&#xEE; ) as shown below.</p>
-<p>Common parameters for these commands are Qtum addresses, block hashes, contract addresses, etc. Some of the commands will have an optional parameter &#xEC;minconf&#xEE; (minimum confirmations) which allows you to get a response for a transaction or block that has at least that number of confirmations.</p>
+<p>Console commands are given to a running Qtum Core wallet and provide additional information and control. Console commands and are required to operate the qtumd server wallet, which is a &quot;headless&quot; wallet with no graphical user interface.</p>
+<p>There are 136 console commands with some good references for the 112 inherited from bitcoin. There are 13 &quot;hidden&quot; commands that are used by developers and won&#xED;t show up in the &quot;help&quot; list.</p>
+<p>Commands can have required or optional parameters and more numerous parameters are entered in JSON (JavaScript Object Notation) format with escaped double quotes ( \&quot; ) as shown below.</p>
+<p>Common parameters for these commands are Qtum addresses, block hashes, contract addresses, etc. Some of the commands will have an optional parameter &quot;minconf&quot; (minimum confirmations) which allows you to get a response for a transaction or block that has at least that number of confirmations.</p>
 <p>The chain query bitcoin API reference <a href="http://chainquery.com/bitcoin-api" target="_blank">http://chainquery.com/bitcoin-api</a> explains the parameters and gives examples with responses for the commands inherited from bitcoin. The bitcoin chain query API reverence gives 67 commands, of which 2 are not in Qtum (<code>estimatepriority</code>, <code>getgenerate</code>) and two (<code>gettransaction</code>, <code>walletpassphrase</code>) have an additional parameter for Qtum. See also <a href="https://bitcoin.org/en/developer-reference#remote-procedure-calls-rpcs" target="_blank">https://bitcoin.org/en/developer-reference#remote-procedure-calls-rpcs</a>.</p>
-<p>Advanced interfaces to the Qtum Core wallet (full node) can use these &#xEC;console commands&#xEE; as RPCs (Remote Procedure Calls) over a dedicated port connection to the node. To build an exchange hot wallet or server node for a mobile DAPP (Distributed Application) you can use RPCs, which follow these same console commands. The client node offers a JSON-RPC interface over HTTP sockets to perform various operational functions and to manage the local node.</p>
-<p>A quick comment on &#xEC;accounts&#xEE;. Accounts was an ill-fated way from bitcoin to track balances for what are really UTXO transaction-based values, and &#xEC;accounts&#xEE; are deprecated and will be phased out by version 0.18.</p>
+<p>Advanced interfaces to the Qtum Core wallet (full node) can use these &quot;console commands&quot; as RPCs (Remote Procedure Calls) over a dedicated port connection to the node. To build an exchange hot wallet or server node for a mobile DAPP (Distributed Application) you can use RPCs, which follow these same console commands. The client node offers a JSON-RPC interface over HTTP sockets to perform various operational functions and to manage the local node.</p>
+<p>A quick comment on &quot;accounts&quot;. Accounts was an ill-fated way from bitcoin to track balances for what are really UTXO transaction-based values, and &quot;accounts&quot; are deprecated and will be phased out by version 0.18.</p>
 <p>Here are some command groupings that are useful for various tasks:</p>
 <ul>
 <li>Peer connections: <code>getconnectioncount</code>, <code>getpeerinfo</code>, <code>addnodes</code>, <code>getnetworkinfo</code></li>
@@ -584,19 +584,19 @@ Figure 3. The help command</p>
 <p>See the startup commands on the qtum-qt wallet with Help &#xF1; Command line options:</p>
 <p><img src="https://i.imgur.com/CryGF13.jpg" alt="2019-4 Startup Commands Win">
 Figure 4. Startup commands</p>
-<p>and on the command line itself with &#xEC;qtumd -?&#xEE;:</p>
+<p>and on the command line itself with &quot;qtumd -?&quot;:</p>
 <p><img src="https://i.imgur.com/KCmxFaC.jpg" alt="2019-5 Startup Commands Command Line Win">
 Figure 5. Startup commands from the command line</p>
 <h2 id="console-commands-a---z"><a name="console-commands-a---z" class="plugin-anchor" href="#console-commands-a---z"><i class="fa fa-link" aria-hidden="true"></i></a>Console Commands A - Z</h2>
-<p>For these console commands documented below, responses are given for default parameters (Qtum version 0.16 &#xF1; winter 2018/2019). Commands marked DEPRECATED should not be used because they will be removed and replaced in future versions of the wallet, for example, commands using &#xEC;account&#xEE; will be removed in version 0.18.</p>
-<p>Using the command &#xEC;help \<command name\="">&#xEE; will give complete information about the command and relevant parameters, formatted in a way you can copy and paste (replacing the addresses, transactions IDs, etc., as required). The format below shows the command with parameters followed by the response, in some cases, parameters or responses are truncated with the term &#xEC;\<snip\>&#xEE;. Where noted, some commands only work with the regtest (Regression Test) network. Many commands will return &#xEC;null&#xEE; for qtum-qt and return nothing for command line systems.</snip\></p>
+<p>For these console commands documented below, responses are given for default parameters (Qtum version 0.16 &#xF1; winter 2018/2019). Commands marked DEPRECATED should not be used because they will be removed and replaced in future versions of the wallet, for example, commands using &quot;account&quot; will be removed in version 0.18.</p>
+<p>Using the command &quot;help \<command name\="">&quot; will give complete information about the command and relevant parameters, formatted in a way you can copy and paste (replacing the addresses, transactions IDs, etc., as required). The format below shows the command with parameters followed by the response, in some cases, parameters or responses are truncated with the term &quot;\<snip\>&quot;. Where noted, some commands only work with the regtest (Regression Test) network. Many commands will return &quot;null&quot; for qtum-qt and return nothing for command line systems.</snip\></p>
 <h3 id="abandontransaction-txid"><a name="abandontransaction-txid" class="plugin-anchor" href="#abandontransaction-txid"><i class="fa fa-link" aria-hidden="true"></i></a>abandontransaction &quot;txid&quot;</h3>
 <p>Works on transactions not in the blockchain or mempool, used in testing.</p>
 <pre><code>abandontransaction &quot;0cc99a30bc2064041ea4263835b4ed594ff500c56d6b14e4970aeee548e71389&quot;
 
 Transaction not eligible for abandonment (code -5)
 </code></pre><h3 id="abortrescan"><a name="abortrescan" class="plugin-anchor" href="#abortrescan"><i class="fa fa-link" aria-hidden="true"></i></a>abortrescan</h3>
-<p>Stops a wallet rescan triggered by a command such as <code>importprivkey</code>. This command can be issued by opening a 2nd command line window (where the first window is scanning), in which case the command will stop the scan and return &#xEC;true&#xEE;.</p>
+<p>Stops a wallet rescan triggered by a command such as <code>importprivkey</code>. This command can be issued by opening a 2nd command line window (where the first window is scanning), in which case the command will stop the scan and return &quot;true&quot;.</p>
 <pre><code>qtum-cli abortrescan
 
 true
@@ -616,7 +616,7 @@ addnode 35.197.138.163:3888 add
 addnode 35.226.31.206:3888 add
 addnode 35.200.130.53:3888 add
 addnode 35.192.54.161:3888 add
-</code></pre><p>Qtum-qt returns &#xEC;null&#xEE; after each (see Figure 6).</p>
+</code></pre><p>Qtum-qt returns &quot;null&quot; after each (see Figure 6).</p>
 <p><img src="https://i.imgur.com/RjRkiP8.jpg" alt="2019-6 addnode Mac">
 Figure 6. Entering the addnode command</p>
 <h3 id="addwitnessaddress-address--p2sh-"><a name="addwitnessaddress-address--p2sh-" class="plugin-anchor" href="#addwitnessaddress-address--p2sh-"><i class="fa fa-link" aria-hidden="true"></i></a>addwitnessaddress &quot;address&quot; ( p2sh )</h3>
@@ -626,7 +626,7 @@ Figure 6. Entering the addnode command</p>
 
 MHa57hGwD48SZQjh23MZbq24tFwTu7Q3c
 </code></pre><h3 id="backupwallet-destination"><a name="backupwallet-destination" class="plugin-anchor" href="#backupwallet-destination"><i class="fa fa-link" aria-hidden="true"></i></a>backupwallet &quot;destination&quot;</h3>
-<p>The destination can be a filename or path with a filename. The wallet must be fully decrypted (not just for staking only) for this command to work. qtum-qt will returns &#xEC;null&#xEE;, qtumd returns nothing. On Windows:</p>
+<p>The destination can be a filename or path with a filename. The wallet must be fully decrypted (not just for staking only) for this command to work. qtum-qt will returns &quot;null&quot;, qtumd returns nothing. On Windows:</p>
 <pre><code>backupwallet &quot;C:\Users\&lt;username&gt;\Desktop\Backups\backup2018-10-21.dat&quot;
 
 null
@@ -651,7 +651,7 @@ null
 </ol>
 <p>TO COME</p>
 <h3 id="clearbanned"><a name="clearbanned" class="plugin-anchor" href="#clearbanned"><i class="fa fa-link" aria-hidden="true"></i></a>clearbanned</h3>
-<p>Clear all banned nodes IPs. Qtum-qt returns &#xEC;null&#xEE;, qtumd gives no response.</p>
+<p>Clear all banned nodes IPs. Qtum-qt returns &quot;null&quot;, qtumd gives no response.</p>
 <pre><code>clearbanned
 
 null
@@ -721,12 +721,12 @@ null
   &quot;p2sh&quot;: &quot;mKa7c52cX97eK4vdk35jV442p3j59hk3R&quot;
 }
 </code></pre><h3 id="disconnectnode-address-nodeid"><a name="disconnectnode-address-nodeid" class="plugin-anchor" href="#disconnectnode-address-nodeid"><i class="fa fa-link" aria-hidden="true"></i></a>disconnectnode &quot;[address]&quot; [nodeid]</h3>
-<p>Disconnects a peer (node) using either the IP address or node number. Qtum-qt will return &#xEC;null&#xEE;, qtumd will return nothing.</p>
+<p>Disconnects a peer (node) using either the IP address or node number. Qtum-qt will return &quot;null&quot;, qtumd will return nothing.</p>
 <pre><code>disconnectnode &quot;35.198.0.76:3888&quot;
 
 null
 </code></pre><h3 id="dumpprivkey-address"><a name="dumpprivkey-address" class="plugin-anchor" href="#dumpprivkey-address"><i class="fa fa-link" aria-hidden="true"></i></a>dumpprivkey &quot;address&quot;</h3>
-<p>Displays the private key for a given address in WIF (Wallet Import Format). The wallet must be unlocked (and not for &#xEC;staking only&#xEE;) for this command to work.</p>
+<p>Displays the private key for a given address in WIF (Wallet Import Format). The wallet must be unlocked (and not for &quot;staking only&quot;) for this command to work.</p>
 <pre><code>dumpprivkey &quot;QXfSbN8DaT21Z6L3Pw52UexuP8zW4mY6h&quot;
 
 L3vaEHms4VpciP85UsufQf3Gfa9p5gatBGm6Z4rD8FxzFLdXE5V
@@ -762,10 +762,10 @@ L3vaEHms4VpciP85UsufQf3Gfa9p5gatBGm6Z4rD8FxzFLdXE5V
 
   extended private masterkey: &lt;snip&gt;
 </code></pre><h3 id="encryptwallet-passphrase"><a name="encryptwallet-passphrase" class="plugin-anchor" href="#encryptwallet-passphrase"><i class="fa fa-link" aria-hidden="true"></i></a>encryptwallet &quot;passphrase&quot;</h3>
-<p>Encrypts the wallet with &#xEC;passphrase&#xEE; for first-time encryption. After encryption, any calls that interact with private keys such as sending or signing will require passphrase entry to enable these functions. See also <code>walletpassphrase</code>, <code>walletlock</code> and <code>walletpassphrasechange</code>. After this command runs, the wallet will shut down.</p>
+<p>Encrypts the wallet with &quot;passphrase&quot; for first-time encryption. After encryption, any calls that interact with private keys such as sending or signing will require passphrase entry to enable these functions. See also <code>walletpassphrase</code>, <code>walletlock</code> and <code>walletpassphrasechange</code>. After this command runs, the wallet will shut down.</p>
 <pre><code>encryptwallet &quot;you should always use a long and strong passphrase&quot;
 </code></pre><p>(wallet exits)</p>
-<h3 id="echo-&#xEC;message&#xEE;"><a name="echo-&#xEC;message&#xEE;" class="plugin-anchor" href="#echo-&#xEC;message&#xEE;"><i class="fa fa-link" aria-hidden="true"></i></a>echo &#xEC;message&#xEE;</h3>
+<h3 id="echo-message"><a name="echo-message" class="plugin-anchor" href="#echo-message"><i class="fa fa-link" aria-hidden="true"></i></a>echo &quot;message&quot;</h3>
 <p>Hidden command. Simply echo back the input arguments. This command is for testing.</p>
 <p>The difference between <code>echo</code> and <code>echojson</code> is that <code>echojson</code> has argument conversion enabled in the client-side table in qtum-cli and the GUI. There is no server-side difference. Here we echo the parameters used to setup a multisig address.</p>
 <pre><code>echo &quot;[\&quot;qghwDvb1pyJoqoAD2ESMTevvvjUfNvReDn\&quot;,\&quot;qfKr7vXdmroHi61XUUHedXvgV2mDx9Kudb\&quot;]&quot;
@@ -773,7 +773,6 @@ L3vaEHms4VpciP85UsufQf3Gfa9p5gatBGm6Z4rD8FxzFLdXE5V
 [
   &quot;[\&quot;qghwDvb1pyJoqoAD2ESMTevvvjUfNvReDn\&quot;,\&quot;qfKr7vXdmroHi61XUUHedXvgV2mDx9Kudb\&quot;]&quot;
 ]
-&#x200B;`
 </code></pre><h3 id="echojson-message"><a name="echojson-message" class="plugin-anchor" href="#echojson-message"><i class="fa fa-link" aria-hidden="true"></i></a>echojson &quot;message&quot;</h3>
 <p>Hidden command. Simply echo back the input arguments. This command is for testing.</p>
 <p>The difference between <code>echo</code> and <code>echojson</code> is that <code>echojson</code> has argument conversion enabled in the client-side table in qtum-cli and the GUI. There is no server-side difference. Here we echo the parameters used to setup a multisig address.</p>
@@ -1034,7 +1033,7 @@ a18adc4fb204fe1818c30e3003fa8c8bf1833692d6df7dbb66d1569d27b18f8e
   &quot;signature&quot;: &quot;3044022019ef654d26e49f7bfa8cd2793fb4db7ab9017f82ec480f723230633a68757fb0022006d9137a72b61faf249587dcc323c1b097bfd1c923fba6be543d4d5227d4fc15&quot;
 }
 </code></pre><h3 id="getblockchaininfo"><a name="getblockchaininfo" class="plugin-anchor" href="#getblockchaininfo"><i class="fa fa-link" aria-hidden="true"></i></a>getblockchaininfo</h3>
-<p>Returns information about the blockchain. Here &#xEC;blocks&#xEE; equals &#xEC;headers&#xEE;, so this wallet is synced to the latest blocks. &#xEC;moneysupply&#xEE; gives the total QTUM created (genesis blocks + all block rewards). &#xEC;size_on_disk&#xEE; gives the local storage size for blocks.</p>
+<p>Returns information about the blockchain. Here &quot;blocks&quot; equals &quot;headers&quot;, so this wallet is synced to the latest blocks. &quot;moneysupply&quot; gives the total QTUM created (genesis blocks + all block rewards). &quot;size_on_disk&quot; gives the local storage size for blocks.</p>
 <pre><code>getblockchaininfo
 
 {
@@ -1175,7 +1174,7 @@ Figure 7. The <code>getblockchaininfo</code> command</p>
   &quot;height&quot;: 265308
 }
 </code></pre><h3 id="getchaintips"><a name="getchaintips" class="plugin-anchor" href="#getchaintips"><i class="fa fa-link" aria-hidden="true"></i></a>getchaintips</h3>
-<p>Return information about all known tips in the block tree, including the main chain as well as orphaned branches. Will display chain tips since the wallet launched because only the main chain will be synced from other peers when this wallet launched. The status &#xEC;active&#xEE; is the mainchain, &#xEC;valid-fork&#xEE; are orphan blocks, and &#xEC;valid headers&#xEE; are not on the blockchain.</p>
+<p>Return information about all known tips in the block tree, including the main chain as well as orphaned branches. Will display chain tips since the wallet launched because only the main chain will be synced from other peers when this wallet launched. The status &quot;active&quot; is the mainchain, &quot;valid-fork&quot; are orphan blocks, and &quot;valid headers&quot; are not on the blockchain.</p>
 <pre><code>getchaintips
 
 [
@@ -1205,13 +1204,13 @@ Figure 7. The <code>getblockchaininfo</code> command</p>
 },
 &lt;snip&gt;
 </code></pre><h3 id="getchaintxstats--nblocks-blockhash-"><a name="getchaintxstats--nblocks-blockhash-" class="plugin-anchor" href="#getchaintxstats--nblocks-blockhash-"><i class="fa fa-link" aria-hidden="true"></i></a>getchaintxstats ( nblocks blockhash )</h3>
-<p>Compute statistics about the total number and rate of transactions in the chain, where the default &#xEC;window&#xEE; is the last one month.</p>
+<p>Compute statistics about the total number and rate of transactions in the chain, where the default &quot;window&quot; is the last one month.</p>
 <ul>
-<li>&#xEC;time&#xEE; gives the Unix timestamp for the last block in the window</li>
-<li>&#xEC;txcount&#xEE; gives the total transactions from the launch of the blockchain</li>
-<li>&#xEC;window_block_count&#xEE; gives the number of blocks in the window (675 TX/day * 30 days)</li>
-<li>&#xEC;window_interval&#xEE; gives the window length in seconds</li>
-<li>&#xEC;txrate&#xEE; gives the average transactions per second (TPS) in the window</li>
+<li>&quot;time&quot; gives the Unix timestamp for the last block in the window</li>
+<li>&quot;txcount&quot; gives the total transactions from the launch of the blockchain</li>
+<li>&quot;window_block_count&quot; gives the number of blocks in the window (675 TX/day * 30 days)</li>
+<li>&quot;window_interval&quot; gives the window length in seconds</li>
+<li>&quot;txrate&quot; gives the average transactions per second (TPS) in the window</li>
 </ul>
 <pre><code>getchaintxstats
 
@@ -1243,7 +1242,7 @@ Figure 7. The <code>getblockchaininfo</code> command</p>
 9467c4cbd6c4bb736cf4724de25a298bc529bfa3
 </code></pre><p>See <code>fromhexaddress</code> to convert a hex address to base58 pubkeyhash.</p>
 <h3 id="getinfo"><a name="getinfo" class="plugin-anchor" href="#getinfo"><i class="fa fa-link" aria-hidden="true"></i></a>getinfo</h3>
-<p>Hidden command. DEPERCATED. Command line interfaces (but not the qtum-qt GUI wallet) may invoke this command using <code>-getinfo</code>. The wallet below has a computer clock in sync with Qtum network time (timeoffset = 0), has 8 peer connections, and is unlocked for a long time (&#xEC;unlocked until&#xEE; is Unix epoch time in seconds).</p>
+<p>Hidden command. DEPERCATED. Command line interfaces (but not the qtum-qt GUI wallet) may invoke this command using <code>-getinfo</code>. The wallet below has a computer clock in sync with Qtum network time (timeoffset = 0), has 8 peer connections, and is unlocked for a long time (&quot;unlocked until&quot; is Unix epoch time in seconds).</p>
 <pre><code>qtum-cli -getinfo
 
 {
@@ -1336,7 +1335,7 @@ Figure 7. The <code>getblockchaininfo</code> command</p>
   &quot;minrelaytxfee&quot;: 0.00400000
 }
 </code></pre><h3 id="getmininginfo"><a name="getmininginfo" class="plugin-anchor" href="#getmininginfo"><i class="fa fa-link" aria-hidden="true"></i></a>getmininginfo</h3>
-<p>Gives mining information including network weight (&#xEC;netstakeweight&#xEE; of 12.27 million shown below) and wallet weight (&#xEC;stakeweight&#xEE; of 107.6).</p>
+<p>Gives mining information including network weight (&quot;netstakeweight&quot; of 12.27 million shown below) and wallet weight (&quot;stakeweight&quot; of 107.6).</p>
 <pre><code>getmininginfo
 
 {
@@ -1427,7 +1426,7 @@ Figure 7. The <code>getblockchaininfo</code> command</p>
   &quot;warnings&quot;: &quot;&quot;
 }
 </code></pre><h3 id="getnewaddress--account-addresstype-"><a name="getnewaddress--account-addresstype-" class="plugin-anchor" href="#getnewaddress--account-addresstype-"><i class="fa fa-link" aria-hidden="true"></i></a>getnewaddress ( &quot;account&quot; &quot;address_type&quot; )</h3>
-<p>Get a new receiving address, with types &#xEC;legacy&#xEE;, &#xEC;p2sh-segwit&#xEE; or &#xEC;bech32&#xEE;. Qtum Mainnet legacy addresses start with a &#xEC;Q&#xEE;, and SegWit addresses will start with an &quot;M&quot; for p2sh-segwit and &quot;qc1&quot; for bech32. Qtum Testnet legacy addresses start with a &#xEC;q&#xEE;, and SegWit addresses will start with an &quot;m&quot; for p2sh-segwit and &quot;tq1&quot; for bech32. Here we get a new Mainnet SegWit bech32 address:</p>
+<p>Get a new receiving address, with types &quot;legacy&quot;, &quot;p2sh-segwit&quot; or &quot;bech32&quot;. Qtum Mainnet legacy addresses start with a &quot;Q&quot;, and SegWit addresses will start with an &quot;M&quot; for p2sh-segwit and &quot;qc1&quot; for bech32. Qtum Testnet legacy addresses start with a &quot;q&quot;, and SegWit addresses will start with an &quot;m&quot; for p2sh-segwit and &quot;tq1&quot; for bech32. Here we get a new Mainnet SegWit bech32 address:</p>
 <pre><code>getnewaddress &quot;&quot; &quot;bech32&quot;
 
 qc1q52g2c283225pfdm2wqdsk45aufm4urtcdp9d5
@@ -1571,7 +1570,7 @@ MBncZ4Z8a71UrgsS5QqJfxkDbun5wHy6d
   &lt;snip&gt;
 ]
 </code></pre><h3 id="getrawtransaction-txid--verbose-blockhash-"><a name="getrawtransaction-txid--verbose-blockhash-" class="plugin-anchor" href="#getrawtransaction-txid--verbose-blockhash-"><i class="fa fa-link" aria-hidden="true"></i></a>getrawtransaction &quot;txid&quot; ( verbose &quot;blockhash&quot; )</h3>
-<p>Get the data from a transaction, either as raw hex data or formatted (use &#xEC;true&#xEE;). Here formatted data is shown.</p>
+<p>Get the data from a transaction, either as raw hex data or formatted (use &quot;true&quot;). Here formatted data is shown.</p>
 <pre><code>getrawtransaction cbd113e947d5c1b3fccae149d0d16c82e3bfe05c4f2c204c8bc65ae0697bbd64 true
 
 {
@@ -1626,7 +1625,7 @@ MBncZ4Z8a71UrgsS5QqJfxkDbun5wHy6d
   &quot;time&quot;: 1542415856,
   &quot;blocktime&quot;: 1542415856
 }
-</code></pre><p>The transaction above has one &#xEC;vin&#xEE; UTXO input which provides the previous transaction to be spent and two outputs &#xEC;vout&#xEE;. The first output &#xEC;vout&#xEE; sends 300.685401 to a receiving address, the second sends 11769.78668720 QTUM to a change address. The difference in value between the inputs and outputs is the transaction fee.</p>
+</code></pre><p>The transaction above has one &quot;vin&quot; UTXO input which provides the previous transaction to be spent and two outputs &quot;vout&quot;. The first output &quot;vout&quot; sends 300.685401 to a receiving address, the second sends 11769.78668720 QTUM to a change address. The difference in value between the inputs and outputs is the transaction fee.</p>
 <h3 id="getreceivedbyaccount-account--minconf-"><a name="getreceivedbyaccount-account--minconf-" class="plugin-anchor" href="#getreceivedbyaccount-account--minconf-"><i class="fa fa-link" aria-hidden="true"></i></a>getreceivedbyaccount &quot;account&quot; ( minconf )</h3>
 <p>DEPRECATED. Returns the total amount received for an account name, which could be spent or unspent transactions, for transactions with at least minconf confirmations (default is 1 confirmation).</p>
 <pre><code>getreceivedbyaccount &quot;MyAccount1&quot;
@@ -1640,16 +1639,16 @@ MBncZ4Z8a71UrgsS5QqJfxkDbun5wHy6d
 </code></pre><h3 id="getstakinginfo"><a name="getstakinginfo" class="plugin-anchor" href="#getstakinginfo"><i class="fa fa-link" aria-hidden="true"></i></a>getstakinginfo</h3>
 <p>Returns staking-related information.</p>
 <ul>
-<li>&#xEC;enabled&#xEE;: true means the wallet was launched with staking allowed (command line option <code>-staking=false</code> was not used)</li>
-<li>&#xEC;staking&#xEE;: true means the wallet is staking (decrypted, mature coins, blockchain synced)</li>
-<li>&#xEC;errors&#xEE; gives various errors (rare)</li>
-<li>&#xEC;currentblocktx&#xEE; gives the number of transactions in a block mined by the wallet</li>
-<li>&#xEC;pooledtx&#xEE; gives the number of transactions waiting in the mempool</li>
-<li>&#xEC;difficulty&#xEE; gives the PoS target difficulty for the current block</li>
-<li>&#xEC;search-interval&#xEE; gives either the time in seconds since the wallet began staking or the time since the wallet&#xED;s most recent block reward, here one day and one minute</li>
-<li>&#xEC;weight&#xEE; gives the wallet weight in Satoshis, move the decimal point eight digits to the left to give these weights in units, here wallet weight is 148 QTUM and the network weight is 12.23 million</li>
-<li>&#xEC;netstakeweight&#xEE; gives the estimated network weight</li>
-<li>&#xEC;expected time&#xEE; gives an estimate of the average expected time to a block reward in seconds, here 4.59 months</li>
+<li>&quot;enabled&quot;: true means the wallet was launched with staking allowed (command line option <code>-staking=false</code> was not used)</li>
+<li>&quot;staking&quot;: true means the wallet is staking (decrypted, mature coins, blockchain synced)</li>
+<li>&quot;errors&quot; gives various errors (rare)</li>
+<li>&quot;currentblocktx&quot; gives the number of transactions in a block mined by the wallet</li>
+<li>&quot;pooledtx&quot; gives the number of transactions waiting in the mempool</li>
+<li>&quot;difficulty&quot; gives the PoS target difficulty for the current block</li>
+<li>&quot;search-interval&quot; gives either the time in seconds since the wallet began staking or the time since the wallet&#xED;s most recent block reward, here one day and one minute</li>
+<li>&quot;weight&quot; gives the wallet weight in Satoshis, move the decimal point eight digits to the left to give these weights in units, here wallet weight is 148 QTUM and the network weight is 12.23 million</li>
+<li>&quot;netstakeweight&quot; gives the estimated network weight</li>
+<li>&quot;expected time&quot; gives an estimate of the average expected time to a block reward in seconds, here 4.59 months</li>
 </ul>
 <pre><code>getstakinginfo
 
@@ -1765,7 +1764,7 @@ MBncZ4Z8a71UrgsS5QqJfxkDbun5wHy6d
   }
 ]
 </code></pre><h3 id="gettxout-txid-n--includemempool-"><a name="gettxout-txid-n--includemempool-" class="plugin-anchor" href="#gettxout-txid-n--includemempool-"><i class="fa fa-link" aria-hidden="true"></i></a>gettxout &quot;txid&quot; n ( include_mempool )</h3>
-<p>Return details about an unspent transaction output. Has more detail than <code>listunspent</code>. Will return &#xEC;null&#xEE; if the transaction has been spent.</p>
+<p>Return details about an unspent transaction output. Has more detail than <code>listunspent</code>. Will return &quot;null&quot; if the transaction has been spent.</p>
 <pre><code>gettxout 9ebd45e58980ef1278d1ba300b1504aaf57ae0239a3cf899bf3d37866dda175 1
 
 {
@@ -1790,7 +1789,7 @@ MBncZ4Z8a71UrgsS5QqJfxkDbun5wHy6d
 
 000000201cb576b9&lt;snip 307 bytes&gt;e36ab6c678b8311b
 </code></pre><h3 id="gettxoutsetinfo"><a name="gettxoutsetinfo" class="plugin-anchor" href="#gettxoutsetinfo"><i class="fa fa-link" aria-hidden="true"></i></a>gettxoutsetinfo</h3>
-<p>Returns statistics about the whole blockchain unspent UTXOs, may take some time to return. &#xEC;total_amount&#xEE; gives the current total supply (genesis blocks + total block rewards)</p>
+<p>Returns statistics about the whole blockchain unspent UTXOs, may take some time to return. &quot;total_amount&quot; gives the current total supply (genesis blocks + total block rewards)</p>
 <pre><code>gettxoutsetinfo
 
 {
@@ -1811,19 +1810,19 @@ MBncZ4Z8a71UrgsS5QqJfxkDbun5wHy6d
 </code></pre><h3 id="getwalletinfo"><a name="getwalletinfo" class="plugin-anchor" href="#getwalletinfo"><i class="fa fa-link" aria-hidden="true"></i></a>getwalletinfo</h3>
 <p>Returns information about the wallet:</p>
 <ul>
-<li>&#xEC;walletname&quot; &#xF1; the name of the wallet.dat file currently loaded</li>
-<li>&quot;walletversion&quot; &#xF1; not the software client version, use <code>getnetworkinfo</code> to check this</li>
-<li>&quot;balance&quot; &#xF1; balance in QTUM</li>
-<li>&quot;stake&quot; &#xF1; any balance currently committed to a stake</li>
-<li>&quot;unconfirmed_balance&quot; &#xF1; any balance that hasn&#xED;t been published in the next blocks</li>
-<li>&quot;immature_balance&quot; &#xF1; any coinbase (Proof of Work) balance that does not have 500 confirmations, seen only for regtest.</li>
-<li>&quot;txcount&quot; &#xF1; the total number of transactions in the wallet</li>
-<li>&quot;keypoololdest&quot; &#xF1; the Unix epoch timestamp in seconds for the oldest key in the key pool</li>
+<li>&quot;walletname&quot; - the name of the wallet.dat file currently loaded</li>
+<li>&quot;walletversion&quot; - not the software client version, use <code>getnetworkinfo</code> to check this</li>
+<li>&quot;balance&quot; - balance in QTUM</li>
+<li>&quot;stake&quot; - any balance currently committed to a stake</li>
+<li>&quot;unconfirmed_balance&quot; - any balance that hasn&#xED;t been published in the next blocks</li>
+<li>&quot;immature_balance&quot; - any coinbase (Proof of Work) balance that does not have 500 confirmations, seen only for regtest.</li>
+<li>&quot;txcount&quot; - the total number of transactions in the wallet</li>
+<li>&quot;keypoololdest&quot; - the Unix epoch timestamp in seconds for the oldest key in the key pool</li>
 <li>&quot;keypoolsize&quot; - how many new keys are pre-generated</li>
 <li>&quot;keypoolsize_hd_internal&quot; - how many new keys are pre-generated for internal use (used for change addresses)</li>
-<li>&quot;unlocked_until&quot; &#xF1; the Unix epoch time in seconds that the wallet is unlocked, or 0 if the wallet is locked, this field is omitted for unencrypted wallets.</li>
-<li>&quot;paytxfee&quot; &#xF1; the transaction fee in QTUM per 1,000 bytes</li>
-<li>&quot;hdmasterkeyid&quot; &#xF1; a Hash 160 of the hierarchical deterministic (HD) master public key, this field is omitted if HD is not enabled</li>
+<li>&quot;unlocked_until&quot; - the Unix epoch time in seconds that the wallet is unlocked, or 0 if the wallet is locked, this field is omitted for unencrypted wallets.</li>
+<li>&quot;paytxfee&quot; - the transaction fee in QTUM per 1,000 bytes</li>
+<li>&quot;hdmasterkeyid&quot; - a Hash 160 of the hierarchical deterministic (HD) master public key, this field is omitted if HD is not enabled</li>
 </ul>
 <pre><code>getwalletinfo
 {
@@ -1853,7 +1852,7 @@ getblockchaininfo
 getblockcount
 &lt;snip&gt;
 </code></pre><h3 id="importaddress-address--label-rescan-p2sh-"><a name="importaddress-address--label-rescan-p2sh-" class="plugin-anchor" href="#importaddress-address--label-rescan-p2sh-"><i class="fa fa-link" aria-hidden="true"></i></a>importaddress &quot;address&quot; ( &quot;label&quot; rescan p2sh )</h3>
-<p>Adds a 34-character Qtum address or 66 hex character public key address that can be watched as if it were in your wallet but cannot be used to spend. The wallet will rescan after entering this command and should be backed up after adding addresses. Qtum-qt returns &#xEC;null&#xEE; and displays the &#xEC;Watch-only&#xEE; balance, qtumd returns nothing.</p>
+<p>Adds a 34-character Qtum address or 66 hex character public key address that can be watched as if it were in your wallet but cannot be used to spend. The wallet will rescan after entering this command and should be backed up after adding addresses. Qtum-qt returns &quot;null&quot; and displays the &quot;Watch-only&quot; balance, qtumd returns nothing.</p>
 <pre><code>importaddress QaL29jcCZ39pWcA334dA4BN3peVhnc42D
 
 null
@@ -1873,7 +1872,7 @@ importmulti(&#xD6;)
   }
 ]
 </code></pre><h3 id="importprivkey-qtumprivkey--label---rescan-"><a name="importprivkey-qtumprivkey--label---rescan-" class="plugin-anchor" href="#importprivkey-qtumprivkey--label---rescan-"><i class="fa fa-link" aria-hidden="true"></i></a>importprivkey &quot;qtumprivkey&quot; ( &quot;label&quot; ) ( rescan )</h3>
-<p>Adds a WIF private key to your wallet, for example as returned by dumpprivkey or from another Qtum wallet. The wallet must be unlocked and requires a new wallet backup afterwards. The wallet will rescan for a few minutes to add any balance from the new address, and return &#xEC;null&#xEE; if successful.</p>
+<p>Adds a WIF private key to your wallet, for example as returned by dumpprivkey or from another Qtum wallet. The wallet must be unlocked and requires a new wallet backup afterwards. The wallet will rescan for a few minutes to add any balance from the new address, and return &quot;null&quot; if successful.</p>
 <pre><code>importprivkey cThA5YBGQggmpjSsBFLT1NXR18Fk16YBNd1kCVoERjbQ4d4TRMFf
 
 null
@@ -1881,29 +1880,29 @@ null
 <p>Imports funds without rescan. Corresponding address or script must previously be included in wallet. Aimed towards pruned wallets. The end-user is responsible to import additional transactions that subsequently spend the imported outputs or rescan after the point in the blockchain the transaction is included.</p>
 <p>Example TO COME.</p>
 <h3 id="importpubkey-pubkey--label-rescan-"><a name="importpubkey-pubkey--label-rescan-" class="plugin-anchor" href="#importpubkey-pubkey--label-rescan-"><i class="fa fa-link" aria-hidden="true"></i></a>importpubkey &quot;pubkey&quot; ( &quot;label&quot; rescan )</h3>
-<p>Adds a public key that can be watched as if it were in your wallet but cannot be used to spend. The public key is 66 characters hex, and can be obtained using the <code>validateaddress</code> command. After entering this command, the wallet will rescan for a few minutes, qtum-qt returns &#xEC;null&#xEE; and qtumd returns nothing. The wallet should be backed up after importing a public key.</p>
+<p>Adds a public key that can be watched as if it were in your wallet but cannot be used to spend. The public key is 66 characters hex, and can be obtained using the <code>validateaddress</code> command. After entering this command, the wallet will rescan for a few minutes, qtum-qt returns &quot;null&quot; and qtumd returns nothing. The wallet should be backed up after importing a public key.</p>
 <pre><code>importpubkey 0381dc63bc14d32743a7741dc6a2993b8384dc3aa848332194bc851ff2a371b827
 
 null
 </code></pre><h3 id="importwallet-filename"><a name="importwallet-filename" class="plugin-anchor" href="#importwallet-filename"><i class="fa fa-link" aria-hidden="true"></i></a>importwallet &quot;filename&quot;</h3>
-<p>Imports keys from a wallet dump file (see <code>dumpwallet</code>). Requires a new wallet backup after this command. Use the full path to the dump file. Qtum-qt will show a status of &#xEC;Importing&#xD6;&#xEE; for a while, then &#xEC;Scanning&#xEE; as it rescans the blockchain. This command may take five minutes or more to return, and the wallet may appear to freeze during this time.</p>
-<p>On a PC with the dump file in a folder &#xEC;Backups&#xEE; on the Desktop:</p>
+<p>Imports keys from a wallet dump file (see <code>dumpwallet</code>). Requires a new wallet backup after this command. Use the full path to the dump file. Qtum-qt will show a status of &quot;Importing&quot; for a while, then &quot;Scanning&quot; as it rescans the blockchain. This command may take five minutes or more to return, and the wallet may appear to freeze during this time.</p>
+<p>On a PC with the dump file in a folder &quot;Backups&quot; on the Desktop:</p>
 <pre><code>importwallet &quot;C:\Users\&lt;username&gt;\Desktop\Backups\dump 2019-01-14.txt&quot;
 
 null
 </code></pre><h3 id="invalidateblock-blockhash"><a name="invalidateblock-blockhash" class="plugin-anchor" href="#invalidateblock-blockhash"><i class="fa fa-link" aria-hidden="true"></i></a>invalidateblock &quot;blockhash&quot;</h3>
-<p>Hidden command. Permanently marks a block as invalid, as if it violated a consensus rule. Used for software testing or in some rare manual blockchain forking scenarios. Use <code>reconsiderblock</code> to reverse this command. Returns &#xEC;null&#xEE; if successful.</p>
+<p>Hidden command. Permanently marks a block as invalid, as if it violated a consensus rule. Used for software testing or in some rare manual blockchain forking scenarios. Use <code>reconsiderblock</code> to reverse this command. Returns &quot;null&quot; if successful.</p>
 <pre><code>invalidateblock 263f7ab042135cb0e5479afd8385a237f8eb44b86135d29b34eb0fa82cc815f
 
 null
 </code></pre><h3 id="keypoolrefill--newsize-"><a name="keypoolrefill--newsize-" class="plugin-anchor" href="#keypoolrefill--newsize-"><i class="fa fa-link" aria-hidden="true"></i></a>keypoolrefill ( newsize )</h3>
-<p>Refills the key pool with new private keys, with a default size of 100. The normal size of the keypool is 1,000 and the wallet opportunistically fills the keypool as addresses are used, so this command should use a 1,100 size, etc., to be meaningful. The wallet must be unlocked. qtum-qt returns &#xEC;null&#xEE;, qtumd returns nothing.</p>
+<p>Refills the key pool with new private keys, with a default size of 100. The normal size of the keypool is 1,000 and the wallet opportunistically fills the keypool as addresses are used, so this command should use a 1,100 size, etc., to be meaningful. The wallet must be unlocked. qtum-qt returns &quot;null&quot;, qtumd returns nothing.</p>
 <pre><code>keypoolrefill 1100
 
 null
 </code></pre><h3 id="listaccounts--minconf-includewatchonly"><a name="listaccounts--minconf-includewatchonly" class="plugin-anchor" href="#listaccounts--minconf-includewatchonly"><i class="fa fa-link" aria-hidden="true"></i></a>listaccounts ( minconf include_watchonly)</h3>
 <p>DEPRECATED. Returns information about account names and account balances. Gives the balance in Satoshis (QTUM x 0.00000001), including the default undefined account.</p>
-<p>This &#xEC;account&#xEE; was an attempt to manually track balances from bitcoin which will be removed by version 0.17, because it doesn&#xED;t work well, for example, returning negative values:</p>
+<p>This &quot;account&quot; was an attempt to manually track balances from bitcoin which will be removed by version 0.17, because it doesn&apos;t work well, for example, returning negative values:</p>
 <pre><code>listaccounts
 {
   &quot;&quot;: -20077.14454684,
@@ -2064,7 +2063,7 @@ null
   &quot;lastblock&quot;: &quot;835ca632a5bba30a0c836dfa497a43e5316acdf8b8437e42bcfa7e3554a61af&quot;
 }
 </code></pre><h3 id="listtransactions--account-count-skip-includewatchonly"><a name="listtransactions--account-count-skip-includewatchonly" class="plugin-anchor" href="#listtransactions--account-count-skip-includewatchonly"><i class="fa fa-link" aria-hidden="true"></i></a>listtransactions ( &quot;account&quot; count skip include_watchonly)</h3>
-<p>Returns up to &apos;count&apos; most recent transactions for your wallet (default = 10), with various options. Using &#xEC;account&#xEE; is DEPRECATED.</p>
+<p>Returns up to &apos;count&apos; most recent transactions for your wallet (default = 10), with various options. Using &quot;account&quot; is DEPRECATED.</p>
 <pre><code>listtransactions
 
 [
@@ -2140,7 +2139,7 @@ null
   &lt;snip&gt;
 ]
 </code></pre><h3 id="listwallets"><a name="listwallets" class="plugin-anchor" href="#listwallets"><i class="fa fa-link" aria-hidden="true"></i></a>listwallets</h3>
-<p>Gives the currently loaded wallet.dat file, usually &#xEC;wallet.dat&#xEE; unless you can load a different file with &#xEC;Restore Wallet&#xEE;.</p>
+<p>Gives the currently loaded wallet.dat file, usually &quot;wallet.dat&quot; unless you can load a different file with &quot;Restore Wallet&quot;.</p>
 <pre><code>listwallets
 
 [
@@ -2156,7 +2155,7 @@ true
 </code></pre><h3 id="logging----"><a name="logging----" class="plugin-anchor" href="#logging----"><i class="fa fa-link" aria-hidden="true"></i></a>logging ( <include> <exclude> )</exclude></include></h3>
 <p>Gets and sets the logging configuration for the debug.log file. When called without an argument, returns the list of categories with status that are currently being debug logged or not. When called with arguments, adds or removes categories from debug logging. The arguments are evaluated in order &quot;include&quot; then &quot;exclude&quot;. If an item is both included and excluded, it will thus end up being excluded.</p>
 <p>The valid logging categories are: net, tor, mempool, http, bench, zmq, db, rpc, estimatefee, addrman, selectcoins, reindex, cmpctblock, rand, prune, proxy, mempoolrej, libevent, coindb, qt, leveldb, coinstake, and http-poll.</p>
-<p>Here we turn on logging for &#xEC;mempool&#xEE; and &#xEC;mempoolrej&#xEE; (they are listed first for &#xEC;include&#xEE;) and turn off &#xEC;http&#xEE;. Returns the current debug logging status.</p>
+<p>Here we turn on logging for &quot;mempool&quot; and &quot;mempoolrej&quot; (they are listed first for &quot;include&quot;) and turn off &quot;http&quot;. Returns the current debug logging status.</p>
 <pre><code>logging &quot;[\&quot;mempool\&quot;, \&quot;mempoolrej\&quot;]&quot; &quot;[\&quot;http\&quot;]&quot;
 
 {
@@ -2185,22 +2184,22 @@ true
   &quot;http-poll&quot;: 0
 }
 </code></pre><h3 id="move-fromaccount-toaccount-amount--minconf-comment-"><a name="move-fromaccount-toaccount-amount--minconf-comment-" class="plugin-anchor" href="#move-fromaccount-toaccount-amount--minconf-comment-"><i class="fa fa-link" aria-hidden="true"></i></a>move &quot;fromaccount&quot; &quot;toaccount&quot; amount ( minconf &quot;comment&quot; )</h3>
-<p>DEPRECATED. Move a specified amount from one account in your wallet to another. Returns &#xEC;true&#xEE; if the command can be parsed, whether or not the accounts exist or the movement took place.</p>
+<p>DEPRECATED. Move a specified amount from one account in your wallet to another. Returns &quot;true&quot; if the command can be parsed, whether or not the accounts exist or the movement took place.</p>
 <pre><code>move &quot;Test Addr&quot; &quot;LTCp2shsegwit&quot; 1.1
 
 true
 </code></pre><h3 id="ping"><a name="ping" class="plugin-anchor" href="#ping"><i class="fa fa-link" aria-hidden="true"></i></a>ping</h3>
-<p>Requests that a ping be sent to other peers, to measure ping time. Results are provided in <code>getpeerinfo</code>, &#xEC;pingtime&#xEE; and &#xEC;pingwait&#xEE; fields are decimal seconds (does not provide a direct result like using &#xEC;ping&#xEE; from a system command prompt). The ping command is handled in queue with all other commands, so it measures processing backlog, not just network ping.</p>
+<p>Requests that a ping be sent to other peers, to measure ping time. Results are provided in <code>getpeerinfo</code>, &quot;pingtime&quot; and &quot;pingwait&quot; fields are decimal seconds (does not provide a direct result like using &quot;ping&quot; from a system command prompt). The ping command is handled in queue with all other commands, so it measures processing backlog, not just network ping.</p>
 <pre><code>ping
 
 null
 </code></pre><h3 id="preciousblock-blockhash"><a name="preciousblock-blockhash" class="plugin-anchor" href="#preciousblock-blockhash"><i class="fa fa-link" aria-hidden="true"></i></a>preciousblock &quot;blockhash&quot;</h3>
-<p>Prioritizes a block with an earlier time for blocks at the same height. Used in hard fork situations. See also <code>invalidateblock</code>. qtum-qt returns &#xEC;null&#xEE; if successful, qtumd returns nothing if successful.</p>
+<p>Prioritizes a block with an earlier time for blocks at the same height. Used in hard fork situations. See also <code>invalidateblock</code>. qtum-qt returns &quot;null&quot; if successful, qtumd returns nothing if successful.</p>
 <pre><code>preciousblock 854d57da75ba7550aebe83c1cdf539ac685d735684b7c40cfd639582abf43b
 
 null
 </code></pre><h3 id="prioritisetransaction---"><a name="prioritisetransaction---" class="plugin-anchor" href="#prioritisetransaction---"><i class="fa fa-link" aria-hidden="true"></i></a>prioritisetransaction <txid> <dummy value=""> <fee delta=""></fee></dummy></txid></h3>
-<p>Accepts the transaction into mined blocks at a higher (or lower) priority. A higher fee is not actually paid, the algorithm for selecting transactions into a block (which is trying to maximize fees) considers the transaction as having paid a higher fee. Qtum-qt and qtumd return &#xEC;true&#xEE;:</p>
+<p>Accepts the transaction into mined blocks at a higher (or lower) priority. A higher fee is not actually paid, the algorithm for selecting transactions into a block (which is trying to maximize fees) considers the transaction as having paid a higher fee. Qtum-qt and qtumd return &quot;true&quot;:</p>
 <pre><code>prioritisetransaction &quot;01b347eb32bca5cde81444f6a6d4311f02ae3f3da25394e0f144fca525218dd&quot; 0.0 10000
 
 true
@@ -2213,12 +2212,12 @@ true
 125000
 </code></pre><p>Don&#xED;t prune the blockchain if your wallet accepts incoming connections (over 8 peers) because your wallet needs to be able to send all the blocks to bootstrap new peers coming online.</p>
 <h3 id="reconsiderblock-blockhash"><a name="reconsiderblock-blockhash" class="plugin-anchor" href="#reconsiderblock-blockhash"><i class="fa fa-link" aria-hidden="true"></i></a>reconsiderblock &quot;blockhash&quot;</h3>
-<p>Hidden command. Removes invalidity status of a block and its descendants, used for code testing or in manual blockchain reorganization. This command can reverse the effects of <code>invalidateblock</code>. Returns &#xEC;null&#xEE; if successful:</p>
+<p>Hidden command. Removes invalidity status of a block and its descendants, used for code testing or in manual blockchain reorganization. This command can reverse the effects of <code>invalidateblock</code>. Returns &quot;null&quot; if successful:</p>
 <pre><code>reconsiderblock 263f7ab042135cb0e5479afd8385a237f8eb44b86135d29b34eb0fa82cc815f
 
 null
 </code></pre><h3 id="removeprunedfunds-txid"><a name="removeprunedfunds-txid" class="plugin-anchor" href="#removeprunedfunds-txid"><i class="fa fa-link" aria-hidden="true"></i></a>removeprunedfunds &quot;txid&quot;</h3>
-<p>Deletes the specified transaction from the wallet. Meant for use with pruned wallets and as a companion to <code>importprunedfunds</code>. This will affect wallet balances. Qtum-cli returns &#xEC;null&#xEE;.</p>
+<p>Deletes the specified transaction from the wallet. Meant for use with pruned wallets and as a companion to <code>importprunedfunds</code>. This will affect wallet balances. Qtum-cli returns &quot;null&quot;.</p>
 <pre><code>removeprunedfunds &quot;535e2bf90fda10c8c8186c4c73ac2861cb19312507b9e4552e78a6148030f19f&quot;
 
 null
@@ -2247,7 +2246,7 @@ null
   &quot;amount&quot;: 50.00000000
 }
 </code></pre><h3 id="savemempool"><a name="savemempool" class="plugin-anchor" href="#savemempool"><i class="fa fa-link" aria-hidden="true"></i></a>savemempool</h3>
-<p>Writes the memory pool to disk in the mempool.dat file. Qtum-qt returns &#xEC;null&#xEE;, qtumd has no response.</p>
+<p>Writes the memory pool to disk in the mempool.dat file. Qtum-qt returns &quot;null&quot;, qtumd has no response.</p>
 <pre><code>savemempool
 
 null
@@ -2304,7 +2303,7 @@ null
   }
 ]
 </code></pre><h3 id="sendfrom-fromaccount-toaddress-amount--minconf-comment-commentto-"><a name="sendfrom-fromaccount-toaddress-amount--minconf-comment-commentto-" class="plugin-anchor" href="#sendfrom-fromaccount-toaddress-amount--minconf-comment-commentto-"><i class="fa fa-link" aria-hidden="true"></i></a>sendfrom &quot;fromaccount&quot; &quot;toaddress&quot; amount ( minconf &quot;comment&quot; &quot;comment_to&quot; )</h3>
-<p>DEPRECATED (use <code>sendtoaddress</code>). Send an amount to a Qtum address, requires the wallet to be unlocked. The &#xEC;account&#xEE; is for notation, it does not control the source of UTXOs. If successful, returns the transaction ID.</p>
+<p>DEPRECATED (use <code>sendtoaddress</code>). Send an amount to a Qtum address, requires the wallet to be unlocked. The &quot;account&quot; is for notation, it does not control the source of UTXOs. If successful, returns the transaction ID.</p>
 <pre><code>sendfrom &quot;&quot; QcEz4erq5gH6sa3ujWsqpZW4869MwrQf5 1.0
 
 3e5ae45efbde38318a3a8af1d5c4d3bb844c58fab745f21d42a449ad923af3f
@@ -2350,12 +2349,12 @@ null
   &quot;hash160&quot;: &quot;dc7a88381e7d027d0becf368557acbf624a7b82&quot;
 }
 </code></pre><h3 id="setaccount-address-account"><a name="setaccount-address-account" class="plugin-anchor" href="#setaccount-address-account"><i class="fa fa-link" aria-hidden="true"></i></a>setaccount &quot;address&quot; &quot;account&quot;</h3>
-<p>DEPRECATED. Assigns and account name to the given address. Qtum-qt will return &#xEC;null&#xEE; if successful.</p>
+<p>DEPRECATED. Assigns and account name to the given address. Qtum-qt will return &quot;null&quot; if successful.</p>
 <pre><code>setaccount &quot;QJv3YhWxG6EC2cpqZM5E3fjGzXYgakezm&quot; &quot;My New Account&quot;
 
 null
 </code></pre><h3 id="setban-subnet-addremove-bantime-absolute"><a name="setban-subnet-addremove-bantime-absolute" class="plugin-anchor" href="#setban-subnet-addremove-bantime-absolute"><i class="fa fa-link" aria-hidden="true"></i></a>setban &quot;subnet&quot; &quot;add|remove&quot; (bantime) (absolute)</h3>
-<p>Attempts to add or remove an IP address from the banned list. Use &#xEC;add&#xEE; to add a ban, and give the duration of the ban in seconds. Returns &#xEC;null&#xEE; if successful. Here we add a ban for one day and confirm the result with &#xEC;listbanned&#xEE;:</p>
+<p>Attempts to add or remove an IP address from the banned list. Use &quot;add&quot; to add a ban, and give the duration of the ban in seconds. Returns &quot;null&quot; if successful. Here we add a ban for one day and confirm the result with <code>listbanned</code>:</p>
 <pre><code>setban &quot;116.61.213.45&quot; &quot;add&quot; 86400
 
 null
@@ -2419,7 +2418,7 @@ H3SBMeQUvo82A63wegSNT582Puziba54sCGt6notPb3xHm3WwM2OuIwV4E9Ya38TMCqe2aV7rmuFrc9A
 </ol>
 <p>Example TO COME.</p>
 <h3 id="syncwithvalidationinterfacequeue"><a name="syncwithvalidationinterfacequeue" class="plugin-anchor" href="#syncwithvalidationinterfacequeue"><i class="fa fa-link" aria-hidden="true"></i></a>syncwithvalidationinterfacequeue</h3>
-<p>Hidden command. Waits for all the asynchronous validation queues (for the blockchain, mempool, etc.) to complete. For use by developers. Qtum-qt returns &#xEC;null&#xEE;, qtumd returns nothing.</p>
+<p>Hidden command. Waits for all the asynchronous validation queues (for the blockchain, mempool, etc.) to complete. For use by developers. Qtum-qt returns &quot;null&quot;, qtumd returns nothing.</p>
 <pre><code>syncwithvalidationinterfacequeue
 
 null
@@ -2530,14 +2529,14 @@ true
 null
 </code></pre><p>qtum-cli returns no response, but you can check with <code>getwalletinfo</code> for &quot;unlocked_until&quot;: 0 and check the padlock icon on qtum-qt.</p>
 <h3 id="walletpassphrase-passphrase-timeout--true-"><a name="walletpassphrase-passphrase-timeout--true-" class="plugin-anchor" href="#walletpassphrase-passphrase-timeout--true-"><i class="fa fa-link" aria-hidden="true"></i></a>walletpassphrase &quot;passphrase&quot; timeout ( true )</h3>
-<p>Unlock an encrypted wallet for transactions which require use of a private key, such as sending coins, staking, or exporting private keys. Timeout gives the time in seconds to unlock and the optional Boolean &#xEC;true&#xEE; allows unlocking for staking only.</p>
+<p>Unlock an encrypted wallet for transactions which require use of a private key, such as sending coins, staking, or exporting private keys. Timeout gives the time in seconds to unlock and the optional Boolean &quot;true&quot; allows unlocking for staking only.</p>
 <p>This command would unlock the wallet for 10 minutes:</p>
 <pre><code>walletpassphrase &quot;you should always use a long and strong passphrase&quot; 600
 </code></pre><p>This command would unlock the wallet for staking only for a long time:</p>
 <pre><code>walletpassphrase &quot;you should always use a long and strong passphrase&quot; 99999999 true
-</code></pre><p>The qtum-qt wallet will show lock status with the padlock icon and the Console returns &#xEC;null&#xEE;. qtum-cli returns no status but you can check the unlock status with <code>getwalletinfo</code> for &#xEC;unlocked_until&#xEE;: <unix timestamp=""></unix></p>
+</code></pre><p>The qtum-qt wallet will show lock status with the padlock icon and the Console returns &quot;null&quot;. qtum-cli returns no status but you can check the unlock status with <code>getwalletinfo</code> for &quot;unlocked_until&quot;: <unix timestamp=""></unix></p>
 <h3 id="walletpassphrasechange-oldpassphrase-newpassphrase"><a name="walletpassphrasechange-oldpassphrase-newpassphrase" class="plugin-anchor" href="#walletpassphrasechange-oldpassphrase-newpassphrase"><i class="fa fa-link" aria-hidden="true"></i></a>walletpassphrasechange &quot;oldpassphrase&quot; &quot;newpassphrase&quot;</h3>
-<p>Changes the wallet passphrase from &quot;oldpassphrase&quot; to &quot;newpassphrase&quot;, qtum-qt returns &#xEC;null&#xEE;, qtumd returns nothing.</p>
+<p>Changes the wallet passphrase from &quot;oldpassphrase&quot; to &quot;newpassphrase&quot;, qtum-qt returns &quot;null&quot;, qtumd returns nothing.</p>
 <pre><code>walletpassphrasechange &quot;you should always use a long and strong passphrase&quot; &quot;please use a strong and long passphrase&quot;
 
 null
@@ -2585,7 +2584,7 @@ null
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Qtum Core Wallet Commands","level":"2.2","depth":1,"next":{"title":"Qtum Electrum Wallet","level":"2.3","depth":1,"path":"Qtum-Electrum-User-Guide.md","ref":"Qtum-Electrum-User-Guide.md","articles":[]},"previous":{"title":"Best Practices","level":"2.1.1","depth":2,"path":"QTUM-wallet-usage-best-practices/README.md","ref":"QTUM-wallet-usage-best-practices/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"commands/README.md","mtime":"2019-01-22T03:29:44.811Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-22T03:33:39.565Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Qtum Core Wallet Commands","level":"2.2","depth":1,"next":{"title":"Qtum Electrum Wallet","level":"2.3","depth":1,"path":"Qtum-Electrum-User-Guide.md","ref":"Qtum-Electrum-User-Guide.md","articles":[]},"previous":{"title":"Best Practices","level":"2.1.1","depth":2,"path":"QTUM-wallet-usage-best-practices/README.md","ref":"QTUM-wallet-usage-best-practices/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"commands/README.md","mtime":"2019-02-06T22:48:04.430Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-07T00:13:20.457Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
