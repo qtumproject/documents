@@ -3,9 +3,9 @@
 Qtum Electrum 是基于知名比特币钱包Electrum修改而来的一款Qtum桌面端轻钱包。
 相比较于目前的Qtum Core全节点钱包，Qtum Electrum 占用的磁盘空间更小、同步区块所需时间更短，它支持多重签名和硬件钱包、支持冷钱包模式、支持导入手机钱包的助记词，同时采用了SPV验证保证了安全性。
 
-## 功能介绍
+## 1. 功能介绍
 
-### 下载安装
+### 1.1 下载安装
 
 在浏览器中访问 [https://github.com/qtumproject/qtum-electrum/releases/latest](https://github.com/qtumproject/qtum-electrum/releases/latest) 或者[https://qtumeco.io/wallet](https://qtumeco.io/wallet) 即可找到最新版Qtum Electrum的下载链接。
 
@@ -16,7 +16,7 @@ Qtum Electrum 是基于知名比特币钱包Electrum修改而来的一款Qtum桌
 
 如果你使用的是linux系统，请遵循 [https://github.com/qtumproject/qtum-electrum/blob/master/README.md](https://github.com/qtumproject/qtum-electrum/blob/master/README.md) 中的步骤安装依赖环境。
 
-### 创建和恢复钱包
+### 1.2 创建和恢复钱包
 
 第一次打开钱包时，选择 “Auto Connect” 连接服务器。
 
@@ -37,7 +37,7 @@ Qtum Electrum 是基于知名比特币钱包Electrum修改而来的一款Qtum桌
 如果你想将Qtum Core全节点钱包里的地址恢复到Qtum Electrum上，请执行`qtum-cli dumpwallet ~/Desktop/wallet.txt` 并将其中的 extended private masterkey 拷贝出来，并选择 “Qtum Qt Core wallet compatible” 选项。
 
 
-### 收发QTUM
+### 1.3 收发QTUM
 
 Qtum Electrum 的界面非常简洁，点击顶部的按钮可进行tab间的切换。
 <br>
@@ -57,7 +57,7 @@ Qtum Electrum 的界面非常简洁，点击顶部的按钮可进行tab间的切
 ![](http://ojaivn2ch.bkt.clouddn.com/d2ef6659a47a55686b6c6ef2fec58331.png)
 在 “历史”页，可以查看所有的收发记录，双击可查看交易详情。
 
-### QRC20 Token
+### 1.4 QRC20 Token
    
 ![](https://s.qtum.site/uploads/9aaa8fa63651af737cceb6b59f339b45.png)
 点击顶部的“Tokens” tab，进入Token管理页面。  
@@ -83,7 +83,7 @@ Qtum Electrum 的界面非常简洁，点击顶部的按钮可进行tab间的切
 点击“Send”，进入发送Token的页面，填写对方的接收地址以及需要发送的数量，点击“Send”按钮即可完成转账。
 
 
-### 多重签名钱包
+### 1.5 多重签名钱包
 QTUM使用的是和比特币相同的多重签名机制，相比较于以太坊通过智能合约来实现多重签名管理大额资金，QTUM拥有更高的安全性。
 
 如果你对多重签名不了解，请不要使用这个功能。
@@ -109,7 +109,7 @@ QTUM使用的是和比特币相同的多重签名机制，相比较于以太坊�
 **任何时候都不要把自己的私钥或者助记词给别人。**
 **任何时候都不要把自己的私钥或者助记词给别人。**
 
-### 硬件钱包
+### 1.6 硬件钱包
 
 这里将以 ledger 为例进行说明。
 
@@ -123,6 +123,75 @@ QTUM使用的是和比特币相同的多重签名机制，相比较于以太坊�
 <br>
 
 使用硬件钱包发送QTUM时，点击“发送”之后需要在ledger进行确认。
+
+
+### 1.7 智能合约
+
+#### 1.7.1 创建合约
+打开Qtum Electrum，点击工具栏的 “视图” -> “显示智能合约”，让智能合约的页面显示出来。
+
+![1](https://imgur.com/2YKa2CT.png)
+
+在页面空白处右键，点击“创建新合约”。
+![2](https://imgur.com/H7nsNie.png)
+
+合约名称可以为自定义的任意字符串；Bytecode(字节码)和ABI(接口)可以通过remix(http://remix.ethereum.org/)等工具获取；Constructor(合约初始化参数)是合约构造函数所需的参数，字符串类型的参数需要用双引号含起来，参数之间用逗号作为分隔符；gas_limit可以根据合约消耗资源大小进行调整, gas_limit过低会导致合约执行失败，gas_limit过高会把超出实际使用量的部分退还给用户；gas_price一般建议不做修改； Sender(调用者)是合约的创建人。
+
+本文使用了一个简单的Solidity合约，代码如下：
+```
+pragma solidity ^0.4.18;
+
+contract test {
+    uint age;
+    string name;
+    
+    function test(uint _age, string _name) public {
+        age = _age;
+        name = _name;
+    }
+
+    function setAge(uint _age) public {
+        age = _age;
+    }
+
+    function getAge() public view returns (uint) {
+        return age;
+    }
+    
+    function setName(string _name) public {
+        name = _name;
+    }
+
+    function getName() public view returns (string) {
+        return name;
+    }
+}
+```
+
+![3](https://imgur.com/inKiYWY.png)
+
+点击“创建”，合约创建交易就被广播到了Qtum区块链网络上。等待交易确认，合约就创建成功了。
+
+![4](https://imgur.com/Wtaqp3d.png)
+
+#### 1.7.2. 合约交互
+在刚刚创建好的合约上双击或者右键->Function 就可以进入合约的交互界面。
+
+![5](https://imgur.com/NROT2q9.png)
+
+Function 下拉列表中展示的是合约可以调用的函数，其中(00)是Solidity合约的匿名函数。
+
+我们选择 getName()，此函数不需要传递参数，点击“Call”按钮，我们就把合约中存储的name变量值读取出来了。
+![6](https://imgur.com/BkRjgvF.png)
+
+
+选择 setName()，此函数接收一个string类型的参数，我们在Parameters输入框中填入 "DEFINING THE BLOCKCHAIN ECONOMY", 然后点击“Send to”按钮，将会创建一笔调用合约函数、修改合约数据的交易。
+![7](https://imgur.com/2Fri6fq.png)
+
+等待这笔交易确认，我们再次Call getName(), 可以发现合约中的name变量值已经被我们修改成了"DEFINING THE BLOCKCHAIN ECONOMY"。
+
+![8](https://imgur.com/ODz7XcL.png)
+
 
 ## 其他
 
