@@ -17,7 +17,7 @@ Welcome to the Qtum web wallet user documentation which will show
 
 * [Introduction to the Web Wallet](#introduction-to-the-web-wallet)
 * [How to generate a new wallet or restore addresses from other wallets](#generate-new-wallet---restore-wallet)
-* [How to receive and send QTUM coins, sending with Ledger](#receive-and-send-qtum-coins)
+* [How to receive and send QTUM coins, sending with Ledger, Safe Send](#receive-and-send-qtum-coins)
 * [How to receive and send QRC20 tokens](#send-and-receive-qrc20-tokens)
 * [How to add a new QRC20 token to the wallet](#adding-a-qrc20-token)
 * [How to publish smart contracts](#how-to-publish-smart-contracts)
@@ -228,6 +228,107 @@ At the bottom of the screen you will see the green confirmation bar with a link 
 ![L7 Successful send](https://i.imgur.com/fMas7Ld.jpg)
 
 The _View Wallet Info page_ will display an _Unconfirmed balance_ for the amount being sent (+ fee). After the transaction is published in the next block you can reload the wallet to see the updated balance and also see the transaction using the menu option **` View Wallet Txs `**.
+
+### Safe Send
+
+A basic Qtum transaction is composed of three steps:
+
+1. Compose the base transaction: from, to, amount, fee.
+2. Sign the transaction using the private key.
+3. Transmit the signed transaction to the network.
+
+"Safe Send" isolates these steps between two computers/wallets, where step 2 is performed with an offline wallet whose private keys are never exposed to the internet. The web wallet "Safe Send" walks through these 3 steps to make a very safe transaction using the offline wallet.
+
+#### Setup Offline Wallet
+
+For a Safe Send, first set up the offline wallet by getting a copy of the web wallet and browser software. This example will use Google Chrome on Windows, and you can adjust to your preferred browser and operating system.
+
+On the online computer, using the Chrome browser, go to https://qtumwallet.org. In the browser upper right-hand corner select the three vertical dots for menu, select **` More tools `** then **` Save page as… `** to save the Qtum Web Wallet HTML file. This file contains all the JavaScript code to run the web wallet:
+
+![1 The Web Wallet HTML File](https://i.imgur.com/ZdCBdhu.jpg) 
+The Web Wallet HTML file
+
+To make an offline copy of Chrome, navigate to find the Chrome install folder on your computer. For Windows it is typically in Program Files (x86) - Google:
+
+![2019-42 Chrome Folder](https://i.imgur.com/us44CuH.png)
+Copy Chrome folder
+
+Copy the Chrome folder and Web Wallet HTML file to a USB thumb drive and then copy these to the offline computer.
+
+This gives a copy of the current Chrome and web wallet for the offline computer, and will not get any future version updates. You can do an update with these same steps, but it should not be necessary for these basic operations.
+
+#### Launch the wallet in Offline Mode
+
+On the offline computer, launch the Chrome browser: in the copied Chrome folder select User Data - Application - Chrome.exe:
+
+![2019-43 Select Chrome.exe](https://i.imgur.com/vZ4oSZ1.jpg) 
+(here in a folder called "Offline wallet")
+
+#### Launch the offline web wallet
+
+With the cursor in the Chrome URL address bar press Control - "O" (for Open) and then navigate to and Open the Qtum Web Wallet.html file:
+
+![2019-44 Open Qtum Web Wallet.html](https://i.imgur.com/EyE4B1x.jpg)
+
+Using the web wallet menu select Settings and in the Mode dropdown select **` Offline `** and **` CONFIRM `**:
+
+![2019-45 Set Offine Mode](https://i.imgur.com/JLAvVTO.jpg)
+
+Note the gold header for the wallet in offline mode. From this point, you can generate a new wallet and save (and backup) the key file. The menu will show _Request Payment_ and the _Request Payment_ page will show the receiving address for the offline wallet:
+
+![2019-46 Request Payment page](https://i.imgur.com/ova1s8W.jpg)
+
+Copy the receiving address to a text file and copy to the USB thumb drive for transfer to the online computer. Now you can send QTUM to this address to fund the offline wallet.
+
+This works to send QTUM to the offline wallet address because QTUM coins are actually stored as unspent transactions on the blockchain (no coins are ever stored in any wallet itself). However the offline wallet holds the private key for its address, and only the offline wallet can sign transactions to send QTUM from its address.
+
+Now we can use the 3 transaction steps for a Safe Send.
+
+1. Compose the base raw transaction with the online wallet.
+
+From the online wallet menu select **` Safe Send `** and for step 1 fill in the addresses and amount. _From Address*_ is the address of the offline wallet. The online wallet will query the blockchain for the "From Address" and select a previous transaction or transactions that hold sufficient QTUM for the amount being sent. Use 0.01 for the Fee unless you know how to choose lower fees.
+
+After filling in all the fields, press **` CONFIRM `**, reenter the _To Address*_, press **` CONFIRM `** and **` CONFIRM `** again to create the raw transaction file:
+
+![2019-47 Step 1 Safe Send page](https://i.imgur.com/5Z24gc5.jpg)
+Step 1 - creating the raw transaction
+
+The online wallet will create a raw transaction text file, for example:
+
+``{"from":"<Qtum address>","to":"<Qtum address>","amount":"5.0","fee":"0.01",
+"utxo":[{"address":"<from Qtum address>","txid":"<transaction ID>","confirmations":4,
+"isStake":false,"amount":10,"value":1000000000,"hash":"<hash checksum>","pos":0}]}``
+
+Here the online wallet has selected an appropriate unspent transaction owned by the "From Address" which holds 10.0 QTUM.
+
+You must leave the online wallet running at the end of step 1 while completing step 2 with the offline computer, then return for step 3. Exiting the online wallet at this point and reloading for step 3 will cancel the sequence.
+
+Copy the raw transaction file to the offline wallet computer. For the offline wallet launch Chrome and the wallet in offline mode as in "Launch the Offline Wallet" above. Use the menu option **` Restore from Key File `** to load the previous address. The offline wallet will not know or display any balance.
+
+2. On the offline wallet menu select **` Safe Send `** and on the _Safe Send_ page in step 1 press **` NEXT `** to begin step 2.
+
+In step 2 select **` UPLOAD `** and open the raw transaction file copied from the online wallet. You will see the transaction fields as entered on the online computer. Select **` CONFIRM `**, reenter the _To Address*_ and **` CONFIRM `**, and then **` CONFIRM `** again to create the signed tx file:
+
+![2019-48 Step 2](https://i.imgur.com/90qZsLa.jpg) 
+Step 2 - sign the raw transaction file to create the tx (transmission) file
+
+The offline wallet will generate a signed tx file, for example:
+
+``{"from":"<Qtum Address>","to":"<Qtum Address>","amount":"5.0",
+"fee":"0.01","rawTx":"<raw hex transaction code>"}``
+
+Copy this file to a USB thumb drive and transfer to the online wallet computer.
+
+Note that the offline wallet is completely disconnected from the internet, and can only sign the transaction using its private keys. The offline wallet cannot even show the balance for its address, but you can see the balance with the Explorer.
+
+3. Back on the online wallet (still on the _Safe Send_ page) on step 2 select **` NEXT `** to advance to step 3.
+
+On step 3 select **` UPLOAD `** and open the signed tx file. You will see the transaction fields as entered in step 1. Press **` CONFIRM `**, reenter the _Send To*_ address and select **` CONFIRM `**, and **` CONFIRM `** again to send the transaction to the network:
+
+![2019-49 Step 3](https://i.imgur.com/w9eCAo8.jpg)
+Step 3 - send the tx file to the network to complete the transaction
+
+At the bottom of the screen you will see the green confirmation bar, and after the transaction is published in the next block select the Explorer link to see the transaction on the blockchain.
 
 ***
 
