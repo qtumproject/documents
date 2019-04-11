@@ -25,7 +25,7 @@ We've published our official Qtum repository on http://repo.qtum.info or http://
 
 ### Archlinux
 
-[Get it from the AUR](https://aur.archlinux.org/packages/qtum/) 
+[Get it from the AUR](https://aur.archlinux.org/packages/qtum-core/) 
 
 More distributions will be added in the future, this document will be updated to reflect those changes.
 
