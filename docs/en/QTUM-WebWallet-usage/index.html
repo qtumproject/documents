@@ -556,7 +556,7 @@
 <ul>
 <li><a href="#introduction-to-the-web-wallet">Introduction to the Web Wallet</a></li>
 <li><a href="#generate-new-wallet---restore-wallet">How to generate a new wallet or restore addresses from other wallets</a></li>
-<li><a href="#receive-and-send-qtum-coins">How to receive and send QTUM coins, sending with Ledger</a></li>
+<li><a href="#receive-and-send-qtum-coins">How to receive and send QTUM coins, sending with Ledger, Safe Send</a></li>
 <li><a href="#send-and-receive-qrc20-tokens">How to receive and send QRC20 tokens</a></li>
 <li><a href="#adding-a-qrc20-token">How to add a new QRC20 token to the wallet</a></li>
 <li><a href="#how-to-publish-smart-contracts">How to publish smart contracts</a></li>
@@ -674,6 +674,70 @@ After the transaction is published in the next block you can reload the wallet t
 <p>At the bottom of the screen you will see the green confirmation bar with a link to show the transaction in the Explorer:</p>
 <p><img src="https://i.imgur.com/fMas7Ld.jpg" alt="L7 Successful send"></p>
 <p>The <em>View Wallet Info page</em> will display an <em>Unconfirmed balance</em> for the amount being sent (+ fee). After the transaction is published in the next block you can reload the wallet to see the updated balance and also see the transaction using the menu option <strong><code>View Wallet Txs</code></strong>.</p>
+<h3 id="safe-send"><a name="safe-send" class="plugin-anchor" href="#safe-send"><i class="fa fa-link" aria-hidden="true"></i></a>Safe Send</h3>
+<p>A basic Qtum transaction is composed of three steps:</p>
+<ol>
+<li>Compose the base transaction: from, to, amount, fee.</li>
+<li>Sign the transaction using the private key.</li>
+<li>Transmit the signed transaction to the network.</li>
+</ol>
+<p>&quot;Safe Send&quot; isolates these steps between two computers/wallets, where step 2 is performed with an offline wallet whose private keys are never exposed to the internet. The web wallet &quot;Safe Send&quot; walks through these 3 steps to make a very safe transaction using the offline wallet.</p>
+<h4 id="setup-offline-wallet"><a name="setup-offline-wallet" class="plugin-anchor" href="#setup-offline-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Setup Offline Wallet</h4>
+<p>For a Safe Send, first set up the offline wallet by getting a copy of the web wallet and browser software. This example will use Google Chrome on Windows, and you can adjust to your preferred browser and operating system.</p>
+<p>On the online computer, using the Chrome browser, go to <a href="https://qtumwallet.org" target="_blank">https://qtumwallet.org</a>. In the browser upper right-hand corner select the three vertical dots for menu, select <strong><code>More tools</code></strong> then <strong><code>Save page as&#x2026;</code></strong> to save the Qtum Web Wallet HTML file. This file contains all the JavaScript code to run the web wallet:</p>
+<p><img src="https://i.imgur.com/ZdCBdhu.jpg" alt="1 The Web Wallet HTML File"> 
+The Web Wallet HTML file</p>
+<p>To make an offline copy of Chrome, navigate to find the Chrome install folder on your computer. For Windows it is typically in Program Files (x86) - Google:</p>
+<p><img src="https://i.imgur.com/us44CuH.png" alt="2019-42 Chrome Folder">
+Copy Chrome folder</p>
+<p>Copy the Chrome folder and Web Wallet HTML file to a USB thumb drive and then copy these to the offline computer.</p>
+<p>This gives a copy of the current Chrome and web wallet for the offline computer, and will not get any future version updates. You can do an update with these same steps, but it should not be necessary for these basic operations.</p>
+<h4 id="launch-the-wallet-in-offline-mode"><a name="launch-the-wallet-in-offline-mode" class="plugin-anchor" href="#launch-the-wallet-in-offline-mode"><i class="fa fa-link" aria-hidden="true"></i></a>Launch the wallet in Offline Mode</h4>
+<p>On the offline computer, launch the Chrome browser: in the copied Chrome folder select User Data - Application - Chrome.exe:</p>
+<p><img src="https://i.imgur.com/vZ4oSZ1.jpg" alt="2019-43 Select Chrome.exe"> 
+(here in a folder called &quot;Offline wallet&quot;)</p>
+<h4 id="launch-the-offline-web-wallet"><a name="launch-the-offline-web-wallet" class="plugin-anchor" href="#launch-the-offline-web-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Launch the offline web wallet</h4>
+<p>With the cursor in the Chrome URL address bar press Control - &quot;O&quot; (for Open) and then navigate to and Open the Qtum Web Wallet.html file:</p>
+<p><img src="https://i.imgur.com/EyE4B1x.jpg" alt="2019-44 Open Qtum Web Wallet.html"></p>
+<p>Using the web wallet menu select Settings and in the Mode dropdown select <strong><code>Offline</code></strong> and <strong><code>CONFIRM</code></strong>:</p>
+<p><img src="https://i.imgur.com/JLAvVTO.jpg" alt="2019-45 Set Offine Mode"></p>
+<p>Note the gold header for the wallet in offline mode. From this point, you can generate a new wallet and save (and backup) the key file. The menu will show <em>Request Payment</em> and the <em>Request Payment</em> page will show the receiving address for the offline wallet:</p>
+<p><img src="https://i.imgur.com/ova1s8W.jpg" alt="2019-46 Request Payment page"></p>
+<p>Copy the receiving address to a text file and copy to the USB thumb drive for transfer to the online computer. Now you can send QTUM to this address to fund the offline wallet.</p>
+<p>This works to send QTUM to the offline wallet address because QTUM coins are actually stored as unspent transactions on the blockchain (no coins are ever stored in any wallet itself). However the offline wallet holds the private key for its address, and only the offline wallet can sign transactions to send QTUM from its address.</p>
+<p>Now we can use the 3 transaction steps for a Safe Send.</p>
+<ol>
+<li>Compose the base raw transaction with the online wallet.</li>
+</ol>
+<p>From the online wallet menu select <strong><code>Safe Send</code></strong> and for step 1 fill in the addresses and amount. <em>From Address*</em> is the address of the offline wallet. The online wallet will query the blockchain for the &quot;From Address&quot; and select a previous transaction or transactions that hold sufficient QTUM for the amount being sent. Use 0.01 for the Fee unless you know how to choose lower fees.</p>
+<p>After filling in all the fields, press <strong><code>CONFIRM</code></strong>, reenter the <em>To Address*</em>, press <strong><code>CONFIRM</code></strong> and <strong><code>CONFIRM</code></strong> again to create the raw transaction file:</p>
+<p><img src="https://i.imgur.com/5Z24gc5.jpg" alt="2019-47 Step 1 Safe Send page">
+Step 1 - creating the raw transaction</p>
+<p>The online wallet will create a raw transaction text file, for example:</p>
+<p><code>{&quot;from&quot;:&quot;&lt;Qtum address&gt;&quot;,&quot;to&quot;:&quot;&lt;Qtum address&gt;&quot;,&quot;amount&quot;:&quot;5.0&quot;,&quot;fee&quot;:&quot;0.01&quot;,
+&quot;utxo&quot;:[{&quot;address&quot;:&quot;&lt;from Qtum address&gt;&quot;,&quot;txid&quot;:&quot;&lt;transaction ID&gt;&quot;,&quot;confirmations&quot;:4,
+&quot;isStake&quot;:false,&quot;amount&quot;:10,&quot;value&quot;:1000000000,&quot;hash&quot;:&quot;&lt;hash checksum&gt;&quot;,&quot;pos&quot;:0}]}</code></p>
+<p>Here the online wallet has selected an appropriate unspent transaction owned by the &quot;From Address&quot; which holds 10.0 QTUM.</p>
+<p>You must leave the online wallet running at the end of step 1 while completing step 2 with the offline computer, then return for step 3. Exiting the online wallet at this point and reloading for step 3 will cancel the sequence.</p>
+<p>Copy the raw transaction file to the offline wallet computer. For the offline wallet launch Chrome and the wallet in offline mode as in &quot;Launch the Offline Wallet&quot; above. Use the menu option <strong><code>Restore from Key File</code></strong> to load the previous address. The offline wallet will not know or display any balance.</p>
+<ol>
+<li>On the offline wallet menu select <strong><code>Safe Send</code></strong> and on the <em>Safe Send</em> page in step 1 press <strong><code>NEXT</code></strong> to begin step 2.</li>
+</ol>
+<p>In step 2 select <strong><code>UPLOAD</code></strong> and open the raw transaction file copied from the online wallet. You will see the transaction fields as entered on the online computer. Select <strong><code>CONFIRM</code></strong>, reenter the <em>To Address*</em> and <strong><code>CONFIRM</code></strong>, and then <strong><code>CONFIRM</code></strong> again to create the signed tx file:</p>
+<p><img src="https://i.imgur.com/90qZsLa.jpg" alt="2019-48 Step 2"> 
+Step 2 - sign the raw transaction file to create the tx (transmission) file</p>
+<p>The offline wallet will generate a signed tx file, for example:</p>
+<p><code>{&quot;from&quot;:&quot;&lt;Qtum Address&gt;&quot;,&quot;to&quot;:&quot;&lt;Qtum Address&gt;&quot;,&quot;amount&quot;:&quot;5.0&quot;,
+&quot;fee&quot;:&quot;0.01&quot;,&quot;rawTx&quot;:&quot;&lt;raw hex transaction code&gt;&quot;}</code></p>
+<p>Copy this file to a USB thumb drive and transfer to the online wallet computer.</p>
+<p>Note that the offline wallet is completely disconnected from the internet, and can only sign the transaction using its private keys. The offline wallet cannot even show the balance for its address, but you can see the balance with the Explorer.</p>
+<ol>
+<li>Back on the online wallet (still on the <em>Safe Send</em> page) on step 2 select <strong><code>NEXT</code></strong> to advance to step 3.</li>
+</ol>
+<p>On step 3 select <strong><code>UPLOAD</code></strong> and open the signed tx file. You will see the transaction fields as entered in step 1. Press <strong><code>CONFIRM</code></strong>, reenter the <em>Send To*</em> address and select <strong><code>CONFIRM</code></strong>, and <strong><code>CONFIRM</code></strong> again to send the transaction to the network:</p>
+<p><img src="https://i.imgur.com/w9eCAo8.jpg" alt="2019-49 Step 3">
+Step 3 - send the tx file to the network to complete the transaction</p>
+<p>At the bottom of the screen you will see the green confirmation bar, and after the transaction is published in the next block select the Explorer link to see the transaction on the blockchain.</p>
 <hr>
 <h1 id="send-and-receive-qrc20-tokens"><a name="send-and-receive-qrc20-tokens" class="plugin-anchor" href="#send-and-receive-qrc20-tokens"><i class="fa fa-link" aria-hidden="true"></i></a>Send and Receive QRC20 Tokens</h1>
 <p>If you haven&apos;t done this, make sure you can back up the wallet using menu option <strong><code>Dump as Key File</code></strong>, and then reopen to the same address using <strong><code>Restore from Key File</code></strong>.</p>
@@ -816,7 +880,7 @@ contract NameAndAge{
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Web Wallet","level":"2.4","depth":1,"next":{"title":"Mobile Wallet","level":"2.5","depth":1,"path":"Qtum-Mobile-wallet-tutorial/README.md","ref":"Qtum-Mobile-wallet-tutorial/README.md","articles":[]},"previous":{"title":"Qtum Electrum Wallet","level":"2.3","depth":1,"path":"Qtum-Electrum-User-Guide.md","ref":"Qtum-Electrum-User-Guide.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"QTUM-WebWallet-usage/README.md","mtime":"2019-02-06T22:48:04.100Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-07T00:13:20.457Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Web Wallet","level":"2.4","depth":1,"next":{"title":"Mobile Wallet","level":"2.5","depth":1,"path":"Qtum-Mobile-wallet-tutorial/README.md","ref":"Qtum-Mobile-wallet-tutorial/README.md","articles":[]},"previous":{"title":"Qtum Electrum Wallet","level":"2.3","depth":1,"path":"Qtum-Electrum-User-Guide.md","ref":"Qtum-Electrum-User-Guide.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"QTUM-WebWallet-usage/README.md","mtime":"2019-04-11T07:40:52.250Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-11T07:49:15.218Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

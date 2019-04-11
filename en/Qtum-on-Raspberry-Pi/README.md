@@ -70,7 +70,12 @@ If you're using SSH, it's recommended to only allow access from local network.
 
 `sudo ufw allow from 196.168.0.0/24 to any port 22`
 
+## Packages available on Raspberry Pi
 
+- qtumd
+- qtum-cli
+- qtum-qt (in case you're using Raspberry Pi desktop)
+- qtum-tx
 
 ## Launching Qtum daemon
 
@@ -78,6 +83,10 @@ All we need to do to launch the Qtum daemon is type:
 `qtumd -daemon`
 
 As soon as you type this, the wallet will create the wallet.dat file among other files (if they’re not already there). The wallet will run and begin syncing instantly from the other Blockchain nodes, this can take a few hours to complete so you can go ahead and have some coffee and let it synchronize.
+
+## Launching Qtum-Qt
+
+If you're using Raspberry Pi desktop interface, all you need to do is navigate to the applications menu->other->qtum-qt
 
 ## Encrypting wallet
 

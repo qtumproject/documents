@@ -581,10 +581,19 @@ or
 <p>Here we&apos;ve defined the basics, closing down everything except port 3888 and 3889 which are used by Qtum to function.</p>
 <p>If you&apos;re using SSH, it&apos;s recommended to only allow access from local network.</p>
 <p><code>sudo ufw allow from 196.168.0.0/24 to any port 22</code></p>
+<h2 id="packages-available-on-raspberry-pi"><a name="packages-available-on-raspberry-pi" class="plugin-anchor" href="#packages-available-on-raspberry-pi"><i class="fa fa-link" aria-hidden="true"></i></a>Packages available on Raspberry Pi</h2>
+<ul>
+<li>qtumd</li>
+<li>qtum-cli</li>
+<li>qtum-qt (in case you&apos;re using Raspberry Pi desktop)</li>
+<li>qtum-tx</li>
+</ul>
 <h2 id="launching-qtum-daemon"><a name="launching-qtum-daemon" class="plugin-anchor" href="#launching-qtum-daemon"><i class="fa fa-link" aria-hidden="true"></i></a>Launching Qtum daemon</h2>
 <p>All we need to do to launch the Qtum daemon is type:
 <code>qtumd -daemon</code></p>
 <p>As soon as you type this, the wallet will create the wallet.dat file among other files (if they&#x2019;re not already there). The wallet will run and begin syncing instantly from the other Blockchain nodes, this can take a few hours to complete so you can go ahead and have some coffee and let it synchronize.</p>
+<h2 id="launching-qtum-qt"><a name="launching-qtum-qt" class="plugin-anchor" href="#launching-qtum-qt"><i class="fa fa-link" aria-hidden="true"></i></a>Launching Qtum-Qt</h2>
+<p>If you&apos;re using Raspberry Pi desktop interface, all you need to do is navigate to the applications menu-&gt;other-&gt;qtum-qt</p>
 <h2 id="encrypting-wallet"><a name="encrypting-wallet" class="plugin-anchor" href="#encrypting-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Encrypting wallet</h2>
 <p>We can encrypt the wallet at any time, it&apos;s better to do it before we go any further.</p>
 <p>To do this, type the following on the command line:</p>
@@ -672,7 +681,7 @@ or
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Stake With Raspberry Pi","level":"5.4","depth":1,"next":{"title":"How to Stake With Qtum","level":"5.5","depth":1,"path":"How-to-Staking-with-Qtum/README.md","ref":"How-to-Staking-with-Qtum/README.md","articles":[]},"previous":{"title":"Stake With VPS","level":"5.3","depth":1,"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","ref":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-on-Raspberry-Pi/README.md","mtime":"2019-02-06T22:48:04.433Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-07T00:13:20.457Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Stake With Raspberry Pi","level":"5.4","depth":1,"next":{"title":"How to Stake With Qtum","level":"5.5","depth":1,"path":"How-to-Staking-with-Qtum/README.md","ref":"How-to-Staking-with-Qtum/README.md","articles":[]},"previous":{"title":"Stake With VPS","level":"5.3","depth":1,"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","ref":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-on-Raspberry-Pi/README.md","mtime":"2019-04-11T07:45:05.275Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-11T07:49:15.218Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
