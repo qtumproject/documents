@@ -2,6 +2,8 @@
 
 
 
+**IMPORTANT NOTE:** bech32 addresses **CANNOT** participate in staking. They're only for transacting and storing Qtum.
+
 Qtum 0.16 brought several important updates, one of the most important is in fact the support for bech32 addresses. **These can be enabled on new wallets** by adding `addresstype=bech32` to the qtum.conf file
 
 **PLEASE NOTE** bech32 is very new and most online services don't support it yet, this means you cannot withdraw from most exchanges/online wallets to a bech32 address for now, as time passes and there's more support for bech32, it'll be easy to use from/to any service.

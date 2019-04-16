@@ -2,6 +2,8 @@
 
 Many users prefer using a VPS for staking purposes, it is safer than using your local machine and it is more convenient for most people as you don't need to leave your computer turned on 24/7, there are also some very cheap and stable solutions you can use.
 
+[You can also take advantage of the powerful solution we have at the AWS marketplace which is easier to setup and ready to go in just a few minutes!](https://aws.amazon.com/marketplace/pp/B07FB214D3)
+
 In this tutorial we'll show how to do this using **Vultr**  https://vultr.com which is a very stable, cost effective and fast provider with instances all over the world, the same principles apply to any other cloud provider you may prefer.
 
 
@@ -60,11 +62,12 @@ Once we have our credentials ready, we log in and see the following screen:
 
 
 
-### Install through repository (Ubuntu 16.04 -> 17.10 and Linux Mint)
+### Install through repository (Ubuntu 16.04 -> 19.04, Debian and Linux Mint)
 
 This is the recommended method for most users as it’s easier, faster and more convenient.
 ​
-#### Obtaining signing key
+
+### Obtaining signing key
 
 First, we need to obtain the Qtum signing key from the ubuntu keyserver, here's how:
 
@@ -92,7 +95,7 @@ To execute the daemon:
 
 ``` qtumd -daemon```
 
-### Build on Ubuntu 16.04
+### Build on Ubuntu 16.04 and up
 
 
 It's always good to refresh installed libraries, for that we do apt update && apt upgrade and just press enter when prompted. This will update all installed packages while also installing any available security updates.
