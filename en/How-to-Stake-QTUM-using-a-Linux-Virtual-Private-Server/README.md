@@ -22,7 +22,7 @@ Choose a location for the VPS, for this test we've chosen Miami.
 
 <img src="vultr2.png" width="800">
 
-Choose a server type, our linux wallet runs on any linux distribution, however, it is recommended to use Ubuntu 16.04 if you want to compile the wallet yourself, (we'll do this on this tutorial). You can select any desired option, we went with a basic 1CPU/512MB ram VPS.
+Choose a server type, our linux wallet runs on any linux distribution, however, it is recommended to use Ubuntu 18.04 if you want to compile the wallet yourself, (we'll do this on this tutorial). You can select any desired option, we went with a basic 1CPU/512MB ram VPS.
 
 
 
