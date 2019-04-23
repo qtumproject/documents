@@ -97,11 +97,7 @@ Next, let’s enter the password for this wallet, **please remember this passwor
 
 
 
-![Receive](12.png)
-
-
-
-After the password is entered and accepted, the wallet will restart and it'll be encrypted.
+![Receive](12.png)After the password is entered and accepted, the wallet will restart and it'll be encrypted.
 
 
 

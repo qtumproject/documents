@@ -62,8 +62,6 @@ Once this is installed, we proceed with access permissions, we will define which
 
 `sudo ufw allow 3888/tcp`
 
-`sudo ufw allow 3889/tcp`
-
 Here we've defined the basics, closing down everything except port 3888 and 3889 which are used by Qtum to function.
 
 If you're using SSH, it's recommended to only allow access from local network.
