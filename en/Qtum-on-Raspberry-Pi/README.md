@@ -1,6 +1,84 @@
 # Qtum on Raspberry Pi
 
-Just like we did on Debian, we need to download and install Qtum's public key
+
+
+1. [Getting a Stakebox](#Getting a Stakebox)
+2. [Downloading Qtum Raspbian](Downloading Qtum Raspbian)
+3. [Screenshots of Qtum Raspbian](Screenshots of Qtum Raspbian)
+4. [Installing Qtum via Qtum Raspbian repository](Installing Qtum via Qtum Raspbian repository) **(only needed if you're not using a Qtum stakebox or not using the Qtum Raspbian image)**
+5. [Setting up a firewall in Raspbian](Protecting access with a basic firewall)
+6. [Launching Qtum daemon](Launching Qtum daemon)
+7. [Encrypting wallet](Encrypting wallet)
+8. [Staking](Staking)
+9. [Backup](How to backup to a separate device)
+
+
+
+### Getting a Stakebox
+
+There's several ways to run Qtum on a Raspberry Pi, perhaps the easiest way is to just get a **Qtum Stakebox**, you can order from here: 
+
+<https://www.stakebox.org/products/qtum-stakebox>
+
+
+
+### Downloading Qtum Raspbian
+
+If you don't want to buy or already own a stakebox and just want to get the latest version of Raspbian with Qtum preinstalled with the official Qtum Repository, then you can download the Raspbian images yourself:
+
+**Raspbian lite (CLI only)**
+https://s3.amazonaws.com/raspbianimages/qtumrasplite.tar.xz
+
+**Raspbian desktop (with some cool wallpapers! )**
+https://s3.amazonaws.com/raspbianimages/qtumrasp.tar.xz
+
+How to "burn" these images to your sd card is out of the scope of this tutorial, for more info on how to do this, please check out this link: <https://www.raspberrypi.org/documentation/installation/installing-images/>
+
+### IMPORTANT NOTE!
+
+**Qtum raspbian** default user is **qtum** and default password is **qtum1234**. You will need to enter these on first login and you will be asked by the login system to change your password immediately, please make sure to use a strong password!
+
+
+
+### Screenshots of Qtum Raspbian
+
+![qtumrasp1](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/qtumrasp1.png)
+
+In order to launch Qtum, we need to go to the menu and go to other -> Qtum
+
+![qtumrasp2](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/qtumrasp2.png)
+
+Once you click on it, you'll see the following screen mentioning some details regarding disk usage and disk space available on your raspberry pi.
+
+![qtumrasp3](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/qtumrasp3.png)
+
+After clicking ok, your Raspberry Pi will begin syncing!
+
+![qtumrasp4](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/qtumrasp4.png)
+
+Syncing on your raspberry can take anything from a couple of hours to a day, please be patient.
+
+![qtumrasp5](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/qtumrasp5.png)
+
+The Qtum raspbian image has also some cool wallpapers to choose from:
+
+![wallpaper1](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/wallpaper1.png)
+
+
+
+![wallpaper2](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/wallpaper2.png)
+
+
+
+![wallpaper3](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/wallpaper3.png)
+
+
+
+## Installing Qtum via Qtum Raspbian repository
+
+If you're using a "normal" raspbian install, you can add the Qtum repository to install Qtum and keep with updates easily!
+
+### Add Qtum apt public key
 
 ```wget -qO - https://repo.qtum.info/apt/public.key | sudo apt-key add - ```
 
@@ -26,7 +104,9 @@ By doing this, we'll update our sources and install Qtum on our raspberry Box, w
 
 ## Changing default password
 
-This option is recommended for security reasons, the default password on the pi is well known, it's highly recommended to change it upon first login.
+**PLEASE NOTE: you will only really need to do this if you're using a "clean" raspbian image; you won't need to do this if you're using a Stakebox or the official Qtum Raspbian**
+
+This option is recommended for security reasons, the default password on the pi is well known, it's highly recommended to change it upon first login. 
 
 To change just type: `passwd`
 
@@ -68,11 +148,11 @@ If you're using SSH, it's recommended to only allow access from local network.
 
 `sudo ufw allow from 196.168.0.0/24 to any port 22`
 
-## Packages available on Raspberry Pi
+## Binaries available on Raspberry Pi
 
 - qtumd
 - qtum-cli
-- qtum-qt (in case you're using Raspberry Pi desktop)
+- qtum-qt 
 - qtum-tx
 
 ## Launching Qtum daemon

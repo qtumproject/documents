@@ -63,7 +63,22 @@ By doing this, we'll update our sources and install Qtum on our ubuntu Box
 
 ## Installing on Debian
 
-Obtaining the Signing key in Debian is a bit different, but not complicated
+Obtaining the public key in Debian is a bit different, but not complicated
+
+First, we need to make sure **sudo** is installed: 
+
+Type `sudo su` and press enter, if you get a password prompt, then you can move on to obtaining the public key
+
+### Installing sudo
+
+Obtain admin privileges (su to root) and then type your admin user (root) password
+
+Once you're logged in as "root" please type the following: `apt-get install sudo`
+
+When sudo finishes installing, add your user to the sudo group: `gpasswd -a youruser sudo`
+Logout and then log in again.
+
+### Obtaining Public key
 
 ```wget -qO - https://repo.qtum.info/apt/public.key | sudo apt-key add - ```
 
