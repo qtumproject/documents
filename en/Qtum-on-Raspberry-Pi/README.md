@@ -42,35 +42,35 @@ How to "burn" these images to your sd card is out of the scope of this tutorial,
 
 ### Screenshots of Qtum Raspbian
 
-![qtumrasp1](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/qtumrasp1.png)
+![qtumrasp1](qtumrasp1.png)
 
 In order to launch Qtum, we need to go to the menu and go to other -> Qtum
 
-![qtumrasp2](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/qtumrasp2.png)
+![qtumrasp2](qtumrasp2.png)
 
 Once you click on it, you'll see the following screen mentioning some details regarding disk usage and disk space available on your raspberry pi.
 
-![qtumrasp3](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/qtumrasp3.png)
+![qtumrasp3](qtumrasp3.png)
 
 After clicking ok, your Raspberry Pi will begin syncing!
 
-![qtumrasp4](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/qtumrasp4.png)
+![qtumrasp4](qtumrasp4.png)
 
 Syncing on your raspberry can take anything from a couple of hours to a day, please be patient.
 
-![qtumrasp5](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/qtumrasp5.png)
+![qtumrasp5](qtumrasp5.png)
 
 The Qtum raspbian image has also some cool wallpapers to choose from:
 
-![wallpaper1](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/wallpaper1.png)
+![wallpaper1](wallpaper1.png)
 
 
 
-![wallpaper2](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/wallpaper2.png)
+![wallpaper2](wallpaper2.png)
 
 
 
-![wallpaper3](/home/mike/Documents/documents/en/Qtum-on-Raspberry-Pi/wallpaper3.png)
+![wallpaper3](wallpaper3.png)
 
 
 
