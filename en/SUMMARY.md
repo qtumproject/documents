@@ -32,6 +32,7 @@
 ### Staking
 
 + [Repositories](qtumrepo/README.md)
++ [QTUM On Google Cloud](gcpgettingstarted/README.md)
 + [QTUM On AWS](Qtum-AWS/README.md)
 + [Stake With VPS](How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md)
 + [Stake With Raspberry Pi](Qtum-on-Raspberry-Pi/README.md)
