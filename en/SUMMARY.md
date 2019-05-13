@@ -39,10 +39,11 @@
 + [How to Stake With Qtum](How-to-Staking-with-Qtum/README.md)
 + [How to Stake on FreeBSD](freebsd/README.md)
 
-### QtumX
+### Unita
 
-+ [QtumX Technical White Paper](Technical-White-Paper-for-QtumX/README.md)
-+ [QtumX One-Click-Launch-Chain](One-Click-Launch-Chain/README.md)
++ [Unita Technical White Paper](Technical-White-Paper-for-QtumX/README.md)
++ [Install Unita from Linux repositories](unitarepo/README.md)
++ [Unita One-Click-Launch-Chain](One-Click-Launch-Chain/README.md)
 + [SCAR: Scalable Consensus Algorithm](SCAR-Consensus/README.md)
 + [DDAO: Decentralized Data Access Object](DDAO-Data-Management/README.md)
 

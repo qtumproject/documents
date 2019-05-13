@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>bech32 support · Qtum Documentation</title>
+        <title>Install Unita from Linux repositories · Qtum Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html" />
+    <link rel="next" href="../One-Click-Launch-Chain/" />
     
     
-    <link rel="prev" href="../Testnet-User-Guide.html" />
+    <link rel="prev" href="../Technical-White-Paper-for-QtumX/" />
     
 
     </head>
@@ -266,9 +266,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.11" data-path="./">
+        <li class="chapter " data-level="2.11" data-path="../bech32/">
             
-                <a href="./">
+                <a href="../bech32/">
             
                     
                     bech32 support
@@ -476,9 +476,9 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2" data-path="../unitarepo/">
+        <li class="chapter active" data-level="6.2" data-path="./">
             
-                <a href="../unitarepo/">
+                <a href="./">
             
                     
                     Install Unita from Linux repositories
@@ -558,7 +558,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >bech32 support</a>
+        <a href=".." >Install Unita from Linux repositories</a>
     </h1>
 </div>
 
@@ -573,30 +573,58 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="bech32-addresses-on-qtum-0161"><a name="bech32-addresses-on-qtum-0161" class="plugin-anchor" href="#bech32-addresses-on-qtum-0161"><i class="fa fa-link" aria-hidden="true"></i></a>bech32 addresses on Qtum 0.16.1</h1>
-<p><strong>IMPORTANT NOTE:</strong> bech32 addresses <strong>CANNOT</strong> participate in staking. They&apos;re only for transacting and storing Qtum.</p>
-<p>Qtum 0.16 brought several important updates, one of the most important is in fact the support for bech32 addresses. <strong>These can be enabled on new wallets</strong> by adding <code>addresstype=bech32</code> to the qtum.conf file</p>
-<p><strong>PLEASE NOTE</strong> bech32 is very new and most online services don&apos;t support it yet, this means you cannot withdraw from most exchanges/online wallets to a bech32 address for now, as time passes and there&apos;s more support for bech32, it&apos;ll be easy to use from/to any service.</p>
-<p>There&apos;s many advantages to this new format, it&apos;s the future in many ways as even lightning network will benefit from this, bech32 addresses on Qtum start with <code>qc1</code>. To learn more about bech32: </p>
-<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki" target="_blank">https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki</a></p>
-<p><a href="https://www.coindesk.com/pieter-wuilles-latest-project-making-bitcoin-harder-lose/" target="_blank">https://www.coindesk.com/pieter-wuilles-latest-project-making-bitcoin-harder-lose/</a></p>
-<h3 id="lets-see-how-to-enable-these-addresses-on-qtum-0161"><a name="lets-see-how-to-enable-these-addresses-on-qtum-0161" class="plugin-anchor" href="#lets-see-how-to-enable-these-addresses-on-qtum-0161"><i class="fa fa-link" aria-hidden="true"></i></a>Let&apos;s see how to enable these addresses on Qtum 0.16.1:</h3>
-<p>Following our sample, in Mac OS, we need to go to the folder /Users/yourusername/Library/Application Support/Qtum <strong>(If it doesn&apos;t exist, you need to create it)</strong></p>
-<p>There&apos;s two options for navigating ourselves towards that folder, the first one is by opening Finder and going to the menu: go -&gt; go to folder.. &gt; ~/Library/Application Support/Qtum</p>
-<p><img src="0.png" alt="0"></p>
-<p><img src="1.png" alt="1"></p>
-<p>Optionally, we can use the Mac OS terminal if you&apos;re more comfortable with it</p>
-<p><img src="2.png" alt="2"></p>
-<p>Once inside that folder, we need to create the qtum.conf file (from a text editor or command line) and add</p>
-<p><code>addresstype=bech32</code> to it, save and close the file.</p>
-<p><img src="3.png" alt="3"></p>
-<p>Next, we launch the Qtum wallet, we&apos;ll be able to create and use bech32 addresses now. Just go to the &quot;receive&quot; menu and create a new payment request<img src="4.png" alt="4"></p>
-<p>Sending and receiving is pretty much the same as before, just copy and paste the address on the send field to send some Qtum to a bech32 address, or do the same for receiving.</p>
-<h1 id="other-operating-systems"><a name="other-operating-systems" class="plugin-anchor" href="#other-operating-systems"><i class="fa fa-link" aria-hidden="true"></i></a>Other Operating systems:</h1>
-<h4 id="windows"><a name="windows" class="plugin-anchor" href="#windows"><i class="fa fa-link" aria-hidden="true"></i></a>Windows:</h4>
-<p>Navigate to %Appdata%/ and you&apos;ll find the Qtum folder</p>
-<h4 id="linuxfreebsd"><a name="linuxfreebsd" class="plugin-anchor" href="#linuxfreebsd"><i class="fa fa-link" aria-hidden="true"></i></a>Linux/FreeBSD:</h4>
-<p>Your home folder contains the Qtum folder, by default it&apos;s in this location ~/.qtum/ </p>
+                                <h1 id="using-unita-official-repository-on-ubuntu-1604-1904-debian-mint-and-archlinux"><a name="using-unita-official-repository-on-ubuntu-1604-1904-debian-mint-and-archlinux" class="plugin-anchor" href="#using-unita-official-repository-on-ubuntu-1604-1904-debian-mint-and-archlinux"><i class="fa fa-link" aria-hidden="true"></i></a>Using UNITA official Repository on Ubuntu 16.04-19.04, Debian, Mint and Archlinux</h1>
+<p>We&apos;ve published our official Unita repository on <a href="https://repo.unita.network" target="_blank">https://repo.unita.network</a>, this repository supports the following distributions:</p>
+<h3 id="debian"><a name="debian" class="plugin-anchor" href="#debian"><i class="fa fa-link" aria-hidden="true"></i></a>Debian</h3>
+<ul>
+<li>8.x (Jessie)</li>
+<li>9.x (stretch)</li>
+<li>Testing (Buster)</li>
+<li>Unstable (Sid)</li>
+</ul>
+<h3 id="ubuntu"><a name="ubuntu" class="plugin-anchor" href="#ubuntu"><i class="fa fa-link" aria-hidden="true"></i></a>Ubuntu</h3>
+<p>16.04 - 19.04</p>
+<h3 id="mint"><a name="mint" class="plugin-anchor" href="#mint"><i class="fa fa-link" aria-hidden="true"></i></a>Mint</h3>
+<p>18.x - 19x</p>
+<h3 id="archlinux"><a name="archlinux" class="plugin-anchor" href="#archlinux"><i class="fa fa-link" aria-hidden="true"></i></a>Archlinux</h3>
+<p><a href="https://aur.archlinux.org/packages/qtum-core/" target="_blank">Get it from the AUR</a> </p>
+<h3 id="tutorial-focus"><a name="tutorial-focus" class="plugin-anchor" href="#tutorial-focus"><i class="fa fa-link" aria-hidden="true"></i></a>Tutorial focus</h3>
+<p>This tutorial assumes you have a basic knowledge of Linux and terminal usage, the entire process uses the Linux terminal.</p>
+<h2 id="installing-on-ubuntu"><a name="installing-on-ubuntu" class="plugin-anchor" href="#installing-on-ubuntu"><i class="fa fa-link" aria-hidden="true"></i></a>Installing on Ubuntu</h2>
+<h3 id="obtaining-signing-key"><a name="obtaining-signing-key" class="plugin-anchor" href="#obtaining-signing-key"><i class="fa fa-link" aria-hidden="true"></i></a>Obtaining signing key</h3>
+<p>First, we need to obtain the Unita signing key from the ubuntu keyserver, here&apos;s how:</p>
+<p><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  BF5B197D</code></p>
+<p>This will download and add the Unita signing key to your Linux install.</p>
+<h3 id="adding-repository-to-your-apt-sources"><a name="adding-repository-to-your-apt-sources" class="plugin-anchor" href="#adding-repository-to-your-apt-sources"><i class="fa fa-link" aria-hidden="true"></i></a>Adding repository to your APT sources.</h3>
+<p><code>sudo su</code> - Sudo to root first</p>
+<p><code>echo &quot;deb https://repo.unita.network/apt/ubuntu/ xenial main&quot; &gt;&gt; /etc/apt/sources.list</code></p>
+<p>This will add the repository to your APT sources file. <strong>NOTE:</strong> Please remember to change &quot;xenial&quot; for your Ubuntu version codename <!--(for instance, Ubuntu 17.10 codename is artful, in this case you need to replace xenial for artful)--></p>
+<h3 id="refreshing-apt-sources-and-installing-unita"><a name="refreshing-apt-sources-and-installing-unita" class="plugin-anchor" href="#refreshing-apt-sources-and-installing-unita"><i class="fa fa-link" aria-hidden="true"></i></a>Refreshing APT sources and installing Unita</h3>
+<p><code>sudo apt update &amp;&amp; sudo apt install unita</code></p>
+<p>By doing this, we&apos;ll update our sources and install Unita on our Ubuntu Box</p>
+<h2 id="installing-on-debian"><a name="installing-on-debian" class="plugin-anchor" href="#installing-on-debian"><i class="fa fa-link" aria-hidden="true"></i></a>Installing on Debian</h2>
+<p>Obtaining the public key in Debian is a bit different, but not complicated</p>
+<p>First, we need to make sure <strong>sudo</strong> is installed: </p>
+<p>Type <code>sudo su</code> and press enter, if you get a password prompt, then you can move on to obtaining the public key</p>
+<h3 id="installing-sudo"><a name="installing-sudo" class="plugin-anchor" href="#installing-sudo"><i class="fa fa-link" aria-hidden="true"></i></a>Installing sudo</h3>
+<p>Obtain admin privileges (su to root) and then type your admin user (root) password</p>
+<p>Once you&apos;re logged in as &quot;root&quot; please type the following: <code>apt-get install sudo</code></p>
+<p>When sudo finishes installing, add your user to the sudo group: <code>gpasswd -a youruser sudo</code>
+Logout and then log in again.</p>
+<h3 id="obtaining-public-key"><a name="obtaining-public-key" class="plugin-anchor" href="#obtaining-public-key"><i class="fa fa-link" aria-hidden="true"></i></a>Obtaining Public key</h3>
+<p>Install dirmngr first</p>
+<p><code>sudo apt install dirmngr</code></p>
+<p><code>`sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  BF5B197D` </code></p>
+<p>This downloads and installs the Unita public key</p>
+<h3 id="adding-repository-to-your-apt-sources"><a name="adding-repository-to-your-apt-sources" class="plugin-anchor" href="#adding-repository-to-your-apt-sources"><i class="fa fa-link" aria-hidden="true"></i></a>Adding repository to your APT sources.</h3>
+<p><code>sudo su</code> - Sudo to root first</p>
+<p><code>echo &quot;deb https://repo.unita.network/apt/debian/ stretch main&quot; &gt;&gt; /etc/apt/sources.list</code></p>
+<p>This will add the repository to your APT sources file. <strong>NOTE:</strong> Please remember to change &quot;stretch&quot; for your Debian version codename <!--(for instance, Debian 8.x codename is jessie, in this case you need to replace stretch for jessie)--></p>
+<h3 id="refreshing-apt-sources-and-installing-unita"><a name="refreshing-apt-sources-and-installing-unita" class="plugin-anchor" href="#refreshing-apt-sources-and-installing-unita"><i class="fa fa-link" aria-hidden="true"></i></a>Refreshing APT sources and installing Unita</h3>
+<p><code>sudo apt update &amp;&amp; sudo apt install unita</code></p>
+<p>By doing this, we&apos;ll update our sources and install Unita on our Debian Box</p>
+<h3 id="launching-unita"><a name="launching-unita" class="plugin-anchor" href="#launching-unita"><i class="fa fa-link" aria-hidden="true"></i></a>Launching Unita</h3>
+<p>Launching is simple, we just go to our applications menu and scrolldown/search for Unita </p>
 
                                 
                                 </section>
@@ -624,12 +652,12 @@
 
             
                 
-                <a href="../Testnet-User-Guide.html" class="navigation navigation-prev " aria-label="Previous page: Testnet User Guide">
+                <a href="../Technical-White-Paper-for-QtumX/" class="navigation navigation-prev " aria-label="Previous page: Unita Technical White Paper">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html" class="navigation navigation-next " aria-label="Next page: Guidance of Qtum Deployment and RPC Settings">
+                <a href="../One-Click-Launch-Chain/" class="navigation navigation-next " aria-label="Next page: Unita One-Click-Launch-Chain">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -640,7 +668,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"bech32 support","level":"2.11","depth":1,"next":{"title":"Guidance of Qtum Deployment and RPC Settings","level":"3.1","depth":1,"path":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","ref":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","articles":[]},"previous":{"title":"Testnet User Guide","level":"2.10","depth":1,"path":"Testnet-User-Guide.md","ref":"Testnet-User-Guide.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"bech32/README.md","mtime":"2019-04-24T06:05:44.218Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-13T06:11:05.167Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Install Unita from Linux repositories","level":"6.2","depth":1,"next":{"title":"Unita One-Click-Launch-Chain","level":"6.3","depth":1,"path":"One-Click-Launch-Chain/README.md","ref":"One-Click-Launch-Chain/README.md","articles":[]},"previous":{"title":"Unita Technical White Paper","level":"6.1","depth":1,"path":"Technical-White-Paper-for-QtumX/README.md","ref":"Technical-White-Paper-for-QtumX/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"unitarepo/README.md","mtime":"2019-05-13T06:07:07.143Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-13T06:11:05.167Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

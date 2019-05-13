@@ -1,10 +1,10 @@
-# Using QTUM official Repository on Ubuntu 16.04-19.04, Debian and Archlinux
+# Using UNITA official Repository on Ubuntu 16.04-19.04, Debian, Mint and Archlinux
 
 
 
 
 
-We've published our official Qtum repository on https://repo.qtum.info or https://repo.qtum.org, this repository supports the following distributions:
+We've published our official Unita repository on [https://repo.unita.network](https://repo.unita.network), this repository supports the following distributions:
 
 ### Debian
 
@@ -19,7 +19,7 @@ We've published our official Qtum repository on https://repo.qtum.info or https:
 
 ### Mint 
 
-18.x
+18.x - 19x
 
 
 
@@ -27,23 +27,23 @@ We've published our official Qtum repository on https://repo.qtum.info or https:
 
 [Get it from the AUR](https://aur.archlinux.org/packages/qtum-core/) 
 
-More distributions will be added in the future, this document will be updated to reflect those changes.
-
 
 
 ### Tutorial focus
 
-This tutorial assumes you have a basic knowledge of linux and terminal usage, the entire process uses the linux terminal.
+This tutorial assumes you have a basic knowledge of Linux and terminal usage, the entire process uses the Linux terminal.
+
+
 
 ## Installing on Ubuntu
 
 ### Obtaining signing key
 
-First, we need to obtain the Qtum signing key from the ubuntu keyserver, here's how:
+First, we need to obtain the Unita signing key from the ubuntu keyserver, here's how:
 
 `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  BF5B197D`
 
-This will download and add the Qtum signing key to your linux install.
+This will download and add the Unita signing key to your Linux install.
 
 
 
@@ -51,15 +51,19 @@ This will download and add the Qtum signing key to your linux install.
 
 `sudo su` - Sudo to root first
 
-` echo "deb https://repo.qtum.info/apt/ubuntu/ xenial main" >> /etc/apt/sources.list`
+` echo "deb https://repo.unita.network/apt/ubuntu/ xenial main" >> /etc/apt/sources.list`
 
 This will add the repository to your APT sources file. **NOTE:** Please remember to change "xenial" for your Ubuntu version codename <!--(for instance, Ubuntu 17.10 codename is artful, in this case you need to replace xenial for artful)-->
 
-### Refreshing APT sources and installing Qtum
 
-`sudo apt update && sudo apt install qtum`
 
-By doing this, we'll update our sources and install Qtum on our ubuntu Box
+### Refreshing APT sources and installing Unita
+
+`sudo apt update && sudo apt install unita`
+
+By doing this, we'll update our sources and install Unita on our Ubuntu Box
+
+
 
 ## Installing on Debian
 
@@ -80,37 +84,33 @@ Logout and then log in again.
 
 ### Obtaining Public key
 
-```wget -qO - https://repo.qtum.info/apt/public.key | sudo apt-key add - ```
+Install dirmngr first
 
-This downloads and installs the Qtum public key
+`sudo apt install dirmngr`
 
+````sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  BF5B197D` ```
+
+This downloads and installs the Unita public key
 
 ### Adding repository to your APT sources.
 
 `sudo su` - Sudo to root first
 
-` echo "deb https://repo.qtum.info/apt/debian/ stretch main" >> /etc/apt/sources.list`
+` echo "deb https://repo.unita.network/apt/debian/ stretch main" >> /etc/apt/sources.list`
 
 This will add the repository to your APT sources file. **NOTE:** Please remember to change "stretch" for your Debian version codename <!--(for instance, Debian 8.x codename is jessie, in this case you need to replace stretch for jessie)-->
 
-### Refreshing APT sources and installing Qtum
-
-`sudo apt update && sudo apt install qtum`
-
-By doing this, we'll update our sources and install Qtum on our debian Box
-
-### Launching Qtum
 
 
+### Refreshing APT sources and installing Unita
 
-Launching is simple, we just go to our applications menu and scrolldown/search for qtum 
+`sudo apt update && sudo apt install unita`
 
-<img src="1.jpg" width="800">
-
-
-
-<img src="2.jpg" width="800">
+By doing this, we'll update our sources and install Unita on our Debian Box
 
 
+### Launching Unita
 
-This works, we can launch our Qtum wallet and start syncing!
+Launching is simple, we just go to our applications menu and scrolldown/search for Unita 
+
+
