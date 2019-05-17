@@ -76,15 +76,17 @@ The Qtum raspbian image has also some cool wallpapers to choose from:
 
 ## Installing Qtum via Qtum Raspbian repository
 
-If you're using a "normal" raspbian install, you can add the Qtum repository to install Qtum and keep with updates easily!
+If you're using a **"normal"** raspbian install, you can add the Qtum repository to install Qtum and keep with updates easily!
 
-### Add Qtum apt public key
+### Install dirmngr & apt-transport https
 
-```wget -qO - https://repo.qtum.info/apt/public.key | sudo apt-key add - ```
+```sudo apt install -y dirmngr apt-transport-https  ```
 
-This downloads and installs the Qtum public key
+### Add qtum public key
 
-### Adding repository to your APT sources.
+`sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BF5B197D`
+
+### Adding repository to your APT sourcess
 
 `sudo su` - Sudo to root first
 
