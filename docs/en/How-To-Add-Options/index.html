@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Mobile Wallet · Qtum Documentation</title>
+        <title>How-to Add Options · Qtum Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../Adding-Nodes/" />
+    <link rel="next" href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html" />
     
     
-    <link rel="prev" href="../QTUM-WebWallet-usage/" />
+    <link rel="prev" href="../bech32/" />
     
 
     </head>
@@ -188,9 +188,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.5" data-path="./">
+        <li class="chapter " data-level="2.5" data-path="../Qtum-Mobile-wallet-tutorial/">
             
-                <a href="./">
+                <a href="../Qtum-Mobile-wallet-tutorial/">
             
                     
                     Mobile Wallet
@@ -279,9 +279,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.12" data-path="../How-To-Add-Options/">
+        <li class="chapter active" data-level="2.12" data-path="./">
             
-                <a href="../How-To-Add-Options/">
+                <a href="./">
             
                     
                     How-to Add Options
@@ -584,7 +584,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Mobile Wallet</a>
+        <a href=".." >How-to Add Options</a>
     </h1>
 </div>
 
@@ -599,73 +599,52 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="qtum-mobile-wallet"><a name="qtum-mobile-wallet" class="plugin-anchor" href="#qtum-mobile-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>QTUM Mobile Wallet</h1>
-<h2 id="getting-started"><a name="getting-started" class="plugin-anchor" href="#getting-started"><i class="fa fa-link" aria-hidden="true"></i></a>Getting started</h2>
-<p>Once we&apos;ve installed our Qtum wallet either from the Apple App Store or Google Play store, we can open the wallet and we get this screen</p>
-<p><img src="mobile_40.png" width="300"></p>
-<h4 id="here-were-offered-two-options"><a name="here-were-offered-two-options" class="plugin-anchor" href="#here-were-offered-two-options"><i class="fa fa-link" aria-hidden="true"></i></a>Here we&apos;re offered two options:</h4>
+                                <h1 id="how-to-add-options-for-qtum-node&#xFF08;or-add-config-file&#xFF09;"><a name="how-to-add-options-for-qtum-node&#xFF08;or-add-config-file&#xFF09;" class="plugin-anchor" href="#how-to-add-options-for-qtum-node&#xFF08;or-add-config-file&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>How to add options for Qtum node&#xFF08;or add config file&#xFF09;</h1>
+<p>User can specify extra options (or set configurations) for Qtum node, in order to enable/disable some specific features, other than default settings.</p>
+<p>This tutorial describes how to specify options (or configurations) to Qtum node.</p>
+<h2 id="for-qtum-pc-wallet&#xFF08;qtum-core-qt-wallet&#xFF09;"><a name="for-qtum-pc-wallet&#xFF08;qtum-core-qt-wallet&#xFF09;" class="plugin-anchor" href="#for-qtum-pc-wallet&#xFF08;qtum-core-qt-wallet&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>For Qtum PC wallet&#xFF08;Qtum Core qt wallet&#xFF09;</h2>
+<p>(<strong><em>This works for both PC wallet and command-line qtumd wallet</em></strong>)</p>
+<p>Qtum PC wallet (i.e. qtum core qt wallet) is the most widely used Qtum wallet by common users. (Not yet installed a wallet? Please visit <a href="https://qtumeco.io/wallet" target="_blank">https://qtumeco.io/wallet</a> to download latest pc wallet&#xFF09;</p>
+<p>User can edit qtum config file to specify some options.</p>
+<p>Instructions:</p>
+<h3 id="1-create-qtumconf-file"><a name="1-create-qtumconf-file" class="plugin-anchor" href="#1-create-qtumconf-file"><i class="fa fa-link" aria-hidden="true"></i></a>1. Create <code>qtum.conf</code> file</h3>
+<p>Create a file named <code>qtum.conf</code> under your <code>datadir</code>, the default datadir paths for different OS are different:</p>
 <ul>
-<li>Create a new wallet</li>
-<li>Import Wallet (restore from backup) this will ask us for our seed words which are generated when the wallet is created</li>
+<li>Linux: ~/.qtum</li>
+<li>OSX: ~/Library/Application Support/Qtum</li>
+<li>Windows: %APPDATA%\Qtum (Please paste this path to your windows explorer, the path will be resolved automatically)</li>
 </ul>
-<h4 id="create-pin"><a name="create-pin" class="plugin-anchor" href="#create-pin"><i class="fa fa-link" aria-hidden="true"></i></a>Create PIN</h4>
-<p><img src="mobile50.png" width="300"></p>
-<p>Once we create a new wallet, we&apos;ll be asked to create a PIN. We can either use this PIN or use Touch ID which is offered on. the next screen.</p>
-<h4 id="enable-touch-id"><a name="enable-touch-id" class="plugin-anchor" href="#enable-touch-id"><i class="fa fa-link" aria-hidden="true"></i></a>Enable Touch ID</h4>
-<p><img src="mobile_41.png" width="300"></p>
-<p>Touch ID is just a very cool feature to have, it&apos;s secure and makes it faster to unlock your wallet, however you can choose not to use Touch ID and just use the pin code you&apos;ll set up during the wallet creation.</p>
-<p><img src="mobile_42.png" width="300"></p>
-<p>These are our seed words, we need to make backup of these words in order to be able to restore our wallet in any situation. Please back these words up securely, paper backup is recommended, <strong><u>without these seed words, you will not be able to restore your wallet.</u></strong></p>
-<p><img src="mobile_43.png" width="300"></p>
-<p>On this sample, we also copied the words directly from the wallet which allows us to store them in a notes app.</p>
-<p><img src="mobile_44.png" width="300"></p>
-<p>Once all this is done, we&apos;re greeted with our Qtum wallet.</p>
-<h2 id="qtum-mobile-wallet-features"><a name="qtum-mobile-wallet-features" class="plugin-anchor" href="#qtum-mobile-wallet-features"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum mobile wallet features</h2>
-<p>The Qtum mobile wallet has several features and functions, let&apos;s get started with the basics.</p>
-<ul>
-<li>My Wallet<ul>
-<li>Receive</li>
-<li>Send</li>
-</ul>
-</li>
-<li>Profile<ul>
-<li>Language</li>
-<li>Change PIN</li>
-<li>Wallet Backup</li>
-<li>Touch ID</li>
-<li>Smart contracts</li>
-<li>Token subscriptions</li>
-<li>About</li>
-<li>Switch application theme</li>
-<li>Log out</li>
-</ul>
-</li>
-<li>News</li>
-<li>Send</li>
-</ul>
-<h3 id="my-wallet"><a name="my-wallet" class="plugin-anchor" href="#my-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>My wallet</h3>
-<p>This is the first screen on our Qtum mobile wallet, it shows the following:</p>
-<ul>
-<li>Available balance</li>
-<li>Qtum Address</li>
-<li>Recent activity/transactions</li>
-<li>Qr Code scanner on the top</li>
-</ul>
-<h4 id="receiving-qtum"><a name="receiving-qtum" class="plugin-anchor" href="#receiving-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Receiving Qtum</h4>
-<p><img src="mobile1.png" width="300"></p>
-<p>Here we touch on the &quot;+&quot; sign on the left of our Qtum address to display the QR code</p>
-<p><img src="mobile3.png" width="300"></p>
-<p>We can go back to the first screen by touching on &quot;&lt;&quot; and this will allow us to look into the transaction we&apos;ve received, the transaction screen shows all transactions and the origin/destination address</p>
-<p><img src="mobile2.png" width="300"></p>
-<h4 id="sending-qtum"><a name="sending-qtum" class="plugin-anchor" href="#sending-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Sending Qtum</h4>
-<p><img src="mobile7.png" width="300"></p>
-<p><img src="mobile_32.png" width="300"></p>
-<p><img src="mobile_36.png" width="300"></p>
-<h3 id="profile"><a name="profile" class="plugin-anchor" href="#profile"><i class="fa fa-link" aria-hidden="true"></i></a>Profile</h3>
-<p>Next let&apos;s explore the profile section, here we have several features from changing displayed language to backing up our wallets. Touch ID works both on Android<em> and iOS, here  we can disable or enable Touch ID, change our PIN, hey ,we can even create <em>*<u>our own Smart contracts from our Mobile phones!!!.</u></em></em></p>
-<p><img src="mobile4.png" width="300"></p>
-<p>More updates coming soon...</p>
-
+<p><strong><em>Please be careful and don&#x2018;t remove or change any content under this directory except you are aware of them.</em></strong></p>
+<p>&#xFF08;PS: the <code>datadir</code> might be manually set as well, so please create your qtum.conf under the datadir you spcified, if you did)</p>
+<p>Still don&apos;t know how to create a file? You can also open this <code>qtum.conf</code> on the wallet UI directly <code>System Preference-&gt;OPEN CONFIGURATION FILE</code>:</p>
+<p><img src="Open-Qtum-Conf-In-Wallet.jpg" alt="Open-Qtum-Conf-In-Wallet"></p>
+<p>This will create and open the <code>qtum.conf</code> directly for user.</p>
+<h3 id="2-specify-the-options"><a name="2-specify-the-options" class="plugin-anchor" href="#2-specify-the-options"><i class="fa fa-link" aria-hidden="true"></i></a>2. Specify the options</h3>
+<p>User can then specify any option in the file <code>qtum.conf</code> just created.</p>
+<p>For example, to specify some rpc related settings, user might add following lines to <code>qtum.conf</code>: </p>
+<pre><code>rpcuser=test
+rpcpassword=test1234
+server=1
+</code></pre><p>This will set rpcuser to <code>test</code>, rpcpassword to <code>test1234</code>, and enable the <code>server</code> feature.</p>
+<h3 id="3-restart-wallet"><a name="3-restart-wallet" class="plugin-anchor" href="#3-restart-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>3. Restart wallet</h3>
+<p>It is required to RESTART the wallet after editing the <code>qtum.conf</code> file, before the options are really effective.</p>
+<h3 id="other-options"><a name="other-options" class="plugin-anchor" href="#other-options"><i class="fa fa-link" aria-hidden="true"></i></a>Other options</h3>
+<p>To learn more about the complete list of all valid Qtum options, please check the pc wallet menu for more details:</p>
+<p><code>Help-&gt;Command-line Options</code>:</p>
+<p><img src="Help-Comman-line-options.jpg" alt="Help Command-line Options"></p>
+<p><img src="Command-line-options.jpg" alt="Command-line Options"></p>
+<h2 id="for-the-command-line-wallet-qtumd"><a name="for-the-command-line-wallet-qtumd" class="plugin-anchor" href="#for-the-command-line-wallet-qtumd"><i class="fa fa-link" aria-hidden="true"></i></a>For the command-line wallet <code>qtumd</code></h2>
+<p>If your have no idea about command line, please ignore this section.</p>
+<p>For those who are familiar with command line, you can also specify options by adding options when running <code>qtumd</code>.</p>
+<p>For example&#xFF1A;</p>
+<pre><code>./qtumd -rpcuser=test -rpcpassword=test1234 -server=1
+</code></pre><p>These options <code>-rpcuser=test -rpcpassword=test1234 -server=1</code> realize the same configuration setting as the &quot;Specify the options&quot; section described.</p>
+<p>Note that if you specify the options through <code>qtumd</code> command line, same options will be required to add to corresponding <code>qtum-cli</code> command, e.g.:</p>
+<pre><code>./qtum-cli -rpcuser=test -rpcpassword=test1234 getinfo
+</code></pre><h3 id="check-options-list-by-command-line"><a name="check-options-list-by-command-line" class="plugin-anchor" href="#check-options-list-by-command-line"><i class="fa fa-link" aria-hidden="true"></i></a>Check options list by command line</h3>
+<p>You can check the complete option list with&#xFF1A;</p>
+<pre><code>./qtumd -help
+</code></pre>
                                 
                                 </section>
                             
@@ -692,12 +671,12 @@
 
             
                 
-                <a href="../QTUM-WebWallet-usage/" class="navigation navigation-prev " aria-label="Previous page: Web Wallet">
+                <a href="../bech32/" class="navigation navigation-prev " aria-label="Previous page: bech32 support">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../Adding-Nodes/" class="navigation navigation-next " aria-label="Next page: Adding Nodes">
+                <a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html" class="navigation navigation-next " aria-label="Next page: Guidance of Qtum Deployment and RPC Settings">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -708,7 +687,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Mobile Wallet","level":"2.5","depth":1,"next":{"title":"Adding Nodes","level":"2.6","depth":1,"path":"Adding-Nodes/README.md","ref":"Adding-Nodes/README.md","articles":[]},"previous":{"title":"Web Wallet","level":"2.4","depth":1,"path":"QTUM-WebWallet-usage/README.md","ref":"QTUM-WebWallet-usage/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-Mobile-wallet-tutorial/README.md","mtime":"2018-07-17T04:53:01.816Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-04T07:42:23.111Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"How-to Add Options","level":"2.12","depth":1,"next":{"title":"Guidance of Qtum Deployment and RPC Settings","level":"3.1","depth":1,"path":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","ref":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","articles":[]},"previous":{"title":"bech32 support","level":"2.11","depth":1,"path":"bech32/README.md","ref":"bech32/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"How-To-Add-Options/README.md","mtime":"2019-06-04T07:41:58.882Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-04T07:42:23.111Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

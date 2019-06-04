@@ -16,12 +16,14 @@
 + [Qtum Exchange Usage Guide](Qtum-Exchange-Usage-Guide-and-Info.md)
 + [Testnet User Guide](Testnet-User-Guide.md)
 + [bech32 support](bech32/README.md)
++ [How-to Add Options](How-To-Add-Options/README.md)
 
 ### Deploy Qtum
 
 + [Guidance of Qtum Deployment and RPC Settings](Guidance-of-Qtum-Deployment-and-RPC-Settings.md)
 + [Launch Qtum With Docker](Launch-Qtum-with-Docker.md)
 + [How to Build Qtum on CentOS](Build-Qtum-on-CentOS.md)
++ [How to Build Qtum on Raspbian](How To Build Qtum On Raspbian.md)
 
 ### Smart Contract and QRC20
 
