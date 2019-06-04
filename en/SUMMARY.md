@@ -23,7 +23,7 @@
 + [Guidance of Qtum Deployment and RPC Settings](Guidance-of-Qtum-Deployment-and-RPC-Settings.md)
 + [Launch Qtum With Docker](Launch-Qtum-with-Docker.md)
 + [How to Build Qtum on CentOS](Build-Qtum-on-CentOS.md)
-+ [How to Build Qtum on Raspbian](How To Build Qtum On Raspbian.md)
++ [How to Build Qtum on Raspbian](How-To-Build-Qtum-On-Raspbian.md)
 
 ### Smart Contract and QRC20
 
