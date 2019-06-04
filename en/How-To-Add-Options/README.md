@@ -1,6 +1,6 @@
 # How to add options for Qtum node（or add config file）
 
-User can specify extral options(or set configurations) for qtum node, in order to enable/disable some specific features, other than default settings.
+User can specify extra options(or set configurations) for qtum node, in order to enable/disable some specific features, other than default settings.
 
 This tutorial describes how to specify options (or configurations) to Qtum node.
 
