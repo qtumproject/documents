@@ -16,6 +16,7 @@
 + [Qtum Exchange Usage Guide](Qtum-Exchange-Usage-Guide-and-Info.md)
 + [Testnet User Guide](Testnet-User-Guide.md)
 + [bech32 support](bech32/README.md)
++ [How-to Add Options](How-To-Add-Options/README.md)
 
 ### Deploy Qtum
 
