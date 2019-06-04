@@ -1,6 +1,6 @@
 # How to add options for Qtum node（or add config file）
 
-User can specify extra options(or set configurations) for qtum node, in order to enable/disable some specific features, other than default settings.
+User can specify extra options (or set configurations) for Qtum node, in order to enable/disable some specific features, other than default settings.
 
 This tutorial describes how to specify options (or configurations) to Qtum node.
 
@@ -8,7 +8,7 @@ This tutorial describes how to specify options (or configurations) to Qtum node.
 
 (***This works for both PC wallet and command-line qtumd wallet***)
 
-Qtum PC wallet (i.e. qtum core qt wallet) is the most widely used qtum wallet by common users.(Not yet installed a wallet? Please visit [https://qtumeco.io/wallet](https://qtumeco.io/wallet) to download latest pc wallet）
+Qtum PC wallet (i.e. qtum core qt wallet) is the most widely used Qtum wallet by common users. (Not yet installed a wallet? Please visit [https://qtumeco.io/wallet](https://qtumeco.io/wallet) to download latest pc wallet）
 
 User can edit qtum config file to specify some options.
 
@@ -20,9 +20,9 @@ Create a file named `qtum.conf` under your `datadir`, the default datadir paths 
 
 * Linux: ~/.qtum
 * OSX: ~/Library/Application Support/Qtum
-* Windows: %APPDATA%\Qtum (Please paste this path to your windows explorer, the path will be resoved automatically)
+* Windows: %APPDATA%\Qtum (Please paste this path to your windows explorer, the path will be resolved automatically)
 
-***Please be careful and don‘t remove or change any content under this menu except you are aware of them.***
+***Please be careful and don‘t remove or change any content under this directory except you are aware of them.***
 
 （PS: the `datadir` might be manually set as well, so please create your qtum.conf under the datadir you spcified, if you did)
 
@@ -52,7 +52,7 @@ It is required to RESTART the wallet after editing the `qtum.conf` file, before 
 
 ### Other options
 
-To learn more about the complete list of all valid qtum options, please check the pc wallet menu for more details:
+To learn more about the complete list of all valid Qtum options, please check the pc wallet menu for more details:
 
 `Help->Command-line Options`:
 
@@ -72,7 +72,7 @@ For example：
 ./qtumd -rpcuser=test -rpcpassword=test1234 -server=1
 ```
 
-These options `-rpcuser=test -rpcpassword=test1234 -server=1` realize the some configuration setting as the "Specify the options" section described.
+These options `-rpcuser=test -rpcpassword=test1234 -server=1` realize the same configuration setting as the "Specify the options" section described.
 
 Note that if you specify the options through `qtumd` command line, same options will be required to add to corresponding `qtum-cli` command, e.g.:
 
