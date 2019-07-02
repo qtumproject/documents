@@ -351,9 +351,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="../How-To-Build-Qtum-On-Raspbian.html">
+        <li class="chapter " data-level="3.4" data-path="../How-To-Build-Qtum-On-Raspbian.md">
             
-                <a href="../How-To-Build-Qtum-On-Raspbian.html">
+                <span>
             
                     
                     How to Build Qtum on Raspbian
@@ -615,14 +615,14 @@
                                 <h1 id="qtum-on-raspberry-pi"><a name="qtum-on-raspberry-pi" class="plugin-anchor" href="#qtum-on-raspberry-pi"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum on Raspberry Pi</h1>
 <ol>
 <li><a href="#Getting%20a%20Stakebox">Getting a Stakebox</a></li>
-<li><a href="Downloading%20Qtum%20Raspbian">Downloading Qtum Raspbian</a></li>
-<li><a href="Screenshots%20of%20Qtum%20Raspbian">Screenshots of Qtum Raspbian</a></li>
-<li><a href="Installing%20Qtum%20via%20Qtum%20Raspbian%20repository">Installing Qtum via Qtum Raspbian repository</a> <strong>(only needed if you&apos;re not using a Qtum stakebox or not using the Qtum Raspbian image)</strong></li>
-<li><a href="Protecting%20access%20with%20a%20basic%20firewall">Setting up a firewall in Raspbian</a></li>
-<li><a href="Launching%20Qtum%20daemon">Launching Qtum daemon</a></li>
-<li><a href="Encrypting%20wallet">Encrypting wallet</a></li>
-<li><a href="Staking">Staking</a></li>
-<li><a href="How%20to%20backup%20to%20a%20separate%20device">Backup</a></li>
+<li><a href="#Downloading%20Qtum%20Raspbian">Downloading Qtum Raspbian</a></li>
+<li><a href="#Screenshots%20of%20Qtum%20Raspbian">Screenshots of Qtum Raspbian</a></li>
+<li><a href="#Installing%20Qtum%20via%20Qtum%20Raspbian%20repository">Installing Qtum via Qtum Raspbian repository</a> <strong>(only needed if you&apos;re not using a Qtum stakebox or not using the Qtum Raspbian image)</strong></li>
+<li><a href="#Protecting%20access%20with%20a%20basic%20firewall">Setting up a firewall in Raspbian</a></li>
+<li><a href="#Launching%20Qtum%20daemon">Launching Qtum daemon</a></li>
+<li><a href="#Encrypting%20wallet">Encrypting wallet</a></li>
+<li><a href="#Staking">Staking</a></li>
+<li><a href="#How%20to%20backup%20to%20a%20separate%20device">Backup</a></li>
 </ol>
 <h3 id="getting-a-stakebox"><a name="getting-a-stakebox" class="plugin-anchor" href="#getting-a-stakebox"><i class="fa fa-link" aria-hidden="true"></i></a>Getting a Stakebox</h3>
 <p>There&apos;s several ways to run Qtum on a Raspberry Pi, perhaps the easiest way is to just get a <strong>Qtum Stakebox</strong>, you can order from here: </p>
@@ -630,9 +630,9 @@
 <h3 id="downloading-qtum-raspbian"><a name="downloading-qtum-raspbian" class="plugin-anchor" href="#downloading-qtum-raspbian"><i class="fa fa-link" aria-hidden="true"></i></a>Downloading Qtum Raspbian</h3>
 <p>If you don&apos;t want to buy or already own a stakebox and just want to get the latest version of Raspbian with Qtum preinstalled with the official Qtum Repository, then you can download the Raspbian images yourself:</p>
 <p><strong>Raspbian lite (CLI only)</strong>
-<a href="https://s3.amazonaws.com/raspbianimages/qtumrasplite.tar.xz" target="_blank">https://s3.amazonaws.com/raspbianimages/qtumrasplite.tar.xz</a></p>
+<a href="https://raspbianimages.s3.amazonaws.com/2019-07-01-Raspbian-Qtum-lite.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/2019-07-01-Raspbian-Qtum-lite.zip</a></p>
 <p><strong>Raspbian desktop (with some cool wallpapers! )</strong>
-<a href="https://s3.amazonaws.com/raspbianimages/qtumrasp.tar.xz" target="_blank">https://s3.amazonaws.com/raspbianimages/qtumrasp.tar.xz</a></p>
+<a href="https://raspbianimages.s3.amazonaws.com/2019-07-01-Raspbian-Qtum.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/2019-07-01-Raspbian-Qtum.zip</a></p>
 <p>How to &quot;burn&quot; these images to your sd card is out of the scope of this tutorial, for more info on how to do this, please check out this link: <a href="https://www.raspberrypi.org/documentation/installation/installing-images/" target="_blank">https://www.raspberrypi.org/documentation/installation/installing-images/</a></p>
 <h3 id="important-note"><a name="important-note" class="plugin-anchor" href="#important-note"><i class="fa fa-link" aria-hidden="true"></i></a>IMPORTANT NOTE!</h3>
 <p><strong>Qtum raspbian</strong> default user is <strong>qtum</strong> and default password is <strong>qtum1234</strong>. You will need to enter these on first login and you will be asked by the login system to change your password immediately, please make sure to use a strong password!</p>
@@ -724,7 +724,7 @@ or
 <p>If you want to split your coins into different addresses inside your Rasbperry Pi wallet, type the following to obtain new addresses inside your wallet: qtum-cli getnewaddress Each time you type this, you&#x2019;ll get a new address, QTUM can generate any amount of addresses you want, but please keep in mind, if you do go over 100 new address, you might want to make a new backup of your wallet.</p>
 <h2 id="updating-wallet"><a name="updating-wallet" class="plugin-anchor" href="#updating-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Updating wallet</h2>
 <p>We&#x2019;re always launching new updates, sometimes it&#x2019;s to add new features or fix bugs. In any case, updating is a breeze, all you have to do is type
-<code>sudo apt update &amp;&amp; sudo apt install &#x2014;only-upgrade qtum</code></p>
+<code>sudo apt update &amp;&amp; sudo apt upgrade -y</code></p>
 <h2 id="how-to-backup-to-a-separate-device"><a name="how-to-backup-to-a-separate-device" class="plugin-anchor" href="#how-to-backup-to-a-separate-device"><i class="fa fa-link" aria-hidden="true"></i></a>How to backup to a separate device</h2>
 <p>Making a backup in Raspberry is simple, you only need to copy the wallet.dat file, but how do you export this to another device? </p>
 <p>First, we&apos;ll download Filezilla, which is an easy to use and secure FTP/SFTP server</p>
@@ -786,7 +786,7 @@ or
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Stake With Raspberry Pi","level":"5.5","depth":1,"next":{"title":"How to Stake With Qtum","level":"5.6","depth":1,"path":"How-to-Staking-with-Qtum/README.md","ref":"How-to-Staking-with-Qtum/README.md","articles":[]},"previous":{"title":"Stake With VPS","level":"5.4","depth":1,"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","ref":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-on-Raspberry-Pi/README.md","mtime":"2019-06-12T06:43:58.282Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-19T08:21:24.762Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Stake With Raspberry Pi","level":"5.5","depth":1,"next":{"title":"How to Stake With Qtum","level":"5.6","depth":1,"path":"How-to-Staking-with-Qtum/README.md","ref":"How-to-Staking-with-Qtum/README.md","articles":[]},"previous":{"title":"Stake With VPS","level":"5.4","depth":1,"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","ref":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-on-Raspberry-Pi/README.md","mtime":"2019-07-02T19:00:58.049Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-02T19:02:44.896Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
