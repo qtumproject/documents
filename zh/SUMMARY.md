@@ -37,6 +37,7 @@
 
 + [Qtum 区块链指南](Qtum-Blockchain-Guide.md)
 + [在 CentOS 7 上编译 Qtum](Build-Qtum-on-CentOS.md)
++ [闪电网络客户端 Qtum Eclair 使用教程](Qtum-Eclair-Guide.md)
 
 ## QtumX
 

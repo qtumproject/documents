@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Launch Qtum With Docker · Qtum Documentation</title>
+        <title>How to Build Qtum on Raspbian · Qtum Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Build-Qtum-on-CentOS.html" />
+    <link rel="next" href="QRC20-Token-Introduce.html" />
     
     
-    <link rel="prev" href="Guidance-of-Qtum-Deployment-and-RPC-Settings.html" />
+    <link rel="prev" href="Build-Qtum-on-CentOS.html" />
     
 
     </head>
@@ -338,7 +338,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="Launch-Qtum-with-Docker.html">
+        <li class="chapter " data-level="3.2" data-path="Launch-Qtum-with-Docker.html">
             
                 <a href="Launch-Qtum-with-Docker.html">
             
@@ -364,7 +364,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="How-To-Build-Qtum-On-Raspbian.html">
+        <li class="chapter active" data-level="3.4" data-path="How-To-Build-Qtum-On-Raspbian.html">
             
                 <a href="How-To-Build-Qtum-On-Raspbian.html">
             
@@ -610,7 +610,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Launch Qtum With Docker</a>
+        <a href="." >How to Build Qtum on Raspbian</a>
     </h1>
 </div>
 
@@ -625,57 +625,60 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="how-to-run-qtum-node-with-docker"><a name="how-to-run-qtum-node-with-docker" class="plugin-anchor" href="#how-to-run-qtum-node-with-docker"><i class="fa fa-link" aria-hidden="true"></i></a>How to run Qtum node with docker</h1>
-<h2 id="quick-start"><a name="quick-start" class="plugin-anchor" href="#quick-start"><i class="fa fa-link" aria-hidden="true"></i></a>Quick start</h2>
-<p>This tutorial use Linux Ubuntu as example, OSX and windows platform are almost the same.</p>
-<p>Suppose the reader has basic command line knowledge, and also have docker correctly installed and configured. If not, please learn about command line and Docker first.</p>
-<p>For more details, please refer to <a href="https://github.com/qtumproject/qtum-docker.git" target="_blank">github</a></p>
-<h2 id="get-docker-image"><a name="get-docker-image" class="plugin-anchor" href="#get-docker-image"><i class="fa fa-link" aria-hidden="true"></i></a>Get docker image</h2>
-<p>You might take either way:</p>
-<h3 id="pull-a-image-from-public-docker-hub"><a name="pull-a-image-from-public-docker-hub" class="plugin-anchor" href="#pull-a-image-from-public-docker-hub"><i class="fa fa-link" aria-hidden="true"></i></a>Pull a image from Public Docker hub</h3>
-<pre><code>$ docker pull qtum/qtum
-</code></pre><h3 id="or-build-qtum-image-with-provided-dockerfile"><a name="or-build-qtum-image-with-provided-dockerfile" class="plugin-anchor" href="#or-build-qtum-image-with-provided-dockerfile"><i class="fa fa-link" aria-hidden="true"></i></a>Or, build qtum image with provided Dockerfile</h3>
-<p>The Dockerfile can be downloaded on github: <a href="https://github.com/qtumproject/qtum-docker/blob/master/release/Dockerfile" target="_blank">Dockerfile</a></p>
-<pre><code>$docker build --rm -t qtum/qtum .
-</code></pre><p>For historical versions, please visit <a href="https://hub.docker.com/r/qtum/qtum/" target="_blank">docker hub</a></p>
-<h2 id="prepare-data-path-and-qtumconf"><a name="prepare-data-path-and-qtumconf" class="plugin-anchor" href="#prepare-data-path-and-qtumconf"><i class="fa fa-link" aria-hidden="true"></i></a>Prepare data path and qtum.conf</h2>
-<p>In order to use user-defined config file, as well as save block chain data, -v option for docker is recommended.</p>
-<p>First chose a path to save qtum block chain data:</p>
-<pre><code>sudo rm -rf /data/qtum-data
-sudo mkdir -p /data/qtum-data
-sudo chmod a+w /data/qtum-data
-</code></pre><p>Create your config file, refer to the example [qtum.conf]!(<a href="https://github.com/qtumproject/qtum/blob/1a926b980f03e97322c7dd787835bec1730f35d2/contrib/debian/examples/qtum.conf" target="_blank">https://github.com/qtumproject/qtum/blob/1a926b980f03e97322c7dd787835bec1730f35d2/contrib/debian/examples/qtum.conf</a>). Note rpcuser and rpcpassword to required for later <code>qtum-cli</code> usage for docker, so it is better to set those two options. Then please create the file ${PWD}/qtum.conf with content:</p>
-<pre><code>rpcuser=qtum
-rpcpassword=qtumtest
-</code></pre><h2 id="launch-qtumd"><a name="launch-qtumd" class="plugin-anchor" href="#launch-qtumd"><i class="fa fa-link" aria-hidden="true"></i></a>Launch qtumd</h2>
-<p>To launch qtum node:</p>
-<pre><code>## to launch qtumd
-$ docker run -d --rm --name qtum_node \
-             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
-             -v /data/qtum-data/:/root/.qtum/ \
-             qtum/qtum qtumd
-
-## check docker processed
-$ docker ps
-
-## to stop qtumd
-$ docker run -i --network container:qtum_node \
-             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
-             -v /data/qtum-data/:/root/.qtum/ \
-             qtum/qtum qtum-cli stop
-</code></pre><p><code>${PWD}/qtum.conf</code> will be used, and blockchain data saved under /data/qtum-data/</p>
-<h2 id="interact-with-qtumd-using-qtum-cli"><a name="interact-with-qtumd-using-qtum-cli" class="plugin-anchor" href="#interact-with-qtumd-using-qtum-cli"><i class="fa fa-link" aria-hidden="true"></i></a>Interact with <code>qtumd</code> using <code>qtum-cli</code></h2>
-<p>Use following docker command to interact with your qtum node with <code>qtum-cli</code>:</p>
-<pre><code>$ docker run -i --network container:qtum_node \
-             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
-             -v /data/qtum-data/:/root/.qtum/ \
-             qtum/qtum qtum-cli getinfo
-</code></pre><p>For more qtum-cli commands, use:</p>
-<pre><code>$ docker run -i --network container:qtum_node \
-             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
-             -v /data/qtum-data/:/root/.qtum/ \
-             qtum/qtum qtum-cli help
+                                <h1 id="how-to-build-qtum-on-raspbian"><a name="how-to-build-qtum-on-raspbian" class="plugin-anchor" href="#how-to-build-qtum-on-raspbian"><i class="fa fa-link" aria-hidden="true"></i></a>How To Build Qtum On Raspbian</h1>
+<p>Qtum is capable to run on small devices, it requires quite few CPU power, memory and storage to mine coins. But the binaries released by Qtum official are not suitable for Raspberry Pi Zero or First Generations. Here is a tutorial on how to build Qtum on a raspi. In this tutorial, we assume that you are using a raspbian system.</p>
+<h2 id="system-requirements"><a name="system-requirements" class="plugin-anchor" href="#system-requirements"><i class="fa fa-link" aria-hidden="true"></i></a>System Requirements</h2>
+<p>Generally, a raspi is capable to build qtum, but we need:</p>
+<ul>
+<li>an SD card with at least 8G space and at least 6G available;</li>
+<li>Internet connection is also required.</li>
+</ul>
+<h2 id="memory-requirements"><a name="memory-requirements" class="plugin-anchor" href="#memory-requirements"><i class="fa fa-link" aria-hidden="true"></i></a>Memory Requirements</h2>
+<p>Qtum requires quite few memory to run. However it is not true for building Qtum. It requires over 1.5G memory to build, which is much more than a raspi has. So we have to set the swap space to 2G:</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># modify swap size to at least 2GB</span>
+sudo sed -ri <span class="hljs-string">&apos;s/CONF_SWAPSIZE=[0-9]+/CONF_SWAPSIZE=2048/&apos;</span> /etc/dphys-swapfile
+sudo systemctl restart dphys-swapfile
 </code></pre>
+<h2 id="build-process"><a name="build-process" class="plugin-anchor" href="#build-process"><i class="fa fa-link" aria-hidden="true"></i></a>Build Process</h2>
+<h3 id="install-dependencies"><a name="install-dependencies" class="plugin-anchor" href="#install-dependencies"><i class="fa fa-link" aria-hidden="true"></i></a>Install Dependencies</h3>
+<p>We cat install building tools and most dependencies with apt:</p>
+<pre><code># install dependencies
+sudo apt-get install git autoconf libtool libboost-dev libboost-system-dev libboost-filesystem-dev libboost-thread-dev libboost-chrono-dev libboost-random-dev libssl-dev libevent-dev libboost-test-dev
+</code></pre><p>If you need the Qt GUI, additionally run:</p>
+<pre><code>sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler qrencode
+</code></pre><h3 id="prepare-building-folder"><a name="prepare-building-folder" class="plugin-anchor" href="#prepare-building-folder"><i class="fa fa-link" aria-hidden="true"></i></a>Prepare Building Folder</h3>
+<pre><code>mkdir build_qtum
+cd build_qtum
+</code></pre><h3 id="build-berkeley-db-dependency"><a name="build-berkeley-db-dependency" class="plugin-anchor" href="#build-berkeley-db-dependency"><i class="fa fa-link" aria-hidden="true"></i></a>Build Berkeley DB Dependency</h3>
+<p>Unfortunately we can&apos;t install Berkeley DB 4.8 dependency on a raspbian via apt, so we need to build it ourselves:</p>
+<pre><code># to build berkeley db 4.8
+wget http://download.oracle.com/berkeley-db/db-4.8.30.tar.gz
+tar -xzf db-4.8.30.tar.gz
+pushd db-4.8.30/build_unix
+../dist/configure --prefix=/usr/local --enable-cxx
+make # this would take around 50 minutes on a raspi 0 W
+sudo make install
+popd
+</code></pre><h3 id="build-qtum"><a name="build-qtum" class="plugin-anchor" href="#build-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Build Qtum</h3>
+<p>First we have to get the source:</p>
+<pre><code>git clone https://github.com/qtumproject/qtum.git
+cd qtum
+</code></pre><p>Then we should switch to a stable release tag, for now the latest release for Qtum is <code>mainnet-ignition-v0.17.5</code>, but you should always build a latest one.</p>
+<pre><code>git checkout mainnet-ignition-v0.17.5
+</code></pre><p>Then init submodules:</p>
+<pre><code>git submodule update --init --recursive
+</code></pre><p>Finally the most common way to build and install a software:</p>
+<pre><code>./autogen.sh
+./configure
+make
+sudo make install
+</code></pre><p>It is highly recommended that you run the <code>make</code> step inside a virtual console like <code>screen</code> or <code>tmux</code> because the step takes more than 20 HOURS. By using a virtual console, you don&apos;t need to keep the ssh session during its building. To do this, run these commands before <code>make</code>:</p>
+<pre><code>sudo apt-get install screen
+screen -S build
+</code></pre><p>And when you started making, you may leave the screen by pressing <kbd>Ctrl</kbd> + <kbd>A</kbd> then <kbd>D</kbd>, and you may go back to it with this command:</p>
+<pre><code>screen -R
+</code></pre><p>Boom! Now you have Qtum installed on your raspi!</p>
+
                                 
                                 </section>
                             
@@ -702,12 +705,12 @@ $ docker run -i --network container:qtum_node \
 
             
                 
-                <a href="Guidance-of-Qtum-Deployment-and-RPC-Settings.html" class="navigation navigation-prev " aria-label="Previous page: Guidance of Qtum Deployment and RPC Settings">
+                <a href="Build-Qtum-on-CentOS.html" class="navigation navigation-prev " aria-label="Previous page: How to Build Qtum on CentOS">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Build-Qtum-on-CentOS.html" class="navigation navigation-next " aria-label="Next page: How to Build Qtum on CentOS">
+                <a href="QRC20-Token-Introduce.html" class="navigation navigation-next " aria-label="Next page: QRC20 Token Introduction">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -718,7 +721,7 @@ $ docker run -i --network container:qtum_node \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Launch Qtum With Docker","level":"3.2","depth":1,"next":{"title":"How to Build Qtum on CentOS","level":"3.3","depth":1,"path":"Build-Qtum-on-CentOS.md","ref":"Build-Qtum-on-CentOS.md","articles":[]},"previous":{"title":"Guidance of Qtum Deployment and RPC Settings","level":"3.1","depth":1,"path":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","ref":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Launch-Qtum-with-Docker.md","mtime":"2018-06-08T06:49:51.314Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-05T09:00:07.996Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"How to Build Qtum on Raspbian","level":"3.4","depth":1,"next":{"title":"QRC20 Token Introduction","level":"4.1","depth":1,"path":"QRC20-Token-Introduce.md","ref":"QRC20-Token-Introduce.md","articles":[]},"previous":{"title":"How to Build Qtum on CentOS","level":"3.3","depth":1,"path":"Build-Qtum-on-CentOS.md","ref":"Build-Qtum-on-CentOS.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"How-To-Build-Qtum-On-Raspbian.md","mtime":"2019-06-04T04:54:36.231Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-05T09:00:07.996Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>
