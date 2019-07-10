@@ -27,7 +27,7 @@ Figure 3. The help command
 
 Console commands are given to a running Qtum Core wallet and provide additional information and control. Console commands and are required to operate the qtumd server wallet, which is a "headless" wallet with no graphical user interface.
 
-There are 136 console commands with some good references for the 112 inherited from bitcoin. There are 13 "hidden" commands that are used by developers and wonít show up in the "help" list.
+There are 136 console commands with some good references for the 112 inherited from bitcoin. There are 13 "hidden" commands that are used by developers and won't show up in the "help" list.
 
 Commands can have required or optional parameters and more numerous parameters are entered in JSON (JavaScript Object Notation) format with escaped double quotes ( \" ) as shown below.
 
@@ -52,7 +52,7 @@ Here are some command groupings that are useful for various tasks:
 
 Startup commands give additional control and recovery options when launching the wallet. For example, you can use startup commands for various kinds of blockchain recovery techniques, additional debug logging or additional controls. If you are going to use these startup commands, make sure you have a good backup of the wallet.dat file.
 
-See the startup commands on the qtum-qt wallet with Help ñ Command line options:
+See the startup commands on the qtum-qt wallet with Help - Command line options:
 
 ![2019-4 Startup Commands Win](https://i.imgur.com/CryGF13.jpg)
 Figure 4. Startup commands
@@ -65,7 +65,7 @@ Figure 5. Startup commands from the command line
 
 ## Console Commands A - Z
 
-For these console commands documented below, responses are given for default parameters (Qtum version 0.16 ñ winter 2018/2019). Commands marked DEPRECATED should not be used because they will be removed and replaced in future versions of the wallet, for example, commands using "account" will be removed in version 0.18.
+For these console commands documented below, responses are given for default parameters (Qtum version 0.16 - winter 2018/2019). Commands marked DEPRECATED should not be used because they will be removed and replaced in future versions of the wallet, for example, commands using "account" will be removed in version 0.18.
 
 Using the command "help \<command name\>" will give complete information about the command and relevant parameters, formatted in a way you can copy and paste (replacing the addresses, transactions IDs, etc., as required). The format below shows the command with parameters followed by the response, in some cases, parameters or responses are truncated with the term "\<snip\>". Where noted, some commands only work with the regtest (Regression Test) network. Many commands will return "null" for qtum-qt and return nothing for command line systems.
 
@@ -215,7 +215,7 @@ DEPRECATED. Use `addmultisigaddress`.
 
 ### createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime ) ( replaceable )
 
-Create a hex-encoded raw transaction sending some inputs to outputs. The transaction must then be signed and sent to the network, see `signrawtransaction` and `sendrawtransaction`. Returns a hex-encoded raw transaction. If you are sending coins make sure to create a change address so the change can be returned; any difference between the input values and output values will be taken as the transaction fee. If you donít work out the math you could pay a big transaction fee.
+Create a hex-encoded raw transaction sending some inputs to outputs. The transaction must then be signed and sent to the network, see `signrawtransaction` and `sendrawtransaction`. Returns a hex-encoded raw transaction. If you are sending coins make sure to create a change address so the change can be returned; any difference between the input values and output values will be taken as the transaction fee. If you don't work out the math you could pay a big transaction fee.
      
 
 ```
@@ -986,7 +986,7 @@ See `fromhexaddress` to convert a hex address to base58 pubkeyhash.
 
 ### getinfo
 
-Hidden command. DEPERCATED. Command line interfaces (but not the qtum-qt GUI wallet) may invoke this command using `-getinfo`. The wallet below has a computer clock in sync with Qtum network time (timeoffset = 0), has 8 peer connections, and is unlocked for a long time ("unlocked until" is Unix epoch time in seconds).
+Hidden command. DEPERCATED. Command line interfaces (but not the qtum-qt GUI wallet) may invoke this command using `-getinfo`. The wallet below has 8 peer connections, and is unlocked for a long time ("unlocked until" is Unix epoch time in seconds). Use `getpeerinfo` to check computer clock compared to "timeoffset" for other peers in the network.
      
 
 ```
@@ -1174,7 +1174,7 @@ getnetworkhashps
 
 ### getnetworkinfo
 
-Gives the parameters for IPv4, IPv6 and Tor (Onion) network connections.
+Gives the parameters for IPv4, IPv6 and Tor (Onion) network connections. Use `getpeerinfo` to check computer clock "timeoffset" to other peers in the network, not this value from `getnetworkinfo`.
 
 ```
 getnetworkinfo
@@ -1231,7 +1231,7 @@ qc1q52g2c283225pfdm2wqdsk45aufm4urtcdp9d5
 
 ### getpeerinfo
 
-Gives information about the wallet peer connections.
+Gives information about the wallet peer connections. "timeoffset" values of mostly zero means the computer clock is set correctly for network time.
 
 ```
 getpeerinfo
@@ -1477,7 +1477,7 @@ Returns staking-related information.
 * "currentblocktx" gives the number of transactions in a block mined by the wallet
 * "pooledtx" gives the number of transactions waiting in the mempool
 * "difficulty" gives the PoS target difficulty for the current block
-* "search-interval" gives either the time in seconds since the wallet began staking or the time since the walletís most recent block reward, here one day and one minute
+* "search-interval" gives either the time in seconds since the wallet began staking or the time since the wallet's most recent block reward, here one day and one minute
 * "weight" gives the wallet weight in Satoshis, move the decimal point eight digits to the left to give these weights in units, here wallet weight is 148 QTUM and the network weight is 12.23 million
 * "netstakeweight" gives the estimated network weight
 * "expected time" gives an estimate of the average expected time to a block reward in seconds, here 4.59 months
@@ -1678,7 +1678,7 @@ gettxoutsetinfo
 
 ### getunconfirmedbalance
 
-Get the unconfirmed balance for the wallet, which is the amount in transactions received by the wallet that havenít yet been published in blocks. Here the wallet has received 7.0 QTUM that haven't been confirmed in a block:
+Get the unconfirmed balance for the wallet, which is the amount in transactions received by the wallet that haven't yet been published in blocks. Here the wallet has received 7.0 QTUM that haven't been confirmed in a block:
      
      
 ```
@@ -1695,7 +1695,7 @@ Returns information about the wallet:
 * "walletversion" - not the software client version, use `getnetworkinfo` to check this
 * "balance" - balance in QTUM
 * "stake" - any balance currently committed to a stake
-* "unconfirmed_balance" - any balance that hasnít been published in the next blocks
+* "unconfirmed_balance" - any balance that hasn't been published in the next blocks
 * "immature_balance" - any coinbase (Proof of Work) balance that does not have 500 confirmations, seen only for regtest.
 * "txcount" - the total number of transactions in the wallet
 * "keypoololdest" - the Unix epoch timestamp in seconds for the oldest key in the key pool
@@ -2246,7 +2246,7 @@ pruneblockchain 125000
 ```
      
 
-Donít prune the blockchain if your wallet accepts incoming connections (over 8 peers) because your wallet needs to be able to send all the blocks to bootstrap new peers coming online.
+Don't prune the blockchain if your wallet accepts incoming connections (over 8 peers) because your wallet needs to be able to send all the blocks to bootstrap new peers coming online.
 
 ### reconsiderblock "blockhash"
 
@@ -2271,7 +2271,7 @@ null
 
 ### rescanblockchain ("start_height") ("stop_height")
 
-Rescan the local blockchain for wallet transactions. An optional start height and stop height can be used, or by default scan the entire blockchain. This command will scan the blockchain for transactions of your wallet, and can be used if the wallet balance doesnít appear to be correct after a wallet restore or adding private keys. Returns the start and top height scanned.
+Rescan the local blockchain for wallet transactions. An optional start height and stop height can be used, or by default scan the entire blockchain. This command will scan the blockchain for transactions of your wallet, and can be used if the wallet balance doesn't appear to be correct after a wallet restore or adding private keys. Returns the start and top height scanned.
 
 ```
 rescanblockchain 100000 200000
@@ -2389,7 +2389,7 @@ sendfrom "" QcEz4erq5gH6sa3ujWsqpZW4869MwrQf5 1.0
 
 ### sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] replaceable conf_target "estimate_mode")
 
-Send to multiple addresses, requires the wallet to unlocked. Amounts are floating point in QTUM. Donít put blank spaces betweeen the parameters. If successful, returns a single transaction ID containing all the outputs. Here we send to two different addresses:
+Send to multiple addresses, requires the wallet to unlocked. Amounts are floating point in QTUM. Don't put blank spaces betweeen the parameters. If successful, returns a single transaction ID containing all the outputs. Here we send to two different addresses:
 
 ```
 sendmany "" "{\"QcEz4erq5gH6sa3ujWsqpZW4869MwrQf5\":0.5,\"QM5yJs3v3u9vAVE5XseFa9g63ke6Ld9Wp\":0.77}"
@@ -2400,7 +2400,7 @@ sendmany "" "{\"QcEz4erq5gH6sa3ujWsqpZW4869MwrQf5\":0.5,\"QM5yJs3v3u9vAVE5XseFa9
 
 ### sendmanywithdupes "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )
 
-Send to multiple addresses, requires the wallet to be unlocked. Amounts are floating point in QTUM. Can send to duplicate addresses which `sendmany` canít do. If successful, returns a single transaction ID containing all the outputs. Here we send two transactions to the same address:
+Send to multiple addresses, requires the wallet to be unlocked. Amounts are floating point in QTUM. Can send to duplicate addresses which `sendmany` can't do. If successful, returns a single transaction ID containing all the outputs. Here we send two transactions to the same address:
       
 
 ```
@@ -2564,7 +2564,7 @@ signrawtransaction 020000001d637cf207c6418fb6220cfcb2b141ba5d230f0ba0a43c68b358a
 
 ### stop
 
-Shuts down and exits the wallet. No return value ñ the wallet exits.
+Shuts down and exits the wallet. No return value - the wallet exits.
 
 ```
 stop
