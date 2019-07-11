@@ -471,4 +471,4 @@ ABI
 2. 解锁钱包；
 3. 保持钱包在线状态。
 
-更多细节可以参考：[http://docs.qtum.site/zh/How-to-Staking-with-Qtum/](http://docs.qtum.site/zh/How-to-Staking-with-Qtum/)
+更多细节可以参考：[http://docs.qtum.site/zh/How-to-Stake-with-Qtum/](http://docs.qtum.site/zh/How-to-Stake-with-Qtum/)

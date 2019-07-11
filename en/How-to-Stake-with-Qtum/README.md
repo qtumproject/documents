@@ -118,7 +118,7 @@ How to use Qtum-qt tutorial? please refer to [Qtum qt wallet tutorial](../Qtum-W
 
 Launch the wallet.
 
-### 2. 转入QTUM量子币
+### 2. Send some QTUM to your wallet
 
 If you already have some QTUM in your wallet, you might skip this step.
 

@@ -19,11 +19,12 @@
 
 + [如何部署 Qtum 量子链节点](Guidance-of-Qtum-Deployment-and-RPC-Settings.md)
 + [如何用 Docker 运行 Qtum 节点](Launch-Qtum-with-Docker.md)
++ [如何搭建 Qtum 星形网络](How-to-Deploy-Star-Network/README.md)
 
 
 ## Staking 教程（PoS 挖矿）
 
-+ [Qtum 量子链 Staking(PoS 挖矿) 教程](How-to-Staking-with-Qtum/README.md)
++ [Qtum 量子链 Staking(PoS 挖矿) 教程](How-to-Stake-with-Qtum/README.md)
 
 ## 智能合约和QRC20
 

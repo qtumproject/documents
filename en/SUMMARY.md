@@ -16,8 +16,8 @@
 + [Qtum Exchange Usage Guide](Qtum-Exchange-Usage-Guide-and-Info.md)
 + [Testnet User Guide](Testnet-User-Guide.md)
 + [bech32 support](bech32/README.md)
-+ [How-to Add Options](How-To-Add-Options/README.md)
-+ [How-to Use bootstrap.dat](How-to-Use-Bootstrap/README.md)
++ [How to Add Options](How-To-Add-Options/README.md)
++ [How to Use bootstrap.dat](How-to-Use-Bootstrap/README.md)
 + [Qtum RPC API](Qtum-RPC-API/README.md)
 
 ### Deploy Qtum
@@ -26,6 +26,7 @@
 + [Launch Qtum With Docker](Launch-Qtum-with-Docker.md)
 + [How to Build Qtum on CentOS](Build-Qtum-on-CentOS.md)
 + [How to Build Qtum on Raspbian](How-To-Build-Qtum-On-Raspbian.md)
++ [Deploy Qtum Star Network](How-to-Deploy-Star-Network/README.md)
 
 ### Smart Contract and QRC20
 
@@ -40,7 +41,7 @@
 + [QTUM On AWS](Qtum-AWS/README.md)
 + [Stake With VPS](How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md)
 + [Stake With Raspberry Pi](Qtum-on-Raspberry-Pi/README.md)
-+ [How to Stake With Qtum](How-to-Staking-with-Qtum/README.md)
++ [How to Stake With Qtum](How-to-Stake-with-Qtum/README.md)
 + [How to Stake on FreeBSD](freebsd/README.md)
 
 ### Unita

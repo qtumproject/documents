@@ -284,7 +284,7 @@
                 <a href="../How-To-Add-Options/">
             
                     
-                    How-to Add Options
+                    How to Add Options
             
                 </a>
             
@@ -297,7 +297,7 @@
                 <a href="../How-to-Use-Bootstrap/">
             
                     
-                    How-to Use bootstrap.dat
+                    How to Use bootstrap.dat
             
                 </a>
             
@@ -370,6 +370,19 @@
             
                     
                     How to Build Qtum on Raspbian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../How-to-Deploy-Star-Network/">
+            
+                <a href="../How-to-Deploy-Star-Network/">
+            
+                    
+                    Deploy Qtum Star Network
             
                 </a>
             
@@ -482,9 +495,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.6" data-path="../How-to-Staking-with-Qtum/">
+        <li class="chapter " data-level="5.6" data-path="../How-to-Stake-with-Qtum/">
             
-                <a href="../How-to-Staking-with-Qtum/">
+                <a href="../How-to-Stake-with-Qtum/">
             
                     
                     How to Stake With Qtum
@@ -643,7 +656,7 @@ Figure 2. System command line prompt</p>
 Figure 3. The help command</p>
 <h2 id="console-commands-hammerandwrench"><a name="console-commands-hammerandwrench" class="plugin-anchor" href="#console-commands-hammerandwrench"><i class="fa fa-link" aria-hidden="true"></i></a>Console Commands :hammer_and_wrench:</h2>
 <p>Console commands are given to a running Qtum Core wallet and provide additional information and control. Console commands and are required to operate the qtumd server wallet, which is a &quot;headless&quot; wallet with no graphical user interface.</p>
-<p>There are 136 console commands with some good references for the 112 inherited from bitcoin. There are 13 &quot;hidden&quot; commands that are used by developers and won&#xED;t show up in the &quot;help&quot; list.</p>
+<p>There are 136 console commands with some good references for the 112 inherited from bitcoin. There are 13 &quot;hidden&quot; commands that are used by developers and won&apos;t show up in the &quot;help&quot; list.</p>
 <p>Commands can have required or optional parameters and more numerous parameters are entered in JSON (JavaScript Object Notation) format with escaped double quotes ( \&quot; ) as shown below.</p>
 <p>Common parameters for these commands are Qtum addresses, block hashes, contract addresses, etc. Some of the commands will have an optional parameter &quot;minconf&quot; (minimum confirmations) which allows you to get a response for a transaction or block that has at least that number of confirmations.</p>
 <p>The chain query bitcoin API reference <a href="http://chainquery.com/bitcoin-api" target="_blank">http://chainquery.com/bitcoin-api</a> explains the parameters and gives examples with responses for the commands inherited from bitcoin. The bitcoin chain query API reverence gives 67 commands, of which 2 are not in Qtum (<code>estimatepriority</code>, <code>getgenerate</code>) and two (<code>gettransaction</code>, <code>walletpassphrase</code>) have an additional parameter for Qtum. See also <a href="https://bitcoin.org/en/developer-reference#remote-procedure-calls-rpcs" target="_blank">https://bitcoin.org/en/developer-reference#remote-procedure-calls-rpcs</a>.</p>
@@ -659,14 +672,14 @@ Figure 3. The help command</p>
 </ul>
 <h2 id="startup-commands"><a name="startup-commands" class="plugin-anchor" href="#startup-commands"><i class="fa fa-link" aria-hidden="true"></i></a>Startup Commands</h2>
 <p>Startup commands give additional control and recovery options when launching the wallet. For example, you can use startup commands for various kinds of blockchain recovery techniques, additional debug logging or additional controls. If you are going to use these startup commands, make sure you have a good backup of the wallet.dat file.</p>
-<p>See the startup commands on the qtum-qt wallet with Help &#xF1; Command line options:</p>
+<p>See the startup commands on the qtum-qt wallet with Help - Command line options:</p>
 <p><img src="https://i.imgur.com/CryGF13.jpg" alt="2019-4 Startup Commands Win">
 Figure 4. Startup commands</p>
 <p>and on the command line itself with &quot;qtumd -?&quot;:</p>
 <p><img src="https://i.imgur.com/KCmxFaC.jpg" alt="2019-5 Startup Commands Command Line Win">
 Figure 5. Startup commands from the command line</p>
 <h2 id="console-commands-a---z"><a name="console-commands-a---z" class="plugin-anchor" href="#console-commands-a---z"><i class="fa fa-link" aria-hidden="true"></i></a>Console Commands A - Z</h2>
-<p>For these console commands documented below, responses are given for default parameters (Qtum version 0.16 &#xF1; winter 2018/2019). Commands marked DEPRECATED should not be used because they will be removed and replaced in future versions of the wallet, for example, commands using &quot;account&quot; will be removed in version 0.18.</p>
+<p>For these console commands documented below, responses are given for default parameters (Qtum version 0.16 - winter 2018/2019). Commands marked DEPRECATED should not be used because they will be removed and replaced in future versions of the wallet, for example, commands using &quot;account&quot; will be removed in version 0.18.</p>
 <p>Using the command &quot;help \<command name\="">&quot; will give complete information about the command and relevant parameters, formatted in a way you can copy and paste (replacing the addresses, transactions IDs, etc., as required). The format below shows the command with parameters followed by the response, in some cases, parameters or responses are truncated with the term &quot;\<snip\>&quot;. Where noted, some commands only work with the regtest (Regression Test) network. Many commands will return &quot;null&quot; for qtum-qt and return nothing for command line systems.</snip\></p>
 <h3 id="abandontransaction-txid"><a name="abandontransaction-txid" class="plugin-anchor" href="#abandontransaction-txid"><i class="fa fa-link" aria-hidden="true"></i></a>abandontransaction &quot;txid&quot;</h3>
 <p>Works on transactions not in the blockchain or mempool, used in testing.</p>
@@ -751,7 +764,7 @@ null
 </code></pre><h3 id="createmultisig-nrequired-key"><a name="createmultisig-nrequired-key" class="plugin-anchor" href="#createmultisig-nrequired-key"><i class="fa fa-link" aria-hidden="true"></i></a>createmultisig nrequired [&quot;key&quot;,...]</h3>
 <p>DEPRECATED. Use <code>addmultisigaddress</code>.</p>
 <h3 id="createrawtransaction-txididvoutn-addressamountdatahex--locktime---replaceable-"><a name="createrawtransaction-txididvoutn-addressamountdatahex--locktime---replaceable-" class="plugin-anchor" href="#createrawtransaction-txididvoutn-addressamountdatahex--locktime---replaceable-"><i class="fa fa-link" aria-hidden="true"></i></a>createrawtransaction [{&quot;txid&quot;:&quot;id&quot;,&quot;vout&quot;:n},...] {&quot;address&quot;:amount,&quot;data&quot;:&quot;hex&quot;,...} ( locktime ) ( replaceable )</h3>
-<p>Create a hex-encoded raw transaction sending some inputs to outputs. The transaction must then be signed and sent to the network, see <code>signrawtransaction</code> and <code>sendrawtransaction</code>. Returns a hex-encoded raw transaction. If you are sending coins make sure to create a change address so the change can be returned; any difference between the input values and output values will be taken as the transaction fee. If you don&#xED;t work out the math you could pay a big transaction fee.</p>
+<p>Create a hex-encoded raw transaction sending some inputs to outputs. The transaction must then be signed and sent to the network, see <code>signrawtransaction</code> and <code>sendrawtransaction</code>. Returns a hex-encoded raw transaction. If you are sending coins make sure to create a change address so the change can be returned; any difference between the input values and output values will be taken as the transaction fee. If you don&apos;t work out the math you could pay a big transaction fee.</p>
 <pre><code>createrawtransaction &quot;[{\&quot;txid\&quot;:\&quot;17b3f9ef530695ef2e0368e445a3b59bf12811bdfd42325bb14248e72deb7e2\&quot;,\&quot;vout\&quot;:0}]&quot; &quot;{\&quot;Qd5eHho389mJMCxSzAbe31w2vntTc7192\&quot;:1.0, \&quot;QdXtq55Bf443Lkme2hdj4mD8KKepk32f6\&quot;:0.99}&quot;
 
 020000001d637cf207c6418fb6220cfcb2b141ba5d230f0ba0a43c68b358aff9a8a6000000000fffffff0509e5f50480000001983a952d5fb15a70832ffdc3cadd3dc7749a49bf053ed6defacd09ef6060000000187aa814bd4ae4167bebbf56bb7c51c5eabf35d50a5c6e7f33ad0000000
@@ -1320,7 +1333,7 @@ Figure 7. The <code>getblockchaininfo</code> command</p>
 9467c4cbd6c4bb736cf4724de25a298bc529bfa3
 </code></pre><p>See <code>fromhexaddress</code> to convert a hex address to base58 pubkeyhash.</p>
 <h3 id="getinfo"><a name="getinfo" class="plugin-anchor" href="#getinfo"><i class="fa fa-link" aria-hidden="true"></i></a>getinfo</h3>
-<p>Hidden command. DEPERCATED. Command line interfaces (but not the qtum-qt GUI wallet) may invoke this command using <code>-getinfo</code>. The wallet below has a computer clock in sync with Qtum network time (timeoffset = 0), has 8 peer connections, and is unlocked for a long time (&quot;unlocked until&quot; is Unix epoch time in seconds).</p>
+<p>Hidden command. DEPERCATED. Command line interfaces (but not the qtum-qt GUI wallet) may invoke this command using <code>-getinfo</code>. The wallet below has 8 peer connections, and is unlocked for a long time (&quot;unlocked until&quot; is Unix epoch time in seconds). Use <code>getpeerinfo</code> to check computer clock compared to &quot;timeoffset&quot; for other peers in the network.</p>
 <pre><code>qtum-cli -getinfo
 
 {
@@ -1462,7 +1475,7 @@ Figure 7. The <code>getblockchaininfo</code> command</p>
 
 78300177154693.26
 </code></pre><h3 id="getnetworkinfo"><a name="getnetworkinfo" class="plugin-anchor" href="#getnetworkinfo"><i class="fa fa-link" aria-hidden="true"></i></a>getnetworkinfo</h3>
-<p>Gives the parameters for IPv4, IPv6 and Tor (Onion) network connections.</p>
+<p>Gives the parameters for IPv4, IPv6 and Tor (Onion) network connections. Use <code>getpeerinfo</code> to check computer clock &quot;timeoffset&quot; to other peers in the network, not this value from <code>getnetworkinfo</code>.</p>
 <pre><code>getnetworkinfo
 
 {
@@ -1509,7 +1522,7 @@ Figure 7. The <code>getblockchaininfo</code> command</p>
 
 qc1q52g2c283225pfdm2wqdsk45aufm4urtcdp9d5
 </code></pre><h3 id="getpeerinfo"><a name="getpeerinfo" class="plugin-anchor" href="#getpeerinfo"><i class="fa fa-link" aria-hidden="true"></i></a>getpeerinfo</h3>
-<p>Gives information about the wallet peer connections.</p>
+<p>Gives information about the wallet peer connections. &quot;timeoffset&quot; values of mostly zero means the computer clock is set correctly for network time.</p>
 <pre><code>getpeerinfo
 
 [
@@ -1723,7 +1736,7 @@ MBncZ4Z8a71UrgsS5QqJfxkDbun5wHy6d
 <li>&quot;currentblocktx&quot; gives the number of transactions in a block mined by the wallet</li>
 <li>&quot;pooledtx&quot; gives the number of transactions waiting in the mempool</li>
 <li>&quot;difficulty&quot; gives the PoS target difficulty for the current block</li>
-<li>&quot;search-interval&quot; gives either the time in seconds since the wallet began staking or the time since the wallet&#xED;s most recent block reward, here one day and one minute</li>
+<li>&quot;search-interval&quot; gives either the time in seconds since the wallet began staking or the time since the wallet&apos;s most recent block reward, here one day and one minute</li>
 <li>&quot;weight&quot; gives the wallet weight in Satoshis, move the decimal point eight digits to the left to give these weights in units, here wallet weight is 148 QTUM and the network weight is 12.23 million</li>
 <li>&quot;netstakeweight&quot; gives the estimated network weight</li>
 <li>&quot;expected time&quot; gives an estimate of the average expected time to a block reward in seconds, here 4.59 months</li>
@@ -1881,7 +1894,7 @@ MBncZ4Z8a71UrgsS5QqJfxkDbun5wHy6d
   &quot;total_amount&quot;: 101036576.00000000
 }
 </code></pre><h3 id="getunconfirmedbalance"><a name="getunconfirmedbalance" class="plugin-anchor" href="#getunconfirmedbalance"><i class="fa fa-link" aria-hidden="true"></i></a>getunconfirmedbalance</h3>
-<p>Get the unconfirmed balance for the wallet, which is the amount in transactions received by the wallet that haven&#xED;t yet been published in blocks. Here the wallet has received 7.0 QTUM that haven&apos;t been confirmed in a block:</p>
+<p>Get the unconfirmed balance for the wallet, which is the amount in transactions received by the wallet that haven&apos;t yet been published in blocks. Here the wallet has received 7.0 QTUM that haven&apos;t been confirmed in a block:</p>
 <pre><code>getunconfirmedbalance
 
 7.00000000
@@ -1892,7 +1905,7 @@ MBncZ4Z8a71UrgsS5QqJfxkDbun5wHy6d
 <li>&quot;walletversion&quot; - not the software client version, use <code>getnetworkinfo</code> to check this</li>
 <li>&quot;balance&quot; - balance in QTUM</li>
 <li>&quot;stake&quot; - any balance currently committed to a stake</li>
-<li>&quot;unconfirmed_balance&quot; - any balance that hasn&#xED;t been published in the next blocks</li>
+<li>&quot;unconfirmed_balance&quot; - any balance that hasn&apos;t been published in the next blocks</li>
 <li>&quot;immature_balance&quot; - any coinbase (Proof of Work) balance that does not have 500 confirmations, seen only for regtest.</li>
 <li>&quot;txcount&quot; - the total number of transactions in the wallet</li>
 <li>&quot;keypoololdest&quot; - the Unix epoch timestamp in seconds for the oldest key in the key pool</li>
@@ -2288,7 +2301,7 @@ true
 <pre><code>pruneblockchain 125000
 
 125000
-</code></pre><p>Don&#xED;t prune the blockchain if your wallet accepts incoming connections (over 8 peers) because your wallet needs to be able to send all the blocks to bootstrap new peers coming online.</p>
+</code></pre><p>Don&apos;t prune the blockchain if your wallet accepts incoming connections (over 8 peers) because your wallet needs to be able to send all the blocks to bootstrap new peers coming online.</p>
 <h3 id="reconsiderblock-blockhash"><a name="reconsiderblock-blockhash" class="plugin-anchor" href="#reconsiderblock-blockhash"><i class="fa fa-link" aria-hidden="true"></i></a>reconsiderblock &quot;blockhash&quot;</h3>
 <p>Hidden command. Removes invalidity status of a block and its descendants, used for code testing or in manual blockchain reorganization. This command can reverse the effects of <code>invalidateblock</code>. Returns &quot;null&quot; if successful:</p>
 <pre><code>reconsiderblock 263f7ab042135cb0e5479afd8385a237f8eb44b86135d29b34eb0fa82cc815f
@@ -2300,7 +2313,7 @@ null
 
 null
 </code></pre><h3 id="rescanblockchain-startheight-stopheight"><a name="rescanblockchain-startheight-stopheight" class="plugin-anchor" href="#rescanblockchain-startheight-stopheight"><i class="fa fa-link" aria-hidden="true"></i></a>rescanblockchain (&quot;start_height&quot;) (&quot;stop_height&quot;)</h3>
-<p>Rescan the local blockchain for wallet transactions. An optional start height and stop height can be used, or by default scan the entire blockchain. This command will scan the blockchain for transactions of your wallet, and can be used if the wallet balance doesn&#xED;t appear to be correct after a wallet restore or adding private keys. Returns the start and top height scanned.</p>
+<p>Rescan the local blockchain for wallet transactions. An optional start height and stop height can be used, or by default scan the entire blockchain. This command will scan the blockchain for transactions of your wallet, and can be used if the wallet balance doesn&apos;t appear to be correct after a wallet restore or adding private keys. Returns the start and top height scanned.</p>
 <pre><code>rescanblockchain 100000 200000
 
 {
@@ -2386,12 +2399,12 @@ null
 
 3e5ae45efbde38318a3a8af1d5c4d3bb844c58fab745f21d42a449ad923af3f
 </code></pre><h3 id="sendmany-fromaccount-addressamount--minconf-comment-address-replaceable-conftarget-estimatemode"><a name="sendmany-fromaccount-addressamount--minconf-comment-address-replaceable-conftarget-estimatemode" class="plugin-anchor" href="#sendmany-fromaccount-addressamount--minconf-comment-address-replaceable-conftarget-estimatemode"><i class="fa fa-link" aria-hidden="true"></i></a>sendmany &quot;fromaccount&quot; {&quot;address&quot;:amount,...} ( minconf &quot;comment&quot; [&quot;address&quot;,...] replaceable conf_target &quot;estimate_mode&quot;)</h3>
-<p>Send to multiple addresses, requires the wallet to unlocked. Amounts are floating point in QTUM. Don&#xED;t put blank spaces betweeen the parameters. If successful, returns a single transaction ID containing all the outputs. Here we send to two different addresses:</p>
+<p>Send to multiple addresses, requires the wallet to unlocked. Amounts are floating point in QTUM. Don&apos;t put blank spaces betweeen the parameters. If successful, returns a single transaction ID containing all the outputs. Here we send to two different addresses:</p>
 <pre><code>sendmany &quot;&quot; &quot;{\&quot;QcEz4erq5gH6sa3ujWsqpZW4869MwrQf5\&quot;:0.5,\&quot;QM5yJs3v3u9vAVE5XseFa9g63ke6Ld9Wp\&quot;:0.77}&quot;
 
 7a5077ac6e42acbed182c35eb034702e1fadd5c7d1547a85ae63dc0e151ed5
 </code></pre><h3 id="sendmanywithdupes-fromaccount-addressamount--minconf-comment-address-"><a name="sendmanywithdupes-fromaccount-addressamount--minconf-comment-address-" class="plugin-anchor" href="#sendmanywithdupes-fromaccount-addressamount--minconf-comment-address-"><i class="fa fa-link" aria-hidden="true"></i></a>sendmanywithdupes &quot;fromaccount&quot; {&quot;address&quot;:amount,...} ( minconf &quot;comment&quot; [&quot;address&quot;,...] )</h3>
-<p>Send to multiple addresses, requires the wallet to be unlocked. Amounts are floating point in QTUM. Can send to duplicate addresses which <code>sendmany</code> can&#xED;t do. If successful, returns a single transaction ID containing all the outputs. Here we send two transactions to the same address:</p>
+<p>Send to multiple addresses, requires the wallet to be unlocked. Amounts are floating point in QTUM. Can send to duplicate addresses which <code>sendmany</code> can&apos;t do. If successful, returns a single transaction ID containing all the outputs. Here we send two transactions to the same address:</p>
 <pre><code>sendmanywithdupes &quot;&quot; &quot;{\&quot;QFKw7VXsm23Hi71KUU5dXvpV3mDc9Au29\&quot;:200.0,\&quot;QFKw7VXsm23Hi71KUU5dXvpV3mDc9Au29\&quot;:250.0}&quot;
 
 7d90b8365ba85de8c4bd19e1a94ebe9c8a5b9938385e5b10496a0ad5359824f
@@ -2485,7 +2498,7 @@ H3SBMeQUvo82A63wegSNT582Puziba54sCGt6notPb3xHm3WwM2OuIwV4E9Ya38TMCqe2aV7rmuFrc9A
   &quot;complete&quot;: true
 }
 </code></pre><h3 id="stop"><a name="stop" class="plugin-anchor" href="#stop"><i class="fa fa-link" aria-hidden="true"></i></a>stop</h3>
-<p>Shuts down and exits the wallet. No return value &#xF1; the wallet exits.</p>
+<p>Shuts down and exits the wallet. No return value - the wallet exits.</p>
 <pre><code>stop
 </code></pre><h3 id="submitblock-hexdata---dummy-"><a name="submitblock-hexdata---dummy-" class="plugin-anchor" href="#submitblock-hexdata---dummy-"><i class="fa fa-link" aria-hidden="true"></i></a>submitblock &quot;hexdata&quot;  ( &quot;dummy&quot; )</h3>
 <p>Attempts to submit new block to network. See <a href="https://en.bitcoin.it/wiki/BIP_0022" target="_blank">https://en.bitcoin.it/wiki/BIP_0022</a> for full specification. Use <code>getblocktemplate</code> to construct a block along with the block header and transactions. </p>
@@ -2662,7 +2675,7 @@ null
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Qtum Core Wallet Commands","level":"2.2","depth":1,"next":{"title":"Qtum Electrum Wallet","level":"2.3","depth":1,"path":"Qtum-Electrum-User-Guide.md","ref":"Qtum-Electrum-User-Guide.md","articles":[]},"previous":{"title":"Best Practices","level":"2.1.1","depth":2,"path":"QTUM-wallet-usage-best-practices/README.md","ref":"QTUM-wallet-usage-best-practices/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"commands/README.md","mtime":"2019-06-04T04:54:36.426Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-05T09:00:07.996Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Qtum Core Wallet Commands","level":"2.2","depth":1,"next":{"title":"Qtum Electrum Wallet","level":"2.3","depth":1,"path":"Qtum-Electrum-User-Guide.md","ref":"Qtum-Electrum-User-Guide.md","articles":[]},"previous":{"title":"Best Practices","level":"2.1.1","depth":2,"path":"QTUM-wallet-usage-best-practices/README.md","ref":"QTUM-wallet-usage-best-practices/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"commands/README.md","mtime":"2019-07-10T05:26:27.500Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-11T08:16:59.730Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
