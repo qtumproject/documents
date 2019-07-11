@@ -26,6 +26,7 @@
 + [Launch Qtum With Docker](Launch-Qtum-with-Docker.md)
 + [How to Build Qtum on CentOS](Build-Qtum-on-CentOS.md)
 + [How to Build Qtum on Raspbian](How-To-Build-Qtum-On-Raspbian.md)
++ [Deploy Qtum Star Network](How-to-Deploy-Star-Network/README.md)
 
 ### Smart Contract and QRC20
 
