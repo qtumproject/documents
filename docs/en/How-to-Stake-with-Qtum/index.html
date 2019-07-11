@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Encrypt and Unlock Qtum Wallet · Qtum Documentation</title>
+        <title>How to Stake With Qtum · Qtum Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../Wallet-Recovery-with-Salvagewallet.html" />
+    <link rel="next" href="../freebsd/" />
     
     
-    <link rel="prev" href="../Adding-Nodes/" />
+    <link rel="prev" href="../Qtum-on-Raspberry-Pi/" />
     
 
     </head>
@@ -214,9 +214,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.7" data-path="./">
+        <li class="chapter " data-level="2.7" data-path="../Encrypt-and-Unlock-Qtum-Wallet/">
             
-                <a href="./">
+                <a href="../Encrypt-and-Unlock-Qtum-Wallet/">
             
                     
                     Encrypt and Unlock Qtum Wallet
@@ -495,9 +495,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.6" data-path="../How-to-Stake-with-Qtum/">
+        <li class="chapter active" data-level="5.6" data-path="./">
             
-                <a href="../How-to-Stake-with-Qtum/">
+                <a href="./">
             
                     
                     How to Stake With Qtum
@@ -623,7 +623,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Encrypt and Unlock Qtum Wallet</a>
+        <a href=".." >How to Stake With Qtum</a>
     </h1>
 </div>
 
@@ -638,52 +638,122 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="encrypt--unlock-qtum-wallet"><a name="encrypt--unlock-qtum-wallet" class="plugin-anchor" href="#encrypt--unlock-qtum-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Encrypt &amp; Unlock Qtum Wallet</h1>
-<p>If you don&apos;t know how to deploy a Qtum node or don&apos;t know how to launch a Qtum wallet ,please refer to the following instructions:</p>
+                                <h1 id="qtum-staking&#xFF08;pos-mining&#xFF09;tutorial"><a name="qtum-staking&#xFF08;pos-mining&#xFF09;tutorial" class="plugin-anchor" href="#qtum-staking&#xFF08;pos-mining&#xFF09;tutorial"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum Staking&#xFF08;PoS mining&#xFF09;Tutorial</h1>
+<p>Qtum employs PoS (Proof of Stake) consensus mechanism, which is different from Bitcoin&apos;s PoW (Proof of Work). The mining process in PoS system is called staking. The block producer will get 4QTUM, as well as the transaction fees and gases as block reward. So the real reward is usually more than 4QTUM in total.</p>
+<p>Basic requirements for staking&#xFF1A;</p>
+<ol>
+<li>Run a Qtum fullnode, and keep online (Since Qtum is using PoS, we don&apos;t need any mining machine, just PC or even Raspberry Pi can run a fullnode);</li>
+<li>Have some QTUM in the wallet (fullnode)&#xFF08;Any amount of QTUM can be used for staking, more QTUM means higher possibility to stake).</li>
+</ol>
+<p>If you have no QTUM yet, please get some from market before you doing following staking settings.</p>
+<p>Currently, Qtum Core wallet is the only wallet that support Qtum PoS staking. Note that other wallets like mobile wallet and Qtum Electrum are not able to stake for the time being.</p>
+<p>Two ways to stake:</p>
 <ul>
-<li>For command line users&#xFF1A;&#x300A;<a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">Guidance of Qtum Deployment</a>&#x300B;</li>
-<li>For GUI wallet users(common users)&#xFF1A;<a href="https://eco.qtum.org/wallet" target="_blank">https://eco.qtum.org/wallet</a></li>
+<li>Method 1&#xFF1A;Staking with qtumd, using command line, suitable for Linux/OSX/Windows/Raspberry Pi users who are familiar with command line tools.</li>
+<li>Method 2&#xFF1A;Staking with <code>qtum-qt</code> wallet, with GUI, suitable for common users.</li>
 </ul>
-<p><strong>Important: After you encrypt wallet or change your pin code, please remember to backup your wallet again!!!</strong></p>
-<p>Please do all following things after you successfully installed and run a Qtum wallet: </p>
-<h2 id="encrypt-wallet"><a name="encrypt-wallet" class="plugin-anchor" href="#encrypt-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Encrypt Wallet</h2>
-<h3 id="for-command-line-users"><a name="for-command-line-users" class="plugin-anchor" href="#for-command-line-users"><i class="fa fa-link" aria-hidden="true"></i></a>For command line users</h3>
-<p>qtum-cli command to encrypt wallet&#xFF1A;</p>
-<pre><code>./qtum-cli encryptwallet &quot;yourpassword&quot;
-</code></pre><p>note that <code>yourpassword</code>is the user defined password, please remember it or you might lost your QTUM.</p>
-<p>After encryption, all fund security related actions (like send QTUM, staking, or dump private keys) will all requiring a password. </p>
-<h3 id="for-gui-wallet-users"><a name="for-gui-wallet-users" class="plugin-anchor" href="#for-gui-wallet-users"><i class="fa fa-link" aria-hidden="true"></i></a>For GUI wallet users</h3>
-<p>Choose<code>Setting-Encrypt Wallet</code> in the menu, as following:</p>
-<p><img src="choose-encrypt.jpeg" alt="choose encrypt"></p>
-<p>create a new passphrase and repeat it. The wallet will restart after encryption.</p>
-<p><img src="enter-password.jpeg" alt="enter password"></p>
-<p>After restart, there will be a lock flag shown on the bottom of the wallet, which means it is already encrypted (locked) &#xFF1A;</p>
-<p><img src="wallet-locked.jpeg" alt="wallet locked"></p>
-<h2 id="unlock-wallet"><a name="unlock-wallet" class="plugin-anchor" href="#unlock-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Unlock wallet</h2>
-<h3 id="for-command-line-users"><a name="for-command-line-users" class="plugin-anchor" href="#for-command-line-users"><i class="fa fa-link" aria-hidden="true"></i></a>For command line users</h3>
-<p>qtum-cli command to unlock wallet&#xFF1A;</p>
-<pre><code>./qtum-cli walletpassphrase &quot;yourpassword&quot; 99999
-</code></pre><p>the first argument <code>yourpassword</code> is the passphrase you set when encryption, while the second is required unlock time, the unit is second (like 99999 seconds here).</p>
-<p>After unlocking, you can send QTUM or do other fund security related actions.</p>
-<p>If you only want to unlock the wallet for staking, please use &#xFF1A;</p>
-<pre><code>./qtum-cli walletpassphrase &quot;yourpassword&quot; 99999 true
-</code></pre><p>The first two arguments are the same, and the 3rd argument <code>true</code> means you only want to unlock for staking. After doing this, you can start staking, but other fund security related actions like sending QTUM or dumping private key still need your passphrase to fully unlock your wallet first. </p>
-<h3 id="for-gui-wallet-users"><a name="for-gui-wallet-users" class="plugin-anchor" href="#for-gui-wallet-users"><i class="fa fa-link" aria-hidden="true"></i></a>For GUI wallet users</h3>
-<p>Go to &#x201C;Settings-unlock wallet&#x201D; to unlock your wallet&#xFF1A;</p>
-<p><img src="https://s.qtum.site/uploads/c0fbf6583794c8ecb91532dbeec4f9c7.jpeg" alt="unlock wallet"></p>
-<p>enter passphrase to unlock wallet. If you choose <code>For staking only</code>, it means you only unlock the wallet for staking&#xFF0C;but other fund security related actions like sending QTUM or dumping private key are still forbidened. So please unselect <code>For staking only</code> if you want to fully unlock your wallet.</p>
-<p><img src="https://s.qtum.site/uploads/65996de583f1e099360cbbbbdbba48d8.jpeg" alt="enter passphrase"></p>
-<p>After unlocking, the lock flag on the bottom will switch to unlocked.</p>
-<h2 id="change-passphrase"><a name="change-passphrase" class="plugin-anchor" href="#change-passphrase"><i class="fa fa-link" aria-hidden="true"></i></a>Change passphrase</h2>
-<h3 id="for-command-line-users"><a name="for-command-line-users" class="plugin-anchor" href="#for-command-line-users"><i class="fa fa-link" aria-hidden="true"></i></a>For command line users</h3>
-<p>command for change passphrase:</p>
-<pre><code>./qtum-cli walletpassphrasechange &quot;oldpassphrase&quot; &quot;newpassphrase&quot;
-</code></pre><p><code>oldpassphrase</code> is the old passphrase you set last time&#xFF0C;and <code>newpassphrase</code> is the new passphrase you want set&#x3002;</p>
-<h3 id="for-gui-wallet-users"><a name="for-gui-wallet-users" class="plugin-anchor" href="#for-gui-wallet-users"><i class="fa fa-link" aria-hidden="true"></i></a>For GUI wallet users</h3>
-<p>Go to &#x201C;Setting-Change Passphrase&#x201D; to change passphrase&#xFF1A;</p>
-<p><img src="click-changepass.jpeg" alt="click change passphrase"></p>
-<p>enter old passphrase and new one to complete modification&#xFF1A;</p>
-<p><img src="enter-new-password.jpeg" alt="change passphrase"></p>
+<p>Either way works in the same way for staking, so you can choose either method you like.</p>
+<h2 id="method-1&#xFF1A;staking-with-qtumd-command-line"><a name="method-1&#xFF1A;staking-with-qtumd-command-line" class="plugin-anchor" href="#method-1&#xFF1A;staking-with-qtumd-command-line"><i class="fa fa-link" aria-hidden="true"></i></a>Method 1&#xFF1A;Staking with <code>qtumd</code> (command line)</h2>
+<h3 id="1-run-qtumd"><a name="1-run-qtumd" class="plugin-anchor" href="#1-run-qtumd"><i class="fa fa-link" aria-hidden="true"></i></a>1. Run <code>qtumd</code></h3>
+<p>To run <code>qtumd</code>, please refer to&quot;<a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">How to deploy Qtum node</a>&quot;.</p>
+<p>Follow the guidance to run <code>qtumd</code>:</p>
+<pre><code>./qtumd -daemon
+</code></pre><p>Staking is default on for qtumd, so no need for other options if you only want to stake.</p>
+<h3 id="2-send-some-qtum-to-your-wallet"><a name="2-send-some-qtum-to-your-wallet" class="plugin-anchor" href="#2-send-some-qtum-to-your-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>2. Send some QTUM to your wallet</h3>
+<p>First you can generate a new address with&#xFF1A;</p>
+<pre><code>./qtum-cli getnewaddress
+</code></pre><p>This will generate a new address with Prefix &apos;Q&apos;. You can send some QTUM to this new generated address for staking. You can generate as many addresses as you like, and send arbitrary QTUM as you like for staking.</p>
+<p>Note&#xFF1A;<strong>The coin should wait for 500 blocks before being able to stake, i.e. about 17 hours to MATURE.</strong>. </p>
+<p>After the Qtum node syncing to the latest block, you can check current balance with <code>./qtum-cli getbalance</code> or get utxo list with<code>./qtum-cli listunspent</code>&#x3002;&#xFF08;<a href="https://github.com/qtumproject/documents/blob/master/zh/Qtum-Blockchain-Guide.md#utxo&#x8D26;&#x6237;&#x6A21;&#x578B;" target="_blank">what is UTXO?</a>&#xFF09;&#x3002;</p>
+<p>Please do following steps after your coin is mature.</p>
+<h3 id="3-check-staking-info"><a name="3-check-staking-info" class="plugin-anchor" href="#3-check-staking-info"><i class="fa fa-link" aria-hidden="true"></i></a>3. Check staking info</h3>
+<p>Check current staking info with&#xFF1A;</p>
+<pre><code>./qtum-cli getstakinginfo
+</code></pre><p>You might get the result like this&#xFF1A;</p>
+<pre><code>{
+  &quot;enabled&quot;: true,
+  &quot;staking&quot;: true,
+  &quot;errors&quot;: &quot;&quot;,
+  &quot;currentblocksize&quot;: 1000,
+  &quot;currentblocktx&quot;: 0,
+  &quot;pooledtx&quot;: 5,
+  &quot;difficulty&quot;: 5683612.564280176,
+  &quot;search-interval&quot;: 46,
+  &quot;weight&quot;: 53206430,
+  &quot;netstakeweight&quot;: 2278172497819029,
+  &quot;expectedtime&quot;: 5480654870
+}
+</code></pre><p><code>enabled</code> means if your wallet have enabled staking, it should be true by default. <code>staking</code> means if your wallet is currently staking (mining). <code>weight</code> stands for the amount of QTUM that is staking right now, with unit 10^-8QTUM, here in the example, we have 0.532QTUM staking. <code>expectedtime</code> stands for the expected time that you will get a reward, the unit is second.</p>
+<h3 id="4-how-to-stake-if-the-wallet-is-encrypted&#xFF1F;"><a name="4-how-to-stake-if-the-wallet-is-encrypted&#xFF1F;" class="plugin-anchor" href="#4-how-to-stake-if-the-wallet-is-encrypted&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>4. How to stake if the wallet is encrypted&#xFF1F;</h3>
+<p>If your wallet is not encrypted, you can skip this section. However, for security, we recommand you encrypt your wallet. (<a href="../Encrypt-and-Unlock-Qtum-Wallet/">How to encrypt?</a>)</p>
+<p>Qtum wallet can be encrypted with <code>encryptwallet</code>. However, staking will be stopped when it is encrypted. For example, <code>./qtum-cli getstakinginfo</code> for a encrypted wallet&#xFF1A;</p>
+<pre><code>{
+  &quot;enabled&quot;: true,
+  &quot;staking&quot;: false,
+  &quot;errors&quot;: &quot;&quot;,
+  &quot;currentblocksize&quot;: 1000,
+  &quot;currentblocktx&quot;: 0,
+  &quot;pooledtx&quot;: 94,
+  &quot;difficulty&quot;: 5788429.670171153,
+  &quot;search-interval&quot;: 0,
+  &quot;weight&quot;: 53206430,
+  &quot;netstakeweight&quot;: 2438496688951881,
+  &quot;expectedtime&quot;: 0
+}
+</code></pre><p>See <code>staking</code> turns to <code>false</code>, which means wallet is not staking.</p>
+<p>You can use <code>walletpassphrase</code> to unlock wallet for staking&#xFF1A;</p>
+<pre><code>./qtum-cli walletpassphrase &quot;&lt;your passphrase&gt;&quot; 99999999 true
+</code></pre><p>The meaning of the arguments can be found in the documents &quot;<a href="../Encrypt-and-Unlock-Qtum-Wallet/">How to encrypt?</a>&quot;.</p>
+<p>After unlocking, you can double check <code>getstakinginfo</code>, it should look the same with previous unlocked result, <code>staking</code> become true.</p>
+<h2 id="method-2-staking-with-qtum-qt-wallet-official-pc-wallet"><a name="method-2-staking-with-qtum-qt-wallet-official-pc-wallet" class="plugin-anchor" href="#method-2-staking-with-qtum-qt-wallet-official-pc-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Method 2: Staking with qtum-qt wallet (official PC wallet)</h2>
+<p>How to use Qtum-qt tutorial? please refer to <a href="../Qtum-Wallet-Tutorial/">Qtum qt wallet tutorial</a>. Current supported platform: Mac/Linux/Windows.</p>
+<h3 id="1-open-qtum-qt-wallet"><a name="1-open-qtum-qt-wallet" class="plugin-anchor" href="#1-open-qtum-qt-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>1. Open Qtum qt wallet</h3>
+<p>Launch the wallet.</p>
+<h3 id="2-send-some-qtum-to-your-wallet"><a name="2-send-some-qtum-to-your-wallet" class="plugin-anchor" href="#2-send-some-qtum-to-your-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>2. Send some QTUM to your wallet</h3>
+<p>If you already have some QTUM in your wallet, you might skip this step.</p>
+<p>If not, please send some QTUM to your wallet first. (<a href="../Qtum-Wallet-Tutorial/">How to receive?</a>).</p>
+<p>Note&#xFF1A;<strong>The coin should wait for 500 blocks before being able to stake, i.e. about 17 hours to MATURE.</strong>. </p>
+<h3 id="3-check-staking-status"><a name="3-check-staking-status" class="plugin-anchor" href="#3-check-staking-status"><i class="fa fa-link" aria-hidden="true"></i></a>3. Check staking status</h3>
+<p>The flash sign at the bottom of wallet shows staking info :</p>
+<p><strong>Solid black flash means it is staking now</strong>. For more information, you can put your mouse on the flash, e.g.:</p>
+<p><img src="staking.png" alt="staking info"></p>
+<ul>
+<li><code>Staking</code>: if it is staking&#xFF1B;</li>
+<li><code>Your weight is</code>: How many QTUM are able to used for staking, unit is QTUM;</li>
+<li><code>Network weight is</code>: How many QTUM are staking in the network, unit is QTUM&#xFF1B;</li>
+<li><code>Expected time</code>: expected time to get reward, unit is Day.</li>
+</ul>
+<p><strong>Hollow flash measn it is not staking</strong></p>
+<p>Possible reasons for not staking&#xFF1A;</p>
+<ul>
+<li>1.There is no coins of no mature coins (more than 500 confirmations(blocks)) -- Solution: send some QTUM to the wallet and wait for 500 blocks (about 17 hours);</li>
+</ul>
+<p><img src="not-mature.png" alt="No mature coins"></p>
+<ul>
+<li>2.Wallet is locked/encrypted -- Solution: unlock the wallet for staking. (<a href="../Encrypt-and-Unlock-Qtum-Wallet/">How to unlock?</a>)</li>
+</ul>
+<p><img src="locked.jpg" alt="Not staking due to encryption"></p>
+<p><strong>No flash sign means staking is disabled</strong></p>
+<ul>
+<li>3.Staking is disabled -- Solution: enable staking in the qtum.conf (-staking=true)(<a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">How to set qtum.conf&#xFF1F;</a>)</li>
+</ul>
+<p><img src="staking-disabled.jpg" alt="Staking disabled"></p>
+<h2 id="about-block-reward"><a name="about-block-reward" class="plugin-anchor" href="#about-block-reward"><i class="fa fa-link" aria-hidden="true"></i></a>About block reward</h2>
+<p>The block producer will get more than 4QTUM rewards, something to keep in mind:</p>
+<ul>
+<li>The reward come from a new transaction, you can check balance to see if you get the reward.</li>
+<li>Once succesfully stake, you will get 0.4QTUM reward immediately.</li>
+<li><strong>Other 3.6QTUM will be sent to you after 500 blocks (about 17hours), in continuous 9 blocks, within each block you will get 0.4QTUM,</strong>, so in total it will be 4QTUM.</li>
+<li>The staked coins (UTXO) will be locked for 500 blocks, during this period, it cannot be spent nor be used to stake. </li>
+</ul>
+<h2 id="how-to-disable-staking"><a name="how-to-disable-staking" class="plugin-anchor" href="#how-to-disable-staking"><i class="fa fa-link" aria-hidden="true"></i></a>How to disable staking?</h2>
+<p>Staking is by default enabled for Qtum wallet. If you need to disable staking for some reason (for example exchanges are always recommanded to disable staking), you might following anyone of the 3 ways below:</p>
+<p>1 Add <code>-staking=false</code> when running Qtum node&#xFF1A;</p>
+<pre><code>./qtumd -staking=false -daemon
+</code></pre><p>For qt wallet, it is like&#xFF1A;</p>
+<pre><code>./qtum-qt -staking=false
+</code></pre><p>2 Add config <code>staking=false</code> in qtum.conf;(<a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">How to set qtum.conf&#xFF1F;</a>)</p>
+<p>3 Encrypt wallet, since encrypted wallet will automatically stop staking.(<a href="../Encrypt-and-Unlock-Qtum-Wallet/">How to unlock?</a>)</p>
 
                                 
                                 </section>
@@ -711,12 +781,12 @@
 
             
                 
-                <a href="../Adding-Nodes/" class="navigation navigation-prev " aria-label="Previous page: Adding Nodes">
+                <a href="../Qtum-on-Raspberry-Pi/" class="navigation navigation-prev " aria-label="Previous page: Stake With Raspberry Pi">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../Wallet-Recovery-with-Salvagewallet.html" class="navigation navigation-next " aria-label="Next page: Wallet Recovery With Salvagewallet">
+                <a href="../freebsd/" class="navigation navigation-next " aria-label="Next page: How to Stake on FreeBSD">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -727,7 +797,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Encrypt and Unlock Qtum Wallet","level":"2.7","depth":1,"next":{"title":"Wallet Recovery With Salvagewallet","level":"2.8","depth":1,"path":"Wallet-Recovery-with-Salvagewallet.md","ref":"Wallet-Recovery-with-Salvagewallet.md","articles":[]},"previous":{"title":"Adding Nodes","level":"2.6","depth":1,"path":"Adding-Nodes/README.md","ref":"Adding-Nodes/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Encrypt-and-Unlock-Qtum-Wallet/README.md","mtime":"2019-06-19T07:59:44.217Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-11T08:16:59.730Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"How to Stake With Qtum","level":"5.6","depth":1,"next":{"title":"How to Stake on FreeBSD","level":"5.7","depth":1,"path":"freebsd/README.md","ref":"freebsd/README.md","articles":[]},"previous":{"title":"Stake With Raspberry Pi","level":"5.5","depth":1,"path":"Qtum-on-Raspberry-Pi/README.md","ref":"Qtum-on-Raspberry-Pi/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"How-to-Stake-with-Qtum/README.md","mtime":"2019-07-10T05:31:48.844Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-11T08:16:59.730Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
