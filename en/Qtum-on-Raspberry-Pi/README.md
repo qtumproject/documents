@@ -32,7 +32,15 @@ https://raspbianimages.s3.amazonaws.com/2019-07-29-Qtum-Raspbian-lite.zip
 **Raspbian desktop (with some cool wallpapers! )**
 https://raspbianimages.s3.amazonaws.com/2019-07-29-Qtum-Raspbian.zip
 
-How to "burn" these images to your sd card is out of the scope of this tutorial, for more info on how to do this, please check out this link: <https://www.raspberrypi.org/documentation/installation/installing-images/>
+
+
+### "Burning" the Qtum Raspbian image to your SD card
+
+Please watch this video tutorial which shows how to download, burn and use your Qtum Raspbian image
+
+https://www.youtube.com/watch?v=0W6NlIk7Tgw&t=0s
+
+
 
 ### IMPORTANT NOTE!
 
