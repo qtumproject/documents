@@ -27,10 +27,10 @@ There's several ways to run Qtum on a Raspberry Pi, perhaps the easiest way is t
 If you don't want to buy or already own a stakebox and just want to get the latest version of Raspbian with Qtum preinstalled with the official Qtum Repository, then you can download the Raspbian images yourself:
 
 **Raspbian lite (CLI only)**
-https://raspbianimages.s3.amazonaws.com/2019-07-01-Raspbian-Qtum-lite.zip
+https://raspbianimages.s3.amazonaws.com/2019-07-29-Qtum-Raspbian-lite.zip
 
 **Raspbian desktop (with some cool wallpapers! )**
-https://raspbianimages.s3.amazonaws.com/2019-07-01-Raspbian-Qtum.zip
+https://raspbianimages.s3.amazonaws.com/2019-07-29-Qtum-Raspbian.zip
 
 How to "burn" these images to your sd card is out of the scope of this tutorial, for more info on how to do this, please check out this link: <https://www.raspberrypi.org/documentation/installation/installing-images/>
 
