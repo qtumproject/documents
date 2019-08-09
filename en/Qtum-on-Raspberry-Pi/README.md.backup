@@ -3,14 +3,14 @@
 
 
 1. [Getting a Stakebox](#Getting a Stakebox)
-2. [Downloading Qtum Raspbian](Downloading Qtum Raspbian)
-3. [Screenshots of Qtum Raspbian](Screenshots of Qtum Raspbian)
-4. [Installing Qtum via Qtum Raspbian repository](Installing Qtum via Qtum Raspbian repository) **(only needed if you're not using a Qtum stakebox or not using the Qtum Raspbian image)**
-5. [Setting up a firewall in Raspbian](Protecting access with a basic firewall)
-6. [Launching Qtum daemon](Launching Qtum daemon)
-7. [Encrypting wallet](Encrypting wallet)
-8. [Staking](Staking)
-9. [Backup](How to backup to a separate device)
+2. [Downloading Qtum Raspbian](#Downloading Qtum Raspbian)
+3. [Screenshots of Qtum Raspbian](#Screenshots of Qtum Raspbian)
+4. [Installing Qtum via Qtum Raspbian repository](#Installing Qtum via Qtum Raspbian repository) **(only needed if you're not using a Qtum stakebox or not using the Qtum Raspbian image)**
+5. [Setting up a firewall in Raspbian](#Protecting access with a basic firewall)
+6. [Launching Qtum daemon](#Launching Qtum daemon)
+7. [Encrypting wallet](#Encrypting wallet)
+8. [Staking](#Staking)
+9. [Backup](#How to backup to a separate device)
 
 
 
@@ -27,12 +27,29 @@ There's several ways to run Qtum on a Raspberry Pi, perhaps the easiest way is t
 If you don't want to buy or already own a stakebox and just want to get the latest version of Raspbian with Qtum preinstalled with the official Qtum Repository, then you can download the Raspbian images yourself:
 
 **Raspbian lite (CLI only)**
-https://s3.amazonaws.com/raspbianimages/qtumrasplite.tar.xz
+https://raspbianimages.s3.amazonaws.com/2019-07-29-Qtum-Raspbian-lite.zip
 
 **Raspbian desktop (with some cool wallpapers! )**
-https://s3.amazonaws.com/raspbianimages/qtumrasp.tar.xz
+https://raspbianimages.s3.amazonaws.com/2019-07-29-Qtum-Raspbian.zip
 
-How to "burn" these images to your sd card is out of the scope of this tutorial, for more info on how to do this, please check out this link: <https://www.raspberrypi.org/documentation/installation/installing-images/>
+## NEW!! Qtum Raspbian (Debian Buster 10 release)
+
+This release has full official support for the amazing Raspberry Pi4. It'll also work fine with previous Raspberrys
+
+****
+https://raspbianimages.s3.amazonaws.com/2019-08-09-Qtum-Raspbian.zip
+
+***Raspbian lite (CLI only)***
+https://raspbianimages.s3.amazonaws.com/2019-08-09-Qtum-Raspbian-lite.zip
+
+
+### "Burning" the Qtum Raspbian image to your SD card
+
+Please watch this video tutorial which shows how to download, burn and use your Qtum Raspbian image
+
+https://www.youtube.com/watch?v=0W6NlIk7Tgw&t=0s
+
+
 
 ### IMPORTANT NOTE!
 
@@ -218,7 +235,7 @@ If you want to split your coins into different addresses inside your Rasbperry P
 ## Updating wallet
 
 We’re always launching new updates, sometimes it’s to add new features or fix bugs. In any case, updating is a breeze, all you have to do is type
-` sudo apt update && sudo apt install —only-upgrade qtum `
+` sudo apt update && sudo apt upgrade -y `
 
 
 

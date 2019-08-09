@@ -32,6 +32,15 @@ https://raspbianimages.s3.amazonaws.com/2019-07-29-Qtum-Raspbian-lite.zip
 **Raspbian desktop (with some cool wallpapers! )**
 https://raspbianimages.s3.amazonaws.com/2019-07-29-Qtum-Raspbian.zip
 
+## NEW!! Qtum Raspbian (Debian Buster 10 release)
+
+This release has full official support for the amazing Raspberry Pi4. It'll also work fine with previous Raspberrys
+
+**Raspbian desktop (with some cool wallpapers! )**
+https://raspbianimages.s3.amazonaws.com/2019-08-09-Qtum-Raspbian.zip
+
+***Raspbian lite (CLI only)***
+https://raspbianimages.s3.amazonaws.com/2019-08-09-Qtum-Raspbian-lite.zip
 
 
 ### "Burning" the Qtum Raspbian image to your SD card
