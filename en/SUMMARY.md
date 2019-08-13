@@ -48,6 +48,7 @@
 
 + [Unita Technical White Paper](Technical-White-Paper-for-QtumX/README.md)
 + [Install Unita from Linux repositories](unitarepo/README.md)
++ [Unita on Google Cloud Getting started](unitagettingstarted/README.md)
 + [Unita One-Click-Launch-Chain](One-Click-Launch-Chain/README.md)
 + [SCAR: Scalable Consensus Algorithm](SCAR-Consensus/README.md)
 + [DDAO: Decentralized Data Access Object](DDAO-Data-Management/README.md)
