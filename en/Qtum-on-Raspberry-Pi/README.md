@@ -6,11 +6,12 @@
 2. [Downloading Qtum Raspbian](#Downloading Qtum Raspbian)
 3. [Screenshots of Qtum Raspbian](#Screenshots of Qtum Raspbian)
 4. [Installing Qtum via Qtum Raspbian repository](#Installing Qtum via Qtum Raspbian repository) **(only needed if you're not using a Qtum stakebox or not using the Qtum Raspbian image)**
-5. [Setting up a firewall in Raspbian](#Protecting access with a basic firewall)
-6. [Launching Qtum daemon](#Launching Qtum daemon)
-7. [Encrypting wallet](#Encrypting wallet)
-8. [Staking](#Staking)
-9. [Backup](#How to backup to a separate device)
+5. [Raspberry Pi Zero](#Screenshots of Qtum Raspbian)
+6. [Setting up a firewall in Raspbian](#Protecting access with a basic firewall)
+7. [Launching Qtum daemon](#Launching Qtum daemon)
+8. [Encrypting wallet](#Encrypting wallet)
+9. [Staking](#Staking)
+10. [Backup](#How to backup to a separate device)
 
 
 
@@ -74,6 +75,54 @@ Please watch this video tutorial which shows how to download, burn and use your 
 https://www.youtube.com/watch?v=0W6NlIk7Tgw&t=0s
 
 
+
+## Raspberry Pi Zero
+
+Qtum Raspbian now supports the Pi Zero!. This is a $5 device which has only 512mb of Ram and a 1 Core CPU. This makes the Pi Zero the most cost-effective solution to have a Qtum staking box!
+
+The process of installing Qtum Raspbian on the Pi Zero is the same as on the other Raspberry Pis, however, this version is recommended for the Zero"
+
+#### Qtum PiZero (Recommended for Raspberry Pi 1 and Pi Zero)
+
+https://raspbianimages.s3.amazonaws.com/2019-08-19-Qtum-PiZero.zip
+
+https://raspbianimages.s3.amazonaws.com/2019-08-19-Qtum-PiZero-lite.zip
+
+The Desktop version works and is usable with the Pi Zero, but, you will find better performance with the "Lite" version as it doesn't have a desktop, only command line.
+
+ ### Pi Zero RAM restrictions
+
+The Pi Zero has only 512MB ram, and a portion of that ram is "shared" with the video output, that gives you just a bit below 500MB ram. Qtum Raspbian has ZRAM enabled by default, this compresses your RAM to allow it to use more data, however, to ensure stability, you need to enable SWAP.
+
+### What is SWAP anyway? 
+
+SWAP enables "virtual memory", it uses a portion of your disk to store data that cannot be stored in RAM, this helps devices like the Pi Zero to continue running without crashing even if the applications are using more than the 512MB RAM included with the Pi Zero.
+
+### How do we enable SWAP?
+
+Enabling SWAP on the Pi Zero is extremely easy:
+
+1. Open up a terminal as shown on the screenshot below
+
+   
+
+   ![2zero](2zero.png)
+
+   Inside the terminal, type "sudo dphys-swapfile setup" and press enter
+
+   You'll see some text coming up, and a confirmation of your 2gb SWAP file being generated.
+
+2. Still inside the same terminal, type "sudo dphys-swapfile swapon" and press enter
+   This won't give you any confirmation, however, your SWAP file has been setup and activated!. You only need to do this once, the Pi Will activate your SWAP file in case of a reboot/shutdown.
+
+   ![3zero](3zero.png)
+   
+
+3. Here we can see that the SWAP file is active giving us a total of 2.42GB of RAM (SWAP and ZRAM included)
+
+   ![4zero](4zero.png)
+
+   
 
 ### IMPORTANT NOTE!
 
