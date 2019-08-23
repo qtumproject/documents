@@ -6,7 +6,7 @@
 2. [Downloading Qtum Raspbian](#Downloading Qtum Raspbian)
 3. [Screenshots of Qtum Raspbian](#Screenshots of Qtum Raspbian)
 4. [Installing Qtum via Qtum Raspbian repository](#Installing Qtum via Qtum Raspbian repository) **(only needed if you're not using a Qtum stakebox or not using the Qtum Raspbian image)**
-5. [Raspberry Pi Zero](#Screenshots of Qtum Raspbian)
+5. [Raspberry Pi Zero](#Raspberry_Pi_Zero)
 6. [Setting up a firewall in Raspbian](#Protecting access with a basic firewall)
 7. [Launching Qtum daemon](#Launching Qtum daemon)
 8. [Encrypting wallet](#Encrypting wallet)
