@@ -117,7 +117,6 @@ Enabling SWAP on the Pi Zero is extremely easy:
 
    ![3zero](3zero.png)
    
-
 3. Here we can see that the SWAP file is active giving us a total of 2.42GB of RAM (SWAP and ZRAM included)
 
    ![4zero](4zero.png)
@@ -134,7 +133,7 @@ Enabling SWAP on the Pi Zero is extremely easy:
 
 ![qtumrasp1](qtumrasp1.png)
 
-In order to launch Qtum, we need to go to the menu and go to other -> Qtum
+In order to launch Qtum, we need to go to the menu and go to internet -> Qtum
 
 ![qtumrasp2](qtumrasp2.png)
 
