@@ -4,7 +4,7 @@
 
 
 
-We've published our official Qtum repository on https://repo.qtum.info or https://repo.qtum.org, this repository supports the following distributions:
+We've published our official Qtum repository on https://repo.qtum.info  this repository supports the following distributions:
 
 ### Debian
 
@@ -21,9 +21,19 @@ We've published our official Qtum repository on https://repo.qtum.info or https:
 
 18.x
 
+
+
+## Other official repositories
+
+
+
 ### Centos/Fedora/Redhat
 
 Tested on Centos 7, Fedora 30. Other releases should work fine as well.
+
+https://rpmrepo.qtum.info
+
+
 
 ### Archlinux
 
@@ -86,11 +96,11 @@ Logout and then log in again.
 
 These two packages are needed to enable the Qtum repository on Debian, let's install them:
 
-apt install -y apt-transport-https dirmngr
+`apt install -y apt-transport-https dirmngr`
 
 ### Obtaining Public key
 
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  BF5B197D
+`sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  BF5B197D`
 
 This downloads and installs the Qtum public key
 
@@ -117,21 +127,31 @@ These are the steps you need to take to install Qtum in a RPM-based distribution
 
 1. Install the public key for the RPM repository:
 
-   sudo rpm --import https://rpmrepo.qtum.info/key.asc  
+   `sudo rpm --import https://rpmrepo.qtum.info/key.asc  `
 
 2. Add the Qtum repository:
 
-   sudo yum-config-manager --add-repo https://rpmrepo.qtum.info/
+   `sudo yum-config-manager --add-repo https://rpmrepo.qtum.info/`
 
-3. sudo yum update
+3. `sudo yum update`
 
-4. sudo yum install qtum
+4. `sudo yum install qtum`
 
 You can also use dnf to install Qtum on Fedora and distributions that support it.
 
 
 
-### Launching Qtum
+## Install on Archlinux
+
+To install on arch, the easiest way is to use "yay" https://aur.archlinux.org/packages/yay
+
+`yay qtum-core`
+
+Compiling Qtum should take a few mins, if you're familiar with yay, it's an AUR helper which really simplifies the process of installing packages from the Archlinux AUR. 
+
+
+
+## Launching Qtum
 
 
 
