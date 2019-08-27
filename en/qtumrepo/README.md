@@ -65,7 +65,7 @@ This will download and add the Qtum signing key to your linux install.
 
 `sudo su` - Sudo to root first
 
-` echo "deb https://repo.qtum.info/apt/ubuntu/ xenial main" >> /etc/apt/sources.list`
+` echo "deb https://repo.qtum.info/apt/ubuntu/ bionic main" >> /etc/apt/sources.list.d/qtum.list`
 
 This will add the repository to your APT sources file. **NOTE:** Please remember to change "xenial" for your Ubuntu version codename <!--(for instance, Ubuntu 17.10 codename is artful, in this case you need to replace xenial for artful)-->
 
@@ -109,7 +109,7 @@ This downloads and installs the Qtum public key
 
 `sudo su` - Sudo to root first
 
-` echo "deb https://repo.qtum.info/apt/debian/ stretch main" >> /etc/apt/sources.list`
+` echo "deb https://repo.qtum.info/apt/debian/ stretch main" >> /etc/apt/sources.list.d/qtum.list`
 
 This will add the repository to your APT sources file. **NOTE:** Please remember to change "stretch" for your Debian version codename <!--(for instance, Debian 8.x codename is jessie, in this case you need to replace stretch for jessie)-->
 
