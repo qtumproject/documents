@@ -651,7 +651,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="using-qtum-official-repository-on-ubuntu-1604-1904-debian-and-archlinux"><a name="using-qtum-official-repository-on-ubuntu-1604-1904-debian-and-archlinux" class="plugin-anchor" href="#using-qtum-official-repository-on-ubuntu-1604-1904-debian-and-archlinux"><i class="fa fa-link" aria-hidden="true"></i></a>Using QTUM official Repository on Ubuntu 16.04-19.04, Debian and Archlinux</h1>
+                                <h1 id="using-qtum-official-repository-on-linux"><a name="using-qtum-official-repository-on-linux" class="plugin-anchor" href="#using-qtum-official-repository-on-linux"><i class="fa fa-link" aria-hidden="true"></i></a>Using QTUM official Repository on Linux</h1>
 <p>We&apos;ve published our official Qtum repository on <a href="https://repo.qtum.info" target="_blank">https://repo.qtum.info</a> or <a href="https://repo.qtum.org" target="_blank">https://repo.qtum.org</a>, this repository supports the following distributions:</p>
 <h3 id="debian"><a name="debian" class="plugin-anchor" href="#debian"><i class="fa fa-link" aria-hidden="true"></i></a>Debian</h3>
 <ul>
@@ -664,11 +664,13 @@
 <p>16.04 - 19.04</p>
 <h3 id="mint"><a name="mint" class="plugin-anchor" href="#mint"><i class="fa fa-link" aria-hidden="true"></i></a>Mint</h3>
 <p>18.x</p>
+<h3 id="centosfedoraredhat"><a name="centosfedoraredhat" class="plugin-anchor" href="#centosfedoraredhat"><i class="fa fa-link" aria-hidden="true"></i></a>Centos/Fedora/Redhat</h3>
+<p>Tested on Centos 7, Fedora 30. Other releases should work fine as well.</p>
 <h3 id="archlinux"><a name="archlinux" class="plugin-anchor" href="#archlinux"><i class="fa fa-link" aria-hidden="true"></i></a>Archlinux</h3>
 <p><a href="https://aur.archlinux.org/packages/qtum-core/" target="_blank">Get it from the AUR</a> </p>
 <p>More distributions will be added in the future, this document will be updated to reflect those changes.</p>
 <h3 id="tutorial-focus"><a name="tutorial-focus" class="plugin-anchor" href="#tutorial-focus"><i class="fa fa-link" aria-hidden="true"></i></a>Tutorial focus</h3>
-<p>This tutorial assumes you have a basic knowledge of linux and terminal usage, the entire process uses the linux terminal.</p>
+<p>This tutorial assumes you have a basic knowledge of Linux and terminal usage, the entire process uses the Linux terminal.</p>
 <h2 id="installing-on-ubuntu"><a name="installing-on-ubuntu" class="plugin-anchor" href="#installing-on-ubuntu"><i class="fa fa-link" aria-hidden="true"></i></a>Installing on Ubuntu</h2>
 <h3 id="obtaining-signing-key"><a name="obtaining-signing-key" class="plugin-anchor" href="#obtaining-signing-key"><i class="fa fa-link" aria-hidden="true"></i></a>Obtaining signing key</h3>
 <p>First, we need to obtain the Qtum signing key from the ubuntu keyserver, here&apos;s how:</p>
@@ -682,7 +684,6 @@
 <p><code>sudo apt update &amp;&amp; sudo apt install qtum</code></p>
 <p>By doing this, we&apos;ll update our sources and install Qtum on our ubuntu Box</p>
 <h2 id="installing-on-debian"><a name="installing-on-debian" class="plugin-anchor" href="#installing-on-debian"><i class="fa fa-link" aria-hidden="true"></i></a>Installing on Debian</h2>
-<p>Obtaining the public key in Debian is a bit different, but not complicated</p>
 <p>First, we need to make sure <strong>sudo</strong> is installed: </p>
 <p>Type <code>sudo su</code> and press enter, if you get a password prompt, then you can move on to obtaining the public key</p>
 <h3 id="installing-sudo"><a name="installing-sudo" class="plugin-anchor" href="#installing-sudo"><i class="fa fa-link" aria-hidden="true"></i></a>Installing sudo</h3>
@@ -690,8 +691,11 @@
 <p>Once you&apos;re logged in as &quot;root&quot; please type the following: <code>apt-get install sudo</code></p>
 <p>When sudo finishes installing, add your user to the sudo group: <code>gpasswd -a youruser sudo</code>
 Logout and then log in again.</p>
+<h3 id="installing-dirmngr-and-apt-transport-https"><a name="installing-dirmngr-and-apt-transport-https" class="plugin-anchor" href="#installing-dirmngr-and-apt-transport-https"><i class="fa fa-link" aria-hidden="true"></i></a>Installing dirmngr and apt-transport-https</h3>
+<p>These two packages are needed to enable the Qtum repository on Debian, let&apos;s install them:</p>
+<p>apt install -y apt-transport-https dirmngr</p>
 <h3 id="obtaining-public-key"><a name="obtaining-public-key" class="plugin-anchor" href="#obtaining-public-key"><i class="fa fa-link" aria-hidden="true"></i></a>Obtaining Public key</h3>
-<p><code>wget -qO - https://repo.qtum.info/apt/public.key | sudo apt-key add -</code></p>
+<p>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  BF5B197D</p>
 <p>This downloads and installs the Qtum public key</p>
 <h3 id="adding-repository-to-your-apt-sources"><a name="adding-repository-to-your-apt-sources" class="plugin-anchor" href="#adding-repository-to-your-apt-sources"><i class="fa fa-link" aria-hidden="true"></i></a>Adding repository to your APT sources.</h3>
 <p><code>sudo su</code> - Sudo to root first</p>
@@ -700,6 +704,21 @@ Logout and then log in again.</p>
 <h3 id="refreshing-apt-sources-and-installing-qtum"><a name="refreshing-apt-sources-and-installing-qtum" class="plugin-anchor" href="#refreshing-apt-sources-and-installing-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Refreshing APT sources and installing Qtum</h3>
 <p><code>sudo apt update &amp;&amp; sudo apt install qtum</code></p>
 <p>By doing this, we&apos;ll update our sources and install Qtum on our debian Box</p>
+<h2 id="install-on-centosredhatfedora"><a name="install-on-centosredhatfedora" class="plugin-anchor" href="#install-on-centosredhatfedora"><i class="fa fa-link" aria-hidden="true"></i></a>Install on Centos/Redhat/Fedora</h2>
+<p>These are the steps you need to take to install Qtum in a RPM-based distribution</p>
+<ol>
+<li><p>Install the public key for the RPM repository:</p>
+<p>sudo rpm --import <a href="https://rpmrepo.qtum.info/key.asc" target="_blank">https://rpmrepo.qtum.info/key.asc</a>  </p>
+</li>
+<li><p>Add the Qtum repository:</p>
+<p>sudo yum-config-manager --add-repo <a href="https://rpmrepo.qtum.info/" target="_blank">https://rpmrepo.qtum.info/</a></p>
+</li>
+<li><p>sudo yum update</p>
+</li>
+<li><p>sudo yum install qtum</p>
+</li>
+</ol>
+<p>You can also use dnf to install Qtum on Fedora and distributions that support it.</p>
 <h3 id="launching-qtum"><a name="launching-qtum" class="plugin-anchor" href="#launching-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Launching Qtum</h3>
 <p>Launching is simple, we just go to our applications menu and scrolldown/search for qtum </p>
 <p><img src="1.jpg" width="800"></p>
@@ -748,7 +767,7 @@ Logout and then log in again.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Repositories","level":"5.1","depth":1,"next":{"title":"QTUM On Google Cloud","level":"5.2","depth":1,"path":"gcpgettingstarted/README.md","ref":"gcpgettingstarted/README.md","articles":[]},"previous":{"title":"QRC20 Integration","level":"4.2","depth":1,"path":"QRC20-integration.md","ref":"QRC20-integration.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"qtumrepo/README.md","mtime":"2019-07-23T00:44:11.152Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-25T00:32:45.982Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Repositories","level":"5.1","depth":1,"next":{"title":"QTUM On Google Cloud","level":"5.2","depth":1,"path":"gcpgettingstarted/README.md","ref":"gcpgettingstarted/README.md","articles":[]},"previous":{"title":"QRC20 Integration","level":"4.2","depth":1,"path":"QRC20-integration.md","ref":"QRC20-integration.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"qtumrepo/README.md","mtime":"2019-08-27T02:06:47.367Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-27T02:07:08.653Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

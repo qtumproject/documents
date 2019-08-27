@@ -1,4 +1,4 @@
-# Using QTUM official Repository on Ubuntu 16.04-19.04, Debian and Archlinux
+# Using QTUM official Repository on Linux
 
 
 
@@ -21,7 +21,9 @@ We've published our official Qtum repository on https://repo.qtum.info or https:
 
 18.x
 
+### Centos/Fedora/Redhat
 
+Tested on Centos 7, Fedora 30. Other releases should work fine as well.
 
 ### Archlinux
 
@@ -33,7 +35,9 @@ More distributions will be added in the future, this document will be updated to
 
 ### Tutorial focus
 
-This tutorial assumes you have a basic knowledge of linux and terminal usage, the entire process uses the linux terminal.
+This tutorial assumes you have a basic knowledge of Linux and terminal usage, the entire process uses the Linux terminal.
+
+
 
 ## Installing on Ubuntu
 
@@ -61,9 +65,9 @@ This will add the repository to your APT sources file. **NOTE:** Please remember
 
 By doing this, we'll update our sources and install Qtum on our ubuntu Box
 
-## Installing on Debian
 
-Obtaining the public key in Debian is a bit different, but not complicated
+
+## Installing on Debian
 
 First, we need to make sure **sudo** is installed: 
 
@@ -78,9 +82,15 @@ Once you're logged in as "root" please type the following: `apt-get install sudo
 When sudo finishes installing, add your user to the sudo group: `gpasswd -a youruser sudo`
 Logout and then log in again.
 
+### Installing dirmngr and apt-transport-https
+
+These two packages are needed to enable the Qtum repository on Debian, let's install them:
+
+apt install -y apt-transport-https dirmngr
+
 ### Obtaining Public key
 
-```wget -qO - https://repo.qtum.info/apt/public.key | sudo apt-key add - ```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  BF5B197D
 
 This downloads and installs the Qtum public key
 
@@ -98,6 +108,28 @@ This will add the repository to your APT sources file. **NOTE:** Please remember
 `sudo apt update && sudo apt install qtum`
 
 By doing this, we'll update our sources and install Qtum on our debian Box
+
+
+
+## Install on Centos/Redhat/Fedora
+
+These are the steps you need to take to install Qtum in a RPM-based distribution
+
+1. Install the public key for the RPM repository:
+
+   sudo rpm --import https://rpmrepo.qtum.info/key.asc  
+
+2. Add the Qtum repository:
+
+   sudo yum-config-manager --add-repo https://rpmrepo.qtum.info/
+
+3. sudo yum update
+
+4. sudo yum install qtum
+
+You can also use dnf to install Qtum on Fedora and distributions that support it.
+
+
 
 ### Launching Qtum
 
