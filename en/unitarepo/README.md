@@ -51,7 +51,7 @@ This will download and add the Unita signing key to your Linux install.
 
 `sudo su` - Sudo to root first
 
-` echo "deb https://repo.unita.network/apt/ubuntu/ xenial main" >> /etc/apt/sources.list`
+` echo "deb https://repo.unita.network/apt/ubuntu/ bionic main" >> /etc/apt/sources.list.d/unita.list`
 
 This will add the repository to your APT sources file. **NOTE:** Please remember to change "xenial" for your Ubuntu version codename <!--(for instance, Ubuntu 17.10 codename is artful, in this case you need to replace xenial for artful)-->
 
