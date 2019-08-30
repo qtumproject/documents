@@ -12,8 +12,6 @@ Here's a good read on Jails:  https://www.freebsd.org/doc/handbook/jails.html
 
 https://www.freebsd.org/doc/handbook/eresources-web.html
 
-
-
 ### Installing FreeBSD
 
 **Important**: Make sure to install and enable NTP, it's necesary to stay synchronized to network clocks.
@@ -140,25 +138,32 @@ Create our basic /etc/rc.conf for our Qtum Jail
 ### /etc/rc.conf
 
 `syslogd_flags="-s -s"`
-`sshd_enable=YES`
-`clear_tmp_enable=YES`
-`clear_tmp_X=YES`
-`extra_netfs_types=NFS`
-`dumpdev=NO`
-`update_motd=NO`
-`keyrate=fast`
 
+`sshd_enable=YES`
+
+`clear_tmp_enable=YES`
+
+`clear_tmp_X=YES`
+
+`extra_netfs_types=NFS`
+
+`dumpdev=NO`
+
+`update_motd=NO`
+
+`keyrate=fast`
 `sendmail_enable=NONE`
 
 `sendmail_submit_enable=NO`
+
 `sendmail_outbound_enable=NO`
+
 `sendmail_msp_queue_enable=NO`
-
-
 
 ## Add dns nameservers to /etc/resolv.conf
 
 `echo "nameserver 8.8.8.8" >> /etc/resolv.conf`
+
 `echo "nameserver 8.8.4.4" >> /etc/resolv.conf`
 
 ## Installing Qtum
@@ -181,8 +186,6 @@ There's 2 options on doing this, we can use the pkg repository or the powerful F
 ![portsnapfetchextract.png](portsnapfetchextract.png)The above will ask for a lot of configuration options, it might be better to use make config-recursive to set all options before compiling.
 If you want to use default settings just type `cd /usr/ports/net-p2p/qtum && make install clean BATCH="YES"`
 
-
-
 ### Running Qtum
 
 Launching Qtum is just like in any other *NIX operating system, however there's a minor difference here due to how FreeBSD jails work. First, we need to create a qtum.conf file with the following contents:
@@ -193,16 +196,16 @@ This config is necessary, otherwise calling the daemon will return errors.
 
 Then we can launch with`qtumd -daemon`
 
-
-
 ## Security tips
 
 - Set up firewall on host (you cannot setup a firewall inside a jail) and enable only the ports you need (22 and 3888) This is done in the host rc.conf at the top of this tutorial
+
 - Disable history, this will completely disable console history and it's a way to help secure your staking box, type the following on your FreeBSD console: ` unset history; unset savehist `
+
 - Secure SSH: 
+  
   1. Disable password authentication![ssh2.png](ssh2.png)![ssh4.png](ssh4.png)
      ![ssh5.png](ssh5.png)
-
 2. If using the FreeBSD box on your home network, force it to listen on local network only.
 
 ![ssh1.png](ssh1.png)

@@ -721,21 +721,21 @@ This is very important, if the time info is incorrect, we&apos;ll produce orphan
 <p>Create our basic /etc/rc.conf for our Qtum Jail</p>
 <h2 id="qtum-jail"><a name="qtum-jail" class="plugin-anchor" href="#qtum-jail"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum Jail:</h2>
 <h3 id="etcrcconf"><a name="etcrcconf" class="plugin-anchor" href="#etcrcconf"><i class="fa fa-link" aria-hidden="true"></i></a>/etc/rc.conf</h3>
-<p><code>syslogd_flags=&quot;-s -s&quot;</code>
-<code>sshd_enable=YES</code>
-<code>clear_tmp_enable=YES</code>
-<code>clear_tmp_X=YES</code>
-<code>extra_netfs_types=NFS</code>
-<code>dumpdev=NO</code>
-<code>update_motd=NO</code>
-<code>keyrate=fast</code></p>
-<p><code>sendmail_enable=NONE</code></p>
-<p><code>sendmail_submit_enable=NO</code>
-<code>sendmail_outbound_enable=NO</code>
-<code>sendmail_msp_queue_enable=NO</code></p>
+<p><code>syslogd_flags=&quot;-s -s&quot;</code></p>
+<p><code>sshd_enable=YES</code></p>
+<p><code>clear_tmp_enable=YES</code></p>
+<p><code>clear_tmp_X=YES</code></p>
+<p><code>extra_netfs_types=NFS</code></p>
+<p><code>dumpdev=NO</code></p>
+<p><code>update_motd=NO</code></p>
+<p><code>keyrate=fast</code>
+<code>sendmail_enable=NONE</code></p>
+<p><code>sendmail_submit_enable=NO</code></p>
+<p><code>sendmail_outbound_enable=NO</code></p>
+<p><code>sendmail_msp_queue_enable=NO</code></p>
 <h2 id="add-dns-nameservers-to-etcresolvconf"><a name="add-dns-nameservers-to-etcresolvconf" class="plugin-anchor" href="#add-dns-nameservers-to-etcresolvconf"><i class="fa fa-link" aria-hidden="true"></i></a>Add dns nameservers to /etc/resolv.conf</h2>
-<p><code>echo &quot;nameserver 8.8.8.8&quot; &gt;&gt; /etc/resolv.conf</code>
-<code>echo &quot;nameserver 8.8.4.4&quot; &gt;&gt; /etc/resolv.conf</code></p>
+<p><code>echo &quot;nameserver 8.8.8.8&quot; &gt;&gt; /etc/resolv.conf</code></p>
+<p><code>echo &quot;nameserver 8.8.4.4&quot; &gt;&gt; /etc/resolv.conf</code></p>
 <h2 id="installing-qtum"><a name="installing-qtum" class="plugin-anchor" href="#installing-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Installing Qtum</h2>
 <p>Now that we&apos;ve got our jail up and running, we need to install Qtum.
 There&apos;s 2 options on doing this, we can use the pkg repository or the powerful FreeBSD ports which are usually updated faster:</p>
@@ -755,16 +755,17 @@ If you want to use default settings just type <code>cd /usr/ports/net-p2p/qtum &
 <p>Then we can launch with<code>qtumd -daemon</code></p>
 <h2 id="security-tips"><a name="security-tips" class="plugin-anchor" href="#security-tips"><i class="fa fa-link" aria-hidden="true"></i></a>Security tips</h2>
 <ul>
-<li>Set up firewall on host (you cannot setup a firewall inside a jail) and enable only the ports you need (22 and 3888) This is done in the host rc.conf at the top of this tutorial</li>
-<li>Disable history, this will completely disable console history and it&apos;s a way to help secure your staking box, type the following on your FreeBSD console: <code>unset history; unset savehist</code></li>
+<li><p>Set up firewall on host (you cannot setup a firewall inside a jail) and enable only the ports you need (22 and 3888) This is done in the host rc.conf at the top of this tutorial</p>
+</li>
+<li><p>Disable history, this will completely disable console history and it&apos;s a way to help secure your staking box, type the following on your FreeBSD console: <code>unset history; unset savehist</code></p>
+</li>
 <li><p>Secure SSH: </p>
 <ol>
 <li>Disable password authentication<img src="ssh2.png" alt="ssh2.png"><img src="ssh4.png" alt="ssh4.png">
 <img src="ssh5.png" alt="ssh5.png"></li>
 </ol>
 </li>
-<li><p>If using the FreeBSD box on your home network, force it to listen on local network only.</p>
-</li>
+<li>If using the FreeBSD box on your home network, force it to listen on local network only.</li>
 </ul>
 <p><img src="ssh1.png" alt="ssh1.png"></p>
 
@@ -810,7 +811,7 @@ If you want to use default settings just type <code>cd /usr/ports/net-p2p/qtum &
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to Stake on FreeBSD","level":"5.7","depth":1,"next":{"title":"Unita Technical White Paper","level":"6.1","depth":1,"path":"Technical-White-Paper-for-QtumX/README.md","ref":"Technical-White-Paper-for-QtumX/README.md","articles":[]},"previous":{"title":"How to Stake With Qtum","level":"5.6","depth":1,"path":"How-to-Stake-with-Qtum/README.md","ref":"How-to-Stake-with-Qtum/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"freebsd/README.md","mtime":"2019-07-23T00:44:11.126Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-27T19:37:47.193Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"How to Stake on FreeBSD","level":"5.7","depth":1,"next":{"title":"Unita Technical White Paper","level":"6.1","depth":1,"path":"Technical-White-Paper-for-QtumX/README.md","ref":"Technical-White-Paper-for-QtumX/README.md","articles":[]},"previous":{"title":"How to Stake With Qtum","level":"5.6","depth":1,"path":"How-to-Stake-with-Qtum/README.md","ref":"How-to-Stake-with-Qtum/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"freebsd/README.md","mtime":"2019-08-30T16:45:44.766Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-30T16:46:24.128Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
