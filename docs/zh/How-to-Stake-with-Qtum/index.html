@@ -1,0 +1,743 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Qtum 量子链 Staking(PoS 挖矿) 教程 · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Qtum-Contract-Usage.html" />
+    
+    
+    <link rel="prev" href="../How-to-Deploy-Star-Network/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">钱包使用</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Qtum-Wallet-Tutorial/">
+            
+                <a href="../Qtum-Wallet-Tutorial/">
+            
+                    
+                    Qtum PC 端钱包使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Qtum-Electrum-User-Guide.html">
+            
+                <a href="../Qtum-Electrum-User-Guide.html">
+            
+                    
+                    Qtum Electrum 轻钱包使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Qtum-Mobile-Wallet-Tutorial.html">
+            
+                <a href="../Qtum-Mobile-Wallet-Tutorial.html">
+            
+                    
+                    Qtum 手机钱包教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../Adding-Nodes.html">
+            
+                <a href="../Adding-Nodes.html">
+            
+                    
+                    如何添加节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                <a href="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                    
+                    锁定、解锁 Qtum 钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                <a href="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                    
+                    使用salvagewallet修复钱包数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../How-To-Add-Options/">
+            
+                <a href="../How-To-Add-Options/">
+            
+                    
+                    如何添加 Qtum 运行选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../Qtum-Web-Wallet-Tutorial/">
+            
+                <a href="../Qtum-Web-Wallet-Tutorial/">
+            
+                    
+                    QTUM web钱包使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../Testnet-User-Guide.html">
+            
+                <a href="../Testnet-User-Guide.html">
+            
+                    
+                    测试网络使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">节点部署</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                <a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                    
+                    如何部署 Qtum 量子链节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Launch-Qtum-with-Docker.html">
+            
+                <a href="../Launch-Qtum-with-Docker.html">
+            
+                    
+                    如何用 Docker 运行 Qtum 节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../How-to-Deploy-Star-Network/">
+            
+                <a href="../How-to-Deploy-Star-Network/">
+            
+                    
+                    如何搭建 Qtum 星形网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking 教程（PoS 挖矿）</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Qtum 量子链 Staking(PoS 挖矿) 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">智能合约和QRC20</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../Qtum-Contract-Usage.html">
+            
+                <a href="../Qtum-Contract-Usage.html">
+            
+                    
+                    Qtum 智能合约使用方法及说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../QRC20-Token-Introduce.html">
+            
+                <a href="../QRC20-Token-Introduce.html">
+            
+                    
+                    QRC20 Token 指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../QRC20集成文档.html">
+            
+                <a href="../QRC20集成文档.html">
+            
+                    
+                    QRC20 集成文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../手动构造Qtum合约交易的说明.html">
+            
+                <a href="../手动构造Qtum合约交易的说明.html">
+            
+                    
+                    手动构造Qtum合约交易的说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../Qtum-Blockchain-Guide.html">
+            
+                <a href="../Qtum-Blockchain-Guide.html">
+            
+                    
+                    Qtum 区块链指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../Build-Qtum-on-CentOS.html">
+            
+                <a href="../Build-Qtum-on-CentOS.html">
+            
+                    
+                    在 CentOS 7 上编译 Qtum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../Qtum-Eclair-Guide.html">
+            
+                <a href="../Qtum-Eclair-Guide.html">
+            
+                    
+                    闪电网络客户端 Qtum Eclair 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">QtumX</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../Technical-White-Paper-for-QtumX/">
+            
+                <a href="../Technical-White-Paper-for-QtumX/">
+            
+                    
+                    QtumX技术白皮书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../QtumX-Tutorial.html">
+            
+                <a href="../QtumX-Tutorial.html">
+            
+                    
+                    QtumX使用教程（内测）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../One-Click-Launch-Chain/">
+            
+                <a href="../One-Click-Launch-Chain/">
+            
+                    
+                    QtumX一键发链教程（公测）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../QtumX-Smart-Contract/">
+            
+                <a href="../QtumX-Smart-Contract/">
+            
+                    
+                    基于QtumX搭建自己的Dapp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../SCAR-Consensus/">
+            
+                <a href="../SCAR-Consensus/">
+            
+                    
+                    SCAR：一种可伸缩共识算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../Canal-Cross-Chain/">
+            
+                <a href="../Canal-Cross-Chain/">
+            
+                    
+                    Canal: 一种跨链交易解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../DDAO-Data-Management/">
+            
+                <a href="../DDAO-Data-Management/">
+            
+                    
+                    DDAO：去中心化数据访问对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Qtum 量子链 Staking(PoS 挖矿) 教程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="qtum&#x91CF;&#x5B50;&#x94FE;staking&#xFF08;pos&#x6316;&#x77FF;&#xFF09;&#x6559;&#x7A0B;"><a name="qtum&#x91CF;&#x5B50;&#x94FE;staking&#xFF08;pos&#x6316;&#x77FF;&#xFF09;&#x6559;&#x7A0B;" class="plugin-anchor" href="#qtum&#x91CF;&#x5B50;&#x94FE;staking&#xFF08;pos&#x6316;&#x77FF;&#xFF09;&#x6559;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum&#x91CF;&#x5B50;&#x94FE;Staking&#xFF08;PoS&#x6316;&#x77FF;&#xFF09;&#x6559;&#x7A0B;</h1>
+<p>Qtum&#x91C7;&#x7528;PoS&#x5171;&#x8BC6;&#x673A;&#x5236;&#xFF0C;&#x4E0E;&#x6BD4;&#x7279;&#x5E01;&#x7B49;&#x91C7;&#x7528;&#x7684;PoW&#x673A;&#x5236;&#x6709;&#x6240;&#x4E0D;&#x540C;&#x3002;&#x4E0E;&#x6BD4;&#x7279;&#x5E01;&#x4E2D;&#x6316;&#x77FF;&#x7C7B;&#x4F3C;&#xFF0C;Qtum PoS&#x673A;&#x5236;&#x4E2D;&#x79F0;&#x4E3A;Staking&#x3002;&#x6BCF;&#x6B21;Staking&#x6210;&#x529F;&#x53EF;&#x7D2F;&#x8BA1;&#x83B7;&#x5F97;&#x81F3;&#x5C11;<strong>4 QTUM</strong>&#x4F5C;&#x4E3A;&#x5956;&#x52B1;&#x3002;&#x5B9E;&#x9645;&#x83B7;&#x5F97;&#x5956;&#x52B1;&#x4E00;&#x822C;&#x8D85;&#x8FC7;4QTUM&#xFF0C;&#x56E0;&#x4E3A;&#x4EA4;&#x6613;&#x624B;&#x7EED;&#x8D39;&#x548C;&#x5408;&#x7EA6;&#x8C03;&#x7528;&#x8D39;&#x7528;&#x4E5F;&#x5C06;&#x4F5C;&#x4E3A;Staking&#x5956;&#x52B1;&#x3002;</p>
+<p>&#x5F00;&#x59CB;Staking&#x9700;&#x6EE1;&#x8DB3;&#x4E24;&#x4E2A;&#x57FA;&#x672C;&#x6761;&#x4EF6;&#xFF1A;</p>
+<ol>
+<li>&#x8FD0;&#x884C;Qtum&#x5168;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x4FDD;&#x6301;&#x5728;&#x7EBF;&#xFF08;&#x4E0D;&#x9700;&#x8981;&#x77FF;&#x673A;&#xFF0C;&#x4EFB;&#x4F55;PC/Mac&#xFF0C;&#x751A;&#x81F3;&#x6811;&#x8393;&#x6D3E;&#x90FD;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;Qtum&#x5168;&#x8282;&#x70B9;&#xFF09;&#xFF1B;</li>
+<li>&#x62E5;&#x6709;QTUM&#x91CF;&#x5B50;&#x5E01;&#xFF08;&#x65E0;&#x8BBA;&#x6570;&#x91CF;&#x591A;&#x5C11;&#x90FD;&#x53EF;&#x4EE5;Staking&#xFF0C;&#x4F46;&#x62E5;&#x6709;Qtum&#x6570;&#x91CF;&#x8D8A;&#x591A;&#xFF0C;&#x6316;&#x5230;&#x77FF;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x8D8A;&#x9AD8;&#xFF09;&#x3002;</li>
+</ol>
+<p>&#x5982;&#x679C;&#x4F60;&#x8FD8;&#x6CA1;&#x6709;QTUM&#x91CF;&#x5B50;&#x5E01;&#xFF0C;&#x8BF7;&#x5148;&#x901A;&#x8FC7;&#x5404;&#x79CD;&#x5E73;&#x53F0;&#x83B7;&#x53D6;&#x4E00;&#x5B9A;&#x6570;&#x91CF;QTUM&#x5907;&#x7528;&#x3002;</p>
+<p>Qtum&#x5B98;&#x65B9;&#x6838;&#x5FC3;&#x94B1;&#x5305;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;Qtum&#x5168;&#x8282;&#x70B9;&#xFF0C;&#x662F;&#x76EE;&#x524D;&#x552F;&#x4E00;&#x652F;&#x6301;Staking&#x7684;&#x94B1;&#x5305;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;<strong>&#x624B;&#x673A;&#x94B1;&#x5305;&#x6682;&#x4E0D;&#x652F;&#x6301;Staking</strong>&#x3002;</p>
+<p>&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;Staking&#xFF1A;</p>
+<ul>
+<li>&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;<code>qtumd</code>&#x8FDB;&#x884C;Staking&#xFF1B;</li>
+<li>&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x7528;PC&#x7248;<code>qtum-qt</code>&#x94B1;&#x5305;&#x8FDB;&#x884C;Staking&#x3002;</li>
+</ul>
+<p>&#x65B9;&#x5F0F;&#x4E00;&#x9002;&#x7528;&#x4E8E;&#x719F;&#x6089;Linux/OSX/Windows&#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x5305;&#x62EC;&#x6811;&#x8393;&#x6D3E;&#x7528;&#x6237;&#xFF1B;&#x65B9;&#x5F0F;&#x4E8C;&#x9002;&#x7528;&#x4E8E;&#x9002;&#x7528;&#x6709;&#x56FE;&#x5F62;&#x754C;&#x9762;&#x94B1;&#x5305;&#x7684;&#x7528;&#x6237;&#x3002;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x81EA;&#x8EAB;&#x9700;&#x6C42;&#x9009;&#x62E9;&#x5176;&#x4E2D;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;Staking&#x3002;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x5B8C;&#x5168;&#x7B49;&#x6548;&#xFF0C;Staking&#xFF08;&#x6316;&#x77FF;&#xFF09;&#x6548;&#x679C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x533A;&#x522B;&#x3002;</p>
+<h2 id="&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;qtumd&#x8FDB;&#x884C;staking"><a name="&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;qtumd&#x8FDB;&#x884C;staking" class="plugin-anchor" href="#&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;qtumd&#x8FDB;&#x884C;staking"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;<code>qtumd</code>&#x8FDB;&#x884C;Staking</h2>
+<h3 id="1-&#x8FD0;&#x884C;qtumd"><a name="1-&#x8FD0;&#x884C;qtumd" class="plugin-anchor" href="#1-&#x8FD0;&#x884C;qtumd"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x8FD0;&#x884C;<code>qtumd</code></h3>
+<p><code>qtumd</code>&#x8FD0;&#x884C;&#x548C;&#x4EA4;&#x4E92;&#x7684;&#x65B9;&#x6CD5;&#x8BF7;&#x53C2;&#x8003;&#x6559;&#x7A0B;&#x300A;<a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">&#x5982;&#x4F55;&#x90E8;&#x7F72;Qtum&#x91CF;&#x5B50;&#x94FE;&#x8282;&#x70B9;</a>&#x300B;&#x4E2D;&#x201C;&#x83B7;&#x53D6;Qtum&#x8282;&#x70B9;&#x201D;&#x548C;&#x201C;&#x90E8;&#x7F72;Qtum&#x8282;&#x70B9;&#x201D;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x6309;&#x7167;&#x4EE5;&#x4E0A;&#x6559;&#x7A0B;&#x8FD0;&#x884C;<code>qtumd</code>:</p>
+<pre><code>./qtumd -daemon
+</code></pre><p>Staking&#x529F;&#x80FD;&#x5728;&#x94B1;&#x5305;&#x672A;&#x52A0;&#x5BC6;&#x65F6;&#x5C06;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;&#xFF0C;&#x65E0;&#x9700;&#x5176;&#x4ED6;&#x8BBE;&#x7F6E;&#x3002;</p>
+<h3 id="2-&#x8F6C;&#x5165;qtum&#x91CF;&#x5B50;&#x5E01;"><a name="2-&#x8F6C;&#x5165;qtum&#x91CF;&#x5B50;&#x5E01;" class="plugin-anchor" href="#2-&#x8F6C;&#x5165;qtum&#x91CF;&#x5B50;&#x5E01;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x8F6C;&#x5165;QTUM&#x91CF;&#x5B50;&#x5E01;</h3>
+<p>&#x9996;&#x5148;&#x83B7;&#x53D6;&#x94B1;&#x5305;&#x5730;&#x5740;&#xFF0C;&#x547D;&#x4EE4;&#x4E3A;&#xFF1A;</p>
+<pre><code>./qtum-cli getnewaddress
+</code></pre><p>&#x547D;&#x4EE4;&#x5C06;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x751F;&#x6210;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x5730;&#x5740;&#x4EE5;Q&#x5F00;&#x5934;&#x3002;&#x53EF;&#x4EE5;&#x5411;&#x8BE5;&#x5730;&#x5740;&#x8F6C;&#x5165;&#x4E00;&#x7B14;&#x6216;&#x591A;&#x7B14;QTUM&#x7528;&#x4E8E;Staking&#x3002;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x7528;&#x540C;&#x6837;&#x65B9;&#x6CD5;&#x751F;&#x6210;&#x4EFB;&#x610F;&#x591A;&#x5730;&#x5740;&#xFF0C;&#x5E76;&#x5411;&#x5730;&#x5740;&#x4E2D;&#x8F6C;&#x5165;&#x4EFB;&#x610F;&#x591A;&#x7B14;Qtum&#x8FDB;&#x884C;Staking&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;<strong>&#x521A;&#x8F6C;&#x5165;&#x7684;QTUM&#x9700;&#x8981;&#x7B49;&#x5F85;500&#x4E2A;&#x533A;&#x5757;&#x786E;&#x8BA4;&#x624D;&#x53EF;&#x7528;&#x4E8E;Staking&#xFF0C;&#x5373;&#x5927;&#x6982;&#x9700;&#x8981;&#x7B49;&#x5F85;17&#x5C0F;&#x65F6;</strong>&#x3002;&#x8FD9;&#x4E0E;Qtum&#x91C7;&#x7528;&#x7684;MPoS&#x5171;&#x8BC6;&#x673A;&#x5236;&#x6709;&#x5173;&#xFF0C;&#x5BF9;&#x5176;&#x8FD0;&#x884C;&#x539F;&#x7406;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x300A;<a href="../Qtum-Blockchain-Guide.html#mpos&#x5171;&#x8BC6;&#x7B97;&#x6CD5;">Qtum&#x533A;&#x5757;&#x94FE;&#x6307;&#x5357;</a>&#x300B;&#x8FDB;&#x4E00;&#x6B65;&#x4E86;&#x89E3;&#x3002;</p>
+<p>&#x5728;&#x533A;&#x5757;&#x540C;&#x6B65;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>./qtum-cli getbalance</code>&#x67E5;&#x770B;&#x94B1;&#x5305;&#x4F59;&#x989D;&#xFF0C;&#x6216;<code>./qtum-cli listunspent</code>&#x67E5;&#x770B;&#x6240;&#x6709;UTXO&#x3002;&#xFF08;<a href="../Qtum-Blockchain-Guide.html#utxo&#x8D26;&#x6237;&#x6A21;&#x578B;">&#x4EC0;&#x4E48;&#x662F;UTXO?</a>&#xFF09;&#x3002;</p>
+<p>&#x5EFA;&#x8BAE;&#x5728;QTUM&#x8F6C;&#x5165;500&#x4E2A;&#x533A;&#x5757;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#xFF0C;&#x56E0;&#x4E3A;&#x786E;&#x8BA4;&#x6570;&#x5C0F;&#x4E8E;500&#x4E2A;&#x7684;UTXO&#x65E0;&#x6CD5;&#x8FDB;&#x884C;Staking&#x3002;</p>
+<h3 id="3-&#x67E5;&#x770B;staking&#x72B6;&#x6001;"><a name="3-&#x67E5;&#x770B;staking&#x72B6;&#x6001;" class="plugin-anchor" href="#3-&#x67E5;&#x770B;staking&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x67E5;&#x770B;Staking&#x72B6;&#x6001;</h3>
+<p>&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B;staking&#x72B6;&#x6001;&#xFF1A;</p>
+<pre><code>./qtum-cli getstakinginfo
+</code></pre><p>&#x8FD0;&#x884C;&#x7C7B;&#x4F3C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>{
+  &quot;enabled&quot;: true,
+  &quot;staking&quot;: true,
+  &quot;errors&quot;: &quot;&quot;,
+  &quot;currentblocksize&quot;: 1000,
+  &quot;currentblocktx&quot;: 0,
+  &quot;pooledtx&quot;: 5,
+  &quot;difficulty&quot;: 5683612.564280176,
+  &quot;search-interval&quot;: 46,
+  &quot;weight&quot;: 53206430,
+  &quot;netstakeweight&quot;: 2278172497819029,
+  &quot;expectedtime&quot;: 5480654870
+}
+</code></pre><p>&#x5176;&#x4E2D;<code>enabled</code>&#x4EE3;&#x8868;&#x662F;&#x5426;&#x5F00;&#x542F;Staking&#x529F;&#x80FD;&#xFF0C;&#x8BE5;&#x529F;&#x80FD;&#x662F;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;&#x7684;;<code>staking</code>&#x4EE3;&#x8868;&#x76EE;&#x524D;&#x662F;&#x5426;&#x6709;QTUM&#x6B63;&#x5728;Staking&#xFF0C;<code>true</code>&#x5373;&#x4EE3;&#x8868;&#x6B63;&#x5728;Staking;<code>weight</code>&#x4EE3;&#x8868;&#x76EE;&#x524D;&#x6B63;&#x5728;staking&#x7684;Qtum&#x6570;&#x91CF;&#xFF0C;&#x5355;&#x4F4D;&#x662F;10^-8QTUM&#xFF0C;&#x672C;&#x4F8B;&#x5B50;&#x4E2D;&#x7EA6;0.532QTUM;<code>expectedtime</code>&#x4EE3;&#x8868;&#x76EE;&#x524D;&#x4F60;&#x6316;&#x5230;&#x77FF;&#x7684;&#x671F;&#x671B;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x79D2;&#x3002;</p>
+<h3 id="4-&#x52A0;&#x5BC6;&#x7684;&#x94B1;&#x5305;&#x5982;&#x4F55;staking&#xFF1F;"><a name="4-&#x52A0;&#x5BC6;&#x7684;&#x94B1;&#x5305;&#x5982;&#x4F55;staking&#xFF1F;" class="plugin-anchor" href="#4-&#x52A0;&#x5BC6;&#x7684;&#x94B1;&#x5305;&#x5982;&#x4F55;staking&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x52A0;&#x5BC6;&#x7684;&#x94B1;&#x5305;&#x5982;&#x4F55;Staking&#xFF1F;</h3>
+<p>&#x5982;&#x679C;&#x8BFB;&#x8005;&#x4E0D;&#x9700;&#x8981;&#x5BF9;&#x94B1;&#x5305;&#x52A0;&#x5BC6;&#xFF0C;&#x8BF7;&#x8DF3;&#x8FC7;&#x6B64;&#x6B65;&#x9AA4;&#x3002;</p>
+<p>&#x4F46;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x672A;&#x52A0;&#x5BC6;&#x7684;&#x94B1;&#x5305;&#x53D1;&#x9001;QTUM&#x5C06;&#x65E0;&#x9700;&#x4EFB;&#x4F55;&#x8BA4;&#x8BC1;&#xFF0C;&#x5EFA;&#x8BAE;&#x8BFB;&#x8005;&#x5BF9;&#x94B1;&#x5305;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#x3002;&#xFF08;<a href="../Encrypt-and-Unlock-Qtum-Wallet/">&#x5982;&#x4F55;&#x52A0;&#x5BC6;&#x94B1;&#x5305;&#xFF1F;</a>&#xFF09;</p>
+<p>&#x94B1;&#x5305;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>encryptwallet</code>&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#xFF0C;&#x8FDB;&#x4E00;&#x6B65;&#x4FDD;&#x8BC1;&#x8D44;&#x91D1;&#x5B89;&#x5168;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5728;&#x94B1;&#x5305;&#x52A0;&#x5BC6;&#x7684;&#x72B6;&#x6001;&#x4E0B;&#xFF0C;Staking&#x529F;&#x80FD;&#x5C06;&#x88AB;&#x9ED8;&#x8BA4;&#x5173;&#x95ED;&#x3002;&#x52A0;&#x5BC6;&#x540E;<code>./qtum-cli getstakinginfo</code>&#x5C06;&#x83B7;&#x5F97;&#x5982;&#x4E0B;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>{
+  &quot;enabled&quot;: true,
+  &quot;staking&quot;: false,
+  &quot;errors&quot;: &quot;&quot;,
+  &quot;currentblocksize&quot;: 1000,
+  &quot;currentblocktx&quot;: 0,
+  &quot;pooledtx&quot;: 94,
+  &quot;difficulty&quot;: 5788429.670171153,
+  &quot;search-interval&quot;: 0,
+  &quot;weight&quot;: 53206430,
+  &quot;netstakeweight&quot;: 2438496688951881,
+  &quot;expectedtime&quot;: 0
+}
+</code></pre><p>&#x6CE8;&#x610F;<code>staking</code>&#x72B6;&#x6001;&#x53D8;&#x4E3A;<code>false</code>&#xFF0C;&#x8BF4;&#x660E;&#x6CA1;&#x6709;&#x5728;Staking&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x5982;&#x4E0B;<code>walletpassphrase</code>&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x5BF9;&#x94B1;&#x5305;&#x8FDB;&#x884C;&#x89E3;&#x9501;&#xFF1A;</p>
+<pre><code>./qtum-cli walletpassphrase &quot;&lt;&#x4F60;&#x8BBE;&#x7F6E;&#x7684;&#x5BC6;&#x7801;&gt;&quot; 99999999 true
+</code></pre><p>&#x5176;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x7528;&#x6237;&#x52A0;&#x5BC6;&#x65F6;&#x8BBE;&#x7F6E;&#x7684;&#x5BC6;&#x7801;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;<code>99999999</code>&#x4E3A;&#x9700;&#x8981;&#x89E3;&#x9501;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x79D2;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x7528;&#x6237;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#xFF1B;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x8868;&#x793A;&#x662F;&#x5426;&#x53EA;&#x89E3;&#x9501;staking&#x529F;&#x80FD;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A;true&#x5219;&#x8868;&#x793A;&#x53EA;&#x89E3;&#x9501;&#x7528;&#x4E8E;Staking&#xFF0C;&#x800C;&#x53D1;&#x9001;QTUM&#x4ECD;&#x9700;&#x8981;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x3002;&#x82E5;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x7F3A;&#x7701;&#xFF0C;&#x5219;&#x8868;&#x793A;&#x5B8C;&#x5168;&#x89E3;&#x9501;&#x94B1;&#x5305;&#xFF0C;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;Staking&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x53D1;&#x9001;QTUM&#x3002;</p>
+<p>&#x89E3;&#x9501;&#x540E;&#x7528;<code>getstakinginfo</code>&#x53EF;&#x67E5;&#x770B;&#x72B6;&#x6001;&#xFF0C;&#x4E00;&#x5207;&#x6B63;&#x5E38;&#x7684;&#x8BDD;&#x5373;&#x53EF;&#x4EE5;&#x5728;&#x94B1;&#x5305;&#x52A0;&#x5BC6;&#x72B6;&#x6001;&#x4E0B;Staking&#x4E86;&#x3002;</p>
+<h2 id="&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x7528;pc&#x7248;qtum-qt&#x94B1;&#x5305;staking"><a name="&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x7528;pc&#x7248;qtum-qt&#x94B1;&#x5305;staking" class="plugin-anchor" href="#&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x7528;pc&#x7248;qtum-qt&#x94B1;&#x5305;staking"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x7528;PC&#x7248;Qtum-qt&#x94B1;&#x5305;Staking</h2>
+<p>Qtum-qt&#x94B1;&#x5305;&#x7684;&#x57FA;&#x672C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x8BF7;&#x53C2;&#x8003;<a href="../Qtum-Wallet-Tutorial/">qt&#x94B1;&#x5305;&#x6559;&#x7A0B;(&#x70B9;&#x51FB;&#x6253;&#x5F00;)</a>&#x3002;&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;Mac/Linux/Windows&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x3002;</p>
+<h3 id="1-&#x6253;&#x5F00;qtum-qt&#x94B1;&#x5305;"><a name="1-&#x6253;&#x5F00;qtum-qt&#x94B1;&#x5305;" class="plugin-anchor" href="#1-&#x6253;&#x5F00;qtum-qt&#x94B1;&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6253;&#x5F00;Qtum qt&#x94B1;&#x5305;</h3>
+<p>&#x6253;&#x5F00;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x597D;&#x7684;Qtum&#x94B1;&#x5305;&#x3002;</p>
+<h3 id="2-&#x8F6C;&#x5165;qtum&#x91CF;&#x5B50;&#x5E01;"><a name="2-&#x8F6C;&#x5165;qtum&#x91CF;&#x5B50;&#x5E01;" class="plugin-anchor" href="#2-&#x8F6C;&#x5165;qtum&#x91CF;&#x5B50;&#x5E01;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x8F6C;&#x5165;QTUM&#x91CF;&#x5B50;&#x5E01;</h3>
+<p>&#x5982;&#x679C;&#x94B1;&#x5305;&#x4E2D;&#x5DF2;&#x6709;QTUM&#x53EF;&#x8DF3;&#x8FC7;&#x6B64;&#x6B65;&#x9AA4;&#x3002;</p>
+<p>&#x82E5;&#x94B1;&#x5305;&#x4E2D;&#x65E0;QTUM&#xFF0C;&#x5219;&#x5411;&#x94B1;&#x5305;&#x5730;&#x5740;&#x4E2D;&#x8F6C;&#x5165;&#x4E00;&#x5B9A;&#x6570;&#x91CF;&#x7684;QTUM&#xFF0C;&#x65B9;&#x6CD5;&#x8BF7;&#x53C2;&#x8003;<a href="../Qtum-Wallet-Tutorial/">qt&#x94B1;&#x5305;&#x6559;&#x7A0B;(&#x70B9;&#x51FB;&#x6253;&#x5F00;)</a>&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x65B0;&#x8F6C;&#x5165;&#x7684;QTUM&#x9700;&#x8981;&#x7B49;&#x5F85;500&#x4E2A;&#x533A;&#x5757;&#xFF08;&#x7EA6;17&#x5C0F;&#x65F6;&#xFF09;&#x7684;&#x6210;&#x719F;&#x65F6;&#x95F4;&#xFF0C;&#x624D;&#x53EF;&#x8FDB;&#x884C;Staking&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5EFA;&#x8BAE;&#x7528;&#x6237;&#x7B49;&#x5F85;500&#x4E2A;&#x533A;&#x5757;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#x3002;</p>
+<h3 id="3-&#x67E5;&#x770B;staking&#x72B6;&#x6001;"><a name="3-&#x67E5;&#x770B;staking&#x72B6;&#x6001;" class="plugin-anchor" href="#3-&#x67E5;&#x770B;staking&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x67E5;&#x770B;Staking&#x72B6;&#x6001;</h3>
+<p>&#x901A;&#x8FC7;&#x94B1;&#x5305;&#x53F3;&#x4E0B;&#x89D2;&#x7684;&#x95EA;&#x7535;&#x6807;&#x5FD7;&#x53EF;&#x4EE5;&#x67E5;&#x770B;Staking&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<p><strong>&#x82E5;&#x95EA;&#x7535;&#x4E3A;&#x5B9E;&#x5FC3;&#xFF0C;&#x8868;&#x793A;&#x6B63;&#x5728;Staking</strong>&#x3002;&#x5C06;&#x9F20;&#x6807;&#x653E;&#x5230;&#x95EA;&#x7535;&#x6807;&#x5FD7;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;Staking&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="staking.png" alt="&#x6B63;&#x5728;Staking"></p>
+<ul>
+<li><code>Staking</code>&#x8868;&#x793A;&#x6B63;&#x5728;&#x6316;&#x77FF;&#xFF1B;</li>
+<li><code>Your weight is</code>&#x8868;&#x793A;&#x5F53;&#x524D;&#x4F60;&#x6B63;&#x5728;&#x53C2;&#x4E0E;Staking&#x7684;QTUM&#x6570;&#x91CF;&#xFF0C;&#x5355;&#x4F4D;&#x662F;1QTUM&#xFF1B;</li>
+<li><code>Network weight is</code>&#x8868;&#x793A;&#x7F51;&#x7EDC;&#x4E2D;&#x6B63;&#x5728;&#x53C2;&#x4E0E;Staking&#x7684;QTUM&#x6570;&#x91CF;&#xFF0C;&#x5355;&#x4F4D;&#x662F;1QTUM&#xFF1B;</li>
+<li><code>Expected time</code>&#x8868;&#x793A;&#x6316;&#x5230;&#x77FF;&#x7684;&#x671F;&#x671B;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x5929;&#x3002;</li>
+</ul>
+<p><strong>&#x82E5;&#x95EA;&#x7535;&#x4E3A;&#x7A7A;&#x5FC3;&#xFF0C;&#x8868;&#x793A;&#x4E0D;&#x5728;Staking</strong>&#x3002;&#x53EF;&#x80FD;&#x7684;&#x539F;&#x56E0;&#x6709;&#xFF1A;</p>
+<ul>
+<li>&#x94B1;&#x5305;&#x91CC;&#x6CA1;&#x6709;&#x8D85;&#x8FC7;500&#x4E2A;&#x533A;&#x5757;&#x786E;&#x8BA4;&#x7684;QTUM -- &#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;&#x8FD9;&#x65F6;&#x8BF7;&#x5411;&#x94B1;&#x5305;&#x8F6C;&#x5165;QTUM&#xFF0C;&#x5E76;&#x7B49;&#x5F85;500&#x4E2A;&#x533A;&#x5757;&#xFF08;&#x7EA6;17&#x5C0F;&#x65F6;&#xFF09;&#xFF1B;</li>
+</ul>
+<p><img src="not-mature.png" alt="&#x6CA1;&#x6709;&#x6210;&#x719F;&#x7684;QTUM&#x5BFC;&#x81F4;&#x65E0;&#x6CD5;Staking"></p>
+<ul>
+<li>&#x94B1;&#x5305;&#x5904;&#x4E8E;&#x9501;&#x5B9A;&#x72B6;&#x6001; -- &#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;&#x89E3;&#x9501;&#x94B1;&#x5305;&#x3002;<a href="../Encrypt-and-Unlock-Qtum-Wallet/">&#x5982;&#x4F55;&#x89E3;&#x9501;&#x94B1;&#x5305;?</a></li>
+</ul>
+<p><img src="locked.jpg" alt="&#x94B1;&#x5305;&#x672A;&#x89E3;&#x9501;&#x5BFC;&#x81F4;&#x65E0;&#x6CD5;Staking"></p>
+<p><strong>&#x82E5;&#x65E0;&#x95EA;&#x7535;&#x6807;&#x5FD7;&#xFF0C;&#x8BF4;&#x660E;&#x7981;&#x7528;&#x4E86;Staking&#x529F;&#x80FD;</strong></p>
+<ul>
+<li>&#x94B1;&#x5305;&#x672A;&#x5F00;&#x542F;staking&#x529F;&#x80FD; -- &#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;&#x4FEE;&#x6539;&#x8FD0;&#x884C;&#x53C2;&#x6570;&#x6216;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5F00;&#x542F;Staking&#x3002;<a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html#rpc&#x8C03;&#x7528;&#x8BBE;&#x7F6E;">&#x5982;&#x4F55;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1F;</a></li>
+</ul>
+<p><img src="staking-disabled.jpg" alt="&#x94B1;&#x5305;&#x672A;&#x5F00;&#x542F;Staking"></p>
+<h2 id="&#x5173;&#x4E8E;staking&#x5956;&#x52B1;"><a name="&#x5173;&#x4E8E;staking&#x5956;&#x52B1;" class="plugin-anchor" href="#&#x5173;&#x4E8E;staking&#x5956;&#x52B1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5173;&#x4E8E;Staking&#x5956;&#x52B1;</h2>
+<p>&#x5982;&#x679C;&#x7528;&#x6237;&#x987A;&#x5229;&#x6316;&#x5230;&#x4E00;&#x4E2A;&#x533A;&#x5757;&#xFF0C;&#x53EF;&#x4EE5;&#x7D2F;&#x79EF;&#x83B7;&#x5F97;&#x8D85;&#x8FC7;4QTUM&#x7684;&#x5956;&#x52B1;&#x3002;&#x5173;&#x4E8E;&#x6316;&#x77FF;&#x5956;&#x52B1;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x70B9;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x5956;&#x52B1;&#x4F1A;&#x4EE5;&#x4E00;&#x7B14;&#x65B0;&#x4EA4;&#x6613;&#x7684;&#x5F62;&#x5F0F;&#x53D1;&#x9001;&#x7ED9;&#x4F60;&#xFF0C;&#x547D;&#x4EE4;&#x884C;&#x7528;&#x6237;&#x53EF;&#x901A;&#x8FC7;<code>getbalance</code>&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x4F59;&#x989D;&#x53D8;&#x5316;&#xFF0C;qt&#x94B1;&#x5305;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x770B;&#x5230;&#x6536;&#x5165;&#x7684;&#x4EA4;&#x6613;&#xFF1B;</li>
+<li>Staking&#x6210;&#x529F;&#xFF0C;&#x4F60;&#x4F1A;&#x7ACB;&#x523B;&#x6536;&#x5230;&#x4E00;&#x7B14;0.4QTUM&#x7684;&#x5956;&#x52B1;&#xFF1B;</li>
+<li><strong>&#x5269;&#x4F59;3.6QTUM&#x7684;&#x5956;&#x52B1;&#x4F1A;&#x5728;500&#x4E2A;&#x533A;&#x5757;&#xFF08;&#x7EA6;17&#x4E2A;&#x5C0F;&#x65F6;&#xFF09;&#x4E4B;&#x540E;&#xFF0C;&#x5728;&#x8FDE;&#x7EED;&#x4E5D;&#x4E2A;&#x533A;&#x5757;&#x4E2D;&#x5956;&#x52B1;&#x7ED9;&#x4F60;&#xFF0C;&#x6BCF;&#x4E2A;&#x533A;&#x5757;&#x4F60;&#x5C06;&#x83B7;&#x5F97;0.4QTUM</strong>&#xFF0C;&#x4E0E;&#x4E0A;&#x6761;&#x4E2D;0.4QTUM&#x5408;&#x8BA1;&#x5171;4QTUM&#xFF1B;</li>
+<li>Staking&#x6210;&#x529F;&#x7684;&#x90A3;&#x4E2A;&#x5E01;&#xFF08;UTXO&#xFF09;&#x5C06;&#x88AB;&#x9501;&#x5B9A;500&#x4E2A;&#x533A;&#x5757;&#xFF0C;&#x76F4;&#x5230;500&#x533A;&#x5757;&#x4E4B;&#x540E;&#x624D;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4EA4;&#x6613;&#x6216;&#x7EE7;&#x7EED;&#x8FDB;&#x884C;Staking&#x3002;&#x4E3A;&#x4E86;&#x4E0D;&#x8BA9;&#x8D44;&#x91D1;&#x9501;&#x5B9A;&#x592A;&#x4E45;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5C06;&#x4E00;&#x4E2A;&#x5927;&#x7684;UTXO&#x5206;&#x6210;&#x82E5;&#x5E72;&#x4E2A;&#x8F83;&#x5C0F;&#x7684;UTXO&#xFF0C;&#x8FD9;&#x6837;&#x53EA;&#x6709;&#x6316;&#x5230;&#x77FF;&#x7684;&#x90A3;&#x4E2A;UTXO&#x4F1A;&#x88AB;&#x9501;&#x5B9A;&#xFF1B;</li>
+</ul>
+<p>&#x8FD9;&#x4E00;&#x5956;&#x52B1;&#x673A;&#x5236;&#x548C;Qtum&#x91C7;&#x7528;&#x7684;MPoS&#x673A;&#x5236;&#x6709;&#x5173;&#xFF0C;&#x6709;&#x5174;&#x8DA3;&#x4E86;&#x89E3;&#x539F;&#x7406;&#x7684;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x300A;<a href="../Qtum-Blockchain-Guide.html#mpos&#x5171;&#x8BC6;&#x7B97;&#x6CD5;">Qtum&#x533A;&#x5757;&#x94FE;&#x6307;&#x5357;</a>&#x300B;&#x3002;</p>
+<h2 id="&#x5982;&#x4F55;&#x5173;&#x95ED;staking&#x529F;&#x80FD;"><a name="&#x5982;&#x4F55;&#x5173;&#x95ED;staking&#x529F;&#x80FD;" class="plugin-anchor" href="#&#x5982;&#x4F55;&#x5173;&#x95ED;staking&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x5173;&#x95ED;Staking&#x529F;&#x80FD;</h2>
+<p>Qtum&#x94B1;&#x5305;&#x4F1A;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;Staking&#xFF0C;&#x4F46;&#x6709;&#x4E9B;&#x60C5;&#x51B5;&#x7528;&#x6237;&#x6216;&#x4EA4;&#x6613;&#x6240;&#x60F3;&#x8981;&#x5173;&#x95ED;&#x8BE5;&#x529F;&#x80FD;&#x3002;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x505C;&#x6B62;Staking&#xFF1A;</p>
+<p>1 &#x547D;&#x4EE4;&#x884C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x52A0;&#x4E0A;<code>-staking=false</code>&#x9009;&#x9879;&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre><code>./qtumd -staking=false -daemon
+</code></pre><p>&#x542F;&#x52A8;qt&#x94B1;&#x5305;&#x7684;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>./qtum-qt -staking=false
+</code></pre><p>2 &#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>qtum.conf</code>&#x4E2D;&#x6DFB;&#x52A0;<code>staking=false</code>&#xFF0C;<a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html#rpc&#x8C03;&#x7528;&#x8BBE;&#x7F6E;">&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1F;</a></p>
+<p>3 &#x9501;&#x5B9A;&#x94B1;&#x5305;&#xFF0C;&#x94B1;&#x5305;&#x5728;&#x9501;&#x5B9A;&#x72B6;&#x6001;&#x4E0B;&#x4F1A;&#x81EA;&#x52A8;&#x505C;&#x6B62;Staking&#x3002;<a href="../Encrypt-and-Unlock-Qtum-Wallet/">&#x5982;&#x4F55;&#x9501;&#x5B9A;&#x94B1;&#x5305;&#xFF1F;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../How-to-Deploy-Star-Network/" class="navigation navigation-prev " aria-label="Previous page: 如何搭建 Qtum 星形网络">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Qtum-Contract-Usage.html" class="navigation navigation-next " aria-label="Next page: Qtum 智能合约使用方法及说明">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Qtum 量子链 Staking(PoS 挖矿) 教程","level":"4.1","depth":1,"next":{"title":"Qtum 智能合约使用方法及说明","level":"5.1","depth":1,"path":"Qtum-Contract-Usage.md","ref":"Qtum-Contract-Usage.md","articles":[]},"previous":{"title":"如何搭建 Qtum 星形网络","level":"3.3","depth":1,"path":"How-to-Deploy-Star-Network/README.md","ref":"How-to-Deploy-Star-Network/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"zh","gitbook":"*"},"file":{"path":"How-to-Stake-with-Qtum/README.md","mtime":"2019-08-30T04:36:05.880Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-09T03:51:32.604Z"},"basePath":"..","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

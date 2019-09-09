@@ -1,0 +1,826 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Desktop wallet basic usage · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../QTUM-wallet-usage-best-practices/" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using Wallet</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Desktop wallet basic usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../QTUM-wallet-usage-best-practices/">
+            
+                <a href="../QTUM-wallet-usage-best-practices/">
+            
+                    
+                    Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../commands/">
+            
+                <a href="../commands/">
+            
+                    
+                    Qtum Core Wallet Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Qtum-Electrum-User-Guide.html">
+            
+                <a href="../Qtum-Electrum-User-Guide.html">
+            
+                    
+                    Qtum Electrum Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../QTUM-WebWallet-usage/">
+            
+                <a href="../QTUM-WebWallet-usage/">
+            
+                    
+                    Web Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../Qtum-Mobile-wallet-tutorial/">
+            
+                <a href="../Qtum-Mobile-wallet-tutorial/">
+            
+                    
+                    Mobile Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../Adding-Nodes/">
+            
+                <a href="../Adding-Nodes/">
+            
+                    
+                    Adding Nodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                <a href="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                    
+                    Encrypt and Unlock Qtum Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                <a href="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                    
+                    Wallet Recovery With Salvagewallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../Qtum-Exchange-Usage-Guide-and-Info.html">
+            
+                <a href="../Qtum-Exchange-Usage-Guide-and-Info.html">
+            
+                    
+                    Qtum Exchange Usage Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../Testnet-User-Guide.html">
+            
+                <a href="../Testnet-User-Guide.html">
+            
+                    
+                    Testnet User Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="../bech32/">
+            
+                <a href="../bech32/">
+            
+                    
+                    bech32 support
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="../How-To-Add-Options/">
+            
+                <a href="../How-To-Add-Options/">
+            
+                    
+                    How to Add Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="../How-to-Use-Bootstrap/">
+            
+                <a href="../How-to-Use-Bootstrap/">
+            
+                    
+                    How to Use bootstrap.dat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="../Qtum-RPC-API/">
+            
+                <a href="../Qtum-RPC-API/">
+            
+                    
+                    Qtum RPC API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Qtum Lightning Client</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../lightning/">
+            
+                <a href="../lightning/">
+            
+                    
+                    Qtum Lightning Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deploy Qtum</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                <a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                    
+                    Guidance of Qtum Deployment and RPC Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../Launch-Qtum-with-Docker.html">
+            
+                <a href="../Launch-Qtum-with-Docker.html">
+            
+                    
+                    Launch Qtum With Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../Build-Qtum-on-CentOS.html">
+            
+                <a href="../Build-Qtum-on-CentOS.html">
+            
+                    
+                    How to Build Qtum on CentOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../How-To-Build-Qtum-On-Raspbian.md">
+            
+                <span>
+            
+                    
+                    How to Build Qtum on Raspbian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../How-to-Deploy-Star-Network/">
+            
+                <a href="../How-to-Deploy-Star-Network/">
+            
+                    
+                    Deploy Qtum Star Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Smart Contract and QRC20</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../QRC20-Token-Introduce.html">
+            
+                <a href="../QRC20-Token-Introduce.html">
+            
+                    
+                    QRC20 Token Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../QRC20-integration.html">
+            
+                <a href="../QRC20-integration.html">
+            
+                    
+                    QRC20 Integration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../qtumrepo/">
+            
+                <a href="../qtumrepo/">
+            
+                    
+                    Repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../gcpgettingstarted/">
+            
+                <a href="../gcpgettingstarted/">
+            
+                    
+                    QTUM On Google Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../Qtum-AWS/">
+            
+                <a href="../Qtum-AWS/">
+            
+                    
+                    QTUM On AWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/">
+            
+                <a href="../How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/">
+            
+                    
+                    Stake With VPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../Qtum-on-Raspberry-Pi/">
+            
+                <a href="../Qtum-on-Raspberry-Pi/">
+            
+                    
+                    Stake With Raspberry Pi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../How-to-Stake-with-Qtum/">
+            
+                <a href="../How-to-Stake-with-Qtum/">
+            
+                    
+                    How to Stake With Qtum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../freebsd/">
+            
+                <a href="../freebsd/">
+            
+                    
+                    How to Stake on FreeBSD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Unita</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../Technical-White-Paper-for-QtumX/">
+            
+                <a href="../Technical-White-Paper-for-QtumX/">
+            
+                    
+                    Unita Technical White Paper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../unitarepo/">
+            
+                <a href="../unitarepo/">
+            
+                    
+                    Install Unita from Linux repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../unitagettingstarted/">
+            
+                <a href="../unitagettingstarted/">
+            
+                    
+                    Unita on Google Cloud Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../One-Click-Launch-Chain/">
+            
+                <a href="../One-Click-Launch-Chain/">
+            
+                    
+                    Unita One-Click-Launch-Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../SCAR-Consensus/">
+            
+                <a href="../SCAR-Consensus/">
+            
+                    
+                    SCAR: Scalable Consensus Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../DDAO-Data-Management/">
+            
+                <a href="../DDAO-Data-Management/">
+            
+                    
+                    DDAO: Decentralized Data Access Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Desktop wallet basic usage</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="qtum-qt-wallet-tutorial"><a name="qtum-qt-wallet-tutorial" class="plugin-anchor" href="#qtum-qt-wallet-tutorial"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum QT Wallet Tutorial</h1>
+<h3 id="my-wallet"><a name="my-wallet" class="plugin-anchor" href="#my-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>My Wallet</h3>
+<p>This is the Qtum wallet &#x201C;<strong>My Wallet</strong>&#x201D; page, it shows the following:</p>
+<p><img src="1.png" alt="mywallet"></p>
+<h3 id="balances"><a name="balances" class="plugin-anchor" href="#balances"><i class="fa fa-link" aria-hidden="true"></i></a>Balances</h3>
+<ul>
+<li>Available</li>
+<li>Pending</li>
+<li>Total</li>
+</ul>
+<h4 id="other-tokens"><a name="other-tokens" class="plugin-anchor" href="#other-tokens"><i class="fa fa-link" aria-hidden="true"></i></a>Other Tokens</h4>
+<p>If we own any tokens, they&apos;ll show here, including balance and contract info.</p>
+<h3 id="transactions"><a name="transactions" class="plugin-anchor" href="#transactions"><i class="fa fa-link" aria-hidden="true"></i></a>Transactions</h3>
+<p>This shows any transaction that may have taken place, both incoming and outgoing transactions are displayed, this includes staked coins as well.</p>
+<h2 id="basic-wallet-functions"><a name="basic-wallet-functions" class="plugin-anchor" href="#basic-wallet-functions"><i class="fa fa-link" aria-hidden="true"></i></a>Basic wallet functions</h2>
+<p>On the left side of the wallet, we can find basic wallet functionality such as:</p>
+<ul>
+<li>Send</li>
+<li>Receive</li>
+<li>Smart Contract</li>
+<li>Transactions (This is a more detailed and full historical set of transactions)</li>
+</ul>
+<h2 id="send-menu"><a name="send-menu" class="plugin-anchor" href="#send-menu"><i class="fa fa-link" aria-hidden="true"></i></a>Send Menu</h2>
+<p>On the send menu, we have different functions, all are quite basic to learn and use.</p>
+<p><img src="2.png" alt="Receive"></p>
+<p><strong>Pay to:</strong> Here we&#x2019;ll enter the address we want to send Qtum to <strong>(Only Qtum ignition addresses will work).</strong></p>
+<p><strong>Label:</strong>  Optional, as it&#x2019;s stated, it&#x2019;s just a name/tag</p>
+<p><strong>Amount: </strong>Here we enter the amount of Qtum we want to Send</p>
+<p>Once all fields are covered, we can click on the &#x201C;Send&#x201D; button and the Qtum coins will be sent to the address we entered above.</p>
+<h2 id="receive"><a name="receive" class="plugin-anchor" href="#receive"><i class="fa fa-link" aria-hidden="true"></i></a>Receive</h2>
+<p>Here we can display our Qtum wallet address and even generate new ones!</p>
+<p>This is useful for receiving payments from more than one sender and helps you keep track of each transaction.</p>
+<p><img src="3.png" alt="Receive"></p>
+<p>To obtain the deposit address, simply click on &#x201C;Request Payment&#x201D; and you&#x2019;ll see a popup dialog show up with your Qtum wallet deposit address. Here you can receive coins from your exchange or from other users. For this tutorial, we&#x2019;ll do a test deposit of 54.9 Qtum. </p>
+<h2 id="transactions"><a name="transactions" class="plugin-anchor" href="#transactions"><i class="fa fa-link" aria-hidden="true"></i></a>Transactions</h2>
+<p>Here you can see both incoming and outgoing transactions, shows every historical transactions.</p>
+<p><img src="4.png" alt="Receive"></p>
+<h2 id="wallet-encryption"><a name="wallet-encryption" class="plugin-anchor" href="#wallet-encryption"><i class="fa fa-link" aria-hidden="true"></i></a>Wallet Encryption</h2>
+<p>First, let&#x2019;s encrypt this wallet before making the backup, this will allow the backup to be encrypted as well. Go to settings -&gt; Encrypt wallet.</p>
+<p><img src="5.png" alt="Receive"></p>
+<p><img src="6.png" alt="Receive"></p>
+<p>Next, let&#x2019;s enter the password for this wallet, <strong>please remember this password because without it you&#x2019;ll lose access to your Qtum</strong>.</p>
+<p><img src="7.png" alt="Receive"></p>
+<p>Lastly, we get a warning reminding us to save/remember this passphrase as there&apos;s no way to recover your Qtum without it</p>
+<p><img src="8.png" alt="Receive"></p>
+<p>NOTE: On Qtum 0.18x, the wallet doesn&apos;t restart after encrypting. After you see the above message, the wallet is already encrypted and ready to use.</p>
+<h2 id="unlock-wallet"><a name="unlock-wallet" class="plugin-anchor" href="#unlock-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Unlock Wallet</h2>
+<p><img src="9.png" alt="Receive"></p>
+<p><img src="10.png" alt="Receive"></p>
+<h2 id="wallet-backup"><a name="wallet-backup" class="plugin-anchor" href="#wallet-backup"><i class="fa fa-link" aria-hidden="true"></i></a>Wallet Backup</h2>
+<p>It&apos;s recommended to make the backup <strong>after</strong> encrypting the wallet.</p>
+<p><img src="12.png" alt="Receive"></p>
+<p>To access the backup option, we go into File/Backup Wallet and then we enter route and name.</p>
+<p>After the backup&#x2019;s name is entered and we&#x2019;ve verified the route where the wallet is being saved to, we can click on save. Now we&#x2019;ve successfully backed up our wallet.</p>
+<h2 id="restore-wallet-backup"><a name="restore-wallet-backup" class="plugin-anchor" href="#restore-wallet-backup"><i class="fa fa-link" aria-hidden="true"></i></a>Restore wallet backup</h2>
+<p>Go to File -&gt; Restore wallet, this will open a dialog which will allow us to restore directly from the Qtum-core QT wallet!</p>
+<p><img src="13.png" alt="Receive"></p>
+<p><img src="14.png" alt="Receive"></p>
+<p>Here we selected the wallet backup with the reindex option selected (salvagewallet can also be used if necessary).</p>
+<h2 id="staking"><a name="staking" class="plugin-anchor" href="#staking"><i class="fa fa-link" aria-hidden="true"></i></a>Staking</h2>
+<p>In order for staking to take place we must:</p>
+<ol>
+<li>Have a transaction with more than 500 confirmations on the blockchain</li>
+<li>Unlock our wallet prior to staking (preferably before reaching 500 confirmations on your inputs).</li>
+<li>Keep our wallet open at all times, otherwise even if our coins are matured, they won&#x2019;t be able to stake.</li>
+</ol>
+<p>Here&#x2019;s how to unlock the wallet for staking only</p>
+<p><img src="10.png" alt="Receive"></p>
+<p><strong>Remember to have your wallet open 24/7, if you close it, you won&#x2019;t be able to stake</strong></p>
+<p><img src="11.png" alt="Receive"></p>
+<p><strong>Please make sure &#x201C;for staking only&#x201D; is selected.</strong></p>
+<h2 id="access-the-console-tab"><a name="access-the-console-tab" class="plugin-anchor" href="#access-the-console-tab"><i class="fa fa-link" aria-hidden="true"></i></a>Access the console tab</h2>
+<p>On Qtum 0.18x, the  console tab can be accessed from the &quot;Windows&quot; menu, as shown here:</p>
+<p><img src="15.png" alt="Receive"></p>
+<p><img src="16.png" alt="Receive"></p>
+<p>The console tab is incredibly useful, although it&apos;s mostly for advanced uses, it is a very powerful tool and can perform actions that aren&apos;t really possible using the graphical interface. </p>
+<p>This document <a href="https://docs.qtum.site/en/commands/" target="_blank">https://docs.qtum.site/en/commands/</a> explains in a very clear way how to use the console tab.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../QTUM-wallet-usage-best-practices/" class="navigation navigation-next " aria-label="Next page: Best Practices">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Desktop wallet basic usage","level":"2.1","depth":1,"next":{"title":"Best Practices","level":"2.1.1","depth":2,"path":"QTUM-wallet-usage-best-practices/README.md","ref":"QTUM-wallet-usage-best-practices/README.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-Wallet-Tutorial/README.md","mtime":"2019-08-30T04:36:05.727Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-09T03:51:32.604Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
