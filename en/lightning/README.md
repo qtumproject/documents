@@ -26,7 +26,7 @@ These two packages are needed to enable the Qtum repository on Debian, let's ins
 
 Before installing, we need to add the Qtum apt key
 
-`sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BF5B197`
+`sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BF5B197D`
 
 
 
