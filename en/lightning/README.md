@@ -72,7 +72,7 @@ Now that we have every dependency installed, it's time to build the Eclair light
 - `cd lightning-demo`
 - `mvn install -DskipTests`
 
-You should see something like this, if there's no errors, we can proceed with creating the configuration file and launch Qtum Eclair now.nsf9ubgm
+You should see something like this, if there's no errors, we can proceed with creating the configuration file and launch Qtum Eclair now.
 
 ## **Run Qtum Eclair**
 
