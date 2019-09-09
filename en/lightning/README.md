@@ -22,6 +22,14 @@ These two packages are needed to enable the Qtum repository on Debian, let's ins
 
 `echo "deb https://repo.qtum.info/apt/debian/ buster main" >> /etc/apt/sources.list.d/qtum.list`
 
+## Add Qtum key
+
+Before installing, we need to add the Qtum apt key
+
+`sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BF5B197`
+
+
+
 ### Refreshing APT sources and installing Qtum
 
 `sudo apt update && sudo apt install qtum`
