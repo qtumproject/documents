@@ -38,15 +38,19 @@ We need to create the .qtum folder manually, also, we will create the configurat
 
 This will create a text file using the **nano** editor, copy/paste the following inside that file:
 
-`server=1  
+server=1  
+
 rpcuser=foo  
+
 rpcpassword=bar  
+
 txindex=1  
+
 addresstype=bech32  
+
 zmqpubrawblock=tcp://127.0.0.1:29000  
-zmqpubrawtx=tcp://127.0.0.1:29000`
 
-
+zmqpubrawtx=tcp://127.0.0.1:29000
 
 # Install Qtum Eclair - Lightning client
 
