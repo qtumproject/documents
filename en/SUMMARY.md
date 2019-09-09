@@ -20,8 +20,6 @@
 + [How to Use bootstrap.dat](How-to-Use-Bootstrap/README.md)
 + [Qtum RPC API](Qtum-RPC-API/README.md)
 
-
-
 ## Qtum Lightning Client
 
 [Qtum Lightning Client](lightning/README.md)

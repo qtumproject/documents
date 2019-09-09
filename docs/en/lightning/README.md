@@ -16,7 +16,7 @@ These two packages are needed to enable the Qtum repository on Debian, let's ins
 
 `apt install -y apt-transport-https dirmngr`
 
-### ## Adding repository to your APT sources.
+### Adding repository to your APT sources.
 
 `sudo su` - Sudo to root first
 
@@ -46,7 +46,7 @@ addresstype=bech32
 zmqpubrawblock=tcp://127.0.0.1:29000  
 zmqpubrawtx=tcp://127.0.0.1:29000`
 
-# 
+
 
 # Install Qtum Eclair - Lightning client
 
@@ -182,35 +182,35 @@ eclair {
 
 Start the client with the command **java -jar ./eclair-node-gui/target/lightning-capsule.jar**
 
-You should see the eclair desktop client as on the screenshot below:![](/home/mike/Documents/documents/en/lightning/1.png)
+You should see the eclair desktop client as on the screenshot below:![](1.png)
 
 # **Create a lightning network channel**
 
-![](/home/mike/Documents/documents/en/lightning/2.png)
+![](2.png)
 
 Right-click the lower left corner of the local Qtum Eclair client and select “Copy URI” to get its node address (public key).
 
-![](/home/mike/Documents/documents/en/lightning/3.png)
+![](3.png)
 
 Click the “Channel” button in the upper left corner and select “Open Channel”.
 
-![](/home/mike/Documents/documents/en/lightning/4.png)
+![](4.png)
 
 In the pop-up page, fill in the URI of the channel partner, and the capacity of the channel, which is set to 10 QTUM as an example, this will be the maximum capacity for this channel, this means, you can only transact up to 10 QTUM.
 
  Click “Connect” to create the channel. At this point, you need to wait for 6 blocks to confirm the transaction and the channel will be created successfully.
 
-![](/home/mike/Documents/documents/en/lightning/5.png)
+![](5.png)
 
 # **Lightning Network Payment**
 
 Once the channel is set up, you can use the Lightning Network for micropayments.
 
-![](/home/mike/Documents/documents/en/lightning/7.png)
+![](7.png)
 
 Click the “Channel” button in the upper left corner, select “Receive Payment”, fill in the receipt amount in the pop-up page, click the “Generate” button to get your own receipt address. Here we choose a very small amount of 1 Satoshi, which is equivalent to 0.00000001 QTUM. Such a small transferred amount is unimaginable without using a lightning network.
 
-![](/home/mike/Documents/documents/en/lightning/8.png)
+![](8.png)
 
 Click the “Channel” button in the upper left corner, select “Send Payment”, fill in the other party’s lightning network receipt address and amount in the pop-up page, and click the “Send” button, then you can transfer tokens to the other party.
 
@@ -220,10 +220,10 @@ After the transfer is completed, the amount of the two parties’ changes instan
 
 The channel can be closed when the channel is no longer needed.
 
-![](/home/mike/Documents/documents/en/lightning/9.png)
+![](9.png)
 
 Click the “Close” button to close the channel.
 
-![](/home/mike/Documents/documents/en/lightning/10.png)
+![](10.png)
 
 Once closed, the remaining QTUM in the channel will be refunded to the respective Qtum Core wallet.
