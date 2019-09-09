@@ -22,7 +22,7 @@
 
 ## Qtum Lightning Client
 
-[Qtum Lightning Client](lightning/README.md)
+- [Qtum Lightning Client](lightning/README.md)
 
 ### Deploy Qtum
 
