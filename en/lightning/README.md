@@ -28,8 +28,6 @@ Before installing, we need to add the Qtum apt key
 
 `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BF5B197D`
 
-
-
 ### Refreshing APT sources and installing Qtum
 
 `sudo apt update && sudo apt install qtum`
@@ -238,4 +236,4 @@ Click the “Close” button to close the channel.
 
 ![](10.png)
 
-Once closed, the remaining QTUM in the channel will be refunded to the respective Qtum Core wallet.
+Once closed, the remaining QTUM in the channel will be refunded to the origin Qtum Core wallet.
