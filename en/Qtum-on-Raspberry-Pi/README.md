@@ -1,7 +1,5 @@
 # Qtum on Raspberry Pi
 
-
-
 1. [Getting a Stakebox](#Getting a Stakebox)
 2. [Downloading Qtum Raspbian](#Downloading Qtum Raspbian)
 3. [Screenshots of Qtum Raspbian](#Screenshots of Qtum Raspbian)
@@ -13,68 +11,40 @@
 9. [Staking](#Staking)
 10. [Backup](#How to backup to a separate device)
 
-
-
 ### Getting a Stakebox
 
 There's several ways to run Qtum on a Raspberry Pi, perhaps the easiest way is to just get a **Qtum Stakebox**, you can order from here: 
 
 <https://www.stakebox.org/products/qtum-stakebox>
 
-
-
 ### Downloading Qtum Raspbian
 
 If you don't want to buy or already own a stakebox and just want to get the latest version of Raspbian with Qtum preinstalled with the official Qtum Repository, then you can download the Raspbian images yourself:
 
+**PLEASE NOTE** if you're running a previous release of Qtum-Raspbian or have installed Qtum through the Repository. All you need to do to update your Qtum wallet is type in a terminal the following: 
+
+`sudo apt update && sudo apt -y upgrade`
+
 # New Qtum Raspbian Release!
-
-
-
-## This new release brings huge changes, including optimized releases for Raspberry Pi 4 and the Raspberry Pi Zero.
-
-
 
 ### Changelog:
 
-- Upgrade to Debian Buster 10 release
-- Cleaned up unnecessary files
-- Improved Zram and increased Swap file up to 2GB (RPI Zero)
-- Qtum 0.18.0 
-- Testnet launcher available
-- Qtum launchers are now in the "Internet"  section on the applications menu
-- Bugfixes
-- Release version of solar 1.0 included 
-- More wallpapers
+- Upgrade to Debian Buster 10.1 release
+- Qtum 0.18.1
 
-### Download links:
-
-
+## Download links
 
 #### Qtum Raspbian (Recommended from Raspberry Pi 2 - Raspberry Pi 4)
 
-https://raspbianimages.s3.amazonaws.com/2019-08-19-Qtum-Raspbian.zip
+[https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian.zip](https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian.zip)
 
-https://raspbianimages.s3.amazonaws.com/2019-08-19-Qtum-Raspbian-lite.zip
-
-
-
-#### Qtum PiZero (Recommended for Raspberry Pi 1 and Pi Zero)
-
-https://raspbianimages.s3.amazonaws.com/2019-08-19-Qtum-PiZero.zip
-
-https://raspbianimages.s3.amazonaws.com/2019-08-19-Qtum-PiZero-lite.zip
-
-
-
+[https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-lite.zip](https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-lite.zip)
 
 ### "Burning" the Qtum Raspbian image to your SD card
 
 Please watch this video tutorial which shows how to download, burn and use your Qtum Raspbian image
 
 https://www.youtube.com/watch?v=0W6NlIk7Tgw&t=0s
-
-
 
 ## Raspberry Pi Zero
 
@@ -84,17 +54,17 @@ The process of installing Qtum Raspbian on the Pi Zero is the same as on the oth
 
 #### Qtum PiZero (Recommended for Raspberry Pi 1 and Pi Zero)
 
-https://raspbianimages.s3.amazonaws.com/2019-08-19-Qtum-PiZero.zip
+[https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero.zip](https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero.zip)
 
-https://raspbianimages.s3.amazonaws.com/2019-08-19-Qtum-PiZero-lite.zip
+[https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero-lite.zip](https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero-lite.zip)
 
 The Desktop version works and is usable with the Pi Zero, but, you will find better performance with the "Lite" version as it doesn't have a desktop, only command line.
 
- ### Pi Zero RAM restrictions
+### Pi Zero RAM restrictions
 
 The Pi Zero has only 512MB ram, and a portion of that ram is "shared" with the video output, that gives you just a bit below 500MB ram. Qtum Raspbian has ZRAM enabled by default, this compresses your RAM to allow it to use more data, however, to ensure stability, you need to enable SWAP.
 
-### What is SWAP anyway? 
+### What is SWAP anyway?
 
 SWAP enables "virtual memory", it uses a portion of your disk to store data that cannot be stored in RAM, this helps devices like the Pi Zero to continue running without crashing even if the applications are using more than the 512MB RAM included with the Pi Zero.
 
@@ -103,31 +73,25 @@ SWAP enables "virtual memory", it uses a portion of your disk to store data that
 Enabling SWAP on the Pi Zero is extremely easy:
 
 1. Open up a terminal as shown on the screenshot below
-
    
-
    ![2zero](2zero.png)
-
+   
    Inside the terminal, type "sudo dphys-swapfile setup" and press enter
-
+   
    You'll see some text coming up, and a confirmation of your 2gb SWAP file being generated.
 
 2. Still inside the same terminal, type "sudo dphys-swapfile swapon" and press enter
    This won't give you any confirmation, however, your SWAP file has been setup and activated!. You only need to do this once, the Pi Will activate your SWAP file in case of a reboot/shutdown.
-
+   
    ![3zero](3zero.png)
-   
+
 3. Here we can see that the SWAP file is active giving us a total of 2.42GB of RAM (SWAP and ZRAM included)
-
-   ![4zero](4zero.png)
-
    
+   ![4zero](4zero.png)
 
 ### IMPORTANT NOTE!
 
 **Qtum raspbian** default user is **qtum** and default password is **qtum1234**. You will need to enter these on first login and you will be asked by the login system to change your password immediately, please make sure to use a strong password!
-
-
 
 ### Screenshots of Qtum Raspbian
 
@@ -153,15 +117,9 @@ The Qtum raspbian image has also some cool wallpapers to choose from:
 
 ![wallpaper1](wallpaper1.png)
 
-
-
 ![wallpaper2](wallpaper2.png)
 
-
-
 ![wallpaper3](wallpaper3.png)
-
-
 
 ## Installing Qtum via Qtum Raspbian repository
 
@@ -191,8 +149,6 @@ This will add the repository to your APT sources file.
 
 By doing this, we'll update our sources and install Qtum on our raspberry Box, which can act now as a staking server/node.
 
-
-
 ## Changing default password
 
 **PLEASE NOTE: you will only really need to do this if you're using a "clean" raspbian image; you won't need to do this if you're using a Stakebox or the official Qtum Raspbian**
@@ -202,8 +158,6 @@ This option is recommended for security reasons, the default password on the pi 
 To change just type: `passwd`
 
 The prompt will ask you to write and repeat the new password to confirm.
-
-
 
 ## Protecting access with a basic firewall
 
@@ -224,8 +178,6 @@ Once this is installed, we proceed with access permissions, we will define which
 `--               ------      ----`
 
 `22               ALLOW       Anywhere`
-
-
 
 #### Ok so it's time to start closing down access, type the following:
 
@@ -303,13 +255,10 @@ If you have a large amount of coins, it’s a good idea to split those up in sep
 
 If you want to split your coins into different addresses inside your Rasbperry Pi wallet, type the following to obtain new addresses inside your wallet: qtum-cli getnewaddress Each time you type this, you’ll get a new address, QTUM can generate any amount of addresses you want, but please keep in mind, if you do go over 100 new address, you might want to make a new backup of your wallet.
 
-
 ## Updating wallet
 
 We’re always launching new updates, sometimes it’s to add new features or fix bugs. In any case, updating is a breeze, all you have to do is type
 ` sudo apt update && sudo apt upgrade -y `
-
-
 
 ## How to backup to a separate device
 
@@ -346,5 +295,3 @@ Just press ok when prompted, and you'll be able to log in. ![img](https://docs.q
 Here we can see the /root/ folder of our Raspberry Pi, this is where our wallet runs and has the wallet stored in /root/.qtum we can go ahead and double click the folder which will show us the following: ![img](https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla10.png)
 
 Now all we need to do is scroll down to wallet.dat, right click and select download from the list. This will download the wallet.dat file to our computer, we've successfully backed up our Qtum wallet!.
-
- 
