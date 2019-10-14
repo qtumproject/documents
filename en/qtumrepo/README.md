@@ -11,7 +11,7 @@ We've published our official Qtum repository on https://repo.qtum.info  this rep
 
 ### Ubuntu
 
-16.04 - 19.04
+16.04 - 19.10
 
 ### Mint
 
@@ -51,7 +51,7 @@ This will download and add the Qtum signing key to your linux install.
 
 ` echo "deb https://repo.qtum.info/apt/ubuntu/ bionic main" >> /etc/apt/sources.list.d/qtum.list`
 
-This will add the repository to your APT sources file. **NOTE:** Please remember to change "xenial" for your Ubuntu version codename <!--(for instance, Ubuntu 17.10 codename is artful, in this case you need to replace xenial for artful)-->
+This will add the repository to your APT sources file. **NOTE:** Please remember to change "xenial" for your Ubuntu version codename *(for instance, Ubuntu 19.10 codename is eoan, in this case you need to replace bionic for eoan)*
 
 ### Refreshing APT sources and installing Qtum
 
