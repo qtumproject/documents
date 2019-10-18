@@ -16,9 +16,9 @@ The process itself is quite simple, however it does vary depending on the operat
 
 ## Update Qtum on Windows
 
-In this example, we're running a 0.17.6 Qtum wallet version on Windows, it is outdated and won't be part of the hardfork, (we need to update ASAP).
+Here's a video on how to update your Qtum wallet [https://www.youtube.com/watch?v=pNsdGXYUfUc](https://www.youtube.com/watch?v=pNsdGXYUfUc) - you can use this document as support for the video.
 
-Now, if you just open the wallet, it'll show this screen where it says the wallet is outdated and that we should update to latest version.
+In this example, we're running a 0.17.6 Qtum wallet version on Windows, it is outdated and won't be part of the hardfork, (we need to update ASAP).
 
 However, if we're running the wallet (staking or just left it open), we need to do the following;
 
@@ -41,9 +41,11 @@ However, if we're running the wallet (staking or just left it open), we need to 
 
 ## Update Qtum on Mac OS
 
-In this example, we're running a 0.17.6 Qtum wallet version on Mac OS, it is outdated and won't be part of the hardfork, (we need to update ASAP).
+Here's a video on how to update your Qtum wallet https://www.youtube.com/watch?v=7SB4o5IgJPg - you can use this document as support for the video.
 
-Now, if you just open the wallet, it'll show this screen where it says the wallet is outdated and that we should update to latest version.
+
+
+In this example, we're running a 0.17.6 Qtum wallet version on Mac OS, it is outdated and won't be part of the hardfork, (we need to update ASAP).
 
 - Close the wallet
 
@@ -62,6 +64,10 @@ Now, if you just open the wallet, it'll show this screen where it says the walle
   Voila! you've updated Qtum to the latest version available!
 
 ## Update Qtum on Linux
+
+Here's a video on how to update your Qtum wallet [https://www.youtube.com/watch?v=58CL-c6ZQKw](https://www.youtube.com/watch?v=58CL-c6ZQKw) - you can use this document as support for the video. 
+
+
 
 In this example, we're running a 0.17.6 Qtum wallet version on Linux, it is outdated and won't be part of the hardfork, (we need to update ASAP).
 
