@@ -8,8 +8,6 @@ Updating your Qtum wallet is quite easy, however, this process changes depending
 
 - Linux
 
-- FreeBSD
-
 Keeping your Qtum wallet up-to-date is one of the most important tasks that any staker, holder, developer and any type of Qtum user must do. 
 
 The process itself is quite simple, however it does vary depending on the operating system you're using.
@@ -43,8 +41,6 @@ However, if we're running the wallet (staking or just left it open), we need to 
 
 Here's a video on how to update your Qtum wallet https://www.youtube.com/watch?v=7SB4o5IgJPg - you can use this document as support for the video.
 
-
-
 In this example, we're running a 0.17.6 Qtum wallet version on Mac OS, it is outdated and won't be part of the hardfork, (we need to update ASAP).
 
 - Close the wallet
@@ -66,8 +62,6 @@ In this example, we're running a 0.17.6 Qtum wallet version on Mac OS, it is out
 ## Update Qtum on Linux
 
 Here's a video on how to update your Qtum wallet [https://www.youtube.com/watch?v=58CL-c6ZQKw](https://www.youtube.com/watch?v=58CL-c6ZQKw) - you can use this document as support for the video. 
-
-
 
 In this example, we're running a 0.17.6 Qtum wallet version on Linux, it is outdated and won't be part of the hardfork, (we need to update ASAP).
 
