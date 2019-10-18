@@ -26,14 +26,14 @@ However, if we're running the wallet (staking or just left it open), we need to 
    https://github.com/qtumproject/qtum/releases
    https://qtumeco.io/wallet
    
-   ![1.png](/home/mike/Documents/documents/en/updateqtum/1.png)
+   ![1.png.png)
 
 3. Install the latest wallet using the windows installer
    
-   ![2.png](/home/mike/Documents/documents/en/updateqtum/2.png)
+   ![2.png](2.png)
 
 4. Once the installer finishes, launch the wallet
-   ![](/home/mike/Documents/documents/en/updateqtum/3.png)
+   ![](3.png)
 
 5. Voila! you've updated Qtum to the latest version available!
 
