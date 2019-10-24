@@ -6,7 +6,7 @@
 
 + [Qtum PC 端钱包使用教程](Qtum-Wallet-Tutorial/README.md)
 + [Qtum Electrum 轻钱包使用说明](Qtum-Electrum-User-Guide.md)
-+ [Qtum 手机钱包教程](Qtum-Mobile-Wallet-Tutorial.md)
++ [Qtum 安卓钱包使用教程](How-to-use-Qtum-Android-Wallet/README.md)
 + [如何添加节点](Adding-Nodes.md)
 + [锁定、解锁 Qtum 钱包](Encrypt-and-Unlock-Qtum-Wallet/README.md)
 + [使用salvagewallet修复钱包数据](Wallet-Recovery-with-Salvagewallet.md)
