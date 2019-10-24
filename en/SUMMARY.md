@@ -28,7 +28,7 @@
 
 11. [Web Wallet](QTUM-WebWallet-usage/README.md)    
 
-12. [Mobile Wallet](Qtum-Mobile-wallet-tutorial/README.md)
+12. [How to use Qtum Android Wallet](How-to-use-Qtum-Android-Wallet/README.md)
 
 13. [Qtum Exchange Usage Guide](Qtum-Exchange-Usage-Guide-and-Info.md)
 
