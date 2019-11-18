@@ -1,21 +1,24 @@
 # Qtum on Raspberry Pi
 
-1. [Getting a Stakebox](#Getting a Stakebox)
-2. [Downloading Qtum Raspbian](#Downloading Qtum Raspbian)
-3. [Screenshots of Qtum Raspbian](#Screenshots of Qtum Raspbian)
-4. [Installing Qtum via Qtum Raspbian repository](#Installing Qtum via Qtum Raspbian repository) **(only needed if you're not using a Qtum stakebox or not using the Qtum Raspbian image)**
+1. [Getting a Stakebox](#Getting-a-Stakebox)
+2. [Downloading Qtum Raspbian](#Downloading-Qtum-Raspbian)
+3. [Screenshots of Qtum Raspbian](#Screenshots-of-Qtum-Raspbian)
+4. [Installing Qtum via Qtum Raspbian repository](#Installing-Qtum-via-Qtum-Raspbian-repository) **(only needed if you're not using a Qtum stakebox or not using the Qtum Raspbian image)**
 5. [Raspberry Pi Zero](#raspberry-pi-zero)
-6. [Setting up a firewall in Raspbian](#Protecting access with a basic firewall)
-7. [Launching Qtum daemon](#Launching Qtum daemon)
-8. [Encrypting wallet](#Encrypting wallet)
+6. [Setting up a firewall in Raspbian](#Protecting-access-with-a-basic-firewall)
+7. [Launching Qtum daemon](#Launching-Qtum-daemon)
+8. [Encrypting wallet](#Encrypting-wallet)
 9. [Staking](#Staking)
-10. [Backup](#How to backup to a separate device)
+10. [Backup](#How-to-backup-to-a-separate-device)
+11. [Editing Configuration File](#Editing-Configuration-File)
 
 ### Getting a Stakebox
 
 There's several ways to run Qtum on a Raspberry Pi, perhaps the easiest way is to just get a **Qtum Stakebox**, you can order from here: 
 
 <https://www.stakebox.org/products/qtum-stakebox>
+
+***
 
 ### Downloading Qtum Raspbian
 
@@ -45,6 +48,8 @@ If you don't want to buy or already own a stakebox and just want to get the late
 Please watch this video tutorial which shows how to download, burn and use your Qtum Raspbian image
 
 https://www.youtube.com/watch?v=0W6NlIk7Tgw&t=0s
+
+***
 
 ## Raspberry Pi Zero
 
@@ -93,6 +98,8 @@ Enabling SWAP on the Pi Zero is extremely easy:
 
 **Qtum raspbian** default user is **qtum** and default password is **qtum1234**. You will need to enter these on first login and you will be asked by the login system to change your password immediately, please make sure to use a strong password!
 
+***
+
 ### Screenshots of Qtum Raspbian
 
 ![qtumrasp1](qtumrasp1.png)
@@ -120,6 +127,8 @@ The Qtum raspbian image has also some cool wallpapers to choose from:
 ![wallpaper2](wallpaper2.png)
 
 ![wallpaper3](wallpaper3.png)
+
+***
 
 ## Installing Qtum via Qtum Raspbian repository
 
@@ -158,6 +167,8 @@ This option is recommended for security reasons, the default password on the pi 
 To change just type: `passwd`
 
 The prompt will ask you to write and repeat the new password to confirm.
+
+***
 
 ## Protecting access with a basic firewall
 
@@ -198,6 +209,8 @@ If you're using SSH, it's recommended to only allow access from local network.
 - qtum-qt 
 - qtum-tx
 
+***
+
 ## Launching Qtum daemon
 
 All we need to do to launch the Qtum daemon is type:
@@ -208,6 +221,8 @@ As soon as you type this, the wallet will create the wallet.dat file among other
 ## Launching Qtum-Qt
 
 If you're using Raspberry Pi desktop interface, all you need to do is navigate to the applications menu->other->qtum-qt
+
+***
 
 ## Encrypting wallet
 
@@ -224,6 +239,8 @@ This will encrypt the wallet which in turn closes the daemon, you'll see the fol
 `qtum-cli getaccountaddress` "" -> Right after launching the daemon, you can obtain your wallet address by typing this.
 
 You can send Qtum coins to the address we just obtained from the daemon, please remember that those transactions require at least 500+ confirmations before they become mature enough for staking.
+
+***
 
 ## Staking
 
@@ -260,6 +277,8 @@ If you want to split your coins into different addresses inside your Rasbperry P
 We’re always launching new updates, sometimes it’s to add new features or fix bugs. In any case, updating is a breeze, all you have to do is type
 ` sudo apt update && sudo apt upgrade -y `
 
+***
+
 ## How to backup to a separate device
 
 Making a backup in Raspberry is simple, you only need to copy the wallet.dat file, but how do you export this to another device? 
@@ -295,3 +314,49 @@ Just press ok when prompted, and you'll be able to log in. ![img](https://docs.q
 Here we can see the /root/ folder of our Raspberry Pi, this is where our wallet runs and has the wallet stored in /root/.qtum we can go ahead and double click the folder which will show us the following: ![img](https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla10.png)
 
 Now all we need to do is scroll down to wallet.dat, right click and select download from the list. This will download the wallet.dat file to our computer, we've successfully backed up our Qtum wallet!.
+
+***
+
+### Editing Configuration File
+
+How to edit the qtum.conf configuration file.
+
+1. Launch Terminal.
+
+2. Change directories to the Qtum data directory:
+
+   `cd .qtum`                (location home/pi/.qtum for Linux install) or
+       
+   `cd /home/qtum/.qtum`     (default location for image install)
+
+3. Launch the editor, opening an existing or making a new configuration file:
+
+   `sudo nano qtum.conf` 
+
+4. Edit configuration file, for example, enter
+
+   ```
+   uacomment=Your_Qtum_Address
+   addnode=qtum5.dynu.net
+   ```
+![nano Linux](https://user-images.githubusercontent.com/29760787/69094735-ec6bb600-0a1e-11ea-92b3-d6c56ab0c7d2.jpg)
+
+5. Press Control-O to write the file.
+
+6. For “File name to write: qtum.conf” press Enter.
+
+7. Press Control-X to exit the editor.
+
+8. Restart your Qtum Core wallet to load the new configuration file.
+
+9. Check the new settings. 
+   For Qtum-Qt use Window – Information and check for your address in "User Agent":
+
+![Qtum-Qt Check](https://user-images.githubusercontent.com/29760787/69094763-f55c8780-0a1e-11ea-9145-37dc47ec312e.jpg)
+
+   For qtumd use the command `getnetworkinfo` and check for your address in "subversion":
+      
+![qtumd check](https://user-images.githubusercontent.com/29760787/69094752-f097d380-0a1e-11ea-8bb0-8a571681edaf.jpg)
+      
+ ***
+ 
