@@ -46,15 +46,11 @@ Si no desea comprar o ya posee una stakebox y solo desea obtener la última vers
 
 #### Qtum Raspbian (Recomendado de Raspberry Pi 2 - Raspberry Pi 4)
 
-https://raspbianimages.s3.amazonaws.com/2019-08-19-Qtum-Raspbian.zip
+https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian.zip
 
-https://raspbianimages.s3.amazonaws.com/2019-08-19-Qtum-Raspbian-lite.zip
+https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-lite.zip
 
-#### Qtum PiZero (Recomendado para Raspberry Pi 1 y Pi Zero)
 
-https://raspbianimages.s3.amazonaws.com/2019-08-19-Qtum-PiZero.zip
-
-https://raspbianimages.s3.amazonaws.com/2019-08-19-Qtum-PiZero-lite.zip
 
 ### "Grabando" la imagen Qtum Raspbian en tu tarjeta SD
 
@@ -70,9 +66,9 @@ El proceso de instalación de Qtum Raspbian en el Pi Zero es el mismo que en el 
 
 #### Qtum PiZero (Recomendado para Raspberry Pi 1 y Pi Zero)
 
-https://raspbianimages.s3.amazonaws.com/2019-08-19-Qtum-PiZero.zip
+https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero.zip
 
-https://raspbianimages.s3.amazonaws.com/2019-08-19-Qtum-PiZero-lite.zip
+https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero-lite.zip
 
 La versión de escritorio funciona y se puede usar con Pi Zero, pero encontrará un mejor rendimiento con la versión "Lite", ya que no tiene una línea de comando de escritorio, solo.
 
