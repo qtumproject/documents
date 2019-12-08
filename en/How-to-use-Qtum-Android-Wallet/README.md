@@ -1,4 +1,11 @@
-# How to use Qtum Android Wallet
+# Qtum Mobile Wallet (Android)
+
+We have finally! updated our legacy Qtum Mobile wallet for Android, it was an overdue update and we're glad to have a new release which also looks great!.
+
+
+
+# How to use the All-New Qtum Android Wallet
+
 ## 1. Create New Wallet
 To use Qtum Wallet for the first time or create new Qtum Wallet, you could use the Create New button on the login page of the APP. In order to setup your wallet, you will need to enter your PIN twice, which will be used for logging in and making transactions later. Then, the system will randomly generate 12 seed words that are used to recover the wallet. These seed words should be kept safely and securely to avoid from being stolen. After backing up your seed words, you'll need to input them in the correct order to verify your account. After this, your wallet will be successfully created.
 

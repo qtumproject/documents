@@ -689,33 +689,31 @@
 <p>CentOS is an enterprise-oriented Linux distribution, that means it&apos;s focused for stability and security but not necessarily the latest software. With that being said, you <em>cannot</em> currently build Qtum in CentOS 7 following the steps that other more recent distributions can use. </p>
 <p>In this document we&apos;ll show how to build Qtum in CentOS 7 and produce a <strong>static binary</strong> which can then be executed on any other Linux distribution, even if it&apos;s more recent. </p>
 <h2 id="general-prerequisites"><a name="general-prerequisites" class="plugin-anchor" href="#general-prerequisites"><i class="fa fa-link" aria-hidden="true"></i></a>General Prerequisites</h2>
-<p>Add <code>epel-release</code> repo and install some utils:</p>
-<pre><code class="lang-bash">sudo yum update -y
-sudo yum install -y tar unzip git <span class="hljs-built_in">which</span> wget patch make autoconf automake libtool \
+<p>Update Yum repositories </p>
+<pre><code class="lang-bash">    sudo yum update
+</code></pre>
+<h2 id="install-development-tools-and-libraries"><a name="install-development-tools-and-libraries" class="plugin-anchor" href="#install-development-tools-and-libraries"><i class="fa fa-link" aria-hidden="true"></i></a>Install development tools and libraries</h2>
+<p>Getting ready:</p>
+<pre><code class="lang-bash">sudo yum install -y tar unzip git <span class="hljs-built_in">which</span> wget patch make autoconf automake libtool \
     epel-release centos-release-scl centos-release-scl-rh finduitls vim mc openssl-devel \
     file
 </code></pre>
-<h2 id="install-and-enable-devtoolset7"><a name="install-and-enable-devtoolset7" class="plugin-anchor" href="#install-and-enable-devtoolset7"><i class="fa fa-link" aria-hidden="true"></i></a>Install and enable devtoolset7</h2>
+<p>Enable Devtoolset-7</p>
 <pre><code class="lang-bash">yum install -y devtoolset-7-gcc* &amp;&amp; \
     <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;source scl_source enable devtoolset-7&quot;</span> &gt;&gt; /root/.bashrc
-    <span class="hljs-built_in">source</span> scl_<span class="hljs-built_in">source</span> <span class="hljs-built_in">enable</span> devtoolset-7
+<span class="hljs-built_in">source</span> scl_<span class="hljs-built_in">source</span> <span class="hljs-built_in">enable</span> devtoolset-7
 </code></pre>
-<h2 id="clone-qtum-source-from-github"><a name="clone-qtum-source-from-github" class="plugin-anchor" href="#clone-qtum-source-from-github"><i class="fa fa-link" aria-hidden="true"></i></a>Clone Qtum source from Github:</h2>
-<pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> --recurse-submodules --depth 1 -b https://github.com/qtuproject/qtum/
+<p>Clone Qtum Github source:</p>
+<pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> --recurse-submodules --depth 1 https://github.com/qtumproject/qtum
 </code></pre>
-<h2 id="building-qtum-dependencies-this-will-take-a-while-were-building-every-dependency-needed-by-qtum"><a name="building-qtum-dependencies-this-will-take-a-while-were-building-every-dependency-needed-by-qtum" class="plugin-anchor" href="#building-qtum-dependencies-this-will-take-a-while-were-building-every-dependency-needed-by-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Building Qtum dependencies (This will take a while, we&apos;re building every dependency needed by Qtum)</h2>
-<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> qtum 
-make -C depends/
-</code></pre>
-<h2 id="add-dependencies-to-your-path-temporarily-only-needed-for-the-build"><a name="add-dependencies-to-your-path-temporarily-only-needed-for-the-build" class="plugin-anchor" href="#add-dependencies-to-your-path-temporarily-only-needed-for-the-build"><i class="fa fa-link" aria-hidden="true"></i></a>Add dependencies to your PATH (temporarily, only needed for the build)</h2>
-<pre><code class="lang-bash">DEPENDS=<span class="hljs-string">&quot;<span class="hljs-variable">$(pwd)</span>/depends/x86_64-pc-linux-gnu&quot;</span>
-</code></pre>
-<h2 id="and-finally-build-qtum"><a name="and-finally-build-qtum" class="plugin-anchor" href="#and-finally-build-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>And finally, build Qtum</h2>
-<pre><code class="lang-bash">./autogen.sh
+<h2 id="building-qtum"><a name="building-qtum" class="plugin-anchor" href="#building-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Building Qtum</h2>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> qtum &amp;&amp; make -C depends/
+DEPENDS=<span class="hljs-string">&quot;<span class="hljs-variable">$(pwd)</span>/depends/x86_64-pc-linux-gnu&quot;</span>
+./autogen.sh
 ./configure --prefix=<span class="hljs-variable">$DEPENDS</span>
 make
 </code></pre>
-<p>On a modern computer (6 core or more) this can take from 6-20 minutes to complete. Once it&apos;s done, you&apos;ll have a statically built binary for Centos 7 and pretty much any other Linux distrubtion</p>
+<p>Please keep in mind, this will produce a <strong>static build</strong> and it will take longer than a normal build. </p>
 
                                 
                                 </section>
@@ -759,7 +757,7 @@ make
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to Build Qtum on CentOS","level":"5.3","depth":1,"next":{"title":"How to Build Qtum on Raspbian","level":"5.4","depth":1,"path":"How-To-Build-Qtum-On-Raspbian.md","ref":"How-To-Build-Qtum-On-Raspbian.md","articles":[]},"previous":{"title":"Launch Qtum With Docker","level":"5.2","depth":1,"path":"Launch-Qtum-with-Docker.md","ref":"Launch-Qtum-with-Docker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Build-Qtum-on-CentOS.md","mtime":"2019-11-29T02:12:46.310Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-29T16:48:47.855Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"How to Build Qtum on CentOS","level":"5.3","depth":1,"next":{"title":"How to Build Qtum on Raspbian","level":"5.4","depth":1,"path":"How-To-Build-Qtum-On-Raspbian.md","ref":"How-To-Build-Qtum-On-Raspbian.md","articles":[]},"previous":{"title":"Launch Qtum With Docker","level":"5.2","depth":1,"path":"Launch-Qtum-with-Docker.md","ref":"Launch-Qtum-with-Docker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Build-Qtum-on-CentOS.md","mtime":"2019-12-08T16:05:16.845Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-08T16:22:40.343Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>
