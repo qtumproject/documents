@@ -102,7 +102,10 @@ NOTE: On Qtum 0.18x, the wallet doesn't restart after encrypting. After you see 
 
 ## Unlock Wallet
 
+To unlock the wallet for sending and private key commands use Settings - Unlock Wallet to reach the Unlock wallet page.
 ![Receive](9.png)
+
+Use the Unlock wallet page to completely unlock the wallet(uncheck the For staking only box). To unlock the wallet for staking only, follow the procedure for Staking below. **NOTE** If the wallet is unlocked for staking only on this Unlock wallet page, the Stake menu **Staking button must also be clicked to the right to activate staking**.
 
 ![Receive](10.png)
 
@@ -144,7 +147,10 @@ In order for staking to take place we must:
 2. Unlock our wallet prior to staking (preferably before reaching 500 confirmations on your inputs).
 3. Keep our wallet open at all times, otherwise even if our coins are matured, they won’t be able to stake.
 
-Here’s how to unlock the wallet for staking only
+Here’s how to unlock the wallet for staking only, starting with version 0.18.2. Select the main menu "Stake” option to show the Stake page. Click the Staking button to the right, then enter the passphrase to unlock for staking only and activate staking.
+
+**IMPORTANT**: If unlocking the wallet using Settings – Unlock wallet and the Unlock wallet page, the Stake menu Staking button must also be clicked to the right to activate staking.
+
 
 
 
