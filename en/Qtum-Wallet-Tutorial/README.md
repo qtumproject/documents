@@ -154,7 +154,7 @@ Here’s how to unlock the wallet for staking only, starting with version 0.18.2
 
 
 
-![Receive](10.png)
+![Staking button](https://user-images.githubusercontent.com/29760787/70871569-4bfda880-1f6e-11ea-9db1-f5df2fcc0251.jpg)
 
 
 
