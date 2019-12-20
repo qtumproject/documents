@@ -156,7 +156,20 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="../commands/">
+        <li class="chapter " data-level="2.4" data-path="../qtum0182overview/">
+            
+                <a href="../qtum0182overview/">
+            
+                    
+                    Qtum 0.18.2 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../commands/">
             
                 <a href="../commands/">
             
@@ -169,7 +182,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="../Adding-Nodes/">
+        <li class="chapter " data-level="2.6" data-path="../Adding-Nodes/">
             
                 <a href="../Adding-Nodes/">
             
@@ -182,7 +195,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6" data-path="../Encrypt-and-Unlock-Qtum-Wallet/">
+        <li class="chapter " data-level="2.7" data-path="../Encrypt-and-Unlock-Qtum-Wallet/">
             
                 <a href="../Encrypt-and-Unlock-Qtum-Wallet/">
             
@@ -195,7 +208,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.7" data-path="../Wallet-Recovery-with-Salvagewallet.html">
+        <li class="chapter " data-level="2.8" data-path="../Wallet-Recovery-with-Salvagewallet.html">
             
                 <a href="../Wallet-Recovery-with-Salvagewallet.html">
             
@@ -208,9 +221,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.8" data-path="../Testnet-User-Guide.html">
+        <li class="chapter " data-level="2.9" data-path="../Testnet-user-guide/README.md">
             
-                <a href="../Testnet-User-Guide.html">
+                <span>
             
                     
                     Testnet User Guide
@@ -221,7 +234,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.9" data-path="../bech32/">
+        <li class="chapter " data-level="2.10" data-path="../bech32/">
             
                 <a href="../bech32/">
             
@@ -732,7 +745,9 @@
 <p><img src="8.png" alt="Receive"></p>
 <p>NOTE: On Qtum 0.18x, the wallet doesn&apos;t restart after encrypting. After you see the above message, the wallet is already encrypted and ready to use.</p>
 <h2 id="unlock-wallet"><a name="unlock-wallet" class="plugin-anchor" href="#unlock-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Unlock Wallet</h2>
-<p><img src="9.png" alt="Receive"></p>
+<p>To unlock the wallet for sending and private key commands use Settings - Unlock Wallet to reach the Unlock wallet page.
+<img src="9.png" alt="Receive"></p>
+<p>Use the Unlock wallet page to completely unlock the wallet(uncheck the For staking only box). To unlock the wallet for staking only, follow the procedure for Staking below. <strong>NOTE</strong> If the wallet is unlocked for staking only on this Unlock wallet page, the Stake menu <strong>Staking button must also be clicked to the right to activate staking</strong>.</p>
 <p><img src="10.png" alt="Receive"></p>
 <h2 id="wallet-backup"><a name="wallet-backup" class="plugin-anchor" href="#wallet-backup"><i class="fa fa-link" aria-hidden="true"></i></a>Wallet Backup</h2>
 <p>It&apos;s recommended to make the backup <strong>after</strong> encrypting the wallet.</p>
@@ -751,8 +766,9 @@
 <li>Unlock our wallet prior to staking (preferably before reaching 500 confirmations on your inputs).</li>
 <li>Keep our wallet open at all times, otherwise even if our coins are matured, they won&#x2019;t be able to stake.</li>
 </ol>
-<p>Here&#x2019;s how to unlock the wallet for staking only</p>
-<p><img src="10.png" alt="Receive"></p>
+<p>Here&#x2019;s how to unlock the wallet for staking only, starting with version 0.18.2. Select the main menu &quot;Stake&#x201D; option to show the Stake page. Click the Staking button to the right, then enter the passphrase to unlock for staking only and activate staking.</p>
+<p><strong>IMPORTANT</strong>: If unlocking the wallet using Settings &#x2013; Unlock wallet and the Unlock wallet page, the Stake menu Staking button must also be clicked to the right to activate staking.</p>
+<p><img src="https://user-images.githubusercontent.com/29760787/70871569-4bfda880-1f6e-11ea-9db1-f5df2fcc0251.jpg" alt="Staking button"></p>
 <p><strong>Remember to have your wallet open 24/7, if you close it, you won&#x2019;t be able to stake</strong></p>
 <p><img src="11.png" alt="Receive"></p>
 <p><strong>Please make sure &#x201C;for staking only&#x201D; is selected.</strong></p>
@@ -805,7 +821,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Desktop wallet basic usage","level":"2.1","depth":1,"next":{"title":"Best Practices","level":"2.2","depth":1,"path":"QTUM-wallet-usage-best-practices/README.md","ref":"QTUM-wallet-usage-best-practices/README.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-Wallet-Tutorial/README.md","mtime":"2019-11-28T20:20:12.094Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-08T16:22:40.343Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Desktop wallet basic usage","level":"2.1","depth":1,"next":{"title":"Best Practices","level":"2.2","depth":1,"path":"QTUM-wallet-usage-best-practices/README.md","ref":"QTUM-wallet-usage-best-practices/README.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-Wallet-Tutorial/README.md","mtime":"2019-12-20T19:44:13.409Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-20T19:45:41.553Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

@@ -5,22 +5,15 @@
 ### Using the Qtum wallet
 
 1. [Desktop wallet basic usage](Qtum-Wallet-Tutorial/README.md)
-
 2. [Best Practices](QTUM-wallet-usage-best-practices/README.md)
-
 3. [How to Update your Qtum wallet](updateqtum/README.md)
-
-4. [Qtum Core Wallet Commands](commands/README.md)
-
-5. [Adding Nodes](Adding-Nodes/README.md)          
-
-6. [Encrypt and Unlock Qtum Wallet](Encrypt-and-Unlock-Qtum-Wallet/README.md)
-
-7. [Wallet Recovery With Salvagewallet](Wallet-Recovery-with-Salvagewallet.md)
-
-8. [Testnet User Guide](Testnet-User-Guide.md)
-
-9. [bech32 support](bech32/README.md)
+4. [Qtum 0.18.2 Overview](qtum0182overview/README.md)
+5. [Qtum Core Wallet Commands](commands/README.md)
+6. [Adding Nodes](Adding-Nodes/README.md)          
+7. [Encrypt and Unlock Qtum Wallet](Encrypt-and-Unlock-Qtum-Wallet/README.md)
+8. [Wallet Recovery With Salvagewallet](Wallet-Recovery-with-Salvagewallet.md)
+9. [Testnet User Guide](Testnet-user-guide/README.md)
+10. [bech32 support](bech32/README.md)
 
 ## Other Qtum wallets
 

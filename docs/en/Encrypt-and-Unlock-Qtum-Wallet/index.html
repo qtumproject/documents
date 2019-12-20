@@ -156,7 +156,20 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="../commands/">
+        <li class="chapter " data-level="2.4" data-path="../qtum0182overview/">
+            
+                <a href="../qtum0182overview/">
+            
+                    
+                    Qtum 0.18.2 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../commands/">
             
                 <a href="../commands/">
             
@@ -169,7 +182,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="../Adding-Nodes/">
+        <li class="chapter " data-level="2.6" data-path="../Adding-Nodes/">
             
                 <a href="../Adding-Nodes/">
             
@@ -182,7 +195,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.6" data-path="./">
+        <li class="chapter active" data-level="2.7" data-path="./">
             
                 <a href="./">
             
@@ -195,7 +208,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.7" data-path="../Wallet-Recovery-with-Salvagewallet.html">
+        <li class="chapter " data-level="2.8" data-path="../Wallet-Recovery-with-Salvagewallet.html">
             
                 <a href="../Wallet-Recovery-with-Salvagewallet.html">
             
@@ -208,9 +221,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.8" data-path="../Testnet-User-Guide.html">
+        <li class="chapter " data-level="2.9" data-path="../Testnet-user-guide/README.md">
             
-                <a href="../Testnet-User-Guide.html">
+                <span>
             
                     
                     Testnet User Guide
@@ -221,7 +234,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.9" data-path="../bech32/">
+        <li class="chapter " data-level="2.10" data-path="../bech32/">
             
                 <a href="../bech32/">
             
@@ -686,48 +699,52 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="encrypt--unlock-qtum-wallet"><a name="encrypt--unlock-qtum-wallet" class="plugin-anchor" href="#encrypt--unlock-qtum-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Encrypt &amp; Unlock Qtum Wallet</h1>
-<p>If you don&apos;t know how to deploy a Qtum node or don&apos;t know how to launch a Qtum wallet ,please refer to the following instructions:</p>
+<p>If you don&apos;t know how to deploy a Qtum node or don&apos;t know how to launch a Qtum wallet, please refer to the following instructions:</p>
 <ul>
 <li>For command line users&#xFF1A;&#x300A;<a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">Guidance of Qtum Deployment</a>&#x300B;</li>
 <li>For GUI wallet users(common users)&#xFF1A;<a href="https://eco.qtum.org/wallet" target="_blank">https://eco.qtum.org/wallet</a></li>
 </ul>
-<p><strong>Important: After you encrypt wallet or change your pin code, please remember to backup your wallet again!!!</strong></p>
+<p><strong>Important: After you encrypt the wallet or change your passphrase, please remember to backup your wallet again!!!</strong></p>
 <p>Please do all following things after you successfully installed and run a Qtum wallet: </p>
 <h2 id="encrypt-wallet"><a name="encrypt-wallet" class="plugin-anchor" href="#encrypt-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Encrypt Wallet</h2>
 <h3 id="for-command-line-users"><a name="for-command-line-users" class="plugin-anchor" href="#for-command-line-users"><i class="fa fa-link" aria-hidden="true"></i></a>For command line users</h3>
 <p>qtum-cli command to encrypt wallet&#xFF1A;</p>
-<pre><code>./qtum-cli encryptwallet &quot;yourpassword&quot;
-</code></pre><p>note that <code>yourpassword</code>is the user defined password, please remember it or you might lost your QTUM.</p>
-<p>After encryption, all fund security related actions (like send QTUM, staking, or dump private keys) will all requiring a password. </p>
+<pre><code>./qtum-cli encryptwallet &quot;yourpassphrase&quot;
+</code></pre><p>note that <code>yourpassphrase</code>is the user defined pass phrase, please remember it or you will lose your QTUM.</p>
+<p>After encryption, all security related actions such as sending QTUM, staking, or dumping private keys will require using the passphrase to unlock the wallet. </p>
 <h3 id="for-gui-wallet-users"><a name="for-gui-wallet-users" class="plugin-anchor" href="#for-gui-wallet-users"><i class="fa fa-link" aria-hidden="true"></i></a>For GUI wallet users</h3>
 <p>Choose<code>Setting-Encrypt Wallet</code> in the menu, as following:</p>
 <p><img src="choose-encrypt.jpeg" alt="choose encrypt"></p>
-<p>create a new passphrase and repeat it. The wallet will restart after encryption.</p>
-<p><img src="enter-password.jpeg" alt="enter password"></p>
-<p>After restart, there will be a lock flag shown on the bottom of the wallet, which means it is already encrypted (locked) &#xFF1A;</p>
+<p>Create a new passphrase and repeat it. The wallet will restart after encryption.</p>
+<p><img src="enter-password.jpeg" alt="enter passphrase"></p>
+<p>After restart, there will be a lock icon shown on the bottom of the wallet, which means it is already encrypted and locked&#xFF1A;</p>
 <p><img src="wallet-locked.jpeg" alt="wallet locked"></p>
 <h2 id="unlock-wallet"><a name="unlock-wallet" class="plugin-anchor" href="#unlock-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Unlock wallet</h2>
 <h3 id="for-command-line-users"><a name="for-command-line-users" class="plugin-anchor" href="#for-command-line-users"><i class="fa fa-link" aria-hidden="true"></i></a>For command line users</h3>
 <p>qtum-cli command to unlock wallet&#xFF1A;</p>
-<pre><code>./qtum-cli walletpassphrase &quot;yourpassword&quot; 99999
-</code></pre><p>the first argument <code>yourpassword</code> is the passphrase you set when encryption, while the second is required unlock time, the unit is second (like 99999 seconds here).</p>
-<p>After unlocking, you can send QTUM or do other fund security related actions.</p>
-<p>If you only want to unlock the wallet for staking, please use &#xFF1A;</p>
-<pre><code>./qtum-cli walletpassphrase &quot;yourpassword&quot; 99999 true
-</code></pre><p>The first two arguments are the same, and the 3rd argument <code>true</code> means you only want to unlock for staking. After doing this, you can start staking, but other fund security related actions like sending QTUM or dumping private key still need your passphrase to fully unlock your wallet first. </p>
+<pre><code>./qtum-cli walletpassphrase &quot;yourpassphrase&quot; 300
+</code></pre><p>the first argument <code>yourpassphrase</code> is the passphrase you set for encryption, while the second is the unlock time in seconds, here 300 seconds or 5 minutes, after which time the wallet will automatically lock itself.</p>
+<p>After unlocking, you can send QTUM or do other coin security related actions.</p>
+<p>If you only want to unlock the wallet for staking only, please use&#xFF1A;</p>
+<pre><code>./qtum-cli walletpassphrase &quot;yourpassword&quot; 999999 true
+</code></pre><p>The first two arguments are the same, and the 3rd argument <code>true</code> means you only want to unlock the wallet for staking only. After doing this, you can start staking, but other coin security related actions like sending QTUM or dumping a private key still requre the passphrase to fully unlock your wallet. </p>
 <h3 id="for-gui-wallet-users"><a name="for-gui-wallet-users" class="plugin-anchor" href="#for-gui-wallet-users"><i class="fa fa-link" aria-hidden="true"></i></a>For GUI wallet users</h3>
-<p>Go to &#x201C;Settings-unlock wallet&#x201D; to unlock your wallet&#xFF1A;</p>
+<p>To fully unlock your wallet, go to &#x201C;Settings - Unlock wallet&#x201D;&#xFF1A;</p>
 <p><img src="https://s.qtum.site/uploads/c0fbf6583794c8ecb91532dbeec4f9c7.jpeg" alt="unlock wallet"></p>
-<p>enter passphrase to unlock wallet. If you choose <code>For staking only</code>, it means you only unlock the wallet for staking&#xFF0C;but other fund security related actions like sending QTUM or dumping private key are still forbidened. So please unselect <code>For staking only</code> if you want to fully unlock your wallet.</p>
+<p>and enter the passphrase to unlock wallet. If you choose <code>For staking only</code>, it means you only unlock the wallet for staking&#xFF0C;but other coin security related actions like sending QTUM or dumping a private key are still locked. So please unselect <code>For staking only</code> if you want to fully unlock your wallet. To unlock for staking only, you will also need to switch on the Staking button to activate staking as described below.</p>
 <p><img src="https://s.qtum.site/uploads/65996de583f1e099360cbbbbdbba48d8.jpeg" alt="enter passphrase"></p>
-<p>After unlocking, the lock flag on the bottom will switch to unlocked.</p>
+<p>After unlocking, the lock icon on the bottom of the screen will show an open lock.</p>
+<p>For wallet version 0.18.2 and greater, to unlock the wallet for staking only, use the main menu Stake option to show the Staking Page. Click the Staking button to the right and enter the passphrase (leave the checkbox set to &quot;For staking only&quot;):</p>
+<p><img src="https://user-images.githubusercontent.com/29760787/70872288-e7921780-1f74-11ea-9809-cfcbc05e9b96.jpg" alt="Staking button"></p>
+<p><strong>NOTE</strong> For staking wallets, it you unlock for staking only using &quot;Settings - Unlock wallet&quot; as shown above, you will still need to select the main menu Stake option to <strong>visit this Stake Page, and click the Staking button to the right to activate staking</strong>. </p>
+<p>After unlocking for staking only, the lock icon will show the hasp slightly opened.</p>
 <h2 id="change-passphrase"><a name="change-passphrase" class="plugin-anchor" href="#change-passphrase"><i class="fa fa-link" aria-hidden="true"></i></a>Change passphrase</h2>
 <h3 id="for-command-line-users"><a name="for-command-line-users" class="plugin-anchor" href="#for-command-line-users"><i class="fa fa-link" aria-hidden="true"></i></a>For command line users</h3>
 <p>command for change passphrase:</p>
 <pre><code>./qtum-cli walletpassphrasechange &quot;oldpassphrase&quot; &quot;newpassphrase&quot;
-</code></pre><p><code>oldpassphrase</code> is the old passphrase you set last time&#xFF0C;and <code>newpassphrase</code> is the new passphrase you want set&#x3002;</p>
+</code></pre><p><code>oldpassphrase</code> is the current passphrase previously set&#xFF0C;and <code>newpassphrase</code> is the new passphrase you want set.</p>
 <h3 id="for-gui-wallet-users"><a name="for-gui-wallet-users" class="plugin-anchor" href="#for-gui-wallet-users"><i class="fa fa-link" aria-hidden="true"></i></a>For GUI wallet users</h3>
-<p>Go to &#x201C;Setting-Change Passphrase&#x201D; to change passphrase&#xFF1A;</p>
+<p>Go to &#x201C;Setting - Change Passphrase&#x201D; to change the passphrase&#xFF1A;</p>
 <p><img src="click-changepass.jpeg" alt="click change passphrase"></p>
 <p>enter old passphrase and new one to complete modification&#xFF1A;</p>
 <p><img src="enter-new-password.jpeg" alt="change passphrase"></p>
@@ -774,7 +791,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Encrypt and Unlock Qtum Wallet","level":"2.6","depth":1,"next":{"title":"Wallet Recovery With Salvagewallet","level":"2.7","depth":1,"path":"Wallet-Recovery-with-Salvagewallet.md","ref":"Wallet-Recovery-with-Salvagewallet.md","articles":[]},"previous":{"title":"Adding Nodes","level":"2.5","depth":1,"path":"Adding-Nodes/README.md","ref":"Adding-Nodes/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Encrypt-and-Unlock-Qtum-Wallet/README.md","mtime":"2019-11-28T20:20:12.159Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-08T16:22:40.343Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Encrypt and Unlock Qtum Wallet","level":"2.7","depth":1,"next":{"title":"Wallet Recovery With Salvagewallet","level":"2.8","depth":1,"path":"Wallet-Recovery-with-Salvagewallet.md","ref":"Wallet-Recovery-with-Salvagewallet.md","articles":[]},"previous":{"title":"Adding Nodes","level":"2.6","depth":1,"path":"Adding-Nodes/README.md","ref":"Adding-Nodes/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Encrypt-and-Unlock-Qtum-Wallet/README.md","mtime":"2019-12-20T19:44:13.226Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-20T19:45:41.553Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
