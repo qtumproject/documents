@@ -39,9 +39,9 @@ If you don't want to buy or already own a stakebox and just want to get the late
 
 #### Qtum Raspbian (Recommended from Raspberry Pi 2 - Raspberry Pi 4)
 
-[https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian.zip](https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian.zip)
+https://raspbianimages.s3.amazonaws.com/2019-12-09-Qtum-Raspbian.zip
 
-[https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-lite.zip](https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-lite.zip)
+https://raspbianimages.s3.amazonaws.com/2019-12-09-Qtum-Raspbian-lite.zip
 
 ### "Burning" the Qtum Raspbian image to your SD card
 
@@ -78,7 +78,7 @@ SWAP enables "virtual memory", it uses a portion of your disk to store data that
 Enabling SWAP on the Pi Zero is extremely easy:
 
 1. Open up a terminal as shown on the screenshot below
-   
+  
    ![2zero](2zero.png)
    
    Inside the terminal, type "sudo dphys-swapfile setup" and press enter
@@ -91,7 +91,7 @@ Enabling SWAP on the Pi Zero is extremely easy:
    ![3zero](3zero.png)
 
 3. Here we can see that the SWAP file is active giving us a total of 2.42GB of RAM (SWAP and ZRAM included)
-   
+  
    ![4zero](4zero.png)
 
 ### IMPORTANT NOTE!
@@ -358,5 +358,5 @@ How to edit the qtum.conf configuration file.
       
 ![qtumd check](https://user-images.githubusercontent.com/29760787/69094752-f097d380-0a1e-11ea-8bb0-8a571681edaf.jpg)
       
- ***
- 
+***
+
