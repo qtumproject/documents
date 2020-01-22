@@ -32,8 +32,10 @@ If you don't want to buy or already own a stakebox and just want to get the late
 
 ### Changelog:
 
-- Upgrade to Debian Buster 10.1 release
-- Qtum 0.18.1
+- Upgrade to Debian Buster 10.2 release
+- Qtum 0.18.2
+- New Desktop UI for Qtum Wallet
+- Qtumsetup tool for staking
 
 ## Download links
 
