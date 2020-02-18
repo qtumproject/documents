@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Launch Qtum With Docker · Qtum Documentation</title>
+        <title>Confidential Assets · Qtum Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Build-Qtum-on-CentOS.html" />
     
-    
-    <link rel="prev" href="Guidance-of-Qtum-Deployment-and-RPC-Settings.html" />
+    <link rel="prev" href="DDAO-Data-Management/" />
     
 
     </head>
@@ -385,7 +383,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="5.2" data-path="Launch-Qtum-with-Docker.html">
+        <li class="chapter " data-level="5.2" data-path="Launch-Qtum-with-Docker.html">
             
                 <a href="Launch-Qtum-with-Docker.html">
             
@@ -660,7 +658,7 @@
         
         
     
-        <li class="chapter " data-level="9.1" data-path="Confidential-Assets.html">
+        <li class="chapter active" data-level="9.1" data-path="Confidential-Assets.html">
             
                 <a href="Confidential-Assets.html">
             
@@ -703,7 +701,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Launch Qtum With Docker</a>
+        <a href="." >Confidential Assets</a>
     </h1>
 </div>
 
@@ -718,57 +716,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="how-to-run-qtum-node-with-docker"><a name="how-to-run-qtum-node-with-docker" class="plugin-anchor" href="#how-to-run-qtum-node-with-docker"><i class="fa fa-link" aria-hidden="true"></i></a>How to run Qtum node with docker</h1>
-<h2 id="quick-start"><a name="quick-start" class="plugin-anchor" href="#quick-start"><i class="fa fa-link" aria-hidden="true"></i></a>Quick start</h2>
-<p>This tutorial use Linux Ubuntu as example, OSX and windows platform are almost the same.</p>
-<p>Suppose the reader has basic command line knowledge, and also have docker correctly installed and configured. If not, please learn about command line and Docker first.</p>
-<p>For more details, please refer to <a href="https://github.com/qtumproject/qtum-docker.git" target="_blank">github</a></p>
-<h2 id="get-docker-image"><a name="get-docker-image" class="plugin-anchor" href="#get-docker-image"><i class="fa fa-link" aria-hidden="true"></i></a>Get docker image</h2>
-<p>You might take either way:</p>
-<h3 id="pull-a-image-from-public-docker-hub"><a name="pull-a-image-from-public-docker-hub" class="plugin-anchor" href="#pull-a-image-from-public-docker-hub"><i class="fa fa-link" aria-hidden="true"></i></a>Pull a image from Public Docker hub</h3>
-<pre><code>$ docker pull qtum/qtum
-</code></pre><h3 id="or-build-qtum-image-with-provided-dockerfile"><a name="or-build-qtum-image-with-provided-dockerfile" class="plugin-anchor" href="#or-build-qtum-image-with-provided-dockerfile"><i class="fa fa-link" aria-hidden="true"></i></a>Or, build qtum image with provided Dockerfile</h3>
-<p>The Dockerfile can be downloaded on github: <a href="https://github.com/qtumproject/qtum-docker/blob/master/release/Dockerfile" target="_blank">Dockerfile</a></p>
-<pre><code>$docker build --rm -t qtum/qtum .
-</code></pre><p>For historical versions, please visit <a href="https://hub.docker.com/r/qtum/qtum/" target="_blank">docker hub</a></p>
-<h2 id="prepare-data-path-and-qtumconf"><a name="prepare-data-path-and-qtumconf" class="plugin-anchor" href="#prepare-data-path-and-qtumconf"><i class="fa fa-link" aria-hidden="true"></i></a>Prepare data path and qtum.conf</h2>
-<p>In order to use user-defined config file, as well as save block chain data, -v option for docker is recommended.</p>
-<p>First chose a path to save qtum block chain data:</p>
-<pre><code>sudo rm -rf /data/qtum-data
-sudo mkdir -p /data/qtum-data
-sudo chmod a+w /data/qtum-data
-</code></pre><p>Create your config file, refer to the example [qtum.conf]!(<a href="https://github.com/qtumproject/qtum/blob/1a926b980f03e97322c7dd787835bec1730f35d2/contrib/debian/examples/qtum.conf" target="_blank">https://github.com/qtumproject/qtum/blob/1a926b980f03e97322c7dd787835bec1730f35d2/contrib/debian/examples/qtum.conf</a>). Note rpcuser and rpcpassword to required for later <code>qtum-cli</code> usage for docker, so it is better to set those two options. Then please create the file ${PWD}/qtum.conf with content:</p>
-<pre><code>rpcuser=qtum
-rpcpassword=qtumtest
-</code></pre><h2 id="launch-qtumd"><a name="launch-qtumd" class="plugin-anchor" href="#launch-qtumd"><i class="fa fa-link" aria-hidden="true"></i></a>Launch qtumd</h2>
-<p>To launch qtum node:</p>
-<pre><code>## to launch qtumd
-$ docker run -d --rm --name qtum_node \
-             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
-             -v /data/qtum-data/:/root/.qtum/ \
-             qtum/qtum qtumd
+                                <ul>
+<li>Yi Zheng, Howard Ye, Patrick Dai, Tongcheng Sun, and Vladislav Gelfer. Confidential assets on mimblewimble. Cryptology ePrint Archive, Report 2019/1435, 2019. <a href="https://eprint.iacr.org/2019/1435" target="_blank">https://eprint.iacr.org/2019/1435</a>.</li>
+<li>Xing Li, Yi Zheng, Kunxian Xia, Tongcheng Sun, and John Beyler. Phantom: An efficient privacy protocol using zk-snarks based on smart contracts. Cryptology ePrint Archive, Report 2020/156, 2020. <a href="https://eprint.iacr.org/2020/156" target="_blank">https://eprint.iacr.org/2020/156</a>.</li>
+</ul>
 
-## check docker processed
-$ docker ps
-
-## to stop qtumd
-$ docker run -i --network container:qtum_node \
-             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
-             -v /data/qtum-data/:/root/.qtum/ \
-             qtum/qtum qtum-cli stop
-</code></pre><p><code>${PWD}/qtum.conf</code> will be used, and blockchain data saved under /data/qtum-data/</p>
-<h2 id="interact-with-qtumd-using-qtum-cli"><a name="interact-with-qtumd-using-qtum-cli" class="plugin-anchor" href="#interact-with-qtumd-using-qtum-cli"><i class="fa fa-link" aria-hidden="true"></i></a>Interact with <code>qtumd</code> using <code>qtum-cli</code></h2>
-<p>Use following docker command to interact with your qtum node with <code>qtum-cli</code>:</p>
-<pre><code>$ docker run -i --network container:qtum_node \
-             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
-             -v /data/qtum-data/:/root/.qtum/ \
-             qtum/qtum qtum-cli getinfo
-</code></pre><p>For more qtum-cli commands, use:</p>
-<pre><code>$ docker run -i --network container:qtum_node \
-             -v ${PWD}/qtum.conf:/root/.qtum/qtum.conf \
-             -v /data/qtum-data/:/root/.qtum/ \
-             qtum/qtum qtum-cli help
-</code></pre>
                                 
                                 </section>
                             
@@ -795,14 +747,10 @@ $ docker run -i --network container:qtum_node \
 
             
                 
-                <a href="Guidance-of-Qtum-Deployment-and-RPC-Settings.html" class="navigation navigation-prev " aria-label="Previous page: Guidance of Qtum Deployment and RPC Settings">
+                <a href="DDAO-Data-Management/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: DDAO: Decentralized Data Access Object">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="Build-Qtum-on-CentOS.html" class="navigation navigation-next " aria-label="Next page: How to Build Qtum on CentOS">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -811,7 +759,7 @@ $ docker run -i --network container:qtum_node \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Launch Qtum With Docker","level":"5.2","depth":1,"next":{"title":"How to Build Qtum on CentOS","level":"5.3","depth":1,"path":"Build-Qtum-on-CentOS.md","ref":"Build-Qtum-on-CentOS.md","articles":[]},"previous":{"title":"Guidance of Qtum Deployment and RPC Settings","level":"5.1","depth":1,"path":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","ref":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Launch-Qtum-with-Docker.md","mtime":"2020-02-18T05:44:18.184Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-18T06:22:38.913Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Confidential Assets","level":"9.1","depth":1,"previous":{"title":"DDAO: Decentralized Data Access Object","level":"8.6","depth":1,"path":"DDAO-Data-Management/README.md","ref":"DDAO-Data-Management/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Confidential-Assets.md","mtime":"2020-02-18T06:17:10.906Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-18T06:22:38.913Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>
