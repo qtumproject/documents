@@ -86,3 +86,5 @@
 ### Research
 
 1. [Confidential Assets](Confidential-Assets.md)
+
+2. [Data Analytics](Data-Analytics.md)
