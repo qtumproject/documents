@@ -82,3 +82,7 @@
 36. [SCAR: Scalable Consensus Algorithm](SCAR-Consensus/README.md)
 
 37. [DDAO: Decentralized Data Access Object](DDAO-Data-Management/README.md)
+
+### Research
+
+1. [Confidential Assets](Confidential-Assets.md)
