@@ -44,13 +44,11 @@ Si no desea comprar o ya posee una stakebox y solo desea obtener la última vers
 
 ### Descargar enlaces:
 
-#### Qtum Raspbian (Recomendado de Raspberry Pi 2 - Raspberry Pi 4)
+#### Qtum Raspbian 64bit (Recomendado de Raspberry Pi 2 - Raspberry Pi 4)
 
-https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian.zip
+https://raspbianimages.s3.amazonaws.com/2020-02-23-Qtum-Raspbian.zip
 
-https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-lite.zip
-
-
+https://raspbianimages.s3.amazonaws.com/2020-02-23-Qtum-Raspbian-lite.zip
 
 ### "Grabando" la imagen Qtum Raspbian en tu tarjeta SD
 
@@ -93,11 +91,11 @@ Dentro de la terminal, escriba "sudo dphys-swapfile setup" y presione enter
 Verá aparecer un texto y una confirmación de que se está generando su archivo SWAP de 2 gb.
 
 1. Aún dentro de la misma terminal, escribe "sudo dphys-swapfile swapon" y presiona enter. Esto no te dará ninguna confirmación, sin embargo, ¡tu archivo SWAP ha sido configurado y activado !. Solo necesita hacer esto una vez, el Pi activará su archivo SWAP en caso de reinicio / apagado.
-
+   
    ![3zero](https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/3zero.png)
 
-1. Aquí podemos ver que el archivo SWAP está activo, lo que nos da un total de 2,42 GB de RAM (SWAP y ZRAM incluidos)
-
+2. Aquí podemos ver que el archivo SWAP está activo, lo que nos da un total de 2,42 GB de RAM (SWAP y ZRAM incluidos)
+   
    ![4zero](https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/4zero.png)
 
 ### ¡NOTA IMPORTANTE!

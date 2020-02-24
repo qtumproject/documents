@@ -32,18 +32,15 @@ If you don't want to buy or already own a stakebox and just want to get the late
 
 ### Changelog:
 
-- Upgrade to Debian Buster 10.2 release
-- Qtum 0.18.2
+- Upgrade to Debian Buster 10.3 release
+- Qtum 0.19.0.1
 - New Desktop UI for Qtum Wallet
-- Qtumsetup tool for staking
 
-## Download links
+#### Qtum Raspbian 64bit (Recommended from Raspberry Pi 2 - Raspberry Pi 4)
 
-#### Qtum Raspbian (Recommended from Raspberry Pi 2 - Raspberry Pi 4)
+https://raspbianimages.s3.amazonaws.com/2020-02-23-Qtum-Raspbian.zip
 
-https://raspbianimages.s3.amazonaws.com/2019-12-09-Qtum-Raspbian.zip
-
-https://raspbianimages.s3.amazonaws.com/2019-12-09-Qtum-Raspbian-lite.zip
+https://raspbianimages.s3.amazonaws.com/2020-02-23-Qtum-Raspbian-lite.zip
 
 ### "Burning" the Qtum Raspbian image to your SD card
 
@@ -80,7 +77,7 @@ SWAP enables "virtual memory", it uses a portion of your disk to store data that
 Enabling SWAP on the Pi Zero is extremely easy:
 
 1. Open up a terminal as shown on the screenshot below
-  
+   
    ![2zero](2zero.png)
    
    Inside the terminal, type "sudo dphys-swapfile setup" and press enter
@@ -93,7 +90,7 @@ Enabling SWAP on the Pi Zero is extremely easy:
    ![3zero](3zero.png)
 
 3. Here we can see that the SWAP file is active giving us a total of 2.42GB of RAM (SWAP and ZRAM included)
-  
+   
    ![4zero](4zero.png)
 
 ### IMPORTANT NOTE!
@@ -326,22 +323,23 @@ How to edit the qtum.conf configuration file.
 1. Launch Terminal.
 
 2. Change directories to the Qtum data directory:
-
+   
    `cd .qtum`                (location home/pi/.qtum for Linux install) or
-       
+   
    `cd /home/qtum/.qtum`     (default location for image install)
 
 3. Launch the editor, opening an existing or making a new configuration file:
-
+   
    `sudo nano qtum.conf` 
 
 4. Edit configuration file, for example, enter
-
+   
    ```
    uacomment=Your_Qtum_Address
    addnode=qtum5.dynu.net
    ```
-![nano Linux](https://user-images.githubusercontent.com/29760787/69094735-ec6bb600-0a1e-11ea-92b3-d6c56ab0c7d2.jpg)
+   
+   ![nano Linux](https://user-images.githubusercontent.com/29760787/69094735-ec6bb600-0a1e-11ea-92b3-d6c56ab0c7d2.jpg)
 
 5. Press Control-O to write the file.
 
@@ -357,8 +355,7 @@ How to edit the qtum.conf configuration file.
 ![Qtum-Qt Check](https://user-images.githubusercontent.com/29760787/69094763-f55c8780-0a1e-11ea-9145-37dc47ec312e.jpg)
 
    For qtumd use the command `getnetworkinfo` and check for your address in "subversion":
-      
-![qtumd check](https://user-images.githubusercontent.com/29760787/69094752-f097d380-0a1e-11ea-8bb0-8a571681edaf.jpg)
-      
-***
 
+![qtumd check](https://user-images.githubusercontent.com/29760787/69094752-f097d380-0a1e-11ea-8bb0-8a571681edaf.jpg)
+
+***
