@@ -140,15 +140,23 @@ Select the menu option **` Restore from Key File `**, **` UPLOAD `**, select the
 To use your Ledger Nano S or Ledger Blue with Qtum, you will first need to run the Ledger Manager and install the Qtum app on your Ledger using these instructions:
 https://support.ledgerwallet.com/hc/en-us/articles/115003776913-Install-and-use-Qtum-QTUM-
 
-![13. Qtum App EN](https://i.imgur.com/th4IymV.jpg)
+![13. Qtum App EN](https://i.imgur.com/yp9ku0K.jpg)
 
 On the web wallet select the menu option **` Restore from Ledger `**, plugin your Ledger, and on the Ledger enter the PIN code and open the Qtum app, then on the web wallet _Restore from Ledger_ page click the red **` CONNECT `** button:
 
 ![14. Restore from Ledger EN](https://i.imgur.com/1wSYpgR.jpg)
 
+When the Windows Security page “Making sure it’s you” appears, double press the Ledger buttons to confirm:
+
+![14A. Security Key 1 EN](https://i.imgur.com/HGZpywA.jpg)
+
 On the next _Restore from Ledger_ page, click on the green padlock icon to select the default path:
 
 ![15. Choose Path Default EN](https://i.imgur.com/3IErrFG.jpg)
+
+When the Windows Security page “Making sure it’s you” appears again, double press the Ledger buttons to confirm:
+
+![15A. Security Key 2 EN](https://i.imgur.com/MCvhndM.jpg)  
 
 On the _Default path m/44'/88'/0'/0_ page choose the address you want to use by clicking on the green padlock icon on that row. This will probably be the top row unless you made other address choices in the Ledger Live wallet.
 
