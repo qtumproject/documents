@@ -31,11 +31,3 @@ Now our compute engine has been deployed and can be accessed via **ssh**.
 All the tools are available and ready to use on first boot. You can configure permissions according to your needs.
 
 ![8](8.png)
-
-### Accessing Qmix
-
-Qmix is launched automatically on boot, to access it, you need to go to http://gceinstanceip:5555
-
-Please make sure to specify port 5555, as it is the port used by Qmix
-
-![9](9.png)
