@@ -56,7 +56,7 @@ Type "yes" to add the ec2 instance ECDSA key fingerprint to your known_hosts fil
 
 Upon login, you'll see the following screen, type `ls` to view the files/folders which are already set for you.
 
-![awsmarketplace](term1.jpg)
+![term1b](https://user-images.githubusercontent.com/29760787/83365504-71dd0500-a376-11ea-8860-98ee16705dc4.jpg)
 
 `qmix` is the install and launch folder of the Qmix web IDE, it's a great open-source web IDE for Qtum. 
 
