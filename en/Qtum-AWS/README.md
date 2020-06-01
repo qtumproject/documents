@@ -56,25 +56,9 @@ Type "yes" to add the ec2 instance ECDSA key fingerprint to your known_hosts fil
 
 Upon login, you'll see the following screen, type `ls` to view the files/folders which are already set for you.
 
-![awsmarketplace](term1.jpg)
+![awsmarketplace](term1b.jpg)
 
-`qmix` is the install and launch folder of the Qmix web IDE, it's a great open-source web IDE for Qtum. 
-
-https://qmix.blockchainspaceman.com is the developer's official Qmix interface
-
-You can find the source code here https://github.com/spacemanholdings/qmix 
-
-## Accessing built-in Qmix
-
-
-
-Qmix launches upon boot on the AWS Qtum AMI. To use it, just point your browser towards http://yourec2ipaddress:5555
-
-![awsmarketplace](qmix.jpg)
-
-![awsmarketplace](term2.jpg)
-
-There's also a man page available, just type `man README.man` and you'll get some basic documentation on how to use this AMI.
+The man page (type `man README.man`) shows some basic documentation on how to use this AMI.
 
 It's highly recommended to do a full system update before using Qtum, this will update every application and libraries to their latest version including important security patches and bug fixes, this includes Qtum which at the time of writing has version 0.16.1 available on the repositories. 
 
