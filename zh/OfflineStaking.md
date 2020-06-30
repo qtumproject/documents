@@ -51,7 +51,7 @@ Qtum Core钱包提供了在线的PoS共识，因此登录、配置该钱包之�
 下一步，钱包将提示您在"设置"-"选项"-"开启Super Staking"，确认之后钱包将重新启动。
 
 ![3  Qtum-Qt Enable Super Staker CN](https://user-images.githubusercontent.com/29760787/85623709-d407ed80-b636-11ea-8d6a-a1ea83dde656.jpg)
- 
+
 重启之后，钱包将向您确认是否要扫描区块链以便重建数据库。
 
 ![4  Rebuild the Database CN](https://user-images.githubusercontent.com/29760787/85623718-d5d1b100-b636-11ea-988f-762fb36bf926.jpg)
@@ -81,8 +81,7 @@ Qtum Core钱包提供了在线的PoS共识，因此登录、配置该钱包之�
 
 例如，如果一个钱包内有数量为40、50、60、70和800QTUM的几个UTXO，要把这些UTXO拆分为最小100最大200的UTXO，可用使用如下命令：
 
-```splitutxosforaddress "qQhm128r4cTuDFSRehLESydnkburYLj9cY" 100 200
-
+```splitutxosforaddress
 {
   "txid": "197a199c3ac9dd8df574ca77da15c5da31db3f7101e2108638a3b2f94248b9f7",
   "selected": "1020.00",
@@ -160,5 +159,4 @@ Super Staker应该时刻关注自己的钱包权重（UTXO权重减去正在Stak
 
 ![11  Restore super stakers CN](https://user-images.githubusercontent.com/29760787/85623770-e6822700-b636-11ea-8042-0ba6b480ccf0.jpg)
 
- 
 ***
