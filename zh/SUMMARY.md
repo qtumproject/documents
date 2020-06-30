@@ -5,6 +5,7 @@
 ## 钱包使用
 
 + [Qtum PC 端钱包使用教程](Qtum-Wallet-Tutorial/README.md)
++ [Offline Staking](OfflineStaking.md)
 + [Qtum Electrum 轻钱包使用说明](Qtum-Electrum-User-Guide.md)
 + [Qtum 安卓钱包使用教程](How-to-use-Qtum-Android-Wallet/README.md)
 + [如何添加节点](Adding-Nodes.md)
@@ -14,20 +15,17 @@
 + [QTUM web钱包使用说明](Qtum-Web-Wallet-Tutorial/README.md)
 + [测试网络使用教程](Testnet-User-Guide.md)
 
-
 ## 节点部署
 
 + [如何部署 Qtum 量子链节点](Guidance-of-Qtum-Deployment-and-RPC-Settings.md)
 + [如何用 Docker 运行 Qtum 节点](Launch-Qtum-with-Docker.md)
 + [如何搭建 Qtum 星形网络](How-to-Deploy-Star-Network/README.md)
 
-
 ## Staking 教程（PoS 挖矿）
 
 + [Qtum 量子链 Staking(PoS 挖矿) 教程](How-to-Stake-with-Qtum/README.md)
 
 ## 智能合约和QRC20
-
 
 + [Qtum 智能合约使用方法及说明](Qtum-Contract-Usage.md)
 + [QRC20 Token 指南](QRC20-Token-Introduce.md)
