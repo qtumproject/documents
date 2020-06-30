@@ -1,12 +1,12 @@
 # Offline Staking
 
-* [Delegating Address to Super Staker](https://github.com/qtumproject/documents/tree/master/en/Qtum-Wallet-Tutorial/README.md#delegating-address-to-super-staker)
-* [Delegating Address Operations](https://github.com/qtumproject/documents/tree/master/en/Qtum-Wallet-Tutorial/README.md#delegating-aAddress-operations)
-* [Super Staker Configuration](https://github.com/qtumproject/documents/tree/master/en/Qtum-Wallet-Tutorial/README.md#super-staker-configuration)
-* [Launching Qtum Core as a Super Staker](https://github.com/qtumproject/documents/tree/master/en/Qtum-Wallet-Tutorial/README.md#launching-qtum-core-as-a-super-staker)
-* [qtumd Super Staker](https://github.com/qtumproject/documents/tree/master/en/Qtum-Wallet-Tutorial/README.md#qtumd-super-staker)
-* [Super Staker Operations](https://github.com/qtumproject/documents/tree/master/en/Qtum-Wallet-Tutorial/README.md#super-staker-operations)
-* [Restore](https://github.com/qtumproject/documents/tree/master/en/Qtum-Wallet-Tutorial/README.md#restore)
+* [Delegating Address to Super Staker](#delegating-address-to-super-staker)
+* [Delegating Address Operations](#delegating-aAddress-operations)
+* [Super Staker Configuration](#super-staker-configuration)
+* [Launching Qtum Core as a Super Staker](#launching-qtum-core-as-a-super-staker)
+* [qtumd Super Staker](#qtumd-super-staker)
+* [Super Staker Operations](#super-staker-operations)
+* [Restore](#restore)
 
 # Delegating Address to Super Staker
 
