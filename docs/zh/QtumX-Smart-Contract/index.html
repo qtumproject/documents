@@ -1,0 +1,894 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>基于QtumX搭建自己的Dapp · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../SCAR-Consensus/" />
+    
+    
+    <link rel="prev" href="../One-Click-Launch-Chain/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">钱包使用</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Qtum-Wallet-Tutorial/">
+            
+                <a href="../Qtum-Wallet-Tutorial/">
+            
+                    
+                    Qtum PC 端钱包使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../OfflineStaking.html">
+            
+                <a href="../OfflineStaking.html">
+            
+                    
+                    Offline Staking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Qtum-Electrum-User-Guide.html">
+            
+                <a href="../Qtum-Electrum-User-Guide.html">
+            
+                    
+                    Qtum Electrum 轻钱包使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../How-to-use-Qtum-Android-Wallet/">
+            
+                <a href="../How-to-use-Qtum-Android-Wallet/">
+            
+                    
+                    Qtum 安卓钱包使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../Adding-Nodes.html">
+            
+                <a href="../Adding-Nodes.html">
+            
+                    
+                    如何添加节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                <a href="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                    
+                    锁定、解锁 Qtum 钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                <a href="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                    
+                    使用salvagewallet修复钱包数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../How-To-Add-Options/">
+            
+                <a href="../How-To-Add-Options/">
+            
+                    
+                    如何添加 Qtum 运行选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../Qtum-Web-Wallet-Tutorial/">
+            
+                <a href="../Qtum-Web-Wallet-Tutorial/">
+            
+                    
+                    QTUM web钱包使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../Testnet-User-Guide.html">
+            
+                <a href="../Testnet-User-Guide.html">
+            
+                    
+                    测试网络使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">节点部署</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                <a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                    
+                    如何部署 Qtum 量子链节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Launch-Qtum-with-Docker.html">
+            
+                <a href="../Launch-Qtum-with-Docker.html">
+            
+                    
+                    如何用 Docker 运行 Qtum 节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../How-to-Deploy-Star-Network/">
+            
+                <a href="../How-to-Deploy-Star-Network/">
+            
+                    
+                    如何搭建 Qtum 星形网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking 教程（PoS 挖矿）</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../How-to-Stake-with-Qtum/">
+            
+                <a href="../How-to-Stake-with-Qtum/">
+            
+                    
+                    Qtum 量子链 Staking(PoS 挖矿) 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">智能合约和QRC20</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../Qtum-Contract-Usage.html">
+            
+                <a href="../Qtum-Contract-Usage.html">
+            
+                    
+                    Qtum 智能合约使用方法及说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../QRC20-Token-Introduce.html">
+            
+                <a href="../QRC20-Token-Introduce.html">
+            
+                    
+                    QRC20 Token 指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../QRC20集成文档.html">
+            
+                <a href="../QRC20集成文档.html">
+            
+                    
+                    QRC20 集成文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../手动构造Qtum合约交易的说明.html">
+            
+                <a href="../手动构造Qtum合约交易的说明.html">
+            
+                    
+                    手动构造Qtum合约交易的说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../Qtum-Blockchain-Guide.html">
+            
+                <a href="../Qtum-Blockchain-Guide.html">
+            
+                    
+                    Qtum 区块链指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../Build-Qtum-on-CentOS.html">
+            
+                <a href="../Build-Qtum-on-CentOS.html">
+            
+                    
+                    在 CentOS 7 上编译 Qtum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../Qtum-Eclair-Guide.html">
+            
+                <a href="../Qtum-Eclair-Guide.html">
+            
+                    
+                    闪电网络客户端 Qtum Eclair 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../Upgrade-Tutorial/">
+            
+                <a href="../Upgrade-Tutorial/">
+            
+                    
+                    Qtum 钱包升级教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">QtumX</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../Technical-White-Paper-for-QtumX/">
+            
+                <a href="../Technical-White-Paper-for-QtumX/">
+            
+                    
+                    QtumX技术白皮书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../QtumX-Tutorial.html">
+            
+                <a href="../QtumX-Tutorial.html">
+            
+                    
+                    QtumX使用教程（内测）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../One-Click-Launch-Chain/">
+            
+                <a href="../One-Click-Launch-Chain/">
+            
+                    
+                    QtumX一键发链教程（公测）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    基于QtumX搭建自己的Dapp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../SCAR-Consensus/">
+            
+                <a href="../SCAR-Consensus/">
+            
+                    
+                    SCAR：一种可伸缩共识算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../Canal-Cross-Chain/">
+            
+                <a href="../Canal-Cross-Chain/">
+            
+                    
+                    Canal: 一种跨链交易解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../DDAO-Data-Management/">
+            
+                <a href="../DDAO-Data-Management/">
+            
+                    
+                    DDAO：去中心化数据访问对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">研究</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../Confidential-Assets.html">
+            
+                <a href="../Confidential-Assets.html">
+            
+                    
+                    隐私资产
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../Data-Analytics.html">
+            
+                <a href="../Data-Analytics.html">
+            
+                    
+                    数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >基于QtumX搭建自己的Dapp</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x57FA;&#x4E8E;qtumx&#x642D;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;dapp"><a name="&#x57FA;&#x4E8E;qtumx&#x642D;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;dapp" class="plugin-anchor" href="#&#x57FA;&#x4E8E;qtumx&#x642D;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;dapp"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x4E8E;QtumX&#x642D;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;Dapp</h1>
+<hr>
+<ul>
+<li><a href="#&#x80CC;&#x666F;">&#x80CC;&#x666F;</a></li>
+<li><a href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;">&#x524D;&#x63D0;&#x6761;&#x4EF6;</a></li>
+<li><a href="#&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x90E8;&#x7F72;">&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x90E8;&#x7F72;</a></li>
+<li><a href="#&#x4E0E;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4EA4;&#x4E92;">&#x4E0E;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4EA4;&#x4E92;</a></li>
+<li><a href="#&#x6CE8;&#x610F;&#x4E8B;&#x9879;">&#x6CE8;&#x610F;&#x4E8B;&#x9879;</a></li>
+</ul>
+<h1 id="&#x80CC;&#x666F;"><a name="&#x80CC;&#x666F;" class="plugin-anchor" href="#&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x80CC;&#x666F;</h1>
+<p>&#x5728;QtumX&#x4E0A;&#x521B;&#x5EFA;&#x4E86;&#x81EA;&#x5DF1;&#x7684;&#x533A;&#x5757;&#x94FE;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x5F00;&#x53D1;&#x548C;&#x53D1;&#x5E03;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x4F9B;&#x57FA;&#x4E8E;&#x533A;&#x5757;&#x94FE;&#x7684;&#x5E94;&#x7528;&#x3002;<strong>&#x7531;&#x4E8E;&#x642D;&#x5EFA;&#x7684;&#x533A;&#x5757;&#x94FE;&#x5C5E;&#x4E8E;&#x79C1;&#x94FE;&#x6216;&#x8054;&#x76DF;&#x94FE;&#xFF0C;&#x6240;&#x4EE5;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x5E94;&#x7528;&#x4E0D;&#x9700;&#x8981;&#x6D88;&#x8017;&#x516C;&#x94FE;&#x4E0A;&#x7684;token&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x5927;&#x5E45;&#x5EA6;&#x8282;&#x7EA6;&#x4E86;&#x5F00;&#x53D1;&#x6210;&#x672C;&#x3002;</strong>QtumX&#x548C;Qtum&#x4E00;&#x6837;&#xFF0C;&#x652F;&#x6301;&#x4EE5;&#x592A;&#x574A;&#x865A;&#x62DF;&#x673A;EVM&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6240;&#x6709;&#x57FA;&#x4E8E;Solidity&#x7684;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#x90FD;&#x53EF;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x5728;QtumX&#x4E0A;&#x3002;</p>
+<h1 id="&#x524D;&#x63D0;&#x6761;&#x4EF6;"><a name="&#x524D;&#x63D0;&#x6761;&#x4EF6;" class="plugin-anchor" href="#&#x524D;&#x63D0;&#x6761;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x63D0;&#x6761;&#x4EF6;</h1>
+<p>  &#x5B89;&#x88C5;QtumX&#xFF0C;&#x5E76;&#x53D1;&#x5E03;&#x81EA;&#x5DF1;&#x7684;&#x79C1;&#x6709;&#x94FE;&#xFF0C;<a href="https://docs.qtum.org/zh/One-Click-Launch-Chain/" target="_blank">&#x79C1;&#x6709;&#x94FE;&#x642D;&#x5EFA;&#x6559;&#x7A0B;</a>&#x3002;&#x8BE5;&#x7BC7;&#x4ECB;&#x7ECD;&#x5728;qtum-qt&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8FDB;&#x884C;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x90E8;&#x7F72;&#x548C;&#x4EA4;&#x4E92;&#xFF0C;&#x5EFA;&#x7ACB;&#x5728;Qtum&#x79C1;&#x6709;&#x94FE;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x7B80;&#x5355;&#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;demo&#x9009;&#x62E9;&#x4E86;solidity&#x7684;&#x7ECF;&#x5178;&#x6295;&#x7968;demo&#x3002;</p>
+<hr>
+<h1 id="&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x90E8;&#x7F72;"><a name="&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x90E8;&#x7F72;" class="plugin-anchor" href="#&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x90E8;&#x7F72;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x90E8;&#x7F72;</h1>
+<ol>
+<li>&#x542F;&#x52A8;qtum-qt&#x8FDB;&#x5165;&#x79C1;&#x6709;&#x94FE;&#x73AF;&#x5883;&#xFF0C;&#x5728;qtum-qt&#x7684;Help - Debug window - Console&#x4E2D;&#x901A;&#x8FC7;setpoaminer&#x547D;&#x4EE4;&#x542F;&#x52A8;&#x77FF;&#x5DE5;&#x6316;&#x77FF;&#xFF08;&#x4E00;&#x5B9A;&#x8981;&#x542F;&#x52A8;&#x6316;&#x77FF;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x4EA7;&#x751F;&#x65B0;&#x533A;&#x5757;&#xFF0C;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x65E0;&#x6CD5;&#x88AB;&#x8BB0;&#x5F55;&#x5219;&#x65E0;&#x6CD5;&#x90E8;&#x7F72;&#x5230;&#x79C1;&#x6709;&#x94FE;&#x4E0A;&#xFF09;&#x3002;</li>
+<li><p>&#x7F16;&#x5199;Solidity&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5728;&#x7EBF;IDE <a href="https://http://remix.ethereum.org/" target="_blank">Remix</a>&#x3002;&#x5173;&#x4E8E;solidity&#x5982;&#x4F55;&#x7F16;&#x5199;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x63D0;&#x4F9B;&#x51E0;&#x4E2A;&#x6559;&#x7A0B;&#x5206;&#x4EAB;&#x7ED9;&#x5927;&#x5BB6;&#x5B66;&#x4E60;&#xFF1A;</p>
+<ol>
+<li><p><a href="https://solidity.readthedocs.io/en/v0.4.24/index.html#" target="_blank">Solidity&#x5B98;&#x65B9;&#x6587;&#x6863;</a>&#xFF08;&#x53EF;&#x9009;&#x4E2D;&#x6587;&#x7FFB;&#x8BD1;&#xFF09;</p>
+</li>
+<li><p><a href="http://www.tryblockchain.org/" target="_blank">Solidity&#x6559;&#x7A0B;&#x4E2D;&#x6587;&#x7248;</a></p>
+</li>
+<li><p><a href="https://docs.qtum.org/zh/Qtum-Contract-Usage.html" target="_blank">Qtum&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x53CA;&#x8BF4;&#x660E;</a></p>
+</li>
+</ol>
+</li>
+<li><p>&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x6295;&#x7968;Ballot&#x7684;demo&#xFF0C;&#x6E90;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>pragma solidity ^0.4.0;
+contract Ballot {
+
+ struct Voter {
+     uint weight;
+     bool voted;
+     uint8 vote;
+     address delegate;
+ }
+ struct Proposal {
+     uint voteCount;
+ }
+
+ address chairperson;
+ mapping(address =&gt; Voter) voters;
+ Proposal[] proposals;
+
+ /// Create a new ballot with $(_numProposals) different proposals.
+ function Ballot(uint8 _numProposals) public {
+     chairperson = msg.sender;
+     voters[chairperson].weight = 1;
+     proposals.length = _numProposals;
+ }
+
+ /// Give $(toVoter) the right to vote on this ballot.
+ /// May only be called by $(chairperson).
+ function giveRightToVote(address toVoter) public {
+     if (msg.sender != chairperson || voters[toVoter].voted) return;
+     voters[toVoter].weight = 1;
+ }
+
+ /// Delegate your vote to the voter $(to).
+ function delegate(address to) public {
+     Voter storage sender = voters[msg.sender]; // assigns reference
+     if (sender.voted) return;
+     while (voters[to].delegate != address(0) &amp;&amp; voters[to].delegate != msg.sender)
+         to = voters[to].delegate;
+     if (to == msg.sender) return;
+     sender.voted = true;
+     sender.delegate = to;
+     Voter storage delegateTo = voters[to];
+     if (delegateTo.voted)
+         proposals[delegateTo.vote].voteCount += sender.weight;
+     else
+         delegateTo.weight += sender.weight;
+ }
+
+ /// Give a single vote to proposal $(toProposal).
+ function vote(uint8 toProposal) public {
+     Voter storage sender = voters[msg.sender];
+     if (sender.voted || toProposal &gt;= proposals.length) return;
+     sender.voted = true;
+     sender.vote = toProposal;
+     proposals[toProposal].voteCount += sender.weight;
+ }
+
+ function winningProposal() public constant returns (uint8 _winningProposal) {
+     uint256 winningVoteCount = 0;
+     for (uint8 prop = 0; prop &lt; proposals.length; prop++)
+         if (proposals[prop].voteCount &gt; winningVoteCount) {
+             winningVoteCount = proposals[prop].voteCount;
+             _winningProposal = prop;
+         }
+ }
+}
+</code></pre></li>
+<li>&#x5C06;&#x6E90;&#x7801;&#x8F6C;&#x5316;&#x4E3A;&#x5728;qtum-qt&#x4E2D;&#x9700;&#x8981;&#x7684;bytecode&#x548C;ABI&#xFF0C;&#x5728;Remix&#x7684;&#x53F3;&#x4FA7;&#x8FB9;&#x680F;&#x627E;&#x5230;Compile&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#xFF0C;&#x7F16;&#x8BD1;&#x65E0;&#x8BEF;&#x540E;&#x70B9;&#x51FB;Details&#xFF08;bytecode&#x4E2D;&#x9009;&#x62E9;&#x201C;object&#x201D;&#x9879;&#x8FDB;&#x884C;&#x590D;&#x5236;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x8F93;&#x5165;&#x8BE5;&#x9879;&#xFF09;&#x67E5;&#x770B;&#x5E76;&#x590D;&#x5236;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x7F16;&#x8BD1;&#x540E;&#x7684;bytecode&#x548C;ABI&#xFF1A;<ol>
+<li>bytecode&#xFF1A;<pre><code>608060405234801561001057600080fd5b50604051602080610487833981016040908152905160008054600160a060020a0319163317808255600160a060020a03168152600160208190529290209190915560ff8116610060600282610067565b50506100b1565b81548183558181111561008b5760008381526020902061008b918101908301610090565b505050565b6100ae91905b808211156100aa5760008155600101610096565b5090565b90565b6103c7806100c06000396000f3006080604052600436106100615763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416635c19a95c8114610066578063609ff1bd146100895780639e7b8d61146100b4578063b3f98adc146100d5575b600080fd5b34801561007257600080fd5b50610087600160a060020a03600435166100f0565b005b34801561009557600080fd5b5061009e610250565b6040805160ff9092168252519081900360200190f35b3480156100c057600080fd5b50610087600160a060020a03600435166102bb565b3480156100e157600080fd5b5061008760ff6004351661031b565b33600090815260016020819052604082209081015490919060ff16156101155761024b565b5b600160a060020a0383811660009081526001602081905260409091200154620100009004161580159061016d5750600160a060020a0383811660009081526001602081905260409091200154620100009004163314155b1561019f57600160a060020a039283166000908152600160208190526040909120015462010000900490921691610116565b600160a060020a0383163314156101b55761024b565b506001818101805460ff1916821775ffffffffffffffffffffffffffffffffffffffff0000191662010000600160a060020a0386169081029190911790915560009081526020829052604090209081015460ff16156102435781546001820154600280549091610100900460ff1690811061022c57fe5b60009182526020909120018054909101905561024b565b815481540181555b505050565b600080805b60025460ff821610156102b6578160028260ff1681548110151561027557fe5b906000526020600020016000015411156102ae576002805460ff831690811061029a57fe5b906000526020600020016000015491508092505b600101610255565b505090565b600054600160a060020a0316331415806102f15750600160a060020a0381166000908152600160208190526040909120015460ff165b156102fb57610318565b600160a060020a0381166000908152600160208190526040909120555b50565b3360009081526001602081905260409091209081015460ff1680610344575060025460ff831610155b1561034e57610397565b6001818101805460ff191690911761ff00191661010060ff85169081029190911790915581546002805491929091811061038457fe5b6000918252602090912001805490910190555b50505600a165627a7a723058200864fb02ff362bbc06e105162a9fcbfe289feff2354dbe84cf794f1fb2ec38d60029
+</code></pre></li>
+<li>ABI&#xFF1A;<pre><code>[
+{
+ &quot;constant&quot;: false,
+ &quot;inputs&quot;: [
+     {
+         &quot;name&quot;: &quot;to&quot;,
+         &quot;type&quot;: &quot;address&quot;
+     }
+ ],
+ &quot;name&quot;: &quot;delegate&quot;,
+ &quot;outputs&quot;: [],
+ &quot;payable&quot;: false,
+ &quot;stateMutability&quot;: &quot;nonpayable&quot;,
+ &quot;type&quot;: &quot;function&quot;
+},
+{
+ &quot;constant&quot;: true,
+ &quot;inputs&quot;: [],
+ &quot;name&quot;: &quot;winningProposal&quot;,
+ &quot;outputs&quot;: [
+     {
+         &quot;name&quot;: &quot;_winningProposal&quot;,
+         &quot;type&quot;: &quot;uint8&quot;
+     }
+ ],
+ &quot;payable&quot;: false,
+ &quot;stateMutability&quot;: &quot;view&quot;,
+ &quot;type&quot;: &quot;function&quot;
+},
+{
+ &quot;constant&quot;: false,
+ &quot;inputs&quot;: [
+     {
+         &quot;name&quot;: &quot;toVoter&quot;,
+         &quot;type&quot;: &quot;address&quot;
+     }
+ ],
+ &quot;name&quot;: &quot;giveRightToVote&quot;,
+ &quot;outputs&quot;: [],
+ &quot;payable&quot;: false,
+ &quot;stateMutability&quot;: &quot;nonpayable&quot;,
+ &quot;type&quot;: &quot;function&quot;
+},
+{
+ &quot;constant&quot;: false,
+ &quot;inputs&quot;: [
+     {
+         &quot;name&quot;: &quot;toProposal&quot;,
+         &quot;type&quot;: &quot;uint8&quot;
+     }
+ ],
+ &quot;name&quot;: &quot;vote&quot;,
+ &quot;outputs&quot;: [],
+ &quot;payable&quot;: false,
+ &quot;stateMutability&quot;: &quot;nonpayable&quot;,
+ &quot;type&quot;: &quot;function&quot;
+},
+{
+ &quot;inputs&quot;: [
+     {
+         &quot;name&quot;: &quot;_numProposals&quot;,
+         &quot;type&quot;: &quot;uint8&quot;
+     }
+ ],
+ &quot;payable&quot;: false,
+ &quot;stateMutability&quot;: &quot;nonpayable&quot;,
+ &quot;type&quot;: &quot;constructor&quot;
+}
+]
+</code></pre></li>
+</ol>
+</li>
+<li><p>&#x5C06;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x901A;&#x8FC7;qtum-qt&#x90E8;&#x7F72;&#x5230;&#x79C1;&#x6709;&#x94FE;&#x4E0A;&#x3002;&#x5728;&#x56FE;&#x5F62;&#x754C;&#x9762;&#x9009;&#x62E9;Smart Contracts - Create&#xFF0C;&#x5C06;bytecode&#x548C;ABI&#x7C98;&#x8D34;&#x5230;&#x5BF9;&#x5E94;&#x4F4D;&#x7F6E;&#xFF1B;demo&#x9700;&#x8981;&#x521D;&#x59CB;&#x5316;uint8&#x7C7B;&#x578B;&#x7684;_numProposal&#xFF0C;&#x5728;&#x90E8;&#x7F72;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x65F6;&#x8981;&#x586B;&#x5199;&#xFF1B;&#x521D;&#x59CB;&#x5316;&#x53C2;&#x6570;&#x540E;&#x6211;&#x4EEC;&#x70B9;&#x51FB;&#x53F3;&#x4E0B;&#x89D2;&#x7684;CREATE CONTRACT&#x6309;&#x94AE;&#xFF0C;&#x90E8;&#x7F72;&#x6210;&#x529F;&#x540E;&#x4F1A;&#x8FD4;&#x56DE;Result&#xFF0C;&#x53EF;&#x5728;&#x5176;&#x4E2D;&#x770B;&#x5230;&#x4EA4;&#x6613;ID&#x3001;&#x90E8;&#x7F72;&#x8005;&#x5730;&#x5740;SenderAddress&#x548C;&#x5408;&#x7EA6;&#x7684;&#x90E8;&#x7F72;&#x5730;&#x5740;&#xFF08;&#x7528;&#x4E8E;&#x4E0E;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4EA4;&#x4E92;&#xFF09;ContractAddress&#x3002;
+<img src="Create.jpeg" alt="&#x90E8;&#x7F72;&#x667A;&#x80FD;&#x5408;&#x7EA6;">
+<img src="jieguo.jpeg" alt="&#x90E8;&#x7F72;&#x6210;&#x529F;&#x8FD4;&#x56DE;Result"></p>
+</li>
+<li><p>&#x90E8;&#x7F72;&#x5B8C;&#x6210;&#x540E;&#x53EF;&#x4EE5;&#x5728;&#x4EA4;&#x6613;&#x5217;&#x8868;Transactions&#x4E2D;&#x67E5;&#x770B;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x533A;&#x5757;&#x4FE1;&#x606F;&#x5199;&#x5165;&#xFF0C;&#x4E14;&#x4F1A;&#x8017;&#x8D39;Gas&#x3002;
+<img src="showafterdeploying.jpeg" alt="&#x5728;&#x4EA4;&#x6613;&#x5217;&#x8868;&#x4E2D;&#x67E5;&#x770B;"></p>
+</li>
+</ol>
+<hr>
+<h1 id="&#x4E0E;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4EA4;&#x4E92;"><a name="&#x4E0E;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4EA4;&#x4E92;" class="plugin-anchor" href="#&#x4E0E;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4EA4;&#x4E92;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E0E;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4EA4;&#x4E92;</h1>
+<ol>
+<li>&#x5B8C;&#x6210;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x90E8;&#x7F72;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;Smart Contracts&#x4E0B;&#x7684;Send To&#x548C;Call&#x4E0E;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;&#x7531;&#x4E8E;&#x79C1;&#x6709;&#x94FE;&#x73AF;&#x5883;&#x4E2D;&#x6682;&#x65F6;&#x6CA1;&#x6709;&#x65B0;&#x8282;&#x70B9;&#x548C;&#x7528;&#x6237;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5207;&#x6362;&#x5230;&#x4E3B;&#x94FE;&#xFF0C;&#x5728;Debug Window&#x4E2D;&#x901A;&#x8FC7;getnewaddress&#x547D;&#x4EE4;&#x751F;&#x6210;&#x51E0;&#x4E2A;&#x65B0;&#x7684;&#x5730;&#x5740;&#x6765;&#x8FDB;&#x884C;&#x6A21;&#x62DF;&#xFF0C;&#x540E;&#x671F;&#x53EF;&#x4EE5;&#x52A0;&#x5165;&#x771F;&#x5B9E;&#x7684;&#x7528;&#x6237;&#x5730;&#x5740;&#xFF08;&#x6CE8;&#x610F;&#xFF1A;&#x751F;&#x6210;&#x7684;&#x5730;&#x5740;&#x4E0D;&#x662F;&#x5408;&#x7EA6;&#x9700;&#x8981;&#x4F20;&#x5165;&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236;&#xFF0C;&#x53EF;&#x5728;Debug Window&#x4E2D;&#x901A;&#x8FC7;gethexaddress $address&#x83B7;&#x5F97;&#x5730;&#x5740;&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236;&#xFF0C;&#x4E14;&#x4F20;&#x5165;&#x65F6;&#x4E0D;&#x9700;&#x8981;&#x52A0;0x&#x524D;&#x7F00;&#xFF09;&#x3002;</li>
+<li><p>&#x5728;Call Contract&#x4E2D;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4E2D;&#x6709;&#x8FD4;&#x56DE;&#x7684;&#x51FD;&#x6570;&#x6240;&#x8FD4;&#x56DE;&#x7684;&#x76F8;&#x5173;&#x53C2;&#x6570;&#xFF0C;&#x8F93;&#x5165;&#x5408;&#x7EA6;&#x5730;&#x5740;&#x548C;&#x4E0E;&#x60F3;&#x8981;&#x67E5;&#x770B;&#x7684;&#x53C2;&#x6570;&#x5BF9;&#x5E94;&#x7684;ABI&#x5373;&#x53EF;&#x67E5;&#x770B;&#xFF0C;Call&#x64CD;&#x4F5C;&#x6240;&#x6709;&#x8BA1;&#x7B97;&#x5728;&#x94FE;&#x4E0B;&#x8FDB;&#x884C;&#xFF0C;&#x4E0D;&#x4F1A;&#x6D88;&#x8017;Gas&#x3002;demo&#x4E2D;&#x53EF;&#x4F9B;&#x67E5;&#x770B;&#x7684;&#x662F;&#x6295;&#x7968;&#x80DC;&#x51FA;&#x7ED3;&#x679C;winningProposal&#xFF0C;&#x6211;&#x4EEC;&#x5C1A;&#x672A;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x5199;&#x5165;&#xFF0C;&#x6295;&#x7968;&#x80DC;&#x51FA;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x9ED8;&#x8BA4;&#x503C;0&#x3002;&#xFF08;Function&#x4E2D;&#x7684;&#xFF08;00&#xFF09;&#x7528;&#x4E8E;&#x7ED9;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4F20;&#x9012;Value&#xFF0C;Qtum&#x7F51;&#x7EDC;&#x4E2D;&#x5373;qtum&#xFF0C;&#x5728;Call Contract&#x65F6;&#x53EF;&#x5FFD;&#x7565;&#xFF09;
+<img src="callsmartcontract.jpeg" alt="&#x672A;&#x64CD;&#x4F5C;&#x65F6;Call&#x667A;&#x80FD;&#x5408;&#x7EA6;"></p>
+</li>
+<li><p>&#x5728;Send To&#x4E2D;&#x7684;&#x5BF9;&#x5E94;&#x4F4D;&#x7F6E;&#x7C98;&#x8D34;&#x5165;&#x5408;&#x7EA6;&#x5730;&#x5740;&#x548C;ABI&#xFF0C;&#x53EF;&#x8C03;&#x7528;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x51FD;&#x6570;&#xFF0C;send to&#x4F1A;&#x5411;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4E2D;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x5E76;&#x5199;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x8BA1;&#x7B97;&#x548C;&#x5B58;&#x50A8;&#x5728;&#x94FE;&#x4E0A;&#x8FDB;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x6D88;&#x8017;Gas&#x3002;&#x8FD9;&#x65F6;&#x7684;&#xFF08;00&#xFF09;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5411;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4F20;&#x9012;qtum&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4E2D;&#x7F16;&#x5199;&#x9500;&#x6BC1;&#x5730;&#x5740;&#xFF0C;&#x5728;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x88AB;&#x6240;&#x6709;&#x8005;&#x58F0;&#x660E;&#x9500;&#x6BC1;&#x540E;&#x8FD9;&#x4E9B;qtum&#x4F1A;&#x8FD4;&#x56DE;&#x8FDB;&#x8BE5;&#x8D26;&#x6237;&#x3002;
+<img src="functionsendto.jpeg" alt="&#x667A;&#x80FD;&#x5408;&#x7EA6;send to&#x51FD;&#x6570;"></p>
+</li>
+<li><p>&#x51E0;&#x4E2A;&#x51FD;&#x6570;&#x6211;&#x4EEC;&#x505A;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#xFF1A;</p>
+<ol>
+<li><p>giveRightToVote&#x51FD;&#x6570;&#x53EA;&#x80FD;&#x7531;chairman&#x6765;&#x8C03;&#x7528;&#xFF0C;&#x5B9E;&#x73B0;&#x6295;&#x7968;&#x6743;&#x5229;&#x7684;&#x4E0B;&#x53D1;&#xFF0C;chairman&#x5373;&#x90E8;&#x7F72;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x83B7;&#x5F97;&#x6295;&#x7968;&#x6743;&#x7684;&#x5730;&#x5740;&#x7684;weight +1&#xFF1B;</p>
+</li>
+<li><p>delegate&#x51FD;&#x6570;&#x7531;&#x5177;&#x6709;&#x6295;&#x7968;&#x6743;&#x7684;&#x5730;&#x5740;&#x8C03;&#x7528;&#xFF0C;&#x53EF;&#x5C06;&#x81EA;&#x5DF1;&#x7684;&#x6295;&#x7968;&#x6743;&#x59D4;&#x6258;&#x7ED9;&#x6307;&#x5B9A;&#x5730;&#x5740;&#x5E76;&#x8BB0;&#x5F55;&#x5982;delegate&#x53D8;&#x91CF;&#xFF0C;&#x82E5;&#x88AB;&#x59D4;&#x6258;&#x7684;&#x5730;&#x5740;&#x7684;&#x6295;&#x7968;&#x6743;&#x4E5F;&#x5DF2;&#x59D4;&#x6258;&#x7ED9;&#x5176;&#x4ED6;&#x5730;&#x5740;&#xFF0C;&#x5219;&#x73B0;&#x5728;&#x7684;&#x6295;&#x7968;&#x6743;&#x90FD;&#x96C6;&#x4E2D;&#x4E8E;&#x6700;&#x7EC8;&#x7684;&#x88AB;&#x59D4;&#x6258;&#x4EBA;&#xFF1B;</p>
+</li>
+<li><p>vote&#x51FD;&#x6570;&#x5373;&#x5411;&#x67D0;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x6295;&#x7968;&#xFF08;&#x505A;&#x4E86;&#x5730;&#x5740;&#x6620;&#x5C04;&#xFF0C;&#x53EF;&#x7528;&#x7F16;&#x53F7;&#x4EE3;&#x66FF;&#xFF0C;&#x4F20;&#x5165;&#x7684;&#x662F;Proposal&#x7F16;&#x53F7;&#xFF09;&#xFF0C;&#x7531;&#x5177;&#x6709;&#x6295;&#x7968;&#x6743;&#x7684;&#x5730;&#x5740;&#x8C03;&#x7528;&#xFF0C;&#x6295;&#x7968;&#x540E;&#x5C06;&#x81EA;&#x5DF1;&#x7684;&#x6295;&#x7968;&#x6743;&#x91CD;weight -1&#xFF0C;&#x88AB;&#x6295;&#x7968;&#x7684;Proposal &#x7684;voteCount +1&#xFF1B;</p>
+</li>
+<li><p>winningProposal&#x904D;&#x5386;&#x5019;&#x9009;&#x4EBA;proposal&#x6570;&#x7EC4;&#xFF0C;&#x5C06;voteCount&#x6700;&#x5927;&#x7684;proposal&#x7684;&#x6570;&#x7EC4;&#x4E0B;&#x6807;&#xFF08;&#x7F16;&#x53F7;&#xFF09;&#x8FD4;&#x56DE;&#xFF0C;&#x5B9E;&#x73B0;&#x67E5;&#x770B;&#x6295;&#x7968;&#x80DC;&#x8005;&#x3002;</p>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1 id="&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><a name="&#x6CE8;&#x610F;&#x4E8B;&#x9879;" class="plugin-anchor" href="#&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h1>
+<ul>
+<li>&#x5728;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x90E8;&#x7F72;&#x548C;&#x4EA4;&#x4E92;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E00;&#x5B9A;&#x4E0D;&#x8981;&#x5FD8;&#x8BB0;&#x8BBE;&#x7F6E;&#x6316;&#x77FF;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x5728;Remix&#x4E2D;&#x8981;&#x9009;&#x62E9;&#x5339;&#x914D;&#x7684;solidity&#x7248;&#x672C;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#xFF0C;&#x907F;&#x514D;&#x7248;&#x672C;&#x4E0D;&#x517C;&#x5BB9;&#x9020;&#x6210;&#x7F16;&#x8BD1;&#x9519;&#x8BEF;&#x3002;</li>
+<li>&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x90E8;&#x7F72;&#x540E;&#x9700;&#x8981;&#x7B49;&#x5F85;&#x786E;&#x8BA4;&#x624D;&#x80FD;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;Debug Window&#x4E2D;&#x8F93;&#x5165;getaccountinfo $CONTRACT&#x6216;&#x8005;&#x76F4;&#x63A5;&#x5728;&#x4EA4;&#x6613;&#xFF08;Transaction&#xFF09;&#x5217;&#x8868;&#x4E2D;&#x67E5;&#x770B;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4FE1;&#x606F;&#x3002;</li>
+<li>&#x5728;&#x4E3B;&#x94FE;&#x4E2D;&#x751F;&#x6210;&#x65B0;&#x5730;&#x5740;&#xFF0C;&#x5728;&#x4E0E;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4EA4;&#x4E92;&#x65F6;&#x8981;&#x8F6C;&#x6362;&#x6210;&#x5341;&#x516D;&#x8FDB;&#x5236;&#xFF0C;&#x4E0D;&#x52A0;0x&#x524D;&#x7F00;&#x3002;</li>
+<li>&#x90E8;&#x7F72;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x548C;send to&#x9700;&#x8981;&#x6D88;&#x8017;gas&#xFF0C;&#x5982;&#x679C;&#x662F;&#x6D4B;&#x8BD5;&#x53EF;&#x4EE5;&#x5148;&#x7ED9;&#x9700;&#x8981;&#x64CD;&#x4F5C;&#x7684;&#x5730;&#x5740;&#x8FDB;&#x884C;&#x8F6C;&#x8D26;&#xFF0C;&#x9884;&#x7559;&#x9002;&#x5F53;&#x7684;qtum&#x4F5C;&#x4E3A;Gas&#x3002;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../One-Click-Launch-Chain/" class="navigation navigation-prev " aria-label="Previous page: QtumX一键发链教程（公测）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../SCAR-Consensus/" class="navigation navigation-next " aria-label="Next page: SCAR：一种可伸缩共识算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"基于QtumX搭建自己的Dapp","level":"7.4","depth":1,"next":{"title":"SCAR：一种可伸缩共识算法","level":"7.5","depth":1,"path":"SCAR-Consensus/README.md","ref":"SCAR-Consensus/README.md","articles":[]},"previous":{"title":"QtumX一键发链教程（公测）","level":"7.3","depth":1,"path":"One-Click-Launch-Chain/README.md","ref":"One-Click-Launch-Chain/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"zh","gitbook":"*"},"file":{"path":"QtumX-Smart-Contract/README.md","mtime":"2020-07-01T00:18:12.417Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-01T00:26:05.312Z"},"basePath":"..","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

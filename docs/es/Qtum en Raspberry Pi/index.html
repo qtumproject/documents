@@ -1,0 +1,636 @@
+
+<!DOCTYPE HTML>
+<html lang="es" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Staking con Raspberry Pi · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../freebsd/" />
+    
+    
+    <link rel="prev" href="../Qtum-AWS/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escribe para buscar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduccion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Usando Qtum</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Tutorial de uso de billetera QTUM/">
+            
+                <a href="../Tutorial de uso de billetera QTUM/">
+            
+                    
+                    Tutorial de uso de billetera Qtum
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Qtum Mejores Practicas/">
+            
+                <a href="../Qtum Mejores Practicas/">
+            
+                    
+                    Mejores Practicas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../ActualizaQtum/">
+            
+                <a href="../ActualizaQtum/">
+            
+                    
+                    Como Actualizar la billetera de Qtum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../comandos/">
+            
+                <a href="../comandos/">
+            
+                    
+                    Comandos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../bootstrap/">
+            
+                <a href="../bootstrap/">
+            
+                    
+                    Como usar el bootstrap.dat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../actualizar/">
+            
+                <a href="../actualizar/">
+            
+                    
+                    Como actualizar Qtum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Guia-exchanges.html">
+            
+                <a href="../Guia-exchanges.html">
+            
+                    
+                    Guia para exchanges
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Webwallet/">
+            
+                <a href="../Webwallet/">
+            
+                    
+                    Billetera Web
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../OfflineStaking.html">
+            
+                <a href="../OfflineStaking.html">
+            
+                    
+                    Staking Fuera de Linea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../qtumrepo/">
+            
+                <a href="../qtumrepo/">
+            
+                    
+                    Repositorios de Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../Qtum-AWS/">
+            
+                <a href="../Qtum-AWS/">
+            
+                    
+                    Qtum en AWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Staking con Raspberry Pi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../freebsd/">
+            
+                <a href="../freebsd/">
+            
+                    
+                    Staking con FreeBSD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Como usar la billetera movil</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../Qtum Billetera Movil/">
+            
+                <a href="../Qtum Billetera Movil/">
+            
+                    
+                    Como usar la billetera movil
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Qtum en la nube</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../gcp/">
+            
+                <a href="../gcp/">
+            
+                    
+                    Qtum en Google Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publicado con GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Staking con Raspberry Pi</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><a href="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/#" target="_blank">
+</a></p>
+<h1 id="stake-con-raspberry-pi"><a name="stake-con-raspberry-pi" class="plugin-anchor" href="#stake-con-raspberry-pi"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://docs.qtum.site/en/" target="_blank">Stake Con Raspberry Pi</a></h1>
+<h1 id="qtum-en-raspberry-pi"><a name="qtum-en-raspberry-pi" class="plugin-anchor" href="#qtum-en-raspberry-pi"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum en Raspberry Pi</h1>
+<ol>
+<li><a href="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/#Getting a Stakebox" target="_blank">Conseguir una Stakebox</a></li>
+<li><a href="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/#Downloading Qtum Raspbian" target="_blank">Descargando Qtum Raspbian</a></li>
+<li><a href="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/#Screenshots of Qtum Raspbian" target="_blank">Capturas de pantalla de Qtum Raspbian</a></li>
+<li><a href="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/#Installing Qtum via Qtum Raspbian repository" target="_blank">Instalaci&#xF3;n de Qtum a trav&#xE9;s del repositorio Qtum Raspbian</a> <strong>(solo es necesario si no est&#xE1; utilizando una stakebox Qtum o no est&#xE1; utilizando la imagen Qtum Raspbian)</strong></li>
+<li><a href="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/#Raspberry_Pi_Zero" target="_blank">Raspberry Pi Zero</a></li>
+<li><a href="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/#Protecting access with a basic firewall" target="_blank">Configurar un firewall en Raspbian</a></li>
+<li><a href="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/#Launching Qtum daemon" target="_blank">Lanzamiento del Qtum daemon </a></li>
+<li><a href="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/#Encrypting wallet" target="_blank">Encryptacion de billetera </a></li>
+<li><a href="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/#Staking" target="_blank">Staking</a></li>
+<li><a href="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/#How to backup to a separate device" target="_blank">Apoyo</a></li>
+</ol>
+<h3 id="conseguir-una-stakebox"><a name="conseguir-una-stakebox" class="plugin-anchor" href="#conseguir-una-stakebox"><i class="fa fa-link" aria-hidden="true"></i></a>Conseguir una Stakebox</h3>
+<p>Hay varias formas de ejecutar Qtum en una Raspberry Pi, quiz&#xE1;s la forma m&#xE1;s f&#xE1;cil es obtener una <strong> Qtum Stakebox </strong>, puede ordenarla desde aqu&#xED;:</p>
+<p><a href="https://www.stakebox.org/products/qtum-stakebox" target="_blank">https://www.stakebox.org/products/qtum-stakebox</a></p>
+<h3 id="descargando-qtum-raspbian"><a name="descargando-qtum-raspbian" class="plugin-anchor" href="#descargando-qtum-raspbian"><i class="fa fa-link" aria-hidden="true"></i></a>Descargando Qtum Raspbian</h3>
+<p>Si no desea comprar o ya posee una stakebox y solo desea obtener la &#xFA;ltima versi&#xF3;n de Raspbian con Qtum preinstalada con el repositorio oficial de Qtum, puede descargar las im&#xE1;genes de Raspbian usted mismo:</p>
+<h1 id="&#xA1;nuevo-lanzamiento-de-qtum-raspbian"><a name="&#xA1;nuevo-lanzamiento-de-qtum-raspbian" class="plugin-anchor" href="#&#xA1;nuevo-lanzamiento-de-qtum-raspbian"><i class="fa fa-link" aria-hidden="true"></i></a>&#xA1;Nuevo lanzamiento de Qtum Raspbian!</h1>
+<h2 id="esta-nueva-versi&#xF3;n-trae-grandes-cambios-incluidas-versiones-optimizadas-para-raspberry-pi-4-y-raspberry-pi-zero"><a name="esta-nueva-versi&#xF3;n-trae-grandes-cambios-incluidas-versiones-optimizadas-para-raspberry-pi-4-y-raspberry-pi-zero" class="plugin-anchor" href="#esta-nueva-versi&#xF3;n-trae-grandes-cambios-incluidas-versiones-optimizadas-para-raspberry-pi-4-y-raspberry-pi-zero"><i class="fa fa-link" aria-hidden="true"></i></a>Esta nueva versi&#xF3;n trae grandes cambios, incluidas versiones optimizadas para Raspberry Pi 4 y Raspberry Pi Zero.</h2>
+<h3 id="registro-de-cambios"><a name="registro-de-cambios" class="plugin-anchor" href="#registro-de-cambios"><i class="fa fa-link" aria-hidden="true"></i></a>Registro de cambios:</h3>
+<ul>
+<li>Actualice a la versi&#xF3;n Debian Buster 10</li>
+<li>Limpiado archivos innecesarios</li>
+<li>Zram mejorado y archivo Swap aumentado hasta 2GB (RPI Zero)</li>
+<li>Qtum 0.18.0 </li>
+<li>Lanzador Testnet disponible</li>
+<li>Los lanzadores Qtum ahora est&#xE1;n en la secci&#xF3;n &quot;Internet&quot; en el men&#xFA; de aplicaciones</li>
+<li>Correcci&#xF3;n de errores</li>
+<li>Versi&#xF3;n de lanzamiento de solar 1.0 incluida</li>
+<li>M&#xE1;s fondos de pantalla</li>
+</ul>
+<h3 id="descargar-enlaces"><a name="descargar-enlaces" class="plugin-anchor" href="#descargar-enlaces"><i class="fa fa-link" aria-hidden="true"></i></a>Descargar enlaces:</h3>
+<h4 id="qtum-raspbian-64bit-recomendado-de-raspberry-pi-2---raspberry-pi-4"><a name="qtum-raspbian-64bit-recomendado-de-raspberry-pi-2---raspberry-pi-4" class="plugin-anchor" href="#qtum-raspbian-64bit-recomendado-de-raspberry-pi-2---raspberry-pi-4"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum Raspbian 64bit (Recomendado de Raspberry Pi 2 - Raspberry Pi 4)</h4>
+<p><a href="https://raspbianimages.s3.amazonaws.com/2020-02-23-Qtum-Raspbian.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/2020-02-23-Qtum-Raspbian.zip</a></p>
+<p><a href="https://raspbianimages.s3.amazonaws.com/2020-02-23-Qtum-Raspbian-lite.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/2020-02-23-Qtum-Raspbian-lite.zip</a></p>
+<h3 id="grabando-la-imagen-qtum-raspbian-en-tu-tarjeta-sd"><a name="grabando-la-imagen-qtum-raspbian-en-tu-tarjeta-sd" class="plugin-anchor" href="#grabando-la-imagen-qtum-raspbian-en-tu-tarjeta-sd"><i class="fa fa-link" aria-hidden="true"></i></a>&quot;Grabando&quot; la imagen Qtum Raspbian en tu tarjeta SD</h3>
+<p>Por favor Mire este video tutorial que muestra c&#xF3;mo descargar, grabar y usar su imagen Qtum Raspbian</p>
+<p><a href="https://www.youtube.com/watch?v=0W6NlIk7Tgw&amp;t=0s" target="_blank">https://www.youtube.com/watch?v=0W6NlIk7Tgw&amp;t=0s</a></p>
+<h2 id="raspberry-pi-zero"><a name="raspberry-pi-zero" class="plugin-anchor" href="#raspberry-pi-zero"><i class="fa fa-link" aria-hidden="true"></i></a>Raspberry Pi Zero</h2>
+<p>Qtum Raspbian ahora es compatible con Pi Zero !. Este es un dispositivo de $ 5 que tiene solo 512 MB de RAM y una CPU de 1 n&#xFA;cleo. &#xA1;Esto hace que Pi Zero sea la soluci&#xF3;n m&#xE1;s rentable para tener una stakingbox Qtum!</p>
+<p>El proceso de instalaci&#xF3;n de Qtum Raspbian en el Pi Zero es el mismo que en el otro Raspberry Pis, sin embargo, esta versi&#xF3;n se recomienda para el Zero &quot;</p>
+<h4 id="qtum-pizero-recomendado-para-raspberry-pi-1-y-pi-zero"><a name="qtum-pizero-recomendado-para-raspberry-pi-1-y-pi-zero" class="plugin-anchor" href="#qtum-pizero-recomendado-para-raspberry-pi-1-y-pi-zero"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum PiZero (Recomendado para Raspberry Pi 1 y Pi Zero)</h4>
+<p><a href="https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero.zip</a></p>
+<p><a href="https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero-lite.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero-lite.zip</a></p>
+<p>La versi&#xF3;n de escritorio funciona y se puede usar con Pi Zero, pero encontrar&#xE1; un mejor rendimiento con la versi&#xF3;n &quot;Lite&quot;, ya que no tiene una l&#xED;nea de comando de escritorio, solo.</p>
+<h3 id="restricciones-de-pi-zero-ram"><a name="restricciones-de-pi-zero-ram" class="plugin-anchor" href="#restricciones-de-pi-zero-ram"><i class="fa fa-link" aria-hidden="true"></i></a>Restricciones de Pi Zero RAM</h3>
+<p>El Pi Zero tiene solo 512 MB de RAM, y una parte de ese RAM se &quot;comparte&quot; con la salida de video, lo que le da un poco menos de 500 MB de RAM. Qtum Raspbian tiene ZRAM habilitado de forma predeterminada, esto comprime su RAM para permitirle usar m&#xE1;s datos, sin embargo, para garantizar la estabilidad, debe habilitar SWAP.</p>
+<h3 id="&#xBF;qu&#xE9;-es-swap-de-todos-modos"><a name="&#xBF;qu&#xE9;-es-swap-de-todos-modos" class="plugin-anchor" href="#&#xBF;qu&#xE9;-es-swap-de-todos-modos"><i class="fa fa-link" aria-hidden="true"></i></a>&#xBF;Qu&#xE9; es SWAP de todos modos?</h3>
+<p>SWAP enables &quot;virtual memory&quot;, it uses a portion of your disk to store data that cannot be stored in RAM, this helps devices like the Pi Zero to continue running without crashing even if the applications are using more than the 512MB RAM included with the Pi Zero.</p>
+<h3 id="&#xBF;c&#xF3;mo-habilitamos-swap"><a name="&#xBF;c&#xF3;mo-habilitamos-swap" class="plugin-anchor" href="#&#xBF;c&#xF3;mo-habilitamos-swap"><i class="fa fa-link" aria-hidden="true"></i></a>&#xBF;C&#xF3;mo habilitamos SWAP?</h3>
+<p>Habilitar SWAP en Pi Zero es extremadamente f&#xE1;cil:</p>
+<ol>
+<li>Abra una terminal como se muestra en la siguiente imagen </li>
+</ol>
+<p><img src="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/2zero.png" alt="2zero"></p>
+<p>Dentro de la terminal, escriba &quot;sudo dphys-swapfile setup&quot; y presione enter</p>
+<p>Ver&#xE1; aparecer un texto y una confirmaci&#xF3;n de que se est&#xE1; generando su archivo SWAP de 2 gb.</p>
+<ol>
+<li><p>A&#xFA;n dentro de la misma terminal, escribe &quot;sudo dphys-swapfile swapon&quot; y presiona enter. Esto no te dar&#xE1; ninguna confirmaci&#xF3;n, sin embargo, &#xA1;tu archivo SWAP ha sido configurado y activado !. Solo necesita hacer esto una vez, el Pi activar&#xE1; su archivo SWAP en caso de reinicio / apagado.</p>
+<p><img src="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/3zero.png" alt="3zero"></p>
+</li>
+<li><p>Aqu&#xED; podemos ver que el archivo SWAP est&#xE1; activo, lo que nos da un total de 2,42 GB de RAM (SWAP y ZRAM incluidos)</p>
+<p><img src="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/4zero.png" alt="4zero"></p>
+</li>
+</ol>
+<h3 id="&#xA1;nota-importante"><a name="&#xA1;nota-importante" class="plugin-anchor" href="#&#xA1;nota-importante"><i class="fa fa-link" aria-hidden="true"></i></a>&#xA1;NOTA IMPORTANTE!</h3>
+<p><strong>Qtum raspbian </strong> el usuario predeterminado es <strong> qtum </strong> y la contrase&#xF1;a predeterminada es <strong> qtum1234 </strong>. Deber&#xE1; ingresarlos en el primer inicio de sesi&#xF3;n y el sistema de inicio de sesi&#xF3;n le pedir&#xE1; que cambie su contrase&#xF1;a de inmediato, &#xA1;aseg&#xFA;rese de usar una contrase&#xF1;a segura!</p>
+<h3 id="capturas-de-pantalla-de-qtum-raspbian"><a name="capturas-de-pantalla-de-qtum-raspbian" class="plugin-anchor" href="#capturas-de-pantalla-de-qtum-raspbian"><i class="fa fa-link" aria-hidden="true"></i></a>Capturas de pantalla de Qtum Raspbian</h3>
+<p><img src="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/qtumrasp1.png" alt="qtumrasp1"></p>
+<p>Para iniciar Qtum, debemos ir al men&#xFA; e ir a internet -&gt; Qtum</p>
+<p><img src="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/qtumrasp2.png" alt="qtumrasp2"></p>
+<p>Una vez que haga clic en &#xE9;l, ver&#xE1; la siguiente pantalla que menciona algunos detalles sobre el uso del disco y el espacio disponible en su Raspberry Pi.</p>
+<p><img src="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/qtumrasp3.png" alt="qtumrasp3"></p>
+<p>&#xA1;Despu&#xE9;s de hacer clic en Aceptar, su Raspberry Pi comenzar&#xE1; a sincronizarse!</p>
+<p><img src="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/qtumrasp4.png" alt="qtumrasp4"></p>
+<p>Sincronizar su raspberry puede tomar desde un par de horas hasta un d&#xED;a, ten paciencia.</p>
+<p><img src="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/qtumrasp5.png" alt="qtumrasp5"></p>
+<p>La imagen raspbian de Qtum tambi&#xE9;n tiene algunos fondos de pantalla geniales para elegir:</p>
+<p><img src="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/wallpaper1.png" alt="wallpaper1"></p>
+<p><img src="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/wallpaper2.png" alt="wallpaper2"></p>
+<p><img src="https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/wallpaper3.png" alt="wallpaper3"></p>
+<h2 id="instalaci&#xF3;n-de-qtum-a-trav&#xE9;s-del-repositorio-qtum-raspbian"><a name="instalaci&#xF3;n-de-qtum-a-trav&#xE9;s-del-repositorio-qtum-raspbian" class="plugin-anchor" href="#instalaci&#xF3;n-de-qtum-a-trav&#xE9;s-del-repositorio-qtum-raspbian"><i class="fa fa-link" aria-hidden="true"></i></a>Instalaci&#xF3;n de Qtum a trav&#xE9;s del repositorio Qtum Raspbian</h2>
+<p>Si est&#xE1; utilizando una instalaci&#xF3;n raspbian <strong> &quot;normal&quot; </strong>, puede agregar el repositorio Qtum para instalar Qtum y mantener las actualizaciones f&#xE1;cilmente.</p>
+<h3 id="instalar-dirmngr-y-apt-transport-https"><a name="instalar-dirmngr-y-apt-transport-https" class="plugin-anchor" href="#instalar-dirmngr-y-apt-transport-https"><i class="fa fa-link" aria-hidden="true"></i></a>Instalar dirmngr y apt-transport https</h3>
+<pre><code>sudo apt install -y dirmngr apt-transport-https
+</code></pre><h3 id="agregar-clave-p&#xFA;blica-qtum"><a name="agregar-clave-p&#xFA;blica-qtum" class="plugin-anchor" href="#agregar-clave-p&#xFA;blica-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Agregar clave p&#xFA;blica qtum</h3>
+<pre><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BF5B197D
+</code></pre><h3 id="agregar-repositorio-a-sus-fuentes-apt"><a name="agregar-repositorio-a-sus-fuentes-apt" class="plugin-anchor" href="#agregar-repositorio-a-sus-fuentes-apt"><i class="fa fa-link" aria-hidden="true"></i></a>Agregar repositorio a sus fuentes APT</h3>
+<p>`sudo su - logueate como root primero</p>
+<pre><code>echo &quot;deb https://repo.qtum.info/apt/raspbian/ jessie main&quot; &gt;&gt; /etc/apt/sources.list` or`echo &quot;deb https://repo.qtum.info/apt/raspbian/ stretch main&quot; &gt;&gt; /etc/apt/sources.list
+</code></pre><p>Esto agregar&#xE1; el repositorio a su archivo de fuentes APT.</p>
+<h3 id="actualizar-fuentes-apt-e-instalar-qtum"><a name="actualizar-fuentes-apt-e-instalar-qtum" class="plugin-anchor" href="#actualizar-fuentes-apt-e-instalar-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Actualizar fuentes APT e instalar Qtum</h3>
+<pre><code>sudo apt update &amp;&amp; sudo apt install qtum
+</code></pre><p>Al hacer esto, actualizaremos nuestras fuentes e instalaremos Qtum en nuestra Raspberry Box, que ahora puede actuar como un servidor / nodo de staking.</p>
+<h2 id="cambiar-contrase&#xF1;a-predeterminada"><a name="cambiar-contrase&#xF1;a-predeterminada" class="plugin-anchor" href="#cambiar-contrase&#xF1;a-predeterminada"><i class="fa fa-link" aria-hidden="true"></i></a>Cambiar contrase&#xF1;a predeterminada</h2>
+<p><strong>TENGA EN CUENTA: solo necesitar&#xE1; hacerlo si est&#xE1; utilizando una imagen raspbian &quot;limpia&quot;; no necesitar&#xE1; hacer esto si est&#xE1; utilizando un Stakebox o el Qtum Raspbian oficial</strong></p>
+<p>Esta opci&#xF3;n se recomienda por razones de seguridad, la contrase&#xF1;a predeterminada en el pi es bien conocida, se recomienda cambiarla al iniciar sesi&#xF3;n por primera vez.</p>
+<p>Para cambiar simplemente escriba: <code>passwd</code></p>
+<p>El mensaje le pedir&#xE1; que escriba y repita la nueva contrase&#xF1;a para confirmar.</p>
+<h2 id="protecci&#xF3;n-del-acceso-con-un-firewall-b&#xE1;sico"><a name="protecci&#xF3;n-del-acceso-con-un-firewall-b&#xE1;sico" class="plugin-anchor" href="#protecci&#xF3;n-del-acceso-con-un-firewall-b&#xE1;sico"><i class="fa fa-link" aria-hidden="true"></i></a>Protecci&#xF3;n del acceso con un firewall b&#xE1;sico</h2>
+<p>Bueno, nuestra raspberry es solo para staking, no es necesario tener todos esos puertos abiertos, cerremos todo lo que no necesitamos y solo permitamos el acceso a los servicios necesarios.</p>
+<p>Primero, instalemos UFW (firewall sin complicaciones) que es una interfaz f&#xE1;cil de usar para iptables</p>
+<pre><code>sudo apt install ufw
+</code></pre><p>Una vez que est&#xE9; instalado, procedemos con los permisos de acceso, definiremos qu&#xE9; puertos ser&#xE1;n accesibles. Veamos primero qu&#xE9; est&#xE1; abierto:</p>
+<p><code>sudo ufw status</code> Esto deber&#xED;a mostrar algo como esto:</p>
+<pre><code>Status: active
+To Action From
+-- ------ ----
+22 ALLOW Anywhere
+</code></pre><h4 id="ok-es-hora-de-comenzar-a-cerrar-el-acceso-escriba-lo-siguiente"><a name="ok-es-hora-de-comenzar-a-cerrar-el-acceso-escriba-lo-siguiente" class="plugin-anchor" href="#ok-es-hora-de-comenzar-a-cerrar-el-acceso-escriba-lo-siguiente"><i class="fa fa-link" aria-hidden="true"></i></a>Ok, es hora de comenzar a cerrar el acceso, escriba lo siguiente:</h4>
+<pre><code>sudo ufw default deny incoming
+sudo ufw allow 3888/tcp
+</code></pre><p>Aqu&#xED; hemos definido los conceptos b&#xE1;sicos, cerrando todo excepto los puertos 3888 y 3889 que Qtum utiliza para funcionar.</p>
+<p>Si usa SSH, se recomienda permitir solo el acceso desde la red local.</p>
+<pre><code>sudo ufw allow from 196.168.0.0/24 to any port 22
+</code></pre><h2 id="binarios-disponibles-en-raspberry-pi"><a name="binarios-disponibles-en-raspberry-pi" class="plugin-anchor" href="#binarios-disponibles-en-raspberry-pi"><i class="fa fa-link" aria-hidden="true"></i></a>Binarios disponibles en Raspberry Pi</h2>
+<ul>
+<li>qtumd</li>
+<li>qtum-cli</li>
+<li>qtum-qt </li>
+<li>qtum-tx</li>
+</ul>
+<h2 id="lanzamiento-qtum-daemon"><a name="lanzamiento-qtum-daemon" class="plugin-anchor" href="#lanzamiento-qtum-daemon"><i class="fa fa-link" aria-hidden="true"></i></a>Lanzamiento Qtum daemon</h2>
+<p>Todo lo que necesitamos hacer para iniciar el daemon Qtum es escribir: <code>qtumd -daemon</code></p>
+<p>Tan pronto como escriba esto, la billetera crear&#xE1; el archivo wallet.dat entre otros archivos (si a&#xFA;n no est&#xE1;n all&#xED;). La billetera se ejecutar&#xE1; y comenzar&#xE1; a sincronizarse instant&#xE1;neamente desde los otros nodos de Blockchain, esto puede demorar algunas horas en completarse asi que puede tomar un caf&#xE9; y dejar que se sincronice.</p>
+<h2 id="lanzamiento-de-qtum-qt"><a name="lanzamiento-de-qtum-qt" class="plugin-anchor" href="#lanzamiento-de-qtum-qt"><i class="fa fa-link" aria-hidden="true"></i></a>Lanzamiento de Qtum-Qt</h2>
+<p>Si est&#xE1; utilizando la interfaz de escritorio de Raspberry Pi, todo lo que necesita hacer es navegar al men&#xFA; de aplicaciones-&gt; otro-&gt; qtum-qt</p>
+<h2 id="cifrando-billetera"><a name="cifrando-billetera" class="plugin-anchor" href="#cifrando-billetera"><i class="fa fa-link" aria-hidden="true"></i></a>Cifrando billetera</h2>
+<p>Podemos encriptar la billetera en cualquier momento, es mejor hacerlo antes de continuar.</p>
+<p>Para hacer esto, escriba lo siguiente en la l&#xED;nea de comando:</p>
+<pre><code>qtum-cli encryptwallet yourpassword
+</code></pre><p>Esto encriptar&#xE1; la billetera que a su vez cierra el daemon, ver&#xE1; el siguiente mensaje:</p>
+<p>`billetera encriptada; El servidor Qtum se detiene, reinicie para ejecutar con la billetera cifrada. Si ya realiz&#xF3; una copia de seguridad antes de cifrar, ** necesita hacer una nueva copia de seguridad.</p>
+<p><code>qtum-cli getaccountaddress</code> &quot;&quot; -&gt; Justo despu&#xE9;s de iniciar el daemon, puede obtener la direcci&#xF3;n de su billetera escribiendo esto.</p>
+<p>Puede enviar monedas Qtum a la direcci&#xF3;n que acabamos de obtener del daemon, recuerde que esas transacciones requieren al menos m&#xE1;s de 500 confirmaciones antes de que sean lo suficientemente maduras para el staking.</p>
+<h2 id="staking"><a name="staking" class="plugin-anchor" href="#staking"><i class="fa fa-link" aria-hidden="true"></i></a>Staking</h2>
+<p>Ahora que hemos esperado hasta tener al menos 501 confirmaciones en nuestra transaccion entrante, ya podemos participar en staking. Sin embargo, si nuestra billetera esta cifrada (la cual ciframos por razones de seguridad), no podremos participar en staking. Abramos nuestra billetera para participar en staking utilizando la linea de comandos!.</p>
+<pre><code>qtum-cli walletpassphrase password 999999999 true
+</code></pre><p>&#xA1;El comando anterior desbloquear&#xE1; la billetera por 31.6 a&#xF1;os! eso deber&#xED;a ser suficiente por ahora. Tenga en cuenta que esto no desbloquear&#xE1; su copia de seguridad, solo la billetera que se est&#xE1; ejecutando en este momento.</p>
+<p>Ahora que hemos desbloqueado nuestra billetera, debemos esperar hasta que tengamos m&#xE1;s de 501 confirmaciones para ser elegibles para el staking, si ya lo hacemos, es cuesti&#xF3;n de tiempo que variar&#xE1; dependiendo del peso de la red frente al peso de su billetera.</p>
+<h2 id="verificaci&#xF3;n-de-saldo"><a name="verificaci&#xF3;n-de-saldo" class="plugin-anchor" href="#verificaci&#xF3;n-de-saldo"><i class="fa fa-link" aria-hidden="true"></i></a>Verificaci&#xF3;n de saldo</h2>
+<p>Para verificar su saldo, escriba qtum-cli getinfo, esto mostrar&#xE1; informaci&#xF3;n general, incluido su saldo disponible y el saldo en staking</p>
+<h2 id="verificar-transacciones"><a name="verificar-transacciones" class="plugin-anchor" href="#verificar-transacciones"><i class="fa fa-link" aria-hidden="true"></i></a>Verificar transacciones</h2>
+<p>Para verificar sus transacciones (entrantes y salientes) escriba qtum-cli listtransactions</p>
+<h2 id="verificar-informaci&#xF3;n-de-staking"><a name="verificar-informaci&#xF3;n-de-staking" class="plugin-anchor" href="#verificar-informaci&#xF3;n-de-staking"><i class="fa fa-link" aria-hidden="true"></i></a>Verificar informaci&#xF3;n de staking</h2>
+<p>To check Qtum&apos;s staking information, type qtum-cli getstakinginfo</p>
+<h2 id="consejos-de-staking"><a name="consejos-de-staking" class="plugin-anchor" href="#consejos-de-staking"><i class="fa fa-link" aria-hidden="true"></i></a>Consejos de staking</h2>
+<p>Staking realmente depende del peso de la red frente al peso de su billetera, que se basa en la cantidad de monedas que tiene, un mayor peso aumenta sus posibilidades de alcanzar un bloque.</p>
+<p>Si tiene una gran cantidad de monedas, es una buena idea dividirlas en transacciones separadas, por ejemplo, si tiene 10,000 QTUM, es mejor enviar 10 transacciones de 1000 QTUM cada una a su billetera, cada una genera una entrada UTXO que participar&#xE1; en el staking. Esto optimiza el proceso de replanteo y funciona mucho mejor que solo una gran entrada de 10.000 QTUM.</p>
+<p>Si desea dividir sus monedas en diferentes direcciones dentro de su billetera Rasbperry Pi, escriba lo siguiente para obtener nuevas direcciones dentro de su billetera: qtum-cli getnewaddress Cada vez que escriba esto, obtendr&#xE1; una nueva direcci&#xF3;n, QTUM puede generar cualquier cantidad de las direcciones que desea, pero tenga en cuenta que si supera las 100 direcciones nuevas, es posible que desee hacer una nueva copia de seguridad de su billetera.</p>
+<h2 id="actualizando-billetera"><a name="actualizando-billetera" class="plugin-anchor" href="#actualizando-billetera"><i class="fa fa-link" aria-hidden="true"></i></a>Actualizando billetera</h2>
+<p>Siempre estamos lanzando nuevas actualizaciones, a veces es para agregar nuevas funciones o corregir errores. En cualquier caso, la actualizaci&#xF3;n es muy f&#xE1;cil, todo lo que tiene que hacer es escribir <code>sudo apt update &amp;&amp; sudo apt upgrade -y</code></p>
+<h2 id="c&#xF3;mo-hacer-una-copia-de-seguridad-en-un-dispositivo-separado"><a name="c&#xF3;mo-hacer-una-copia-de-seguridad-en-un-dispositivo-separado" class="plugin-anchor" href="#c&#xF3;mo-hacer-una-copia-de-seguridad-en-un-dispositivo-separado"><i class="fa fa-link" aria-hidden="true"></i></a>C&#xF3;mo hacer una copia de seguridad en un dispositivo separado</h2>
+<p>Hacer una copia de seguridad en Raspberry es simple, solo necesita copiar el archivo wallet.dat, pero &#xBF;c&#xF3;mo exporta esto a otro dispositivo?</p>
+<p>Primero, descargaremos Filezilla, que es un servidor FTP / SFTP seguro y f&#xE1;cil de usar.</p>
+<p><a href="https://filezilla-project.org/" target="_blank">https://filezilla-project.org</a></p>
+<p><img src="https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla1.png" alt="img"></p>
+<p>La instalaci&#xF3;n es como cualquier otra aplicaci&#xF3;n de Windows.</p>
+<p><img src="https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla2.png" alt="img"></p>
+<p>Cuando finaliza el instalador, iniciamos Filezilla y somos recibidos con esta pantalla, procedamos y agreguemos nuestra clave ssh previamente creada</p>
+<p>Entramos en Editar -&gt; Configuraci&#xF3;n -&gt; SFTP. Esto nos dar&#xE1; la siguiente pantalla en la que podremos importar nuestra clave SSH.</p>
+<p><img src="https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla3.png" alt="img"></p>
+<p>Tenga en cuenta que Filezilla solo acepta la clave privada que se cre&#xF3; cuando se gener&#xF3; la clave ssh.</p>
+<p><img src="https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla4.png" alt="img">Aqu&#xED; ya hemos agregado la clave ssh, ahora podemos iniciar sesi&#xF3;n en nuestro servidor</p>
+<p><img src="https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla5.png" alt="img"></p>
+<p>ingresamos nuestra direcci&#xF3;n IP de Raspberry Pi + nombre de usuario (root en este caso), dejamos una contrase&#xF1;a en blanco porque estamos usando ssh-key para iniciar sesi&#xF3;n<img src="https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla6.png" alt="img"></p>
+<p>Simplemente presione ok cuando se le solicite, y podr&#xE1; iniciar sesi&#xF3;n.<img src="https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla8.png" alt="img"></p>
+<p><img src="https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla9.png" alt="img"></p>
+<p>Aqu&#xED; podemos ver la carpeta / root / de nuestra Raspberry Pi, aqu&#xED; es donde se ejecuta nuestra billetera y tiene la billetera almacenada en /root/.qtum, podemos continuar y hacer doble clic en la carpeta que nos mostrar&#xE1; lo siguiente:<img src="https://docs.qtum.site/en/How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/filezilla10.png" alt="img"></p>
+<p>Ahora todo lo que tenemos que hacer es desplazarnos hacia wallet.dat, hacer clic derecho y seleccionar descargar de la lista. Esto descargar&#xE1; el archivo wallet.dat a nuestra computadora, &#xA1;hemos respaldado con &#xE9;xito nuestra billetera Qtum !.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Qtum-AWS/" class="navigation navigation-prev " aria-label="Previous page: Qtum en AWS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../freebsd/" class="navigation navigation-next " aria-label="Next page: Staking con FreeBSD">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Staking con Raspberry Pi","level":"3.4","depth":1,"next":{"title":"Staking con FreeBSD","level":"3.5","depth":1,"path":"freebsd/README.md","ref":"freebsd/README.md","articles":[]},"previous":{"title":"Qtum en AWS","level":"3.3","depth":1,"path":"Qtum-AWS/README.md","ref":"Qtum-AWS/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"es","gitbook":"*"},"file":{"path":"Qtum en Raspberry Pi/README.md","mtime":"2020-07-01T00:18:12.357Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-01T00:26:05.312Z"},"basePath":"..","book":{"language":"es"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

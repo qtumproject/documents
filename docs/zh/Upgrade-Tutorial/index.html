@@ -1,0 +1,706 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Qtum 钱包升级教程 · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Technical-White-Paper-for-QtumX/" />
+    
+    
+    <link rel="prev" href="../Qtum-Eclair-Guide.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">钱包使用</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Qtum-Wallet-Tutorial/">
+            
+                <a href="../Qtum-Wallet-Tutorial/">
+            
+                    
+                    Qtum PC 端钱包使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../OfflineStaking.html">
+            
+                <a href="../OfflineStaking.html">
+            
+                    
+                    Offline Staking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Qtum-Electrum-User-Guide.html">
+            
+                <a href="../Qtum-Electrum-User-Guide.html">
+            
+                    
+                    Qtum Electrum 轻钱包使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../How-to-use-Qtum-Android-Wallet/">
+            
+                <a href="../How-to-use-Qtum-Android-Wallet/">
+            
+                    
+                    Qtum 安卓钱包使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../Adding-Nodes.html">
+            
+                <a href="../Adding-Nodes.html">
+            
+                    
+                    如何添加节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                <a href="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                    
+                    锁定、解锁 Qtum 钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                <a href="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                    
+                    使用salvagewallet修复钱包数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../How-To-Add-Options/">
+            
+                <a href="../How-To-Add-Options/">
+            
+                    
+                    如何添加 Qtum 运行选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../Qtum-Web-Wallet-Tutorial/">
+            
+                <a href="../Qtum-Web-Wallet-Tutorial/">
+            
+                    
+                    QTUM web钱包使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../Testnet-User-Guide.html">
+            
+                <a href="../Testnet-User-Guide.html">
+            
+                    
+                    测试网络使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">节点部署</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                <a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                    
+                    如何部署 Qtum 量子链节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Launch-Qtum-with-Docker.html">
+            
+                <a href="../Launch-Qtum-with-Docker.html">
+            
+                    
+                    如何用 Docker 运行 Qtum 节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../How-to-Deploy-Star-Network/">
+            
+                <a href="../How-to-Deploy-Star-Network/">
+            
+                    
+                    如何搭建 Qtum 星形网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking 教程（PoS 挖矿）</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../How-to-Stake-with-Qtum/">
+            
+                <a href="../How-to-Stake-with-Qtum/">
+            
+                    
+                    Qtum 量子链 Staking(PoS 挖矿) 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">智能合约和QRC20</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../Qtum-Contract-Usage.html">
+            
+                <a href="../Qtum-Contract-Usage.html">
+            
+                    
+                    Qtum 智能合约使用方法及说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../QRC20-Token-Introduce.html">
+            
+                <a href="../QRC20-Token-Introduce.html">
+            
+                    
+                    QRC20 Token 指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../QRC20集成文档.html">
+            
+                <a href="../QRC20集成文档.html">
+            
+                    
+                    QRC20 集成文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../手动构造Qtum合约交易的说明.html">
+            
+                <a href="../手动构造Qtum合约交易的说明.html">
+            
+                    
+                    手动构造Qtum合约交易的说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../Qtum-Blockchain-Guide.html">
+            
+                <a href="../Qtum-Blockchain-Guide.html">
+            
+                    
+                    Qtum 区块链指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../Build-Qtum-on-CentOS.html">
+            
+                <a href="../Build-Qtum-on-CentOS.html">
+            
+                    
+                    在 CentOS 7 上编译 Qtum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../Qtum-Eclair-Guide.html">
+            
+                <a href="../Qtum-Eclair-Guide.html">
+            
+                    
+                    闪电网络客户端 Qtum Eclair 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Qtum 钱包升级教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">QtumX</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../Technical-White-Paper-for-QtumX/">
+            
+                <a href="../Technical-White-Paper-for-QtumX/">
+            
+                    
+                    QtumX技术白皮书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../QtumX-Tutorial.html">
+            
+                <a href="../QtumX-Tutorial.html">
+            
+                    
+                    QtumX使用教程（内测）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../One-Click-Launch-Chain/">
+            
+                <a href="../One-Click-Launch-Chain/">
+            
+                    
+                    QtumX一键发链教程（公测）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../QtumX-Smart-Contract/">
+            
+                <a href="../QtumX-Smart-Contract/">
+            
+                    
+                    基于QtumX搭建自己的Dapp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../SCAR-Consensus/">
+            
+                <a href="../SCAR-Consensus/">
+            
+                    
+                    SCAR：一种可伸缩共识算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../Canal-Cross-Chain/">
+            
+                <a href="../Canal-Cross-Chain/">
+            
+                    
+                    Canal: 一种跨链交易解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../DDAO-Data-Management/">
+            
+                <a href="../DDAO-Data-Management/">
+            
+                    
+                    DDAO：去中心化数据访问对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">研究</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../Confidential-Assets.html">
+            
+                <a href="../Confidential-Assets.html">
+            
+                    
+                    隐私资产
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../Data-Analytics.html">
+            
+                <a href="../Data-Analytics.html">
+            
+                    
+                    数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Qtum 钱包升级教程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="qtum-&#x94B1;&#x5305;&#x5347;&#x7EA7;&#x6559;&#x7A0B;"><a name="qtum-&#x94B1;&#x5305;&#x5347;&#x7EA7;&#x6559;&#x7A0B;" class="plugin-anchor" href="#qtum-&#x94B1;&#x5305;&#x5347;&#x7EA7;&#x6559;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum &#x94B1;&#x5305;&#x5347;&#x7EA7;&#x6559;&#x7A0B;</h2>
+<ol>
+<li><p><strong>&#x786E;&#x8BA4;&#x73B0;&#x5728;&#x94B1;&#x5305;&#x7248;&#x672C;</strong></p>
+<p> <strong>&#x64CD;&#x4F5C;&#x8DEF;&#x5F84;</strong>&#xFF1A;window-&#x4FE1;&#x606F;<br> &#x5982;&#x679C;&#x7248;&#x672C;&#x4E0D;&#x662F; 0.18.1 &#x8BF7;&#x53C2;&#x7167;&#x5982;&#x4E0B;&#x6559;&#x7A0B;&#xFF1B;<br> &#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x662F;0.18.1&#x4F9D;&#x7136;&#x5B58;&#x5728;&#x8BE5;&#x95EE;&#x9898;&#xFF0C;&#x8BF7;&#x76F4;&#x63A5;&#x8DF3;&#x5230;&#x6B65;&#x9AA4;5&#x3002;<br> <img src="1.png" alt="1.png"></p>
+</li>
+<li><p><strong>&#x9000;&#x51FA;&#x94B1;&#x5305;</strong></p>
+<p> &#x5982;&#x679C;&#x4E0D;&#x662F; 0.18.1 &#x7248;&#x672C;&#x7684;&#x8BDD;&#xFF0C;&#x8BF7;&#x9000;&#x51FA;&#x94B1;&#x5305;&#x3002;</p>
+</li>
+<li><p><strong>&#x4FDD;&#x5B58;wallet.dat&#x6587;&#x4EF6;</strong></p>
+<p> &#x627E;&#x5230;Qtum&#x6240;&#x5728;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4FDD;&#x5B58;wallet.dat&#x6587;&#x4EF6;&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x9ED8;&#x8BA4;&#x8DEF;&#x5F84;&#x6839;&#x636E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0D;&#x540C;&#x4EE5;MAC&#x4E3A;&#x4F8B;&#x4F4D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;<br> <img src="2.png" alt="2.png"></p>
+</li>
+<li><p><strong>&#x4E0B;&#x8F7D;&#x65B0;&#x7248;&#x672C;&#x94B1;&#x5305;</strong></p>
+<p> &#x524D;&#x5F80;Qtum&#x5B98;&#x65B9;&#x94B1;&#x5305;&#x4E0B;&#x8F7D;&#x8DEF;&#x5F84;&#xFF1A;<a href="https://qtumeco.io/wallet" target="_blank">https://qtumeco.io/wallet</a><br> &#x6839;&#x636E;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x9009;&#x62E9;&#x9700;&#x8981;&#x4E0B;&#x8F7D;&#x7684;&#x94B1;&#x5305;<br> <img src="3.png" alt="3.png"></p>
+</li>
+<li><p><strong>&#x542F;&#x52A8;&#x94B1;&#x5305;&#x5E76;&#x91CD;&#x65B0;&#x540C;&#x6B65;&#x533A;&#x5757;&#x4FE1;&#x606F;</strong></p>
+<p> <strong>&#x64CD;&#x4F5C;&#x8DEF;&#x5F84;</strong>&#xFF1A;File-Restore wallet-&#x5220;&#x9664;&#x533A;&#x5757;&#x94FE;&#x6570;&#x636E;</p>
+</li>
+<li><p><strong>&#x7B49;&#x5F85;&#x540C;&#x6B65;&#x76F4;&#x5230;&#x5B8C;&#x6210;</strong></p>
+<p> &#x9884;&#x8BA1;&#x540C;&#x6B65;&#x6240;&#x9700;&#x65F6;&#x95F4;&#x5927;&#x7EA6;1&#x4E2A;&#x5C0F;&#x65F6;</p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Qtum-Eclair-Guide.html" class="navigation navigation-prev " aria-label="Previous page: 闪电网络客户端 Qtum Eclair 使用教程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Technical-White-Paper-for-QtumX/" class="navigation navigation-next " aria-label="Next page: QtumX技术白皮书">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Qtum 钱包升级教程","level":"6.4","depth":1,"next":{"title":"QtumX技术白皮书","level":"7.1","depth":1,"path":"Technical-White-Paper-for-QtumX/README.md","ref":"Technical-White-Paper-for-QtumX/README.md","articles":[]},"previous":{"title":"闪电网络客户端 Qtum Eclair 使用教程","level":"6.3","depth":1,"path":"Qtum-Eclair-Guide.md","ref":"Qtum-Eclair-Guide.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"zh","gitbook":"*"},"file":{"path":"Upgrade-Tutorial/README.md","mtime":"2020-07-01T00:18:12.437Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-01T00:26:05.312Z"},"basePath":"..","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
