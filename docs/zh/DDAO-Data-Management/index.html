@@ -1,0 +1,741 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>DDAO：去中心化数据访问对象 · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Confidential-Assets.html" />
+    
+    
+    <link rel="prev" href="../Canal-Cross-Chain/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">钱包使用</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Qtum-Wallet-Tutorial/">
+            
+                <a href="../Qtum-Wallet-Tutorial/">
+            
+                    
+                    Qtum PC 端钱包使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../OfflineStaking.html">
+            
+                <a href="../OfflineStaking.html">
+            
+                    
+                    Offline Staking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Qtum-Electrum-User-Guide.html">
+            
+                <a href="../Qtum-Electrum-User-Guide.html">
+            
+                    
+                    Qtum Electrum 轻钱包使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../How-to-use-Qtum-Android-Wallet/">
+            
+                <a href="../How-to-use-Qtum-Android-Wallet/">
+            
+                    
+                    Qtum 安卓钱包使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../Adding-Nodes.html">
+            
+                <a href="../Adding-Nodes.html">
+            
+                    
+                    如何添加节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                <a href="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                    
+                    锁定、解锁 Qtum 钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                <a href="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                    
+                    使用salvagewallet修复钱包数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../How-To-Add-Options/">
+            
+                <a href="../How-To-Add-Options/">
+            
+                    
+                    如何添加 Qtum 运行选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../Qtum-Web-Wallet-Tutorial/">
+            
+                <a href="../Qtum-Web-Wallet-Tutorial/">
+            
+                    
+                    QTUM web钱包使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../Testnet-User-Guide.html">
+            
+                <a href="../Testnet-User-Guide.html">
+            
+                    
+                    测试网络使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">节点部署</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                <a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                    
+                    如何部署 Qtum 量子链节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Launch-Qtum-with-Docker.html">
+            
+                <a href="../Launch-Qtum-with-Docker.html">
+            
+                    
+                    如何用 Docker 运行 Qtum 节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../How-to-Deploy-Star-Network/">
+            
+                <a href="../How-to-Deploy-Star-Network/">
+            
+                    
+                    如何搭建 Qtum 星形网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking 教程（PoS 挖矿）</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../How-to-Stake-with-Qtum/">
+            
+                <a href="../How-to-Stake-with-Qtum/">
+            
+                    
+                    Qtum 量子链 Staking(PoS 挖矿) 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">智能合约和QRC20</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../Qtum-Contract-Usage.html">
+            
+                <a href="../Qtum-Contract-Usage.html">
+            
+                    
+                    Qtum 智能合约使用方法及说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../QRC20-Token-Introduce.html">
+            
+                <a href="../QRC20-Token-Introduce.html">
+            
+                    
+                    QRC20 Token 指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../QRC20集成文档.html">
+            
+                <a href="../QRC20集成文档.html">
+            
+                    
+                    QRC20 集成文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../手动构造Qtum合约交易的说明.html">
+            
+                <a href="../手动构造Qtum合约交易的说明.html">
+            
+                    
+                    手动构造Qtum合约交易的说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../Qtum-Blockchain-Guide.html">
+            
+                <a href="../Qtum-Blockchain-Guide.html">
+            
+                    
+                    Qtum 区块链指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../Build-Qtum-on-CentOS.html">
+            
+                <a href="../Build-Qtum-on-CentOS.html">
+            
+                    
+                    在 CentOS 7 上编译 Qtum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../Qtum-Eclair-Guide.html">
+            
+                <a href="../Qtum-Eclair-Guide.html">
+            
+                    
+                    闪电网络客户端 Qtum Eclair 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../Upgrade-Tutorial/">
+            
+                <a href="../Upgrade-Tutorial/">
+            
+                    
+                    Qtum 钱包升级教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">QtumX</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../Technical-White-Paper-for-QtumX/">
+            
+                <a href="../Technical-White-Paper-for-QtumX/">
+            
+                    
+                    QtumX技术白皮书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../QtumX-Tutorial.html">
+            
+                <a href="../QtumX-Tutorial.html">
+            
+                    
+                    QtumX使用教程（内测）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../One-Click-Launch-Chain/">
+            
+                <a href="../One-Click-Launch-Chain/">
+            
+                    
+                    QtumX一键发链教程（公测）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../QtumX-Smart-Contract/">
+            
+                <a href="../QtumX-Smart-Contract/">
+            
+                    
+                    基于QtumX搭建自己的Dapp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../SCAR-Consensus/">
+            
+                <a href="../SCAR-Consensus/">
+            
+                    
+                    SCAR：一种可伸缩共识算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../Canal-Cross-Chain/">
+            
+                <a href="../Canal-Cross-Chain/">
+            
+                    
+                    Canal: 一种跨链交易解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    DDAO：去中心化数据访问对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">研究</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../Confidential-Assets.html">
+            
+                <a href="../Confidential-Assets.html">
+            
+                    
+                    隐私资产
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../Data-Analytics.html">
+            
+                <a href="../Data-Analytics.html">
+            
+                    
+                    数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >DDAO：去中心化数据访问对象</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ddao&#xFF1A;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x5BF9;&#x8C61;"><a name="ddao&#xFF1A;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x5BF9;&#x8C61;" class="plugin-anchor" href="#ddao&#xFF1A;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>DDAO&#xFF1A;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x5BF9;&#x8C61;</h1>
+<h1 id="&#x80CC;&#x666F;&#x4ECB;&#x7ECD;"><a name="&#x80CC;&#x666F;&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#&#x80CC;&#x666F;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x80CC;&#x666F;&#x4ECB;&#x7ECD;</h1>
+<p>&#x6570;&#x636E;&#x7BA1;&#x7406;&#xFF08;Data Management&#xFF09;&#x662F;&#x6307;&#x5BF9;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6536;&#x96C6;&#x3001;&#x6574;&#x7406;&#x3001;&#x7EC4;&#x7EC7;&#x3001;&#x5B58;&#x50A8;&#x3001;&#x52A0;&#x5DE5;&#x3001;&#x4F20;&#x8F93;&#x3001;&#x68C0;&#x7D22;&#x7684;&#x5404;&#x4E2A;&#x8FC7;&#x7A0B;&#xFF0C;&#x5B83;&#x662F;&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x5E94;&#x7528;&#x9886;&#x57DF;&#x3002;&#x5176;&#x76EE;&#x7684;&#x4E4B;&#x4E00;&#x662F;&#x4E3A;&#x4E86;&#x501F;&#x52A9;&#x8BA1;&#x7B97;&#x673A;&#x79D1;&#x5B66;&#x5730;&#x4FDD;&#x5B58;&#x548C;&#x7BA1;&#x7406;&#x590D;&#x6742;&#x7684;&#x3001;&#x5927;&#x91CF;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4EE5;&#x4FBF;&#x4EBA;&#x4EEC;&#x80FD;&#x591F;&#x65B9;&#x4FBF;&#x800C;&#x5145;&#x5206;&#x5730;&#x5229;&#x7528;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x8D44;&#x6E90;&#xFF1B;&#x53E6;&#x4E00;&#x76EE;&#x7684;&#x662F;&#x4ECE;&#x5927;&#x91CF;&#x539F;&#x59CB;&#x7684;&#x6570;&#x636E;&#x4E2D;&#x62BD;&#x53D6;&#x3001;&#x63A8;&#x5BFC;&#x51FA;&#x5BF9;&#x4EBA;&#x4EEC;&#x6709;&#x4EF7;&#x503C;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x5229;&#x7528;&#x4FE1;&#x606F;&#x4F5C;&#x4E3A;&#x884C;&#x52A8;&#x548C;&#x51B3;&#x7B56;&#x7684;&#x4F9D;&#x636E;&#x3002;</p>
+<p>&#x76EE;&#x524D;&#x4F01;&#x4E1A;&#x4E3B;&#x8981;&#x4F7F;&#x7528;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x6570;&#x636E;&#x5E93;&#x548C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x7684;&#x7BA1;&#x7406;&#x3002;&#x5927;&#x578B;&#x7684;&#x4E92;&#x8054;&#x7F51;&#x516C;&#x53F8;&#x4F1A;&#x81EA;&#x5DF1;&#x7814;&#x53D1;&#x76F8;&#x5173;&#x7CFB;&#x7EDF;&#xFF0C;&#x4F8B;&#x5982;GFS&#xFF08;Google File System&#xFF09;&#x3001;SQL Server&#x7B49;&#xFF0C;&#x5E76;&#x90E8;&#x7F72;&#x672C;&#x5730;&#x5316;&#x670D;&#x52A1;&#x3002;&#x4E2D;&#x5C0F;&#x578B;&#x516C;&#x53F8;&#x5219;&#x63A5;&#x5165;AWS&#x3001;&#x963F;&#x91CC;&#x4E91;&#x7B49;&#x4E91;&#x670D;&#x52A1;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x7684;&#x4EFB;&#x52A1;&#x59D4;&#x6258;&#x7ED9;&#x4E86;&#x7B2C;&#x4E09;&#x65B9;&#x3002;&#x4E0D;&#x8BBA;&#x662F;&#x672C;&#x5730;&#x6570;&#x636E;&#x5E93;&#x8FD8;&#x662F;&#x4E91;&#x6570;&#x636E;&#x670D;&#x52A1;&#xFF0C;&#x8FD9;&#x4E9B;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x6570;&#x636E;&#x5E93;&#x90FD;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x5E76;&#x5728;&#x7EF4;&#x62A4;&#x7740;&#x5F88;&#x591A;&#x516C;&#x53F8;&#x7684;&#x57FA;&#x7840;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x4E2D;&#x5FC3;&#x5316;&#x5B58;&#x50A8;&#x662F;&#x73B0;&#x884C;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x7684;&#x4E3B;&#x8981;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x5F53;&#x4E0B;&#x5168;&#x7403;&#x8303;&#x56F4;&#x5185;&#x7684;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x5E93;&#x548C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x51FA;&#x73B0;&#x4E86;&#x4E25;&#x91CD;&#x7684;&#x5B58;&#x50A8;&#x95EE;&#x9898;&#x3002;&#x4F01;&#x4E1A;&#x5F80;&#x5F80;&#x901A;&#x8FC7;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x5E93;&#x548C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5B58;&#x50A8;&#x5176;&#x6240;&#x6709;&#x7684;&#x4FE1;&#x606F;&#x548C;&#x6587;&#x4EF6;&#x3002;&#x4F46;&#x4E2D;&#x5FC3;&#x5316;&#x5B58;&#x50A8;&#x65B9;&#x6848;&#x901A;&#x5E38;&#x4F1A;&#x9ED1;&#x5BA2;&#x6210;&#x4E3A;&#x653B;&#x51FB;&#x7684;&#x6807;&#x9776;&#xFF0C;&#x6216;&#x8005;&#x6BC1;&#x4E8E;&#x707E;&#x96BE;&#x4E4B;&#x4E2D;&#x3002;&#x4F01;&#x4E1A;&#x5C06;&#x4F1A;&#x9762;&#x4E34;&#x4E22;&#x5931;&#x5176;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x8D44;&#x6E90;&#x800C;&#x6C38;&#x4E0D;&#x53EF;&#x627E;&#x56DE;&#x3002;&#x800C;&#x4F01;&#x4E1A;&#x5BF9;&#x6570;&#x636E;&#x548C;&#x6587;&#x4EF6;&#x7684;&#x4F9D;&#x8D56;&#xFF0C;&#x5BFC;&#x81F4;&#x4E86;&#x524D;&#x6240;&#x672A;&#x89C1;&#x7684;&#x5DE8;&#x5927;&#x98CE;&#x9669;&#xFF0C;&#x4EE4;&#x4EBA;&#x5341;&#x5206;&#x5FE7;&#x5FC3;&#x3002;&#x867D;&#x6709;&#x4E9B;&#x5927;&#x4F01;&#x4E1A;&#xFF0C;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x76F8;&#x5173;&#x7684;&#x4E91;&#x5907;&#x4EFD;&#x670D;&#x52A1;&#xFF0C;&#x53EA;&#x80FD;&#x591A;&#x63D0;&#x4F9B;&#x51E0;&#x4E2A;&#x5907;&#x4EFD;&#x70B9;&#x800C;&#x5DF2;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x89E3;&#x51B3;&#x6839;&#x672C;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x4EE5;&#x533A;&#x5757;&#x94FE;&#x4E3A;&#x4EE3;&#x8868;&#x7684;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6280;&#x672F;&#x4E3A;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7C7B;&#x65B0;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x3002;&#x6570;&#x5B57;&#x52A0;&#x5BC6;&#x548C;&#x8282;&#x70B9;&#x5171;&#x8BC6;&#x673A;&#x5236;&#x7684;&#x5F15;&#x5165;&#xFF0C;&#x4FDD;&#x8BC1;&#x4E86;&#x6570;&#x636E;&#x7684;&#x9690;&#x79C1;&#x3001;&#x5B89;&#x5168;&#x548C;&#x4E0D;&#x53EF;&#x7BE1;&#x6539;&#x3002;&#x7531;&#x4E8E;&#x6570;&#x636E;&#x5728;&#x7F51;&#x7EDC;&#x4E2D;&#x5B58;&#x4E86;&#x5F88;&#x591A;&#x4EFD;&#xFF0C;&#x5C31;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x5355;&#x4E2A;&#x8282;&#x70B9;&#x6545;&#x969C;&#x5E26;&#x6765;&#x7684;&#x6570;&#x636E;&#x4E22;&#x5931;&#xFF0C;&#x63D0;&#x9AD8;&#x4E86;&#x5B89;&#x5168;&#x6027;&#x548C;&#x53EF;&#x9760;&#x6027;&#x3002;&#x52A0;&#x5BC6;&#x548C;&#x5206;&#x5272;&#x6280;&#x672F;&#x5219;&#x4FDD;&#x8BC1;&#x4E86;&#x6570;&#x636E;&#x7684;&#x9690;&#x79C1;&#xFF0C;&#x63A7;&#x5236;&#x4E86;&#x7528;&#x6237;&#x6570;&#x636E;&#x7684;&#x8BFB;&#x53D6;&#x6743;&#x9650;&#x3002;&#x540C;&#x65F6;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x53EF;&#x62D3;&#x5C55;&#x6027;&#xFF0C;&#x4F7F;&#x7528;&#x96C6;&#x7FA4;&#x6280;&#x672F;&#x3002;&#x96C6;&#x7FA4;&#x5373;&#x4E00;&#x5927;&#x7EC4;&#x8282;&#x70B9;&#xFF0C;&#x5171;&#x540C;&#x5B58;&#x50A8;&#x548C;&#x7BA1;&#x7406;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x52A0;&#x5165;&#x65B0;&#x8282;&#x70B9;&#xFF0C;&#x4E5F;&#x53EF;&#x62D3;&#x5C55;&#x66F4;&#x591A;&#x96C6;&#x7FA4;&#x3002;</p>
+<p>&#x7136;&#x800C;&#x76EE;&#x524D;&#xFF0C;&#x968F;&#x7740;&#x5927;&#x91CF;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#x7684;&#x63D0;&#x51FA;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x5728;&#x9009;&#x62E9;&#x3001;&#x5B66;&#x4E60;&#x3001;&#x5F00;&#x53D1;&#x3001;&#x90E8;&#x7F72;&#x3001;&#x7EF4;&#x62A4;&#x65B9;&#x9762;&#x90FD;&#x9762;&#x4E34;&#x8F83;&#x9AD8;&#x7684;&#x6210;&#x672C;&#x3002;&#x4E8E;&#x662F;&#x6211;&#x4EEC;&#x63D0;&#x51FA;&#x4E86;DDAO&#xFF08;Decentralized Data Access Object&#xFF09;&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x5E0C;&#x671B;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x5E93;&#x6765;&#x8BBF;&#x95EE;&#x5404;&#x79CD;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#xFF0C;&#x4ECE;&#x800C;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x7684;CRUD&#xFF08;Create, Read, Update, Delete&#xFF09;&#x64CD;&#x4F5C;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x901A;&#x8FC7;&#x8FD9;&#x4E00;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x8BFB;&#x5199;&#x5404;&#x79CD;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6784;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x800C;&#x4E0D;&#x5FC5;&#x5173;&#x5FC3;&#x5E95;&#x5C42;&#x7684;&#x6280;&#x672F;&#x5B9E;&#x73B0;&#x3002;</p>
+<h1 id="&#x76F8;&#x5173;&#x5DE5;&#x4F5C;"><a name="&#x76F8;&#x5173;&#x5DE5;&#x4F5C;" class="plugin-anchor" href="#&#x76F8;&#x5173;&#x5DE5;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x76F8;&#x5173;&#x5DE5;&#x4F5C;</h1>
+<p>&#x968F;&#x7740;&#x533A;&#x5757;&#x94FE;&#x6280;&#x672F;&#x548C;&#x6570;&#x5B57;&#x8D27;&#x5E01;&#x5E02;&#x573A;&#x7684;&#x53D1;&#x5C55;&#xFF0C;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x3001;&#x7BA1;&#x7406;&#x6280;&#x672F;&#x4E5F;&#x8D8A;&#x6765;&#x8D8A;&#x53D7;&#x5230;&#x7814;&#x7A76;&#x9886;&#x57DF;&#x548C;&#x6295;&#x8D44;&#x5E02;&#x573A;&#x7684;&#x91CD;&#x89C6;&#x3002;</p>
+<h2 id="&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;"><a name="&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;" class="plugin-anchor" href="#&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</h2>
+<p>&#x533A;&#x5757;&#x94FE;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x7684;&#x8D26;&#x672C;&#x7CFB;&#x7EDF;&#xFF0C;&#x4F1A;&#x5728;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x5907;&#x4EFD;&#x94FE;&#x4E0A;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x9002;&#x5408;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x8BF8;&#x5982;&#x56FE;&#x7247;&#x3001;&#x89C6;&#x9891;&#x3001;&#x97F3;&#x9891;&#x7B49;&#x6570;&#x636E;&#x91CF;&#x8F83;&#x5927;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x76EE;&#x524D;&#x7684;&#x533A;&#x5757;&#x94FE;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x4ECD;&#x7136;&#x5C06;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x3002;&#x8FD9;&#x4E00;&#x65B9;&#x5F0F;&#x9020;&#x6210;&#x4E86;&#x5E94;&#x7528;&#x7684;&#x4E2D;&#x5FC3;&#x5316;&#xFF0C;&#x8FDD;&#x80CC;&#x4E86;&#x533A;&#x5757;&#x94FE;&#x7684;&#x672C;&#x8D28;&#x610F;&#x4E49;&#x3002;</p>
+<p>&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x9879;&#x76EE;&#x4E3B;&#x8981;&#x5305;&#x62EC; IPFS&#xFF08;InterPlanetary File System&#xFF09;[1]&#x3001;Swarm [2]&#x3001;Storj [3] &#x7B49;&#x3002;&#x5176;&#x57FA;&#x672C;&#x65B9;&#x5F0F;&#x90FD;&#x662F;&#x5728;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C06;&#x6587;&#x4EF6;&#x5206;&#x5272;&#x4E3A;&#x8F83;&#x5C0F;&#x7684;&#x6570;&#x636E;&#x5757;&#xFF0C;&#x7136;&#x540E;&#x5B58;&#x50A8;&#x5230;&#x8282;&#x70B9;&#x4E0A;&#x3002;&#x5F53;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x7684;hash&#x503C;&#x4F5C;&#x4E3A;&#x5730;&#x5740;&#x8FDB;&#x884C;&#x8BF7;&#x6C42;&#xFF0C;&#x7136;&#x540E;&#x4ECE;&#x8282;&#x70B9;&#x4E0A;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x5757;&#xFF0C;&#x7EC4;&#x5408;&#x6210;&#x5B8C;&#x6574;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5206;&#x6563;&#x5730;&#x5B58;&#x50A8;&#x5728;&#x7F51;&#x7EDC;&#x4E0A;&#x7684;&#x5404;&#x4E2A;&#x8282;&#x70B9;&#x4E2D;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x6280;&#x672F;&#x9762;&#x4E34;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x662F;&#x5982;&#x4F55;&#x8BA9;&#x7F51;&#x7EDC;&#x4E2D;&#x6709;&#x66F4;&#x591A;&#x7684;&#x8282;&#x70B9;&#x4FDD;&#x6301;&#x5728;&#x7EBF;&#xFF0C;&#x63D0;&#x4F9B;&#x4E0B;&#x8F7D;&#x670D;&#x52A1;&#x3002;&#x56E0;&#x6B64;&#x4E00;&#x4E9B;&#x9879;&#x76EE;&#x63D0;&#x51FA;&#x5728;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x52A0;&#x5165;&#x8282;&#x70B9;&#x6FC0;&#x52B1;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x4ECE;&#x800C;&#x8BA9;&#x5728;&#x7EBF;&#x7684;&#x8282;&#x70B9;&#x80FD;&#x591F;&#x83B7;&#x5F97;&#x6536;&#x76CA;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6210;&#x4E3A;&#x4E86;&#x4E00;&#x79CD;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E91;&#x5B58;&#x50A8;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x7528;&#x6237;&#x5728;&#x4E0A;&#x4F20;&#x548C;&#x4E0B;&#x8F7D;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x9700;&#x8981;&#x8D2D;&#x4E70;&#x670D;&#x52A1;&#xFF0C;&#x7528;&#x6765;&#x5956;&#x52B1;&#x63D0;&#x4F9B;&#x5B58;&#x50A8;&#x670D;&#x52A1;&#x7684;&#x8282;&#x70B9;&#x3002;&#x51E0;&#x4E2A;&#x5178;&#x578B;&#x7684;&#x9879;&#x76EE;&#x5305;&#x62EC; Filecoin [4]&#x3001;Wolk [5]&#x3001;Fluence [6]&#x3001;Sia [7]&#x3002;</p>
+<h2 id="&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x5E93;"><a name="&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x5E93;" class="plugin-anchor" href="#&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x5E93;</h2>
+<p>&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5B9E;&#x73B0;&#x4E86;&#x6570;&#x636E;&#x7684;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x5B58;&#x50A8;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x662F;&#x5F53;&#x7528;&#x6237;&#x4E0A;&#x4F20;&#x6570;&#x636E;&#x540E;&#xFF0C;&#x65E0;&#x6CD5;&#x8FDB;&#x4E00;&#x6B65;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x548C;&#x67E5;&#x627E;&#xFF0C;&#x9650;&#x5236;&#x4E86;&#x5176;&#x5728;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x65B9;&#x9762;&#x7684;&#x5E94;&#x7528;&#x3002;&#x4F20;&#x7EDF;&#x7684;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x670D;&#x52A1;&#x901A;&#x5E38;&#x4F7F;&#x7528;MySQL&#x3001;Redis&#x7B49;&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#x6765;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7684;&#x589E;&#x5220;&#x6539;&#x67E5;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x53BB;&#x4E2D;&#x5FC3;&#x9886;&#x57DF;&#x4E2D;&#x4E5F;&#x9700;&#x8981;&#x7C7B;&#x4F3C;&#x7684;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x6709;&#x4E00;&#x4E9B;&#x9879;&#x76EE;&#x5728;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x5E93;&#x7684;&#x9886;&#x57DF;&#x8FDB;&#x884C;&#x7814;&#x7A76;&#xFF0C;&#x5305;&#x62EC; BigchainDB [8]&#x3001;Bluzelle [9]&#x3001;Ties.DB [10] &#x7B49;&#x3002;&#x5176;&#x57FA;&#x672C;&#x60F3;&#x6CD5;&#x90FD;&#x662F;&#x5C06;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5199;&#x5165;&#x8BF7;&#x6C42;&#x901A;&#x8FC7;&#x4EA4;&#x6613;&#x4E0A;&#x4F20;&#x81F3;&#x533A;&#x5757;&#x94FE;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x7528;MongoDB&#x7B49;&#x5F15;&#x64CE;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7684;&#x7D22;&#x5F15;&#x529F;&#x80FD;&#x5E76;&#x54CD;&#x5E94;&#x67E5;&#x627E;&#x8BF7;&#x6C42;&#x3002;&#x4F7F;&#x7528;&#x533A;&#x5757;&#x94FE;&#x6765;&#x6784;&#x5EFA;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x6709;&#x6548;&#x5730;&#x5229;&#x7528;&#x4E86;&#x533A;&#x5757;&#x94FE;&#x6210;&#x719F;&#x7684;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#x67B6;&#x6784;&#xFF0C;&#x5728;&#x7A33;&#x5B9A;&#x6027;&#x548C;&#x5B89;&#x5168;&#x6027;&#x7B49;&#x65B9;&#x9762;&#x6709;&#x8F83;&#x5927;&#x4F18;&#x52BF;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x9879;&#x76EE;&#x5F53;&#x524D;&#x90FD;&#x5728;&#x8D77;&#x6B65;&#x9636;&#x6BB5;&#xFF0C;&#x5728;&#x5177;&#x4F53;&#x7684;&#x5B9E;&#x73B0;&#x6210;&#x719F;&#x4E4B;&#x524D;&#xFF0C;&#x4F7F;&#x7528;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4F5C;&#x4E3A;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x4E5F;&#x662F;&#x4E00;&#x79CD;&#x53EF;&#x884C;&#x7684;&#x66FF;&#x4EE3;&#x65B9;&#x6848;&#x3002;&#x90E8;&#x5206;&#x9879;&#x76EE;&#x57FA;&#x4E8E;Ethereum+IPFS&#x6765;&#x642D;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4F7F;&#x7528;Solidity&#x7F16;&#x5199;&#x7684;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x6765;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x7684;&#x7BA1;&#x7406;&#x3002;Solidity&#x652F;&#x6301;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E2D;&#xFF0C;&#x5305;&#x542B;&#x5E38;&#x89C1;&#x7684;List&#x3001;Map&#x3001;Struct&#x7B49;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x5BF9;&#x4E8E;&#x5E38;&#x89C1;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x573A;&#x666F;&#x5DF2;&#x7ECF;&#x8DB3;&#x591F;&#x9002;&#x7528;&#x3002;&#x8FD9;&#x4E9B;&#x9879;&#x76EE;&#x5728; [11] &#x4E2D;&#x6709;&#x5145;&#x5206;&#x7684;&#x5217;&#x4E3E;&#x3002;</p>
+<h1 id="&#x7CFB;&#x7EDF;&#x63CF;&#x8FF0;"><a name="&#x7CFB;&#x7EDF;&#x63CF;&#x8FF0;" class="plugin-anchor" href="#&#x7CFB;&#x7EDF;&#x63CF;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7CFB;&#x7EDF;&#x63CF;&#x8FF0;</h1>
+<p>&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x6848;&#x5404;&#x79CD;&#x5404;&#x6837;&#xFF0C;&#x7ED9;&#x5F00;&#x53D1;&#x8005;&#x5E26;&#x6765;&#x4E86;&#x8F83;&#x9AD8;&#x7684;&#x638C;&#x63E1;&#x6210;&#x672C;&#x3002;&#x672C;&#x6587;&#x5C06;&#x8BBE;&#x8BA1;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x5E93;&#xFF0C;&#x7528;&#x4E8E;&#x8FDE;&#x63A5;&#x5E95;&#x5C42;&#x7684;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#x548C;&#x4E0A;&#x5C42;&#x7684;DApp&#x5E94;&#x7528;&#xFF0C;&#x5B9E;&#x73B0;&#x591A;&#x79CD;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#x7684;CRUD&#x529F;&#x80FD;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x5E93;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x6784;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x5E94;&#x7528;&#xFF0C;&#x800C;&#x4E0D;&#x5FC5;&#x5173;&#x5FC3;&#x5E95;&#x5C42;&#x7684;&#x6280;&#x672F;&#x5B9E;&#x73B0;&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x57FA;&#x4E8E;&#x8FD9;&#x4E00;&#x901A;&#x7528;&#x5E93;&#x53EF;&#x4EE5;&#x642D;&#x5EFA;&#x4E00;&#x5957;&#x4E91;&#x670D;&#x52A1;&#xFF0C;&#x63D0;&#x4F9B;&#x591A;&#x79CD;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#x7684;&#x5728;&#x7EBF;CRUD&#x63A5;&#x53E3;&#xFF0C;&#x7701;&#x53BB;&#x4E86;&#x5F00;&#x53D1;&#x8005;&#x90E8;&#x7F72;&#x548C;&#x7EF4;&#x62A4;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#x7684;&#x6210;&#x672C;&#x3002;</p>
+<p><img src="img1.png" alt="image"></p>
+<p>&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E09;&#x5C42;&#xFF0C;&#x5206;&#x522B;&#x662F;DDMI&#xFF08;Decentralized Data Management Infrastructure&#xFF0C;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x8BBE;&#x65BD;&#xFF09;&#x3001;DDAO&#x548C;DApp&#xFF08;Decentralized Application&#xFF09;&#xFF0C;&#x4EE5;&#x4E0B;&#x5C06;&#x5206;&#x522B;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h2 id="ddmi"><a name="ddmi" class="plugin-anchor" href="#ddmi"><i class="fa fa-link" aria-hidden="true"></i></a>DDMI</h2>
+<p>DDMI&#x5C42;&#x5C06;&#x517C;&#x5BB9;&#x5404;&#x79CD;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#xFF0C;&#x5305;&#x62EC;&#x533A;&#x5757;&#x94FE;&#x3001;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x5E93;&#x3001;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7B49;&#x3002;&#x8FD9;&#x4E9B;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x7531;&#x5F00;&#x53D1;&#x8005;&#x672C;&#x5730;&#x542F;&#x52A8;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x90E8;&#x7F72;&#x5728;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x7EDF;&#x4E00;&#x683C;&#x5F0F;&#x7684;&#x63CF;&#x8FF0;&#x7B26;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x3002;&#x4F8B;&#x5982; name://user:password@ip:port &#x683C;&#x5F0F;&#xFF0C;&#x5373;&#x901A;&#x8FC7; qtum://admin:123456@127.0.0.1:13889 &#x53EF;&#x4EE5;&#x8FDE;&#x63A5;&#x4E0A;&#x672C;&#x5730;13889&#x7AEF;&#x53E3;&#x4E0B;&#x7684;Qtum&#x94FE;&#xFF0C;&#x6216;&#x662F;&#x901A;&#x8FC7; ipfs://myname:mypasswd@192.168.1.2:8080 &#x8FDE;&#x63A5;&#x5C40;&#x57DF;&#x7F51;&#x5185;8080&#x7AEF;&#x53E3;&#x4E0B;&#x7684;IPFS&#x3002;</p>
+<h2 id="ddao"><a name="ddao" class="plugin-anchor" href="#ddao"><i class="fa fa-link" aria-hidden="true"></i></a>DDAO</h2>
+<p>DDAO&#x5C42;&#x662F;&#x672C;&#x6587;&#x63D0;&#x51FA;&#x7684;&#x6838;&#x5FC3;&#x6A21;&#x5757;&#xFF0C;&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x5305;&#x62EC;&#xFF08;1&#xFF09;&#x5EFA;&#x7ACB;&#x5404;&#x79CD;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#x7684;&#x8FDE;&#x63A5;&#x548C;&#xFF08;2&#xFF09;&#x62BD;&#x8C61;&#x5F97;&#x5230;&#x5177;&#x6709;&#x517C;&#x5BB9;&#x6027;&#x7684;CRUD&#x63A5;&#x53E3;&#x3002;&#x5BF9;&#x4E8E;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#xFF0C;&#x5C06;&#x62BD;&#x8C61;&#x6210;&#x4E0D;&#x540C;&#x7684;&#x63A5;&#x53E3;&#xFF1A;</p>
+<ol>
+<li>&#x5BF9;&#x4E8E;&#x533A;&#x5757;&#x94FE;&#x7CFB;&#x7EDF;&#xFF0C;&#x5C06;&#x5305;&#x62EC;&#x53D1;&#x9001;&#x4EA4;&#x6613;&#x3001;&#x67E5;&#x8BE2;&#x4EA4;&#x6613;&#x3001;&#x521B;&#x5EFA;&#x5408;&#x7EA6;&#x3001;&#x8BFB;&#x5199;&#x5408;&#x7EA6;&#x7B49;&#x63A5;&#x53E3;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#xFF0C;&#x5C06;&#x5305;&#x62EC;&#x521B;&#x5EFA;&#x3001;&#x67E5;&#x627E;&#x3001;&#x63D2;&#x5165;&#x3001;&#x66F4;&#x65B0;&#x7B49;&#x6570;&#x636E;&#x5E93;&#x63A5;&#x53E3;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5C06;&#x5305;&#x62EC;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x3001;&#x4E0B;&#x8F7D;&#x3001;&#x52A0;&#x5BC6;&#x7B49;&#x4E3B;&#x8981;&#x63A5;&#x53E3;&#x3002;</li>
+</ol>
+<p>&#x6B64;&#x5904;&#x8BBE;&#x8BA1;&#x9700;&#x8981;&#x8003;&#x8651;&#x5230;&#x7CFB;&#x7EDF;&#x7684;&#x517C;&#x5BB9;&#x6027;&#xFF0C;&#x56E0;&#x6B64;&#x4EC5;&#x5BF9;&#x4E00;&#x4E9B;&#x901A;&#x7528;&#x7684;&#x529F;&#x80FD;&#x8FDB;&#x884C;&#x62BD;&#x8C61;&#x3002;&#x540C;&#x65F6;&#x9884;&#x7559;&#x53D1;&#x9001;&#x539F;&#x59CB;&#x547D;&#x4EE4;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x8BF7;&#x6C42;&#x6BCF;&#x4E2A;&#x7CFB;&#x7EDF;&#x7279;&#x6709;&#x7684;&#x4E00;&#x4E9B;&#x63A5;&#x53E3;&#x3002;</p>
+<h2 id="dapp"><a name="dapp" class="plugin-anchor" href="#dapp"><i class="fa fa-link" aria-hidden="true"></i></a>DApp</h2>
+<p>DApp&#x53EF;&#x4EE5;&#x662F;&#x8FD0;&#x884C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;JavaScript&#x811A;&#x672C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x8FD0;&#x884C;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x7A0B;&#x5E8F;&#x3002;DApp&#x7A0B;&#x5E8F;&#x672C;&#x8EAB;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x5728;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E0A;&#xFF0C;&#x901A;&#x8FC7;&#x7279;&#x5B9A;&#x5730;&#x5740;&#x4F5C;&#x4E3A;&#x5165;&#x53E3;&#x83B7;&#x53D6;&#x5230;&#x3002;DApp&#x901A;&#x8FC7;&#x5B9E;&#x4F8B;&#x5316;DDAO&#xFF0C;&#x8FDE;&#x63A5;&#x672C;&#x5730;&#x6216;&#x662F;&#x4E91;&#x7AEF;&#x7684;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#xFF0C;&#x5E76;&#x5BF9;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;CRUD&#x64CD;&#x4F5C;&#xFF0C;&#x4ECE;&#x800C;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x7684;&#x5E94;&#x7528;&#x3002;</p>
+<p>&#x5728;DApp&#x5185;&#x53EF;&#x4EE5;&#x5B9E;&#x4F8B;&#x5316;&#x591A;&#x4E2A;DDAO&#xFF0C;&#x53BB;&#x8FDE;&#x63A5;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#x3002;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x4E2D;&#x4E0E;&#x591A;&#x4E2A;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#xFF0C;&#x5B9E;&#x73B0;&#x6BD4;&#x4F20;&#x7EDF;&#x57FA;&#x4E8E;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;DApp&#x66F4;&#x4E3A;&#x4E30;&#x5BCC;&#x7684;&#x529F;&#x80FD;&#x3002;&#x4F8B;&#x5982;&#x591A;&#x4E2A;&#x533A;&#x5757;&#x94FE;&#x7684;&#x6570;&#x636E;&#x8DE8;&#x94FE;&#x4F20;&#x8F93;&#xFF0C;&#x6216;&#x662F;&#x533A;&#x5757;&#x94FE;+&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#xFF08;Data Visualization&#xFF09;&#x5C55;&#x73B0;&#x3002;</p>
+<h1 id="&#x5E94;&#x7528;&#x573A;&#x666F;"><a name="&#x5E94;&#x7528;&#x573A;&#x666F;" class="plugin-anchor" href="#&#x5E94;&#x7528;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E94;&#x7528;&#x573A;&#x666F;</h1>
+<p>&#x4E30;&#x5BCC;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x662F;&#x4ECB;&#x7ECD;DDAO&#x91CD;&#x8981;&#x6027;&#x7684;&#x6700;&#x597D;&#x65B9;&#x5F0F;&#x3002;&#x57FA;&#x4E8E;DDAO&#xFF0C;&#x5F88;&#x591A;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x5E94;&#x7528;&#x5C06;&#x53D8;&#x5F97;&#x6613;&#x4E8E;&#x5F00;&#x53D1;&#x5B9E;&#x73B0;&#x3002;</p>
+<h2 id="&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x5185;&#x5BB9;&#x5206;&#x4EAB;"><a name="&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x5185;&#x5BB9;&#x5206;&#x4EAB;" class="plugin-anchor" href="#&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x5185;&#x5BB9;&#x5206;&#x4EAB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x5185;&#x5BB9;&#x5206;&#x4EAB;</h2>
+<p>&#x57FA;&#x4E8E;DDAO&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x642D;&#x5EFA;&#x4E00;&#x4E2A;&#x793E;&#x4EA4;&#x3001;&#x535A;&#x5BA2;&#x3001;&#x56FE;&#x7247;&#x3001;&#x97F3;&#x4E50;&#x3001;&#x89C6;&#x9891;&#x5206;&#x4EAB;&#x5E73;&#x53F0;&#x3002;&#x901A;&#x8FC7;&#x4F7F;&#x7528;DDAO&#x7684;&#x5199;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x7528;&#x6237;&#x53D1;&#x5E03;&#x7684;&#x6587;&#x5B57;&#x3001;&#x56FE;&#x7247;&#x3001;&#x89C6;&#x9891;&#x7B49;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x5728;IPFS&#x8FD9;&#x7C7B;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x540C;&#x65F6;&#x5C06;meta data&#xFF08;&#x4F8B;&#x5982;&#x5185;&#x5BB9;&#x7684;&#x5730;&#x5740;&#x3001;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#x3001;&#x7528;&#x6237;ID&#x7B49;&#xFF09;&#x5B58;&#x50A8;&#x5728;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x6216;&#x662F;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;&#x7136;&#x540E;&#x518D;&#x4F7F;&#x7528;DDAO&#x7684;&#x8BFB;&#x63A5;&#x53E3;&#xFF0C;&#x8FDB;&#x884C;&#x5185;&#x5BB9;&#x7684;&#x7B5B;&#x9009;&#x3001;&#x6392;&#x5E8F;&#x3001;&#x5C55;&#x73B0;&#x3002;&#x8FD9;&#x6837;&#x7CFB;&#x7EDF;&#x7684;&#x4F18;&#x70B9;&#x5728;&#x4E8E;&#x7528;&#x6237;&#x53D1;&#x5E03;&#x7684;&#x5185;&#x5BB9;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x5B58;&#x50A8;&#xFF0C;&#x4E0D;&#x53EF;&#x7BE1;&#x6539;&#x3002;</p>
+<h2 id="&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x4EA4;&#x6613;&#x5E73;&#x53F0;"><a name="&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x4EA4;&#x6613;&#x5E73;&#x53F0;" class="plugin-anchor" href="#&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x4EA4;&#x6613;&#x5E73;&#x53F0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x4EA4;&#x6613;&#x5E73;&#x53F0;</h2>
+<p>&#x57FA;&#x4E8E;DDAO&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x6DD8;&#x5B9D;&#x3001;Amazon&#x8FD9;&#x6837;&#x7684;&#x4EA4;&#x6613;&#x5E73;&#x53F0;&#x3002;&#x5546;&#x5BB6;&#x4E0A;&#x4F20;&#x5546;&#x54C1;&#x4FE1;&#x606F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x901A;&#x8FC7;DDAO&#x7684;&#x5199;&#x63A5;&#x53E3;&#x5C06;&#x6587;&#x5B57;&#x548C;&#x56FE;&#x7247;&#x5B58;&#x50A8;&#x81F3;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5546;&#x54C1;&#x7684;meta data&#xFF08;&#x4F8B;&#x5982;&#x4EF7;&#x683C;&#x3001;&#x6570;&#x91CF;&#x3001;&#x5206;&#x7C7B;&#x3001;&#x5173;&#x952E;&#x8BCD;&#x7B49;&#xFF09;&#x5B58;&#x50A8;&#x5728;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x6216;&#x662F;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;DDAO&#x7684;&#x8BFB;&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x5546;&#x54C1;&#x7684;&#x67E5;&#x627E;&#x3001;&#x7B5B;&#x9009;&#x3002;&#x6700;&#x7EC8;&#x901A;&#x8FC7;DDAO&#x8FDE;&#x63A5;&#x533A;&#x5757;&#x94FE;&#x8FDB;&#x884C;&#x8BA2;&#x5355;&#x521B;&#x5EFA;&#x3001;&#x652F;&#x4ED8;&#x3001;&#x5B8C;&#x6210;&#x4EA4;&#x6613;&#x3002;&#x8FD9;&#x79CD;&#x5E73;&#x53F0;&#x7684;&#x4F18;&#x70B9;&#x662F;&#xFF0C;&#x5546;&#x54C1;&#x4FE1;&#x606F;&#x548C;&#x4EA4;&#x6613;&#x8FC7;&#x7A0B;&#x66F4;&#x52A0;&#x900F;&#x660E;&#xFF0C;&#x652F;&#x4ED8;&#x4E5F;&#x66F4;&#x4E3A;&#x4FBF;&#x6377;&#x3002;</p>
+<h2 id="&#x4E91;&#x5B58;&#x50A8;&#x670D;&#x52A1;&#x7684;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;"><a name="&#x4E91;&#x5B58;&#x50A8;&#x670D;&#x52A1;&#x7684;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;" class="plugin-anchor" href="#&#x4E91;&#x5B58;&#x50A8;&#x670D;&#x52A1;&#x7684;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E91;&#x5B58;&#x50A8;&#x670D;&#x52A1;&#x7684;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;</h2>
+<p>&#x5B58;&#x50A8;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5546;&#x901A;&#x8FC7;DDAO&#x5C06;&#x4FE1;&#x606F;&#x5199;&#x5165;&#x533A;&#x5757;&#x94FE;&#x6216;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x6CE8;&#x518C;&#x3002;&#x7528;&#x6237;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x901A;&#x8FC7;&#x8D2D;&#x4E70;&#x548C;&#x6D88;&#x8017;&#x533A;&#x5757;&#x94FE;&#x4E0A;&#x7684;&#x4EE3;&#x5E01;&#xFF0C;&#x8D2D;&#x4E70;&#x5B58;&#x50A8;&#x670D;&#x52A1;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;DDAO&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x81F3;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x6587;&#x4EF6;&#x7684;&#x5730;&#x5740;&#x5B58;&#x50A8;&#x81F3;&#x533A;&#x5757;&#x94FE;&#x6216;&#x6570;&#x636E;&#x5E93;&#x3002;&#x4E0B;&#x8F7D;&#x7684;&#x65F6;&#x5019;&#x901A;&#x8FC7;DDAO&#x6D4F;&#x89C8;&#x6587;&#x4EF6;&#x7684;&#x4FE1;&#x606F;&#x548C;&#x5730;&#x5740;&#xFF0C;&#x518D;&#x4ECE;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x3002;&#x7528;&#x6237;&#x6D88;&#x8017;&#x7684;&#x4EE3;&#x5E01;&#x7528;&#x4E8E;&#x5956;&#x52B1;&#x5B58;&#x50A8;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5546;&#xFF0C;&#x5F62;&#x6210;&#x5B8C;&#x6574;&#x7ECF;&#x6D4E;&#x751F;&#x6001;&#x3002;</p>
+<h1 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="plugin-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h1>
+<p>&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x3001;&#x7BA1;&#x7406;&#xFF0C;&#x6709;&#x7740;&#x5E7F;&#x6CDB;&#x7684;&#x5E94;&#x7528;&#x524D;&#x666F;&#x3002;&#x76EE;&#x524D;&#x7531;&#x4E8E;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x4E0D;&#x5B8C;&#x5584;&#xFF0C;&#x5236;&#x7EA6;&#x4E86;&#x843D;&#x5730;&#x5E94;&#x7528;&#x3002;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x6570;&#x636E;&#x5E93;&#x3001;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x90FD;&#x6B63;&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#x3002;&#x53EF;&#x4EE5;&#x60F3;&#x8C61;&#x5230;&#x4E0D;&#x4E45;&#x7684;&#x5C06;&#x6765;&#xFF0C;&#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x4F1A;&#x88AB;&#x9646;&#x7EED;&#x5B9E;&#x73B0;&#x3002;&#x800C;DDAO&#x4E5F;&#x4F1A;&#x50CF;&#x73B0;&#x5728;&#x4E2D;&#x5FC3;&#x5316;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;DAO&#x4E00;&#x6837;&#xFF0C;&#x5E7F;&#x6CDB;&#x5730;&#x88AB;&#x5E94;&#x7528;&#x5728;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#x3002;</p>
+<h1 id="&#x53C2;&#x8003;&#x6587;&#x732E;"><a name="&#x53C2;&#x8003;&#x6587;&#x732E;" class="plugin-anchor" href="#&#x53C2;&#x8003;&#x6587;&#x732E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;&#x6587;&#x732E;</h1>
+<p>[1] IPFS. <a href="https://ipfs.io/" target="_blank">https://ipfs.io/</a>.</p>
+<p>[2] Swarm. <a href="https://swarm-guide.readthedocs.io/en/latest/" target="_blank">https://swarm-guide.readthedocs.io/en/latest/</a>.</p>
+<p>[3] Storj. <a href="https://storj.io/" target="_blank">https://storj.io/</a>.</p>
+<p>[4] Filecoin. <a href="https://filecoin.io/" target="_blank">https://filecoin.io/</a>.</p>
+<p>[5] Wolk. <a href="https://wolk.com/" target="_blank">https://wolk.com/</a>.</p>
+<p>[6] Fluence. <a href="https://fluence.one/" target="_blank">https://fluence.one/</a>.</p>
+<p>[7] Sia. <a href="https://sia.tech/" target="_blank">https://sia.tech/</a>.</p>
+<p>[8] BigchainDB. <a href="https://www.bigchaindb.com/" target="_blank">https://www.bigchaindb.com/</a>.</p>
+<p>[9] Bluzelle. <a href="https://bluzelle.com/" target="_blank">https://bluzelle.com/</a>.</p>
+<p>[10] Ties.DB. <a href="https://tiesdb.com/" target="_blank">https://tiesdb.com/</a>.</p>
+<p>[11] Awesome IPFS. <a href="https://awesome.ipfs.io/" target="_blank">https://awesome.ipfs.io/</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Canal-Cross-Chain/" class="navigation navigation-prev " aria-label="Previous page: Canal: 一种跨链交易解决方案">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Confidential-Assets.html" class="navigation navigation-next " aria-label="Next page: 隐私资产">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"DDAO：去中心化数据访问对象","level":"7.7","depth":1,"next":{"title":"隐私资产","level":"8.1","depth":1,"path":"Confidential-Assets.md","ref":"Confidential-Assets.md","articles":[]},"previous":{"title":"Canal: 一种跨链交易解决方案","level":"7.6","depth":1,"path":"Canal-Cross-Chain/README.md","ref":"Canal-Cross-Chain/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"zh","gitbook":"*"},"file":{"path":"DDAO-Data-Management/README.md","mtime":"2020-07-01T00:18:12.367Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-01T00:26:05.312Z"},"basePath":"..","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

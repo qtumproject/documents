@@ -1,0 +1,826 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>如何部署 Qtum 量子链节点 · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Launch-Qtum-with-Docker.html" />
+    
+    
+    <link rel="prev" href="Testnet-User-Guide.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">钱包使用</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Qtum-Wallet-Tutorial/">
+            
+                <a href="Qtum-Wallet-Tutorial/">
+            
+                    
+                    Qtum PC 端钱包使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="OfflineStaking.html">
+            
+                <a href="OfflineStaking.html">
+            
+                    
+                    Offline Staking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Qtum-Electrum-User-Guide.html">
+            
+                <a href="Qtum-Electrum-User-Guide.html">
+            
+                    
+                    Qtum Electrum 轻钱包使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="How-to-use-Qtum-Android-Wallet/">
+            
+                <a href="How-to-use-Qtum-Android-Wallet/">
+            
+                    
+                    Qtum 安卓钱包使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="Adding-Nodes.html">
+            
+                <a href="Adding-Nodes.html">
+            
+                    
+                    如何添加节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                <a href="Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                    
+                    锁定、解锁 Qtum 钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="Wallet-Recovery-with-Salvagewallet.html">
+            
+                <a href="Wallet-Recovery-with-Salvagewallet.html">
+            
+                    
+                    使用salvagewallet修复钱包数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="How-To-Add-Options/">
+            
+                <a href="How-To-Add-Options/">
+            
+                    
+                    如何添加 Qtum 运行选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="Qtum-Web-Wallet-Tutorial/">
+            
+                <a href="Qtum-Web-Wallet-Tutorial/">
+            
+                    
+                    QTUM web钱包使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="Testnet-User-Guide.html">
+            
+                <a href="Testnet-User-Guide.html">
+            
+                    
+                    测试网络使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">节点部署</li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                <a href="Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                    
+                    如何部署 Qtum 量子链节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Launch-Qtum-with-Docker.html">
+            
+                <a href="Launch-Qtum-with-Docker.html">
+            
+                    
+                    如何用 Docker 运行 Qtum 节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="How-to-Deploy-Star-Network/">
+            
+                <a href="How-to-Deploy-Star-Network/">
+            
+                    
+                    如何搭建 Qtum 星形网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking 教程（PoS 挖矿）</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="How-to-Stake-with-Qtum/">
+            
+                <a href="How-to-Stake-with-Qtum/">
+            
+                    
+                    Qtum 量子链 Staking(PoS 挖矿) 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">智能合约和QRC20</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="Qtum-Contract-Usage.html">
+            
+                <a href="Qtum-Contract-Usage.html">
+            
+                    
+                    Qtum 智能合约使用方法及说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="QRC20-Token-Introduce.html">
+            
+                <a href="QRC20-Token-Introduce.html">
+            
+                    
+                    QRC20 Token 指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="QRC20集成文档.html">
+            
+                <a href="QRC20集成文档.html">
+            
+                    
+                    QRC20 集成文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="手动构造Qtum合约交易的说明.html">
+            
+                <a href="手动构造Qtum合约交易的说明.html">
+            
+                    
+                    手动构造Qtum合约交易的说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="Qtum-Blockchain-Guide.html">
+            
+                <a href="Qtum-Blockchain-Guide.html">
+            
+                    
+                    Qtum 区块链指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="Build-Qtum-on-CentOS.html">
+            
+                <a href="Build-Qtum-on-CentOS.html">
+            
+                    
+                    在 CentOS 7 上编译 Qtum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="Qtum-Eclair-Guide.html">
+            
+                <a href="Qtum-Eclair-Guide.html">
+            
+                    
+                    闪电网络客户端 Qtum Eclair 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="Upgrade-Tutorial/">
+            
+                <a href="Upgrade-Tutorial/">
+            
+                    
+                    Qtum 钱包升级教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">QtumX</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Technical-White-Paper-for-QtumX/">
+            
+                <a href="Technical-White-Paper-for-QtumX/">
+            
+                    
+                    QtumX技术白皮书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="QtumX-Tutorial.html">
+            
+                <a href="QtumX-Tutorial.html">
+            
+                    
+                    QtumX使用教程（内测）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="One-Click-Launch-Chain/">
+            
+                <a href="One-Click-Launch-Chain/">
+            
+                    
+                    QtumX一键发链教程（公测）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="QtumX-Smart-Contract/">
+            
+                <a href="QtumX-Smart-Contract/">
+            
+                    
+                    基于QtumX搭建自己的Dapp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="SCAR-Consensus/">
+            
+                <a href="SCAR-Consensus/">
+            
+                    
+                    SCAR：一种可伸缩共识算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="Canal-Cross-Chain/">
+            
+                <a href="Canal-Cross-Chain/">
+            
+                    
+                    Canal: 一种跨链交易解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="DDAO-Data-Management/">
+            
+                <a href="DDAO-Data-Management/">
+            
+                    
+                    DDAO：去中心化数据访问对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">研究</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Confidential-Assets.html">
+            
+                <a href="Confidential-Assets.html">
+            
+                    
+                    隐私资产
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Data-Analytics.html">
+            
+                <a href="Data-Analytics.html">
+            
+                    
+                    数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >如何部署 Qtum 量子链节点</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5982;&#x4F55;&#x90E8;&#x7F72;qtum&#x91CF;&#x5B50;&#x94FE;&#x8282;&#x70B9;"><a name="&#x5982;&#x4F55;&#x90E8;&#x7F72;qtum&#x91CF;&#x5B50;&#x94FE;&#x8282;&#x70B9;" class="plugin-anchor" href="#&#x5982;&#x4F55;&#x90E8;&#x7F72;qtum&#x91CF;&#x5B50;&#x94FE;&#x8282;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x90E8;&#x7F72;Qtum&#x91CF;&#x5B50;&#x94FE;&#x8282;&#x70B9;</h1>
+<p>&#x672C;&#x6559;&#x7A0B;&#x5305;&#x542B;Qtum&#x91CF;&#x5B50;&#x94FE;&#x7684;&#x90E8;&#x7F72;&#x3001;&#x8FD0;&#x884C;&#x4EE5;&#x53CA;RPC&#x8C03;&#x7528;&#x7B49;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x6559;&#x7A0B;&#x5047;&#x8BBE;&#x8BFB;&#x8005;&#x80FD;&#x591F;&#x719F;&#x7EC3;&#x4F7F;&#x7528;Linux,Mac&#x6216;Windows&#x547D;&#x4EE4;&#x884C;&#x3002;&#x82E5;&#x60A8;&#x4E0D;&#x7B26;&#x5408;&#x6B64;&#x8981;&#x6C42;&#xFF0C;&#x6216;&#x53EA;&#x5173;&#x5FC3;Qtum qt&#x94B1;&#x5305;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x8BF7;&#x53C2;&#x8003;&#x53E6;&#x4E00;&#x7BC7;Qtum&#x94B1;&#x5305;&#x4F7F;&#x7528;&#x6559;&#x7A0B;&#x3002;</p>
+<h2 id="&#x83B7;&#x53D6;qtum&#x8282;&#x70B9;"><a name="&#x83B7;&#x53D6;qtum&#x8282;&#x70B9;" class="plugin-anchor" href="#&#x83B7;&#x53D6;qtum&#x8282;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;Qtum&#x8282;&#x70B9;</h2>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x56DB;&#x79CD;&#x65B9;&#x6CD5;&#x4E4B;&#x4E00;&#x83B7;&#x5F97;Qtum&#x8282;&#x70B9;&#x7A0B;&#x5E8F;&#xFF1A;</p>
+<p><strong>1. &#x76F4;&#x63A5;&#x4E0B;&#x8F7D;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</strong></p>
+<p>&#x5982;&#x679C;&#x4F60;&#x5E76;&#x4E0D;&#x5173;&#x5FC3;Qtum&#x7684;&#x6E90;&#x7801;&#xFF0C;&#x90E8;&#x7F72;Qtum&#x8282;&#x70B9;&#x6700;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x5728;<a href="https://github.com/qtumproject/qtum/releases" target="_blank">Qtum release page&#xFF08;&#x70B9;&#x51FB;&#x6253;&#x5F00;&#xFF09;</a>&#x4E0B;&#x8F7D;&#x6700;&#x65B0;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF0C;&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x5E73;&#x53F0;&#x5305;&#x62EC;Linux&#xFF0C;Windows&#xFF0C;OSX&#x3002;&#x5EFA;&#x8BAE;&#x9009;&#x62E9;&#x6700;&#x65B0;&#x7248;&#x8FDB;&#x884C;&#x4E0B;&#x8F7D;&#xFF0C;&#x672C;&#x6559;&#x7A0B;&#x4EE5;&#x64B0;&#x5199;&#x65F6;&#x7684;&#x6700;&#x65B0;&#x7248;v0.14.13&#x4E3A;&#x4F8B;&#x3002;</p>
+<p>&#xFF08;&#x6CE8;&#x610F;&#xFF0C;&#x4F60;&#x6240;&#x770B;&#x5230;&#x6700;&#x65B0;&#x7248;&#x7684;&#x7248;&#x672C;&#x53F7;&#x53EF;&#x80FD;&#x4E0D;&#x540C;&#xFF0C;&#x5982;&#x8FD9;&#x91CC;&#x662F;0.14.13&#xFF0C;&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#x4E32;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#xFF09;</p>
+<ul>
+<li><strong>Mac</strong>&#x7528;&#x6237;&#x8BF7;&#x4E0B;&#x8F7D;&#xFF1A;<code>qtum-0.14.13-osx64.tar.gz</code></li>
+<li><strong>Linux</strong>&#x7528;&#x6237;&#x8BF7;&#x4E0B;&#x8F7D;&#xFF1A; <code>qtum-0.14.13-i686-pc-linux-gnu.tar.gz</code>(32&#x4F4D;)&#x6216;<code>qtum-0.14.13-x86_64-linux-gnu.tar.gz</code>(64&#x4F4D;)</li>
+<li><strong>Windows</strong>&#x7528;&#x6237;&#x8BF7;&#x4E0B;&#x8F7D;&#xFF1A;<code>qtum-0.14.13-win32.zip</code>(32&#x4F4D;)&#x6216;<code>qtum-0.14.13-win64.zip</code>&#xFF08;64&#x4F4D;&#xFF09;</li>
+<li><strong>&#x6811;&#x8393;&#x6D3E;</strong>&#x7528;&#x6237;&#x8BF7;&#x4E0B;&#x8F7D;&#xFF1A;<code>qtum-0.14.13-arm-linux-gnueabihf.tar.gz</code></li>
+</ul>
+<p>&#x4E0B;&#x8F7D;&#x538B;&#x7F29;&#x5305;&#x89E3;&#x538B;&#x540E;,<code>&lt;&#x89E3;&#x538B;&#x8DEF;&#x5F84;&gt;/bin/</code>&#x4E0B;&#x5305;&#x542B;<code>qtumd</code>&#x548C;<code>qtum-cli</code>&#xFF0C;&#x5373;&#x4E3A;&#x672C;&#x6559;&#x7A0B;&#x8981;&#x7528;&#x5230;&#x7684;Qtum&#x8282;&#x70B9;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;</p>
+<p><strong>2. Linux&#x53EF;&#x901A;&#x8FC7;apt&#x5B89;&#x88C5;</strong></p>
+<p>&#x5177;&#x4F53;&#x6559;&#x7A0B;&#x53EF;&#x53C2;&#x89C1;<a href="https://github.com/qtumproject/qtum/wiki/Setting-up-QTUM-Ubuntu,-Debian-and-Mint-repository" target="_blank">https://github.com/qtumproject/qtum/wiki/Setting-up-QTUM-Ubuntu,-Debian-and-Mint-repository</a>&#xFF0C;&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x5E73;&#x53F0;&#x4E3A;Ubuntu&#xFF0C;Debian&#x548C;Mint&#x3002;</p>
+<p>&#x6811;&#x8393;&#x6D3E;&#x7528;&#x6237;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;apt&#x5B89;&#x88C5;&#xFF0C;&#x5177;&#x4F53;&#x6559;&#x7A0B;&#x53C2;&#x89C1;<a href="https://github.com/qtumproject/qtum/wiki/Installing-Qtum-on-Raspberry-Pi" target="_blank">https://github.com/qtumproject/qtum/wiki/Installing-Qtum-on-Raspberry-Pi</a>&#x3002;</p>
+<p>&#x6309;&#x7167;&#x6559;&#x7A0B;&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x76F4;&#x63A5;&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x8C03;&#x7528;<code>qtumd</code>&#x548C;<code>qtum-cli</code>&#x7B49;&#x3002;</p>
+<p><strong>3. &#x901A;&#x8FC7;&#x6E90;&#x4EE3;&#x7801;&#x7F16;&#x8BD1;</strong></p>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4ECE;&#x6E90;&#x4EE3;&#x7801;&#x76F4;&#x63A5;&#x7F16;&#x8BD1;Qtum&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;Github&#x4E0A;&#x4E0B;&#x8F7D;&#x6700;&#x65B0;&#x6E90;&#x7801;: <a href="https://github.com/qtumproject/qtum" target="_blank">https://github.com/qtumproject/qtum</a>&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x7F16;&#x8BD1;&#x65B9;&#x6CD5;&#x8BF7;&#x53C2;&#x8003; <a href="https://github.com/qtumproject/qtum/blob/master/README.md" target="_blank">https://github.com/qtumproject/qtum/blob/master/README.md</a>&#x3002;&#x76EE;&#x524D;&#x652F;&#x6301;&#x8F83;&#x597D;&#x7684;&#x7F16;&#x8BD1;&#x5E73;&#x53F0;&#x5305;&#x62EC;Linux&#x548C;OSX&#x3002;&#x5176;&#x4ED6;&#x5E73;&#x53F0;&#x7684;&#x4F9D;&#x8D56;&#x73AF;&#x5883;&#x53EF;&#x80FD;&#x6709;&#x6240;&#x4E0D;&#x540C;&#x3002;</p>
+<p>&#x7F16;&#x8BD1;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x5728;<code>&lt;path&gt;/src</code>&#x8DEF;&#x5F84;&#x4E0B;&#x540C;&#x6837;&#x5F97;&#x5230;&#x4E0A;&#x6587;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF1A;<code>qtumd</code>,<code>qtum-cli</code>&#x3002;</p>
+<p><strong>4. &#x901A;&#x8FC7;Docker&#x83B7;&#x53D6;qtum&#x955C;&#x50CF;</strong></p>
+<p>&#x5173;&#x4E8E;docker&#x5B89;&#x88C5;&#x548C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x8BF7;&#x53C2;&#x7167;docker&#x5B98;&#x65B9;&#x6559;&#x7A0B;&#x3002;&#x8FD9;&#x91CC;&#x5047;&#x8BBE;docker&#x73AF;&#x5883;&#x5DF2;&#x6B63;&#x786E;&#x5B89;&#x88C5;&#x3002;</p>
+<p>Qtum&#x5B98;&#x65B9;&#x5728;docker hub&#x4E0A;&#x7684;&#x955C;&#x50CF;&#x4E3A;<code>qtum/qtum</code>,&#x53EF;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x83B7;&#x53D6;&#xFF1A;</p>
+<pre><code>docker pull qtum/qtum:latest
+</code></pre><p>&#x901A;&#x8FC7;&#x4E0A;&#x6587;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;qtum&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#xFF0C;&#x5176;&#x4E2D;&#x4E0E;&#x8282;&#x70B9;&#x90E8;&#x7F72;&#x53CA;RPC&#x8C03;&#x7528;&#x76F8;&#x5173;&#x7684;&#x662F;&#xFF1A;</p>
+<ul>
+<li><code>qtumd</code>&#xFF1A;Qtum&#x6838;&#x5FC3;&#x7A0B;&#x5E8F;&#xFF0C;&#x5373;&#x771F;&#x6B63;&#x7684;Qtum&#x5168;&#x8282;&#x70B9;&#x7A0B;&#x5E8F;</li>
+<li><code>qtum-cli</code>&#xFF1A;Qtum&#x547D;&#x4EE4;&#x884C;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x548C;Qtum&#x6838;&#x5FC3;&#x7A0B;&#x5E8F;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF0C;&#x5B9E;&#x73B0;&#x672C;&#x5730;RPC&#x8C03;&#x7528;</li>
+</ul>
+<h2 id="&#x90E8;&#x7F72;qtum&#x8282;&#x70B9;"><a name="&#x90E8;&#x7F72;qtum&#x8282;&#x70B9;" class="plugin-anchor" href="#&#x90E8;&#x7F72;qtum&#x8282;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x7F72;Qtum&#x8282;&#x70B9;</h2>
+<p>Docker&#x5BB9;&#x5668;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x7565;&#x6709;&#x4E0D;&#x540C;&#xFF0C;&#x4F46;&#x539F;&#x7406;&#x4E00;&#x81F4;&#x3002;&#x8BFB;&#x8005;&#x53EF;&#x53C2;&#x8003;&#x53E6;&#x4E00;&#x6559;&#x7A0B;&#x300A;<a href="Launch-Qtum-with-Docker.html">&#x5982;&#x4F55;&#x7528;docker&#x8FD0;&#x884C;qtum&#x8282;&#x70B9;</a>&#x300B;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x4EE5;Ubuntu&#x4E3A;&#x4F8B;&#xFF0C;&#x90E8;&#x7F72;Qtum&#x8282;&#x70B9;&#x3002;Mac&#x548C;Windows&#x547D;&#x4EE4;&#x884C;&#x4E0E;Linux&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF0C;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;</p>
+<p>&#x901A;&#x8FC7;<code>./qtumd</code>, &#x5373;&#x53EF;&#x8FD0;&#x884C;Qtum&#x5168;&#x8282;&#x70B9;&#xFF1A;</p>
+<pre><code>./qtumd -daemon
+</code></pre><p>&#x5176;&#x4E2D;<code>-daemon</code>&#x8868;&#x793A;&#x8FDB;&#x7A0B;&#x540E;&#x53F0;&#x9A7B;&#x7559;&#x3002;&#x5982;&#x679C;&#x7528;&#x6237;&#x60F3;&#x901A;&#x8FC7;&#x8282;&#x70B9;&#x67E5;&#x770B;&#x5408;&#x7EA6;&#x76F8;&#x5173;events&#xFF08;&#x5982;&#x67E5;&#x770B;&#x6536;&#x53D1;QRC20&#x4EE3;&#x5E01;&#x7684;&#x8BB0;&#x5F55;&#x7B49;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8FD0;&#x884C;<code>qtumd</code>&#x65F6;&#x6DFB;&#x52A0;<code>-logevents</code>&#x9009;&#x9879;&#x3002;</p>
+<p> &#x66F4;&#x591A;&#x9009;&#x9879;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x67E5;&#x770B;&#xFF1A;</p>
+<pre><code>./qtumd -help
+</code></pre><p>&#x7ED3;&#x675F;&#x8FD0;&#x884C;&#x8BF7;&#x6267;&#x884C;&#xFF1A;</p>
+<pre><code>./qtum-cli stop
+</code></pre><p>&#x4E0D;&#x540C;&#x5E73;&#x53F0;&#x7684;&#x9ED8;&#x8BA4;&#x7684;&#x6570;&#x636E;&#x8DEF;&#x5F84;&#x4E0D;&#x540C;&#xFF1A;</p>
+<ul>
+<li>Linux&#xFF1A;<code>~/.qtum/</code></li>
+<li>Mac OSX&#xFF1A;<code>~/Library/Application Support/Qtum</code></li>
+<li>Windows:<code>%APPDATA%\Qtum</code></li>
+</ul>
+<p>&#x9996;&#x6B21;&#x8FD0;&#x884C;&#x5982;&#x679C;&#x9ED8;&#x8BA4;&#x8DEF;&#x5F84;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x8BF7;&#x6E05;&#x7A7A;&#x4E4B;&#x540E;&#x518D;&#x8FD0;&#x884C;&#x8282;&#x70B9;&#xFF08;&#x6E05;&#x7A7A;&#x5373;&#x5220;&#x9664;&#x8DEF;&#x5F84;&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x6E05;&#x7A7A;&#x524D;&#x6CE8;&#x610F;&#x5907;&#x4EFD;&#xFF01;&#xFF09;&#x3002;&#x8BFB;&#x8005;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>-datadir</code>&#x9009;&#x9879;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x8DEF;&#x5F84;&#x3002;</p>
+<p>&#x9996;&#x6B21;&#x8FD0;&#x884C;&#x9700;&#x8981;&#x540C;&#x6B65;&#x6240;&#x6709;&#x533A;&#x5757;&#xFF0C;&#x8282;&#x70B9;&#x8FD0;&#x884C;&#x65E5;&#x5FD7;&#x8DEF;&#x5F84;&#x4E3A;<code>~/.qtum/debug.log</code>&#x3002;</p>
+<h2 id="&#x672C;&#x5730;rpc&#x8C03;&#x7528;"><a name="&#x672C;&#x5730;rpc&#x8C03;&#x7528;" class="plugin-anchor" href="#&#x672C;&#x5730;rpc&#x8C03;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672C;&#x5730;RPC&#x8C03;&#x7528;</h2>
+<p>&#x8282;&#x70B9;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x540E;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;<code>qtum-cli</code>&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF0C;&#x5B9E;&#x73B0;&#x672C;&#x5730;RPC&#x8C03;&#x7528;&#x3002;
+&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>oldclock@raven:~/qtum-0.14.3/bin$ ./qtum-cli getinfo
+{
+  &quot;version&quot;: 140300,
+  &quot;protocolversion&quot;: 70016,
+  &quot;walletversion&quot;: 130000,
+  &quot;balance&quot;: 0.00000000,
+  &quot;stake&quot;: 0.00000000,
+  &quot;blocks&quot;: 12126,
+  &quot;timeoffset&quot;: 0,
+  &quot;connections&quot;: 8,
+  &quot;proxy&quot;: &quot;&quot;,
+  &quot;difficulty&quot;: {
+    &quot;proof-of-work&quot;: 1.52587890625e-05,
+    &quot;proof-of-stake&quot;: 886731.5868738915
+  },
+  &quot;testnet&quot;: false,
+  &quot;moneysupply&quot;: 100028504,
+  &quot;keypoololdest&quot;: 1505186997,
+  &quot;keypoolsize&quot;: 100,
+  &quot;paytxfee&quot;: 0.00000000,
+  &quot;relayfee&quot;: 0.00400000,
+  &quot;errors&quot;: &quot;&quot;
+}
+</code></pre><p>&#x83B7;&#x53D6;&#x6240;&#x6709;RPC&#x547D;&#x4EE4;&#x5217;&#x8868;&#xFF0C;&#x8BF7;&#x8FD0;&#x884C;:</p>
+<pre><code>./qtum-cli help
+</code></pre><p>&#x83B7;&#x53D6;RPC&#x8C03;&#x7528;&#x7684;&#x4F7F;&#x7528;&#x8BF4;&#x660E;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;<code>./qtum-cli help &lt;RPCcmd&gt;</code>&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>./qtum-cli help getinfo
+</code></pre><h2 id="rpc&#x8C03;&#x7528;&#x8BBE;&#x7F6E;"><a name="rpc&#x8C03;&#x7528;&#x8BBE;&#x7F6E;" class="plugin-anchor" href="#rpc&#x8C03;&#x7528;&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>RPC&#x8C03;&#x7528;&#x8BBE;&#x7F6E;</h2>
+<p>&#x901A;&#x8FC7;<code>./qtum-cli help getinfo</code>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x901A;&#x8FC7;jsonrpc&#x5B9E;&#x73B0;getinfo&#x8C03;&#x7528;&#x7684;&#x4F7F;&#x7528;&#x8BF4;&#x660E;&#xFF1A;</p>
+<pre><code>Examples:
+&gt; curl --user myusername --data-binary &apos;{&quot;jsonrpc&quot;: &quot;1.0&quot;, &quot;id&quot;:&quot;curltest&quot;, &quot;method&quot;: &quot;getinfo&quot;, &quot;params&quot;: [] }&apos; -H &apos;content-type: text/plain;&apos; http://127.0.0.1:3889/
+</code></pre><p>&#x5B9E;&#x4F8B;&#x4E2D;&#x7ED9;&#x51FA;&#x4E86;json&#x62A5;&#x6587;&#x7684;&#x8BE6;&#x7EC6;&#x683C;&#x5F0F;&#xFF0C;&#x4F46;&#x9ED8;&#x8BA4;&#x6761;&#x4EF6;&#x4E0B;&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x8C03;&#x7528;&#x3002;&#x53EA;&#x6709;&#x5728;&#x8BBE;&#x7F6E;rpc&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x540E;&#xFF0C;&#x624D;&#x53EF;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x3002;&#x8BBE;&#x7F6E;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x65B0;&#x5EFA;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>~/.qtum/qtum.conf</code>&#xFF0C;&#x5185;&#x5BB9;&#x5305;&#x542B;</p>
+<pre><code>rpcuser=test  #rpc&#x7528;&#x6237;&#x540D;
+rpcpassword=test1234  #rpc&#x5BC6;&#x7801;
+#&#x4EE5;&#x4E0A;&#x4E24;&#x9879;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EA;&#x5141;&#x8BB8;&#x672C;&#x5730;&#x7684;RPC&#x8FDE;&#x63A5;&#xFF0C;
+#&#x8981;&#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;rpcallowip&#x58F0;&#x660E;&#x6240;&#x6709;&#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x7684;ip
+#ipv4&#x548C;ipv6&#x90FD;&#x53EF;&#x8BBE;&#x7F6E;&#xFF0C;&#x4E14;&#x53EF;&#x662F;&#x8BBE;&#x7F6E;&#x591A;&#x4E2A;ip&#x3002;&#x4F8B;&#x5982;&#xFF1A;
+#rpcallowip=192.168.77.51/255.255.255.0
+#rpcallowip=1.2.3.4/24
+#rpcallowip=2001:db8:85a3:0:0:8a2e:370:7334/96
+</code></pre><p>&#x66F4;&#x591A;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A;<a href="https://github.com/qtumproject/qtum/blob/1a926b980f03e97322c7dd787835bec1730f35d2/contrib/debian/examples/qtum.conf" target="_blank">qtum.conf&#x5B9E;&#x4F8B;&#xFF08;&#x70B9;&#x51FB;&#x6253;&#x5F00;&#xFF09;</a></p>
+<p>&#x8BBE;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x91CD;&#x542F;&#x8282;&#x70B9;&#x5373;&#x5B8C;&#x6210;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x91CD;&#x65B0;&#x8FD0;&#x884C;Qtum&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x52A0;&#x5165;&#x7279;&#x5B9A;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code>./qtumd -rpcuser=test -rpcpassword=test1234 -rpcallowip=192.168.77.51/255.255.255.0
+</code></pre><p>&#x5404;&#x53C2;&#x6570;&#x542B;&#x4E49;&#x4E0E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x76F8;&#x540C;&#xFF0C;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;</p>
+<h2 id="rpc&#x8C03;&#x7528;&#x5B9E;&#x4F8B;"><a name="rpc&#x8C03;&#x7528;&#x5B9E;&#x4F8B;" class="plugin-anchor" href="#rpc&#x8C03;&#x7528;&#x5B9E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>RPC&#x8C03;&#x7528;&#x5B9E;&#x4F8B;</h2>
+<p>&#x8BBE;&#x7F6E;&#x5B8C;&#x6210;&#x5E76;&#x91CD;&#x65B0;&#x8FD0;&#x884C;&#x8282;&#x70B9;&#x540E;&#xFF0C;&#x5373;&#x53EF;&#x8FDB;&#x884C;&#x8FDC;&#x7A0B;RPC&#x8C03;&#x7528;&#x3002;&#x672C;&#x6587;&#x4E2D;&#x8FD0;&#x884C;Qtum&#x8282;&#x70B9;&#x7684;&#x670D;&#x52A1;&#x5668;ip&#x4E3A;192.168.77.188&#xFF0C;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x4E3A;3889&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;macbook&#x4E0A;&#x5BF9;ubuntu&#x4E2D;&#x8FD0;&#x884C;&#x7684;Qtum&#x8282;&#x70B9;&#x8FDB;&#x884C;rpc&#x8C03;&#x7528;&#xFF0C;&#x5C06;&#x8FD4;&#x56DE;&#x548C;&#x672C;&#x5730;&#x8C03;&#x7528;&#x76F8;&#x540C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>zhongwenbins-MacBook-Pro:~ zhongwenbin$ curl --user test:test1234 --data-binary &apos;{&quot;jsonrpc&quot;: &quot;1.0&quot;, &quot;id&quot;:&quot;curltest&quot;, &quot;method&quot;: &quot;getinfo&quot;, &quot;params&quot;: [] }&apos; -H &apos;content-type: text/plain;&apos; http://192.168.77.188:3889/
+{&quot;result&quot;:{&quot;version&quot;:140300,&quot;protocolversion&quot;:70016,&quot;walletversion&quot;:130000,&quot;balance&quot;:0.00000000,&quot;stake&quot;:0.00000000,&quot;blocks&quot;:12197,&quot;timeoffset&quot;:0,&quot;connections&quot;:8,&quot;proxy&quot;:&quot;&quot;,&quot;difficulty&quot;:{&quot;proof-of-work&quot;:1.52587890625e-05,&quot;proof-of-stake&quot;:650787.7561123729},&quot;testnet&quot;:false,&quot;moneysupply&quot;:100028788,&quot;keypoololdest&quot;:1505186997,&quot;keypoolsize&quot;:100,&quot;paytxfee&quot;:0.00000000,&quot;relayfee&quot;:0.00400000,&quot;errors&quot;:&quot;&quot;},&quot;error&quot;:null,&quot;id&quot;:&quot;curltest&quot;}
+</code></pre><p>&#x7528;postman&#x7B49;&#x5DE5;&#x5177;&#x53EF;&#x770B;&#x5230;&#x66F4;&#x52A0;&#x76F4;&#x89C2;&#x7684;&#x6548;&#x679C;&#xFF1A;
+<img src="https://s.qtum.site/uploads/e7398325af231cf42a708303af2a5098.png" alt="postman&#x622A;&#x56FE;"></p>
+<p>&#x81EA;&#x6B64;Qtum&#x8282;&#x70B9;&#x7684;&#x90E8;&#x7F72;&#x53CA;rpc&#x8C03;&#x7528;&#x8BBE;&#x7F6E;&#x5168;&#x90E8;&#x5B8C;&#x6210;&#x3002;</p>
+<h2 id="nginx&#x914D;&#x7F6E;&#x5B9E;&#x4F8B;&#xFF08;&#x9009;&#x8BFB;&#xFF09;"><a name="nginx&#x914D;&#x7F6E;&#x5B9E;&#x4F8B;&#xFF08;&#x9009;&#x8BFB;&#xFF09;" class="plugin-anchor" href="#nginx&#x914D;&#x7F6E;&#x5B9E;&#x4F8B;&#xFF08;&#x9009;&#x8BFB;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>Nginx&#x914D;&#x7F6E;&#x5B9E;&#x4F8B;&#xFF08;&#x9009;&#x8BFB;&#xFF09;</h2>
+<p>&#x4ECE;&#x4E0A;&#x6587;&#x5B9E;&#x4F8B;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;rpc&#x547D;&#x4EE4;&#x5FC5;&#x987B;&#x5305;&#x542B;rpc&#x7528;&#x6237;&#x540D;&#xFF0C;&#x5BC6;&#x7801;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#x53F7;3889&#x3002;&#x5982;&#x679C;&#x60F3;&#x90E8;&#x7F72;&#x901A;&#x7528;API&#xFF0C;&#x907F;&#x514D;&#x8F93;&#x5165;&#x7528;&#x6237;&#x5BC6;&#x7801;&#x53CA;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x7528;Nginx&#x5B9E;&#x73B0;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x597D;&#x5904;&#x662F;&#x53EF;&#x4EE5;&#x9690;&#x85CF;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x540D;&#x5BC6;&#x7801;&#x751A;&#x81F3;&#x662F;&#x7AEF;&#x53E3;&#x53F7;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x4E5F;&#x4E0D;&#x5F71;&#x54CD;api&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x53EF;&#x4EE5;&#x5BF9;&#x5916;&#x90E8;rpc&#x8C03;&#x7528;&#x8FDB;&#x884C;&#x9002;&#x5F53;&#x8FC7;&#x6EE4;&#xFF0C;&#x4FDD;&#x8BC1;&#x5B89;&#x5168;&#x6027;&#x3002;&#x5173;&#x4E8E;Nginx&#x7684;&#x5B89;&#x88C5;&#x548C;&#x57FA;&#x672C;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x81EA;&#x884C;&#x641C;&#x7D22;&#x76F8;&#x5173;&#x6559;&#x7A0B;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;</p>
+<ul>
+<li>&#x8FD0;&#x884C;Qtum&#x8282;&#x70B9;&#x7684;&#x670D;&#x52A1;&#x7AEF;ip&#x4E3A;<code>192.168.77.188</code>&#xFF0C;&#x8282;&#x70B9;&#x6B63;&#x5E38;&#x8FD0;&#x884C;</li>
+<li>api&#x4EE3;&#x7406;&#x7AEF;ip&#x4E3A;<code>192.168.77.51</code>&#xFF0C;&#x5DF2;&#x5B89;&#x88C5;Nginx</li>
+</ul>
+<p>&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>1.&#x8BBE;&#x7F6E;&#x670D;&#x52A1;&#x7AEF;Qtum&#x8282;&#x70B9;&#x7684;rpc&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;&#x53C2;&#x8003;&#x4E0A;&#x6587;&#xFF09;&#xFF0C;&#x5C06;api&#x4EE3;&#x7406;&#x7AEF;&#x7684;ip&#x52A0;&#x5165;rpcallowip&#x4E2D;&#xFF0C;&#x5E76;&#x91CD;&#x542F;&#x8282;&#x70B9;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>rpcuser=test
+rpcpassword=test1234
+rpcallowip=192.168.77.51/255.255.255.0
+</code></pre><p>2.&#x914D;&#x7F6E;&#x4EE3;&#x7406;&#x7AEF;Nginx&#xFF1A;</p>
+<pre><code>    server {
+        listen       80;
+        server_name  localhost;
+
+        location / {
+            proxy_pass http://192.168.77.188:3889;  #&#x53CD;&#x4EE3;&#x5230;&#x7AEF;&#x53E3;3889
+            proxy_set_header Authorization &quot;Basic dGVzdDp0ZXN0MTIzNA==&quot;;  #&#x672C;&#x4F8B;&#x4E2D;&#x4E3A;test:test1234&#x7684;base64&#x7F16;&#x7801;
+        }
+    }
+</code></pre><p>3.&#x8BBE;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x4EE3;&#x7406;&#x7AEF;&#x5373;&#x53EF;&#x8FDB;&#x884C;RPC&#x8C03;&#x7528;(&#x65E0;&#x9700;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#x5BC6;&#x7801;&#x548C;&#x7AEF;&#x53E3;&#x53F7;)&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre><code>zhongwenbins-MacBook-Pro:~ zhongwenbin$ curl  --data-binary &apos;{&quot;jsonrpc&quot;: &quot;1.0&quot;, &quot;id&quot;:&quot;curltest&quot;, &quot;method&quot;: &quot;getinfo&quot;, &quot;params&quot;: [] }&apos; -H &apos;content-type: text/plain;&apos; http://192.168.77.51/
+{&quot;result&quot;:{&quot;version&quot;:140300,&quot;protocolversion&quot;:70016,&quot;walletversion&quot;:130000,&quot;balance&quot;:0.00000000,&quot;stake&quot;:0.00000000,&quot;blocks&quot;:12250,&quot;timeoffset&quot;:0,&quot;connections&quot;:8,&quot;proxy&quot;:&quot;&quot;,&quot;difficulty&quot;:{&quot;proof-of-work&quot;:1.52587890625e-05,&quot;proof-of-stake&quot;:651324.7815933984},&quot;testnet&quot;:false,&quot;moneysupply&quot;:100029000,&quot;keypoololdest&quot;:1505186997,&quot;keypoolsize&quot;:100,&quot;paytxfee&quot;:0.00000000,&quot;relayfee&quot;:0.00400000,&quot;errors&quot;:&quot;&quot;},&quot;error&quot;:null,&quot;id&quot;:&quot;curltest&quot;}
+</code></pre><p>&#x4EE5;&#x4E0A;&#x8BBE;&#x7F6E;&#x5B9E;&#x4F8B;&#x4EC5;&#x4F9B;&#x53C2;&#x8003;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x6839;&#x636E;&#x81EA;&#x8EAB;&#x9700;&#x6C42;&#x4F5C;&#x66F4;&#x591A;&#x8BBE;&#x7F6E;&#xFF0C;&#x6216;&#x662F;&#x9009;&#x62E9;&#x5176;&#x5B83;&#x5DE5;&#x5177;&#x4EE3;&#x66FF;&#x3002;</p>
+<h2 id="&#x5B9E;&#x7528;&#x547D;&#x4EE4;&#x548C;&#x6587;&#x6863;"><a name="&#x5B9E;&#x7528;&#x547D;&#x4EE4;&#x548C;&#x6587;&#x6863;" class="plugin-anchor" href="#&#x5B9E;&#x7528;&#x547D;&#x4EE4;&#x548C;&#x6587;&#x6863;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x7528;&#x547D;&#x4EE4;&#x548C;&#x6587;&#x6863;</h2>
+<p>&#x8BFB;&#x8005;&#x5728;&#x90E8;&#x7F72;&#x8282;&#x70B9;&#x6216;RPC&#x8C03;&#x7528;&#x65F6;&#x9047;&#x5230;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x4F18;&#x5148;&#x53C2;&#x8003;&#x4EE5;&#x4E0B;&#x5B9E;&#x7528;&#x547D;&#x4EE4;&#x6216;&#x6587;&#x6863;&#xFF1A;</p>
+<ul>
+<li>&#x7F16;&#x8BD1;&#x95EE;&#x9898;&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A; <a href="https://github.com/qtumproject/qtum/blob/master/README.md" target="_blank">https://github.com/qtumproject/qtum/blob/master/README.md</a>&#x3002;</li>
+<li>&#x67E5;&#x770B;qtumd&#x7684;&#x6240;&#x6709;&#x9009;&#x9879;&#xFF1A;<code>./qtumd -help</code></li>
+<li>&#x67E5;&#x770B;&#x6240;&#x6709;rpc&#x547D;&#x4EE4;&#xFF1A; <code>./qtum-cli help</code></li>
+<li>&#x67E5;&#x770B;&#x67D0;rpc&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x8BF4;&#x660E;&#xFF08;&#x5982;getinfo&#xFF09;&#xFF1A; <code>./qtum-cli help getinfo</code></li>
+<li>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x793A;&#x4F8B;&#xFF1A;<a href="https://github.com/qtumproject/qtum/blob/1a926b980f03e97322c7dd787835bec1730f35d2/contrib/debian/examples/qtum.conf" target="_blank">qtum.conf&#xFF08;&#x70B9;&#x51FB;&#x6253;&#x5F00;&#xFF09;</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Testnet-User-Guide.html" class="navigation navigation-prev " aria-label="Previous page: 测试网络使用教程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Launch-Qtum-with-Docker.html" class="navigation navigation-next " aria-label="Next page: 如何用 Docker 运行 Qtum 节点">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"如何部署 Qtum 量子链节点","level":"3.1","depth":1,"next":{"title":"如何用 Docker 运行 Qtum 节点","level":"3.2","depth":1,"path":"Launch-Qtum-with-Docker.md","ref":"Launch-Qtum-with-Docker.md","articles":[]},"previous":{"title":"测试网络使用教程","level":"2.10","depth":1,"path":"Testnet-User-Guide.md","ref":"Testnet-User-Guide.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"zh","gitbook":"*"},"file":{"path":"Guidance-of-Qtum-Deployment-and-RPC-Settings.md","mtime":"2020-07-01T00:18:12.367Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-01T00:26:05.312Z"},"basePath":".","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

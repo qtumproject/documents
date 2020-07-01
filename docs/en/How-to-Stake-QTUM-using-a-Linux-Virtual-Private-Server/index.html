@@ -1,0 +1,975 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Stake With VPS · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Qtum-on-Raspberry-Pi/" />
+    
+    
+    <link rel="prev" href="../Qtum-AWS/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using the Qtum wallet</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Qtum-Wallet-Tutorial/">
+            
+                <a href="../Qtum-Wallet-Tutorial/">
+            
+                    
+                    Desktop wallet basic usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../QTUM-wallet-usage-best-practices/">
+            
+                <a href="../QTUM-wallet-usage-best-practices/">
+            
+                    
+                    Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../updateqtum/">
+            
+                <a href="../updateqtum/">
+            
+                    
+                    How to Update your Qtum wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../qtum0182overview/">
+            
+                <a href="../qtum0182overview/">
+            
+                    
+                    Qtum 0.18.2 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../commands/">
+            
+                <a href="../commands/">
+            
+                    
+                    Qtum Core Wallet Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../Adding-Nodes/">
+            
+                <a href="../Adding-Nodes/">
+            
+                    
+                    Adding Nodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                <a href="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                    
+                    Encrypt and Unlock Qtum Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                <a href="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                    
+                    Wallet Recovery With Salvagewallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../Testnet-user-guide/README.md">
+            
+                <span>
+            
+                    
+                    Testnet User Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../bech32/">
+            
+                <a href="../bech32/">
+            
+                    
+                    bech32 support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../OfflineStaking.html">
+            
+                <a href="../OfflineStaking.html">
+            
+                    
+                    Offline Staking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../qtumrepo/">
+            
+                <a href="../qtumrepo/">
+            
+                    
+                    Repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../gcpgettingstarted/">
+            
+                <a href="../gcpgettingstarted/">
+            
+                    
+                    QTUM On Google Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../Qtum-AWS/">
+            
+                <a href="../Qtum-AWS/">
+            
+                    
+                    QTUM On AWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Stake With VPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../Qtum-on-Raspberry-Pi/">
+            
+                <a href="../Qtum-on-Raspberry-Pi/">
+            
+                    
+                    Stake With Raspberry Pi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../How-to-Stake-with-Qtum/">
+            
+                <a href="../How-to-Stake-with-Qtum/">
+            
+                    
+                    How to Stake With Qtum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../freebsd/">
+            
+                <a href="../freebsd/">
+            
+                    
+                    How to Stake on FreeBSD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Other Qtum wallets</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../Qtum-Electrum-User-Guide.html">
+            
+                <a href="../Qtum-Electrum-User-Guide.html">
+            
+                    
+                    Qtum Electrum Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../QTUM-WebWallet-usage/">
+            
+                <a href="../QTUM-WebWallet-usage/">
+            
+                    
+                    Web Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../How-to-use-Qtum-Android-Wallet/">
+            
+                <a href="../How-to-use-Qtum-Android-Wallet/">
+            
+                    
+                    How to use Qtum Android Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../Qtum-Exchange-Usage-Guide-and-Info.html">
+            
+                <a href="../Qtum-Exchange-Usage-Guide-and-Info.html">
+            
+                    
+                    Qtum Exchange Usage Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../How-To-Add-Options/">
+            
+                <a href="../How-To-Add-Options/">
+            
+                    
+                    How to Add Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../How-to-Use-Bootstrap/">
+            
+                <a href="../How-to-Use-Bootstrap/">
+            
+                    
+                    How to Use bootstrap.dat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../Qtum-RPC-API/">
+            
+                <a href="../Qtum-RPC-API/">
+            
+                    
+                    Qtum RPC API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Qtum Lightning Client</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../lightning/">
+            
+                <a href="../lightning/">
+            
+                    
+                    Qtum Lightning Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deploy Qtum</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                <a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                    
+                    Guidance of Qtum Deployment and RPC Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../Launch-Qtum-with-Docker.html">
+            
+                <a href="../Launch-Qtum-with-Docker.html">
+            
+                    
+                    Launch Qtum With Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../Build-Qtum-on-CentOS.html">
+            
+                <a href="../Build-Qtum-on-CentOS.html">
+            
+                    
+                    How to Build Qtum on CentOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../How-To-Build-Qtum-On-Raspbian.md">
+            
+                <span>
+            
+                    
+                    How to Build Qtum on Raspbian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../How-to-Deploy-Star-Network/">
+            
+                <a href="../How-to-Deploy-Star-Network/">
+            
+                    
+                    Deploy Qtum Star Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Smart Contract and QRC20</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../QRC20-Token-Introduce.html">
+            
+                <a href="../QRC20-Token-Introduce.html">
+            
+                    
+                    QRC20 Token Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../QRC20-integration.html">
+            
+                <a href="../QRC20-integration.html">
+            
+                    
+                    QRC20 Integration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Unita</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../Technical-White-Paper-for-QtumX/">
+            
+                <a href="../Technical-White-Paper-for-QtumX/">
+            
+                    
+                    Unita Technical White Paper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../unitarepo/">
+            
+                <a href="../unitarepo/">
+            
+                    
+                    Install Unita from Linux repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../unitagettingstarted/">
+            
+                <a href="../unitagettingstarted/">
+            
+                    
+                    Unita on Google Cloud Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../One-Click-Launch-Chain/">
+            
+                <a href="../One-Click-Launch-Chain/">
+            
+                    
+                    Unita One-Click-Launch-Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../SCAR-Consensus/">
+            
+                <a href="../SCAR-Consensus/">
+            
+                    
+                    SCAR: Scalable Consensus Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../DDAO-Data-Management/">
+            
+                <a href="../DDAO-Data-Management/">
+            
+                    
+                    DDAO: Decentralized Data Access Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Research</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../Confidential-Assets.html">
+            
+                <a href="../Confidential-Assets.html">
+            
+                    
+                    Confidential Assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../Data-Analytics.html">
+            
+                <a href="../Data-Analytics.html">
+            
+                    
+                    Data Analytics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Stake With VPS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="staking-with-a-vps"><a name="staking-with-a-vps" class="plugin-anchor" href="#staking-with-a-vps"><i class="fa fa-link" aria-hidden="true"></i></a>Staking with a VPS</h1>
+<p>Many users prefer using a VPS for staking purposes, it is safer than using your local machine and it is more convenient for most people as you don&apos;t need to leave your computer turned on 24/7, there are also some very cheap and stable solutions you can use.</p>
+<p><a href="https://aws.amazon.com/marketplace/pp/B07FB214D3" target="_blank">You can also take advantage of the powerful solution we have at the AWS marketplace which is easier to setup and ready to go in just a few minutes!</a></p>
+<p>In this tutorial we&apos;ll show how to do this using <strong>Vultr</strong>  <a href="https://vultr.com" target="_blank">https://vultr.com</a> which is a very stable, cost effective and fast provider with instances all over the world, the same principles apply to any other cloud provider you may prefer.</p>
+<h2 id="launching-instance"><a name="launching-instance" class="plugin-anchor" href="#launching-instance"><i class="fa fa-link" aria-hidden="true"></i></a>Launching instance</h2>
+<p>Let&apos;s begin, we log into our cloud provider dashboard where we get several options.</p>
+<p><img src="vultr1.png" width="800"></p>
+<p>Choose a location for the VPS, for this test we&apos;ve chosen Miami.</p>
+<p><img src="vultr2.png" width="800"></p>
+<p>Choose a server type, our linux wallet runs on any linux distribution, however, it is recommended to use Ubuntu 18.04 if you want to compile the wallet yourself, (we&apos;ll do this on this tutorial). You can select any desired option, we went with a basic 1CPU/512MB ram VPS.</p>
+<h4 id="ssh-keys"><a name="ssh-keys" class="plugin-anchor" href="#ssh-keys"><i class="fa fa-link" aria-hidden="true"></i></a>SSH Keys</h4>
+<p>It is recommended to use ssh-key to login instead of passwords, its far more secure and convenient.</p>
+<p>Creating ssh-keys is out of the scope of this tutorial, but here are some good references on how to do this:</p>
+<p><a href="https://www.vultr.com/docs/how-do-i-generate-ssh-keys" target="_blank">https://www.vultr.com/docs/how-do-i-generate-ssh-keys</a></p>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2" target="_blank">https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2</a></p>
+<p><a href="https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-windows" target="_blank">https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-windows</a> &lt; <em>this one is for Windows users.</em></p>
+<p>After we&apos;ve created our SSH key, we click on &quot;add new&quot;</p>
+<p><img src="vultr5.png" width="800"></p>
+<p>Here we can paste our SSH-key, enter a name for it and click on add ssh key.</p>
+<p><img src="vultr6.png" width="800"></p>
+<h2 id="logging-in-to-your-vps"><a name="logging-in-to-your-vps" class="plugin-anchor" href="#logging-in-to-your-vps"><i class="fa fa-link" aria-hidden="true"></i></a>Logging in to your VPS</h2>
+<p>Once we have our credentials ready, we log in and see the following screen:</p>
+<p><img src="vultr3.png" width="800"></p>
+<h3 id="install-through-repository-ubuntu-1604---1904-debian-and-linux-mint"><a name="install-through-repository-ubuntu-1604---1904-debian-and-linux-mint" class="plugin-anchor" href="#install-through-repository-ubuntu-1604---1904-debian-and-linux-mint"><i class="fa fa-link" aria-hidden="true"></i></a>Install through repository (Ubuntu 16.04 -&gt; 19.04, Debian and Linux Mint)</h3>
+<p>This is the recommended method for most users as it&#x2019;s easier, faster and more convenient.
+&#x200B;</p>
+<h3 id="obtaining-signing-key"><a name="obtaining-signing-key" class="plugin-anchor" href="#obtaining-signing-key"><i class="fa fa-link" aria-hidden="true"></i></a>Obtaining signing key</h3>
+<p>First, we need to obtain the Qtum signing key from the ubuntu keyserver, here&apos;s how:</p>
+<p><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BF5B197D</code></p>
+<p>This will download and add the Qtum signing key to your linux install.</p>
+<p>Adding repository to your APT sources.</p>
+<p>``` sudo su - Sudo to root first</p>
+<p>echo &quot;deb <a href="https://repo.qtum.info/apt/ubuntu/" target="_blank">https://repo.qtum.info/apt/ubuntu/</a> xenial main&quot; &gt;&gt; /etc/apt/sources.list</p>
+<pre><code>This will add the repository to your APT sources file. NOTE: Please remember to change &quot;xenial&quot; for your Ubuntu version codename
+
+Refreshing APT sources and installing Qtum
+</code></pre><p>sudo apt update &amp;&amp; sudo apt install qtum</p>
+<pre><code>
+By doing this, we&apos;ll update our sources and install Qtum on our ubuntu Box
+
+To execute the daemon:
+
+``` qtumd -daemon
+</code></pre><h3 id="build-on-ubuntu-1604-and-up"><a name="build-on-ubuntu-1604-and-up" class="plugin-anchor" href="#build-on-ubuntu-1604-and-up"><i class="fa fa-link" aria-hidden="true"></i></a>Build on Ubuntu 16.04 and up</h3>
+<p>It&apos;s always good to refresh installed libraries, for that we do apt update &amp;&amp; apt upgrade and just press enter when prompted. This will update all installed packages while also installing any available security updates.</p>
+<p><img src="vultr4.png" width="800"></p>
+<p>Once we finish the update, let&apos;s proceed to installing dependencies and cloning the qtum sources from Github.</p>
+<pre><code>
+### Enabling SWAP
+
+##### This step is necessary as most VPS don&apos;t come with SWAP enabled and it&apos;ll cause low-ram compilation errors, here&apos;s how to create SWAP.
+
+dd if=/dev/zero of=/swapfile bs=1M count=2048
+ chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+echo &quot;/swapfile none swap defaults 0 0&quot; &gt;&gt; /etc/fstab
+This creates a 2GB swap file which will allow you to build and run Qtum without issues.
+
+### Compiling Qtum
+
+This is a quick start script for compiling Qtum on  Ubuntu
+
+
+sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils git cmake libboost-all-dev
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo apt-get update
+sudo apt-get install libdb4.8-dev libdb4.8++-dev
+
+# If you want to build the Qt GUI:
+sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
+
+git clone https://github.com/qtumproject/qtum --recursive
+cd qtum
+
+# Note autogen will prompt to install some more dependencies if needed
+./autogen.sh
+./configure
+make -j2
+make install
+</code></pre><p>Compiling Qtum takes a while, it depends a lot on your VPS resources, it can take anywhere from 3 minutes to 20+ minutes.</p>
+<p>Once the process is finished, you&apos;ll have all qtum executables in /usr/local/bin/ you can check by typing</p>
+<p><code>ls /usr/local/bin/</code></p>
+<h3 id="launching-qtum-daemon"><a name="launching-qtum-daemon" class="plugin-anchor" href="#launching-qtum-daemon"><i class="fa fa-link" aria-hidden="true"></i></a>Launching Qtum daemon</h3>
+<p> <code>qtumd -daemon</code>  -&gt; This launches the qtum daemon and the blockchain begins to synchronize right after launching. It can take some minutes before it&apos;s fully synced.</p>
+<h3 id="encrypting-wallet"><a name="encrypting-wallet" class="plugin-anchor" href="#encrypting-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Encrypting wallet</h3>
+<p>We can encrypt the wallet at any time, it&apos;s better to do it before we go any further.</p>
+<p>To do this, type the following on the command line:</p>
+<p><code>qtum-cli encryptwallet yourpassword</code></p>
+<p>This will encrypt the wallet which in turn closes the daemon, you&apos;ll see the following message:</p>
+<p><code>wallet encrypted; Qtum server stopping, restart to run with encrypted wallet. The keypool has been flushed and a new HD seed was generated (if you are using HD). You need to make a new backup.</code></p>
+<p><img src="encrypt.jpg" width="800"></p>
+<p><code>qtum-cli getaccountaddress &quot;&quot;</code> -&gt; Right after launching the daemon, you can obtain your wallet address by typing this.</p>
+<p>You can send Qtum coins to the address we just obtained from the daemon, please remember that those transactions require at least 500+ confirmations before they become mature enough for staking.</p>
+<h3 id="staking"><a name="staking" class="plugin-anchor" href="#staking"><i class="fa fa-link" aria-hidden="true"></i></a>Staking</h3>
+<p>Now that we&apos;ve waited until we have at least 501 confirmations on our received transaction, we are elligible for staking, however, if our wallet is encrypted (which we did for security reasons) we won&apos;t be able to stake, let&apos;s open our wallet for staking using the command line!.</p>
+<p><code>qtum-cli walletpassphrase password 999999999 true</code></p>
+<p>The above command will unlock the walet <strong>for staking only</strong> for 31.6 Years! that should be enough for now. Please note, this will not unlock your backup, only the wallet that&apos;s running right now.</p>
+<p>Now that we&apos;ve unlocked our wallet, we need to wait until we have more than 501 confirmations to be elligible for staking, if we already do, it&apos;s a matter of time which will vary depending on the network weight vs your wallet&apos;s weight.</p>
+<h4 id="checking-balance"><a name="checking-balance" class="plugin-anchor" href="#checking-balance"><i class="fa fa-link" aria-hidden="true"></i></a>Checking Balance</h4>
+<p>To check your balance, type <code>qtum-cli getinfo</code> this will show general information, including your available balance and balance in staking</p>
+<h4 id="check-transactions"><a name="check-transactions" class="plugin-anchor" href="#check-transactions"><i class="fa fa-link" aria-hidden="true"></i></a>Check transactions</h4>
+<p>To check your transactions (incoming and outgoing) type <code>qtum-cli listtransactions</code></p>
+<h4 id="check-staking-info"><a name="check-staking-info" class="plugin-anchor" href="#check-staking-info"><i class="fa fa-link" aria-hidden="true"></i></a>Check staking info</h4>
+<p>To check Qtum&apos;s staking information, type <code>qtum-cli getstakinginfo</code></p>
+<h3 id="staking-tips"><a name="staking-tips" class="plugin-anchor" href="#staking-tips"><i class="fa fa-link" aria-hidden="true"></i></a>Staking tips</h3>
+<p>Staking really depends on network weight vs your wallet&#x2019;s weight which is based on the amount of coins you have, higher weight increases your chances of staking a block.</p>
+<p>If you have a large amount of coins, it&#x2019;s a good idea to split those up in separate transactions, for instance, if you have 10.000 QTUM, it&#x2019;s better to send 10 transactions of 1000 QTUM each to your wallet, each one generates a UTXO input which will take part in staking. This optimizes the staking process and works much better than just one large 10.000 QTUM input.</p>
+<p>If you want to split your coins into different addresses inside your VPS wallet, type the following to obtain new addresses inside your wallet: <code>qtum-cli getnewaddress</code>
+Each time you type this, you&#x2019;ll get a new address, QTUM can generate any amount of addresses you want, but please keep in mind, if you do go over 100 new address, you might want to make a new backup of your wallet.</p>
+<h3 id="wallet-backup"><a name="wallet-backup" class="plugin-anchor" href="#wallet-backup"><i class="fa fa-link" aria-hidden="true"></i></a>Wallet Backup</h3>
+<p>Backing up your wallet from a Linux VPS is different from a desktop but not too complicated, there&apos;s several ways to do this, and here are some steps which should work on all major desktop OS.</p>
+<p>First, we&apos;ll download Filezilla, which is an easy to use and secure FTP/SFTP server</p>
+<p><a href="https://filezilla-project.org" target="_blank">https://filezilla-project.org</a></p>
+<p><img src="filezilla1.png" width="800"></p>
+<p>Installing is just like any other windows app.</p>
+<p><img src="filezilla2.png" width="800"></p>
+<p>When the installer finishes, we launch Filezilla and are greeted with this screen, let&apos;s proceed and add our previously created ssh-key</p>
+<p>We go into Edit -&gt; Settings -&gt; SFTP. This will give us the following screen in which we will be able to import our SSH key.</p>
+<p><img src="filezilla3.png" width="800"></p>
+<p>Please note that Filezilla only accepts the private key which is created when the ssh-key was generated.</p>
+<p><img src="filezilla4.png" width="800"> Here we&apos;ve already added the ssh key, now we can log into our server</p>
+<p><img src="filezilla5.png" width="800"></p>
+<p>we enter our VPS ip address + username (root in this case),  leave a blank password because we&apos;re using ssh-key to login <img src="filezilla6.png" width="800"></p>
+<p>Just press ok when prompted, and you&apos;ll be able to log in. <img src="filezilla8.png" width="800"></p>
+<p><img src="filezilla9.png" width="800"></p>
+<p>Here we can see the /root/ folder of our VPS, this is where our wallet runs and has the wallet stored in /root/.qtum we can go ahead and double click the folder which will show us the following: <img src="filezilla10.png" width="800"></p>
+<p>Now all we need to do is scroll down to wallet.dat, right click and select download from the list. This will download the wallet.dat file to our computer, we&apos;ve successfully backed up our Qtum wallet!.</p>
+<h1 id="updating-wallet"><a name="updating-wallet" class="plugin-anchor" href="#updating-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Updating wallet</h1>
+<h3 id="if-you-installed-qtum-the-old-way-without-using-the-repository"><a name="if-you-installed-qtum-the-old-way-without-using-the-repository" class="plugin-anchor" href="#if-you-installed-qtum-the-old-way-without-using-the-repository"><i class="fa fa-link" aria-hidden="true"></i></a>If you installed Qtum the old way (without using the repository)</h3>
+<p>We highly recommend using the repository from now on, however, if you still want to compile the wallet yourself, here&#x2019;s how to upgrade:
+<strong>(Backup your wallet.dat first)</strong>
+<code>cd ~/qtum/
+git pull
+./configure
+make
+qtum-cli stop
+make install
+qtumd -daemon</code></p>
+<h4 id="what-happened-there"><a name="what-happened-there" class="plugin-anchor" href="#what-happened-there"><i class="fa fa-link" aria-hidden="true"></i></a>What happened there?</h4>
+<ul>
+<li>We updated the sources from the original build folder (if you don&#x2019;t have it anymore, you need to pull the entire repo as was shown in the beginning of this tutorial).</li>
+<li>We configured and built the new Qtum daemon</li>
+<li>We stopped the old daemon</li>
+<li>We installed the new daemon</li>
+<li>We executed the new daemon</li>
+</ul>
+<h3 id="if-you-installed-qtum-using-the-repo"><a name="if-you-installed-qtum-using-the-repo" class="plugin-anchor" href="#if-you-installed-qtum-using-the-repo"><i class="fa fa-link" aria-hidden="true"></i></a>If you installed Qtum using the repo</h3>
+<p>If you used the repository to install your Qtum wallet, it&#x2019;s very easy to upgrade to a new version, all you have to do is the following:</p>
+<p><code>apt update &amp;&amp; apt upgrade</code></p>
+<p>This will update the apt sources on your Linux box and install the latest packages, Qtum included. If you only want to upgrade Qtum:</p>
+<p><code>apt update &amp;&amp; apt install &#x2014;only-upgrade qtum</code></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Qtum-AWS/" class="navigation navigation-prev " aria-label="Previous page: QTUM On AWS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Qtum-on-Raspberry-Pi/" class="navigation navigation-next " aria-label="Next page: Stake With Raspberry Pi">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Stake With VPS","level":"3.5","depth":1,"next":{"title":"Stake With Raspberry Pi","level":"3.6","depth":1,"path":"Qtum-on-Raspberry-Pi/README.md","ref":"Qtum-on-Raspberry-Pi/README.md","articles":[]},"previous":{"title":"QTUM On AWS","level":"3.4","depth":1,"path":"Qtum-AWS/README.md","ref":"Qtum-AWS/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","mtime":"2020-07-01T00:18:11.917Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-01T00:26:05.312Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
