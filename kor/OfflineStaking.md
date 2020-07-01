@@ -1,4 +1,4 @@
-# Offline Staking
+# Offline Staking TRANSLATION IN PROGRESS
 
 * [Delegating Address to Super Staker](#delegating-address-to-super-staker)
 * [Delegating Address Operations](#delegating-Address-operations)
