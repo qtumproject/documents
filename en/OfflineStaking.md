@@ -47,7 +47,7 @@ To configure the Qtum-Qt wallet for a Super Staker, select Stake – Super Staki
 
 ![2  Super Staker Setup](https://user-images.githubusercontent.com/29760787/85331902-fc5fe280-b4a4-11ea-9506-84bfc0ecd6d5.jpg)
 
-To operate as a Super Staker, the wallet must be able to check arbitrary addresses (address index), have logs enabled for smart contract operations(log events), be enabled for staking and the single parameter `-superstaking=true` sets these three parameters. The first time launching with `-superstaking=true` the wallet will rescan the blockchain to rebuild the database to add the address index and log events.
+To operate as a Super Staker, the wallet must be able to check arbitrary addresses (address index), have logs enabled for smart contract operations(log events), be enabled for staking and the single parameter `-superstaking` sets these three parameters. The first time launching with `-superstaking` the wallet will rescan the blockchain to rebuild the database to add the address index and log events.
 
 Next, the wallet will prompt to be restarted as a Super Staker using Settings – Options – Enable super staking and OK to restart the wallet.
 
@@ -98,13 +98,13 @@ Previously you could use the `sendmanywithdupes` command but that took significa
 
 The above steps show the transition from a default installation Qtum Core wallet to a Super Staker. The wallet may also be initially launched as a Super Staker to shorten the steps. In this case, the initial blockchain sync is accompanied by building the database for address index and log events (as discussed above) so the wallet is all ready for Super Staking.
 
-The Qtum Core wallet may be launched as a Super Staker with Qtum-Qt using Settings - Options – Main – Enable super staking steps as shown above, or directly through the command line using the `-superstaking=true` parameter (testnet shown here).
+The Qtum Core wallet may be launched as a Super Staker with Qtum-Qt using Settings - Options – Main – Enable super staking steps as shown above, or directly through the command line using the `-superstaking` parameter (testnet shown here).
 
 ![7  Linux Launch](https://user-images.githubusercontent.com/29760787/85331947-0da8ef00-b4a5-11ea-961a-33fe19df19d9.png)
 
 This command for the default program directory on Windows would be:
 
-`qtum-qt -testnet -superstaking=true`
+`qtum-qt -testnet -superstaking`
 
 ![8  Windows Command Line Launch](https://user-images.githubusercontent.com/29760787/85331962-113c7600-b4a5-11ea-84e3-81e030c91ac5.jpg) 
 
@@ -118,7 +118,7 @@ The following setup for qtumd shows the use of a single Super Staker address.
 
 After installing qtumd, launch with the following parameters (testnet shown):
 
-`./qtumd -testnet -superstaking=true`
+`./qtumd -testnet -superstaking`
 
 Optional parameters may be added to change the default fee (of 10%) and minimum UTXO value (of 100 QTUM), for example as:
 

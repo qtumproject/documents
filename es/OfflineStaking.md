@@ -47,7 +47,7 @@ Para configurar la billetera Qtum-Qt para un Super Staker, seleccione Stake - Su
 
 ![2  Super Staker Setup](https://user-images.githubusercontent.com/29760787/85331902-fc5fe280-b4a4-11ea-9506-84bfc0ecd6d5.jpg)
 
-Para operar como Super Staker, la billetera debe poder verificar direcciones arbitrarias (índice de direcciones), tener registros habilitados para operaciones de contratos inteligentes (eventos de registro), estar habilitados para staking y el único parámetro `-superstaking = true` establece estos tres parámetros La primera vez que se inicia con `-superstaking = true`, la billetera volverá a escanear la blockchain para reconstruir la base de datos para agregar el índice de direcciones y los eventos de registro.
+Para operar como Super Staker, la billetera debe poder verificar direcciones arbitrarias (índice de direcciones), tener registros habilitados para operaciones de contratos inteligentes (eventos de registro), estar habilitados para staking y el único parámetro `-superstaking` establece estos tres parámetros La primera vez que se inicia con `-superstaking`, la billetera volverá a escanear la blockchain para reconstruir la base de datos para agregar el índice de direcciones y los eventos de registro.
 
 A continuación, la billetera solicitará que se reinicie como Super Staker usando Configuración - Opciones - Habilitar la superestabilización y OK para reiniciar la billetera.
 
@@ -98,13 +98,13 @@ Anteriormente, podía usar el comando `sendmanywithdupes` pero eso requería un 
 
 Los pasos anteriores muestran la transición de una billetera Qtum Core de instalación predeterminada a un Super Staker. La billetera también se puede lanzar inicialmente como un Super Staker para acortar los pasos. En este caso, la sincronización inicial de blockchain se acompaña de la construcción de la base de datos para el índice de direcciones y los eventos de registro (como se discutió anteriormente) para que la billetera esté lista para Super Staking.
 
-La billetera Qtum Core puede iniciarse como un Super Staker con Qtum-Qt usando Configuración - Opciones - Principal - Habilite los pasos de superestabilización como se muestra arriba, o directamente a través de la línea de comando usando el parámetro `-superstaking = true` (testnet se muestra aquí) .
+La billetera Qtum Core puede iniciarse como un Super Staker con Qtum-Qt usando Configuración - Opciones - Principal - Habilite los pasos de superestabilización como se muestra arriba, o directamente a través de la línea de comando usando el parámetro `-superstaking` (testnet se muestra aquí) .
 
 ![7  Linux Launch](https://user-images.githubusercontent.com/29760787/85331947-0da8ef00-b4a5-11ea-961a-33fe19df19d9.png)
 
 Este comando para el directorio predeterminado del programa en Windows sería:
 
-`qtum-qt -testnet -superstaking=true`
+`qtum-qt -testnet -superstaking`
 
 ![8  Windows Command Line Launch](https://user-images.githubusercontent.com/29760787/85331962-113c7600-b4a5-11ea-84e3-81e030c91ac5.jpg) 
 
@@ -118,7 +118,7 @@ La siguiente configuración para qtumd muestra el uso de una sola dirección Sup
 
 Después de instalar qtumd, inicie con los siguientes parámetros (se muestra testnet):
 
-`./qtumd -testnet -superstaking=true`
+`./qtumd -testnet -superstaking`
 
 Se pueden agregar parámetros opcionales para cambiar la tarifa predeterminada (del 10%) y el valor mínimo de UTXO (de 100 QTUM), por ejemplo, como:
 

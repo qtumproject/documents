@@ -522,9 +522,9 @@
             
         </li>
     
-        <li class="chapter " data-level="6.4" data-path="How-To-Build-Qtum-On-Raspbian.md">
+        <li class="chapter " data-level="6.4" data-path="How-To-Build-Qtum-On-Raspbian.html">
             
-                <span>
+                <a href="How-To-Build-Qtum-On-Raspbian.html">
             
                     
                     How to Build Qtum on Raspbian
@@ -777,7 +777,7 @@
 <p>The Qtum Core wallet provides online Proof of Stake and can be launched and configured to operate as a Super Staker and receive address delegations.</p>
 <p>To configure the Qtum-Qt wallet for a Super Staker, select Stake &#x2013; Super Staking and the &quot;+&quot; button to add a new Super Staker. Enter the Staker name (for local reference only, here using the first part of the address and &quot;10&quot; to denote a 10% fee) and select the Staker address using the dropdown.</p>
 <p><img src="https://user-images.githubusercontent.com/29760787/85331902-fc5fe280-b4a4-11ea-9506-84bfc0ecd6d5.jpg" alt="2  Super Staker Setup"></p>
-<p>To operate as a Super Staker, the wallet must be able to check arbitrary addresses (address index), have logs enabled for smart contract operations(log events), be enabled for staking and the single parameter <code>-superstaking=true</code> sets these three parameters. The first time launching with <code>-superstaking=true</code> the wallet will rescan the blockchain to rebuild the database to add the address index and log events.</p>
+<p>To operate as a Super Staker, the wallet must be able to check arbitrary addresses (address index), have logs enabled for smart contract operations(log events), be enabled for staking and the single parameter <code>-superstaking</code> sets these three parameters. The first time launching with <code>-superstaking</code> the wallet will rescan the blockchain to rebuild the database to add the address index and log events.</p>
 <p>Next, the wallet will prompt to be restarted as a Super Staker using Settings &#x2013; Options &#x2013; Enable super staking and OK to restart the wallet.</p>
 <p><img src="https://user-images.githubusercontent.com/29760787/85331912-008c0000-b4a5-11ea-9901-c4b4433a8746.jpg" alt="3  Qtum-Qt Enable Super Staker"></p>
 <p>On startup, the wallet will confirm that you want to scan and rebuild the database.</p>
@@ -811,17 +811,17 @@
 <p>Previously you could use the <code>sendmanywithdupes</code> command but that took significant formatting and operationally you would want to send to a new address. Of course, after either of these commands, the UTXOs must mature for 500 confirmations before they can be used for staking.</p>
 <h1 id="launching-qtum-core-as-a-super-staker"><a name="launching-qtum-core-as-a-super-staker" class="plugin-anchor" href="#launching-qtum-core-as-a-super-staker"><i class="fa fa-link" aria-hidden="true"></i></a>Launching Qtum Core as a Super Staker</h1>
 <p>The above steps show the transition from a default installation Qtum Core wallet to a Super Staker. The wallet may also be initially launched as a Super Staker to shorten the steps. In this case, the initial blockchain sync is accompanied by building the database for address index and log events (as discussed above) so the wallet is all ready for Super Staking.</p>
-<p>The Qtum Core wallet may be launched as a Super Staker with Qtum-Qt using Settings - Options &#x2013; Main &#x2013; Enable super staking steps as shown above, or directly through the command line using the <code>-superstaking=true</code> parameter (testnet shown here).</p>
+<p>The Qtum Core wallet may be launched as a Super Staker with Qtum-Qt using Settings - Options &#x2013; Main &#x2013; Enable super staking steps as shown above, or directly through the command line using the <code>-superstaking</code> parameter (testnet shown here).</p>
 <p><img src="https://user-images.githubusercontent.com/29760787/85331947-0da8ef00-b4a5-11ea-961a-33fe19df19d9.png" alt="7  Linux Launch"></p>
 <p>This command for the default program directory on Windows would be:</p>
-<p><code>qtum-qt -testnet -superstaking=true</code></p>
+<p><code>qtum-qt -testnet -superstaking</code></p>
 <p><img src="https://user-images.githubusercontent.com/29760787/85331962-113c7600-b4a5-11ea-84e3-81e030c91ac5.jpg" alt="8  Windows Command Line Launch"> </p>
 <p>When the wallet launches and syncs the blockchain (creating address index and log events) it is all ready to add Super Stakers. Configure a Super Staker and then enable super staking on Settings &#x2013; Options &#x2013; Main &#x2013; set &quot;Enable super staking&quot; and the Super Staker will be ready.</p>
 <h1 id="qtumd-super-staker"><a name="qtumd-super-staker" class="plugin-anchor" href="#qtumd-super-staker"><i class="fa fa-link" aria-hidden="true"></i></a>qtumd Super Staker</h1>
 <p>Any address in a Qtum Core wallet running as a Super Staker may receive delegated addresses and operate as an individual Super Staker. The Desktop GUI wallet Qtum-Qt allows configuration of multiple Super Staker addresses with different fees and minimum UTXO sizes. The daemon/server wallet qtumd runs all its Super Staker addresses using the same fee and minimum UTXO size. If a variation is needed across multiple Super Staker addresses with qtumd, it is possible to set these up with the Qtum-Qt wallet and simply transfer the wallet.dat file to qtumd. </p>
 <p>The following setup for qtumd shows the use of a single Super Staker address.</p>
 <p>After installing qtumd, launch with the following parameters (testnet shown):</p>
-<p><code>./qtumd -testnet -superstaking=true</code></p>
+<p><code>./qtumd -testnet -superstaking</code></p>
 <p>Optional parameters may be added to change the default fee (of 10%) and minimum UTXO value (of 100 QTUM), for example as:</p>
 <p><code>-stakingminfee=12  -stakingminutxovalue=120</code></p>
 <p>Once the wallet syncs the blockchain, get an address to send some QTUM. This will be the Super Staker address. Use the command:</p>
@@ -886,7 +886,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Offline Staking","level":"3.1","depth":1,"next":{"title":"Repositories","level":"3.2","depth":1,"path":"qtumrepo/README.md","ref":"qtumrepo/README.md","articles":[]},"previous":{"title":"bech32 support","level":"2.10","depth":1,"path":"bech32/README.md","ref":"bech32/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"OfflineStaking.md","mtime":"2020-07-01T00:18:48.607Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-01T00:30:53.456Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Offline Staking","level":"3.1","depth":1,"next":{"title":"Repositories","level":"3.2","depth":1,"path":"qtumrepo/README.md","ref":"qtumrepo/README.md","articles":[]},"previous":{"title":"bech32 support","level":"2.10","depth":1,"path":"bech32/README.md","ref":"bech32/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"OfflineStaking.md","mtime":"2020-07-08T08:50:54.937Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-08T08:55:07.233Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>
