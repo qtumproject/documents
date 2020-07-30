@@ -14,7 +14,7 @@
 
 ### Getting a Stakebox
 
-There's several ways to run Qtum on a Raspberry Pi, perhaps the easiest way is to just get a **Qtum Stakebox**, you can order from here: 
+There's several ways to run Qtum on a Raspberry Pi, perhaps the easiest way is to just get a **Qtum Stakebox**, you can order from here:
 
 <https://www.stakebox.org/products/qtum-stakebox>
 
@@ -24,7 +24,7 @@ There's several ways to run Qtum on a Raspberry Pi, perhaps the easiest way is t
 
 If you don't want to buy or already own a stakebox and just want to get the latest version of Raspbian with Qtum preinstalled with the official Qtum Repository, then you can download the Raspbian images yourself:
 
-**PLEASE NOTE** if you're running a previous release of Qtum-Raspbian or have installed Qtum through the Repository. All you need to do to update your Qtum wallet is type in a terminal the following: 
+**PLEASE NOTE** if you're running a previous release of Qtum-Raspbian or have installed Qtum through the Repository. All you need to do to update your Qtum wallet is type in a terminal the following:
 
 `sudo apt update && sudo apt -y upgrade`
 
@@ -32,15 +32,17 @@ If you don't want to buy or already own a stakebox and just want to get the late
 
 ### Changelog:
 
-- Upgrade to Debian Buster 10.3 release
-- Qtum 0.19.0.1
-- New Desktop UI for Qtum Wallet
+- Upgrade to Debian Buster 10.4 release
+- Qtum 0.19.1
+- Offline Staking Support
 
 #### Qtum Raspbian 64bit (Recommended from Raspberry Pi 2 - Raspberry Pi 4)
 
-https://raspbianimages.s3.amazonaws.com/2020-02-23-Qtum-Raspbian.zip
+https://raspbianimages.s3.amazonaws.com/2020-07-28-Qtum-Raspbian.zip
 
-https://raspbianimages.s3.amazonaws.com/2020-02-23-Qtum-Raspbian-lite.zip
+https://raspbianimages.s3.amazonaws.com/2020-07-28-Qtum-Raspbian-lite.zip
+
+
 
 ### "Burning" the Qtum Raspbian image to your SD card
 
@@ -77,20 +79,20 @@ SWAP enables "virtual memory", it uses a portion of your disk to store data that
 Enabling SWAP on the Pi Zero is extremely easy:
 
 1. Open up a terminal as shown on the screenshot below
-   
+
    ![2zero](2zero.png)
-   
+
    Inside the terminal, type "sudo dphys-swapfile setup" and press enter
-   
+
    You'll see some text coming up, and a confirmation of your 2gb SWAP file being generated.
 
 2. Still inside the same terminal, type "sudo dphys-swapfile swapon" and press enter
    This won't give you any confirmation, however, your SWAP file has been setup and activated!. You only need to do this once, the Pi Will activate your SWAP file in case of a reboot/shutdown.
-   
+
    ![3zero](3zero.png)
 
 3. Here we can see that the SWAP file is active giving us a total of 2.42GB of RAM (SWAP and ZRAM included)
-   
+
    ![4zero](4zero.png)
 
 ### IMPORTANT NOTE!
@@ -145,9 +147,7 @@ If you're using a **"normal"** raspbian install, you can add the Qtum repository
 
 `sudo su` - Sudo to root first
 
-` echo "deb https://repo.qtum.info/apt/raspbian/ jessie main" >> /etc/apt/sources.list`
-or
-` echo "deb https://repo.qtum.info/apt/raspbian/ stretch main" >> /etc/apt/sources.list`
+` echo "deb https://repo.qtum.info/apt/raspbian/ buster main" >> /etc/apt/sources.list`
 
 This will add the repository to your APT sources file.
 
@@ -161,7 +161,7 @@ By doing this, we'll update our sources and install Qtum on our raspberry Box, w
 
 **PLEASE NOTE: you will only really need to do this if you're using a "clean" raspbian image; you won't need to do this if you're using a Stakebox or the official Qtum Raspbian**
 
-This option is recommended for security reasons, the default password on the pi is well known, it's highly recommended to change it upon first login. 
+This option is recommended for security reasons, the default password on the pi is well known, it's highly recommended to change it upon first login.
 
 To change just type: `passwd`
 
@@ -179,7 +179,7 @@ First, let's install UFW (uncomplicated firewall) which is an easy-to-use interf
 
 Once this is installed, we proceed with access permissions, we will define which ports will be accessible. Let's check first what's open:
 
-`sudo ufw status` This should show something like this: 
+`sudo ufw status` This should show something like this:
 
 `Status: active`
 
@@ -205,7 +205,7 @@ If you're using SSH, it's recommended to only allow access from local network.
 
 - qtumd
 - qtum-cli
-- qtum-qt 
+- qtum-qt
 - qtum-tx
 
 ***
@@ -280,7 +280,7 @@ We’re always launching new updates, sometimes it’s to add new features or fi
 
 ## How to backup to a separate device
 
-Making a backup in Raspberry is simple, you only need to copy the wallet.dat file, but how do you export this to another device? 
+Making a backup in Raspberry is simple, you only need to copy the wallet.dat file, but how do you export this to another device?
 
 First, we'll download Filezilla, which is an easy to use and secure FTP/SFTP server
 
@@ -323,22 +323,22 @@ How to edit the qtum.conf configuration file.
 1. Launch Terminal.
 
 2. Change directories to the Qtum data directory:
-   
+
    `cd .qtum`                (location home/pi/.qtum for Linux install) or
-   
+
    `cd /home/qtum/.qtum`     (default location for image install)
 
 3. Launch the editor, opening an existing or making a new configuration file:
-   
-   `sudo nano qtum.conf` 
+
+   `sudo nano qtum.conf`
 
 4. Edit configuration file, for example, enter
-   
+
    ```
    uacomment=Your_Qtum_Address
    addnode=qtum5.dynu.net
    ```
-   
+
    ![nano Linux](https://user-images.githubusercontent.com/29760787/69094735-ec6bb600-0a1e-11ea-92b3-d6c56ab0c7d2.jpg)
 
 5. Press Control-O to write the file.
@@ -349,7 +349,7 @@ How to edit the qtum.conf configuration file.
 
 8. Restart your Qtum Core wallet to load the new configuration file.
 
-9. Check the new settings. 
+9. Check the new settings.
    For Qtum-Qt use Window – Information and check for your address in "User Agent":
 
 ![Qtum-Qt Check](https://user-images.githubusercontent.com/29760787/69094763-f55c8780-0a1e-11ea-9145-37dc47ec312e.jpg)
