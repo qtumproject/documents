@@ -21,6 +21,7 @@ Welcome to the Qtum web wallet user documentation which will show
 * [How to receive and send QRC20 tokens](#send-and-receive-qrc20-tokens)
 * [How to add a new QRC20 token to the wallet](#adding-a-qrc20-token)
 * [How to publish smart contracts](#how-to-publish-smart-contracts)
+* [Address Delegation for Offline Staking](#address-delegation-for-offline-staking)
 
 ***
 
@@ -511,5 +512,23 @@ Using the same **` Call Contract `** steps to select _getAge_ will return:
 ![2019-23 Result for getAge](https://i.imgur.com/goLbJfH.jpg)
 
 Converting hexadecimal 19 to decimal gives 25 as set above.
+
+***
+
+# Address Delegation for Offline Staking
+
+The web wallet can make an address delegation to a super staker for offline staking. 
+
+First select and copy the address of a super staker from various listings and note the required fee.
+
+In the wallet, select **` Offline Staking `** on the menu and press the blue "+" button to add a delegation. 
+
+On the _Add Delegation_ page paste in the Staker Address (no trailing blank spaces), the Staker Fee and leave the other fields unchanged. There will be a 1.01 QTUM fee for the address delegation transaction, but some gas may be refunded. Click the **` CONFIRM `** button and see the confirmation. You can also see the delegation for the wallet address on the qtum.info explorer.
+
+![Add Delegation](https://user-images.githubusercontent.com/29760787/91503274-10a2d000-e898-11ea-9f58-944b969b9ee4.jpg)
+
+After the address delegation is published in the next block, reload the wallet to see the address delegation status. Click the red "x" button to remove the delegation.
+
+![Offline Staking Status](https://user-images.githubusercontent.com/29760787/91503321-2ca67180-e898-11ea-9a63-0456f5a87258.jpg)
 
 
