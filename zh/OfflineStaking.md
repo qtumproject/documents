@@ -101,13 +101,13 @@ Qtum Core钱包提供了在线的PoS共识，因此登录、配置该钱包之�
 
 Qtum Core钱包可以通过"设置"-"选项"-"允许Super Staking"设置来开启Super Staker模式，或者直接在命令行中使用`-superstaking`参数（示例为测试网环境）。
 
-![7  Linux Launch CN](https://user-images.githubusercontent.com/29760787/85623735-dc602880-b636-11ea-8dc6-c8d6d250f755.png)
+![7  Linux Launch CN](https://user-images.githubusercontent.com/29760787/91647025-dfefa180-ea23-11ea-9676-7b1319bf2aac.png)
 
 该命令在Windows的默认程序目录中使用方式如下：
 
 `qtum-qt -testnet -superstaking`
 
-![8  Windows Command Line Launch CN](https://user-images.githubusercontent.com/29760787/85623743-dec28280-b636-11ea-9b69-5e30797db423.jpg)
+![8  Windows Command Line Launch CN](https://user-images.githubusercontent.com/29760787/91647028-e716af80-ea23-11ea-849e-3198b82492d5.jpg)
 
 当钱包登录并同步区块链时（创建地址索引和日志事件），钱包就可以添加Super Staker。配置一个Super Staker，然后选中"设置"-"选项"-"允许Super Staking"即可开启Super Staker。
 
