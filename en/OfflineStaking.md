@@ -102,13 +102,13 @@ The above steps show the transition from a default installation Qtum Core wallet
 
 The Qtum Core wallet may be launched as a Super Staker with Qtum-Qt using Settings - Options – Main – Enable super staking steps as shown above, or directly through the command line using the `-superstaking` parameter (testnet shown here).
 
-![7  Linux Launch](https://user-images.githubusercontent.com/29760787/85331947-0da8ef00-b4a5-11ea-961a-33fe19df19d9.png)
+![7  Linux Launch](https://user-images.githubusercontent.com/29760787/91646311-ca767980-ea1b-11ea-8a0a-aa89cc208c90.png)
 
 This command for the default program directory on Windows would be:
 
 `qtum-qt -testnet -superstaking`
 
-![8  Windows Command Line Launch](https://user-images.githubusercontent.com/29760787/85331962-113c7600-b4a5-11ea-84e3-81e030c91ac5.jpg) 
+![8  Windows Command Line Launch](https://user-images.githubusercontent.com/29760787/91646313-cd716a00-ea1b-11ea-9586-52adafbea506.jpg)
 
 When the wallet launches and syncs the blockchain (creating address index and log events) it is all ready to add Super Stakers. Configure a Super Staker and then enable super staking on Settings – Options – Main – set "Enable super staking" and the Super Staker will be ready.
 
