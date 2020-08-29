@@ -527,7 +527,7 @@ On the _Add Delegation_ page paste in the Staker Address (no trailing blank spac
 
 ![Add Delegation](https://user-images.githubusercontent.com/29760787/91503274-10a2d000-e898-11ea-9f58-944b969b9ee4.jpg)
 
-After the address delegation is published in the next block, reload the wallet to see the address delegation status. Click the red "x" button to remove the delegation.
+After the address delegation is published in the next block, reload the wallet to see the address delegation status. If you want to remove the delegation at some later time, click the red "x" button to remove the delegation.
 
 ![Offline Staking Status](https://user-images.githubusercontent.com/29760787/91503321-2ca67180-e898-11ea-9a63-0456f5a87258.jpg)
 
