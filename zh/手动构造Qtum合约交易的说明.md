@@ -47,11 +47,16 @@ c2 // OP_CALL
 参考代码：
 * https://github.com/qtumproject/qtum/blob/master/test/functional/qtum_op_sender.py
 
-## 4. GAS找零
+## 4. 手续费
+手续费 = total(vin) - total(vout)，由两部分组成：
+* 矿工费 = 交易size * feeRate, 其中size的计算和比特币的逻辑一致
+* GAS = gasLimit * gasPrice
+
+## 5. GAS找零
 gas_price * gas_limit 就是用户调用合约支付的GAS总数，当交易得到确认之后，矿工会在coinstake交易里面加上一笔output用于返还多支付的GAS，返还的对象是合约的调用者。  
 注意: **对于交易所来说，需要对GAS找零和正常的用户充值加以区分**
 
-## 5. 参考实现代码
+## 6. 参考实现代码
 * js: https://github.com/qtumproject/qtumjs-lib/blob/18e05478a28337b210c6dc73fb643a25b23e25cb/src/utils.js#L132
 * python: https://github.com/qtumproject/qtum-electrum/blob/9f15393f15889b0239b957528acdac42536ff66f/electrum/gui/qt/main_window.py#L3519
 * java: https://github.com/qtumproject/qtumj/blob/1887a23f0f2358087bc59281efc741f2b2245e66/core/src/main/java/org/bitcoinj/wallet/SendRequest.java#L227
