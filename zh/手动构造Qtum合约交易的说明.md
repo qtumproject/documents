@@ -52,6 +52,13 @@ c2 // OP_CALL
 * 矿工费 = 交易size * feeRate, 其中size的计算和比特币的逻辑一致
 * GAS = gasLimit * gasPrice
 
+
+构造交易时处理手续费的逻辑为：
+1. 构造完整的未签名交易
+2. 根据地址类型(P2PK/P2PKH/等）估算签名所占字节数，得到估算的实际交易size
+3. 计算手续费 = 矿工费(交易size * feeRate) + GAS(gasLimit * gasPrice)
+4. 调整vout中的找零金额大小，使得 total(vin) - total(vout) = 手续费
+
 ## 5. GAS找零
 gas_price * gas_limit 就是用户调用合约支付的GAS总数，当交易得到确认之后，矿工会在coinstake交易里面加上一笔output用于返还多支付的GAS，返还的对象是合约的调用者。  
 注意: **对于交易所来说，需要对GAS找零和正常的用户充值加以区分**
