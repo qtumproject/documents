@@ -1,0 +1,347 @@
+
+<!DOCTYPE HTML>
+<html lang="de" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Offline Staking · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Suchbegriff eingeben" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using Qtum</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Offline Staking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Veröffentlicht mit GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Offline Staking</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="offline-staking"><a name="offline-staking" class="plugin-anchor" href="#offline-staking"><i class="fa fa-link" aria-hidden="true"></i></a>Offline Staking</h1>
+<ul>
+<li><a href="#delegieren-einer-adresse-zum-super-staker">Delegieren einer Adresse zum Super Staker</a></li>
+<li><a href="#delegieren-von-adressoperationen">Delegieren von Adressoperationen</a></li>
+<li><a href="#super-staker-konfiguration">Super Staker Konfiguration</a></li>
+<li><a href="#qtum-core-als-super-stacker-starten">Qtum Core als Super Staker starten</a></li>
+<li><a href="#qtumd-super-staker">qtumd Super Staker</a></li>
+<li><a href="#super-staker-operationen">Super Staker Operationen</a></li>
+<li><a href="#wiederherstellung">Wiederherstellung</a></li>
+</ul>
+<h1 id="delegieren-einer-adresse-zum-super-staker"><a name="delegieren-einer-adresse-zum-super-staker" class="plugin-anchor" href="#delegieren-einer-adresse-zum-super-staker"><i class="fa fa-link" aria-hidden="true"></i></a>Delegieren einer Adresse zum Super Staker</h1>
+<p>Mit Qtum Offline Staking kann die Adresse f&#xFC;r ein Non-Staking Wallet (die die Delegierungszuweisungstransaktion durchf&#xFC;hren kann) an einen Super Staker delegiert werden. Offline-Staking ist nicht verwahrungspflichtig: Der Delegationsbenutzer beh&#xE4;lt die volle Kontrolle &#xFC;ber seine Coins und privaten Schl&#xFC;ssel. Die Adressdelegierung erfolgt &#xFC;ber eine intelligente Vertragstransaktion (Smart Contract) aus dem Wallet des Delegierungsbenutzers, in der die Adresse des Delegators, die Super Staker-Adresse und die vom Delegator zu zahlende Geb&#xFC;hr angegeben sind. Wenn der Super Staker diese Geb&#xFC;hr akzeptiert, beginnt er mit dem Staking der UTXOs f&#xFC;r delegierte Adressen.</p>
+<p>F&#xFC;r delegierte UTXOs gelten die normalen Regeln f&#xFC;r das Staken von UTXOs:</p>
+<ul>
+<li>UTXOs d&#xFC;rfen erst nach ihrer Reife zum Staken verwendet werden (500 Best&#xE4;tigungen).</li>
+<li>Der Super Staker legt eine Mindestgr&#xF6;&#xDF;e f&#xFC;r den Einsatz von UTXOs fest, standardm&#xE4;&#xDF;ig 100 QTUM. Delegierte UTXOs unterhalb dieses Betrags werden ignoriert.</li>
+<li>Es wird empfohlen, UTXOs (f&#xFC;r optimale Renditen) in Gr&#xF6;&#xDF;en von jeweils 100 bis 200 QTUM aufzuteilen. F&#xFC;r Benutzer der Qtum Core-Wallet kann dies problemlos mit der unten beschriebenen Befehlszeilenversion von <code>splitutxosforaddress</code> erreicht werden.</li>
+</ul>
+<p>Um die Delegierungszuweisung aus dem Qtum Core-Wallet vorzunehmen, w&#xE4;hlen Sie Stake =&gt; Delegations =&gt;  die Schaltfl&#xE4;che Delegation hinzuf&#xFC;gen &quot;+&quot; in der oberen rechten Ecke, geben den Staker-Namen (nur als lokale Referenz), die Staker-Adresse, die Geb&#xFC;hr, die Sie zahlen m&#xF6;chten, und ihre zu delegierende Adresse ein. Lassen Sie die Standard-Gaseinstellungen in Ruhe, es sei denn, Sie verstehen, wie Sie diese einstellen. F&#xFC;r die Delegationstransaktion sind Geb&#xFC;hren in H&#xF6;he von mindestens 0,9 QTUM erforderlich, und etwaige &#xDC;bersch&#xFC;sse werden erstattet.</p>
+<p><img src="https://user-images.githubusercontent.com/29760787/85331894-f8cc5b80-b4a4-11ea-95d1-eb472a5454f1.jpg" alt="1  Add Delegation Assignment"></p>
+<p>Dr&#xFC;cken Sie Confirm und dan Yes, um die Delegierungstransaktion zu senden.</p>
+<p>Die Delegierung von Adressen kann auch mithilfe der Qtum Electrum-Wallet erfolgen, die Ledger-Hardware-Wallet-Adressen unterst&#xFC;tzt.</p>
+<h1 id="delegieren-von-adressoperationen"><a name="delegieren-von-adressoperationen" class="plugin-anchor" href="#delegieren-von-adressoperationen"><i class="fa fa-link" aria-hidden="true"></i></a>Delegieren von Adressoperationen</h1>
+<p>Die Transaktion &quot;Delegiertenadresse&quot; wird an einen intelligenten Vertrag gesendet, der die Delegierungszuweisungen beibeh&#xE4;lt und dort vom Super Staker abgeholt wird. Sie k&#xF6;nnen Belohnungsvorg&#xE4;nge f&#xFC;r blockierte delegierte Adressen in der Brieftasche und auch mit dem Explorer [qtum.info] (<a href="https://qtum.info/" target="_blank">https://qtum.info/</a>) anzeigen.</p>
+<p>Wenn das Wallet QTUM f&#xFC;r mehrere Adressen enth&#xE4;lt, muss die Delegierung f&#xFC;r jede Adresse separat erfolgen (und die f&#xFC;r jede Adresse gezahlte Transaktionsgeb&#xFC;hr), sodass es m&#xF6;glicherweise sinnvoll ist, die UTXOs vor dem Aufteilen von UTXOs und dem Delegieren auf eine einzige Adresse zu konsolidieren. Verwenden Sie in diesem Fall die M&#xFC;nzauswahl, um die Adressen auszuw&#xE4;hlen und zu konsolidieren. Alternativ kann der Befehl &quot;sendmanywithdupes&quot; verwendet werden, um das gesamte Walletguthaben an eine neue Adresse mit UTXOs geeigneter Gr&#xF6;&#xDF;e zu senden.</p>
+<p>Wenn der Super Staker eine Delegierung f&#xFC;r eine bestimmte Geb&#xFC;hr akzeptiert und der Super Staker diese Geb&#xFC;hr reduziert (Auftr&#xE4;ge f&#xFC;r eine niedrigere Geb&#xFC;hr akzeptiert), muss der Benutzer seine Adresse erneut mit der niedrigeren Geb&#xFC;hr delegieren, um diese niedrigere Geb&#xFC;hr nutzen zu k&#xF6;nnen.</p>
+<p>Delegationen aus einem Wallet k&#xF6;nnen auf der Seite &quot;Stake =&gt; Delegationen&quot; oder mit dem Befehl &quot;getdelegationinfoforaddress&quot; &#xFC;berpr&#xFC;ft werden.</p>
+<p>Sichern Sie Ihr Wallet , um eine Kopie der Datei wallet.dat zu speichern.
+&#x2003;</p>
+<h1 id="super-staker-konfiguration"><a name="super-staker-konfiguration" class="plugin-anchor" href="#super-staker-konfiguration"><i class="fa fa-link" aria-hidden="true"></i></a>Super Staker Konfiguration</h1>
+<p>Das Qtum Core-Wallet bietet einen Online Proof of Stake und kann gestartet und konfiguriert werden, um als Super Staker zu fungieren und Adressdelegationen zu empfangen.</p>
+<p>Um das Qtum-Qt-Wallet f&#xFC;r einen Super Staker zu konfigurieren, w&#xE4;hlen Sie Stake =&gt; Super Staking und die Schaltfl&#xE4;che &quot;+&quot;, um einen neuen Super Staker hinzuzuf&#xFC;gen. Geben Sie den Staker-Namen ein (nur als lokale Referenz, z.b. hier den ersten Teil der Adresse und &quot;10&quot;, um eine Geb&#xFC;hr von 10% anzugeben) und w&#xE4;hlen Sie die Staker-Adresse in der Dropdown-Liste aus.
+<img src="https://user-images.githubusercontent.com/29760787/85331902-fc5fe280-b4a4-11ea-9506-84bfc0ecd6d5.jpg" alt="2  Super Staker Setup"></p>
+<p>Um als Super Staker zu arbeiten, muss das Wallet in der Lage sein, beliebige Adressen (Adressindex) zu &#xFC;berpr&#xFC;fen, Protokolle f&#xFC;r intelligente Vertragsvorg&#xE4;nge (Protokollereignisse) zu aktivieren, und  f&#xFC;r das Staken aktiviert sein. Der einzelne Parameter &quot;Superstaking&quot; setzt diese drei Parameter. Beim ersten Start mit &quot;-superstaking&quot; scannt das Wallet die Blockchain erneut, um die Datenbank neu zu erstellen und den Adressindex und die Protokollereignisse hinzuzuf&#xFC;gen.</p>
+<p>Als N&#xE4;chstes wird das Wallet aufgefordert, als Super Staker neu gestartet zu werden. Verwenden Sie dazu Settings - Allgemein- Super Staking aktivieren und OK, um das Wallet neu zu starten.
+<img src="https://user-images.githubusercontent.com/29760787/85331912-008c0000-b4a5-11ea-9901-c4b4433a8746.jpg" alt="3  Qtum-Qt Enable Super Staker"></p>
+<p>Beim Start best&#xE4;tigt das Wallet , dass Sie die Datenbank scannen und neu erstellen m&#xF6;chten.</p>
+<p><img src="https://user-images.githubusercontent.com/29760787/85331921-041f8700-b4a5-11ea-8990-628f295ff4a9.jpg" alt="4  Rebuild the Database"></p>
+<p>Im Wallet werden &quot;Neuindizieren von Bl&#xF6;cken auf der Festplatte ...&quot; und &quot;Synchronisieren von Headern&quot; angezeigt, w&#xE4;hrend die Datenbank neu erstellt wird. Dies kann je nach Computer mehrere zehn Minuten dauern.</p>
+<p>Kehren Sie nach dem Start zur Seite Stake - Super Staking zur&#xFC;ck und w&#xE4;hlen Sie die Schaltfl&#xE4;che &quot;Configure Super Staker&quot; (das Zahnradsymbol wird jetzt angezeigt), um die Super Staker-Konfiguration zu &#xF6;ffnen. Klicken Sie auf das Feld Benutzerdefiniert, um die Standardempfehlungen (siehe unten) anzuzeigen, oder passen Sie das Setup manuell an. Klicken Sie auf OK, um die Einrichtung abzuschlie&#xDF;en.</p>
+<p><img src="https://user-images.githubusercontent.com/29760787/85331928-084ba480-b4a5-11ea-8434-82f9f140b6b6.jpg" alt="5  Super Staker Options"></p>
+<p>Die Konfigurationseinstellungen sind:</p>
+<ul>
+<li>Mindestgeb&#xFC;hr - die von den Delegatoren angebotene Mindestgeb&#xFC;hr, die der Staker akzeptiert.</li>
+<li>Minimale UTXO-Gr&#xF6;&#xDF;e - Hiermit wird die minimale UTXO-Gr&#xF6;&#xDF;e festgelegt, die vom Staker auf Proof of Stake-Konsens bewertet wird. Im Laufe der Zeit sollte die delegierte Adresse viele UTXOs mit kleinen Blockbelohnungen ansammeln, und es ist ineffizient, all diese kleinen Betr&#xE4;ge zu verwalten (die vom Delegator neu kombiniert werden sollten).</li>
+<li>Delegationslistentyp:<ul>
+<li>Alle akzeptieren - Akzeptieren Sie jede Delegation mit der Mindestgeb&#xFC;hr oder mehr.</li>
+<li>Liste zulassen - Akzeptieren Sie nur Delegierungen von bestimmten Adressen. Verwenden Sie diesen Modus, wenn Sie einen Super Staker nur f&#xFC;r bestimmte Adressen betreiben, z. B. f&#xFC;r Ihre eigenen Coins.</li>
+<li>Ausschlussliste - Adressen, die von der Annahme zum Staken ausgeschlossen werden sollen.</li>
+</ul>
+</li>
+</ul>
+<p>Teilen Sie als N&#xE4;chstes die UTXOs in g&#xFC;ltige Betr&#xE4;ge auf, damit der Super Staker Eins&#xE4;tze festlegt. Die UTXOs m&#xFC;ssen mindestens 100 QTUM betragen. W&#xE4;hlen Sie auf der Seite Super Staker die Schaltfl&#xE4;che Split Coins (Dreizack-Symbol) und verwenden Sie die Standardwerte oder nehmen Sie Anpassungen vor. Es werden jedoch keine UTXOs unter 100 QTUM zum Staken verwendet.</p>
+<p><img src="https://user-images.githubusercontent.com/29760787/85331934-0a156800-b4a5-11ea-9339-eed51b9bddf6.jpg" alt="6  Split UTXOs GUI"></p>
+<p>Sie k&#xF6;nnen UTXOs auch mit dem Befehl <code>splitutxosforaddress</code> teilen, der auch f&#xFC;r delegierte Adressen verwendet werden kann. Geben Sie den folgenden Befehl ein, um die UTXOs zwischen einem minimalen und einem maximalen Wert aufzuteilen:</p>
+<p><code>splitutxosforaddress &quot;address&quot; minValue maxValue ( maxOutputs )</code></p>
+<p>Wenn ein Wallet beispielsweise UTXOs mit 40, 50, 60, 70 und 800 QTUM enth&#xE4;lt, verwenden Sie den folgenden Befehl, um diese in UTXOs mit mindestens 100 und maximal 200 aufzuteilen:</p>
+<pre><code class="lang-splitutxosforaddress">{
+  &quot;txid&quot;: &quot;197a199c3ac9dd8df574ca77da15c5da31db3f7101e2108638a3b2f94248b9f7&quot;,
+  &quot;selected&quot;: &quot;1020.00&quot;,
+  &quot;splited&quot;: &quot;1020.00&quot;
+}
+</code></pre>
+<p>In diesem Beispiel betrug die Gesamteingabe 1.020 QTUM und die Aufteilung 9 UTXOs von 100,0 und eine von 119,99566, wobei das Wallet eine &quot;Transaktion an sich selbst&quot; sendete und eine Geb&#xFC;hr von 0,00434 QTUM entrichtete.</p>
+<p>Bei gr&#xF6;&#xDF;eren Wallets muss m&#xF6;glicherweise die Anzahl der &quot;Maximalleistungen&quot; f&#xFC;r die Aufteilung angepasst werden. In dem obigen Beispiel, in dem das Feld &quot;Maximale Ausgaben&quot; auf den Standardwert 100 eingestellt ist, wird die Teilungsoperation aufgeteilt, wobei 100 QTUM (minimale Gr&#xF6;&#xDF;e) x 100 (maximale Ausgaben) = 10.000 UTXO-Werte erhalten werden. F&#xFC;r Adressen mit mehr Wert kann das Feld &quot;Maximale Ausgabe&quot; h&#xF6;her, auf 500 oder 1000 eingestellt werden. Wenn das Feld &quot;Maximale Ausgabe&quot; auf 1000 eingestellt ist, kann der UTXO-Wert auf bis zu 100.000 aufgeteilt werden. Selbst gr&#xF6;&#xDF;ere Adressen k&#xF6;nnen diesen Split-Befehlssatz f&#xFC;r maximal 1000 Ausgaben einfach wiederholen, bis der Split-Vorgang meldet, dass 0 M&#xFC;nzen ausgew&#xE4;hlt und geteilt wurden.</p>
+<p>Fr&#xFC;her konnten Sie den Befehl <code>sendmanywithdupes</code> verwenden, dies erforderte jedoch eine erhebliche Formatierung, und Sie m&#xF6;chten operativ an eine neue Adresse senden. Nat&#xFC;rlich m&#xFC;ssen die UTXOs nach einem dieser Befehle f&#xFC;r 500 Best&#xE4;tigungen reifen, bevor sie zum Staken verwendet werden k&#xF6;nnen.</p>
+<h1 id="qtum-core-als-super-stacker-starten"><a name="qtum-core-als-super-stacker-starten" class="plugin-anchor" href="#qtum-core-als-super-stacker-starten"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum Core als Super Stacker starten</h1>
+<p>Die obigen Schritte zeigen den &#xDC;bergang von einer Standardinstallation des  Qtum Core-Walles zu einem Super Staker. Das Wallet kann auch bereits initial als  Super Staker gestartet werden, um die Schritte zu verk&#xFC;rzen. In diesem Fall wird die anf&#xE4;ngliche Blockchain-Synchronisierung von der Erstellung der Datenbank f&#xFC;r Adressindex- und Protokollereignisse (wie oben erl&#xE4;utert) begleitet, damit das Wallet f&#xFC;r Super Staking bereit ist.</p>
+<p>Das Qtum Core-Wallet kann als Super Staker mit Qtum-Qt unter Verwendung von Settings - Optionen - Allgmein - Enable Super Staking (wie oben gezeigt) oder direkt &#xFC;ber die Befehlszeile mit dem Parameter <code>-superstaking</code> gestartet werden. (im Screenshot wird das Tesnet gezeigt, f&#xFC;r das Mainnet muss der Parameter <code>-testnet</code> weggelassen werden) </p>
+<p><img src="https://user-images.githubusercontent.com/29760787/91646311-ca767980-ea1b-11ea-8a0a-aa89cc208c90.png" alt="7  Linux Launch"></p>
+<p>Dieser Befehl f&#xFC;r das Standardprogrammverzeichnis unter Windows lautet:</p>
+<p><code>qtum-qt -testnet -superstaking</code> </p>
+<p><img src="https://user-images.githubusercontent.com/29760787/91646313-cd716a00-ea1b-11ea-9586-52adafbea506.jpg" alt="8  Windows Command Line Launch"></p>
+<p>Wenn das Wallet die Blockchain gestartet und synchronisiert wurde (Adressindex und Protokollereignisse erstellen), k&#xF6;nnen Super Stakers hinzugef&#xFC;gt werden. Konfigurieren Sie einen Super Staker und aktivieren Sie dann Super Staking unter Settings- Optionen - Allgemein - stellen Sie &quot;Enable Super Staking &quot; ein, und der Super Staker ist bereit.</p>
+<h1 id="qtumd-super-staker"><a name="qtumd-super-staker" class="plugin-anchor" href="#qtumd-super-staker"><i class="fa fa-link" aria-hidden="true"></i></a>qtumd Super Staker</h1>
+<p>Jede Adresse in einem Qtum Core-Wallet , die als Super Staker ausgef&#xFC;hrt wird, kann delegierte Adressen erhalten und als einzelner Super Staker fungieren. Das Desktop-GUI-Wallet Qtum-Qt erm&#xF6;glicht die Konfiguration mehrerer Super Staker-Adressen mit unterschiedlichen Geb&#xFC;hren und minimalen UTXO-Gr&#xF6;&#xDF;en. Die Daemon / Server-Brieftasche qtumd f&#xFC;hrt alle Super Staker-Adressen mit derselben Geb&#xFC;hr und minimaler UTXO-Gr&#xF6;&#xDF;e aus. Wenn eine Variation &#xFC;ber mehrere Super Staker-Adressen mit qtumd erforderlich ist, k&#xF6;nnen Sie diese mit dem Qtum-Qt-Wallet einrichten und die Datei wallet.dat einfach an qtumd &#xFC;bertragen.</p>
+<p>Das folgende Setup f&#xFC;r qtumd zeigt die Verwendung einer einzelnen Super Staker-Adresse.</p>
+<p>Starten Sie nach der Installation von qtumd mit den folgenden Parametern (im Screenshot wird das Tesnet gezeigt, f&#xFC;r das Mainnet muss der Parameter <code>-testnet</code> weggelassen werden):</p>
+<p><code>./qtumd -testnet -superstaking</code></p>
+<p>Optionale Parameter k&#xF6;nnen hinzugef&#xFC;gt werden, um die Standardgeb&#xFC;hr (von 10%) und den minimalen UTXO-Wert (von 100 QTUM) zu &#xE4;ndern, z. B.:</p>
+<p><code>-stakingminfee=12  -stakingminutxovalue=120</code></p>
+<p>Once the wallet syncs the blockchain, get an address to send some QTUM. This will be the Super Staker address. Use the command:</p>
+<p><code>./qtum-cli -testnet getnewaddress &quot;legacy&quot;</code></p>
+<p>Dann senden Sie QTUM an diese Adresse. ( In unserem Beispiel 1.300 ) </p>
+<p><img src="https://user-images.githubusercontent.com/29760787/85331969-13063980-b4a5-11ea-8ccc-280092131d18.png" alt="9  Getnewaddress Getbalance"></p>
+<p>Diese 1.300 QTUM werden in einem einzigen UTXO ankommen, das f&#xFC;r den Super Staker-Betrieb aufgeteilt werden muss. Verwenden Sie den Befehl <code>splitutxosforaddress</code> mit der Standardgr&#xF6;&#xDF;e 100 Mindestgr&#xF6;&#xDF;e und 200 H&#xF6;chstgr&#xF6;&#xDF;e:</p>
+<p><code>./qtum-cli -testnet splitutxosforaddress &quot;qdMp2BNpwL6ZmMEQHfLV5wGNVgmPCuzd7d&quot; 100 200</code></p>
+<p><img src="https://user-images.githubusercontent.com/29760787/85331976-15689380-b4a5-11ea-91dd-187b6875f3b2.png" alt="10  Split UTXOs for Address qtumd"></p>
+<p>Die Befehlsantwort zeigt, dass 1.300 QTUM f&#xFC;r die Aufteilung ausgew&#xE4;hlt wurden, in diesem Fall die Aufteilung in 12 UTXOs, die mit der txid im Explorer angezeigt werden.</p>
+<p>Zu diesem Zeitpunkt ist das qtumd-wallet f&#xFC;r den Super Staker-Betrieb mit der Adresse qdMp2BNpwL6ZmMEQHfLV5wGNVgmPCuzd7d bereit, und Delegierungen k&#xF6;nnen mit dem folgenden Befehl &#xFC;berwacht werden:</p>
+<p><code>getdelegationsforstaker &quot;qdMp2BNpwL6ZmMEQHfLV5wGNVgmPCuzd7d&quot;</code></p>
+<h1 id="super-staker-operationen"><a name="super-staker-operationen" class="plugin-anchor" href="#super-staker-operationen"><i class="fa fa-link" aria-hidden="true"></i></a>Super Staker Operationen</h1>
+<p>Der Super Staker muss UTXOs halten, um sich f&#xFC;r die delegierten UTXOs, die er setzt, zu Eins&#xE4;tzen zu verpflichten. Die Anzahl der UTXOs (mit einer Mindestgr&#xF6;&#xDF;e von 100 QTUM) basiert auf dem delegierten Gewicht in Prozent des gesamten Netzwerkgewichts. Gute Werte sind 30 UTXOs f&#xFC;r den Einsatz von 1% des Netzwerkgewichts, 50 UTXOs f&#xFC;r 2,0%, 100 UTXOs f&#xFC;r 5% und 160 UTXOs f&#xFC;r den Einsatz von 10% des gesamten Netzwerkgewichts.</p>
+<p>Super Staker sollten ihr Wallet Gewicht (UTXO-Gewicht abz&#xFC;glich der derzeit eingesetzten Menge) &#xFC;berwachen und UTXOs hinzuf&#xFC;gen, wenn es unter mehrere Tausend f&#xE4;llt.</p>
+<p>Erstellen Sie eine Sicherungskopie des Wallets (speichern Sie die Datei wallet.dat), nachdem Sie die Offline-Staking Konfiguration ge&#xE4;ndert haben, z. B. einen Super Staker hinzugef&#xFC;gt oder eine Delegierung hinzugef&#xFC;gt haben, da das Offline-Staking in der Datei wallet.dat gespeichert wird. Wenn die Datei backup wallet.dat verloren geht, kann die Konfiguration auch mit der Wiederherstellung wiederhergestellt werden (siehe unten).</p>
+<p>Delegierungen an einen Super Staker k&#xF6;nnen mit der Schaltfl&#xE4;che &quot;Delegierungen ...&quot; auf der Super Staker-Seite oder mit dem Befehl &quot;getdelegationsforstaker&quot; &#xFC;berpr&#xFC;ft werden.</p>
+<h1 id="wiederherstellung"><a name="wiederherstellung" class="plugin-anchor" href="#wiederherstellung"><i class="fa fa-link" aria-hidden="true"></i></a>Wiederherstellung</h1>
+<p>Normalerweise werden die Delegierung und die Super Staker-Konfiguration in der Datei wallet.dat gespeichert. Wenn Probleme mit der Datei wallet.dat auftreten, k&#xF6;nnen die Delegierungsinformationen und Super-Staker-Informationen mithilfe der Schaltfl&#xE4;che Wiederherstellen auf den Seiten Delegation und Super Staker wiederhergestellt werden. In diesem Fall durchsucht das Wallet den Vertragsspeicher &quot;Status&quot; f&#xFC;r Offline-Staking nach den entsprechenden Adressen.</p>
+<p><img src="https://user-images.githubusercontent.com/29760787/85331982-18638400-b4a5-11ea-9f59-755b2ecd06a6.jpg" alt="11  Restore super stakers"></p>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Offline Staking","level":"2.1","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"de","gitbook":"*"},"file":{"path":"offlinestaking/README.md","mtime":"2020-12-19T22:33:04.763Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-19T22:48:24.953Z"},"basePath":"..","book":{"language":"de"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

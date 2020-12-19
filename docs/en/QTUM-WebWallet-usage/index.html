@@ -522,9 +522,9 @@
             
         </li>
     
-        <li class="chapter " data-level="6.4" data-path="../How-To-Build-Qtum-On-Raspbian.html">
+        <li class="chapter " data-level="6.4" data-path="../How-To-Build-Qtum-On-Raspbian.md">
             
-                <a href="../How-To-Build-Qtum-On-Raspbian.html">
+                <span>
             
                     
                     How to Build Qtum on Raspbian
@@ -757,6 +757,7 @@
 <li><a href="#send-and-receive-qrc20-tokens">How to receive and send QRC20 tokens</a></li>
 <li><a href="#adding-a-qrc20-token">How to add a new QRC20 token to the wallet</a></li>
 <li><a href="#how-to-publish-smart-contracts">How to publish smart contracts</a></li>
+<li><a href="#address-delegation-for-offline-staking">Address Delegation for Offline Staking</a></li>
 </ul>
 <hr>
 <h1 id="introduction-to-the-web-wallet"><a name="introduction-to-the-web-wallet" class="plugin-anchor" href="#introduction-to-the-web-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>Introduction to the Web Wallet</h1>
@@ -826,15 +827,12 @@
 <h3 id="7-restore-from-ledger"><a name="7-restore-from-ledger" class="plugin-anchor" href="#7-restore-from-ledger"><i class="fa fa-link" aria-hidden="true"></i></a>7. Restore from Ledger</h3>
 <p>To use your Ledger Nano S or Ledger Blue with Qtum, you will first need to run the Ledger Manager and install the Qtum app on your Ledger using these instructions:
 <a href="https://support.ledgerwallet.com/hc/en-us/articles/115003776913-Install-and-use-Qtum-QTUM-" target="_blank">https://support.ledgerwallet.com/hc/en-us/articles/115003776913-Install-and-use-Qtum-QTUM-</a></p>
-<p><img src="https://i.imgur.com/yp9ku0K.jpg" alt="13. Qtum App EN"></p>
 <p>On the web wallet select the menu option <strong><code>Restore from Ledger</code></strong>, plugin your Ledger, and on the Ledger enter the PIN code and open the Qtum app, then on the web wallet <em>Restore from Ledger</em> page click the red <strong><code>CONNECT</code></strong> button:</p>
 <p><img src="https://i.imgur.com/1wSYpgR.jpg" alt="14. Restore from Ledger EN"></p>
-<p>When the Windows Security page &#x201C;Making sure it&#x2019;s you&#x201D; appears, double press the Ledger buttons to confirm:</p>
-<p><img src="https://i.imgur.com/HGZpywA.jpg" alt="14A. Security Key 1 EN"></p>
+<p>When the Windows Security page &#x201C;Making sure it&#x2019;s you&#x201D; appears, double press the Ledger buttons to confirm.</p>
 <p>On the next <em>Restore from Ledger</em> page, click on the green padlock icon to select the default path:</p>
 <p><img src="https://i.imgur.com/3IErrFG.jpg" alt="15. Choose Path Default EN"></p>
-<p>When the Windows Security page &#x201C;Making sure it&#x2019;s you&#x201D; appears again, double press the Ledger buttons to confirm:</p>
-<p><img src="https://i.imgur.com/MCvhndM.jpg" alt="15A. Security Key 2 EN">  </p>
+<p>When the Windows Security page &#x201C;Making sure it&#x2019;s you&#x201D; appears again, double press the Ledger buttons to confirm.</p>
 <p>On the <em>Default path m/44&apos;/88&apos;/0&apos;/0</em> page choose the address you want to use by clicking on the green padlock icon on that row. This will probably be the top row unless you made other address choices in the Ledger Live wallet.</p>
 <p><img src="https://i.imgur.com/2M4XSCb.jpg" alt="16. Choose Address EN"></p>
 <p>The <em>View Wallet Info</em> page will be displayed. Notice that using the Ledger there is not the option to see or copy the private key because the Ledger hardware wallet manages the private keys and does not send them to your computer. The <strong><code>Restore from Ledger</code></strong> option is not available for Testnet.</p>
@@ -1038,6 +1036,15 @@ contract NameAndAge{
 <p>Using the same <strong><code>Call Contract</code></strong> steps to select <em>getAge</em> will return:</p>
 <p><img src="https://i.imgur.com/goLbJfH.jpg" alt="2019-23 Result for getAge"></p>
 <p>Converting hexadecimal 19 to decimal gives 25 as set above.</p>
+<hr>
+<h1 id="address-delegation-for-offline-staking"><a name="address-delegation-for-offline-staking" class="plugin-anchor" href="#address-delegation-for-offline-staking"><i class="fa fa-link" aria-hidden="true"></i></a>Address Delegation for Offline Staking</h1>
+<p>The web wallet can make an address delegation to a super staker for offline staking. </p>
+<p>First select and copy the address of a super staker from various listings and note the required fee.</p>
+<p>In the wallet, select <strong><code>Offline Staking</code></strong> on the menu and press the blue &quot;+&quot; button to add a delegation. </p>
+<p>On the <em>Add Delegation</em> page paste in the Staker Address (no trailing blank spaces), the Staker Fee and leave the other fields unchanged. There will be a 1.01 QTUM fee for the address delegation transaction, but some gas may be refunded. Click the <strong><code>CONFIRM</code></strong> button and see the confirmation. You can also see the delegation for the wallet address on the qtum.info explorer.</p>
+<p><img src="https://user-images.githubusercontent.com/29760787/91503274-10a2d000-e898-11ea-9f58-944b969b9ee4.jpg" alt="Add Delegation"></p>
+<p>After the address delegation is published in the next block, reload the wallet to see the address delegation status. If you want to remove the delegation at some later time, click the red &quot;x&quot; button to remove the delegation.</p>
+<p><img src="https://user-images.githubusercontent.com/29760787/91503321-2ca67180-e898-11ea-9a63-0456f5a87258.jpg" alt="Offline Staking Status"></p>
 
                                 
                                 </section>
@@ -1081,7 +1088,7 @@ contract NameAndAge{
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Web Wallet","level":"4.2","depth":1,"next":{"title":"How to use Qtum Android Wallet","level":"4.3","depth":1,"path":"How-to-use-Qtum-Android-Wallet/README.md","ref":"How-to-use-Qtum-Android-Wallet/README.md","articles":[]},"previous":{"title":"Qtum Electrum Wallet","level":"4.1","depth":1,"path":"Qtum-Electrum-User-Guide.md","ref":"Qtum-Electrum-User-Guide.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"QTUM-WebWallet-usage/README.md","mtime":"2020-08-13T02:09:23.887Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-13T05:22:32.846Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Web Wallet","level":"4.2","depth":1,"next":{"title":"How to use Qtum Android Wallet","level":"4.3","depth":1,"path":"How-to-use-Qtum-Android-Wallet/README.md","ref":"How-to-use-Qtum-Android-Wallet/README.md","articles":[]},"previous":{"title":"Qtum Electrum Wallet","level":"4.1","depth":1,"path":"Qtum-Electrum-User-Guide.md","ref":"Qtum-Electrum-User-Guide.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"QTUM-WebWallet-usage/README.md","mtime":"2020-12-19T22:21:20.911Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-19T22:48:24.953Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
