@@ -1,7 +1,7 @@
 # Summary
 
-* [Introduction](README.md)
+* [Einführung](README.md)
 
-### Using Qtum
+### Qtum core verwenden
 
   + [Offline Staking](offlinestaking/README.md)
