@@ -6,12 +6,13 @@ We've published our official Qtum repository on https://repo.qtum.info  this rep
 
 - 8.x (Jessie)
 - 9.x (stretch)
-- Testing (Buster)
+- 10x (Buster)
+- Testing (Bullseye)
 - Unstable (Sid)
 
 ### Ubuntu
 
-16.04 - 19.10
+16.04 - 20.10
 
 ### Mint
 
@@ -21,7 +22,7 @@ We've published our official Qtum repository on https://repo.qtum.info  this rep
 
 ### Centos/Fedora/Redhat
 
-Tested on Centos 7, Fedora 30. Other releases should work fine as well.
+Tested on Centos 7, 8 and Fedora 30. Other releases should work fine as well.
 
 https://rpmrepo.qtum.info
 
@@ -31,21 +32,25 @@ https://rpmrepo.qtum.info
 
 More distributions will be added in the future, this document will be updated to reflect those changes.
 
-### Tutorial focus
+# Tutorial focus
 
 This tutorial assumes you have a basic knowledge of Linux and terminal usage, the entire process uses the Linux terminal.
 
-## Installing on Ubuntu
+# Installing on Ubuntu
 
 ### Obtaining signing key
 
 First, we need to obtain the Qtum signing key from the ubuntu keyserver, here's how:
+
+![](https://qtum.s3.amazonaws.com/repos/ubuntu1.png)
 
 `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  BF5B197D`
 
 This will download and add the Qtum signing key to your linux install.
 
 ### Adding repository to your APT sources.
+
+![](https://qtum.s3.amazonaws.com/repos/ubuntu2.png)
 
 `sudo su` - Sudo to root first
 
@@ -55,11 +60,17 @@ This will add the repository to your APT sources file. **NOTE:** Please remember
 
 ### Refreshing APT sources and installing Qtum
 
+![](https://qtum.s3.amazonaws.com/repos/ubuntu3.png)
+
 `sudo apt update && sudo apt install qtum`
 
 By doing this, we'll update our sources and install Qtum on our ubuntu Box
 
-## Installing on Debian
+![](https://qtum.s3.amazonaws.com/repos/ubuntu4.png)
+
+
+
+# Installing on Debian
 
 First, we need to make sure **sudo** is installed: 
 
@@ -76,17 +87,23 @@ Logout and then log in again.
 
 ### Installing dirmngr and apt-transport-https
 
+![](https://qtum.s3.amazonaws.com/repos/debian1.png)
+
 These two packages are needed to enable the Qtum repository on Debian, let's install them:
 
 `apt install -y apt-transport-https dirmngr`
 
 ### Obtaining Public key
 
+![](https://qtum.s3.amazonaws.com/repos/debian1.png)
+
 `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  BF5B197D`
 
 This downloads and installs the Qtum public key
 
 ### Adding repository to your APT sources.
+
+![](https://qtum.s3.amazonaws.com/repos/debian3.png)
 
 `sudo su` - Sudo to root first
 
@@ -96,42 +113,65 @@ This will add the repository to your APT sources file. **NOTE:** Please remember
 
 ### Refreshing APT sources and installing Qtum
 
+![](https://qtum.s3.amazonaws.com/repos/debian4.png)
+
 `sudo apt update && sudo apt install qtum`
 
 By doing this, we'll update our sources and install Qtum on our debian Box
 
-## Install on Centos/Redhat/Fedora
+![](https://qtum.s3.amazonaws.com/repos/debian5.png)
+
+
+
+# Install on Centos/Redhat/Fedora
 
 These are the steps you need to take to install Qtum in a RPM-based distribution
+
+![](https://qtum.s3.amazonaws.com/repos/centos1.png)
 
 1. Install the public key for the RPM repository:
    
    `sudo rpm --import https://rpmrepo.qtum.info/key.asc  `
 
+   ![](https://qtum.s3.amazonaws.com/repos/centos2.png)
+   
 2. Add the Qtum repository:
    
    `sudo yum-config-manager --add-repo https://rpmrepo.qtum.info/`
 
+   ![](https://qtum.s3.amazonaws.com/repos/centos3.png)
+   
 3. `sudo yum update`
+
+   ![](https://qtum.s3.amazonaws.com/repos/centos4.png)
 
 4. `sudo yum install qtum`
 
+![](https://qtum.s3.amazonaws.com/repos/centos5.png)
+
 You can also use dnf to install Qtum on Fedora and distributions that support it.
 
-## Install on Archlinux
+
+
+# Install on Archlinux
 
 To install on arch, the easiest way is to use "yay" https://aur.archlinux.org/packages/yay
 
-`yay qtum-core`
+You can install Qtum using the source files, but this will take a long time to compile from source. In most cases, we recommend using the binary release with: `yay qtum-core-bin`
 
-Compiling Qtum should take a few mins, if you're familiar with yay, it's an AUR helper which really simplifies the process of installing packages from the Archlinux AUR. 
+![](https://qtum.s3.amazonaws.com/repos/arch1.png)
+
+This will bring up a dialog where you need to confirm that you want to install the above mentioned package, press "1" to confirm .
+
+![](https://qtum.s3.amazonaws.com/repos/arch2.png)
+
+![](https://qtum.s3.amazonaws.com/repos/arch3.png)
+
+![](https://qtum.s3.amazonaws.com/repos/arch4.png)
+
+![](https://qtum.s3.amazonaws.com/repos/arch5.png)
 
 ## Launching Qtum
 
 Launching is simple, we just go to our applications menu and scrolldown/search for qtum 
 
-<img src="1.jpg" width="800">
-
-<img src="2.jpg" width="800">
-
-This works, we can launch our Qtum wallet and start syncing!
