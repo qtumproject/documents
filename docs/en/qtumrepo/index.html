@@ -750,35 +750,40 @@
 <ul>
 <li>8.x (Jessie)</li>
 <li>9.x (stretch)</li>
-<li>Testing (Buster)</li>
+<li>10x (Buster)</li>
+<li>Testing (Bullseye)</li>
 <li>Unstable (Sid)</li>
 </ul>
 <h3 id="ubuntu"><a name="ubuntu" class="plugin-anchor" href="#ubuntu"><i class="fa fa-link" aria-hidden="true"></i></a>Ubuntu</h3>
-<p>16.04 - 19.10</p>
+<p>16.04 - 20.10</p>
 <h3 id="mint"><a name="mint" class="plugin-anchor" href="#mint"><i class="fa fa-link" aria-hidden="true"></i></a>Mint</h3>
 <p>18.x</p>
 <h2 id="other-official-repositories"><a name="other-official-repositories" class="plugin-anchor" href="#other-official-repositories"><i class="fa fa-link" aria-hidden="true"></i></a>Other official repositories</h2>
 <h3 id="centosfedoraredhat"><a name="centosfedoraredhat" class="plugin-anchor" href="#centosfedoraredhat"><i class="fa fa-link" aria-hidden="true"></i></a>Centos/Fedora/Redhat</h3>
-<p>Tested on Centos 7, Fedora 30. Other releases should work fine as well.</p>
+<p>Tested on Centos 7, 8 and Fedora 30. Other releases should work fine as well.</p>
 <p><a href="https://rpmrepo.qtum.info" target="_blank">https://rpmrepo.qtum.info</a></p>
 <h3 id="archlinux"><a name="archlinux" class="plugin-anchor" href="#archlinux"><i class="fa fa-link" aria-hidden="true"></i></a>Archlinux</h3>
 <p><a href="https://aur.archlinux.org/packages/qtum-core/" target="_blank">Get it from the AUR</a> </p>
 <p>More distributions will be added in the future, this document will be updated to reflect those changes.</p>
-<h3 id="tutorial-focus"><a name="tutorial-focus" class="plugin-anchor" href="#tutorial-focus"><i class="fa fa-link" aria-hidden="true"></i></a>Tutorial focus</h3>
+<h1 id="tutorial-focus"><a name="tutorial-focus" class="plugin-anchor" href="#tutorial-focus"><i class="fa fa-link" aria-hidden="true"></i></a>Tutorial focus</h1>
 <p>This tutorial assumes you have a basic knowledge of Linux and terminal usage, the entire process uses the Linux terminal.</p>
-<h2 id="installing-on-ubuntu"><a name="installing-on-ubuntu" class="plugin-anchor" href="#installing-on-ubuntu"><i class="fa fa-link" aria-hidden="true"></i></a>Installing on Ubuntu</h2>
+<h1 id="installing-on-ubuntu"><a name="installing-on-ubuntu" class="plugin-anchor" href="#installing-on-ubuntu"><i class="fa fa-link" aria-hidden="true"></i></a>Installing on Ubuntu</h1>
 <h3 id="obtaining-signing-key"><a name="obtaining-signing-key" class="plugin-anchor" href="#obtaining-signing-key"><i class="fa fa-link" aria-hidden="true"></i></a>Obtaining signing key</h3>
 <p>First, we need to obtain the Qtum signing key from the ubuntu keyserver, here&apos;s how:</p>
+<p><img src="https://qtum.s3.amazonaws.com/repos/ubuntu1.png" alt=""></p>
 <p><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  BF5B197D</code></p>
 <p>This will download and add the Qtum signing key to your linux install.</p>
 <h3 id="adding-repository-to-your-apt-sources"><a name="adding-repository-to-your-apt-sources" class="plugin-anchor" href="#adding-repository-to-your-apt-sources"><i class="fa fa-link" aria-hidden="true"></i></a>Adding repository to your APT sources.</h3>
+<p><img src="https://qtum.s3.amazonaws.com/repos/ubuntu2.png" alt=""></p>
 <p><code>sudo su</code> - Sudo to root first</p>
 <p><code>echo &quot;deb https://repo.qtum.info/apt/ubuntu/ bionic main&quot; &gt;&gt; /etc/apt/sources.list.d/qtum.list</code></p>
 <p>This will add the repository to your APT sources file. <strong>NOTE:</strong> Please remember to change &quot;xenial&quot; for your Ubuntu version codename <em>(for instance, Ubuntu 19.10 codename is eoan, in this case you need to replace bionic for eoan)</em></p>
 <h3 id="refreshing-apt-sources-and-installing-qtum"><a name="refreshing-apt-sources-and-installing-qtum" class="plugin-anchor" href="#refreshing-apt-sources-and-installing-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Refreshing APT sources and installing Qtum</h3>
+<p><img src="https://qtum.s3.amazonaws.com/repos/ubuntu3.png" alt=""></p>
 <p><code>sudo apt update &amp;&amp; sudo apt install qtum</code></p>
 <p>By doing this, we&apos;ll update our sources and install Qtum on our ubuntu Box</p>
-<h2 id="installing-on-debian"><a name="installing-on-debian" class="plugin-anchor" href="#installing-on-debian"><i class="fa fa-link" aria-hidden="true"></i></a>Installing on Debian</h2>
+<p><img src="https://qtum.s3.amazonaws.com/repos/ubuntu4.png" alt=""></p>
+<h1 id="installing-on-debian"><a name="installing-on-debian" class="plugin-anchor" href="#installing-on-debian"><i class="fa fa-link" aria-hidden="true"></i></a>Installing on Debian</h1>
 <p>First, we need to make sure <strong>sudo</strong> is installed: </p>
 <p>Type <code>sudo su</code> and press enter, if you get a password prompt, then you can move on to obtaining the public key</p>
 <h3 id="installing-sudo"><a name="installing-sudo" class="plugin-anchor" href="#installing-sudo"><i class="fa fa-link" aria-hidden="true"></i></a>Installing sudo</h3>
@@ -787,42 +792,54 @@
 <p>When sudo finishes installing, add your user to the sudo group: <code>gpasswd -a youruser sudo</code>
 Logout and then log in again.</p>
 <h3 id="installing-dirmngr-and-apt-transport-https"><a name="installing-dirmngr-and-apt-transport-https" class="plugin-anchor" href="#installing-dirmngr-and-apt-transport-https"><i class="fa fa-link" aria-hidden="true"></i></a>Installing dirmngr and apt-transport-https</h3>
+<p><img src="https://qtum.s3.amazonaws.com/repos/debian1.png" alt=""></p>
 <p>These two packages are needed to enable the Qtum repository on Debian, let&apos;s install them:</p>
 <p><code>apt install -y apt-transport-https dirmngr</code></p>
 <h3 id="obtaining-public-key"><a name="obtaining-public-key" class="plugin-anchor" href="#obtaining-public-key"><i class="fa fa-link" aria-hidden="true"></i></a>Obtaining Public key</h3>
+<p><img src="https://qtum.s3.amazonaws.com/repos/debian1.png" alt=""></p>
 <p><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  BF5B197D</code></p>
 <p>This downloads and installs the Qtum public key</p>
 <h3 id="adding-repository-to-your-apt-sources"><a name="adding-repository-to-your-apt-sources" class="plugin-anchor" href="#adding-repository-to-your-apt-sources"><i class="fa fa-link" aria-hidden="true"></i></a>Adding repository to your APT sources.</h3>
+<p><img src="https://qtum.s3.amazonaws.com/repos/debian3.png" alt=""></p>
 <p><code>sudo su</code> - Sudo to root first</p>
 <p><code>echo &quot;deb https://repo.qtum.info/apt/debian/ buster main&quot; &gt;&gt; /etc/apt/sources.list.d/qtum.list</code></p>
 <p>This will add the repository to your APT sources file. <strong>NOTE:</strong> Please remember to change &quot;stretch&quot; for your Debian version codename <!--(for instance, Debian 8.x codename is jessie, in this case you need to replace stretch for jessie)--></p>
 <h3 id="refreshing-apt-sources-and-installing-qtum"><a name="refreshing-apt-sources-and-installing-qtum" class="plugin-anchor" href="#refreshing-apt-sources-and-installing-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Refreshing APT sources and installing Qtum</h3>
+<p><img src="https://qtum.s3.amazonaws.com/repos/debian4.png" alt=""></p>
 <p><code>sudo apt update &amp;&amp; sudo apt install qtum</code></p>
 <p>By doing this, we&apos;ll update our sources and install Qtum on our debian Box</p>
-<h2 id="install-on-centosredhatfedora"><a name="install-on-centosredhatfedora" class="plugin-anchor" href="#install-on-centosredhatfedora"><i class="fa fa-link" aria-hidden="true"></i></a>Install on Centos/Redhat/Fedora</h2>
+<p><img src="https://qtum.s3.amazonaws.com/repos/debian5.png" alt=""></p>
+<h1 id="install-on-centosredhatfedora"><a name="install-on-centosredhatfedora" class="plugin-anchor" href="#install-on-centosredhatfedora"><i class="fa fa-link" aria-hidden="true"></i></a>Install on Centos/Redhat/Fedora</h1>
 <p>These are the steps you need to take to install Qtum in a RPM-based distribution</p>
+<p><img src="https://qtum.s3.amazonaws.com/repos/centos1.png" alt=""></p>
 <ol>
 <li><p>Install the public key for the RPM repository:</p>
 <p><code>sudo rpm --import https://rpmrepo.qtum.info/key.asc</code></p>
+<p><img src="https://qtum.s3.amazonaws.com/repos/centos2.png" alt=""></p>
 </li>
 <li><p>Add the Qtum repository:</p>
 <p><code>sudo yum-config-manager --add-repo https://rpmrepo.qtum.info/</code></p>
+<p><img src="https://qtum.s3.amazonaws.com/repos/centos3.png" alt=""></p>
 </li>
 <li><p><code>sudo yum update</code></p>
+<p><img src="https://qtum.s3.amazonaws.com/repos/centos4.png" alt=""></p>
 </li>
 <li><p><code>sudo yum install qtum</code></p>
 </li>
 </ol>
+<p><img src="https://qtum.s3.amazonaws.com/repos/centos5.png" alt=""></p>
 <p>You can also use dnf to install Qtum on Fedora and distributions that support it.</p>
-<h2 id="install-on-archlinux"><a name="install-on-archlinux" class="plugin-anchor" href="#install-on-archlinux"><i class="fa fa-link" aria-hidden="true"></i></a>Install on Archlinux</h2>
+<h1 id="install-on-archlinux"><a name="install-on-archlinux" class="plugin-anchor" href="#install-on-archlinux"><i class="fa fa-link" aria-hidden="true"></i></a>Install on Archlinux</h1>
 <p>To install on arch, the easiest way is to use &quot;yay&quot; <a href="https://aur.archlinux.org/packages/yay" target="_blank">https://aur.archlinux.org/packages/yay</a></p>
-<p><code>yay qtum-core</code></p>
-<p>Compiling Qtum should take a few mins, if you&apos;re familiar with yay, it&apos;s an AUR helper which really simplifies the process of installing packages from the Archlinux AUR. </p>
+<p>You can install Qtum using the source files, but this will take a long time to compile from source. In most cases, we recommend using the binary release with: <code>yay qtum-core-bin</code></p>
+<p><img src="https://qtum.s3.amazonaws.com/repos/arch1.png" alt=""></p>
+<p>This will bring up a dialog where you need to confirm that you want to install the above mentioned package, press &quot;1&quot; to confirm .</p>
+<p><img src="https://qtum.s3.amazonaws.com/repos/arch2.png" alt=""></p>
+<p><img src="https://qtum.s3.amazonaws.com/repos/arch3.png" alt=""></p>
+<p><img src="https://qtum.s3.amazonaws.com/repos/arch4.png" alt=""></p>
+<p><img src="https://qtum.s3.amazonaws.com/repos/arch5.png" alt=""></p>
 <h2 id="launching-qtum"><a name="launching-qtum" class="plugin-anchor" href="#launching-qtum"><i class="fa fa-link" aria-hidden="true"></i></a>Launching Qtum</h2>
 <p>Launching is simple, we just go to our applications menu and scrolldown/search for qtum </p>
-<p><img src="1.jpg" width="800"></p>
-<p><img src="2.jpg" width="800"></p>
-<p>This works, we can launch our Qtum wallet and start syncing!</p>
 
                                 
                                 </section>
@@ -866,7 +883,7 @@ Logout and then log in again.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Repositories","level":"3.2","depth":1,"next":{"title":"QTUM On Google Cloud","level":"3.3","depth":1,"path":"gcpgettingstarted/README.md","ref":"gcpgettingstarted/README.md","articles":[]},"previous":{"title":"Offline Staking","level":"3.1","depth":1,"path":"OfflineStaking.md","ref":"OfflineStaking.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"qtumrepo/README.md","mtime":"2020-07-30T19:59:10.895Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-21T02:24:08.777Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Repositories","level":"3.2","depth":1,"next":{"title":"QTUM On Google Cloud","level":"3.3","depth":1,"path":"gcpgettingstarted/README.md","ref":"gcpgettingstarted/README.md","articles":[]},"previous":{"title":"Offline Staking","level":"3.1","depth":1,"path":"OfflineStaking.md","ref":"OfflineStaking.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"qtumrepo/README.md","mtime":"2021-01-19T23:15:19.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-20T00:27:09.951Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
