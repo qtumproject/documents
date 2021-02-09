@@ -1,0 +1,1266 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Offline Staking Address Delegation - Undelegation Transaction Details · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../qtumrepo/" />
+    
+    
+    <link rel="prev" href="../OfflineStaking.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using the Qtum wallet</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Qtum-Wallet-Tutorial/">
+            
+                <a href="../Qtum-Wallet-Tutorial/">
+            
+                    
+                    Desktop wallet basic usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../QTUM-wallet-usage-best-practices/">
+            
+                <a href="../QTUM-wallet-usage-best-practices/">
+            
+                    
+                    Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../updateqtum/">
+            
+                <a href="../updateqtum/">
+            
+                    
+                    How to Update your Qtum wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../qtum0182overview/">
+            
+                <a href="../qtum0182overview/">
+            
+                    
+                    Qtum 0.18.2 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../commands/">
+            
+                <a href="../commands/">
+            
+                    
+                    Qtum Core Wallet Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../Adding-Nodes/">
+            
+                <a href="../Adding-Nodes/">
+            
+                    
+                    Adding Nodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                <a href="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                    
+                    Encrypt and Unlock Qtum Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                <a href="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                    
+                    Wallet Recovery With Salvagewallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../Testnet-user-guide/README.md">
+            
+                <span>
+            
+                    
+                    Testnet User Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../bech32/">
+            
+                <a href="../bech32/">
+            
+                    
+                    bech32 support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../OfflineStaking.html">
+            
+                <a href="../OfflineStaking.html">
+            
+                    
+                    Offline Staking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Offline Staking Address Delegation - Undelegation Transaction Details
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../qtumrepo/">
+            
+                <a href="../qtumrepo/">
+            
+                    
+                    Repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../gcpgettingstarted/">
+            
+                <a href="../gcpgettingstarted/">
+            
+                    
+                    QTUM On Google Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../Qtum-AWS/">
+            
+                <a href="../Qtum-AWS/">
+            
+                    
+                    QTUM On AWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/">
+            
+                <a href="../How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/">
+            
+                    
+                    Stake With VPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../Qtum-on-Raspberry-Pi/">
+            
+                <a href="../Qtum-on-Raspberry-Pi/">
+            
+                    
+                    Stake With Raspberry Pi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../How-to-Stake-with-Qtum/">
+            
+                <a href="../How-to-Stake-with-Qtum/">
+            
+                    
+                    How to Stake With Qtum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="../freebsd/">
+            
+                <a href="../freebsd/">
+            
+                    
+                    How to Stake on FreeBSD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Other Qtum wallets</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../Qtum-Electrum-User-Guide.html">
+            
+                <a href="../Qtum-Electrum-User-Guide.html">
+            
+                    
+                    Qtum Electrum Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../QTUM-WebWallet-usage/">
+            
+                <a href="../QTUM-WebWallet-usage/">
+            
+                    
+                    Web Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../How-to-use-Qtum-Android-Wallet/">
+            
+                <a href="../How-to-use-Qtum-Android-Wallet/">
+            
+                    
+                    How to use Qtum Android Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../Qtum-Exchange-Usage-Guide-and-Info.html">
+            
+                <a href="../Qtum-Exchange-Usage-Guide-and-Info.html">
+            
+                    
+                    Qtum Exchange Usage Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../How-To-Add-Options/">
+            
+                <a href="../How-To-Add-Options/">
+            
+                    
+                    How to Add Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../How-to-Use-Bootstrap/">
+            
+                <a href="../How-to-Use-Bootstrap/">
+            
+                    
+                    How to Use bootstrap.dat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../Qtum-RPC-API/">
+            
+                <a href="../Qtum-RPC-API/">
+            
+                    
+                    Qtum RPC API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Qtum Lightning Client</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../lightning/">
+            
+                <a href="../lightning/">
+            
+                    
+                    Qtum Lightning Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deploy Qtum</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                <a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                    
+                    Guidance of Qtum Deployment and RPC Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../Launch-Qtum-with-Docker.html">
+            
+                <a href="../Launch-Qtum-with-Docker.html">
+            
+                    
+                    Launch Qtum With Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../Build-Qtum-on-CentOS.html">
+            
+                <a href="../Build-Qtum-on-CentOS.html">
+            
+                    
+                    How to Build Qtum on CentOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../How-To-Build-Qtum-On-Raspbian.md">
+            
+                <span>
+            
+                    
+                    How to Build Qtum on Raspbian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../How-to-Deploy-Star-Network/">
+            
+                <a href="../How-to-Deploy-Star-Network/">
+            
+                    
+                    Deploy Qtum Star Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Smart Contract and QRC20</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../QRC20-Token-Introduce.html">
+            
+                <a href="../QRC20-Token-Introduce.html">
+            
+                    
+                    QRC20 Token Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../QRC20-integration.html">
+            
+                <a href="../QRC20-integration.html">
+            
+                    
+                    QRC20 Integration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Unita</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../Technical-White-Paper-for-QtumX/">
+            
+                <a href="../Technical-White-Paper-for-QtumX/">
+            
+                    
+                    Unita Technical White Paper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../unitarepo/">
+            
+                <a href="../unitarepo/">
+            
+                    
+                    Install Unita from Linux repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../unitagettingstarted/">
+            
+                <a href="../unitagettingstarted/">
+            
+                    
+                    Unita on Google Cloud Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../One-Click-Launch-Chain/">
+            
+                <a href="../One-Click-Launch-Chain/">
+            
+                    
+                    Unita One-Click-Launch-Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../SCAR-Consensus/">
+            
+                <a href="../SCAR-Consensus/">
+            
+                    
+                    SCAR: Scalable Consensus Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../DDAO-Data-Management/">
+            
+                <a href="../DDAO-Data-Management/">
+            
+                    
+                    DDAO: Decentralized Data Access Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Research</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../Confidential-Assets.html">
+            
+                <a href="../Confidential-Assets.html">
+            
+                    
+                    Confidential Assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../Data-Analytics.html">
+            
+                <a href="../Data-Analytics.html">
+            
+                    
+                    Data Analytics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Offline Staking Address Delegation - Undelegation Transaction Details</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="offline-staking-address-delegation---undelegation-transaction-details"><a name="offline-staking-address-delegation---undelegation-transaction-details" class="plugin-anchor" href="#offline-staking-address-delegation---undelegation-transaction-details"><i class="fa fa-link" aria-hidden="true"></i></a>Offline Staking Address Delegation - Undelegation Transaction Details</h1>
+<h3 id="intended-audience"><a name="intended-audience" class="plugin-anchor" href="#intended-audience"><i class="fa fa-link" aria-hidden="true"></i></a>Intended audience</h3>
+<p>The intended audience for this document are developers who need to build raw transactions or blocks that interact with the offline staking functionality of Qtum.  This document assumes the reader is familiar with basic Ethereum and Bitcoin concepts. In order to understand the delegated PoS block related concepts in this document, the reader should have an understanding of the staking in Qtum&apos;s &quot;non-delegated&quot; PoS.</p>
+<h3 id="introduction"><a name="introduction" class="plugin-anchor" href="#introduction"><i class="fa fa-link" aria-hidden="true"></i></a>Introduction</h3>
+<p>Offline staking allows a holder of QTUM to delegate their staking weight to a third party Super Staker. They do this by sending a smart contract transaction to address 0x0000000000000000000000000000000000000086. This transaction includes the address which they want to allow being staked by a third party Super Staker (the &quot;<em>delegation</em>&quot;), the Super Staker address that they want to allow to stake on their behalf (the &quot;<em>staker</em>&quot;) and a <em>fee</em> percentage that the <em>staker</em> will receive. For Qtum offline staking all addresses must be legacy addresses starting with a &quot;Q&quot; for Qtum mainnet or &quot;q&quot; for Qtum testnet.</p>
+<p>Once such a transaction has been confirmed, the <em>staker</em> is able to stake on behalf of the <em>delegator</em> by constructing a special type of delegated PoS block.</p>
+<h3 id="glossary"><a name="glossary" class="plugin-anchor" href="#glossary"><i class="fa fa-link" aria-hidden="true"></i></a>Glossary</h3>
+<h5 id="proof-of-delegation-pod"><a name="proof-of-delegation-pod" class="plugin-anchor" href="#proof-of-delegation-pod"><i class="fa fa-link" aria-hidden="true"></i></a>Proof of Delegation (PoD)</h5>
+<p>The proof of delegation (&quot;PoD&quot;) is a compact 65 byte signature made by the <em>delegation{privkey}</em> with the <em>staker{hexpubkeyhash}</em> as message. This is done in order to prove that the delegator has at some point allowed the <em>staker</em> to stake blocks on behalf of the <em>delegator</em>. More specifically, the message that is signed is: </p>
+<p><em>sha256d(staker{hexpubkeyhash})</em></p>
+<p>i.e., equivalent to a message signed using the <em>signmessage</em> RPC call in Qtum.  Note that the <em>staker{pubkeyhash}</em> should be hex-encoded and is therefore 40 bytes.</p>
+<p>The message signed is shown in the script below as <code>sha256d(&quot;\x15Qtum signed message:\n\x28&quot;+staker{hexpubkeyhash})</code> where <code>\x15</code> hexadecimal represents 21 decimal ASCII characters &quot;Qtum signed message:&quot; plus the newline character 0x0A. These characters are concatinated with <code>\28</code> hexadecimal or 40 decimal characters of the staker hexpubkeyhash.</p>
+<h5 id="offline-staking-contract-address"><a name="offline-staking-contract-address" class="plugin-anchor" href="#offline-staking-contract-address"><i class="fa fa-link" aria-hidden="true"></i></a>Offline staking contract address</h5>
+<p>The offline staking contract is located at address 0x0000000000000000000000000000000000000086.</p>
+<h5 id="opcall-script"><a name="opcall-script" class="plugin-anchor" href="#opcall-script"><i class="fa fa-link" aria-hidden="true"></i></a>OP_CALL script</h5>
+<p>An OP_CALL (i.e., a contract execution) script requires the following scriptpubkey structure: &quot;\<version\> \<gaslimit\> \<gasprice\> \<calldata\> \<contractaddress\> OP_CALL&quot;. For the purposes of this document VERSION will always equal 4. GASLIMIT should be <em>2250000</em> for an <em>addDelegation</em> call and may be set to <em>100000</em> for a <em>removeDelegation</em> call. GAS_PRICE will typically be 40. The CONTRACTADDRESS will always equal 0x0000000000000000000000000000000000000086 in this document. The only variable value in an OP_CALL script will be the CALLDATA in this document. CALLDATA is equivalent to the same concept in Ethereum and should be ABI-encoded in the same way as in Ethereum.</contractaddress\></calldata\></gasprice\></gaslimit\></version\></p>
+<h5 id="transaction-sender"><a name="transaction-sender" class="plugin-anchor" href="#transaction-sender"><i class="fa fa-link" aria-hidden="true"></i></a>Transaction sender</h5>
+<p>The sender of a transaction is the pubkeyhash responsible for executing a contract transaction (&quot;msg.sender&quot; in solidity). The sender in Qtum is defined as either the address of the first input to a transaction or the address which is defined by an OP_SENDER subscript (beyond the scope of this document). For the purposes of this document we will always assume that the sender is defined by the address of the first input to a transaction. That output being spent must have either a P2PK or P2PKH script.</p>
+<h3 id="delegating-an-address-to-a-staker-adddelegation"><a name="delegating-an-address-to-a-staker-adddelegation" class="plugin-anchor" href="#delegating-an-address-to-a-staker-adddelegation"><i class="fa fa-link" aria-hidden="true"></i></a>Delegating an address to a staker (&quot;addDelegation&quot;)</h3>
+<p>To delegate the staking authority of a particular address the process is as follows:</p>
+<p>The delegator selects their address they want to delegate to a staker, the &quot;<em>delegation</em>&quot;.</p>
+<p>The delegator selects a staker to that will be allowed to submit blocks by staking using the <em>delegation</em>&apos;s utxos: the &quot;<em>staker</em>&quot;.</p>
+<p>The delegator creates a PoD by signing the <em>staker{hexpubkeyhash}</em> using the <em>delegation{privkey}</em>.</p>
+<p>The delegator creates a transaction that has one OP_CALL txout that executes the <em>addDelegation</em> function of the offline staking contract. The transaction sender must be the <em>delegation</em> address. The sender (e.g., the first vin prevout&apos;s address of the transaction) must be from the <em>delegation</em> address. The output that calls the <em>addDelegation</em> function should contain the following contract calldata:   </p>
+<p><em>4c0e968c + staker{pubkeyhash} + fee + 0x60 + 0x41 + PoD</em> </p>
+<p>The contract calldata follows the normal rules for Ethereum&apos;s  ABI encoding, e.g., all values in the calldata should be left padded by zero bytes to the nearest 32 byte multiple except for the function ABI param (4c0e968c). The fee should be an integer value between 0 and 100, determining the fee percentage which is assigned to the <em>staker</em> upon a successful block being found. <em>0x60</em> is the position of the PoD byte array (for more details see the Ethereum ABI specification). <em>0x41</em> is the length of the PoD bytes (65 bytes). The PoD bytes is the signature produced by signing <em>staker{pubkeyhash}</em> using the <em>delegation{privkey}</em> (see &quot;Proof of Delegation&quot; for more details). </p>
+<p>For example, a <em>delegation{pubkeyhash} = 0x4008700e91bba17d858722d7112adf436ca416ed</em> to the <em>staker{pubkeyhash} = 0x7da6be640325a6048cd67f070c314fa405df126b</em> with a <em>fee</em> of 99%, the calldata could be the following:</p>
+<pre><code>4c0e968c 
+
+0000000000000000000000007da6be640325a6048cd67f070c314fa405df126b
+
+0000000000000000000000000000000000000000000000000000000000000063
+
+0000000000000000000000000000000000000000000000000000000000000060
+
+0000000000000000000000000000000000000000000000000000000000000041
+
+1f0db6005c1788cf46383ba6750de747edad798648bb9f69086e7e661a1ccaa408717f7b005c0e0fc3817cd7cf6cc3561cad2c5c221951f1fb26fa71e4eabd48fa00000000000000000000000000000000000000000000000000000000000000
+</code></pre><p>The full output&apos;s scriptPubKey would therefore be:</p>
+<pre><code>4 2250000 40 4c0e968c0000000000000000000000007da6be640325a6048cd67f070c314fa405df126b0000000000000000000000000000000000000000000000000000000000000063000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000411f0db6005c1788cf46383ba6750de747edad798648bb9f69086e7e661a1ccaa408717f7b005c0e0fc3817cd7cf6cc3561cad2c5c221951f1fb26fa71e4eabd48fa00000000000000000000000000000000000000000000000000000000000000 0000000000000000000000000000000000000086 OP_CALL
+</code></pre><p>See appendix for a full example transaction.</p>
+<h3 id="removing-a-delegation-removedelegation"><a name="removing-a-delegation-removedelegation" class="plugin-anchor" href="#removing-a-delegation-removedelegation"><i class="fa fa-link" aria-hidden="true"></i></a>Removing a delegation (&quot;removeDelegation&quot;)</h3>
+<p>To remove an active delegation, the <em>delegator</em> makes a contract call to <em>removeDelegation</em> (&quot;bffe3486&quot;) with <em>delegation</em> as sender. The calldata would therefore simply be:</p>
+<p>3d666e8b</p>
+<p>The full output&apos;s scriptPubKey would therefore be:</p>
+<p>4 100000 40 3d666e8b 0000000000000000000000000000000000000086 OP_CALL</p>
+<p>See appendix for a full example transaction.</p>
+<h3 id="staking-a-delegated-block-by-the-staker"><a name="staking-a-delegated-block-by-the-staker" class="plugin-anchor" href="#staking-a-delegated-block-by-the-staker"><i class="fa fa-link" aria-hidden="true"></i></a>Staking a delegated block by the Staker</h3>
+<p>After the transaction that calls <em>addDelegation</em> has been confirmed, the <em>staker</em> is able to stake blocks on behalf of <em>delegation</em>. To find new blocks, the <em>staker</em> iterates over all <em>delegation</em> utxos with an <strong>unused</strong> <em>depth &gt; 500</em> (i.e., they must be confirmed more than 500 blocks as well as unused for staking for the last 500 blocks), checking whether the following condition is true:</p>
+<p><em>sha256d(modifier + utxo{blocktime} + utxo{hash} + utxo{vout} + block{time}) &lt;= target </em> utxo{value}*</p>
+<p>i.e., the exact same process as normal PoS blocks in Qtum, except that the utxos here are the <em>delegation</em>&apos;s utxos and not the <em>staker</em>&apos;s. Upon finding a valid block, a staker follows the normal procedures for constructing a Qtum PoS block. Once the block has been constructing and the <em>staker</em> wishes to sign the block, they should create a compact signature on the following message using <em>staker{privkey}</em>:</p>
+<p><em>sha256d(version + prevblock + merkleroot + time + bits + nonce + stateroot + utxoroot + utxo{hash} + utxo{vout} + PoD)</em></p>
+<p>Note that the utxo here refers to the delegated utxo and the PoD is the proof of delegation created previously. These are the fields that differ when signing delegated PoS blocks. Once this signature has been created, the blocksig field of the should be set to this signature + PoD. i.e., the blockSig field should be a 130 bytes long variable length byte string consisting of two signatures. The stakePrevout field of the block should be set to the delegation utxo. See appendix for the structure of all fields of the block header.</p>
+<p>The first input to the coinstake transaction must be an output with a value &gt;= 100 QTUM. The first output of the coinstake transaction must, as in &quot;non-delegated&quot; PoS blocks, be empty. The second output must be the reward to the to <em>staker</em> (<em>reward </em> fee / 100<em>). The third output must be to </em>delegation* with the remaining reward.</p>
+<p>For example, for a delegated PoS block with a <em>delegation{pubkeyhash} = 0x4008700e91bba17d858722d7112adf436ca416ed</em> and a <em>staker{pubkey} = 0x0225a9966a7184dc0542bf8c24ced4a0fab4080f9331e683773d2df138fce6fee2</em> with a <em>fee</em>  of 99%, the coinstake outputs would be the following assuming the input value from <em>staker</em> is exactly 100 Qtum and the block subsidy is 4 Qtum:</p>
+<table>
+<thead>
+<tr>
+<th>output index</th>
+<th>scriptPubKey</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0225a9966a7184dc0542bf8c24ced4a0fab4080f9331e683773d2df138fce6fee2 OP_CHECKSIG</td>
+<td>103.96</td>
+</tr>
+<tr>
+<td>2</td>
+<td>OP_DUP OP_HASH160 4008700e91bba17d858722d7112adf436ca416ed OP_EQUALVERIFY OP_CHECKSIG</td>
+<td>0.04</td>
+</tr>
+</tbody>
+</table>
+<h3 id="appendix"><a name="appendix" class="plugin-anchor" href="#appendix"><i class="fa fa-link" aria-hidden="true"></i></a>Appendix</h3>
+<h5 id="delegated-pos-block-header-structure"><a name="delegated-pos-block-header-structure" class="plugin-anchor" href="#delegated-pos-block-header-structure"><i class="fa fa-link" aria-hidden="true"></i></a>Delegated PoS block header structure</h5>
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>Description</th>
+<th>Data type</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>version</td>
+<td>int32_t</td>
+<td>Block version, typically 4.</td>
+</tr>
+<tr>
+<td>32</td>
+<td>prev_block</td>
+<td>char[32]</td>
+<td>The previous block hash.</td>
+</tr>
+<tr>
+<td>32</td>
+<td>merkle_root</td>
+<td>char[32]</td>
+<td>The Merkle tree root of the block&apos;s transactions.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>timestamp</td>
+<td>uint32_t</td>
+<td>Block creation timestamp, the 4 least significant bits must be set to 0. Must be greater than the previous block&apos;s timestamp.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>bits</td>
+<td>uint32_t</td>
+<td>The difficulty of this block.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>nonce</td>
+<td>uint32_t</td>
+<td>A nonce, unused in PoS blocks and therefore usually set to 0.</td>
+</tr>
+<tr>
+<td>32</td>
+<td>state_root</td>
+<td>char[32]</td>
+<td>The root of the state trie</td>
+</tr>
+<tr>
+<td>32</td>
+<td>utxo_root</td>
+<td>char[32]</td>
+<td>The root of the contract utxo balances trie.</td>
+</tr>
+<tr>
+<td>32</td>
+<td>stake_prevout_hash</td>
+<td>char[32]</td>
+<td>The delegated staking utxo&apos;s hash</td>
+</tr>
+<tr>
+<td>4</td>
+<td>staking_prevout_vout</td>
+<td>uint32_t</td>
+<td>The delegated staking utxo&apos;s vout index</td>
+</tr>
+<tr>
+<td>131</td>
+<td>blockSig</td>
+<td>varlength</td>
+<td>The block&apos;s signature created by the staker concatenated with the PoD created by the delegator during delegation. Note that the field will be prefixed by a 0x82 byte specifying the length.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="adddelegation-raw-transaction"><a name="adddelegation-raw-transaction" class="plugin-anchor" href="#adddelegation-raw-transaction"><i class="fa fa-link" aria-hidden="true"></i></a>addDelegation raw transaction</h5>
+<pre><code>{&apos;blockhash&apos;: &apos;2faf179a5253081fabc531bd10f9705502621b15975d841665dbeb8b310f6335&apos;,
+ &apos;blocktime&apos;: 1610453886,
+ &apos;confirmations&apos;: 1,
+ &apos;hash&apos;: &apos;51dfe41dc303b99b860c5aa44adabb41bf1de371a52e3204c89fa52b02f10dca&apos;,
+ &apos;hex&apos;: &apos;010000000100647301a87adbb2eb5e72b29f334798574ff1e9f520a9a9c1125ff20cdf01c6000000006a47304402205240e8420b5d1f868c9d54f172edb911966ed7ff91d646e4437b442ee4c44da102204214e6248ff2703fca45f311bc043da3cc4295e05f32b05228887a5b8a66e87c01210390724f049390d99491f805c887d87841e71a22e53f01ccbf38bad074276520b100000000020000000000000000e501040310552201284cc54c0e968c0000000000000000000000007da6be640325a6048cd67f070c314fa405df126b00000000000000000000000000000000000000000000000000000000000000630000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000004120465e98e1dc7f7fa4bdef6bd1775e27cc86e195cd948b28f61bd7cfb9a613247c31032df1dccf43edf24228b942c337e420b06c196a24605e54b75bfd9e16e69e140000000000000000000000000000000000000086c280d5eca3d10100001976a9144008700e91bba17d858722d7112adf436ca416ed88ac00000000&apos;,
+ &apos;locktime&apos;: 0,
+ &apos;size&apos;: 429,
+ &apos;time&apos;: 1610453886,
+ &apos;txid&apos;: &apos;51dfe41dc303b99b860c5aa44adabb41bf1de371a52e3204c89fa52b02f10dca&apos;,
+ &apos;version&apos;: 1,
+ &apos;vin&apos;: [{&apos;scriptSig&apos;: {&apos;asm&apos;: &apos;304402205240e8420b5d1f868c9d54f172edb911966ed7ff91d646e4437b442ee4c44da102204214e6248ff2703fca45f311bc043da3cc4295e05f32b05228887a5b8a66e87c[ALL] &apos;
+                               &apos;0390724f049390d99491f805c887d87841e71a22e53f01ccbf38bad074276520b1&apos;,
+                        &apos;hex&apos;: &apos;47304402205240e8420b5d1f868c9d54f172edb911966ed7ff91d646e4437b442ee4c44da102204214e6248ff2703fca45f311bc043da3cc4295e05f32b05228887a5b8a66e87c01210390724f049390d99491f805c887d87841e71a22e53f01ccbf38bad074276520b1&apos;},
+          &apos;sequence&apos;: 0,
+          &apos;txid&apos;: &apos;c601df0cf25f12c1a9a920f5e9f14f579847339fb2725eebb2db7aa801736400&apos;,
+          &apos;vout&apos;: 0}],
+ &apos;vout&apos;: [{&apos;n&apos;: 0,
+           &apos;scriptPubKey&apos;: {&apos;asm&apos;: &apos;4 2250000 40 &apos;
+                                   &apos;4c0e968c0000000000000000000000007da6be640325a6048cd67f070c314fa405df126b00000000000000000000000000000000000000000000000000000000000000630000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000004120465e98e1dc7f7fa4bdef6bd1775e27cc86e195cd948b28f61bd7cfb9a613247c31032df1dccf43edf24228b942c337e420b06c196a24605e54b75bfd9e16e69e &apos;
+                                   &apos;0000000000000000000000000000000000000086 &apos;
+                                   &apos;OP_CALL&apos;,
+                            &apos;hex&apos;: &apos;01040310552201284cc54c0e968c0000000000000000000000007da6be640325a6048cd67f070c314fa405df126b00000000000000000000000000000000000000000000000000000000000000630000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000004120465e98e1dc7f7fa4bdef6bd1775e27cc86e195cd948b28f61bd7cfb9a613247c31032df1dccf43edf24228b942c337e420b06c196a24605e54b75bfd9e16e69e140000000000000000000000000000000000000086c2&apos;,
+                            &apos;type&apos;: &apos;call&apos;},
+           &apos;value&apos;: Decimal(&apos;0E-8&apos;)},
+          {&apos;n&apos;: 1,
+           &apos;scriptPubKey&apos;: {&apos;addresses&apos;: [&apos;qPPxWa7P2dk6TW1QEwmutwMwSPo6Fw51sB&apos;],
+                            &apos;asm&apos;: &apos;OP_DUP OP_HASH160 &apos;
+                                   &apos;4008700e91bba17d858722d7112adf436ca416ed &apos;
+                                   &apos;OP_EQUALVERIFY OP_CHECKSIG&apos;,
+                            &apos;hex&apos;: &apos;76a9144008700e91bba17d858722d7112adf436ca416ed88ac&apos;,
+                            &apos;reqSigs&apos;: 1,
+                            &apos;type&apos;: &apos;pubkeyhash&apos;},
+           &apos;value&apos;: Decimal(&apos;19999.10000000&apos;)}],
+ &apos;vsize&apos;: 429,
+ &apos;weight&apos;: 1716}
+</code></pre><h5 id="removedelegation-transaction"><a name="removedelegation-transaction" class="plugin-anchor" href="#removedelegation-transaction"><i class="fa fa-link" aria-hidden="true"></i></a>removeDelegation transaction</h5>
+<pre><code>{&apos;blockhash&apos;: &apos;2641e2e6582a720476a6617834b88bc11f51aed5e8fbd1c07d39cb06b9676b21&apos;,
+ &apos;blocktime&apos;: 1610453886,
+ &apos;confirmations&apos;: 1,
+ &apos;hash&apos;: &apos;e2fa242270373b3b7bc42b5292fb7babada277781c22fc9d8827941a1a09b770&apos;,
+ &apos;hex&apos;: &apos;0100000001009f8abbe57e7e594775241884dc2fc9d393199b106daff90768dc00d4e75153000000006a47304402203da7a5ef757547dace39856be8e7a36a94d346052d4b9e005b7a42a1db371626022017522913bd341532f983fc3e591c062736d594c2e1da68a21aaaae9d422e74d701210390724f049390d99491f805c887d87841e71a22e53f01ccbf38bad074276520b1000000000200000000000000002301040350c3000128043d666e8b140000000000000000000000000000000000000086c2809b2ba9d10100001976a9144008700e91bba17d858722d7112adf436ca416ed88ac00000000&apos;,
+ &apos;locktime&apos;: 0,
+ &apos;size&apos;: 235,
+ &apos;time&apos;: 1610453886,
+ &apos;txid&apos;: &apos;e2fa242270373b3b7bc42b5292fb7babada277781c22fc9d8827941a1a09b770&apos;,
+ &apos;version&apos;: 1,
+ &apos;vin&apos;: [{&apos;scriptSig&apos;: {&apos;asm&apos;: &apos;304402203da7a5ef757547dace39856be8e7a36a94d346052d4b9e005b7a42a1db371626022017522913bd341532f983fc3e591c062736d594c2e1da68a21aaaae9d422e74d7[ALL] &apos;
+                               &apos;0390724f049390d99491f805c887d87841e71a22e53f01ccbf38bad074276520b1&apos;,
+                        &apos;hex&apos;: &apos;47304402203da7a5ef757547dace39856be8e7a36a94d346052d4b9e005b7a42a1db371626022017522913bd341532f983fc3e591c062736d594c2e1da68a21aaaae9d422e74d701210390724f049390d99491f805c887d87841e71a22e53f01ccbf38bad074276520b1&apos;},
+          &apos;sequence&apos;: 0,
+          &apos;txid&apos;: &apos;5351e7d400dc6807f9af6d109b1993d3c92fdc8418247547597e7ee5bb8a9f00&apos;,
+          &apos;vout&apos;: 0}],
+ &apos;vout&apos;: [{&apos;n&apos;: 0,
+           &apos;scriptPubKey&apos;: {&apos;asm&apos;: &apos;4 100000 40 -191784509 &apos;
+                                   &apos;0000000000000000000000000000000000000086 &apos;
+                                   &apos;OP_CALL&apos;,
+                            &apos;hex&apos;: &apos;01040350c3000128043d666e8b140000000000000000000000000000000000000086c2&apos;,
+                            &apos;type&apos;: &apos;call&apos;},
+           &apos;value&apos;: Decimal(&apos;0E-8&apos;)},
+          {&apos;n&apos;: 1,
+           &apos;scriptPubKey&apos;: {&apos;addresses&apos;: [&apos;qPPxWa7P2dk6TW1QEwmutwMwSPo6Fw51sB&apos;],
+                            &apos;asm&apos;: &apos;OP_DUP OP_HASH160 &apos;
+                                   &apos;4008700e91bba17d858722d7112adf436ca416ed &apos;
+                                   &apos;OP_EQUALVERIFY OP_CHECKSIG&apos;,
+                            &apos;hex&apos;: &apos;76a9144008700e91bba17d858722d7112adf436ca416ed88ac&apos;,
+                            &apos;reqSigs&apos;: 1,
+                            &apos;type&apos;: &apos;pubkeyhash&apos;},
+           &apos;value&apos;: Decimal(&apos;19999.96000000&apos;)}],
+ &apos;vsize&apos;: 235,
+ &apos;weight&apos;: 940}
+</code></pre><h5 id="coinstake-transaction-for-delegated-pos-block"><a name="coinstake-transaction-for-delegated-pos-block" class="plugin-anchor" href="#coinstake-transaction-for-delegated-pos-block"><i class="fa fa-link" aria-hidden="true"></i></a>coinstake transaction for delegated PoS block</h5>
+<pre><code>{&apos;blockhash&apos;: &apos;739a79af31febfee43bb2e3b3acf65231d58eadd76092a10a4e6354a426d2661&apos;,
+ &apos;blocktime&apos;: 1610453888,
+ &apos;confirmations&apos;: 1,
+ &apos;hash&apos;: &apos;9ac332299c26b07b6b666d29f4c9e10fc66f92a854068591b47e3d88adf0c1fe&apos;,
+ &apos;hex&apos;: &apos;01000000010ce0e34187d786b1512cb0ddb29c58886664619560c3eaff6adac2253a76ef27000000006a47304402206712c2c824d2ddc08228a2df0462816f87d1240d95bf3549826a97bda536a58102205c36d24a2092cd3ec70e66accf2c3051ac9fa5d0f92d14801de8a76c7e960fa101210225a9966a7184dc0542bf8c24ced4a0fab4080f9331e683773d2df138fce6fee2000000000300000000000000000000787caa9e03000023210225a9966a7184dc0542bf8c24ced4a0fab4080f9331e683773d2df138fce6fee2ac00c817a8040000001976a9144008700e91bba17d858722d7112adf436ca416ed88ac00000000&apos;,
+ &apos;locktime&apos;: 0,
+ &apos;size&apos;: 244,
+ &apos;time&apos;: 1610453888,
+ &apos;txid&apos;: &apos;9ac332299c26b07b6b666d29f4c9e10fc66f92a854068591b47e3d88adf0c1fe&apos;,
+ &apos;version&apos;: 1,
+ &apos;vin&apos;: [{&apos;scriptSig&apos;: {&apos;asm&apos;: &apos;304402206712c2c824d2ddc08228a2df0462816f87d1240d95bf3549826a97bda536a58102205c36d24a2092cd3ec70e66accf2c3051ac9fa5d0f92d14801de8a76c7e960fa1[ALL] &apos;
+                               &apos;0225a9966a7184dc0542bf8c24ced4a0fab4080f9331e683773d2df138fce6fee2&apos;,
+                        &apos;hex&apos;: &apos;47304402206712c2c824d2ddc08228a2df0462816f87d1240d95bf3549826a97bda536a58102205c36d24a2092cd3ec70e66accf2c3051ac9fa5d0f92d14801de8a76c7e960fa101210225a9966a7184dc0542bf8c24ced4a0fab4080f9331e683773d2df138fce6fee2&apos;},
+          &apos;sequence&apos;: 0,
+          &apos;txid&apos;: &apos;27ef763a25c2da6affeac3609561646688589cb2ddb02c51b186d78741e3e00c&apos;,
+          &apos;vout&apos;: 0}],
+ &apos;vout&apos;: [{&apos;n&apos;: 0,
+           &apos;scriptPubKey&apos;: {&apos;asm&apos;: &apos;&apos;, &apos;hex&apos;: &apos;&apos;, &apos;type&apos;: &apos;nonstandard&apos;},
+           &apos;value&apos;: Decimal(&apos;0E-8&apos;)},
+          {&apos;n&apos;: 1,
+           &apos;scriptPubKey&apos;: {&apos;asm&apos;: &apos;0225a9966a7184dc0542bf8c24ced4a0fab4080f9331e683773d2df138fce6fee2 &apos;
+                                   &apos;OP_CHECKSIG&apos;,
+                            &apos;hex&apos;: &apos;210225a9966a7184dc0542bf8c24ced4a0fab4080f9331e683773d2df138fce6fee2ac&apos;,
+                            &apos;type&apos;: &apos;pubkey&apos;},
+           &apos;value&apos;: Decimal(&apos;103.96000000&apos;)},
+          {&apos;n&apos;: 2,
+           &apos;scriptPubKey&apos;: {&apos;addresses&apos;: [&apos;qPPxWa7P2dk6TW1QEwmutwMwSPo6Fw51sB&apos;],
+                            &apos;asm&apos;: &apos;OP_DUP OP_HASH160 &apos;
+                                   &apos;4008700e91bba17d858722d7112adf436ca416ed &apos;
+                                   &apos;OP_EQUALVERIFY OP_CHECKSIG&apos;,
+                            &apos;hex&apos;: &apos;76a9144008700e91bba17d858722d7112adf436ca416ed88ac&apos;,
+                            &apos;reqSigs&apos;: 1,
+                            &apos;type&apos;: &apos;pubkeyhash&apos;},
+           &apos;value&apos;: Decimal(&apos;0.04000000&apos;)}],
+ &apos;vsize&apos;: 244,
+ &apos;weight&apos;: 976}
+</code></pre><h5 id="test-case-for-adding-delegation-submitting-a-valid-delegated-block-and-removing-delegation"><a name="test-case-for-adding-delegation-submitting-a-valid-delegated-block-and-removing-delegation" class="plugin-anchor" href="#test-case-for-adding-delegation-submitting-a-valid-delegated-block-and-removing-delegation"><i class="fa fa-link" aria-hidden="true"></i></a>Test case for adding delegation, submitting a valid delegated block and removing delegation</h5>
+<pre><code>#!/usr/bin/env python3
+
+from test_framework.test_framework import BitcoinTestFramework
+from test_framework.messages import *
+from test_framework.script import *
+from test_framework.mininode import *
+from test_framework.qtum import *
+from test_framework.qtumconfig import *
+from test_framework.util import *
+import time
+import base64
+import pprint
+
+pp = pprint.PrettyPrinter()
+
+def signmessage(key, msg):
+    sighash = hash256(b&quot;\x15Qtum Signed Message:\n\x28&quot;+msg.encode(&apos;ascii&apos;))
+    sig = key.sign_ecdsa(sighash, low_s=True, der_sig=False)
+    return sig
+
+def signdelegatedblock(key, block, pod):
+    sigdata = b&quot;&quot;
+    sigdata += struct.pack(&quot;&lt;i&quot;, block.nVersion)
+    sigdata += ser_uint256(block.hashPrevBlock)
+    sigdata += ser_uint256(block.hashMerkleRoot)
+    sigdata += struct.pack(&quot;&lt;I&quot;, block.nTime)
+    sigdata += struct.pack(&quot;&lt;I&quot;, block.nBits)
+    sigdata += struct.pack(&quot;&lt;I&quot;, block.nNonce)
+    sigdata += ser_uint256(block.hashStateRoot)
+    sigdata += ser_uint256(block.hashUTXORoot)
+    sigdata += block.prevoutStake.serialize()
+    sigdata += struct.pack(&quot;&lt;b&quot;, len(pod)) + pod
+    blocksig = key.sign_ecdsa(hash256(sigdata), low_s=True, der_sig=False)
+    return blocksig
+
+
+class QtumSimpleDelegationContractTest(BitcoinTestFramework):
+    def set_test_params(self):
+        self.setup_clean_chain = True
+        self.num_nodes = 2
+        self.extra_args = [[&apos;-txindex=1&apos;, &apos;-logevents=1&apos;], [&apos;-txindex=1&apos;, &apos;-logevents=1&apos;]]
+
+    def run_test(self):
+        mocktime = 1610443886
+        for n in self.nodes: n.setmocktime(mocktime)
+
+        self.delegator = self.nodes[0]
+        delegator_address = &quot;qPPxWa7P2dk6TW1QEwmutwMwSPo6Fw51sB&quot;
+        delegator_address_hex = &quot;4008700e91bba17d858722d7112adf436ca416ed&quot;
+        delegator_privkey = &quot;cQA8JyNZc4YTsvV44Y6HFQMLfRTfS49rSDMSuNSgRauwtBCj9ieq&quot;
+        delegator_eckey = wif_to_ECKey(delegator_privkey)
+        self.delegator.importprivkey(delegator_privkey)
+
+        self.staker = self.nodes[1]
+        staker_address = &quot;qV1mNZokPVcrQcH8RdnfzHsVVyVSGFnaue&quot;
+        staker_address_hex = &quot;7da6be640325a6048cd67f070c314fa405df126b&quot;
+        staker_privkey = &quot;cNYezxiDtCu5DMUjqAv31tnGAMMi3Kh7xLYFR7tWUCvbSdMz78N8&quot;
+        staker_eckey = wif_to_ECKey(staker_privkey)
+        self.staker.importprivkey(staker_privkey)
+
+        self.staker.generatetoaddress(1, staker_address)
+        self.sync_all()
+        self.delegator.generatetoaddress(COINBASE_MATURITY+100, delegator_address)
+        self.sync_all()
+        self.staker.generatetoaddress(COINBASE_MATURITY, staker_address)
+        self.sync_all()
+        for n in self.nodes: n.setmocktime(mocktime+10000)
+
+
+        offline_staking_contract_address = bytes.fromhex(&quot;0000000000000000000000000000000000000086&quot;)
+        pod = signmessage(delegator_eckey, staker_address_hex)
+        calldata = bytes.fromhex(&quot;4c0e968c&quot;) # function abi
+        calldata += b&apos;\x00&apos;*12 + bytes.fromhex(staker_address_hex)
+        calldata += b&apos;\x00&apos;*31 + b&apos;\x63&apos;
+        calldata += b&apos;\x00&apos;*31 + b&apos;\x60&apos;
+        calldata += b&apos;\x00&apos;*31 + b&apos;\x41&apos;
+        calldata += pod
+        contract_call_script = CScript([b&apos;\x04&apos;, CScriptNum(2250000), CScriptNum(40), calldata, offline_staking_contract_address, OP_CALL])
+        change_script = CScript([OP_DUP, OP_HASH160, bytes.fromhex(delegator_address_hex), OP_EQUALVERIFY, OP_CHECKSIG])
+
+        delegator_unspent = self.delegator.listunspent()[0]
+        delegator_unspent_outpoint = COutPoint(int(delegator_unspent[&apos;txid&apos;], 16), delegator_unspent[&apos;vout&apos;])
+        tx = CTransaction()
+        tx.vin = [CTxIn(delegator_unspent_outpoint)]
+        tx.vout.append(CTxOut(0, scriptPubKey=contract_call_script)) # The contract call
+        tx.vout.append(CTxOut(int(delegator_unspent[&apos;amount&apos;]*COIN) - 2250000*40, scriptPubKey=change_script)) # change output
+        tx = rpc_sign_transaction(self.delegator, tx)
+        txid = self.delegator.sendrawtransaction(tx.serialize().hex())
+        self.delegator.generatetoaddress(1, delegator_address)
+
+        # We have now added a delegation, let&apos;s stake a block for that delegation.
+        prevblock = self.delegator.getblock(self.delegator.getbestblockhash())
+        blocktime = (prevblock[&apos;time&apos;]+0x10) &amp; 0xfffffff0
+
+        for delegator_unspent in self.delegator.listunspent():
+            if delegator_unspent[&apos;confirmations&apos;] &lt;= 500:
+                continue
+
+            delegator_utxo = COutPoint(int(delegator_unspent[&apos;txid&apos;], 16), delegator_unspent[&apos;vout&apos;])
+            txtime = self.delegator.getrawtransaction(delegator_unspent[&apos;txid&apos;], True)[&apos;time&apos;]
+
+            target = uint256_from_compact(int(prevblock[&apos;bits&apos;], 16))
+            data = b&quot;&quot;
+            data += ser_uint256(int(prevblock[&apos;modifier&apos;], 16))
+            data += struct.pack(&quot;&lt;I&quot;, txtime)
+            data += delegator_utxo.serialize()
+            data += struct.pack(&quot;&lt;I&quot;, blocktime)
+            kernel = uint256_from_str(hash256(data))
+
+            # valid block found?
+            if kernel &lt;= (target*int(delegator_unspent[&apos;amount&apos;]*COIN)) &amp; (2**256 - 1):
+                coinbase = create_coinbase(prevblock[&apos;height&apos;]+1)
+                coinbase.vout[0].nValue = 0
+                coinbase.vout[0].scriptPubKey = b&quot;&quot;
+                coinbase.rehash()
+
+                block = create_block(int(prevblock[&apos;hash&apos;], 16), coinbase, blocktime)
+                block.nTime = blocktime
+                block.hashStateRoot = int(prevblock[&apos;hashStateRoot&apos;], 16)
+                block.hashUTXORoot = int(prevblock[&apos;hashUTXORoot&apos;], 16)
+                block.prevoutStake = delegator_utxo
+
+                # Find an unspent staker tx with value &gt; 100, we know that all unspent staker txs fulfill this requirement
+                staker_unspent = self.staker.listunspent()[0]
+                staker_subsidy = INITIAL_BLOCK_REWARD*COIN*99//100
+                staker_reward_script = CScript([staker_eckey.get_pubkey().get_bytes(), OP_CHECKSIG])
+                delegation_reward_script = CScript([OP_DUP, OP_HASH160, bytes.fromhex(delegator_address_hex), OP_EQUALVERIFY, OP_CHECKSIG])
+
+                coinstake_tx = CTransaction()
+                coinstake_tx.vin = [CTxIn(COutPoint(int(staker_unspent[&apos;txid&apos;], 16), staker_unspent[&apos;vout&apos;]))]
+                coinstake_tx.vout.append(CTxOut())
+                coinstake_tx.vout.append(CTxOut(staker_subsidy + int(staker_unspent[&apos;amount&apos;]*COIN), scriptPubKey=staker_reward_script))
+                coinstake_tx.vout.append(CTxOut(int(INITIAL_BLOCK_REWARD*COIN-staker_subsidy), scriptPubKey=delegation_reward_script))
+                coinstake_tx = rpc_sign_transaction(self.staker, coinstake_tx)
+                block.vtx.append(coinstake_tx)
+                block.hashMerkleRoot = block.calc_merkle_root()
+
+                # create the signature
+                blocksig = signdelegatedblock(staker_eckey, block, pod)
+                block.vchBlockSig = blocksig + pod
+                block.rehash()
+                self.staker.submitblock(block.serialize().hex())
+                break
+
+        # Finally remove the delegation
+        calldata = bytes.fromhex(&quot;3d666e8b&quot;) # function abi
+        contract_call_script = CScript([b&apos;\x04&apos;, CScriptNum(100000), CScriptNum(40), calldata, offline_staking_contract_address, OP_CALL])
+        change_script = CScript([OP_DUP, OP_HASH160, bytes.fromhex(delegator_address_hex), OP_EQUALVERIFY, OP_CHECKSIG])
+
+        delegator_unspent = self.delegator.listunspent()[0]
+        delegator_unspent_outpoint = COutPoint(int(delegator_unspent[&apos;txid&apos;], 16), delegator_unspent[&apos;vout&apos;])
+        tx = CTransaction()
+        tx.vin = [CTxIn(delegator_unspent_outpoint)]
+        tx.vout.append(CTxOut(0, scriptPubKey=contract_call_script)) # The contract call
+        tx.vout.append(CTxOut(int(delegator_unspent[&apos;amount&apos;]*COIN) - 100000*40, scriptPubKey=change_script)) # change output
+        tx = rpc_sign_transaction(self.delegator, tx)
+        txid = self.delegator.sendrawtransaction(tx.serialize().hex())
+        self.delegator.generatetoaddress(1, delegator_address)
+
+if __name__ == &apos;__main__&apos;:
+    QtumSimpleDelegationContractTest().main()
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../OfflineStaking.html" class="navigation navigation-prev " aria-label="Previous page: Offline Staking">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../qtumrepo/" class="navigation navigation-next " aria-label="Next page: Repositories">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Offline Staking Address Delegation - Undelegation Transaction Details","level":"3.2","depth":1,"next":{"title":"Repositories","level":"3.3","depth":1,"path":"qtumrepo/README.md","ref":"qtumrepo/README.md","articles":[]},"previous":{"title":"Offline Staking","level":"3.1","depth":1,"path":"OfflineStaking.md","ref":"OfflineStaking.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"OfflineStakingDelegation/README.md","mtime":"2021-02-09T03:20:48.556Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-09T03:26:28.877Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
