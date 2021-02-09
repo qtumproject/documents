@@ -18,13 +18,14 @@
 ### Staking
 
 11. [Offline Staking](OfflineStaking.md)
-12. [Repositories](qtumrepo/README.md)
-13. [QTUM On Google Cloud](gcpgettingstarted/README.md)
-14. [QTUM On AWS](Qtum-AWS/README.md)
-15. [Stake With VPS](How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md)
-16. [Stake With Raspberry Pi](Qtum-on-Raspberry-Pi/README.md)
-17. [How to Stake With Qtum](How-to-Stake-with-Qtum/README.md)
-18. [How to Stake on FreeBSD](freebsd/README.md)
+12. [Offline Staking Address Delegation - Undelegation Transaction Details](OfflineStakingDelegation/README.md)
+13. [Repositories](qtumrepo/README.md)
+14. [QTUM On Google Cloud](gcpgettingstarted/README.md)
+15. [QTUM On AWS](Qtum-AWS/README.md)
+16. [Stake With VPS](How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md)
+17. [Stake With Raspberry Pi](Qtum-on-Raspberry-Pi/README.md)
+18. [How to Stake With Qtum](How-to-Stake-with-Qtum/README.md)
+19. [How to Stake on FreeBSD](freebsd/README.md)
 
 ## Other Qtum wallets
 
