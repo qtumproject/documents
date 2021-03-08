@@ -2,15 +2,15 @@
 
 FreeBSD is a very powerful operating system, it has a great history of reliability, security and stability. Here we show how it can be used to stake Qtum in a secure way.
 
-## Isolating Qtumd in a FreeBSD jail
+## Sandboxing Qtum in a FreeBSD jail
 
 FreeBSD jails are a very powerful feature, in summary, your jail instance is more protected as it's like having a separate OS just for Qtum with reduced privileges. 
 
 Here's a good read on Jails:  https://www.freebsd.org/doc/handbook/jails.html
 
-### FreeBSD version used for this tutorial is 11.2, download it from the official FreeBSD mirrors:
+### FreeBSD version used for this tutorial is 12.2, download it from the official FreeBSD mirrors:
 
-https://www.freebsd.org/doc/handbook/eresources-web.html
+https://www.freebsd.org/where/
 
 ### Installing FreeBSD
 
@@ -82,7 +82,7 @@ Notice that we've added some settings for firewall, these will enable IPFW and b
 
 ### Now we've created our jail for staking Qtum, let's fetch and install FreeBSD on it!
 
-`cd /jail/qtum/ && fetch -o  - http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/11.2-RELEASE/base.txz | tar --unlink -xpJf - -C /jail/qtum `
+`cd /jail/qtum/ && fetch -o  - http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/12.2-RELEASE/base.txz | tar --unlink -xpJf - -C /jail/qtum `
 
 ![fetch.png](fetch.png)
 
