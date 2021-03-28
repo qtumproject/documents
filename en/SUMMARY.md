@@ -59,17 +59,19 @@
 
 33. [QRC20 Integration](QRC20-integration.md)
 
-### Unita
+34. [Raw QRC20 Transaction implemention guide](Raw-QRC20-Transaction-implementation-guide)
 
-34. [Unita Technical White Paper](Technical-White-Paper-for-QtumX/README.md)
+### Unita (archived)
 
-35. [Install Unita from Linux repositories](unitarepo/README.md)
+35. [Unita Technical White Paper](Technical-White-Paper-for-QtumX/README.md)
 
-36. [Unita on Google Cloud Getting started](unitagettingstarted/README.md)
+36. [Install Unita from Linux repositories](unitarepo/README.md)
 
-37. [Unita One-Click-Launch-Chain](One-Click-Launch-Chain/README.md)
+37. [Unita on Google Cloud Getting started](unitagettingstarted/README.md)
 
-38. [SCAR: Scalable Consensus Algorithm](SCAR-Consensus/README.md)
+38. [Unita One-Click-Launch-Chain](One-Click-Launch-Chain/README.md)
+
+39. [SCAR: Scalable Consensus Algorithm](SCAR-Consensus/README.md)
 
 39. [DDAO: Decentralized Data Access Object](DDAO-Data-Management/README.md)
 
