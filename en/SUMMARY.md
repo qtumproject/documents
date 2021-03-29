@@ -9,7 +9,7 @@
 3. [How to Update your Qtum wallet](updateqtum/README.md)
 4. [Qtum 0.18.2 Overview](qtum0182overview/README.md)
 5. [Qtum Core Wallet Commands](commands/README.md)
-6. [Adding Nodes](Adding-Nodes/README.md)          
+6. [Adding Nodes](Adding-Nodes/README.md)
 7. [Encrypt and Unlock Qtum Wallet](Encrypt-and-Unlock-Qtum-Wallet/README.md)
 8. [Wallet Recovery With Salvagewallet](Wallet-Recovery-with-Salvagewallet.md)
 9. [Testnet User Guide](Testnet-user-guide/README.md)
@@ -29,54 +29,49 @@
 
 ## Other Qtum wallets
 
-19. [Qtum Electrum Wallet](Qtum-Electrum-User-Guide.md)
-20. [Web Wallet](QTUM-WebWallet-usage/README.md)    
-21. [How to use Qtum Android Wallet](How-to-use-Qtum-Android-Wallet/README.md)
-22. [Qtum Exchange Usage Guide](Qtum-Exchange-Usage-Guide-and-Info.md)
-23. [How to Add Options](How-To-Add-Options/README.md)
-24. [How to Use bootstrap.dat](How-to-Use-Bootstrap/README.md)
-25. [Qtum RPC API](Qtum-RPC-API/README.md)
+20. [Qtum Electrum Wallet](Qtum-Electrum-User-Guide.md)
+21. [Web Wallet](QTUM-WebWallet-usage/README.md)
+22. [How to use Qtum Android Wallet](How-to-use-Qtum-Android-Wallet/README.md)
+23. [Qtum Exchange Usage Guide](Qtum-Exchange-Usage-Guide-and-Info.md)
+25. [How to Add Options](How-To-Add-Options/README.md)
+26. [How to Use bootstrap.dat](How-to-Use-Bootstrap/README.md)
+27. [Qtum RPC API](Qtum-RPC-API/README.md)
 
 ## Qtum Lightning Client
 
-26. [Qtum Lightning Client](lightning/README.md)
+28. [Qtum Lightning Client](lightning/README.md)
 
 ### Deploy Qtum
 
-27. [Guidance of Qtum Deployment and RPC Settings](Guidance-of-Qtum-Deployment-and-RPC-Settings.md)
-
-28. [Launch Qtum With Docker](Launch-Qtum-with-Docker.md)
-
-29. [How to Build Qtum on CentOS](Build-Qtum-on-CentOS.md)
-
-30. [How to Build Qtum on Raspbian](How-To-Build-Qtum-On-Raspbian.md)
-
-31. [Deploy Qtum Star Network](How-to-Deploy-Star-Network/README.md)
+29. [Build Qtum](buildqtum.md) 
+30. [Guidance of Qtum Deployment and RPC Settings](Guidance-of-Qtum-Deployment-and-RPC-Settings.md)
+31. [Launch Qtum With Docker](Launch-Qtum-with-Docker.md)
+32. [How to Build Qtum on CentOS](Build-Qtum-on-CentOS.md)
+33. [How to Build Qtum on Raspbian](How-To-Build-Qtum-On-Raspbian.md)
+34. [Deploy Qtum Star Network](How-to-Deploy-Star-Network/README.md)
 
 ### Smart Contract and QRC20
 
-32. [QRC20 Token Introduction](QRC20-Token-Introduce.md)
-
-33. [QRC20 Integration](QRC20-integration.md)
-
-34. [Raw QRC20 Transaction implemention guide](Raw-QRC20-Transaction-implementation-guide)
+35. [QRC20 Token Introduction](QRC20-Token-Introduce.md)
+36. [QRC20 Integration](QRC20-integration.md)
+37. [Raw QRC20 Transaction implemention guide](Raw-QRC20-Transaction-implementation-guide)
 
 ### Unita (archived)
 
-35. [Unita Technical White Paper](Technical-White-Paper-for-QtumX/README.md)
+38. [Unita Technical White Paper](Technical-White-Paper-for-QtumX/README.md)
 
-36. [Install Unita from Linux repositories](unitarepo/README.md)
+39. [Install Unita from Linux repositories](unitarepo/README.md)
 
-37. [Unita on Google Cloud Getting started](unitagettingstarted/README.md)
+40. [Unita on Google Cloud Getting started](unitagettingstarted/README.md)
 
-38. [Unita One-Click-Launch-Chain](One-Click-Launch-Chain/README.md)
+41. [Unita One-Click-Launch-Chain](One-Click-Launch-Chain/README.md)
 
-39. [SCAR: Scalable Consensus Algorithm](SCAR-Consensus/README.md)
+42. [SCAR: Scalable Consensus Algorithm](SCAR-Consensus/README.md)
 
-39. [DDAO: Decentralized Data Access Object](DDAO-Data-Management/README.md)
+43. [DDAO: Decentralized Data Access Object](DDAO-Data-Management/README.md)
 
 ### Research
 
-1. [Confidential Assets](Confidential-Assets.md)
+44. [Confidential Assets](Confidential-Assets.md)
 
-2. [Data Analytics](Data-Analytics.md)
+45. [Data Analytics](Data-Analytics.md)
