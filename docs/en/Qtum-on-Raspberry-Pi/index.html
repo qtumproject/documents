@@ -821,30 +821,21 @@
 <h1 id="new-qtum-raspbian-release"><a name="new-qtum-raspbian-release" class="plugin-anchor" href="#new-qtum-raspbian-release"><i class="fa fa-link" aria-hidden="true"></i></a>New Qtum Raspbian Release!</h1>
 <h3 id="changelog"><a name="changelog" class="plugin-anchor" href="#changelog"><i class="fa fa-link" aria-hidden="true"></i></a>Changelog:</h3>
 <ul>
-<li>Upgrade to Debian Buster 10.4 release</li>
-<li>Qtum 0.19.1</li>
-<li>Offline Staking Support</li>
+<li>Upgrade to Debian Buster 10.9 release</li>
+<li>Qtum 0.20.2</li>
+<li>Update ready for the upcoming 32s hard fork </li>
 </ul>
 <h4 id="qtum-raspbian-64bit-recommended-from-raspberry-pi-2---raspberry-pi-4"><a name="qtum-raspbian-64bit-recommended-from-raspberry-pi-2---raspberry-pi-4" class="plugin-anchor" href="#qtum-raspbian-64bit-recommended-from-raspberry-pi-2---raspberry-pi-4"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum Raspbian 64bit (Recommended from Raspberry Pi 2 - Raspberry Pi 4)</h4>
-<p><a href="https://raspbianimages.s3.amazonaws.com/2020-07-28-Qtum-Raspbian.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/2020-07-28-Qtum-Raspbian.zip</a></p>
-<p><a href="https://raspbianimages.s3.amazonaws.com/2020-07-28-Qtum-Raspbian-lite.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/2020-07-28-Qtum-Raspbian-lite.zip</a></p>
+<p><a href="https://raspbianimages.s3.amazonaws.com/image_2021-04-06-Qtum-Raspbian.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/image_2021-04-06-Qtum-Raspbian.zip</a></p>
+<p><a href="https://raspbianimages.s3.amazonaws.com/image_2021-04-06-Qtum-Raspbian-lite.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/image_2021-04-06-Qtum-Raspbian-lite.zip</a></p>
 <h3 id="burning-the-qtum-raspbian-image-to-your-sd-card"><a name="burning-the-qtum-raspbian-image-to-your-sd-card" class="plugin-anchor" href="#burning-the-qtum-raspbian-image-to-your-sd-card"><i class="fa fa-link" aria-hidden="true"></i></a>&quot;Burning&quot; the Qtum Raspbian image to your SD card</h3>
 <p>Please watch this video tutorial which shows how to download, burn and use your Qtum Raspbian image</p>
 <p><a href="https://www.youtube.com/watch?v=0W6NlIk7Tgw&amp;t=0s" target="_blank">https://www.youtube.com/watch?v=0W6NlIk7Tgw&amp;t=0s</a></p>
 <hr>
-<h2 id="raspberry-pi-zero"><a name="raspberry-pi-zero" class="plugin-anchor" href="#raspberry-pi-zero"><i class="fa fa-link" aria-hidden="true"></i></a>Raspberry Pi Zero</h2>
-<p>Qtum Raspbian now supports the Pi Zero!. This is a $5 device which has only 512mb of Ram and a 1 Core CPU. This makes the Pi Zero the most cost-effective solution to have a Qtum staking box!</p>
-<p>The process of installing Qtum Raspbian on the Pi Zero is the same as on the other Raspberry Pis, however, this version is recommended for the Zero&quot;</p>
-<h4 id="qtum-pizero-recommended-for-raspberry-pi-1-and-pi-zero"><a name="qtum-pizero-recommended-for-raspberry-pi-1-and-pi-zero" class="plugin-anchor" href="#qtum-pizero-recommended-for-raspberry-pi-1-and-pi-zero"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum PiZero (Recommended for Raspberry Pi 1 and Pi Zero)</h4>
-<p><a href="https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero.zip</a></p>
-<p><a href="https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero-lite.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero-lite.zip</a></p>
-<p>The Desktop version works and is usable with the Pi Zero, but, you will find better performance with the &quot;Lite&quot; version as it doesn&apos;t have a desktop, only command line.</p>
-<h3 id="pi-zero-ram-restrictions"><a name="pi-zero-ram-restrictions" class="plugin-anchor" href="#pi-zero-ram-restrictions"><i class="fa fa-link" aria-hidden="true"></i></a>Pi Zero RAM restrictions</h3>
-<p>The Pi Zero has only 512MB ram, and a portion of that ram is &quot;shared&quot; with the video output, that gives you just a bit below 500MB ram. Qtum Raspbian has ZRAM enabled by default, this compresses your RAM to allow it to use more data, however, to ensure stability, you need to enable SWAP.</p>
 <h3 id="what-is-swap-anyway"><a name="what-is-swap-anyway" class="plugin-anchor" href="#what-is-swap-anyway"><i class="fa fa-link" aria-hidden="true"></i></a>What is SWAP anyway?</h3>
 <p>SWAP enables &quot;virtual memory&quot;, it uses a portion of your disk to store data that cannot be stored in RAM, this helps devices like the Pi Zero to continue running without crashing even if the applications are using more than the 512MB RAM included with the Pi Zero.</p>
 <h3 id="how-do-we-enable-swap"><a name="how-do-we-enable-swap" class="plugin-anchor" href="#how-do-we-enable-swap"><i class="fa fa-link" aria-hidden="true"></i></a>How do we enable SWAP?</h3>
-<p>Enabling SWAP on the Pi Zero is extremely easy:</p>
+<p>Enabling SWAP on the Pi  is extremely easy:</p>
 <ol>
 <li><p>Open up a terminal as shown on the screenshot below</p>
 <p><img src="2zero.png" alt="2zero"></p>
@@ -1050,7 +1041,7 @@ For Qtum-Qt use Window &#x2013; Information and check for your address in &quot;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Stake With Raspberry Pi","level":"3.7","depth":1,"next":{"title":"How to Stake With Qtum","level":"3.8","depth":1,"path":"How-to-Stake-with-Qtum/README.md","ref":"How-to-Stake-with-Qtum/README.md","articles":[]},"previous":{"title":"Stake With VPS","level":"3.6","depth":1,"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","ref":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-on-Raspberry-Pi/README.md","mtime":"2021-03-29T23:03:57.117Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-06T16:46:20.123Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Stake With Raspberry Pi","level":"3.7","depth":1,"next":{"title":"How to Stake With Qtum","level":"3.8","depth":1,"path":"How-to-Stake-with-Qtum/README.md","ref":"How-to-Stake-with-Qtum/README.md","articles":[]},"previous":{"title":"Stake With VPS","level":"3.6","depth":1,"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","ref":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-on-Raspberry-Pi/README.md","mtime":"2021-04-06T20:06:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-06T20:17:56.422Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

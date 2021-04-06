@@ -32,15 +32,15 @@ If you don't want to buy or already own a stakebox and just want to get the late
 
 ### Changelog:
 
-- Upgrade to Debian Buster 10.4 release
-- Qtum 0.19.1
-- Offline Staking Support
+- Upgrade to Debian Buster 10.9 release
+- Qtum 0.20.2
+- Update ready for the upcoming 32s hard fork 
 
 #### Qtum Raspbian 64bit (Recommended from Raspberry Pi 2 - Raspberry Pi 4)
 
-https://raspbianimages.s3.amazonaws.com/2020-07-28-Qtum-Raspbian.zip
+https://raspbianimages.s3.amazonaws.com/image_2021-04-06-Qtum-Raspbian.zip
 
-https://raspbianimages.s3.amazonaws.com/2020-07-28-Qtum-Raspbian-lite.zip
+https://raspbianimages.s3.amazonaws.com/image_2021-04-06-Qtum-Raspbian-lite.zip
 
 
 
@@ -52,31 +52,13 @@ https://www.youtube.com/watch?v=0W6NlIk7Tgw&t=0s
 
 ***
 
-## Raspberry Pi Zero
-
-Qtum Raspbian now supports the Pi Zero!. This is a $5 device which has only 512mb of Ram and a 1 Core CPU. This makes the Pi Zero the most cost-effective solution to have a Qtum staking box!
-
-The process of installing Qtum Raspbian on the Pi Zero is the same as on the other Raspberry Pis, however, this version is recommended for the Zero"
-
-#### Qtum PiZero (Recommended for Raspberry Pi 1 and Pi Zero)
-
-[https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero.zip](https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero.zip)
-
-[https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero-lite.zip](https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero-lite.zip)
-
-The Desktop version works and is usable with the Pi Zero, but, you will find better performance with the "Lite" version as it doesn't have a desktop, only command line.
-
-### Pi Zero RAM restrictions
-
-The Pi Zero has only 512MB ram, and a portion of that ram is "shared" with the video output, that gives you just a bit below 500MB ram. Qtum Raspbian has ZRAM enabled by default, this compresses your RAM to allow it to use more data, however, to ensure stability, you need to enable SWAP.
-
 ### What is SWAP anyway?
 
 SWAP enables "virtual memory", it uses a portion of your disk to store data that cannot be stored in RAM, this helps devices like the Pi Zero to continue running without crashing even if the applications are using more than the 512MB RAM included with the Pi Zero.
 
 ### How do we enable SWAP?
 
-Enabling SWAP on the Pi Zero is extremely easy:
+Enabling SWAP on the Pi  is extremely easy:
 
 1. Open up a terminal as shown on the screenshot below
 

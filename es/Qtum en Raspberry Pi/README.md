@@ -32,23 +32,16 @@ Si no desea comprar o ya posee una stakebox y solo desea obtener la última vers
 
 ### Registro de cambios:
 
-- Actualice a la versión Debian Buster 10
-- Limpiado archivos innecesarios
-- Zram mejorado y archivo Swap aumentado hasta 2GB (RPI Zero)
-- Qtum 0.18.0 
-- Lanzador Testnet disponible
-- Los lanzadores Qtum ahora están en la sección "Internet" en el menú de aplicaciones
-- Corrección de errores
-- Versión de lanzamiento de solar 1.0 incluida
-- Más fondos de pantalla
+- Actualice a la versión Debian Buster 10.9
+- Qtum 0.20.2 - listo para el hardfork de 32s 
 
 ### Descargar enlaces:
 
 #### Qtum Raspbian 64bit (Recomendado de Raspberry Pi 2 - Raspberry Pi 4)
 
-https://raspbianimages.s3.amazonaws.com/2020-02-23-Qtum-Raspbian.zip
+https://raspbianimages.s3.amazonaws.com/image_2021-04-06-Qtum-Raspbian.zip
 
-https://raspbianimages.s3.amazonaws.com/2020-02-23-Qtum-Raspbian-lite.zip
+https://raspbianimages.s3.amazonaws.com/image_2021-04-06-Qtum-Raspbian-lite.zip
 
 ### "Grabando" la imagen Qtum Raspbian en tu tarjeta SD
 
@@ -56,31 +49,13 @@ Por favor Mire este video tutorial que muestra cómo descargar, grabar y usar su
 
 https://www.youtube.com/watch?v=0W6NlIk7Tgw&t=0s
 
-## Raspberry Pi Zero
-
-Qtum Raspbian ahora es compatible con Pi Zero !. Este es un dispositivo de $ 5 que tiene solo 512 MB de RAM y una CPU de 1 núcleo. ¡Esto hace que Pi Zero sea la solución más rentable para tener una stakingbox Qtum!
-
-El proceso de instalación de Qtum Raspbian en el Pi Zero es el mismo que en el otro Raspberry Pis, sin embargo, esta versión se recomienda para el Zero "
-
-#### Qtum PiZero (Recomendado para Raspberry Pi 1 y Pi Zero)
-
-https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero.zip
-
-https://raspbianimages.s3.amazonaws.com/2019-09-26-Qtum-Raspbian-PiZero-lite.zip
-
-La versión de escritorio funciona y se puede usar con Pi Zero, pero encontrará un mejor rendimiento con la versión "Lite", ya que no tiene una línea de comando de escritorio, solo.
-
-### Restricciones de Pi Zero RAM
-
-El Pi Zero tiene solo 512 MB de RAM, y una parte de ese RAM se "comparte" con la salida de video, lo que le da un poco menos de 500 MB de RAM. Qtum Raspbian tiene ZRAM habilitado de forma predeterminada, esto comprime su RAM para permitirle usar más datos, sin embargo, para garantizar la estabilidad, debe habilitar SWAP.
-
 ### ¿Qué es SWAP de todos modos?
 
 SWAP enables "virtual memory", it uses a portion of your disk to store data that cannot be stored in RAM, this helps devices like the Pi Zero to continue running without crashing even if the applications are using more than the 512MB RAM included with the Pi Zero.
 
 ### ¿Cómo habilitamos SWAP?
 
-Habilitar SWAP en Pi Zero es extremadamente fácil:
+Habilitar SWAP en Pi  es extremadamente fácil:
 
 1. Abra una terminal como se muestra en la siguiente imagen 
 
