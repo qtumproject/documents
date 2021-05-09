@@ -1,6 +1,8 @@
 # Qtum Staking（PoS mining）Tutorial
 
-Qtum employs PoS (Proof of Stake) consensus mechanism, which is different from Bitcoin's PoW (Proof of Work). The mining process in PoS system is called staking. The block producer will get 4QTUM, as well as the transaction fees and gases as block reward. So the real reward is usually more than 4QTUM in total.
+Qtum employs PoS (Proof of Stake) consensus mechanism, which is different from Bitcoin's PoW (Proof of Work). The mining process in PoS system is called staking. The block producer will get 1QTUM, as well as the transaction fees and gases as block reward. So the real reward is usually more than 1QTUM in total.
+
+**Qtum blocks are produced in average every 32s**
 
 Basic requirements for staking：
 
@@ -42,7 +44,7 @@ First you can generate a new address with：
 
 This will generate a new address with Prefix 'Q'. You can send some QTUM to this new generated address for staking. You can generate as many addresses as you like, and send arbitrary QTUM as you like for staking.
 
-Note：**The coin should wait for 500 blocks before being able to stake, i.e. about 17 hours to MATURE.**. 
+Note：**The coin should wait for 2000 blocks before being able to stake, i.e. about 17 hours to MATURE.**. 
 
 After the Qtum node syncing to the latest block, you can check current balance with `./qtum-cli getbalance` or get utxo list with`./qtum-cli listunspent`。（[what is UTXO?](https://github.com/qtumproject/documents/blob/master/zh/Qtum-Blockchain-Guide.md#utxo账户模型)）。
 
@@ -124,7 +126,7 @@ If you already have some QTUM in your wallet, you might skip this step.
 
 If not, please send some QTUM to your wallet first. ([How to receive?](../Qtum-Wallet-Tutorial/README.md)).
 
-Note：**The coin should wait for 500 blocks before being able to stake, i.e. about 17 hours to MATURE.**. 
+Note：**The coin should wait for 2000 blocks before being able to stake, i.e. about 17 hours to MATURE.**. 
 
 ### 3. Check staking status
 
@@ -143,7 +145,7 @@ The flash sign at the bottom of wallet shows staking info :
 
 Possible reasons for not staking：
 
-* 1.There is no coins of no mature coins (more than 500 confirmations(blocks)) -- Solution: send some QTUM to the wallet and wait for 500 blocks (about 17 hours);
+* 1.There is no coins of no mature coins (more than 2000 confirmations(blocks)) -- Solution: send some QTUM to the wallet and wait for 2000 blocks (about 17 hours);
 
 ![No mature coins](not-mature.png)
 
@@ -162,9 +164,8 @@ Possible reasons for not staking：
 The block producer will get more than 4QTUM rewards, something to keep in mind:
 
 * The reward come from a new transaction, you can check balance to see if you get the reward.
-* Once succesfully stake, you will get 0.4QTUM reward immediately.
-* **Other 3.6QTUM will be sent to you after 500 blocks (about 17hours), in continuous 9 blocks, within each block you will get 0.4QTUM,**, so in total it will be 4QTUM.
-* The staked coins (UTXO) will be locked for 500 blocks, during this period, it cannot be spent nor be used to stake. 
+* Once succesfully stake, you will get 1QTUM reward immediately.
+* The staked coins (UTXO) will be locked for 2000 blocks, during this period, it cannot be spent nor be used to stake. 
 
 ## How to disable staking?
 

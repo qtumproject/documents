@@ -169,9 +169,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="../Qtum-Core-v0202-Recommendations/README.md">
+        <li class="chapter " data-level="2.5" data-path="../Qtum-Core-v0202-Recommendations/">
             
-                <span>
+                <a href="../Qtum-Core-v0202-Recommendations/">
             
                     
                     Qtum Core v0.20.2 Recommendations
@@ -797,7 +797,8 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="qtum-staking&#xFF08;pos-mining&#xFF09;tutorial"><a name="qtum-staking&#xFF08;pos-mining&#xFF09;tutorial" class="plugin-anchor" href="#qtum-staking&#xFF08;pos-mining&#xFF09;tutorial"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum Staking&#xFF08;PoS mining&#xFF09;Tutorial</h1>
-<p>Qtum employs PoS (Proof of Stake) consensus mechanism, which is different from Bitcoin&apos;s PoW (Proof of Work). The mining process in PoS system is called staking. The block producer will get 4QTUM, as well as the transaction fees and gases as block reward. So the real reward is usually more than 4QTUM in total.</p>
+<p>Qtum employs PoS (Proof of Stake) consensus mechanism, which is different from Bitcoin&apos;s PoW (Proof of Work). The mining process in PoS system is called staking. The block producer will get 1QTUM, as well as the transaction fees and gases as block reward. So the real reward is usually more than 1QTUM in total.</p>
+<p><strong>Qtum blocks are produced in average every 32s</strong></p>
 <p>Basic requirements for staking&#xFF1A;</p>
 <ol>
 <li>Run a Qtum fullnode, and keep online (Since Qtum is using PoS, we don&apos;t need any mining machine, just PC or even Raspberry Pi can run a fullnode);</li>
@@ -821,7 +822,7 @@
 <p>First you can generate a new address with&#xFF1A;</p>
 <pre><code>./qtum-cli getnewaddress
 </code></pre><p>This will generate a new address with Prefix &apos;Q&apos;. You can send some QTUM to this new generated address for staking. You can generate as many addresses as you like, and send arbitrary QTUM as you like for staking.</p>
-<p>Note&#xFF1A;<strong>The coin should wait for 500 blocks before being able to stake, i.e. about 17 hours to MATURE.</strong>. </p>
+<p>Note&#xFF1A;<strong>The coin should wait for 2000 blocks before being able to stake, i.e. about 17 hours to MATURE.</strong>. </p>
 <p>After the Qtum node syncing to the latest block, you can check current balance with <code>./qtum-cli getbalance</code> or get utxo list with<code>./qtum-cli listunspent</code>&#x3002;&#xFF08;<a href="https://github.com/qtumproject/documents/blob/master/zh/Qtum-Blockchain-Guide.md#utxo&#x8D26;&#x6237;&#x6A21;&#x578B;" target="_blank">what is UTXO?</a>&#xFF09;&#x3002;</p>
 <p>Please do following steps after your coin is mature.</p>
 <h3 id="3-check-staking-info"><a name="3-check-staking-info" class="plugin-anchor" href="#3-check-staking-info"><i class="fa fa-link" aria-hidden="true"></i></a>3. Check staking info</h3>
@@ -870,7 +871,7 @@
 <h3 id="2-send-some-qtum-to-your-wallet"><a name="2-send-some-qtum-to-your-wallet" class="plugin-anchor" href="#2-send-some-qtum-to-your-wallet"><i class="fa fa-link" aria-hidden="true"></i></a>2. Send some QTUM to your wallet</h3>
 <p>If you already have some QTUM in your wallet, you might skip this step.</p>
 <p>If not, please send some QTUM to your wallet first. (<a href="../Qtum-Wallet-Tutorial/">How to receive?</a>).</p>
-<p>Note&#xFF1A;<strong>The coin should wait for 500 blocks before being able to stake, i.e. about 17 hours to MATURE.</strong>. </p>
+<p>Note&#xFF1A;<strong>The coin should wait for 2000 blocks before being able to stake, i.e. about 17 hours to MATURE.</strong>. </p>
 <h3 id="3-check-staking-status"><a name="3-check-staking-status" class="plugin-anchor" href="#3-check-staking-status"><i class="fa fa-link" aria-hidden="true"></i></a>3. Check staking status</h3>
 <p>The flash sign at the bottom of wallet shows staking info :</p>
 <p><strong>Solid black flash means it is staking now</strong>. For more information, you can put your mouse on the flash, e.g.:</p>
@@ -884,7 +885,7 @@
 <p><strong>Hollow flash measn it is not staking</strong></p>
 <p>Possible reasons for not staking&#xFF1A;</p>
 <ul>
-<li>1.There is no coins of no mature coins (more than 500 confirmations(blocks)) -- Solution: send some QTUM to the wallet and wait for 500 blocks (about 17 hours);</li>
+<li>1.There is no coins of no mature coins (more than 2000 confirmations(blocks)) -- Solution: send some QTUM to the wallet and wait for 2000 blocks (about 17 hours);</li>
 </ul>
 <p><img src="not-mature.png" alt="No mature coins"></p>
 <ul>
@@ -900,9 +901,8 @@
 <p>The block producer will get more than 4QTUM rewards, something to keep in mind:</p>
 <ul>
 <li>The reward come from a new transaction, you can check balance to see if you get the reward.</li>
-<li>Once succesfully stake, you will get 0.4QTUM reward immediately.</li>
-<li><strong>Other 3.6QTUM will be sent to you after 500 blocks (about 17hours), in continuous 9 blocks, within each block you will get 0.4QTUM,</strong>, so in total it will be 4QTUM.</li>
-<li>The staked coins (UTXO) will be locked for 500 blocks, during this period, it cannot be spent nor be used to stake. </li>
+<li>Once succesfully stake, you will get 1QTUM reward immediately.</li>
+<li>The staked coins (UTXO) will be locked for 2000 blocks, during this period, it cannot be spent nor be used to stake. </li>
 </ul>
 <h2 id="how-to-disable-staking"><a name="how-to-disable-staking" class="plugin-anchor" href="#how-to-disable-staking"><i class="fa fa-link" aria-hidden="true"></i></a>How to disable staking?</h2>
 <p>Staking is by default enabled for Qtum wallet. If you need to disable staking for some reason (for example exchanges are always recommanded to disable staking), you might following anyone of the 3 ways below:</p>
@@ -955,7 +955,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to Stake With Qtum","level":"3.8","depth":1,"next":{"title":"How to Stake on FreeBSD","level":"3.9","depth":1,"path":"freebsd/README.md","ref":"freebsd/README.md","articles":[]},"previous":{"title":"Stake With Raspberry Pi","level":"3.7","depth":1,"path":"Qtum-on-Raspberry-Pi/README.md","ref":"Qtum-on-Raspberry-Pi/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"How-to-Stake-with-Qtum/README.md","mtime":"2021-03-29T23:03:56.989Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-06T20:17:56.422Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"How to Stake With Qtum","level":"3.8","depth":1,"next":{"title":"How to Stake on FreeBSD","level":"3.9","depth":1,"path":"freebsd/README.md","ref":"freebsd/README.md","articles":[]},"previous":{"title":"Stake With Raspberry Pi","level":"3.7","depth":1,"path":"Qtum-on-Raspberry-Pi/README.md","ref":"Qtum-on-Raspberry-Pi/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"How-to-Stake-with-Qtum/README.md","mtime":"2021-05-09T05:01:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-09T05:15:15.042Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

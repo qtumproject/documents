@@ -14,7 +14,7 @@ Qtum Offline Staking allows the address for a non-staking wallet (capable of mak
 
 The normal rules for staking UTXOs apply to delegated UTXOs:
 
-* UTXOs may only be used for staking after they mature (500 confirmations)
+* UTXOs may only be used for staking after they mature (2000 confirmations)
 * The Super Staker will set a minimum size of UTXOs to stake, defaulting to 100 QTUM. Delegated UTXOs below this amount will be ignored.
 * It is best practice (for optimum returns) to break UTXOs up into sizes of 100 to 200 QTUM each. For users of the Qtum Core wallet, this can be easily accomplished with the command line version of `splitutxosforaddress`, described below.
 
@@ -94,7 +94,7 @@ For this example, the total input was 1,020 QTUM, and the split was 9 UTXOs of 1
 
 Larger wallets may need to adjust the "Maximum outputs" number for splitting. In the example above with the "Maximum outputs" field set to the default value of 100, the split operation will split giving 100 QTUM (minimum size) x 100 (Maximum outputs) = 10,000 of UTXO value. For addresses holding more value the "Maximum output" field could be set higher, to 500, or 1000. With the "Maximum outputs" field set to 1000 it can split up to 100,000 in UTXO value. Even bigger addresses could just repeat this split command set for 1000 Maximum outputs until the Split operation reports back that it has selected and split 0 coins.
 
-Previously you could use the `sendmanywithdupes` command but that took significant formatting and operationally you would want to send to a new address. Of course, after either of these commands, the UTXOs must mature for 500 confirmations before they can be used for staking.
+Previously you could use the `sendmanywithdupes` command but that took significant formatting and operationally you would want to send to a new address. Of course, after either of these commands, the UTXOs must mature for 2000 confirmations before they can be used for staking.
 
 # Launching Qtum Core as a Super Staker
 

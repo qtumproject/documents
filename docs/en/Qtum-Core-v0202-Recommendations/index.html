@@ -1,0 +1,926 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Qtum Core v0.20.2 Recommendations · Qtum Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../commands/" />
+    
+    
+    <link rel="prev" href="../qtum0182overview/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using the Qtum wallet</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Qtum-Wallet-Tutorial/">
+            
+                <a href="../Qtum-Wallet-Tutorial/">
+            
+                    
+                    Desktop wallet basic usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../QTUM-wallet-usage-best-practices/">
+            
+                <a href="../QTUM-wallet-usage-best-practices/">
+            
+                    
+                    Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../updateqtum/">
+            
+                <a href="../updateqtum/">
+            
+                    
+                    How to Update your Qtum wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../qtum0182overview/">
+            
+                <a href="../qtum0182overview/">
+            
+                    
+                    Qtum 0.18.2 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Qtum Core v0.20.2 Recommendations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../commands/">
+            
+                <a href="../commands/">
+            
+                    
+                    Qtum Core Wallet Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Adding-Nodes/">
+            
+                <a href="../Adding-Nodes/">
+            
+                    
+                    Adding Nodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                <a href="../Encrypt-and-Unlock-Qtum-Wallet/">
+            
+                    
+                    Encrypt and Unlock Qtum Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                <a href="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                    
+                    Wallet Recovery With Salvagewallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../Testnet-user-guide/README.md">
+            
+                <span>
+            
+                    
+                    Testnet User Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="../bech32/">
+            
+                <a href="../bech32/">
+            
+                    
+                    bech32 support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../OfflineStaking.html">
+            
+                <a href="../OfflineStaking.html">
+            
+                    
+                    Offline Staking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../OfflineStakingDelegation/">
+            
+                <a href="../OfflineStakingDelegation/">
+            
+                    
+                    Offline Staking Address Delegation - Undelegation Transaction Details
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../qtumrepo/">
+            
+                <a href="../qtumrepo/">
+            
+                    
+                    Repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../gcpgettingstarted/">
+            
+                <a href="../gcpgettingstarted/">
+            
+                    
+                    QTUM On Google Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../Qtum-AWS/">
+            
+                <a href="../Qtum-AWS/">
+            
+                    
+                    QTUM On AWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/">
+            
+                <a href="../How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/">
+            
+                    
+                    Stake With VPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../Qtum-on-Raspberry-Pi/">
+            
+                <a href="../Qtum-on-Raspberry-Pi/">
+            
+                    
+                    Stake With Raspberry Pi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../How-to-Stake-with-Qtum/">
+            
+                <a href="../How-to-Stake-with-Qtum/">
+            
+                    
+                    How to Stake With Qtum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="../freebsd/">
+            
+                <a href="../freebsd/">
+            
+                    
+                    How to Stake on FreeBSD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Other Qtum wallets</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../Qtum-Electrum-User-Guide.html">
+            
+                <a href="../Qtum-Electrum-User-Guide.html">
+            
+                    
+                    Qtum Electrum Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../QTUM-WebWallet-usage/">
+            
+                <a href="../QTUM-WebWallet-usage/">
+            
+                    
+                    Web Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../How-to-use-Qtum-Android-Wallet/">
+            
+                <a href="../How-to-use-Qtum-Android-Wallet/">
+            
+                    
+                    How to use Qtum Android Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../Qtum-Exchange-Usage-Guide-and-Info.html">
+            
+                <a href="../Qtum-Exchange-Usage-Guide-and-Info.html">
+            
+                    
+                    Qtum Exchange Usage Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../How-To-Add-Options/">
+            
+                <a href="../How-To-Add-Options/">
+            
+                    
+                    How to Add Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../How-to-Use-Bootstrap/">
+            
+                <a href="../How-to-Use-Bootstrap/">
+            
+                    
+                    How to Use bootstrap.dat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../Qtum-RPC-API/">
+            
+                <a href="../Qtum-RPC-API/">
+            
+                    
+                    Qtum RPC API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Qtum Lightning Client</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../lightning/">
+            
+                <a href="../lightning/">
+            
+                    
+                    Qtum Lightning Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deploy Qtum</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../buildqtum.html">
+            
+                <a href="../buildqtum.html">
+            
+                    
+                    Build Qtum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                <a href="../Guidance-of-Qtum-Deployment-and-RPC-Settings.html">
+            
+                    
+                    Guidance of Qtum Deployment and RPC Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../Launch-Qtum-with-Docker.html">
+            
+                <a href="../Launch-Qtum-with-Docker.html">
+            
+                    
+                    Launch Qtum With Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../Build-Qtum-on-CentOS.html">
+            
+                <a href="../Build-Qtum-on-CentOS.html">
+            
+                    
+                    How to Build Qtum on CentOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../How-To-Build-Qtum-On-Raspbian.md">
+            
+                <span>
+            
+                    
+                    How to Build Qtum on Raspbian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../How-to-Deploy-Star-Network/">
+            
+                <a href="../How-to-Deploy-Star-Network/">
+            
+                    
+                    Deploy Qtum Star Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Smart Contract and QRC20</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../QRC20-Token-Introduce.html">
+            
+                <a href="../QRC20-Token-Introduce.html">
+            
+                    
+                    QRC20 Token Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../QRC20-integration.html">
+            
+                <a href="../QRC20-integration.html">
+            
+                    
+                    QRC20 Integration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../Raw-QRC20-Transaction-implementation-guide">
+            
+                <span>
+            
+                    
+                    Raw QRC20 Transaction implemention guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Unita (archived)</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../Technical-White-Paper-for-QtumX/">
+            
+                <a href="../Technical-White-Paper-for-QtumX/">
+            
+                    
+                    Unita Technical White Paper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../unitarepo/">
+            
+                <a href="../unitarepo/">
+            
+                    
+                    Install Unita from Linux repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../unitagettingstarted/">
+            
+                <a href="../unitagettingstarted/">
+            
+                    
+                    Unita on Google Cloud Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../One-Click-Launch-Chain/">
+            
+                <a href="../One-Click-Launch-Chain/">
+            
+                    
+                    Unita One-Click-Launch-Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../SCAR-Consensus/">
+            
+                <a href="../SCAR-Consensus/">
+            
+                    
+                    SCAR: Scalable Consensus Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../DDAO-Data-Management/">
+            
+                <a href="../DDAO-Data-Management/">
+            
+                    
+                    DDAO: Decentralized Data Access Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Research</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../Confidential-Assets.html">
+            
+                <a href="../Confidential-Assets.html">
+            
+                    
+                    Confidential Assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../Data-Analytics.html">
+            
+                <a href="../Data-Analytics.html">
+            
+                    
+                    Data Analytics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Qtum Core v0.20.2 Recommendations</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="qtum-core-v0202-recommendations-&#x2013;-2021-04-05"><a name="qtum-core-v0202-recommendations-&#x2013;-2021-04-05" class="plugin-anchor" href="#qtum-core-v0202-recommendations-&#x2013;-2021-04-05"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum Core v0.20.2 Recommendations &#x2013; 2021-04-05</h2>
+<h4 id="intended-audience"><a name="intended-audience" class="plugin-anchor" href="#intended-audience"><i class="fa fa-link" aria-hidden="true"></i></a>Intended Audience</h4>
+<p>The intended audience for these recommendations is users of Qtum Core, the qtumd and Qtum-Qt full node wallets, who are using the Qtum node for staking or staking services (super staker), or other high-performance applications such as hot wallets or nodes supporting light wallets.</p>
+<h4 id="qtum-core-version-0202"><a name="qtum-core-version-0202" class="plugin-anchor" href="#qtum-core-version-0202"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum Core version 0.20.2</h4>
+<p>Qtum Core version 0.20.2 &#x201C;FastLane&#x201D; was released on March 20, 2012, and is available for download at <a href="https://github.com/qtumproject/qtum/releases" target="_blank">https://github.com/qtumproject/qtum/releases</a>. Version 0.20.2 is a <strong>MANDITORY UPDATE</strong> with a hard fork to implement new features, primarily 32-second block spacing:</p>
+<ul>
+<li><p>Testnet block 806,600 on March 26, 2021</p>
+</li>
+<li><p>Mainnet block 845,000 approximately April 30, 2021</p>
+</li>
+</ul>
+<p>Any Qtum Core wallets that do not update before the hard fork will be disconnected from the Qtum network and unable to make transactions or staking with Qtum mainnet. There is no new coin created by the hard fork and this update only applies to the Qtum Core wallets qtumd and Qtum-Qt.</p>
+<h4 id="update-now"><a name="update-now" class="plugin-anchor" href="#update-now"><i class="fa fa-link" aria-hidden="true"></i></a>Update Now</h4>
+<p>Aside from the mandatory update before the hard fork, users should update as soon as possible to gain the advantages of the more efficient multi-threaded staker in version 0.20.2. Efficiency improvements and the multi-thread staker can give reductions in CPU utilization by an order of magnitude, or more. This new staker is especially beneficial to large wallets that are staking with UTXO sets &gt; 5,000.</p>
+<p>With the hard fork, average block spacing will be reduced from 128 seconds to 32 seconds, meaning the blockchain will be running four times faster. Even with the new staker, we recommend the following minimum specs for stakers:</p>
+<ul>
+<li><strong>Staking &gt; 4,000 UTXOs</strong> (own UTXOs or delegated UTXOs) at least 4 cores and 8 GB RAM</li>
+<li><strong>Staking &gt; 8,000 UTXOs</strong> (own UTXOs or delegated UTXOs) at least 8 cores and 24 GB RAM</li>
+<li><strong>Smaller stakers</strong> may use 1 or 2 cores and 4 GB RAM. Under 1 GB RAM must use swap file.</li>
+</ul>
+<h4 id="2000-block-maturity"><a name="2000-block-maturity" class="plugin-anchor" href="#2000-block-maturity"><i class="fa fa-link" aria-hidden="true"></i></a>2,000 Block Maturity</h4>
+<p>With the hard fork to 32-second blocks, maturity for staking will change from 500 blocks &#x2013; about 18 hours (currently) to 2,000 blocks &#x2013; about 18 hours. Commercial applications (exchanges and wallets) should make a similar adjustment in &#x201C;confirmations&#x201D;, for example, if a service currently requires 20 confirmations for receiving QTUM in an account, after the hard fork this should change to 80 confirmations (e.g., 4 times the current confirmations). This will keep the time required for confirmations the same. Sometime after the mainnet hard fork, Qtum will report if it is allowable to reduce the number of confirmations.</p>
+<h4 id="same-configuration-and-startup-parameters"><a name="same-configuration-and-startup-parameters" class="plugin-anchor" href="#same-configuration-and-startup-parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Same Configuration and Startup Parameters</h4>
+<p>Core wallets should startup for v0.20.1 with the same configuration file or startup parameters as version 0.20.1. For example, and standard super staker startup command would be </p>
+<pre><code>./qtumd -superstaking -stakingminfee=10 -stakingminutxovalue=100
+</code></pre><h4 id="implications-for-super-stakers"><a name="implications-for-super-stakers" class="plugin-anchor" href="#implications-for-super-stakers"><i class="fa fa-link" aria-hidden="true"></i></a>Implications for Super Stakers</h4>
+<p>After the hard fork staking maturity will change to 2,000 blocks. This means that staked UTXOs will mature after 2001 blocks. Some mid-sized super stakers may need to add UTXOs for staking as follows. The staked amount compared to the total amount for a super staker should not rise higher than 65% to 70% (except for highly-controlled cases). After the hard fork, with blocks (and block rewards) arriving 4 times faster this means a staker that is averaging many stakes during the maturity period will see their number of stakes increase 4 times. If this would push their percent of staked to total beyond the 65% to 70% range, they should add 100 QTUM-sized UTXOs. Here are some examples:</p>
+<p><img src="https://qtum.s3.amazonaws.com/UTXOrequirements.jpg" alt=""></p>
+<h4 id="qtum-v0202-new-prc-calls-and-startup-parameters"><a name="qtum-v0202-new-prc-calls-and-startup-parameters" class="plugin-anchor" href="#qtum-v0202-new-prc-calls-and-startup-parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum v0.20.2 New PRC Calls and Startup Parameters</h4>
+<p>There are some new PRC calls and startup parameters for v0.20.2.</p>
+<p><strong>listconf</strong></p>
+<p>Returns the options that Qtum Core was started with, for example, a qtumd super staker:</p>
+<pre><code>./qtum-cli -testnet listconf
+
+{
+  &quot;addrindex&quot;: &quot;1&quot;,
+  &quot;logevents&quot;: &quot;1&quot;,
+  &quot;server&quot;: &quot;1&quot;,
+  &quot;staking&quot;: &quot;1&quot;,
+  &quot;stakingminfee&quot;: &quot;10&quot;,
+  &quot;stakingminutxovalue&quot;: &quot;100&quot;,
+  &quot;superstaking&quot;: &quot;&quot;,
+  &quot;wallet&quot;: &quot;&quot;
+}
+</code></pre><p><strong>gettransactionreceipt</strong> &#x2013; adds bloom filter data</p>
+<p>Adds bloom filter to the gettransactionreceipt response, for light clients to quickly retrieve related logs.</p>
+<p>Typical bloom data for a QRC20 token transfer:</p>
+<pre><code>  &quot;bloom&quot;: &quot;00040000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000008000000000000000000000000000000000008000000000008000002000000000000000000000008000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000&quot;,
+</code></pre><p><strong>stakerthreads</strong></p>
+<p>This startup parameter can limit the number of cores used by the staker (-stakerthreads=n) vs. the default is for the staker to use all available cores. We recommend that Qtum Core be run on a dedicated system and use all available cores.</p>
+<p><strong>forceinitialblocksdownloadmode</strong></p>
+<p>This startup parameter (-forceinitialblocksdownloadmode) should be used in the corner case when a node with an existing local blockchain is restarted after being offline more than 18 hours (staking maturity) because there is a slight chance the node could attempt to sync blocks starting with an orphan block (e.g., operating on an individual split chain). Alternatively, users in this situation could delete the local blockchain before restart the wallet to resync the whole blockchain.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../qtum0182overview/" class="navigation navigation-prev " aria-label="Previous page: Qtum 0.18.2 Overview">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../commands/" class="navigation navigation-next " aria-label="Next page: Qtum Core Wallet Commands">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Qtum Core v0.20.2 Recommendations","level":"2.5","depth":1,"next":{"title":"Qtum Core Wallet Commands","level":"2.6","depth":1,"path":"commands/README.md","ref":"commands/README.md","articles":[]},"previous":{"title":"Qtum 0.18.2 Overview","level":"2.4","depth":1,"path":"qtum0182overview/README.md","ref":"qtum0182overview/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-Core-v0202-Recommendations/README.md","mtime":"2021-05-09T03:58:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-09T05:15:15.042Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -89,7 +89,7 @@ See appendix for a full example transaction.
 
 ### Staking a delegated block by the Staker
 
-After the transaction that calls *addDelegation* has been confirmed, the *staker* is able to stake blocks on behalf of *delegation*. To find new blocks, the *staker* iterates over all *delegation* utxos with an **unused** *depth > 500* (i.e., they must be confirmed more than 500 blocks as well as unused for staking for the last 500 blocks), checking whether the following condition is true:
+After the transaction that calls *addDelegation* has been confirmed, the *staker* is able to stake blocks on behalf of *delegation*. To find new blocks, the *staker* iterates over all *delegation* utxos with an **unused** *depth > 2000* (i.e., they must be confirmed more than 2000 blocks as well as unused for staking for the last 2000 blocks), checking whether the following condition is true:
 
 *sha256d(modifier + utxo{blocktime} + utxo{hash} + utxo{vout} + block{time}) <= target * utxo{value}*
 
