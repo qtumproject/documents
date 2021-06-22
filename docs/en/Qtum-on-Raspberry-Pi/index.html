@@ -822,25 +822,24 @@
 <h3 id="changelog"><a name="changelog" class="plugin-anchor" href="#changelog"><i class="fa fa-link" aria-hidden="true"></i></a>Changelog:</h3>
 <ul>
 <li>Upgrade to Debian Buster 10.9 release</li>
-<li>Qtum 0.20.2</li>
-<li>Update ready for the upcoming 32s hard fork </li>
+<li>Qtum 0.20.3</li>
 </ul>
 <h4 id="qtum-raspbian-64bit-recommended-from-raspberry-pi-2---raspberry-pi-4"><a name="qtum-raspbian-64bit-recommended-from-raspberry-pi-2---raspberry-pi-4" class="plugin-anchor" href="#qtum-raspbian-64bit-recommended-from-raspberry-pi-2---raspberry-pi-4"><i class="fa fa-link" aria-hidden="true"></i></a>Qtum Raspbian 64bit (Recommended from Raspberry Pi 2 - Raspberry Pi 4)</h4>
-<p><a href="https://raspbianimages.s3.amazonaws.com/image_2021-04-06-Qtum-Raspbian.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/image_2021-04-06-Qtum-Raspbian.zip</a></p>
-<p><a href="https://raspbianimages.s3.amazonaws.com/image_2021-04-06-Qtum-Raspbian-lite.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/image_2021-04-06-Qtum-Raspbian-lite.zip</a></p>
+<p><a href="https://raspbianimages.s3.amazonaws.com/image_2021-06-20-QtumOS-lite.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/image_2021-06-20-QtumOS-lite.zip</a>
+<a href="https://raspbianimages.s3.amazonaws.com/image_2021-06-20-QtumOS.zip" target="_blank">https://raspbianimages.s3.amazonaws.com/image_2021-06-20-QtumOS.zip</a></p>
 <h3 id="burning-the-qtum-raspbian-image-to-your-sd-card"><a name="burning-the-qtum-raspbian-image-to-your-sd-card" class="plugin-anchor" href="#burning-the-qtum-raspbian-image-to-your-sd-card"><i class="fa fa-link" aria-hidden="true"></i></a>&quot;Burning&quot; the Qtum Raspbian image to your SD card</h3>
 <p>Please watch this video tutorial which shows how to download, burn and use your Qtum Raspbian image</p>
 <p><a href="https://www.youtube.com/watch?v=0W6NlIk7Tgw&amp;t=0s" target="_blank">https://www.youtube.com/watch?v=0W6NlIk7Tgw&amp;t=0s</a></p>
 <hr>
 <h3 id="what-is-swap-anyway"><a name="what-is-swap-anyway" class="plugin-anchor" href="#what-is-swap-anyway"><i class="fa fa-link" aria-hidden="true"></i></a>What is SWAP anyway?</h3>
 <p>SWAP enables &quot;virtual memory&quot;, it uses a portion of your disk to store data that cannot be stored in RAM, this helps devices like the Pi Zero to continue running without crashing even if the applications are using more than the 512MB RAM included with the Pi Zero.</p>
-<h3 id="how-do-we-enable-swap"><a name="how-do-we-enable-swap" class="plugin-anchor" href="#how-do-we-enable-swap"><i class="fa fa-link" aria-hidden="true"></i></a>How do we enable SWAP?</h3>
+<h3 id="creating-a-2gb-swap-file"><a name="creating-a-2gb-swap-file" class="plugin-anchor" href="#creating-a-2gb-swap-file"><i class="fa fa-link" aria-hidden="true"></i></a>Creating a 2gb SWAP file</h3>
 <p>Enabling SWAP on the Pi  is extremely easy:</p>
 <ol>
 <li><p>Open up a terminal as shown on the screenshot below</p>
 <p><img src="2zero.png" alt="2zero"></p>
 <p>Inside the terminal, type &quot;sudo dphys-swapfile setup&quot; and press enter</p>
-<p>You&apos;ll see some text coming up, and a confirmation of your 2gb SWAP file being generated.</p>
+<p>You&apos;ll see text coming up, and a confirmation of your 2gb SWAP file being generated.</p>
 </li>
 <li><p>Still inside the same terminal, type &quot;sudo dphys-swapfile swapon&quot; and press enter
 This won&apos;t give you any confirmation, however, your SWAP file has been setup and activated!. You only need to do this once, the Pi Will activate your SWAP file in case of a reboot/shutdown.</p>
@@ -1041,7 +1040,7 @@ For Qtum-Qt use Window &#x2013; Information and check for your address in &quot;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Stake With Raspberry Pi","level":"3.7","depth":1,"next":{"title":"How to Stake With Qtum","level":"3.8","depth":1,"path":"How-to-Stake-with-Qtum/README.md","ref":"How-to-Stake-with-Qtum/README.md","articles":[]},"previous":{"title":"Stake With VPS","level":"3.6","depth":1,"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","ref":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-on-Raspberry-Pi/README.md","mtime":"2021-05-09T03:43:16.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-09T05:15:15.042Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Stake With Raspberry Pi","level":"3.7","depth":1,"next":{"title":"How to Stake With Qtum","level":"3.8","depth":1,"path":"How-to-Stake-with-Qtum/README.md","ref":"How-to-Stake-with-Qtum/README.md","articles":[]},"previous":{"title":"Stake With VPS","level":"3.6","depth":1,"path":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","ref":"How-to-Stake-QTUM-using-a-Linux-Virtual-Private-Server/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Qtum Documentation","language":"en","gitbook":"*"},"file":{"path":"Qtum-on-Raspberry-Pi/README.md","mtime":"2021-06-22T04:23:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-22T04:41:16.356Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

@@ -33,14 +33,12 @@ If you don't want to buy or already own a stakebox and just want to get the late
 ### Changelog:
 
 - Upgrade to Debian Buster 10.9 release
-- Qtum 0.20.2
-- Update ready for the upcoming 32s hard fork 
+- Qtum 0.20.3
 
 #### Qtum Raspbian 64bit (Recommended from Raspberry Pi 2 - Raspberry Pi 4)
 
-https://raspbianimages.s3.amazonaws.com/image_2021-04-06-Qtum-Raspbian.zip
-
-https://raspbianimages.s3.amazonaws.com/image_2021-04-06-Qtum-Raspbian-lite.zip
+https://raspbianimages.s3.amazonaws.com/image_2021-06-20-QtumOS-lite.zip
+https://raspbianimages.s3.amazonaws.com/image_2021-06-20-QtumOS.zip
 
 
 
@@ -56,7 +54,7 @@ https://www.youtube.com/watch?v=0W6NlIk7Tgw&t=0s
 
 SWAP enables "virtual memory", it uses a portion of your disk to store data that cannot be stored in RAM, this helps devices like the Pi Zero to continue running without crashing even if the applications are using more than the 512MB RAM included with the Pi Zero.
 
-### How do we enable SWAP?
+### Creating a 2gb SWAP file
 
 Enabling SWAP on the Pi  is extremely easy:
 
@@ -66,7 +64,7 @@ Enabling SWAP on the Pi  is extremely easy:
 
    Inside the terminal, type "sudo dphys-swapfile setup" and press enter
 
-   You'll see some text coming up, and a confirmation of your 2gb SWAP file being generated.
+   You'll see text coming up, and a confirmation of your 2gb SWAP file being generated.
 
 2. Still inside the same terminal, type "sudo dphys-swapfile swapon" and press enter
    This won't give you any confirmation, however, your SWAP file has been setup and activated!. You only need to do this once, the Pi Will activate your SWAP file in case of a reboot/shutdown.
