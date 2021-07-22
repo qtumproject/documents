@@ -22,6 +22,7 @@ Welcome to the Qtum web wallet user documentation which will show
 * [How to add a new QRC20 token to the wallet](#adding-a-qrc20-token)
 * [How to publish smart contracts](#how-to-publish-smart-contracts)
 * [Address Delegation for Offline Staking](#address-delegation-for-offline-staking)
+* [Creating and Sending NFTs](#creating-and-sending-nfts)
 
 ***
 
@@ -524,5 +525,33 @@ On the _Add Delegation_ page paste in the Staker Address (no trailing blank spac
 After the address delegation is published in the next block, reload the wallet to see the address delegation status. If you want to remove the delegation at some later time, click the red "x" button to remove the delegation.
 
 ![Offline Staking Status](https://user-images.githubusercontent.com/29760787/91503321-2ca67180-e898-11ea-9a63-0456f5a87258.jpg)
+
+# Creating and Sending NFTs
+
+The web wallet can create, send, and receive QRC1155 NFTs.
+
+The **` Create NFT `** menu option will open the _CREATE NFT_ form. Fill in the fields as shown below.
+
+![Create NFT blank form](https://user-images.githubusercontent.com/29760787/126523382-736fa5f0-23d7-4afe-be79-e2f3aec62d24.jpg)
+
+In the thumbnail preview box, click “+” and select the content to load. Content can be still images in JPEG, GIF, and PNG format, and animations in GIF and webp format (video can be converted to GIF or webp format with an external program). File sizes up to 1 MB are allowed.
+
+Enter the NFT Name, up to 100 characters. Enter the NFT Description up to 500 characters. Enter the NFT amount from 1 to 10 tokens. Leave the Gas Price, Gas Limit, and Fee set to the defaults unless you know how to change these. NFT minting takes around 300,000 gas and any excess is refunded. The wallet must hold QTUM to pay the fees, 1.01 QTUM per NFT minting.
+
+Here is an example to create 5 NFTs of the Sydney Opera House:
+
+![Sydney Opera House](https://user-images.githubusercontent.com/29760787/126523376-8e761cbc-b2c3-47b8-9455-1295ef1c41f7.jpg)
+
+Click the **` CONFIRM `** button to create the NFTs. 
+
+### Sending and Receiving NFTs
+
+The **` View Wallet Info `** menu option will show any NFTs minted or received by the wallet. The blue circle in the upper right-hand corner of the thumbnail will show the quantity of each NFT, for example, we can see there are 5 of the Sydney Opera House NFTs.
+
+![View Wallet Info](https://user-images.githubusercontent.com/29760787/126523377-2fcab451-fdec-411a-930c-95e4c030d0ad.jpg)
+
+To send an NFT, on the _View Wallet Info_ form, click on the blue **` SEND `** button for that NFT and fill out the _send NFT_ form with the address and quantity, below sending one of the Sydney Opera House NFTs. Make sure the information is correct, then click the **` CONFIRM `** button to send the transaction:
+
+![Send NFT](https://user-images.githubusercontent.com/29760787/126523381-ecc48249-89ee-43ba-8343-717efaf116e8.jpg)
 
 
