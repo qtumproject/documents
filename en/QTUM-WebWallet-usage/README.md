@@ -534,7 +534,7 @@ The **` Create NFT `** menu option will open the _CREATE NFT_ form. Fill in the 
 
 ![Create NFT blank form](https://user-images.githubusercontent.com/29760787/126523382-736fa5f0-23d7-4afe-be79-e2f3aec62d24.jpg)
 
-In the thumbnail preview box, click “+” and select the content to load. Content can be still images in JPEG, GIF, and PNG format, and animations in GIF and webp format (video can be converted to GIF or webp format with an external program). File sizes up to 1 MB are allowed.
+In the thumbnail preview box, click “+” and select the content to load. Content can be still images in JPEG, GIF, and PNG format, and animations in GIF and webp format (video can be converted to GIF or webp format with an external program). File sizes up to 20 MB are allowed.
 
 Enter the NFT Name, up to 100 characters. Enter the NFT Description up to 500 characters. Enter the NFT amount from 1 to 10 tokens. Leave the Gas Price, Gas Limit, and Fee set to the defaults unless you know how to change these. NFT minting takes around 300,000 gas and any excess is refunded. The wallet must hold QTUM to pay the fees, 1.01 QTUM per NFT minting.
 
@@ -546,7 +546,7 @@ Click the **` CONFIRM `** button to create the NFTs.
 
 ### Sending and Receiving NFTs
 
-The **` View Wallet Info `** menu option will show any NFTs minted or received by the wallet. The blue circle in the upper right-hand corner of the thumbnail will show the quantity of each NFT, for example, we can see there are 5 of the Sydney Opera House NFTs.
+The **` View Wallet Info `** menu option will show any NFTs minted or received by the wallet. The blue circle in the upper right-hand corner of the thumbnail will show the quantity of each NFT, for example, we can see there are 5 of the Sydney Opera House NFTs. Click the thumbnail to see a larger NFT image.
 
 ![View Wallet Info](https://user-images.githubusercontent.com/29760787/126523377-2fcab451-fdec-411a-930c-95e4c030d0ad.jpg)
 
