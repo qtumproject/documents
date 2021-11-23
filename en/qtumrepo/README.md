@@ -52,11 +52,9 @@ This will download and add the Qtum signing key to your linux install.
 
 ![](https://qtum.s3.amazonaws.com/repos/ubuntu2.png)
 
-`sudo su` - Sudo to root first
 
-` echo "deb https://repo.qtum.info/apt/ubuntu/ bionic main" >> /etc/apt/sources.list.d/qtum.list`
+` echo "deb https://repo.qtum.info/apt/ubuntu/ $(lsb_release -cs) main" |sudo tee -a /etc/apt/sources.list.d/qtum.list`
 
-This will add the repository to your APT sources file. **NOTE:** Please remember to change "xenial" for your Ubuntu version codename *(for instance, Ubuntu 19.10 codename is eoan, in this case you need to replace bionic for eoan)*
 
 ### Refreshing APT sources and installing Qtum
 
