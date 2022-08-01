@@ -13,7 +13,7 @@
 7. [Adding Nodes](Adding-Nodes/README.md)
 8. [Encrypt and Unlock Qtum Wallet](Encrypt-and-Unlock-Qtum-Wallet/README.md)
 9. [Wallet Recovery With Salvagewallet](Wallet-Recovery-with-Salvagewallet.md)
-10. [Testnet User Guide](Testnet-user-guide/README.md)
+10. [Testnet User Guide](Testnet-User-Guide.md)
 11. [bech32 support](bech32/README.md)
 
 ### Staking
@@ -56,6 +56,23 @@
 50. [QRC20 Token Introduction](QRC20-Token-Introduce.md)
 51. [QRC20 Integration](QRC20-integration.md)
 52. [Raw QRC20 Transaction implemention guide](Raw-QRC20-Transaction-implementation-guide)
+
+### Web3
+
+53. [Web3 Compatability Layer](Web3-Compatability-Layer/README.md)
+54. [Janus Docker Container](Janus-Docker-Container.md)
+55. [Truffle](Truffle.md)
+56. [Web3 Caveats](Web3-Caveats.md)
+
+### Qnekt/Metamask
+
+57. [Qnekt](Qnekt.md)
+58. [Why the need to fork Metamask?](Why-The-Need-To-Fork-Metamask.md)
+59. [Sideloading Qnekt](Sideloading-Qnekt/README.md)
+60. [First time setup](First-Time-Setup/README.md)
+61. [Using Testnet Faucet](Using-Testnet-Faucet/README.md)
+62. [Connecting Qnekt to regtest](Connecting-Qnekt-to-regtest/README.md)
+63. [Connecting react-box to regtest](Connecting-react-box-to-regtest/README.md)
 
 ### Unita (archived)
 
