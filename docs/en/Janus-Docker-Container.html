@@ -955,7 +955,7 @@
                                 
                                 <h1 id="janus-docker-container"><a name="janus-docker-container" class="plugin-anchor" href="#janus-docker-container"><i class="fa fa-link" aria-hidden="true"></i></a>Janus Docker Container</h1>
 <p>First, download the Janus docker image</p>
-<pre><code>docker pull ripply/janus:latest
+<pre><code>docker pull qtum/janus:latest
 </code></pre><p>To setup a Janus docker container we need to configure a network bridge for it to talk to the Qtum blockchain</p>
 <pre><code>docker network create --driver bridge qtum
 </code></pre><p>Then we need to startup the Qtum blockchain and configure it to use the network</p>
@@ -972,7 +972,7 @@
   --name janus_regtest \
   -v `pwd`:/root \
   -p 23889:23889 \
-  ripply/janus:latest \
+  qtum/janus:latest \
   --bind 0.0.0.0 --dev --qtum-rpc=http://qtum:testpasswd@qtumd_regtest:3889
 </code></pre>
                                 

@@ -122,7 +122,7 @@ docker run --network=qtum -it --rm \
   --name janus_regtest \
   -v `pwd`:/root \
   -p 23889:23889 \
-  ripply/janus:latest \
+  qtum/janus:latest \
   --bind 0.0.0.0 --dev --qtum-rpc=http://qtum:testpasswd@qtumd_regtest:3889
 ```
 

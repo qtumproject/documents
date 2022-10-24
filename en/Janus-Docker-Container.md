@@ -3,7 +3,7 @@
 First, download the Janus docker image
 
 ```
-docker pull ripply/janus:latest
+docker pull qtum/janus:latest
 ```
 
 To setup a Janus docker container we need to configure a network bridge for it to talk to the Qtum blockchain
@@ -32,7 +32,7 @@ docker run --network=qtum -it --rm \
   --name janus_regtest \
   -v `pwd`:/root \
   -p 23889:23889 \
-  ripply/janus:latest \
+  qtum/janus:latest \
   --bind 0.0.0.0 --dev --qtum-rpc=http://qtum:testpasswd@qtumd_regtest:3889
 ```
 
