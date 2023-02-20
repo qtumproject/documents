@@ -28,7 +28,7 @@ If you don't want to buy or already own a stakebox and just want to get the late
 
 `sudo apt update && sudo apt -y upgrade`
 
-# New Qtum Raspbian Release!
+# New Qtum Raspbian Release Feb 2023!
 
 ### Changelog:
 
