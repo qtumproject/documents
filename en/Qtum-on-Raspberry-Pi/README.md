@@ -33,17 +33,17 @@ If you don't want to buy or already own a stakebox and just want to get the late
 ### Changelog:
 
 - Upgrade to Debian Buster 11.6 release
-- Qtum 0.22.1
+- Qtum 0.23.0
 
 #### Qtum Raspbian 64bit (Recommended from Raspberry Pi 2 - Raspberry Pi 4)
 
 ### "Lite" version (no Desktop)
 
-https://raspbianimages.s3.amazonaws.com/QtumOS-2023-02-19-ite.zip
+https://raspbianimages.s3.amazonaws.com/QtumOS-2023-26-lite.zip
 
 ### Full version including desktop and graphical Qtum wallet
 
-https://raspbianimages.s3.amazonaws.com/QtumOS-2023-02-19.zip
+https://raspbianimages.s3.amazonaws.com/QtumOS-2023-26.zip
 
 
 
