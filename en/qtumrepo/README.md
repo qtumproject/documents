@@ -6,17 +6,15 @@ We've published our official Qtum repository on https://repo.qtum.info  this rep
 
 - 8.x (Jessie)
 - 9.x (stretch)
-- 10x (Buster)
-- Testing (Bullseye)
+- 12x (Bookworm)
+- Testing (Trixie)
 - Unstable (Sid)
 
 ### Ubuntu
 
-16.04 - 20.10
+16.04 - 23.04
 
-### Mint
 
-18.x
 
 ## Other official repositories
 

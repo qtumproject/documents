@@ -11,5 +11,8 @@
   "main": "index.js",
   "repository": "git@github.com:qtumproject/documents.git",
   "author": "Howard Yeh <howard@metacircus.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
 }

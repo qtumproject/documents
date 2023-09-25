@@ -28,22 +28,22 @@ If you don't want to buy or already own a stakebox and just want to get the late
 
 `sudo apt update && sudo apt -y upgrade`
 
-# New Qtum Raspbian Release Feb 2023!
+# New Qtum Raspbian Release September 2023!
 
 ### Changelog:
 
-- Upgrade to Debian Buster 11.6 release
-- Qtum 0.23.0
+- Upgrade to Debian Buster 12  release
+- Qtum 0.24.1 Hardfork Release with Ordinals Support!
 
 #### Qtum Raspbian 64bit (Recommended from Raspberry Pi 2 - Raspberry Pi 4)
 
 ### "Lite" version (no Desktop)
 
-https://raspbianimages.s3.amazonaws.com/QtumOS-2023-26-lite.zip
+https://raspbianimages.s3.amazonaws.com/QtumOS24.1-Lite.zip
 
 ### Full version including desktop and graphical Qtum wallet
 
-https://raspbianimages.s3.amazonaws.com/QtumOS-2023-26.zip
+https://raspbianimages.s3.amazonaws.com/QtumOS24.1-full.zip
 
 
 
