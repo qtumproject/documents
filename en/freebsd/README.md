@@ -72,7 +72,7 @@ Notice that we've added some settings for firewall, these will enable IPFW and b
 
 ### Creating our Jail for staking
 
-`zfs create -o mountpoint=/jail  zroot/jail`
+cd 
 
 **(Change zroot for whatever name you chose for your zfs pool)**  
 
